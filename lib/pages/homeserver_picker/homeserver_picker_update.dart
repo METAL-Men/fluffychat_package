@@ -35,7 +35,7 @@ class HomeserverPickerController extends State<HomeserverPickerUpdate> {
   bool isLoading = false;
 
   final TextEditingController homeserverController = TextEditingController(
-    text: AppConfig.defaultHomeserver,
+    text: 'matrix.metal.men',
   );
 
   String? error;
