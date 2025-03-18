@@ -24,6 +24,7 @@ abstract class AppConfig {
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQyODMxOTN9.RMgimP1rVYQIfTb031ikk74Z5jtGCgYvw4HZm-CaA10';
   static String _privacyUrl = 'https://metal.men/privacy-policy';
   static String get privacyUrl => _privacyUrl;
+  static const String website = 'https://fluffychat.im';
   static const String enablePushTutorial =
       'https://github.com/krille-chan/fluffychat/wiki/Push-Notifications-without-Google-Services';
   static const String encryptionTutorial =
@@ -37,6 +38,8 @@ abstract class AppConfig {
   static const String sourceCodeUrl =
       'https://github.com/krille-chan/fluffychat';
   static const String supportUrl = 'https://metal.men/connect-app-help';
+  static const String changelogUrl =
+      'https://github.com/krille-chan/fluffychat/blob/main/CHANGELOG.md';
   static final Uri newIssueUrl = Uri(
     scheme: 'https',
     host: 'github.com',
