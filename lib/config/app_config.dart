@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:matrix/matrix.dart';
 
-abstract class MetalAppConfig {
+abstract class AppConfig {
   static String _applicationName = 'METAL Connect';
   static String get applicationName => _applicationName;
   static String? _applicationWelcomeMessage;
