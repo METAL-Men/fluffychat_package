@@ -1,4 +1,6 @@
+import 'package:fluffychat/config/app_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:go_router/go_router.dart';
@@ -26,6 +28,17 @@ class ClientChooserButton extends StatelessWidget {
                 : 1,
       );
     return <PopupMenuEntry<Object>>[
+      const PopupMenuItem(
+        value: SettingsAction.metalConnect,
+        child: Row(
+          children: [
+            Icon(Icons.connecting_airports_outlined),
+            SizedBox(width: 18),
+            // Text(L10n.of(context)!.createGroup),
+            Text("METAL Connect"),
+          ],
+        ),
+      ),
       PopupMenuItem(
         value: SettingsAction.newGroup,
         child: Row(
@@ -33,9 +46,9 @@ class ClientChooserButton extends StatelessWidget {
             const Icon(Icons.group_add_outlined),
             const SizedBox(width: 18),
             Text(L10n.of(context).createGroup),
-          ],
+            ],
+          ),
         ),
-      ),
       PopupMenuItem(
         value: SettingsAction.setStatus,
         child: Row(
@@ -46,16 +59,17 @@ class ClientChooserButton extends StatelessWidget {
           ],
         ),
       ),
-      PopupMenuItem(
-        value: SettingsAction.invite,
-        child: Row(
-          children: [
-            Icon(Icons.adaptive.share_outlined),
-            const SizedBox(width: 18),
-            Text(L10n.of(context).inviteContact),
-          ],
+      if (AppConfig.canInviteUsers)
+        PopupMenuItem(
+          value: SettingsAction.invite,
+          child: Row(
+            children: [
+              Icon(Icons.adaptive.share_outlined),
+              const SizedBox(width: 18),
+              Text(L10n.of(context).inviteContact),
+            ],
+          ),
         ),
-      ),
       // Currently disabled because of:
       // https://github.com/matrix-org/matrix-react-sdk/pull/12286
       /*PopupMenuItem(
@@ -125,29 +139,30 @@ class ClientChooserButton extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 12),
-                  IconButton(
-                    icon: const Icon(Icons.edit_outlined),
-                    onPressed: () => controller.editBundlesForAccount(
-                      client.userID,
-                      bundle,
-                    ),
-                  ),
+                  // IconButton(
+                  //   icon: const Icon(Icons.edit_outlined),
+                  //   onPressed: () => controller.editBundlesForAccount(
+                  //     client.userID,
+                  //     bundle,
+                  //   ),
+                  // ),
                 ],
               ),
             ),
           ),
         ),
       ],
-      PopupMenuItem(
-        value: SettingsAction.addAccount,
-        child: Row(
-          children: [
-            const Icon(Icons.person_add_outlined),
-            const SizedBox(width: 18),
-            Text(L10n.of(context).addAccount),
-          ],
+      if (AppConfig.canAddAccounts)
+        PopupMenuItem(
+          value: SettingsAction.addAccount,
+          child: Row(
+            children: [
+              const Icon(Icons.person_add_outlined),
+              const SizedBox(width: 18),
+              Text(L10n.of(context).addAccount),
+            ],
+          ),
         ),
-      ),
     ];
   }
 
@@ -165,7 +180,7 @@ class ClientChooserButton extends StatelessWidget {
           ...List.generate(
             clientCount,
             (index) => const SizedBox.shrink(),
-          ),
+            ),
           const SizedBox.shrink(),
           const SizedBox.shrink(),
           PopupMenuButton<Object>(
@@ -197,6 +212,9 @@ class ClientChooserButton extends StatelessWidget {
       controller.setActiveBundle(object);
     } else if (object is SettingsAction) {
       switch (object) {
+        case SettingsAction.metalConnect:
+          context.go(AppConfig.defaultRoutePath);
+          break;
         case SettingsAction.addAccount:
           final consent = await showOkCancelAlertDialog(
             context: context,
@@ -235,4 +253,5 @@ enum SettingsAction {
   invite,
   settings,
   archive,
+  metalConnect,
 }
