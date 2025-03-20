@@ -64,7 +64,19 @@ abstract class FluffyThemes {
   ]) {
     final colorScheme = ColorScheme.fromSeed(
       brightness: brightness,
-      seedColor: seed ?? AppConfig.colorSchemeSeed ?? AppConfig.primaryColor,
+      seedColor: const Color(0xFF0D0E10),
+      primary: AppConfig.primaryColor,
+      onPrimary: const Color(0xFFF8FAF9),
+      primaryFixed: Color(0xFF0D0E10),
+      onPrimaryFixed: Color(0xFFF8FAF9),
+      surface: const Color(0xFF1E1E1E),
+      onSurface: const Color(0xFFFFFFFF),
+      surfaceContainer: const Color(0xFF181818),
+      onSurfaceVariant: const Color(0xFFF8FAF9),
+      tertiary: const Color(0xFFF8FAF9),
+      surfaceTint: const Color(0xFF181818),
+      // tertiary: const Color(0xFF818284),
+      dynamicSchemeVariant: DynamicSchemeVariant.content,
     );
     final isColumnMode = FluffyThemes.isColumnMode(context);
     return ThemeData(
@@ -73,9 +85,9 @@ abstract class FluffyThemes {
       brightness: brightness,
       colorScheme: colorScheme,
       textTheme: fallbackTextTheme,
-      dividerColor: brightness == Brightness.dark
-          ? colorScheme.surfaceContainerHighest
-          : colorScheme.surfaceContainer,
+      dividerColor: brightness == Brightness.light
+          ? Colors.blueGrey.shade50
+          : Colors.blueGrey.shade900,
       popupMenuTheme: PopupMenuThemeData(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppConfig.borderRadius),

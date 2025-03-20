@@ -118,6 +118,7 @@ class HomeserverPickerController extends State<HomeserverPickerUpdate> {
         setState(() => isLoading = false);
       }
     }
+    ssoLoginAction();
   }
 
   List<LoginFlow>? loginFlows;
