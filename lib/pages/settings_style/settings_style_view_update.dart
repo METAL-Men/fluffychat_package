@@ -39,7 +39,6 @@ class SettingsStyleView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ),
             Divider(
               height: 1,
               color: theme.dividerColor,
@@ -85,12 +84,12 @@ class SettingsStyleView extends StatelessWidget {
                                   sigmaX: controller.wallpaperBlur,
                                   sigmaY: controller.wallpaperBlur,
                                 ),
-                              child: MxcImage(
+                                child: MxcImage(
                                   key: ValueKey(accountConfig.wallpaperUrl),
-                                uri: accountConfig.wallpaperUrl,
-                                fit: BoxFit.cover,
-                                isThumbnail: true,
-                                width: FluffyThemes.columnWidth * 2,
+                                  uri: accountConfig.wallpaperUrl,
+                                  fit: BoxFit.cover,
+                                  isThumbnail: true,
+                                  width: FluffyThemes.columnWidth * 2,
                                   height: 212,
                                 ),
                               ),
@@ -109,12 +108,12 @@ class SettingsStyleView extends StatelessWidget {
                                   senderId: client.userID!,
                                   originServerTs: DateTime.now(),
                                   stateKey: client.userID!,
+                                ),
                               ),
-                            ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: 12 + 12 + Avatar.defaultSize,
-                              right: 12,
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 12 + 12 + Avatar.defaultSize,
+                                  right: 12,
                                   top: accountConfig.wallpaperUrl == null
                                       ? 0
                                       : 12,
@@ -152,29 +151,29 @@ class SettingsStyleView extends StatelessWidget {
                                     top: accountConfig.wallpaperUrl == null
                                         ? 0
                                         : 12,
-                              bottom: 12,
-                            ),
-                            child: Material(
+                                    bottom: 12,
+                                  ),
+                                  child: Material(
                                     color:
                                         theme.colorScheme.surfaceContainerHigh,
-                              borderRadius: BorderRadius.circular(
-                                AppConfig.borderRadius,
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 8,
-                                ),
-                                child: Text(
+                                    borderRadius: BorderRadius.circular(
+                                      AppConfig.borderRadius,
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 16,
+                                        vertical: 8,
+                                      ),
+                                      child: Text(
                                         'Lorem ipsum dolor sit amet',
-                                  style: TextStyle(
+                                        style: TextStyle(
                                           color: theme.colorScheme.onSurface,
-                                    fontSize: AppConfig.messageFontSize *
-                                        AppConfig.fontSizeFactor,
+                                          fontSize: AppConfig.messageFontSize *
+                                              AppConfig.fontSizeFactor,
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                            ),
                                 ),
                               ),
                             ],
@@ -224,7 +223,7 @@ class SettingsStyleView extends StatelessWidget {
                         value: controller.wallpaperBlur,
                         onChanged: controller.updateWallpaperBlur,
                         onChangeEnd: controller.saveWallpaperBlur,
-                              ),
+                      ),
                     ],
                   ],
                 );
