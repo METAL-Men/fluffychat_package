@@ -8,7 +8,7 @@ import 'package:punycode/punycode.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/pages/user_bottom_sheet/user_bottom_sheet.dart';
+import 'package:metalconnect/pages/user_bottom_sheet/user_bottom_sheet.dart';
 import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
