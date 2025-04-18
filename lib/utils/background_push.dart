@@ -88,7 +88,7 @@ class BackgroundPush {
       lastReceivedPush = DateTime.now();
       pushHelper(
         PushNotification.fromJson(
-          Map<String, dynamic>.from(message['data'] ?? message),
+          Map<String, dynamic>.from(message.data),
         ),
         client: client,
         l10n: l10n,
