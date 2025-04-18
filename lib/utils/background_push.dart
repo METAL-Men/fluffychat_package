@@ -21,15 +21,15 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flutter_new_badger/flutter_new_badger.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_new_badger/flutter_new_badger.dart';
 import 'package:http/http.dart' as http;
 import 'package:matrix/matrix.dart';
-import 'package:unifiedpush/unifiedpush.dart';
 import 'package:unifiedpush_ui/unifiedpush_ui.dart';
 
 import 'package:fluffychat/utils/push_helper.dart';
@@ -38,8 +38,6 @@ import '../config/app_config.dart';
 import '../config/setting_keys.dart';
 import '../widgets/matrix.dart';
 import 'platform_infos.dart';
-
-import 'package:fcm_shared_isolate/fcm_shared_isolate.dart';
 
 class NoTokenException implements Exception {
   String get cause => 'Cannot get firebase token';
@@ -64,8 +62,7 @@ class BackgroundPush {
 
   final pendingTests = <String, Completer<void>>{};
 
-  //final dynamic firebase = null; //FcmSharedIsolate();
-  final dynamic firebase = FcmSharedIsolate();
+  final firebase = FirebaseMessaging.instance;
 
   DateTime? lastReceivedPush;
 
@@ -80,33 +77,56 @@ class BackgroundPush {
         ),
         onDidReceiveNotificationResponse: goToRoom,
       );
-      Logs().v('Flutter Local Notifications initialized');
-      firebase?.setListeners(
-        onMessage: (message) => pushHelper(
-          PushNotification.fromJson(
-            Map<String, dynamic>.from(message['data'] ?? message),
-          ),
-          client: client,
-          l10n: l10n,
-          activeRoomId: matrix?.activeRoomId,
-          flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
-        ),
-      );
-      if (Platform.isAndroid) {
-        await UnifiedPush.initialize(
-          onNewEndpoint: _newUpEndpoint,
-          onRegistrationFailed: _upUnregistered,
-          onUnregistered: _upUnregistered,
-          onMessage: _onUpMessage,
-        );
-      }
-    } catch (e, s) {
-      Logs().e('Unable to initialize Flutter local notifications', e, s);
+    } catch (e) {
+      Logs().e('[Push] Error initializing local notifications', e);
     }
   }
 
   BackgroundPush._(this.client) {
     _init();
+    FirebaseMessaging.onMessage.listen((message) {
+      lastReceivedPush = DateTime.now();
+      pushHelper(
+        PushNotification.fromJson(
+          Map<String, dynamic>.from(message['data'] ?? message),
+        ),
+        client: client,
+        l10n: l10n,
+        activeRoomId: matrix?.activeRoomId,
+        flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
+      );
+    });
+    FirebaseMessaging.instance.getInitialMessage().then((initialMessage) {
+      Logs().v('initialMessage: ${initialMessage?.data}');
+      if (initialMessage != null) {
+        goToRoom(
+          NotificationResponse(
+            notificationResponseType:
+                NotificationResponseType.selectedNotification,
+            payload: initialMessage.data['room_id'],
+          ),
+        );
+      }
+    });
+    FirebaseMessaging.onMessageOpenedApp.listen((message) {
+      Logs().v('onMessageOpenedApp: ${message.data}');
+      goToRoom(
+        NotificationResponse(
+          notificationResponseType:
+              NotificationResponseType.selectedNotification,
+          payload: message.data['room_id'],
+        ),
+      );
+    });
+
+    if (Platform.isAndroid) {
+      UnifiedPush.initialize(
+        onNewEndpoint: _newUpEndpoint,
+        onRegistrationFailed: _upUnregistered,
+        onUnregistered: _upUnregistered,
+        onMessage: _onUpMessage,
+      );
+    }
   }
 
   factory BackgroundPush.clientOnly(Client client) {
@@ -149,9 +169,8 @@ class BackgroundPush {
     bool useDeviceSpecificAppId = false,
   }) async {
     if (PlatformInfos.isIOS) {
-      await firebase?.requestPermission();
-    }
-    if (PlatformInfos.isAndroid) {
+      await firebase.requestPermission();
+    } else if (PlatformInfos.isAndroid) {
       _flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
               AndroidFlutterLocalNotificationsPlugin>()
@@ -307,7 +326,7 @@ class BackgroundPush {
     Logs().v('Setup firebase');
     if (_fcmToken?.isEmpty ?? true) {
       try {
-        _fcmToken = await firebase?.getToken();
+        _fcmToken = await firebase.getToken();
         if (_fcmToken == null) throw ('PushToken is null');
       } catch (e, s) {
         Logs().w('[Push] cannot get token', e, e is String ? null : s);
@@ -382,7 +401,7 @@ class BackgroundPush {
     Logs().i('[Push] UnifiedPush using endpoint $endpoint');
     final oldTokens = <String?>{};
     try {
-      final fcmToken = await firebase?.getToken();
+      final fcmToken = await firebase.getToken();
       oldTokens.add(fcmToken);
     } catch (_) {}
     await setupPusher(
