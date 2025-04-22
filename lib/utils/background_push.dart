@@ -40,6 +40,47 @@ import '../config/setting_keys.dart';
 import '../widgets/matrix.dart';
 import 'platform_infos.dart';
 
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  Logs().v('Firebase background handler');
+  Logs().v('Top level onBackgroundMessage: ${message.notification?.title}');
+  // Note: We can't access instance methods/properties here since this runs in isolation
+  // Only perform minimal work needed for the notification
+
+  final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
+  _flutterLocalNotificationsPlugin.initialize(
+    const InitializationSettings(
+      android: AndroidInitializationSettings('notifications_icon'),
+      iOS: DarwinInitializationSettings(),
+    ),
+  );
+
+  final notification = PushNotification.fromJson(
+    Map<String, dynamic>.from(message.data),
+  );
+
+  _flutterLocalNotificationsPlugin.show(
+    notification.roomId?.hashCode ?? 0,
+    notification.senderDisplayName,
+    notification.roomName,
+    NotificationDetails(
+      android: AndroidNotificationDetails(
+        AppConfig.pushNotificationsChannelId,
+        l10n.incomingMessages,
+        number: notification.counts?.unread,
+        ticker: l10n.unreadChatsInApp(
+          AppConfig.applicationName,
+          (notification.counts?.unread ?? 0).toString(),
+        ),
+        importance: Importance.high,
+        priority: Priority.max,
+        shortcutId: notification.roomId,
+      ),
+    ),
+  );
+}
+
 class NoTokenException implements Exception {
   String get cause => 'Cannot get firebase token';
 }
@@ -132,6 +173,11 @@ class BackgroundPush {
 
   factory BackgroundPush.clientOnly(Client client) {
     return _instance ??= BackgroundPush._(client);
+  }
+
+  // Add this static method to initialize Firebase background handler
+  static Future<void> initializeFirebaseBackgroundHandler() async {
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   }
 
   factory BackgroundPush(
