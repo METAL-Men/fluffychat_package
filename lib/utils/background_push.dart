@@ -42,8 +42,6 @@ import 'platform_infos.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  Logs().v('Firebase background handler');
-  Logs().v('Top level onBackgroundMessage: ${message.notification?.title}');
   // Note: We can't access instance methods/properties here since this runs in isolation
   // Only perform minimal work needed for the notification
 
@@ -60,17 +58,22 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     Map<String, dynamic>.from(message.data),
   );
 
+  final l10n = await L10n.delegate.load(const Locale('en'));
+
   _flutterLocalNotificationsPlugin.show(
     notification.roomId?.hashCode ?? 0,
-    notification.senderDisplayName,
     notification.roomName,
+    notification.senderDisplayName,
+    payload: notification.roomId,
     NotificationDetails(
       android: AndroidNotificationDetails(
         AppConfig.pushNotificationsChannelId,
-        'Incoming messages',
+        l10n.incomingMessages,
         number: notification.counts?.unread,
-        ticker:
-            "${AppConfig.applicationName}: ${(notification.counts?.unread ?? 0).toString()} unread chats",
+        ticker: l10n.unreadChatsInApp(
+          AppConfig.applicationName,
+          (notification.counts?.unread ?? 0).toString(),
+        ),
         importance: Importance.high,
         priority: Priority.max,
         shortcutId: notification.roomId,
@@ -96,8 +99,7 @@ class BackgroundPush {
   Future<void> loadLocale() async {
     final context = matrix?.context;
     // inspired by _lookupL10n in .dart_tool/flutter_gen/gen_l10n/l10n.dart
-    l10n ??=
-        (context != null ? L10n.of(context) : null) ??
+    l10n ??= (context != null ? L10n.of(context) : null) ??
         (await L10n.delegate.load(PlatformDispatcher.instance.locale));
   }
 
@@ -117,6 +119,7 @@ class BackgroundPush {
           iOS: DarwinInitializationSettings(),
         ),
         onDidReceiveNotificationResponse: goToRoom,
+        onDidReceiveBackgroundNotificationResponse: goToRoom,
       );
     } catch (e) {
       Logs().e('[Push] Error initializing local notifications', e);
@@ -202,10 +205,9 @@ class BackgroundPush {
 
     // Workaround for app icon badge not updating
     if (Platform.isIOS) {
-      final unreadCount =
-          client.rooms
-              .where((room) => room.isUnreadOrInvited && room.id != roomId)
-              .length;
+      final unreadCount = client.rooms
+          .where((room) => room.isUnreadOrInvited && room.id != roomId)
+          .length;
       if (unreadCount == 0) {
         FlutterNewBadger.removeBadge();
       } else {
@@ -226,14 +228,12 @@ class BackgroundPush {
     } else if (PlatformInfos.isAndroid) {
       _flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin
-          >()
+              AndroidFlutterLocalNotificationsPlugin>()
           ?.requestNotificationsPermission();
     }
     final clientName = PlatformInfos.clientName;
     oldTokens ??= <String>{};
-    final pushers =
-        await (client.getPushers().catchError((e) {
+    final pushers = await (client.getPushers().catchError((e) {
           Logs().w('[Push] Unable to request pushers', e);
           return <Pusher>[];
         })) ??
@@ -313,10 +313,9 @@ class BackgroundPush {
     }
   }
 
-  final pusherDataMessageFormat =
-      Platform.isAndroid
-          ? 'android'
-          : Platform.isIOS
+  final pusherDataMessageFormat = Platform.isAndroid
+      ? 'android'
+      : Platform.isIOS
           ? 'ios'
           : null;
 
@@ -394,10 +393,17 @@ class BackgroundPush {
   }
 
   Future<void> goToRoom(NotificationResponse? response) async {
+    if (response == null) {
+      Logs().v('[Push] No NotificationResponse');
+      return;
+    }
     try {
       final roomId = response?.payload;
-      Logs().v('[Push] Attempting to go to room $roomId...');
       if (roomId == null) {
+        return;
+      }
+      if (client == null) {
+        Logs().e('[Push] Client is null');
         return;
       }
       await client.roomsLoading;
@@ -418,9 +424,13 @@ class BackgroundPush {
   }
 
   Future<void> setupUp() async {
-    await UnifiedPushUi(matrix!.context, [
-      "default",
-    ], UPFunctions()).registerAppWithDialog();
+    await UnifiedPushUi(
+            matrix!.context,
+            [
+              "default",
+            ],
+            UPFunctions())
+        .registerAppWithDialog();
   }
 
   Future<void> _newUpEndpoint(String newEndpoint, String i) async {
@@ -432,12 +442,11 @@ class BackgroundPush {
     var endpoint =
         'https://matrix.gateway.unifiedpush.org/_matrix/push/v1/notify';
     try {
-      final url =
-          Uri.parse(newEndpoint)
-              .replace(path: '/_matrix/push/v1/notify', query: '')
-              .toString()
-              .split('?')
-              .first;
+      final url = Uri.parse(newEndpoint)
+          .replace(path: '/_matrix/push/v1/notify', query: '')
+          .toString()
+          .split('?')
+          .first;
       final res = json.decode(
         utf8.decode((await http.get(Uri.parse(url))).bodyBytes),
       );
