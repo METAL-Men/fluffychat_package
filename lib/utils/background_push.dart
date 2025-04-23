@@ -67,12 +67,10 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     NotificationDetails(
       android: AndroidNotificationDetails(
         AppConfig.pushNotificationsChannelId,
-        l10n.incomingMessages,
+        'Incoming messages',
         number: notification.counts?.unread,
-        ticker: l10n.unreadChatsInApp(
-          AppConfig.applicationName,
-          (notification.counts?.unread ?? 0).toString(),
-        ),
+        ticker:
+            "${AppConfig.applicationName}: ${(notification.counts?.unread ?? 0).toString()} unread chats",
         importance: Importance.high,
         priority: Priority.max,
         shortcutId: notification.roomId,
@@ -98,7 +96,8 @@ class BackgroundPush {
   Future<void> loadLocale() async {
     final context = matrix?.context;
     // inspired by _lookupL10n in .dart_tool/flutter_gen/gen_l10n/l10n.dart
-    l10n ??= (context != null ? L10n.of(context) : null) ??
+    l10n ??=
+        (context != null ? L10n.of(context) : null) ??
         (await L10n.delegate.load(PlatformDispatcher.instance.locale));
   }
 
@@ -129,9 +128,7 @@ class BackgroundPush {
     FirebaseMessaging.onMessage.listen((message) {
       lastReceivedPush = DateTime.now();
       pushHelper(
-        PushNotification.fromJson(
-          Map<String, dynamic>.from(message.data),
-        ),
+        PushNotification.fromJson(Map<String, dynamic>.from(message.data)),
         client: client,
         l10n: l10n,
         activeRoomId: matrix?.activeRoomId,
@@ -161,6 +158,11 @@ class BackgroundPush {
       );
     });
 
+    /* FirebaseMessaging.onBackgroundMessage((message) async {
+      Logs().v('onBackgroundMessage: ${message.data}');
+      _firebaseMessagingBackgroundHandler(message);
+    });
+
     if (Platform.isAndroid) {
       UnifiedPush.initialize(
         onNewEndpoint: _newUpEndpoint,
@@ -168,16 +170,19 @@ class BackgroundPush {
         onUnregistered: _upUnregistered,
         onMessage: _onUpMessage,
       );
-    }
+    } */
   }
 
   factory BackgroundPush.clientOnly(Client client) {
+    //initializeFirebaseBackgroundHandler();
     return _instance ??= BackgroundPush._(client);
   }
 
   // Add this static method to initialize Firebase background handler
   static Future<void> initializeFirebaseBackgroundHandler() async {
+    Logs().v('initializeFirebaseBackgroundHandler');
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    Logs().v('initialized');
   }
 
   factory BackgroundPush(
@@ -197,9 +202,10 @@ class BackgroundPush {
 
     // Workaround for app icon badge not updating
     if (Platform.isIOS) {
-      final unreadCount = client.rooms
-          .where((room) => room.isUnreadOrInvited && room.id != roomId)
-          .length;
+      final unreadCount =
+          client.rooms
+              .where((room) => room.isUnreadOrInvited && room.id != roomId)
+              .length;
       if (unreadCount == 0) {
         FlutterNewBadger.removeBadge();
       } else {
@@ -220,12 +226,14 @@ class BackgroundPush {
     } else if (PlatformInfos.isAndroid) {
       _flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
-              AndroidFlutterLocalNotificationsPlugin>()
+            AndroidFlutterLocalNotificationsPlugin
+          >()
           ?.requestNotificationsPermission();
     }
     final clientName = PlatformInfos.clientName;
     oldTokens ??= <String>{};
-    final pushers = await (client.getPushers().catchError((e) {
+    final pushers =
+        await (client.getPushers().catchError((e) {
           Logs().w('[Push] Unable to request pushers', e);
           return <Pusher>[];
         })) ??
@@ -254,10 +262,9 @@ class BackgroundPush {
           currentPushers.first.data.url.toString() == gatewayUrl &&
           currentPushers.first.data.format ==
               AppConfig.pushNotificationsPusherFormat &&
-          mapEquals(
-            currentPushers.single.data.additionalProperties,
-            {"data_message": pusherDataMessageFormat},
-          )) {
+          mapEquals(currentPushers.single.data.additionalProperties, {
+            "data_message": pusherDataMessageFormat,
+          })) {
         Logs().i('[Push] Pusher already set');
       } else {
         Logs().i('Need to set new pusher');
@@ -306,9 +313,10 @@ class BackgroundPush {
     }
   }
 
-  final pusherDataMessageFormat = Platform.isAndroid
-      ? 'android'
-      : Platform.isIOS
+  final pusherDataMessageFormat =
+      Platform.isAndroid
+          ? 'android'
+          : Platform.isIOS
           ? 'ios'
           : null;
 
@@ -334,9 +342,9 @@ class BackgroundPush {
     }
 
     // ignore: unawaited_futures
-    _flutterLocalNotificationsPlugin
-        .getNotificationAppLaunchDetails()
-        .then((details) {
+    _flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails().then((
+      details,
+    ) {
       if (details == null ||
           !details.didNotificationLaunchApp ||
           _wentToRoomOnStartup) {
@@ -359,9 +367,7 @@ class BackgroundPush {
       if (PlatformInfos.isAndroid) {
         onFcmError?.call(
           l10n!.noGoogleServicesWarning,
-          link: Uri.parse(
-            AppConfig.enablePushTutorial,
-          ),
+          link: Uri.parse(AppConfig.enablePushTutorial),
         );
         return;
       }
@@ -412,8 +418,9 @@ class BackgroundPush {
   }
 
   Future<void> setupUp() async {
-    await UnifiedPushUi(matrix!.context, ["default"], UPFunctions())
-        .registerAppWithDialog();
+    await UnifiedPushUi(matrix!.context, [
+      "default",
+    ], UPFunctions()).registerAppWithDialog();
   }
 
   Future<void> _newUpEndpoint(String newEndpoint, String i) async {
@@ -425,16 +432,15 @@ class BackgroundPush {
     var endpoint =
         'https://matrix.gateway.unifiedpush.org/_matrix/push/v1/notify';
     try {
-      final url = Uri.parse(newEndpoint)
-          .replace(
-            path: '/_matrix/push/v1/notify',
-            query: '',
-          )
-          .toString()
-          .split('?')
-          .first;
-      final res =
-          json.decode(utf8.decode((await http.get(Uri.parse(url))).bodyBytes));
+      final url =
+          Uri.parse(newEndpoint)
+              .replace(path: '/_matrix/push/v1/notify', query: '')
+              .toString()
+              .split('?')
+              .first;
+      final res = json.decode(
+        utf8.decode((await http.get(Uri.parse(url))).bodyBytes),
+      );
       if (res['gateway'] == 'matrix' ||
           (res['unifiedpush'] is Map &&
               res['unifiedpush']['gateway'] == 'matrix')) {
@@ -464,15 +470,14 @@ class BackgroundPush {
   Future<void> _upUnregistered(String i) async {
     upAction = true;
     Logs().i('[Push] Removing UnifiedPush endpoint...');
-    final oldEndpoint =
-        matrix?.store.getString(SettingKeys.unifiedPushEndpoint);
+    final oldEndpoint = matrix?.store.getString(
+      SettingKeys.unifiedPushEndpoint,
+    );
     await matrix?.store.setBool(SettingKeys.unifiedPushRegistered, false);
     await matrix?.store.remove(SettingKeys.unifiedPushEndpoint);
     if (oldEndpoint?.isNotEmpty ?? false) {
       // remove the old pusher
-      await setupPusher(
-        oldTokens: {oldEndpoint},
-      );
+      await setupPusher(oldTokens: {oldEndpoint});
     }
   }
 
