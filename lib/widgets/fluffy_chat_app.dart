@@ -51,8 +51,8 @@ class FluffyChatApp extends StatelessWidget {
         title: AppConfig.applicationName,
         themeMode: themeMode,
         theme: config?.themeBuilder != null
-            ? config!.themeBuilder!(context, Brightness.light, primaryColor)
-            : FluffyThemes.buildTheme(context, Brightness.light, primaryColor),
+            ? config!.themeBuilder!(context, Brightness.dark, primaryColor)
+            : FluffyThemes.buildTheme(context, Brightness.dark, primaryColor),
         darkTheme: config?.themeBuilder != null
             ? config!.themeBuilder!(context, Brightness.dark, primaryColor)
             : FluffyThemes.buildTheme(context, Brightness.dark, primaryColor),
