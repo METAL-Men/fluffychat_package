@@ -70,18 +70,16 @@ class ClientChooserButton extends StatelessWidget {
             ],
           ),
         ),
-      // Currently disabled because of:
-      // https://github.com/matrix-org/matrix-react-sdk/pull/12286
-      /*PopupMenuItem(
+      PopupMenuItem(
         value: SettingsAction.archive,
         child: Row(
           children: [
             const Icon(Icons.archive_outlined),
             const SizedBox(width: 18),
-            Text(L10n.of(context)!.archive),
+            Text(L10n.of(context).archive),
           ],
         ),
-      ),*/
+      ),
       PopupMenuItem(
         value: SettingsAction.settings,
         child: Row(
@@ -113,44 +111,43 @@ class ClientChooserButton extends StatelessWidget {
               ],
             ),
           ),
-        ...matrix.accountBundles[bundle]!.map(
-          (client) => PopupMenuItem(
-            value: client,
-            child: FutureBuilder<Profile?>(
-              // analyzer does not understand this type cast for error
-              // handling
-              //
-              // ignore: unnecessary_cast
-              future: (client!.fetchOwnProfile() as Future<Profile?>)
-                  .onError((e, s) => null),
-              builder: (context, snapshot) => Row(
-                children: [
-                  Avatar(
-                    mxContent: snapshot.data?.avatarUrl,
-                    name:
-                        snapshot.data?.displayName ?? client.userID!.localpart,
-                    size: 32,
+        ...matrix.accountBundles[bundle]!
+            .whereType<Client>()
+            .where((client) => client.isLogged())
+            .map(
+              (client) => PopupMenuItem(
+                value: client,
+                child: FutureBuilder<Profile?>(
+                  future: client.fetchOwnProfile(),
+                  builder: (context, snapshot) => Row(
+                    children: [
+                      Avatar(
+                        mxContent: snapshot.data?.avatarUrl,
+                        name: snapshot.data?.displayName ??
+                            client.userID!.localpart,
+                        size: 32,
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          snapshot.data?.displayName ??
+                              client.userID!.localpart!,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      IconButton(
+                        icon: const Icon(Icons.edit_outlined),
+                        onPressed: () => controller.editBundlesForAccount(
+                          client.userID,
+                          bundle,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      snapshot.data?.displayName ?? client.userID!.localpart!,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  // IconButton(
-                  //   icon: const Icon(Icons.edit_outlined),
-                  //   onPressed: () => controller.editBundlesForAccount(
-                  //     client.userID,
-                  //     bundle,
-                  //   ),
-                  // ),
-                ],
+                ),
               ),
             ),
-          ),
-        ),
       ],
       if (AppConfig.canAddAccounts)
         PopupMenuItem(
@@ -174,30 +171,22 @@ class ClientChooserButton extends StatelessWidget {
     matrix.accountBundles.forEach((key, value) => clientCount += value.length);
     return FutureBuilder<Profile>(
       future: matrix.client.fetchOwnProfile(),
-      builder: (context, snapshot) => Stack(
-        alignment: Alignment.center,
-        children: [
-          ...List.generate(
-            clientCount,
-            (index) => const SizedBox.shrink(),
-            ),
-          const SizedBox.shrink(),
-          const SizedBox.shrink(),
-          PopupMenuButton<Object>(
-            onSelected: (o) => _clientSelected(o, context),
-            itemBuilder: _bundleMenuItems,
-            child: Material(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.circular(99),
-              child: Avatar(
-                mxContent: snapshot.data?.avatarUrl,
-                name: snapshot.data?.displayName ??
-                    matrix.client.userID!.localpart,
-                size: 32,
-              ),
+      builder: (context, snapshot) => Material(
+        clipBehavior: Clip.hardEdge,
+        borderRadius: BorderRadius.circular(99),
+        color: Colors.transparent,
+        child: PopupMenuButton<Object>(
+          onSelected: (o) => _clientSelected(o, context),
+          itemBuilder: _bundleMenuItems,
+          child: Center(
+            child: Avatar(
+              mxContent: snapshot.data?.avatarUrl,
+              name:
+                  snapshot.data?.displayName ?? matrix.client.userID!.localpart,
+              size: 32,
             ),
           ),
-        ],
+        ),
       ),
     );
   }

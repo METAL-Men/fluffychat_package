@@ -110,7 +110,7 @@ class ChatController extends State<ChatPageWithRoom>
 
   final AutoScrollController scrollController = AutoScrollController();
 
-  FocusNode inputFocus = FocusNode();
+  late final FocusNode inputFocus;
   StreamSubscription<html.Event>? onFocusSub;
 
   Timer? typingCoolDown;
@@ -275,8 +275,53 @@ class ChatController extends State<ChatPageWithRoom>
     );
   }
 
+  KeyEventResult _customEnterKeyHandling(FocusNode node, KeyEvent evt) {
+    if (!HardwareKeyboard.instance.isShiftPressed &&
+        evt.logicalKey.keyLabel == 'Enter' &&
+        (AppConfig.sendOnEnter ?? !PlatformInfos.isMobile)) {
+      if (evt is KeyDownEvent) {
+        send();
+      }
+      return KeyEventResult.handled;
+    } else if (evt.logicalKey.keyLabel == 'Enter' && evt is KeyDownEvent) {
+      final currentLineNum = sendController.text
+              .substring(
+                0,
+                sendController.selection.baseOffset,
+              )
+              .split('\n')
+              .length -
+          1;
+      final currentLine = sendController.text.split('\n')[currentLineNum];
+
+      for (final pattern in [
+        '- [ ] ',
+        '- [x] ',
+        '* [ ] ',
+        '* [x] ',
+        '- ',
+        '* ',
+        '+ ',
+      ]) {
+        if (currentLine.startsWith(pattern)) {
+          if (currentLine == pattern) {
+            return KeyEventResult.ignored;
+          }
+          sendController.text += '\n$pattern';
+          return KeyEventResult.handled;
+        }
+      }
+
+      return KeyEventResult.ignored;
+    } else {
+      return KeyEventResult.ignored;
+    }
+  }
+
   @override
   void initState() {
+    inputFocus = FocusNode(onKeyEvent: _customEnterKeyHandling);
+
     scrollController.addListener(_updateScrollController);
     inputFocus.addListener(_inputFocusListener);
 
@@ -284,8 +329,7 @@ class ChatController extends State<ChatPageWithRoom>
     WidgetsBinding.instance.addPostFrameCallback(_shareItems);
     super.initState();
     _displayChatDetailsColumn = ValueNotifier(
-      Matrix.of(context).store.getBool(SettingKeys.displayChatDetailsColumn) ??
-          false,
+      AppSettings.displayChatDetailsColumn.getItem(Matrix.of(context).store),
     );
 
     sendingClient = Matrix.of(context).client;
@@ -609,10 +653,19 @@ class ChatController extends State<ChatPageWithRoom>
     );
     if (result == null) return;
     final audioFile = XFile(result.path);
+
+    final bytesResult = await showFutureLoadingDialog(
+      context: context,
+      future: audioFile.readAsBytes,
+    );
+    final bytes = bytesResult.result;
+    if (bytes == null) return;
+
     final file = MatrixAudioFile(
-      bytes: await audioFile.readAsBytes(),
+      bytes: bytes,
       name: result.fileName ?? audioFile.path,
     );
+
     await room.sendFileEvent(
       file,
       inReplyTo: replyEvent,
@@ -1050,35 +1103,23 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   void goToNewRoomAction() async {
-    if (OkCancelResult.ok !=
-        await showOkCancelAlertDialog(
-          context: context,
-          title: L10n.of(context).goToTheNewRoom,
-          message: room
-              .getState(EventTypes.RoomTombstone)!
-              .parsedTombstoneContent
-              .body,
-          okLabel: L10n.of(context).ok,
-          cancelLabel: L10n.of(context).cancel,
-        )) {
-      return;
-    }
     final result = await showFutureLoadingDialog(
       context: context,
-      future: () async {
-        final roomId = room.client.joinRoom(
-          room
-              .getState(EventTypes.RoomTombstone)!
-              .parsedTombstoneContent
-              .replacementRoom,
-        );
-        await room.leave();
-        return roomId;
-      },
+      future: () => room.client.joinRoomById(
+        room
+            .getState(EventTypes.RoomTombstone)!
+            .parsedTombstoneContent
+            .replacementRoom,
+      ),
     );
-    if (result.error == null) {
-      context.go('/rooms/${result.result!}');
-    }
+    if (result.error != null) return;
+    if (!mounted) return;
+    context.go('/rooms/${result.result!}');
+
+    await showFutureLoadingDialog(
+      context: context,
+      future: room.leave,
+    );
   }
 
   void onSelectMessage(Event event) {
@@ -1139,6 +1180,14 @@ class ChatController extends State<ChatPageWithRoom>
     }
     if (choice == 'location') {
       sendLocationAction();
+    }
+    if (choice == 'checklist') {
+      if (sendController.text.isEmpty) {
+        sendController.text = '- [ ] ';
+      } else {
+        sendController.text += '\n- [ ] ';
+      }
+      inputFocus.requestFocus();
     }
   }
 
@@ -1291,10 +1340,10 @@ class ChatController extends State<ChatPageWithRoom>
   late final ValueNotifier<bool> _displayChatDetailsColumn;
 
   void toggleDisplayChatDetailsColumn() async {
-    await Matrix.of(context).store.setBool(
-          SettingKeys.displayChatDetailsColumn,
-          !_displayChatDetailsColumn.value,
-        );
+    await AppSettings.displayChatDetailsColumn.setItem(
+      Matrix.of(context).store,
+      !_displayChatDetailsColumn.value,
+    );
     _displayChatDetailsColumn.value = !_displayChatDetailsColumn.value;
   }
 

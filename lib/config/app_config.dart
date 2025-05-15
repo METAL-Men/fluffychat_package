@@ -6,6 +6,7 @@ abstract class AppConfig {
   static String _applicationName = 'METAL Connect';
   static String get applicationName => _applicationName;
   static String? _applicationWelcomeMessage;
+
   static String? get applicationWelcomeMessage => _applicationWelcomeMessage;
   static String _defaultHomeserver = 'matrix.metal.men';
   static String get defaultHomeserver => _defaultHomeserver;

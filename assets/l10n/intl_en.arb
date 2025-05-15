@@ -9,6 +9,10 @@
   "@repeatPassword": {},
   "notAnImage": "Not an image file.",
   "@notAnImage": {},
+  "setCustomPermissionLevel": "Set custom permission level",
+  "setPermissionsLevelDescription": "Please choose a predefined role below or enter a custom permission level between 0 and 100.",
+  "ignoreUser": "Ignore user",
+  "normalUser": "Normal user",
   "remove": "Remove",
   "@remove": {
     "type": "String",
@@ -102,6 +106,7 @@
     "type": "String",
     "placeholders": {}
   },
+  "commandHint_roomupgrade": "Upgrade this room to the given room version",
   "commandHint_googly": "Send some googly eyes",
   "@commandHint_googly": {},
   "commandHint_cuddle": "Send a cuddle",
@@ -691,8 +696,18 @@
       }
     }
   },
+  "checkList": "Check list",
   "countParticipants": "{count} participants",
   "@countParticipants": {
+    "type": "String",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "countInvited": "{count} invited",
+  "@countInvited": {
     "type": "String",
     "placeholders": {
       "count": {
@@ -3194,6 +3209,18 @@
       }
     }
   },
+  "sentVoiceMessage": "\uD83C\uDF99\uFE0F {duration} - {sender}",
+  "@sentVoiceMessage": {
+    "type": "String",
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      },
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
   "deletePushRuleCanNotBeUndone": "If you delete this notification setting, this can not be undone.",
   "more": "More",
   "shareKeysWith": "Share keys with...",
@@ -3205,5 +3232,9 @@
   "takeAPhoto": "Take a photo",
   "recordAVideo": "Record a video",
   "optionalMessage": "(Optional) message...",
-  "notSupportedOnThisDevice": "Not supported on this device"
+  "notSupportedOnThisDevice": "Not supported on this device",
+  "enterNewChat": "Enter new chat",
+  "approve": "Approve",
+  "youHaveKnocked": "You have knocked",
+  "pleaseWaitUntilInvited": "Please wait now, until someone from the room invites you."
 }

@@ -13,6 +13,7 @@ import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import '../../../config/app_config.dart';
+import '../../../utils/event_checkbox_extension.dart';
 import '../../../utils/platform_infos.dart';
 import '../../../utils/url_launcher.dart';
 import '../../bootstrap/bootstrap_dialog.dart';
@@ -167,7 +168,12 @@ class MessageContent extends StatelessWidget {
               linkColor: linkColor,
             );
           case MessageTypes.Video:
-            return EventVideoPlayer(event, textColor: textColor);
+            return EventVideoPlayer(
+              event,
+              textColor: textColor,
+              linkColor: linkColor,
+              timeline: timeline,
+            );
           case MessageTypes.File:
             return MessageDownloadContent(
               event,
@@ -185,19 +191,31 @@ class MessageContent extends StatelessWidget {
               if (event.messageType == MessageTypes.Emote) {
                 html = '* $html';
               }
-              return HtmlMessage(
-                html: html,
-                textColor: textColor,
-                room: event.room,
-                fontSize: AppConfig.fontSizeFactor * AppConfig.messageFontSize,
-                linkStyle: TextStyle(
-                  color: linkColor,
+              return Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
+                child: HtmlMessage(
+                  html: html,
+                  textColor: textColor,
+                  room: event.room,
                   fontSize:
                       AppConfig.fontSizeFactor * AppConfig.messageFontSize,
-                  decoration: TextDecoration.underline,
-                  decorationColor: linkColor,
+                  linkStyle: TextStyle(
+                    color: linkColor,
+                    fontSize:
+                        AppConfig.fontSizeFactor * AppConfig.messageFontSize,
+                    decoration: TextDecoration.underline,
+                    decorationColor: linkColor,
+                  ),
+                  onOpen: (url) => UrlLauncher(context, url.url).launchUrl(),
+                  eventId: event.eventId,
+                  checkboxCheckedEvents: event.aggregatedEvents(
+                    timeline,
+                    EventCheckboxRoomExtension.relationshipType,
+                  ),
                 ),
-                onOpen: (url) => UrlLauncher(context, url.url).launchUrl(),
               );
             }
             // else we fall through to the normal message rendering
@@ -276,24 +294,32 @@ class MessageContent extends StatelessWidget {
             final bigEmotes = event.onlyEmotes &&
                 event.numberEmotes > 0 &&
                 event.numberEmotes <= 3;
-            return Linkify(
-              text: event.calcLocalizedBodyFallback(
-                MatrixLocals(L10n.of(context)),
-                hideReply: true,
+            return Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 8,
               ),
-              style: TextStyle(
-                color: textColor,
-                fontSize: bigEmotes ? fontSize * 5 : fontSize,
-                decoration: event.redacted ? TextDecoration.lineThrough : null,
+              child: Linkify(
+                text: event.calcLocalizedBodyFallback(
+                  MatrixLocals(L10n.of(context)),
+                  hideReply: true,
+                ),
+                textScaleFactor: MediaQuery.textScalerOf(context).scale(1),
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: bigEmotes ? fontSize * 5 : fontSize,
+                  decoration:
+                      event.redacted ? TextDecoration.lineThrough : null,
+                ),
+                options: const LinkifyOptions(humanize: false),
+                linkStyle: TextStyle(
+                  color: linkColor,
+                  fontSize: fontSize,
+                  decoration: TextDecoration.underline,
+                  decorationColor: linkColor,
+                ),
+                onOpen: (url) => UrlLauncher(context, url.url).launchUrl(),
               ),
-              options: const LinkifyOptions(humanize: false),
-              linkStyle: TextStyle(
-                color: linkColor,
-                fontSize: fontSize,
-                decoration: TextDecoration.underline,
-                decorationColor: linkColor,
-              ),
-              onOpen: (url) => UrlLauncher(context, url.url).launchUrl(),
             );
         }
       case EventTypes.CallInvite:
@@ -350,13 +376,19 @@ class _ButtonContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      child: Text(
-        '$icon  $label',
-        style: TextStyle(
-          color: textColor,
-          fontSize: fontSize,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 8,
+      ),
+      child: InkWell(
+        onTap: onPressed,
+        child: Text(
+          '$icon  $label',
+          style: TextStyle(
+            color: textColor,
+            fontSize: fontSize,
+          ),
         ),
       ),
     );

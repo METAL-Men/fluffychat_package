@@ -3339,5 +3339,11 @@
   "takeAPhoto": "Pildista",
   "@takeAPhoto": {},
   "optionalMessage": "Sõnum (kui soovid lisada)...",
-  "@optionalMessage": {}
+  "@optionalMessage": {},
+  "notSupportedOnThisDevice": "See pole antud seadmes toetatud",
+  "@notSupportedOnThisDevice": {},
+  "enterNewChat": "Liitu uue vestlusega",
+  "@enterNewChat": {},
+  "commandHint_roomupgrade": "Uuenda see jututuba antud jututoa versioonini",
+  "@commandHint_roomupgrade": {}
 }
