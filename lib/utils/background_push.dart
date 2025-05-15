@@ -160,32 +160,15 @@ class BackgroundPush {
         ),
       );
     });
-
-    /* FirebaseMessaging.onBackgroundMessage((message) async {
-      Logs().v('onBackgroundMessage: ${message.data}');
-      _firebaseMessagingBackgroundHandler(message);
-    });
-
-    if (Platform.isAndroid) {
-      UnifiedPush.initialize(
-        onNewEndpoint: _newUpEndpoint,
-        onRegistrationFailed: _upUnregistered,
-        onUnregistered: _upUnregistered,
-        onMessage: _onUpMessage,
-      );
-    } */
   }
 
   factory BackgroundPush.clientOnly(Client client) {
-    //initializeFirebaseBackgroundHandler();
     return _instance ??= BackgroundPush._(client);
   }
 
   // Add this static method to initialize Firebase background handler
   static Future<void> initializeFirebaseBackgroundHandler() async {
-    Logs().v('initializeFirebaseBackgroundHandler');
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-    Logs().v('initialized');
   }
 
   factory BackgroundPush(
