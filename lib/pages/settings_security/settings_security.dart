@@ -61,7 +61,7 @@ class SettingsSecurityController extends State<SettingsSecurity> {
       return;
     }
     final supposedMxid = Matrix.of(context).client.userID!;
-    final mxids = await showTextInputDialog(
+    final mxid = await showTextInputDialog(
       useRootNavigator: false,
       context: context,
       title: L10n.of(context).confirmMatrixId,
@@ -72,7 +72,7 @@ class SettingsSecurityController extends State<SettingsSecurity> {
       okLabel: L10n.of(context).delete,
       cancelLabel: L10n.of(context).cancel,
     );
-    if (mxids == null || mxids.length != 1 || mxids != supposedMxid) {
+    if (mxid == null || mxid.isEmpty || mxid != supposedMxid) {
       return;
     }
     final input = await showTextInputDialog(
@@ -111,10 +111,10 @@ class SettingsSecurityController extends State<SettingsSecurity> {
 
   void changeShareKeysWith(ShareKeysWith? shareKeysWith) async {
     if (shareKeysWith == null) return;
-    Matrix.of(context).store.setString(
-          SettingKeys.shareKeysWith,
-          shareKeysWith.name,
-        );
+    AppSettings.shareKeysWith.setItem(
+      Matrix.of(context).store,
+      shareKeysWith.name,
+    );
     Matrix.of(context).client.shareKeysWith = shareKeysWith;
     setState(() {});
   }
