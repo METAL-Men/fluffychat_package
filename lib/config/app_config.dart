@@ -159,5 +159,6 @@ abstract class AppConfig {
   static const metalNewsUrl = 'https://metal.men/news';
   static const apexiveUrl = 'https://apexive.com/';
   static const restrictedPaths = <String>['newspace'];
-  static String defaultRoutePath = '/metal-connect';
+  static String defaultRoutePath = '/rooms';
+  static String metalConnectRoutePath = '/metal-connect';
 }

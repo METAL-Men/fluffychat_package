@@ -204,7 +204,7 @@ class ClientChooserButton extends StatelessWidget {
     } else if (object is SettingsAction) {
       switch (object) {
         case SettingsAction.metalConnect:
-          context.go(AppConfig.defaultRoutePath);
+          context.go(AppConfig.metalConnectRoutePath);
           break;
         case SettingsAction.addAccount:
           final consent = await showOkCancelAlertDialog(
