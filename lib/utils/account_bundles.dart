@@ -1,3 +1,4 @@
+import 'package:fluffychat/config/app_config.dart';
 import 'package:matrix/matrix.dart';
 
 class AccountBundles {
@@ -44,7 +45,7 @@ class AccountBundle {
       };
 }
 
-const accountBundlesType = 'im.fluffychat.account_bundles';
+const accountBundlesType = '${AppConfig.metalClient}.account_bundles';
 
 extension AccountBundlesExtension on Client {
   List<AccountBundle> get accountBundles {
