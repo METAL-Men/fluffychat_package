@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:fluffychat/config/app_config.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/l10n.dart';
@@ -66,6 +67,7 @@ class NewGroupController extends State<NewGroup> {
   Future<void> _createGroup() async {
     if (!mounted) return;
     final roomId = await Matrix.of(context).client.createGroupChat(
+      enableEncryption: AppConfig.canEncrypt,
       visibility:
           groupCanBeFound ? sdk.Visibility.public : sdk.Visibility.private,
       preset: publicGroup

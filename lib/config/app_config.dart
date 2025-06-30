@@ -47,7 +47,7 @@ abstract class AppConfig {
     path: '/krille-chan/fluffychat/issues/new',
   );
   static bool renderHtml = true;
-  static bool hideRedactedEvents = false;
+  static bool hideRedactedEvents = true;
   static bool hideUnknownEvents = true;
   static bool hideUnimportantStateEvents = true;
   static bool separateChatTypes = false;
@@ -161,4 +161,5 @@ abstract class AppConfig {
   static const restrictedPaths = <String>['newspace'];
   static String defaultRoutePath = '/rooms';
   static String metalConnectRoutePath = '/metal-connect';
+  static const metalClient = 'men.metal';
 }

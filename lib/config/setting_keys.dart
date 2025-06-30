@@ -43,11 +43,11 @@ enum AppSettings<T> {
   audioRecordingSamplingRate<int>('audioRecordingSamplingRate', 44100),
   pushNotificationsGatewayUrl<String>(
     'pushNotificationsGatewayUrl',
-    'https://push.fluffychat.im/_matrix/push/v1/notify',
+    'https://sygnal.metal.men/_matrix/push/v1/notify',
   ),
   pushNotificationsPusherFormat<String>(
     'pushNotificationsPusherFormat',
-    'event_id_only',
+    'content',
   ),
   shareKeysWith<String>('chat.fluffy.share_keys_with_2', 'all'),
   noEncryptionWarningShown<bool>(
