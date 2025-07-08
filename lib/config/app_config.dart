@@ -54,7 +54,7 @@ abstract class AppConfig {
   static bool autoplayImages = true;
   static bool sendTypingNotifications = true;
   static bool sendPublicReadReceipts = true;
-  static bool canInviteUsers = true;
+  static bool canInviteUsers = false;
   static bool canAddAccounts = false;
   static bool canCreateNewSpace = false;
   static bool showPublicSpaces = false;
