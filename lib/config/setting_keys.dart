@@ -32,6 +32,7 @@ abstract class SettingKeys {
       'chat.fluffy.swipeRightToLeftToReply';
   static const String experimentalVoip = 'chat.fluffy.experimental_voip';
   static const String showPresences = 'chat.fluffy.show_presences';
+  static const String spellCheck = 'chat.metalconnect.spell_check';
 }
 
 enum AppSettings<T> {

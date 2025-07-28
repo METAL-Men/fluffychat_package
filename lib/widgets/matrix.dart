@@ -433,6 +433,9 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
 
     AppConfig.showPresences =
         store.getBool(SettingKeys.showPresences) ?? AppConfig.showPresences;
+
+    AppConfig.spellCheck =
+        store.getBool(SettingKeys.spellCheck) ?? AppConfig.spellCheck;
   }
 
   @override
