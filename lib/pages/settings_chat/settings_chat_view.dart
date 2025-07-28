@@ -77,12 +77,13 @@ class SettingsChatView extends StatelessWidget {
                 storeKey: SettingKeys.swipeRightToLeftToReply,
                 defaultValue: AppConfig.swipeRightToLeftToReply,
               ),
-              SettingsSwitchListTile.adaptive(
-                title: "Spell check",
-                onChanged: (b) => AppConfig.spellCheck = b,
-                storeKey: SettingKeys.spellCheck,
-                defaultValue: AppConfig.spellCheck,
-              ),
+              if (PlatformInfos.isMobile)
+                SettingsSwitchListTile.adaptive(
+                  title: "Spell check",
+                  onChanged: (b) => AppConfig.spellCheck = b,
+                  storeKey: SettingKeys.spellCheck,
+                  defaultValue: AppConfig.spellCheck,
+                ),
               Divider(color: theme.dividerColor),
               ListTile(
                 title: Text(
