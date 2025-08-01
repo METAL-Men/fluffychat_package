@@ -80,6 +80,7 @@ class SettingsChatView extends StatelessWidget {
               if (PlatformInfos.isMobile)
                 SettingsSwitchListTile.adaptive(
                   title: "Spell check",
+                  subtitle: "(Experimental feature)",
                   onChanged: (b) => AppConfig.spellCheck = b,
                   storeKey: SettingKeys.spellCheck,
                   defaultValue: AppConfig.spellCheck,
