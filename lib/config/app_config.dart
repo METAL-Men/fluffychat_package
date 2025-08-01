@@ -163,5 +163,5 @@ abstract class AppConfig {
   static String metalConnectRoutePath = '/metal-connect';
   static const metalClient = 'men.metal';
 
-  static bool spellCheck = true;
+  static bool spellCheck = false;
 }
