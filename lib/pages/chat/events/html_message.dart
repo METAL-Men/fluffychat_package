@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:collection/collection.dart';
@@ -8,7 +9,9 @@ import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
 import 'package:matrix/matrix.dart';
 
+import 'package:fluffychat/utils/event_checkbox_extension.dart';
 import 'package:fluffychat/widgets/avatar.dart';
+import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
 import '../../../utils/url_launcher.dart';
 
@@ -19,6 +22,9 @@ class HtmlMessage extends StatelessWidget {
   final double fontSize;
   final TextStyle linkStyle;
   final void Function(LinkableElement) onOpen;
+  final String? eventId;
+  final Set<Event>? checkboxCheckedEvents;
+  final bool limitHeight;
 
   const HtmlMessage({
     super.key,
@@ -28,6 +34,9 @@ class HtmlMessage extends StatelessWidget {
     required this.linkStyle,
     this.textColor = Colors.black,
     required this.onOpen,
+    this.eventId,
+    this.checkboxCheckedEvents,
+    this.limitHeight = true,
   });
 
   /// Keep in sync with: https://spec.matrix.org/latest/client-server-api/#mroommessage-msgtypes
@@ -218,6 +227,24 @@ class HtmlMessage extends StatelessWidget {
         if (!{'ol', 'ul'}.contains(node.parent?.localName)) {
           continue block;
         }
+        final eventId = this.eventId;
+
+        final isCheckbox = node.className == 'task-list-item';
+        final checkboxIndex = isCheckbox
+            ? node.rootElement
+                    .getElementsByClassName('task-list-item')
+                    .indexOf(node) +
+                1
+            : null;
+        final checkedByReaction = !isCheckbox
+            ? null
+            : checkboxCheckedEvents?.firstWhereOrNull(
+                (event) => event.checkedCheckboxId == checkboxIndex,
+              );
+        final staticallyChecked = !isCheckbox
+            ? false
+            : node.children.first.attributes['checked'] == 'true';
+
         return WidgetSpan(
           child: Padding(
             padding: EdgeInsets.only(left: fontSize),
@@ -230,6 +257,41 @@ class HtmlMessage extends StatelessWidget {
                     TextSpan(
                       text:
                           '${(node.parent?.nodes.whereType<dom.Element>().toList().indexOf(node) ?? 0) + (int.tryParse(node.parent?.attributes['start'] ?? '1') ?? 1)}. ',
+                    ),
+                  if (node.className == 'task-list-item')
+                    WidgetSpan(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: SizedBox.square(
+                          dimension: fontSize + 2,
+                          child: CupertinoCheckbox(
+                            checkColor: textColor,
+                            side: BorderSide(color: textColor),
+                            activeColor: textColor.withAlpha(64),
+                            value:
+                                staticallyChecked || checkedByReaction != null,
+                            onChanged: eventId == null ||
+                                    checkboxIndex == null ||
+                                    staticallyChecked ||
+                                    !room.canSendDefaultMessages ||
+                                    (checkedByReaction != null &&
+                                        checkedByReaction.senderId !=
+                                            room.client.userID)
+                                ? null
+                                : (_) => showFutureLoadingDialog(
+                                      context: context,
+                                      future: () => checkedByReaction != null
+                                          ? room.redactEvent(
+                                              checkedByReaction.eventId,
+                                            )
+                                          : room.checkCheckbox(
+                                              eventId,
+                                              checkboxIndex,
+                                            ),
+                                    ),
+                          ),
+                        ),
+                      ),
                     ),
                   ..._renderWithLineBreaks(
                     node.nodes,
@@ -446,15 +508,15 @@ class HtmlMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final element = parser.parse(html).body ?? dom.Element.html('');
     return Text.rich(
-      _renderHtml(
-        parser.parse(html).body ?? dom.Element.html(''),
-        context,
-      ),
+      _renderHtml(element, context),
       style: TextStyle(
         fontSize: fontSize,
         color: textColor,
       ),
+      maxLines: limitHeight ? 64 : null,
+      overflow: TextOverflow.fade,
     );
   }
 }
@@ -515,4 +577,8 @@ extension on String {
     final colorValue = int.tryParse(hexCode, radix: 16);
     return colorValue == null ? null : Color(colorValue);
   }
+}
+
+extension on dom.Element {
+  dom.Element get rootElement => parent?.rootElement ?? this;
 }

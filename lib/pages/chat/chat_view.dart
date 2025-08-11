@@ -4,18 +4,17 @@ import 'package:flutter/material.dart';
 
 import 'package:badges/badges.dart';
 import 'package:desktop_drop/desktop_drop.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/themes.dart';
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat.dart';
 import 'package:fluffychat/pages/chat/chat_app_bar_list_tile.dart';
 import 'package:fluffychat/pages/chat/chat_app_bar_title.dart';
 import 'package:fluffychat/pages/chat/chat_event_list.dart';
 import 'package:fluffychat/pages/chat/encryption_button.dart';
 import 'package:fluffychat/pages/chat/pinned_events.dart';
-import 'package:fluffychat/pages/chat/reactions_picker.dart';
 import 'package:fluffychat/pages/chat/reply_display.dart';
 import 'package:fluffychat/utils/account_config.dart';
 import 'package:fluffychat/utils/localized_exception_extension.dart';
@@ -49,15 +48,6 @@ class ChatView extends StatelessWidget {
           tooltip: L10n.of(context).copy,
           onPressed: controller.copyEventsAction,
         ),
-        if (controller.canSaveSelectedEvent)
-          // Use builder context to correctly position the share dialog on iPad
-          Builder(
-            builder: (context) => IconButton(
-              icon: Icon(Icons.adaptive.share),
-              tooltip: L10n.of(context).share,
-              onPressed: () => controller.saveSelectedEvent(context),
-            ),
-          ),
         if (controller.canPinSelectedEvents)
           IconButton(
             icon: const Icon(Icons.push_pin_outlined),
@@ -72,6 +62,7 @@ class ChatView extends StatelessWidget {
           ),
         if (controller.selectedEvents.length == 1)
           PopupMenuButton<_EventContextAction>(
+            useRootNavigator: true,
             onSelected: (action) {
               switch (action) {
                 case _EventContextAction.info:
@@ -84,6 +75,19 @@ class ChatView extends StatelessWidget {
               }
             },
             itemBuilder: (context) => [
+              if (controller.canSaveSelectedEvent)
+                PopupMenuItem(
+                  onTap: () => controller.saveSelectedEvent(context),
+                  value: null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.download_outlined),
+                      const SizedBox(width: 12),
+                      Text(L10n.of(context).downloadFile),
+                    ],
+                  ),
+                ),
               PopupMenuItem(
                 value: _EventContextAction.info,
                 child: Row(
@@ -174,15 +178,18 @@ class ChatView extends StatelessWidget {
                 actionsIconTheme: IconThemeData(
                   color: controller.selectedEvents.isEmpty
                       ? null
-                      : theme.colorScheme.tertiary,
+                      : theme.colorScheme.onTertiaryContainer,
                 ),
+                backgroundColor: controller.selectedEvents.isEmpty
+                    ? null
+                    : theme.colorScheme.tertiaryContainer,
                 automaticallyImplyLeading: false,
                 leading: controller.selectMode
                     ? IconButton(
                         icon: const Icon(Icons.close),
                         onPressed: controller.clearSelectedEvents,
                         tooltip: L10n.of(context).close,
-                        color: theme.colorScheme.tertiary,
+                        color: theme.colorScheme.onTertiaryContainer,
                       )
                     : FluffyThemes.isColumnMode(context)
                         ? null
@@ -303,12 +310,14 @@ class ChatView extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.all(bottomSheetPadding),
                               constraints: const BoxConstraints(
-                                maxWidth: FluffyThemes.columnWidth * 2.5,
+                                maxWidth: FluffyThemes.maxTimelineWidth,
                               ),
                               alignment: Alignment.center,
                               child: Material(
                                 clipBehavior: Clip.hardEdge,
-                                color: theme.colorScheme.surfaceContainerHigh,
+                                color: controller.selectedEvents.isNotEmpty
+                                    ? theme.colorScheme.tertiaryContainer
+                                    : theme.colorScheme.surfaceContainerHigh,
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(24),
                                 ),
@@ -352,7 +361,6 @@ class ChatView extends StatelessWidget {
                                     : Column(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          ReactionsPicker(controller),
                                           ReplyDisplay(controller),
                                           ChatInputRow(controller),
                                           ChatEmojiPicker(controller),

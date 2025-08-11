@@ -66,6 +66,7 @@ class _MxcImageState extends State<MxcImage> {
   }
 
   Future<void> _load() async {
+    if (!mounted) return;
     final client =
         widget.client ?? widget.event?.room.client ?? Matrix.of(context).client;
     final uri = widget.uri;
@@ -96,7 +97,7 @@ class _MxcImageState extends State<MxcImage> {
       final data = await event.downloadAndDecryptAttachment(
         getThumbnail: widget.isThumbnail,
       );
-      if (data.detectFileType is MatrixImageFile) {
+      if (data.detectFileType is MatrixImageFile || widget.isThumbnail) {
         if (!mounted) return;
         setState(() {
           _imageData = data.bytes;
@@ -106,7 +107,7 @@ class _MxcImageState extends State<MxcImage> {
     }
   }
 
-  void _tryLoad(_) async {
+  void _tryLoad() async {
     if (_imageData != null) {
       return;
     }
@@ -115,14 +116,14 @@ class _MxcImageState extends State<MxcImage> {
     } on IOException catch (_) {
       if (!mounted) return;
       await Future.delayed(widget.retryDuration);
-      _tryLoad(_);
+      _tryLoad();
     }
   }
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback(_tryLoad);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _tryLoad());
   }
 
   Widget placeholder(BuildContext context) =>

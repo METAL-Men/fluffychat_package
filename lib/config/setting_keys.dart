@@ -33,6 +33,8 @@ abstract class SettingKeys {
   static const String experimentalVoip = 'chat.fluffy.experimental_voip';
   static const String showPresences = 'chat.fluffy.show_presences';
   static const String spellCheck = 'chat.metalconnect.spell_check';
+  static const String displayNavigationRail =
+      'chat.fluffy.display_navigation_rail';
 }
 
 enum AppSettings<T> {
@@ -58,7 +60,8 @@ enum AppSettings<T> {
   displayChatDetailsColumn(
     'chat.fluffy.display_chat_details_column',
     false,
-  );
+  ),
+  enableSoftLogout<bool>('chat.fluffy.enable_soft_logout', false);
 
   final String key;
   final T defaultValue;

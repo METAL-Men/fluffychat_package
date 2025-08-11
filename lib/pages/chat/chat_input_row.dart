@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:animations/animations.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/other_party_can_receive.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/widgets/avatar.dart';
@@ -21,10 +21,7 @@ class ChatInputRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    if (controller.showEmojiPicker &&
-        controller.emojiPickerType == EmojiPickerType.reaction) {
-      return const SizedBox.shrink();
-    }
+
     const height = 48.0;
 
     if (!controller.room.otherPartyCanReceiveMessages) {
@@ -40,6 +37,10 @@ class ChatInputRow extends StatelessWidget {
       );
     }
 
+    final selectedTextButtonStyle = TextButton.styleFrom(
+      foregroundColor: theme.colorScheme.onTertiaryContainer,
+    );
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,7 +52,7 @@ class ChatInputRow extends StatelessWidget {
                   height: height,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      foregroundColor: theme.colorScheme.error,
+                      foregroundColor: Colors.orange,
                     ),
                     onPressed: controller.deleteErrorEventsAction,
                     child: Row(
@@ -66,6 +67,7 @@ class ChatInputRow extends StatelessWidget {
                 SizedBox(
                   height: height,
                   child: TextButton(
+                    style: selectedTextButtonStyle,
                     onPressed: controller.forwardEventsAction,
                     child: Row(
                       children: <Widget>[
@@ -83,6 +85,7 @@ class ChatInputRow extends StatelessWidget {
                       ? SizedBox(
                           height: height,
                           child: TextButton(
+                            style: selectedTextButtonStyle,
                             onPressed: controller.replyAction,
                             child: Row(
                               children: <Widget>[
@@ -95,6 +98,7 @@ class ChatInputRow extends StatelessWidget {
                       : SizedBox(
                           height: height,
                           child: TextButton(
+                            style: selectedTextButtonStyle,
                             onPressed: controller.sendAgainAction,
                             child: Row(
                               children: <Widget>[
@@ -118,6 +122,7 @@ class ChatInputRow extends StatelessWidget {
                 decoration: const BoxDecoration(),
                 clipBehavior: Clip.hardEdge,
                 child: PopupMenuButton<String>(
+                  useRootNavigator: true,
                   icon: const Icon(Icons.add_circle_outline),
                   iconColor: theme.colorScheme.onPrimaryContainer,
                   onSelected: controller.onAddPopupMenuButtonSelected,
@@ -186,6 +191,7 @@ class ChatInputRow extends StatelessWidget {
                   decoration: const BoxDecoration(),
                   clipBehavior: Clip.hardEdge,
                   child: PopupMenuButton(
+                    useRootNavigator: true,
                     icon: const Icon(Icons.camera_alt_outlined),
                     onSelected: controller.onAddPopupMenuButtonSelected,
                     iconColor: theme.colorScheme.onPrimaryContainer,
@@ -353,6 +359,7 @@ class _ChatAccountPicker extends StatelessWidget {
       child: FutureBuilder<Profile>(
         future: controller.sendingClient.fetchOwnProfile(),
         builder: (context, snapshot) => PopupMenuButton<String>(
+          useRootNavigator: true,
           onSelected: (mxid) => _popupMenuButtonSelected(mxid, context),
           itemBuilder: (BuildContext context) => clients
               .map(

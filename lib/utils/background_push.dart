@@ -25,7 +25,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_new_badger/flutter_new_badger.dart';
 import 'package:http/http.dart' as http;
@@ -33,6 +32,7 @@ import 'package:matrix/matrix.dart';
 import 'package:unifiedpush/unifiedpush.dart';
 import 'package:unifiedpush_ui/unifiedpush_ui.dart';
 
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/push_helper.dart';
 import 'package:fluffychat/widgets/fluffy_chat_app.dart';
 import '../config/app_config.dart';

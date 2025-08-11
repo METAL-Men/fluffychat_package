@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:matrix/matrix.dart';
 
 import 'package:fluffychat/config/themes.dart';
+import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat_list/chat_list.dart';
 import 'package:fluffychat/pages/chat_list/client_chooser_button.dart';
 import 'package:fluffychat/utils/sync_status_localization.dart';
@@ -60,7 +60,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                   : status.calcLocalizedString(context),
               hintStyle: TextStyle(
                 color: status.error != null
-                    ? theme.colorScheme.error
+                    ? Colors.orange
                     : theme.colorScheme.onPrimaryContainer,
                 fontWeight: FontWeight.normal,
               ),
@@ -88,8 +88,8 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                           strokeWidth: 2,
                           value: status.progress,
                           valueColor: status.error != null
-                              ? AlwaysStoppedAnimation<Color>(
-                                  theme.colorScheme.error,
+                              ? const AlwaysStoppedAnimation<Color>(
+                                  Colors.orange,
                                 )
                               : null,
                         ),

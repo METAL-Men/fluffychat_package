@@ -24,6 +24,8 @@ abstract class AppConfig {
   static const String metalMatrixApiToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQyODMxOTN9.RMgimP1rVYQIfTb031ikk74Z5jtGCgYvw4HZm-CaA10';
   static String _privacyUrl = 'https://metal.men/privacy-policy';
+  static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
+
   static String get privacyUrl => _privacyUrl;
   static const String website = 'https://fluffychat.im';
   static const String enablePushTutorial =
@@ -65,6 +67,7 @@ abstract class AppConfig {
   static bool swipeRightToLeftToReply = true;
   static bool? sendOnEnter;
   static bool showPresences = true;
+  static bool displayNavigationRail = false;
   static bool experimentalVoip = false;
   static const bool hideTypingUsernames = false;
   static const bool hideAllStateEvents = false;
