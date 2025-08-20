@@ -206,7 +206,7 @@ class BackgroundPush {
     bool useDeviceSpecificAppId = false,
   }) async {
     if (PlatformInfos.isIOS) {
-      await firebase?.requestPermission();
+      //<GOOGLE_SERVICES>await firebase.requestPermission();
     }
     if (PlatformInfos.isAndroid) {
       _flutterLocalNotificationsPlugin
@@ -366,7 +366,7 @@ class BackgroundPush {
     Logs().v('Setup firebase');
     if (_fcmToken?.isEmpty ?? true) {
       try {
-        _fcmToken = await firebase?.getToken();
+        //<GOOGLE_SERVICES>_fcmToken = await firebase.getToken();
         if (_fcmToken == null) throw ('PushToken is null');
       } catch (e, s) {
         Logs().w('[Push] cannot get token', e, e is String ? null : s);
@@ -414,7 +414,8 @@ class BackgroundPush {
         .registerAppWithDialog();
   }
 
-  Future<void> _newUpEndpoint(String newEndpoint, String i) async {
+  Future<void> _newUpEndpoint(PushEndpoint newPushEndpoint, String i) async {
+    final newEndpoint = newPushEndpoint.url;
     upAction = true;
     if (newEndpoint.isEmpty) {
       await _upUnregistered(i);
@@ -446,8 +447,8 @@ class BackgroundPush {
     Logs().i('[Push] UnifiedPush using endpoint $endpoint');
     final oldTokens = <String?>{};
     try {
-      final fcmToken = await firebase?.getToken();
-      oldTokens.add(fcmToken);
+      //<GOOGLE_SERVICES>final fcmToken = await firebase.getToken();
+      //<GOOGLE_SERVICES>oldTokens.add(fcmToken);
     } catch (_) {}
     await setupPusher(
       gatewayUrl: endpoint,
@@ -474,7 +475,8 @@ class BackgroundPush {
     }
   }
 
-  Future<void> _onUpMessage(Uint8List message, String i) async {
+  Future<void> _onUpMessage(PushMessage pushMessage, String i) async {
+    final message = pushMessage.content;
     upAction = true;
     final data = Map<String, dynamic>.from(
       json.decode(utf8.decode(message))['notification'],
@@ -508,7 +510,7 @@ class UPFunctions extends UnifiedPushFunctions {
 
   @override
   Future<void> registerApp(String instance) async {
-    await UnifiedPush.registerApp(instance, features);
+    await UnifiedPush.register(instance: instance, features: features);
   }
 
   @override

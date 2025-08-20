@@ -51,7 +51,6 @@ abstract class AppConfig {
   static bool renderHtml = true;
   static bool hideRedactedEvents = true;
   static bool hideUnknownEvents = true;
-  static bool hideUnimportantStateEvents = true;
   static bool separateChatTypes = false;
   static bool autoplayImages = true;
   static bool sendTypingNotifications = true;
@@ -70,7 +69,6 @@ abstract class AppConfig {
   static bool displayNavigationRail = false;
   static bool experimentalVoip = false;
   static const bool hideTypingUsernames = false;
-  static const bool hideAllStateEvents = false;
   static const String inviteLinkPrefix = 'https://matrix.to/#/';
   static const String deepLinkPrefix = 'men.metal://chat/';
   static const String schemePrefix = 'matrix:';

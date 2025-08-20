@@ -21,8 +21,7 @@ class L10nLv extends L10n {
   String get setCustomPermissionLevel => 'Iestatīt pielāgotu atļauju līmeni';
 
   @override
-  String get setPermissionsLevelDescription =>
-      'Lūgums zemāk atlasīt iepriekšizveidotu lomu vai ievadīt pielāgotu atļauju līmeni starp 0 un 100.';
+  String get setPermissionsLevelDescription => 'Lūgums zemāk atlasīt iepriekšizveidotu lomu vai ievadīt pielāgotu atļauju līmeni starp 0 un 100.';
 
   @override
   String get ignoreUser => 'Neņemt vērā lietotāju';
@@ -76,8 +75,7 @@ class L10nLv extends L10n {
   String get addEmail => 'Pievienot e-pasta adresi';
 
   @override
-  String get confirmMatrixId =>
-      'Lūgums apliecināt savu Matrix Id, lai varētu izdzēst savu kontu.';
+  String get confirmMatrixId => 'Lūgums apliecināt savu Matrix Id, lai varētu izdzēst savu kontu.';
 
   @override
   String supposedMxid(String mxid) {
@@ -103,8 +101,7 @@ class L10nLv extends L10n {
   String get allChats => 'Visas tērzēšanas';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Uzlabot šo istabu uz norādīto istabas versiju';
+  String get commandHint_roomupgrade => 'Uzlabot šo istabu uz norādīto istabas versiju';
 
   @override
   String get commandHint_googly => 'Nosūtīt izbolītu acu pāri';
@@ -142,15 +139,13 @@ class L10nLv extends L10n {
   String get appLock => 'Lietotnes aizslēgšana';
 
   @override
-  String get appLockDescription =>
-      'Aizslēgt lietotni, kad tā netiek izmantota, ar PIN kodu';
+  String get appLockDescription => 'Aizslēgt lietotni, kad tā netiek izmantota, ar PIN kodu';
 
   @override
   String get archive => 'Arhīvs';
 
   @override
-  String get areGuestsAllowedToJoin =>
-      'Vai vieslietotājiem ir ļauts pievienoties';
+  String get areGuestsAllowedToJoin => 'Vai vieslietotājiem ir ļauts pievienoties';
 
   @override
   String get areYouSure => 'Vai tiešām?';
@@ -159,8 +154,7 @@ class L10nLv extends L10n {
   String get areYouSureYouWantToLogout => 'Vai tiešām atteikties?';
 
   @override
-  String get askSSSSSign =>
-      'Lai varētu parakstīt otru cilvēku, lūgums ievadīt savu drošo krātuves paroles vārdkopu vai atkopes atslēgu.';
+  String get askSSSSSign => 'Lai varētu parakstīt otru cilvēku, lūgums ievadīt savu drošo krātuves paroles vārdkopu vai atkopes atslēgu.';
 
   @override
   String askVerificationRequest(String username) {
@@ -168,15 +162,10 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get autoplayImages =>
-      'Automātiski atskaņot animētas uzlīmes un emocijas';
+  String get autoplayImages => 'Automātiski atskaņot animētas uzlīmes un emocijas';
 
   @override
-  String badServerLoginTypesException(
-    String serverVersions,
-    String supportedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerLoginTypesException(String serverVersions, String supportedVersions, Object suportedVersions) {
     return 'Mājasserveris nodrošina pieteikšanās veidus:\n$serverVersions\nSavukārt, šī lietotne atbalsta tikai:\n$supportedVersions';
   }
 
@@ -184,20 +173,13 @@ class L10nLv extends L10n {
   String get sendTypingNotifications => 'Nosūtīt rakstīšanas paziņojumus';
 
   @override
-  String get swipeRightToLeftToReply =>
-      'Pavilkt no labās puses uz kreiso, lai atbildētu';
+  String get swipeRightToLeftToReply => 'Pavilkt no labās puses uz kreiso, lai atbildētu';
 
   @override
   String get sendOnEnter => 'Nosūtīt ar Enter';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerVersionsException(String serverVersions, String supportedVersions, Object serverVerions, Object supoortedVersions, Object suportedVersions) {
     return 'Mājasserveris nodrošina specifikācijas versijas:\n$serverVersions\nSavukārt, lietotne atbalsta tikai $supportedVersions';
   }
 
@@ -210,8 +192,7 @@ class L10nLv extends L10n {
   String get noMoreChatsFound => 'Vairs netika atrasta neviena tērzēšana...';
 
   @override
-  String get noChatsFoundHere =>
-      'Šeit vēl nav tērzēšanu. Jauna saruna ar kādu ir uzsākama ar zemāk esošo pogu. ⤵️';
+  String get noChatsFoundHere => 'Šeit vēl nav tērzēšanu. Jauna saruna ar kādu ir uzsākama ar zemāk esošo pogu. ⤵️';
 
   @override
   String get joinedChats => 'Tērzēšanas, kurās piedalos';
@@ -348,22 +329,19 @@ class L10nLv extends L10n {
   String get chat => 'Tērzēšana';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Tērzēšanu rezerves kopēšana tika iestatīta.';
+  String get yourChatBackupHasBeenSetUp => 'Tērzēšanu rezerves kopēšana tika iestatīta.';
 
   @override
   String get chatBackup => 'Tērzēšanu rezerves kopēšana';
 
   @override
-  String get chatBackupDescription =>
-      'Iepriekšējās ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.';
+  String get chatBackupDescription => 'Iepriekšējās ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.';
 
   @override
   String get chatDetails => 'Tērzēšanas izvērsums';
 
   @override
-  String get chatHasBeenAddedToThisSpace =>
-      'Šai vietai tika pievienota tērzēšana';
+  String get chatHasBeenAddedToThisSpace => 'Šai vietai tika pievienota tērzēšana';
 
   @override
   String get chats => 'Tērzēšanas';
@@ -378,8 +356,7 @@ class L10nLv extends L10n {
   String get close => 'Aizvērt';
 
   @override
-  String get commandHint_markasdm =>
-      'Atzīmēt kā tiešo ziņu istabu norādītajam Matrix Id';
+  String get commandHint_markasdm => 'Atzīmēt kā tiešo ziņu istabu norādītajam Matrix Id';
 
   @override
   String get commandHint_markasgroup => 'Atzīmēt kā kopu';
@@ -391,15 +368,13 @@ class L10nLv extends L10n {
   String get commandHint_clearcache => 'Iztīrīt kešatmiņu';
 
   @override
-  String get commandHint_create =>
-      'Izveidot tukšu kopas tērzēšanu\nLai atspējotu šifrēšanu, jāizmanto --no-encryption';
+  String get commandHint_create => 'Izveidot tukšu kopas tērzēšanu\nLai atspējotu šifrēšanu, jāizmanto --no-encryption';
 
   @override
   String get commandHint_discardsession => 'Atmest sesiju';
 
   @override
-  String get commandHint_dm =>
-      'Uzsākt tiešu tērzēšanu\nLai atspējotu šifrēšanu, jāizmanto --no-encryption';
+  String get commandHint_dm => 'Uzsākt tiešu tērzēšanu\nLai atspējotu šifrēšanu, jāizmanto --no-encryption';
 
   @override
   String get commandHint_html => 'Nosūtīt ar HTML formatētu tekstu';
@@ -420,16 +395,13 @@ class L10nLv extends L10n {
   String get commandHint_me => 'Apraksti sevi';
 
   @override
-  String get commandHint_myroomavatar =>
-      'Iestatīt savu attēlu šajā istabā (ar mxc-uri)';
+  String get commandHint_myroomavatar => 'Iestatīt savu attēlu šajā istabā (ar mxc-uri)';
 
   @override
-  String get commandHint_myroomnick =>
-      'Iestatīt savu attēlojamo vārdu šajā istabā';
+  String get commandHint_myroomnick => 'Iestatīt savu attēlojamo vārdu šajā istabā';
 
   @override
-  String get commandHint_op =>
-      'Iestatīt norādītā lietotāja pilnvaru līmeni (noklusējums: 50)';
+  String get commandHint_op => 'Iestatīt norādītā lietotāja pilnvaru līmeni (noklusējums: 50)';
 
   @override
   String get commandHint_plain => 'Nosūtīt neformatētu tekstu';
@@ -441,8 +413,7 @@ class L10nLv extends L10n {
   String get commandHint_send => 'Nosūtīt tekstu';
 
   @override
-  String get commandHint_unban =>
-      'Atcelt norādītā lietotāja izslēgšanu no šīs istabas';
+  String get commandHint_unban => 'Atcelt norādītā lietotāja izslēgšanu no šīs istabas';
 
   @override
   String get commandInvalid => 'Nederīga komanda';
@@ -468,8 +439,7 @@ class L10nLv extends L10n {
   String get connect => 'Savienot';
 
   @override
-  String get contactHasBeenInvitedToTheGroup =>
-      'Kontaktpersona tika uzaicināta kopā';
+  String get contactHasBeenInvitedToTheGroup => 'Kontaktpersona tika uzaicināta kopā';
 
   @override
   String get containsDisplayName => 'Satur attēlojamo vārdu';
@@ -478,8 +448,7 @@ class L10nLv extends L10n {
   String get containsUserName => 'Satur lietotājvārdu';
 
   @override
-  String get contentHasBeenReported =>
-      'Par saturu tika ziņos servera pārvaldītājiem';
+  String get contentHasBeenReported => 'Par saturu tika ziņos servera pārvaldītājiem';
 
   @override
   String get copiedToClipboard => 'Ievietots starpliktuvē';
@@ -544,12 +513,10 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get deactivateAccountWarning =>
-      'Tas atspējos Tavu lietotāja kontu. To nevar atdarīt. Vai tiešām?';
+  String get deactivateAccountWarning => 'Tas atspējos Tavu lietotāja kontu. To nevar atdarīt. Vai tiešām?';
 
   @override
-  String get defaultPermissionLevel =>
-      'Noklusējuma atļauju līmenis jauniem lietotājiem';
+  String get defaultPermissionLevel => 'Noklusējuma atļauju līmenis jauniem lietotājiem';
 
   @override
   String get delete => 'Izdzēst';
@@ -606,8 +573,7 @@ class L10nLv extends L10n {
   String get emoteInvalid => 'Nederīgs emocijas īskods.';
 
   @override
-  String get emoteKeyboardNoRecents =>
-      'Nesen izmantotās emocijas parādīsies šeit...';
+  String get emoteKeyboardNoRecents => 'Nesen izmantotās emocijas parādīsies šeit...';
 
   @override
   String get emotePacks => 'Emociju pakas istabai';
@@ -622,8 +588,7 @@ class L10nLv extends L10n {
   String get accessAndVisibility => 'Piekļuve un redzamība';
 
   @override
-  String get accessAndVisibilityDescription =>
-      'Kam ir ļauts pievienoties šai tērzēšanai un kā tērzēšana var tikt atklāta.';
+  String get accessAndVisibilityDescription => 'Kam ir ļauts pievienoties šai tērzēšanai un kā tērzēšana var tikt atklāta.';
 
   @override
   String get calls => 'Zvani';
@@ -632,15 +597,13 @@ class L10nLv extends L10n {
   String get customEmojisAndStickers => 'Pielāgotas emocijzīmes un uzlīmes';
 
   @override
-  String get customEmojisAndStickersBody =>
-      'Pievienot vai kopīgot pielāgotas emocijzīmes vai uzlīmes, kas var tikt izmantotas jebkurā tērzēšanā.';
+  String get customEmojisAndStickersBody => 'Pievienot vai kopīgot pielāgotas emocijzīmes vai uzlīmes, kas var tikt izmantotas jebkurā tērzēšanā.';
 
   @override
   String get emoteShortcode => 'Emocijas īskods';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'Nepieciešams izvēlēties emocijas īskodu un attēlu.';
+  String get emoteWarnNeedToPick => 'Nepieciešams izvēlēties emocijas īskodu un attēlu.';
 
   @override
   String get emptyChat => 'Tukša tērzēšana';
@@ -652,8 +615,7 @@ class L10nLv extends L10n {
   String get enableEncryption => 'Iespējot šifrēšanu';
 
   @override
-  String get enableEncryptionWarning =>
-      'Vairs nebūs iespējams atspējot šifrēšanu. Vai tiešām to darīt?';
+  String get enableEncryptionWarning => 'Vairs nebūs iespējams atspējot šifrēšanu. Vai tiešām to darīt?';
 
   @override
   String get encrypted => 'Šifrēta';
@@ -717,8 +679,7 @@ class L10nLv extends L10n {
   String get chatDescription => 'Tērzēšanas apraksts';
 
   @override
-  String get chatDescriptionHasBeenChanged =>
-      'Tērzēšanas apraksts ir mainījies';
+  String get chatDescriptionHasBeenChanged => 'Tērzēšanas apraksts ir mainījies';
 
   @override
   String get groupIsPublic => 'Kopa ir publiska';
@@ -752,12 +713,10 @@ class L10nLv extends L10n {
   String get hideRedactedMessages => 'Paslēpt labošanas ziņas';
 
   @override
-  String get hideRedactedMessagesBody =>
-      'Ja kāds labo ziņu, tā vairs nebūs redzama tērzēšanā.';
+  String get hideRedactedMessagesBody => 'Ja kāds labo ziņu, tā vairs nebūs redzama tērzēšanā.';
 
   @override
-  String get hideInvalidOrUnknownMessageFormats =>
-      'Paslēpt nederīgus vai nezināmus ziņu formātus';
+  String get hideInvalidOrUnknownMessageFormats => 'Paslēpt nederīgus vai nezināmus ziņu formātus';
 
   @override
   String get howOffensiveIsThisContent => 'Cik aizskarošs ir šis saturs?';
@@ -775,8 +734,7 @@ class L10nLv extends L10n {
   String get blockedUsers => 'Atslēgtie lietotāji';
 
   @override
-  String get blockListDescription =>
-      'Ir iespējams atslēgt traucējošus lietotājus. Nebūs iespējams saņem jebkādas ziņas vai uzaicinājumus uz istabām no lietotājiem, kas ir personīgajā izslēgšanas sarakstā.';
+  String get blockListDescription => 'Ir iespējams atslēgt traucējošus lietotājus. Nebūs iespējams saņem jebkādas ziņas vai uzaicinājumus uz istabām no lietotājiem, kas ir personīgajā izslēgšanas sarakstā.';
 
   @override
   String get blockUsername => 'Neņemt vērā lietotājvārdu';
@@ -785,8 +743,7 @@ class L10nLv extends L10n {
   String get iHaveClickedOnLink => 'Es uzklikšķināju uz saites';
 
   @override
-  String get incorrectPassphraseOrKey =>
-      'Nepareiza paroles vārdkopa vai atkopes atslēga';
+  String get incorrectPassphraseOrKey => 'Nepareiza paroles vārdkopa vai atkopes atslēga';
 
   @override
   String get inoffensive => 'Nav aizskarošs';
@@ -817,8 +774,7 @@ class L10nLv extends L10n {
   String get invited => 'Uzaicināts';
 
   @override
-  String get redactMessageDescription =>
-      'Ziņa tiks labota visiem šīs sarunas dalībniekiem. To nevar atdarīt.';
+  String get redactMessageDescription => 'Ziņa tiks labota visiem šīs sarunas dalībniekiem. To nevar atdarīt.';
 
   @override
   String get optionalRedactReason => '(Pēc izvēles) Ziņas labošanas iemesls...';
@@ -889,22 +845,19 @@ class L10nLv extends L10n {
   String get dehydrate => 'Izgūt sesiju un iztīrīt ierīci';
 
   @override
-  String get dehydrateWarning =>
-      'Šī darbība nav atdarāma. Jānodrošina, ka rezerves kopijas datne tiek droši uzglabāta.';
+  String get dehydrateWarning => 'Šī darbība nav atdarāma. Jānodrošina, ka rezerves kopijas datne tiek droši uzglabāta.';
 
   @override
   String get dehydrateTor => 'TOR lietotāji: izgūt sesiju';
 
   @override
-  String get dehydrateTorLong =>
-      'TOR lietotājiem ir ieteicams izgūt sesiju pirms loga aizvēršanas.';
+  String get dehydrateTorLong => 'TOR lietotājiem ir ieteicams izgūt sesiju pirms loga aizvēršanas.';
 
   @override
   String get hydrateTor => 'TOR lietotāji: ievietot sesijas izguvi';
 
   @override
-  String get hydrateTorLong =>
-      'Vai sesija pēdējoreiz tika izgūta TOR? Ātri ievieto to un turpini tērzēšanu!';
+  String get hydrateTorLong => 'Vai sesija pēdējoreiz tika izgūta TOR? Ātri ievieto to un turpini tērzēšanu!';
 
   @override
   String get hydrate => 'Atjaunot no rezerves kopijas datnes';
@@ -916,12 +869,10 @@ class L10nLv extends L10n {
   String get loadMore => 'Ielādēt vēl…';
 
   @override
-  String get locationDisabledNotice =>
-      'Atrašanās vietas pakalpojumi ir atspējoti. Lūgums tos iespējot, lai būtu iespējams kopīgot savu atrašanās vietu.';
+  String get locationDisabledNotice => 'Atrašanās vietas pakalpojumi ir atspējoti. Lūgums tos iespējot, lai būtu iespējams kopīgot savu atrašanās vietu.';
 
   @override
-  String get locationPermissionDeniedNotice =>
-      'Atrašanās vietas atļauja noliegta. Lūgums nodrošināt to, lai būtu iespējams kopīgot savu atrašanās vietu.';
+  String get locationPermissionDeniedNotice => 'Atrašanās vietas atļauja noliegta. Lūgums nodrošināt to, lai būtu iespējams kopīgot savu atrašanās vietu.';
 
   @override
   String get login => 'Pieteikties';
@@ -953,8 +904,7 @@ class L10nLv extends L10n {
   String get muteChat => 'Apklusināt tērzēšanu';
 
   @override
-  String get needPantalaimonWarning =>
-      'Lūgums ņemt vērā, ka pagaidām ir nepieciešams Pantalaimon, lai izmantotu pilnīgu šifrēšanu.';
+  String get needPantalaimonWarning => 'Lūgums ņemt vērā, ka pagaidām ir nepieciešams Pantalaimon, lai izmantotu pilnīgu šifrēšanu.';
 
   @override
   String get newChat => 'Jauna tērzēšana';
@@ -978,12 +928,10 @@ class L10nLv extends L10n {
   String get noEmotesFound => 'Netika atrasta neviena emocija. 😕';
 
   @override
-  String get noEncryptionForPublicRooms =>
-      'Šifrēšanu var iespējot tikai tad, kad istaba vairs nav publiski pieejama.';
+  String get noEncryptionForPublicRooms => 'Šifrēšanu var iespējot tikai tad, kad istaba vairs nav publiski pieejama.';
 
   @override
-  String get noGoogleServicesWarning =>
-      'Izskatās, ka Firebase mākoņziņojumapmaiņa nav pieejama šajā ierīcē. Lai joprojām saņemtu pašpiegādes paziņojumus, mēs iesakām uzstādīt ntfy. Ar ntfy vai citu Vienotās pašpiegādes nodrošinātāju ir iespējams saņemt pašpiegādes paziņojumus drošā veidā. ntfy var lejupielādēt no PlayStore vai F-Droid.';
+  String get noGoogleServicesWarning => 'Izskatās, ka Firebase mākoņziņojumapmaiņa nav pieejama šajā ierīcē. Lai joprojām saņemtu pašpiegādes paziņojumus, mēs iesakām uzstādīt ntfy. Ar ntfy vai citu UnifiedPush nodrošinātāju ir iespējams saņemt pašpiegādes paziņojumus drošā veidā. ntfy var lejupielādēt no Play Store vai F-Droid.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -1000,8 +948,7 @@ class L10nLv extends L10n {
   String get none => 'Neviens';
 
   @override
-  String get noPasswordRecoveryDescription =>
-      'Vēl nav pievienots paroles atjaunošanas veids.';
+  String get noPasswordRecoveryDescription => 'Vēl nav pievienots paroles atjaunošanas veids.';
 
   @override
   String get noPermission => 'Nav atļaujas';
@@ -1013,8 +960,7 @@ class L10nLv extends L10n {
   String get notifications => 'Paziņojumi';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Paziņojumi iespējoti šim kontam';
+  String get notificationsEnabledForThisAccount => 'Paziņojumi iespējoti šim kontam';
 
   @override
   String numUsersTyping(int count) {
@@ -1037,12 +983,10 @@ class L10nLv extends L10n {
   String get online => 'Tiešsaistē';
 
   @override
-  String get onlineKeyBackupEnabled =>
-      'Tiešsaistes atslēgas rezerves kopēšana ir iespējota';
+  String get onlineKeyBackupEnabled => 'Tiešsaistes atslēgas rezerves kopēšana ir iespējota';
 
   @override
-  String get oopsPushError =>
-      'Ups! Diemžēl atgadījās kļūda pašpiegādes paziņojumu iestatīšanas laikā.';
+  String get oopsPushError => 'Ups! Diemžēl atgadījās kļūda pašpiegādes paziņojumu iestatīšanas laikā.';
 
   @override
   String get oopsSomethingWentWrong => 'Ups! Kaut kas nogāja greizi…';
@@ -1075,8 +1019,7 @@ class L10nLv extends L10n {
   String get bundleName => 'Komplekta nosaukums';
 
   @override
-  String get enableMultiAccounts =>
-      '(BETA) Iespējot vairākus kontus šajā ierīcē';
+  String get enableMultiAccounts => '(BETA) Iespējot vairākus kontus šajā ierīcē';
 
   @override
   String get openInMaps => 'Atvērt kartēs';
@@ -1085,8 +1028,7 @@ class L10nLv extends L10n {
   String get link => 'Saite';
 
   @override
-  String get serverRequiresEmail =>
-      'Šim serverim ir nepieciešams pārbaudīt Tavu e-pasta adresi reģistrācijai.';
+  String get serverRequiresEmail => 'Šim serverim ir nepieciešams pārbaudīt Tavu e-pasta adresi reģistrācijai.';
 
   @override
   String get or => 'Vai';
@@ -1107,12 +1049,10 @@ class L10nLv extends L10n {
   String get passwordHasBeenChanged => 'Parole tikai nomainīta';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Paslēpt dalībnieku izmaiņas publiskajās tērzēšanās';
+  String get hideMemberChangesInPublicChats => 'Paslēpt dalībnieku izmaiņas publiskajās tērzēšanās';
 
   @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Nerādīt tērzēšanas plūsmā, ja kāds pievienojas publiskai tērzēšanai vai pamet to, lai uzlabotu lasāmību.';
+  String get hideMemberChangesInPublicChatsBody => 'Nerādīt tērzēšanas plūsmā, ja kāds pievienojas publiskai tērzēšanai vai pamet to, lai uzlabotu lasāmību.';
 
   @override
   String get overview => 'Pārskats';
@@ -1147,12 +1087,10 @@ class L10nLv extends L10n {
   String get pleaseChooseAPasscode => 'Lūgums izvēlēties piekļuves kodu';
 
   @override
-  String get pleaseClickOnLink =>
-      'Lūgums klikšķināt uz saites e-pastā un tad turpināt.';
+  String get pleaseClickOnLink => 'Lūgums klikšķināt uz saites e-pastā un tad turpināt.';
 
   @override
-  String get pleaseEnter4Digits =>
-      'Lūgums ievadīt 4 ciparus vai atstāt tukšu, lai atspējotu lietotnes slēgu.';
+  String get pleaseEnter4Digits => 'Lūgums ievadīt 4 ciparus vai atstāt tukšu, lai atspējotu lietotnes slēgu.';
 
   @override
   String get pleaseEnterRecoveryKey => 'Lūgums ievadīt savu atkopes atslēgu:';
@@ -1167,8 +1105,7 @@ class L10nLv extends L10n {
   String get pleaseEnterYourUsername => 'Lūgums ievadīt savu lietotājvārdu';
 
   @override
-  String get pleaseFollowInstructionsOnWeb =>
-      'Lūgums sekot norādēm tīmekļvietnē un piesist \"Nākamais\".';
+  String get pleaseFollowInstructionsOnWeb => 'Lūgums sekot norādēm tīmekļvietnē un piesist \"Nākamais\".';
 
   @override
   String get privacy => 'Privātums';
@@ -1238,8 +1175,7 @@ class L10nLv extends L10n {
   String get removeYourAvatar => 'Noņemt savu attēlu';
 
   @override
-  String get replaceRoomWithNewerVersion =>
-      'Aizvietot istabu ar jaunāku versiju';
+  String get replaceRoomWithNewerVersion => 'Aizvietot istabu ar jaunāku versiju';
 
   @override
   String get reply => 'Atbildēt';
@@ -1447,8 +1383,7 @@ class L10nLv extends L10n {
   String get toggleUnread => 'Atzīmēt kā lasītu/nelasītu';
 
   @override
-  String get tooManyRequestsWarning =>
-      'Pārāk daudz pieprasījumu. Lūgums vēlāk mēģināt vēlreiz.';
+  String get tooManyRequestsWarning => 'Pārāk daudz pieprasījumu. Lūgums vēlāk mēģināt vēlreiz.';
 
   @override
   String get transferFromAnotherDevice => 'Pārnest no citas ierīces';
@@ -1558,16 +1493,13 @@ class L10nLv extends L10n {
   String get voiceMessage => 'Balss ziņa';
 
   @override
-  String get waitingPartnerAcceptRequest =>
-      'Gaida, līdz biedrs apstiprinās pieprasījumu…';
+  String get waitingPartnerAcceptRequest => 'Gaida, līdz biedrs apstiprinās pieprasījumu…';
 
   @override
-  String get waitingPartnerEmoji =>
-      'Gaida, līdz biedrs apstiprinās emocijzīmi…';
+  String get waitingPartnerEmoji => 'Gaida, līdz biedrs apstiprinās emocijzīmes…';
 
   @override
-  String get waitingPartnerNumbers =>
-      'Gaida, līdz biedrs apstiprinās skaitļus…';
+  String get waitingPartnerNumbers => 'Gaida, līdz biedrs apstiprinās skaitļus…';
 
   @override
   String get wallpaper => 'Ekrāntapete:';
@@ -1582,19 +1514,16 @@ class L10nLv extends L10n {
   String get whoCanPerformWhichAction => 'Kurš var veikt kādas darbības';
 
   @override
-  String get whoIsAllowedToJoinThisGroup =>
-      'Kuram ir ļauts pievienoties šai kopai';
+  String get whoIsAllowedToJoinThisGroup => 'Kuram ir ļauts pievienoties šai kopai';
 
   @override
   String get whyDoYouWantToReportThis => 'Kādēļ vēlies ziņot par šo?';
 
   @override
-  String get wipeChatBackup =>
-      'Notīrīt tērzēšanu rezerves kopiju, lai izveidotu jaunu atkopes atslēgu?';
+  String get wipeChatBackup => 'Notīrīt tērzēšanu rezerves kopiju, lai izveidotu jaunu atkopes atslēgu?';
 
   @override
-  String get withTheseAddressesRecoveryDescription =>
-      'Ar šīm adresēm var atjaunot savu paroli.';
+  String get withTheseAddressesRecoveryDescription => 'Ar šīm adresēm var atjaunot savu paroli.';
 
   @override
   String get writeAMessage => 'Rakstīt ziņu…';
@@ -1606,12 +1535,10 @@ class L10nLv extends L10n {
   String get you => 'Tu';
 
   @override
-  String get youAreNoLongerParticipatingInThisChat =>
-      'Tu vairs nepiedalies šajā tērzēšanā';
+  String get youAreNoLongerParticipatingInThisChat => 'Tu vairs nepiedalies šajā tērzēšanā';
 
   @override
-  String get youHaveBeenBannedFromThisChat =>
-      'Tev tika liegta piekļuve šai tērzēšanai';
+  String get youHaveBeenBannedFromThisChat => 'Tev tika liegta piekļuve šai tērzēšanai';
 
   @override
   String get yourPublicKey => 'Tava publiskā atslēga';
@@ -1635,15 +1562,13 @@ class L10nLv extends L10n {
   String get removeFromSpace => 'Noņemt no vietas';
 
   @override
-  String get addToSpaceDescription =>
-      'Atlasīt vietu, kurai pievienot šo tērzēšanu.';
+  String get addToSpaceDescription => 'Atlasīt vietu, kurai pievienot šo tērzēšanu.';
 
   @override
   String get start => 'Uzsākt';
 
   @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Lai atslēgtu savas vecās ziņas, lūgums ievadīt savu atkopes atslēgu, kas tika izveidota iepriekšējā sesijā. Atkopes atslēga NAV parole.';
+  String get pleaseEnterRecoveryKeyDescription => 'Lai atslēgtu savas vecās ziņas, lūgums ievadīt savu atkopes atslēgu, kas tika izveidota iepriekšējā sesijā. Atkopes atslēga NAV parole.';
 
   @override
   String get publish => 'Publicēt';
@@ -1674,8 +1599,7 @@ class L10nLv extends L10n {
   String get pinMessage => 'Piespraust istabai';
 
   @override
-  String get confirmEventUnpin =>
-      'Vai tiešām neatgriezeniski atspraust šo notikumu?';
+  String get confirmEventUnpin => 'Vai tiešām neatgriezeniski atspraust šo notikumu?';
 
   @override
   String get emojis => 'Emocijzīmes';
@@ -1690,12 +1614,10 @@ class L10nLv extends L10n {
   String get unsupportedAndroidVersion => 'Neatbalstīta Android versija';
 
   @override
-  String get unsupportedAndroidVersionLong =>
-      'Šai iespējai ir nepieciešama jaunāka Android versija. Lūgums pārbaudīt atjauninājumus vai Lineage OS atbalstu.';
+  String get unsupportedAndroidVersionLong => 'Šai iespējai ir nepieciešama jaunāka Android versija. Lūgums pārbaudīt atjauninājumus vai Lineage OS atbalstu.';
 
   @override
-  String get videoCallsBetaWarning =>
-      'Lūgums ņemt vērā, ka video zvani pašreiz ir beta stāvoklī. Tie visās platformās var nedarboties kā paredzēs vai pat nedarboties vispār.';
+  String get videoCallsBetaWarning => 'Lūgums ņemt vērā, ka video zvani pašreiz ir beta stāvoklī. Tie visās platformās var nedarboties kā paredzēs vai pat nedarboties vispār.';
 
   @override
   String get experimentalVideoCalls => 'Izmēģinājuma video zvani';
@@ -1707,8 +1629,7 @@ class L10nLv extends L10n {
   String get indexedDbErrorTitle => 'Privātā režīma nebūšanas';
 
   @override
-  String get indexedDbErrorLong =>
-      'Diemžēl ziņu krātuve pēc noklusējuma nav iespējota privātajā režīmā.\nLūgums apmeklēt\n - about:config\n - iestatīt dom.indexedDB.privateBrowsing.enabled kā true\nPretējā gadījumā nav iespējams palaist FluffyChat.';
+  String get indexedDbErrorLong => 'Diemžēl ziņu krātuve pēc noklusējuma nav iespējota privātajā režīmā.\nLūgums apmeklēt\n - about:config\n - iestatīt dom.indexedDB.privateBrowsing.enabled kā true\nPretējā gadījumā nav iespējams palaist FluffyChat.';
 
   @override
   String switchToAccount(String number) {
@@ -1819,8 +1740,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'Vēl nav izveidota neviena publiska saite';
+  String get noPublicLinkHasBeenCreatedYet => 'Vēl nav izveidota neviena publiska saite';
 
   @override
   String get knock => 'Pieklauvēt';
@@ -1832,12 +1752,10 @@ class L10nLv extends L10n {
   String get unlockOldMessages => 'Atslēgt vecās ziņas';
 
   @override
-  String get storeInSecureStorageDescription =>
-      'Glabāt atkopes atslēgu šīs ierīces drošajā krātuvē.';
+  String get storeInSecureStorageDescription => 'Glabāt atkopes atslēgu šīs ierīces drošajā krātuvē.';
 
   @override
-  String get saveKeyManuallyDescription =>
-      'Šo atslēgu var pašrocīgi saglabāt ar sistēmas kopīgošanas dialogloga vai starpliktuves izsaukšanu.';
+  String get saveKeyManuallyDescription => 'Šo atslēgu var pašrocīgi saglabāt ar sistēmas kopīgošanas dialogloga vai starpliktuves izsaukšanu.';
 
   @override
   String get storeInAndroidKeystore => 'Glabāt Android KeyStore';
@@ -1860,8 +1778,7 @@ class L10nLv extends L10n {
   String get custom => 'Pielāgots';
 
   @override
-  String get foregroundServiceRunning =>
-      'Šis paziņojums parādās, kad darbojas priekšplāna pakalpojums.';
+  String get foregroundServiceRunning => 'Šis paziņojums parādās, kad darbojas priekšplāna pakalpojums.';
 
   @override
   String get screenSharingTitle => 'ekrāna kopīgošana';
@@ -1876,26 +1793,22 @@ class L10nLv extends L10n {
   String get callingAccount => 'Zvanīšanas konts';
 
   @override
-  String get callingAccountDetails =>
-      'Ļauj FluffyChat izmantot iebūvēto Android zvanīšanas lietotni.';
+  String get callingAccountDetails => 'Ļauj FluffyChat izmantot iebūvēto Android zvanīšanas lietotni.';
 
   @override
   String get appearOnTop => 'Parādīt virspusē';
 
   @override
-  String get appearOnTopDetails =>
-      'Ļauj lietotnei parādīties virspusē (nav nepieciešams, ja FluffyChat jau ir iestatīts kā zvanīšanas konts)';
+  String get appearOnTopDetails => 'Ļauj lietotnei parādīties virspusē (nav nepieciešams, ja FluffyChat jau ir iestatīts kā zvanīšanas konts)';
 
   @override
-  String get otherCallingPermissions =>
-      'Mikrofons, kamera un citas FluffyChat atļaujas';
+  String get otherCallingPermissions => 'Mikrofons, kamera un citas FluffyChat atļaujas';
 
   @override
   String get whyIsThisMessageEncrypted => 'Kādēļ šī ziņa ir nelasāma?';
 
   @override
-  String get noKeyForThisMessage =>
-      'Tā var notikt, ja ziņa tika nosūtīta, pirms pieteicies savā kontā šajā ierīcē.\n\nIr arī iespējams, ka sūtītājs noliedza Tavu ierīci vai kaut kas nogāja greizi ar interneta savienojumu.\n\nVai ziņas ir lasāmas citā sesijā? Tad Tu vari pārsūtīt ziņu no tās. Jādodas uz Iestatījumi > Ierīces un jāpārliecinās, ka ierīces viena otru ir apliecinājušas. Kad nākamreiz atvērsi istabu un abas sesijas būs priekšplānā, atslēgas tiks automātiski pārsūtītas.\n\nVai nevēlies zaudēt atslēgas, kad atsakies vai maini ierīces? Jāpārliecinās, ka iestatījumos ir iespējota tērzēšanu rezerves kopija.';
+  String get noKeyForThisMessage => 'Tā var notikt, ja ziņa tika nosūtīta, pirms pieteicies savā kontā šajā ierīcē.\n\nIr arī iespējams, ka sūtītājs noliedza Tavu ierīci vai kaut kas nogāja greizi ar interneta savienojumu.\n\nVai ziņas ir lasāmas citā sesijā? Tad Tu vari pārsūtīt ziņu no tās. Jādodas uz Iestatījumi > Ierīces un jāpārliecinās, ka ierīces viena otru ir apliecinājušas. Kad nākamreiz atvērsi istabu un abas sesijas būs priekšplānā, atslēgas tiks automātiski pārsūtītas.\n\nVai nevēlies zaudēt atslēgas, kad atsakies vai maini ierīces? Jāpārliecinās, ka iestatījumos ir iespējota tērzēšanu rezerves kopija.';
 
   @override
   String get newGroup => 'Jauna kopa';
@@ -1918,8 +1831,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get hideUnimportantStateEvents =>
-      'Paslēpt nebūtiskus stāvokļa notikumus';
+  String get hideUnimportantStateEvents => 'Paslēpt nebūtiskus stāvokļa notikumus';
 
   @override
   String get hidePresences => 'Paslēpt stāvokļu sarakstu?';
@@ -1933,15 +1845,13 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get newSpaceDescription =>
-      'Vietas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas kopienas.';
+  String get newSpaceDescription => 'Vietas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas kopienas.';
 
   @override
   String get encryptThisChat => 'Šifrēt šo tērzēšanu';
 
   @override
-  String get disableEncryptionWarning =>
-      'Drošības iemeslu dēļ tērzēšanā nevar atspējot šifrēšanu, ja tā ir pirms tam ir bijusi iespējota.';
+  String get disableEncryptionWarning => 'Drošības iemeslu dēļ tērzēšanā nevar atspējot šifrēšanu, ja tā ir pirms tam ir bijusi iespējota.';
 
   @override
   String get sorryThatsNotPossible => 'Atvaino! Tas nav iespējams';
@@ -1953,8 +1863,7 @@ class L10nLv extends L10n {
   String get reopenChat => 'Atkārtoti atvērt tērzēšanu';
 
   @override
-  String get noBackupWarning =>
-      'Uzmanību! Bez tērzēšanu rezerves kopiju veidošanas iespējošanas tiks zaudēta piekļuve savām šifrētajām ziņām. Ir ļoti ieteicams iespējot tērzēšanu rezerves kopiju veidošanu pirms atteikšanās.';
+  String get noBackupWarning => 'Uzmanību! Bez tērzēšanu rezerves kopiju veidošanas iespējošanas tiks zaudēta piekļuve savām šifrētajām ziņām. Ir ļoti ieteicams iespējot tērzēšanu rezerves kopiju veidošanu pirms atteikšanās.';
 
   @override
   String get noOtherDevicesFound => 'Netika atrastas citas ierīces';
@@ -1982,8 +1891,7 @@ class L10nLv extends L10n {
   String get openLinkInBrowser => 'Atvērt saiti pārlūkā';
 
   @override
-  String get reportErrorDescription =>
-      '😭 Ak nē! Kaut kas nogāja greizi. Ja ir vēlēšanas, par šo nepilnību var ziņot izstrādātājiem.';
+  String get reportErrorDescription => '😭 Ak nē! Kaut kas nogāja greizi. Ja ir vēlēšanas, par šo nepilnību var ziņot izstrādātājiem.';
 
   @override
   String get report => 'Ziņot';
@@ -1992,8 +1900,7 @@ class L10nLv extends L10n {
   String get signInWithPassword => 'Pieteikties ar paroli';
 
   @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Lūgums vēlāk mēģināt vēlreiz vai izvēlēties citu serveri.';
+  String get pleaseTryAgainLaterOrChooseDifferentServer => 'Lūgums vēlāk mēģināt vēlreiz vai izvēlēties citu serveri.';
 
   @override
   String signInWith(String provider) {
@@ -2001,8 +1908,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get profileNotFound =>
-      'Lietotāju serverī nevarēja atrast. Varbūt ir nebūšanas ar savienojumu vai lietotājs nepastāv.';
+  String get profileNotFound => 'Lietotāju serverī nevarēja atrast. Varbūt ir nebūšanas ar savienojumu vai lietotājs nepastāv.';
 
   @override
   String get setTheme => 'Iestatīt izskatu:';
@@ -2014,10 +1920,10 @@ class L10nLv extends L10n {
   String get invite => 'Uzaicināt';
 
   @override
-  String get inviteGroupChat => '📨 Uzaicināt kopas tērzēšanu';
+  String get inviteGroupChat => '📨 Uzaicinājums uz kopas tērzēšanu';
 
   @override
-  String get invitePrivateChat => '📨 Uzaicināt privātu tērzēšanu';
+  String get invitePrivateChat => '📨 Uzaicinājums uz privātu tērzēšanu';
 
   @override
   String get invalidInput => 'Nederīga ievade.';
@@ -2031,36 +1937,28 @@ class L10nLv extends L10n {
   String get pleaseEnterANumber => 'Lūgums ievadīt skaitli lielāku par 0';
 
   @override
-  String get archiveRoomDescription =>
-      'Tērzēšana tiks pārvietota uz arhīvu. Citi lietotāji redzēs, ka pameti tērzēšanu.';
+  String get archiveRoomDescription => 'Tērzēšana tiks pārvietota uz arhīvu. Citi lietotāji redzēs, ka pameti tērzēšanu.';
 
   @override
-  String get roomUpgradeDescription =>
-      'Tērzēšana tad tiks atkārtoti izveidota ar jauno istabas versiju. Visiem dalībniekiem tiks paziņots, ka viņiem ir jāpārslēdzas uz jauno tērzēšanu. Vairāk par istabu versijām var atrast https://spec.matrix.org/latest/rooms/';
+  String get roomUpgradeDescription => 'Tērzēšana tad tiks atkārtoti izveidota ar jauno istabas versiju. Visiem dalībniekiem tiks paziņots, ka viņiem ir jāpārslēdzas uz jauno tērzēšanu. Vairāk par istabu versijām var atrast https://spec.matrix.org/latest/rooms/';
 
   @override
-  String get removeDevicesDescription =>
-      'Tu tiksi izrakstīts no šīs ierīces un vairs nevarēsi saņemt ziņas.';
+  String get removeDevicesDescription => 'Tu tiksi izrakstīts no šīs ierīces un vairs nevarēsi saņemt ziņas.';
 
   @override
-  String get banUserDescription =>
-      'Lietotājam tiks liegta piekļuve tērzēšanai, un vairs nevarēs vēlreiz pievienoties tērzēšanai, līdz liegums tiks atcelts.';
+  String get banUserDescription => 'Lietotājam tiks liegta piekļuve tērzēšanai, un vairs nevarēs vēlreiz pievienoties tērzēšanai, līdz liegums tiks atcelts.';
 
   @override
-  String get unbanUserDescription =>
-      'Lietotājs varēs atkal pievienoties tērzēšanai, ja mēģinās.';
+  String get unbanUserDescription => 'Lietotājs varēs atkal pievienoties tērzēšanai, ja mēģinās.';
 
   @override
-  String get kickUserDescription =>
-      'Lietotājs ir izmests no tērzēšanas, bet piekļuve nav liegta. Publiskās tērzēšanās lietotājs var atkārtoti pievienoties jebkurā laikā.';
+  String get kickUserDescription => 'Lietotājs ir izmests no tērzēšanas, bet piekļuve nav liegta. Publiskās tērzēšanās lietotājs var atkārtoti pievienoties jebkurā laikā.';
 
   @override
-  String get makeAdminDescription =>
-      'Tiklīdz šis lietotājs tiks padarīts par pārvaldītāju, to vairs nevarēs atdarīt, jo tad tam būs tādas pašas atļaujas kā Tev.';
+  String get makeAdminDescription => 'Tiklīdz šis lietotājs tiks padarīts par pārvaldītāju, to vairs nevarēs atdarīt, jo tad tam būs tādas pašas atļaujas kā Tev.';
 
   @override
-  String get pushNotificationsNotAvailable =>
-      'Pašpiegādes paziņojumi nav pieejami';
+  String get pushNotificationsNotAvailable => 'Pašpiegādes paziņojumi nav pieejami';
 
   @override
   String get learnMore => 'Uzzināt vairāk';
@@ -2091,15 +1989,13 @@ class L10nLv extends L10n {
   String get groupName => 'Kopas nosaukums';
 
   @override
-  String get createGroupAndInviteUsers =>
-      'Izveidot kopu un uzaicināt lietotājus';
+  String get createGroupAndInviteUsers => 'Izveidot kopu un uzaicināt lietotājus';
 
   @override
   String get groupCanBeFoundViaSearch => 'Kopu var atrast meklēšanā';
 
   @override
-  String get wrongRecoveryKey =>
-      'Atvaino... Nešķiet, ka šī būtu pareiza atkopes atslēga.';
+  String get wrongRecoveryKey => 'Atvaino... Nešķiet, ka šī būtu pareiza atkopes atslēga.';
 
   @override
   String get startConversation => 'Uzsākt sarunu';
@@ -2111,12 +2007,10 @@ class L10nLv extends L10n {
   String get databaseMigrationTitle => 'Datubāze ir optimizēta';
 
   @override
-  String get databaseMigrationBody =>
-      'Lūgums uzgaidīt. Tas var aizņemt kādu brīdi.';
+  String get databaseMigrationBody => 'Lūgums uzgaidīt. Tas var aizņemt kādu brīdi.';
 
   @override
-  String get leaveEmptyToClearStatus =>
-      'Atstāt tukšu, lai notīrītu savu stāvokli.';
+  String get leaveEmptyToClearStatus => 'Atstāt tukšu, lai notīrītu savu stāvokli.';
 
   @override
   String get select => 'Atlasīt';
@@ -2125,8 +2019,7 @@ class L10nLv extends L10n {
   String get searchForUsers => 'Meklēt @lietotājus...';
 
   @override
-  String get pleaseEnterYourCurrentPassword =>
-      'Lūgums ievadīt savu pašreizējo paroli';
+  String get pleaseEnterYourCurrentPassword => 'Lūgums ievadīt savu pašreizējo paroli';
 
   @override
   String get newPassword => 'Jauna parole';
@@ -2216,33 +2109,28 @@ class L10nLv extends L10n {
   String get sendReadReceipts => 'Nosūtīt lasīšanas atskaites';
 
   @override
-  String get sendTypingNotificationsDescription =>
-      'Citi tērzēšanas dalībnieki var redzēt, kad raksti jaunu ziņu.';
+  String get sendTypingNotificationsDescription => 'Citi tērzēšanas dalībnieki var redzēt, kad raksti jaunu ziņu.';
 
   @override
-  String get sendReadReceiptsDescription =>
-      'Citi tērzēšanas dalībnieki var redzēt, kad izlasīji ziņu.';
+  String get sendReadReceiptsDescription => 'Citi tērzēšanas dalībnieki var redzēt, kad izlasīji ziņu.';
 
   @override
   String get formattedMessages => 'Formatētas ziņas';
 
   @override
-  String get formattedMessagesDescription =>
-      'Attēlot bagātinātu ziņu saturu, piemēram, ar Markdown iezīmētu treknrakstu.';
+  String get formattedMessagesDescription => 'Attēlot bagātinātu ziņu saturu, piemēram, ar Markdown iezīmētu treknrakstu.';
 
   @override
   String get verifyOtherUser => '🔐 Apliecināt otru lietotāju';
 
   @override
-  String get verifyOtherUserDescription =>
-      'Ar cita lietotāja apliecināšanu vari pārliecināties, ka zini, kam Tu tiešām raksti. 💪\n\nKad uzsāc apliecināšanu, Tu un otrs lietotājs lietotnē redzēs uznirstošo logu. Tajā jūs redzēsiet dažādas emocijzīmes vai skaitļus, kas ir jāsalīdzina savā starpā.\n\nLabākais veids, kā to izdarīt, ir satikties vai uzsākt videozvanu. 👭';
+  String get verifyOtherUserDescription => 'Ar cita lietotāja apliecināšanu vari pārliecināties, ka zini, kam Tu tiešām raksti. 💪\n\nKad uzsāc apliecināšanu, Tu un otrs lietotājs lietotnē redzēs uznirstošo logu. Tajā jūs redzēsiet dažādas emocijzīmes vai skaitļus, kas ir jāsalīdzina savā starpā.\n\nLabākais veids, kā to izdarīt, ir satikties vai uzsākt videozvanu. 👭';
 
   @override
   String get verifyOtherDevice => '🔐 Apliecināt otru ierīci';
 
   @override
-  String get verifyOtherDeviceDescription =>
-      'Kad apliecini citu ierīci, šīs ierīces var apmainīt atslēgas, palielinot vispārējo drošību. 💪 Pēc apliecināšanas uzsākšanas abās ierīcēs lietotnē parādīsies uznirstošais logs. Tajā būs redzamas dažādas emocijzīmes vai skaitļi, kas jāsalīdzina abās ierīcēs. Vislabāk, ja abas ierīces ir pieejamas, pirms tiek uzsākta apliecināšana. 🤳';
+  String get verifyOtherDeviceDescription => 'Kad apliecini citu ierīci, šīs ierīces var apmainīt atslēgas, palielinot vispārējo drošību. 💪 Pēc apliecināšanas uzsākšanas abās ierīcēs lietotnē parādīsies uznirstošais logs. Tajā būs redzamas dažādas emocijzīmes vai skaitļi, kas jāsalīdzina abās ierīcēs. Vislabāk, ja abas ierīces ir pieejamas, pirms tiek uzsākta apliecināšana. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
@@ -2298,8 +2186,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get noDatabaseEncryption =>
-      'Šajā platformā datubāzes šifrēšana netiek nodrošināta';
+  String get noDatabaseEncryption => 'Šajā platformā datubāzes šifrēšana netiek nodrošināta';
 
   @override
   String thereAreCountUsersBlocked(Object count) {
@@ -2336,8 +2223,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get changeGeneralChatSettings =>
-      'Mainīt vispārējos tērzēšanas iestatījumus';
+  String get changeGeneralChatSettings => 'Mainīt vispārējos tērzēšanas iestatījumus';
 
   @override
   String get inviteOtherUsers => 'Uzaicināt šajā tērzēšanā citus lietotājus';
@@ -2346,12 +2232,10 @@ class L10nLv extends L10n {
   String get changeTheChatPermissions => 'Mainīt tērzēšanas atļaujas';
 
   @override
-  String get changeTheVisibilityOfChatHistory =>
-      'Mainīt tērzēšanas vēstures redzamību';
+  String get changeTheVisibilityOfChatHistory => 'Mainīt tērzēšanas vēstures redzamību';
 
   @override
-  String get changeTheCanonicalRoomAlias =>
-      'Mainīt tērzēšanas galveno publisko adresi';
+  String get changeTheCanonicalRoomAlias => 'Mainīt tērzēšanas galveno publisko adresi';
 
   @override
   String get sendRoomNotifications => 'Sūtīt @istaba paziņojumus';
@@ -2360,8 +2244,7 @@ class L10nLv extends L10n {
   String get changeTheDescriptionOfTheGroup => 'Mainīt tērzēšanas aprakstu';
 
   @override
-  String get chatPermissionsDescription =>
-      'Noteikt, kurš spēka līmenis ir nepieciešams noteiktām darbībām šajā tērzēšanā. Spēka līmeņi 0, 50 un 100 parasti atbilst lietotājiem, moderatoriem un pārvaldītājiem, bet ir iespējams jebkāds iedalījums.';
+  String get chatPermissionsDescription => 'Noteikt, kurš spēka līmenis ir nepieciešams noteiktām darbībām šajā tērzēšanā. Spēka līmeņi 0, 50 un 100 parasti atbilst lietotājiem, moderatoriem un pārvaldītājiem, bet ir iespējams jebkāds iedalījums.';
 
   @override
   String updateInstalled(String version) {
@@ -2384,12 +2267,10 @@ class L10nLv extends L10n {
   String get whatIsAHomeserver => 'Kas ir mājasserveris?';
 
   @override
-  String get homeserverDescription =>
-      'Visi lietotāja dati tiek glabāti mājasserverī, gluži kā ar e-pasta nodrošinātāju. Ir iespējams izvēlēties, kuru mājasserveri izmantot, saglabājot iespēju sazināties ar ikvienu. Vairāk var uzzināt https://matrix.org.';
+  String get homeserverDescription => 'Visi lietotāja dati tiek glabāti mājasserverī, gluži kā ar e-pasta nodrošinātāju. Ir iespējams izvēlēties, kuru mājasserveri izmantot, saglabājot iespēju sazināties ar ikvienu. Vairāk var uzzināt https://matrix.org.';
 
   @override
-  String get doesNotSeemToBeAValidHomeserver =>
-      'Neizskatās pēc saderīga mājasservera. Nepareizs URL?';
+  String get doesNotSeemToBeAValidHomeserver => 'Neizskatās pēc saderīga mājasservera. Nepareizs URL?';
 
   @override
   String get calculatingFileSize => 'Aprēķina datnes lielumu...';
@@ -2417,19 +2298,16 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get oneOfYourDevicesIsNotVerified =>
-      'Viena no ierīcēm nav apliecināta';
+  String get oneOfYourDevicesIsNotVerified => 'Viena no ierīcēm nav apliecināta';
 
   @override
-  String get noticeChatBackupDeviceVerification =>
-      'Piezīme: kad visas ierīces tiek savienotas ar tērzēšanu rezerves kopiju, tās tiek automātiski apliecinātas.';
+  String get noticeChatBackupDeviceVerification => 'Piezīme: kad visas ierīces tiek savienotas ar tērzēšanu rezerves kopiju, tās tiek automātiski apliecinātas.';
 
   @override
   String get continueText => 'Turpināt';
 
   @override
-  String get welcomeText =>
-      'Sveicieni! 👋 Šis ir FluffyChat. Tu vari pieteikties jebkurā mājasserverī, kas ir saderīgs ar https://matrix.org. Tad vari tērzēt ar ikvienu. Tas ir milzīgs decentralizētās saziņas tīkls.';
+  String get welcomeText => 'Sveicieni! 👋 Šis ir FluffyChat. Tu vari pieteikties jebkurā mājasserverī, kas ir saderīgs ar https://matrix.org. Tad vari tērzēt ar ikvienu. Tas ir milzīgs decentralizētās saziņas tīkls.';
 
   @override
   String get blur => 'Aizmiglojums:';
@@ -2444,15 +2322,13 @@ class L10nLv extends L10n {
   String get manageAccount => 'Pārvaldīt kontu';
 
   @override
-  String get noContactInformationProvided =>
-      'Serveris nesniedz nekādu derīgu saziņas informāciju';
+  String get noContactInformationProvided => 'Serveris nesniedz nekādu derīgu saziņas informāciju';
 
   @override
   String get contactServerAdmin => 'Sazināties ar servera pārvaldītāju';
 
   @override
-  String get contactServerSecurity =>
-      'Sazināties ar servera drošības uzturētājiem';
+  String get contactServerSecurity => 'Sazināties ar servera drošības uzturētājiem';
 
   @override
   String get supportPage => 'Atbalsta lapa';
@@ -2491,15 +2367,13 @@ class L10nLv extends L10n {
   String get addLink => 'Pievienot saiti';
 
   @override
-  String get unableToJoinChat =>
-      'Nevarēja pievienoties tērzēšanai. Varbūt otra puse jau ir aizvērusi sarunu.';
+  String get unableToJoinChat => 'Nevarēja pievienoties tērzēšanai. Varbūt otra puse jau ir aizvērusi sarunu.';
 
   @override
   String get previous => 'Iepriekšējais';
 
   @override
-  String get otherPartyNotLoggedIn =>
-      'Otra puse pašlaik nav pieteikusies un tādēļ nevar saņemt ziņas.';
+  String get otherPartyNotLoggedIn => 'Otra puse pašlaik nav pieteikusies un tādēļ nevar saņemt ziņas.';
 
   @override
   String appWantsToUseForLogin(String server) {
@@ -2507,8 +2381,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get appWantsToUseForLoginDescription =>
-      'Ar šo tiek ļauts lietotnei un tīmekļvietnei kopīgot informāciju par Tevi.';
+  String get appWantsToUseForLoginDescription => 'Ar šo tiek ļauts lietotnei un tīmekļvietnei kopīgot informāciju par Tevi.';
 
   @override
   String get open => 'Atvērt';
@@ -2517,8 +2390,7 @@ class L10nLv extends L10n {
   String get waitingForServer => 'Gaida serveri...';
 
   @override
-  String get appIntroduction =>
-      'FluffyChat ļauj tērzēt ar draugiem, kuri izmanto dažādas ziņojumapmaiņas lietotnes. Vairāk var uzzināt https://matrix.org vai vienkārši piesitot *Turpināt*.';
+  String get appIntroduction => 'FluffyChat ļauj tērzēt ar draugiem, kuri izmanto dažādas ziņojumapmaiņas lietotnes. Vairāk var uzzināt https://matrix.org vai vienkārši piesitot *Turpināt*.';
 
   @override
   String get newChatRequest => '📩 Jauns tērzēšanas pieprasījums';
@@ -2533,8 +2405,7 @@ class L10nLv extends L10n {
   String get roomNotificationSettings => 'Istabu paziņojumu iestatījumi';
 
   @override
-  String get userSpecificNotificationSettings =>
-      'Lietotāja paziņojumu iestatījumi';
+  String get userSpecificNotificationSettings => 'Lietotāja paziņojumu iestatījumi';
 
   @override
   String get otherNotificationSettings => 'Citi paziņojumu iestatījumi';
@@ -2543,142 +2414,121 @@ class L10nLv extends L10n {
   String get notificationRuleContainsUserName => 'Saturs lietotāja vārdu';
 
   @override
-  String get notificationRuleContainsUserNameDescription =>
-      'Paziņo lietotājam, kad ziņa satur viņa lietotājvārdu.';
+  String get notificationRuleContainsUserNameDescription => 'Paziņo lietotājam, kad ziņa satur viņa lietotājvārdu.';
 
   @override
   String get notificationRuleMaster => 'Apklusināt visus paziņojumus';
 
   @override
-  String get notificationRuleMasterDescription =>
-      'Aizvieto visas pārējās kārtulas un atspējo visus paziņojumus.';
+  String get notificationRuleMasterDescription => 'Aizvieto visas pārējās kārtulas un atspējo visus paziņojumus.';
 
   @override
   String get notificationRuleSuppressNotices => 'Apspiest automātiskās ziņas';
 
   @override
-  String get notificationRuleSuppressNoticesDescription =>
-      'Apspiež paziņojumus no automatizētiem klientiem, piemēram, robotprogrammatūras.';
+  String get notificationRuleSuppressNoticesDescription => 'Apspiež paziņojumus no automatizētiem klientiem, piemēram, robotprogrammatūras.';
 
   @override
   String get notificationRuleInviteForMe => 'Uzaicinājums man';
 
   @override
-  String get notificationRuleInviteForMeDescription =>
-      'Paziņo lietotājam, kad viņš ir uzaicināts pievienoties istabai.';
+  String get notificationRuleInviteForMeDescription => 'Paziņo lietotājam, kad viņš ir uzaicināts pievienoties istabai.';
 
   @override
   String get notificationRuleMemberEvent => 'Dalībnieka notikums';
 
   @override
-  String get notificationRuleMemberEventDescription =>
-      'Apspiež paziņojums par dalības notikumiem.';
+  String get notificationRuleMemberEventDescription => 'Apspiež paziņojums par dalības notikumiem.';
 
   @override
   String get notificationRuleIsUserMention => 'Lietotāja pieminēšana';
 
   @override
-  String get notificationRuleIsUserMentionDescription =>
-      'Paziņo lietotājam, kad viņš ziņā ir tieši pieminēts.';
+  String get notificationRuleIsUserMentionDescription => 'Paziņo lietotājam, kad viņš ziņā ir tieši pieminēts.';
 
   @override
   String get notificationRuleContainsDisplayName => 'Satur attēlojamo vārdu';
 
   @override
-  String get notificationRuleContainsDisplayNameDescription =>
-      'Paziņo lietotājam, kad ziņa satur viņa attēlojamo vārdu.';
+  String get notificationRuleContainsDisplayNameDescription => 'Paziņo lietotājam, kad ziņa satur viņa attēlojamo vārdu.';
 
   @override
   String get notificationRuleIsRoomMention => 'Istabas pieminēšana';
 
   @override
-  String get notificationRuleIsRoomMentionDescription =>
-      'Paziņo lietotājam, kad tiek pieminēta istaba.';
+  String get notificationRuleIsRoomMentionDescription => 'Paziņo lietotājam, kad tiek pieminēta istaba.';
 
   @override
   String get notificationRuleRoomnotif => 'Istabas paziņojums';
 
   @override
-  String get notificationRuleRoomnotifDescription =>
-      'Paziņo lietotājam, kad ziņa satur \"@istaba\".';
+  String get notificationRuleRoomnotifDescription => 'Paziņo lietotājam, kad ziņa satur \"@istaba\".';
 
   @override
   String get notificationRuleTombstone => 'Kapakmens';
 
   @override
-  String get notificationRuleTombstoneDescription =>
-      'Paziņo lietotājam par istabu aizvēršanas ziņām.';
+  String get notificationRuleTombstoneDescription => 'Paziņo lietotājam par istabu aizvēršanas ziņām.';
 
   @override
   String get notificationRuleReaction => 'Reakcija';
 
   @override
-  String get notificationRuleReactionDescription =>
-      'Apspiež paziņojums par reakcijām.';
+  String get notificationRuleReactionDescription => 'Apspiež paziņojums par reakcijām.';
 
   @override
   String get notificationRuleRoomServerAcl => 'Istabas servera ACL';
 
   @override
-  String get notificationRuleRoomServerAclDescription =>
-      'Apspiež paziņojumus par istabas servera piekļuves kontroles sarakstiem (ACL).';
+  String get notificationRuleRoomServerAclDescription => 'Apspiež paziņojumus par istabas servera piekļuves kontroles sarakstiem (ACL).';
 
   @override
   String get notificationRuleSuppressEdits => 'Apspiest labojumus';
 
   @override
-  String get notificationRuleSuppressEditsDescription =>
-      'Apspiež paziņojumus par labotām ziņām.';
+  String get notificationRuleSuppressEditsDescription => 'Apspiež paziņojumus par labotām ziņām.';
 
   @override
   String get notificationRuleCall => 'Zvans';
 
   @override
-  String get notificationRuleCallDescription =>
-      'Paziņo lietotājam par zvaniem.';
+  String get notificationRuleCallDescription => 'Paziņo lietotājam par zvaniem.';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOne =>
-      'Šifrēta viens pret viens istaba';
+  String get notificationRuleEncryptedRoomOneToOne => 'Šifrēta viens pret viens istaba';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Paziņo lietotājam par ziņām šifrētās viens pret viens istabās.';
+  String get notificationRuleEncryptedRoomOneToOneDescription => 'Paziņo lietotājam par ziņām šifrētās viens pret viens istabās.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Viens pret viens istaba';
 
   @override
-  String get notificationRuleRoomOneToOneDescription =>
-      'Paziņo lietotājam par ziņām viens pret viens istabās.';
+  String get notificationRuleRoomOneToOneDescription => 'Paziņo lietotājam par ziņām viens pret viens istabās.';
 
   @override
   String get notificationRuleMessage => 'Ziņa';
 
   @override
-  String get notificationRuleMessageDescription =>
-      'Paziņo lietotājam par vispārējām ziņām.';
+  String get notificationRuleMessageDescription => 'Paziņo lietotājam par vispārējām ziņām.';
 
   @override
   String get notificationRuleEncrypted => 'Šifrēts';
 
   @override
-  String get notificationRuleEncryptedDescription =>
-      'Paziņo lietotājam par ziņām šifrētās istabās.';
+  String get notificationRuleEncryptedDescription => 'Paziņo lietotājam par ziņām šifrētās istabās.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
-  String get notificationRuleJitsiDescription =>
-      'Paziņo lietotājam par Jitsi logrīka notikumiem.';
+  String get notificationRuleJitsiDescription => 'Paziņo lietotājam par Jitsi logrīka notikumiem.';
 
   @override
   String get notificationRuleServerAcl => 'Apspiest servera ACL notikumus';
 
   @override
-  String get notificationRuleServerAclDescription =>
-      'Apspiež notikumus par servera ACL notikumiem.';
+  String get notificationRuleServerAclDescription => 'Apspiež notikumus par servera ACL notikumiem.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2691,8 +2541,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get deletePushRuleCanNotBeUndone =>
-      'Ja tiek izdzēsts šis paziņojuma iestatījums, to nevar atsaukt.';
+  String get deletePushRuleCanNotBeUndone => 'Ja tiek izdzēsts šis paziņojuma iestatījums, to nevar atsaukt.';
 
   @override
   String get more => 'Vairāk';
@@ -2701,15 +2550,13 @@ class L10nLv extends L10n {
   String get shareKeysWith => 'Kopīgot atslēgas ar...';
 
   @override
-  String get shareKeysWithDescription =>
-      'Kurām ierīcēm vajadzētu uzticēties, lai tajās varētu lasīt ziņas šifrētajās tērzēšanās?';
+  String get shareKeysWithDescription => 'Kurām ierīcēm vajadzētu uzticēties, lai tajās varētu lasīt ziņas šifrētajās tērzēšanās?';
 
   @override
   String get allDevices => 'Visas ierīces';
 
   @override
-  String get crossVerifiedDevicesIfEnabled =>
-      'Savstarpēji apliecinātas ierīces, ja iespējots';
+  String get crossVerifiedDevicesIfEnabled => 'Savstarpēji apliecinātas ierīces, ja iespējots';
 
   @override
   String get crossVerifiedDevices => 'Savstarpēji apliecinātas ierīces';
@@ -2739,8 +2586,7 @@ class L10nLv extends L10n {
   String get youHaveKnocked => 'Tu pieklauvēji';
 
   @override
-  String get pleaseWaitUntilInvited =>
-      'Lūgums tagad uzgaidīt, līdz kāds no istabas uzaicinās Tevi.';
+  String get pleaseWaitUntilInvited => 'Lūgums tagad uzgaidīt, līdz kāds no istabas uzaicinās Tevi.';
 
   @override
   String get commandHint_logout => 'Atteikties pašreizējā ierīcē';
@@ -2752,5 +2598,11 @@ class L10nLv extends L10n {
   String get displayNavigationRail => 'Rādīt pārvietošanās sliedi viedierīcēs';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Pielāgota reakcija';
+
+  @override
+  String get moreEvents => 'Vairāk notikumu';
+
+  @override
+  String get declineInvitation => 'Noraidīt uzaicinājumu';
 }

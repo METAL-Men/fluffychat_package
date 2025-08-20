@@ -18,12 +18,10 @@ class L10nGa extends L10n {
   String get notAnImage => 'Ní comhad íomhá é.';
 
   @override
-  String get setCustomPermissionLevel =>
-      'Socraigh leibhéal ceadanna saincheaptha';
+  String get setCustomPermissionLevel => 'Socraigh leibhéal ceadanna saincheaptha';
 
   @override
-  String get setPermissionsLevelDescription =>
-      'Roghnaigh ról réamhshainithe thíos nó cuir isteach leibhéal ceadanna saincheaptha idir 0 agus 100.';
+  String get setPermissionsLevelDescription => 'Roghnaigh ról réamhshainithe thíos nó cuir isteach leibhéal ceadanna saincheaptha idir 0 agus 100.';
 
   @override
   String get ignoreUser => 'Déan neamhaird den úsáideoir';
@@ -77,8 +75,7 @@ class L10nGa extends L10n {
   String get addEmail => 'Cuir ríomhphoist';
 
   @override
-  String get confirmMatrixId =>
-      'Deimhnigh d’ID Maitrís chun do chuntas a scriosadh.';
+  String get confirmMatrixId => 'Deimhnigh d’ID Maitrís chun do chuntas a scriosadh.';
 
   @override
   String supposedMxid(String mxid) {
@@ -104,8 +101,7 @@ class L10nGa extends L10n {
   String get allChats => 'Gach comhrá';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Uasghrádaigh an seomra seo go dtí an leagan seomra a thugtar';
+  String get commandHint_roomupgrade => 'Uasghrádaigh an seomra seo go dtí an leagan seomra a thugtar';
 
   @override
   String get commandHint_googly => 'Seol roinnt súile googly';
@@ -143,26 +139,22 @@ class L10nGa extends L10n {
   String get appLock => 'Bac aip';
 
   @override
-  String get appLockDescription =>
-      'Cuir glas ar an aip nuair nach bhfuil sé in úsáid le cód bioráin';
+  String get appLockDescription => 'Cuir glas ar an aip nuair nach bhfuil sé in úsáid le cód bioráin';
 
   @override
   String get archive => 'Cartlann';
 
   @override
-  String get areGuestsAllowedToJoin =>
-      'An bhfuil cead ag aoi-úsáideoirí a bheith páirteach';
+  String get areGuestsAllowedToJoin => 'An bhfuil cead ag aoi-úsáideoirí a bheith páirteach';
 
   @override
   String get areYouSure => 'An bhfuil tú cinnte?';
 
   @override
-  String get areYouSureYouWantToLogout =>
-      'An bhfuil tú cinnte gur mhaith leat logáil amach?';
+  String get areYouSureYouWantToLogout => 'An bhfuil tú cinnte gur mhaith leat logáil amach?';
 
   @override
-  String get askSSSSSign =>
-      'Chun a bheith in ann an duine eile a shíniú, cuir isteach do phasfhrása stóir sábháilte nó d\'eochair téarnaimh.';
+  String get askSSSSSign => 'Chun a bheith in ann an duine eile a shíniú, cuir isteach do phasfhrása stóir sábháilte nó d\'eochair téarnaimh.';
 
   @override
   String askVerificationRequest(String username) {
@@ -170,15 +162,10 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get autoplayImages =>
-      'Seinn greamáin agus straoiseog beoite go huathoibríoch';
+  String get autoplayImages => 'Seinn greamáin agus straoiseog beoite go huathoibríoch';
 
   @override
-  String badServerLoginTypesException(
-    String serverVersions,
-    String supportedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerLoginTypesException(String serverVersions, String supportedVersions, Object suportedVersions) {
     return 'Tá na cineálacha logála isteach seo ar fáil faoin freastalaí baile:\n$serverVersions\nAch níl ach na ceann seo ar fáil faoin aip seo:\n$supportedVersions';
   }
 
@@ -186,20 +173,13 @@ class L10nGa extends L10n {
   String get sendTypingNotifications => 'Seol fógraí clóscríofa';
 
   @override
-  String get swipeRightToLeftToReply =>
-      'Svaidhpeáil ar dheis ar chlé chun freagra a thabhairt';
+  String get swipeRightToLeftToReply => 'Svaidhpeáil ar dheis ar chlé chun freagra a thabhairt';
 
   @override
   String get sendOnEnter => 'Seol ar iontráil';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerVersionsException(String serverVersions, String supportedVersions, Object serverVerions, Object supoortedVersions, Object suportedVersions) {
     return 'Tá na leaganacha sonraíochta seo ar fáil faoin freastalaí baile:\n$serverVersions\nAch níl ach na ceann seo ar fáil faoin aip seo $supportedVersions';
   }
 
@@ -212,8 +192,7 @@ class L10nGa extends L10n {
   String get noMoreChatsFound => 'Níor aimsíodh a thuilleadh comhráite...';
 
   @override
-  String get noChatsFoundHere =>
-      'Níor aimsíodh aon chomhrá anseo fós. Cuir tús le comhrá nua le duine éigin tríd an gcnaipe thíos a úsáid. ⤵️';
+  String get noChatsFoundHere => 'Níor aimsíodh aon chomhrá anseo fós. Cuir tús le comhrá nua le duine éigin tríd an gcnaipe thíos a úsáid. ⤵️';
 
   @override
   String get joinedChats => 'Glacadh páirt i gcomhráite';
@@ -356,8 +335,7 @@ class L10nGa extends L10n {
   String get chatBackup => 'Cúltaca comhrá';
 
   @override
-  String get chatBackupDescription =>
-      'Tá do sheanteachtaireachtaí slán le eochair athshlánaithe. Le do thoil déan cinnte nach gcaillfidh tú é.';
+  String get chatBackupDescription => 'Tá do sheanteachtaireachtaí slán le eochair athshlánaithe. Le do thoil déan cinnte nach gcaillfidh tú é.';
 
   @override
   String get chatDetails => 'Sonraí comhrá';
@@ -378,36 +356,31 @@ class L10nGa extends L10n {
   String get close => 'Dún';
 
   @override
-  String get commandHint_markasdm =>
-      'Marcáil mar sheomra teachtaireachta dírí don ID Maitrís tugtha';
+  String get commandHint_markasdm => 'Marcáil mar sheomra teachtaireachta dírí don ID Maitrís tugtha';
 
   @override
   String get commandHint_markasgroup => 'Marcáil mar ghrúpa';
 
   @override
-  String get commandHint_ban =>
-      'Cuir cosc ar an úsáideoir áirithe ón seomra seo';
+  String get commandHint_ban => 'Cuir cosc ar an úsáideoir áirithe ón seomra seo';
 
   @override
   String get commandHint_clearcache => 'Glan an taisce';
 
   @override
-  String get commandHint_create =>
-      'Cruthaigh comhrá grúpa folamh\nÚsáid --no-encryption chun criptiúchán a dhíchumasú';
+  String get commandHint_create => 'Cruthaigh comhrá grúpa folamh\nÚsáid --no-encryption chun criptiúchán a dhíchumasú';
 
   @override
   String get commandHint_discardsession => 'Scrios an seisiún';
 
   @override
-  String get commandHint_dm =>
-      'Cuir tús le comhrá díreach\nÚsáid --no-cription chun criptiúchán a dhíchumasú';
+  String get commandHint_dm => 'Cuir tús le comhrá díreach\nÚsáid --no-cription chun criptiúchán a dhíchumasú';
 
   @override
   String get commandHint_html => 'Seol téacs HTML-formáidithe';
 
   @override
-  String get commandHint_invite =>
-      'Cuir cosc ar an úsáideoir áirithe ón seomra seo';
+  String get commandHint_invite => 'Cuir cosc ar an úsáideoir áirithe ón seomra seo';
 
   @override
   String get commandHint_join => 'Téigh isteach sa seomra áirithe';
@@ -422,16 +395,13 @@ class L10nGa extends L10n {
   String get commandHint_me => 'Déan cur síos ort féin';
 
   @override
-  String get commandHint_myroomavatar =>
-      'Cuir do phictiúr don seomra seo (le mxc-uri)';
+  String get commandHint_myroomavatar => 'Cuir do phictiúr don seomra seo (le mxc-uri)';
 
   @override
-  String get commandHint_myroomnick =>
-      'Socraigh d\'ainm taispeána don seomra seo';
+  String get commandHint_myroomnick => 'Socraigh d\'ainm taispeána don seomra seo';
 
   @override
-  String get commandHint_op =>
-      'Socraigh leibhéal cumhachta an úsáideora áirithe (réamhshocrú: 50)';
+  String get commandHint_op => 'Socraigh leibhéal cumhachta an úsáideora áirithe (réamhshocrú: 50)';
 
   @override
   String get commandHint_plain => 'Seol téacs neamhfhoirmithe';
@@ -443,8 +413,7 @@ class L10nGa extends L10n {
   String get commandHint_send => 'Seol téacs';
 
   @override
-  String get commandHint_unban =>
-      'Cuir deireadh an cosc den úsáideoir áirithe ón seomra seo';
+  String get commandHint_unban => 'Cuir deireadh an cosc den úsáideoir áirithe ón seomra seo';
 
   @override
   String get commandInvalid => 'Ordú neamhbhailí';
@@ -458,8 +427,7 @@ class L10nGa extends L10n {
   String get compareEmojiMatch => 'Cuir na emojis i gcomparáid le do thoil';
 
   @override
-  String get compareNumbersMatch =>
-      'Cuir na huimhreacha i gcomparáid le do thoil';
+  String get compareNumbersMatch => 'Cuir na huimhreacha i gcomparáid le do thoil';
 
   @override
   String get configureChat => 'Cumraigh comhrá';
@@ -471,8 +439,7 @@ class L10nGa extends L10n {
   String get connect => 'Ceangail';
 
   @override
-  String get contactHasBeenInvitedToTheGroup =>
-      'Tugadh cuireadh don theagmháil a thar isteach sa grúpa';
+  String get contactHasBeenInvitedToTheGroup => 'Tugadh cuireadh don theagmháil a thar isteach sa grúpa';
 
   @override
   String get containsDisplayName => 'Coinníonn sé ainm taispeána';
@@ -481,8 +448,7 @@ class L10nGa extends L10n {
   String get containsUserName => 'Coinníonn sé ainm úsáideora';
 
   @override
-  String get contentHasBeenReported =>
-      'Tuairiscíodh an t-ábhar do lucht riaracháin an fhreastalaí';
+  String get contentHasBeenReported => 'Tuairiscíodh an t-ábhar do lucht riaracháin an fhreastalaí';
 
   @override
   String get copiedToClipboard => 'Cóipeáilte ar an ghearrthaisce';
@@ -547,12 +513,10 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get deactivateAccountWarning =>
-      'Díghníomhachtaeoidh sé seo do chuntas úsáideora. Ní féidir é seo a chealú! An bhfuil tú cinnte?';
+  String get deactivateAccountWarning => 'Díghníomhachtaeoidh sé seo do chuntas úsáideora. Ní féidir é seo a chealú! An bhfuil tú cinnte?';
 
   @override
-  String get defaultPermissionLevel =>
-      'Leibhéal ceada réamhshocraithe d\'úsáideoirí nua';
+  String get defaultPermissionLevel => 'Leibhéal ceada réamhshocraithe d\'úsáideoirí nua';
 
   @override
   String get delete => 'Scrios';
@@ -609,8 +573,7 @@ class L10nGa extends L10n {
   String get emoteInvalid => 'Gearrchód emote neamhbhailí!';
 
   @override
-  String get emoteKeyboardNoRecents =>
-      'Beidh mothúcháin a úsáideadh le déanaí le feiceáil anseo ...';
+  String get emoteKeyboardNoRecents => 'Beidh mothúcháin a úsáideadh le déanaí le feiceáil anseo ...';
 
   @override
   String get emotePacks => 'Pacáistí straoiseoige don seomra';
@@ -625,8 +588,7 @@ class L10nGa extends L10n {
   String get accessAndVisibility => 'Rochtain agus infheictheacht';
 
   @override
-  String get accessAndVisibilityDescription =>
-      'Cé a bhfuil cead aige páirt a ghlacadh sa chomhrá seo agus conas is féidir an comhrá a aimsiú.';
+  String get accessAndVisibilityDescription => 'Cé a bhfuil cead aige páirt a ghlacadh sa chomhrá seo agus conas is féidir an comhrá a aimsiú.';
 
   @override
   String get calls => 'Glaonna';
@@ -635,29 +597,25 @@ class L10nGa extends L10n {
   String get customEmojisAndStickers => 'Emojis agus greamáin saincheaptha';
 
   @override
-  String get customEmojisAndStickersBody =>
-      'Cuir leis nó roinn emojis nó greamáin saincheaptha is féidir a úsáid in aon chomhrá.';
+  String get customEmojisAndStickersBody => 'Cuir leis nó roinn emojis nó greamáin saincheaptha is féidir a úsáid in aon chomhrá.';
 
   @override
   String get emoteShortcode => 'Gearrchód straoiseoige';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'Caithfidh tú gearrchód straoiseoige agus íomhá a roghnú!';
+  String get emoteWarnNeedToPick => 'Caithfidh tú gearrchód straoiseoige agus íomhá a roghnú!';
 
   @override
   String get emptyChat => 'Comhrá folamh';
 
   @override
-  String get enableEmotesGlobally =>
-      'Cumasaigh pacáiste straoiseoige go huilíoch';
+  String get enableEmotesGlobally => 'Cumasaigh pacáiste straoiseoige go huilíoch';
 
   @override
   String get enableEncryption => 'Tosaigh criptiú';
 
   @override
-  String get enableEncryptionWarning =>
-      'Ní bheidh in ann an criptiú a dhíchumasú níos mó. An bhfuil tú cinnte?';
+  String get enableEncryptionWarning => 'Ní bheidh in ann an criptiú a dhíchumasú níos mó. An bhfuil tú cinnte?';
 
   @override
   String get encrypted => 'Criptithe';
@@ -721,8 +679,7 @@ class L10nGa extends L10n {
   String get chatDescription => 'Cur síos ar an gcomhrá';
 
   @override
-  String get chatDescriptionHasBeenChanged =>
-      'Athraíodh cur síos ar an gcomhrá';
+  String get chatDescriptionHasBeenChanged => 'Athraíodh cur síos ar an gcomhrá';
 
   @override
   String get groupIsPublic => 'Tá an grúpa poiblí';
@@ -756,16 +713,13 @@ class L10nGa extends L10n {
   String get hideRedactedMessages => 'Folaigh teachtaireachtaí curtha in eagar';
 
   @override
-  String get hideRedactedMessagesBody =>
-      'Má athghníomhaíonn duine éigin teachtaireacht, ní bheidh an teachtaireacht seo le feiceáil sa chomhrá a thuilleadh.';
+  String get hideRedactedMessagesBody => 'Má athghníomhaíonn duine éigin teachtaireacht, ní bheidh an teachtaireacht seo le feiceáil sa chomhrá a thuilleadh.';
 
   @override
-  String get hideInvalidOrUnknownMessageFormats =>
-      'Folaigh formáidí teachtaireachta neamhbhailí nó anaithnid';
+  String get hideInvalidOrUnknownMessageFormats => 'Folaigh formáidí teachtaireachta neamhbhailí nó anaithnid';
 
   @override
-  String get howOffensiveIsThisContent =>
-      'Cé chomh maslach atá an t-ábhar seo?';
+  String get howOffensiveIsThisContent => 'Cé chomh maslach atá an t-ábhar seo?';
 
   @override
   String get id => 'ID';
@@ -780,8 +734,7 @@ class L10nGa extends L10n {
   String get blockedUsers => 'Úsáideoirí bactha';
 
   @override
-  String get blockListDescription =>
-      'Is féidir leat bac a chur ar úsáideoirí atá ag cur isteach ort. Ní bheidh tú in ann teachtaireachtaí nó cuireadh seomra ar bith a fháil ó na húsáideoirí ar do liosta bloc pearsanta.';
+  String get blockListDescription => 'Is féidir leat bac a chur ar úsáideoirí atá ag cur isteach ort. Ní bheidh tú in ann teachtaireachtaí nó cuireadh seomra ar bith a fháil ó na húsáideoirí ar do liosta bloc pearsanta.';
 
   @override
   String get blockUsername => 'Déan neamhaird de ainm úsáideora';
@@ -790,8 +743,7 @@ class L10nGa extends L10n {
   String get iHaveClickedOnLink => 'Chliceáil mé ar an nasc';
 
   @override
-  String get incorrectPassphraseOrKey =>
-      'Pasfhrása nó eochair téarnaimh mícheart';
+  String get incorrectPassphraseOrKey => 'Pasfhrása nó eochair téarnaimh mícheart';
 
   @override
   String get inoffensive => 'Neamhurchóideach';
@@ -810,8 +762,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get noChatDescriptionYet =>
-      'Níl aon chur síos ar an gcomhrá cruthaithe fós.';
+  String get noChatDescriptionYet => 'Níl aon chur síos ar an gcomhrá cruthaithe fós.';
 
   @override
   String get tryAgain => 'Bain triail eile as';
@@ -823,12 +774,10 @@ class L10nGa extends L10n {
   String get invited => 'Le cuireadh';
 
   @override
-  String get redactMessageDescription =>
-      'Athrófar an teachtaireacht do gach rannpháirtí sa chomhrá seo. Ní féidir é seo a chealú.';
+  String get redactMessageDescription => 'Athrófar an teachtaireacht do gach rannpháirtí sa chomhrá seo. Ní féidir é seo a chealú.';
 
   @override
-  String get optionalRedactReason =>
-      '(Roghnach) An chúis leis an teachtaireacht seo a chur in eagar...';
+  String get optionalRedactReason => '(Roghnach) An chúis leis an teachtaireacht seo a chur in eagar...';
 
   @override
   String invitedUser(String username, String targetName) {
@@ -896,22 +845,19 @@ class L10nGa extends L10n {
   String get dehydrate => 'Easpórtáil seisiún agus gléas wipe';
 
   @override
-  String get dehydrateWarning =>
-      'Ní féidir an gníomh seo a chealú. Cinntigh go stórálann tú an comhad cúltaca go sábháilte.';
+  String get dehydrateWarning => 'Ní féidir an gníomh seo a chealú. Cinntigh go stórálann tú an comhad cúltaca go sábháilte.';
 
   @override
   String get dehydrateTor => 'Úsáideoirí TOR: Seisiún easpórtála';
 
   @override
-  String get dehydrateTorLong =>
-      'Maidir le húsáideoirí TOR, moltar an seisiún a onnmhairiú roimh dhúnadh an fhuinneog.';
+  String get dehydrateTorLong => 'Maidir le húsáideoirí TOR, moltar an seisiún a onnmhairiú roimh dhúnadh an fhuinneog.';
 
   @override
   String get hydrateTor => 'Úsáideoirí TOR: Iompórtáil easpórtáil seisiún';
 
   @override
-  String get hydrateTorLong =>
-      'An ndearna tú do sheisiún a easpórtáil an uair dheireanach ar TOR? Iompórtáil go tapa é agus leanúint ar aghaidh ag comhrá.';
+  String get hydrateTorLong => 'An ndearna tú do sheisiún a easpórtáil an uair dheireanach ar TOR? Iompórtáil go tapa é agus leanúint ar aghaidh ag comhrá.';
 
   @override
   String get hydrate => 'Athchóirigh ó chomhad cúltaca';
@@ -923,12 +869,10 @@ class L10nGa extends L10n {
   String get loadMore => 'Lódáil níos mó…';
 
   @override
-  String get locationDisabledNotice =>
-      'Tá seirbhísí suímh díchumasaithe. Cuir ar a gcumas le do thoil a bheith in ann do shuíomh a roinnt.';
+  String get locationDisabledNotice => 'Tá seirbhísí suímh díchumasaithe. Cuir ar a gcumas le do thoil a bheith in ann do shuíomh a roinnt.';
 
   @override
-  String get locationPermissionDeniedNotice =>
-      'Diúltaíodh cead suímh. Deonaigh dóibh le do thoil go mbeidh tú in ann do shuíomh a roinnt.';
+  String get locationPermissionDeniedNotice => 'Diúltaíodh cead suímh. Deonaigh dóibh le do thoil go mbeidh tú in ann do shuíomh a roinnt.';
 
   @override
   String get login => 'Logáil isteach';
@@ -960,8 +904,7 @@ class L10nGa extends L10n {
   String get muteChat => 'Ciúnaigh comhrá';
 
   @override
-  String get needPantalaimonWarning =>
-      'Bí ar an eolas go dteastaíonn Pantalaimon uait chun criptiú ó cheann go ceann a úsáid anois.';
+  String get needPantalaimonWarning => 'Bí ar an eolas go dteastaíonn Pantalaimon uait chun criptiú ó cheann go ceann a úsáid anois.';
 
   @override
   String get newChat => 'Comhrá nua';
@@ -985,12 +928,10 @@ class L10nGa extends L10n {
   String get noEmotesFound => 'Níor aimsíodh aon straoiseoga. 😕';
 
   @override
-  String get noEncryptionForPublicRooms =>
-      'Ní féidir leat criptiú a ghníomhachtú ach a luaithe nach bhfuil an seomra inrochtana go poiblí a thuilleadh.';
+  String get noEncryptionForPublicRooms => 'Ní féidir leat criptiú a ghníomhachtú ach a luaithe nach bhfuil an seomra inrochtana go poiblí a thuilleadh.';
 
   @override
-  String get noGoogleServicesWarning =>
-      'Is cosúil nach bhfuil Firebase Cloud Messaging ar fáil ar do ghléas. Chun fógraí brú a fháil fós, molaimid ntfy a shuiteáil. Le ntfy nó soláthraí Unified Push eile is féidir leat fógraí brú a fháil ar bhealach atá slán ó thaobh sonraí. Is féidir leat ntfy a íoslódáil ón PlayStore nó ó F-Droid.';
+  String get noGoogleServicesWarning => 'Is cosúil nach bhfuil Firebase Cloud Messaging ar fáil ar do ghléas. Chun fógraí brú a fháil fós, molaimid ntfy a shuiteáil. Le ntfy nó soláthraí Unified Push eile is féidir leat fógraí brú a fháil ar bhealach atá slán ó thaobh sonraí. Is féidir leat ntfy a íoslódáil ón PlayStore nó ó F-Droid.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -1007,8 +948,7 @@ class L10nGa extends L10n {
   String get none => 'Aon cheann';
 
   @override
-  String get noPasswordRecoveryDescription =>
-      'Níor chuir tú bealach leis do phasfhocal a aisghabháil fós.';
+  String get noPasswordRecoveryDescription => 'Níor chuir tú bealach leis do phasfhocal a aisghabháil fós.';
 
   @override
   String get noPermission => 'Gan cead';
@@ -1020,8 +960,7 @@ class L10nGa extends L10n {
   String get notifications => 'Fógraí';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Fógraí cumasaithe don chuntas seo';
+  String get notificationsEnabledForThisAccount => 'Fógraí cumasaithe don chuntas seo';
 
   @override
   String numUsersTyping(int count) {
@@ -1047,15 +986,13 @@ class L10nGa extends L10n {
   String get onlineKeyBackupEnabled => 'Tá Cúltaca Eochair Ar Líne cumasaithe';
 
   @override
-  String get oopsPushError =>
-      'Hoips! Ar an drochuair, tharla earráid nuair a bhí na fógraí brú á mbunú.';
+  String get oopsPushError => 'Hoips! Ar an drochuair, tharla earráid nuair a bhí na fógraí brú á mbunú.';
 
   @override
   String get oopsSomethingWentWrong => 'Úps, chuaigh rud éigin mícheart …';
 
   @override
-  String get openAppToReadMessages =>
-      'Oscail an aip chun teachtaireachtaí a léamh';
+  String get openAppToReadMessages => 'Oscail an aip chun teachtaireachtaí a léamh';
 
   @override
   String get openCamera => 'Oscail ceamara';
@@ -1082,8 +1019,7 @@ class L10nGa extends L10n {
   String get bundleName => 'Ainm an bheartáin';
 
   @override
-  String get enableMultiAccounts =>
-      '(BÉITE) Cumasaigh cuntais iomadúla ar an gléas seo';
+  String get enableMultiAccounts => '(BÉITE) Cumasaigh cuntais iomadúla ar an gléas seo';
 
   @override
   String get openInMaps => 'Oscail i léarscáileanna';
@@ -1092,8 +1028,7 @@ class L10nGa extends L10n {
   String get link => 'Nasc';
 
   @override
-  String get serverRequiresEmail =>
-      'Ní mór don fhreastalaí seo do sheoladh ríomhphoist a bhailíochtú le haghaidh clárúcháin.';
+  String get serverRequiresEmail => 'Ní mór don fhreastalaí seo do sheoladh ríomhphoist a bhailíochtú le haghaidh clárúcháin.';
 
   @override
   String get or => 'Nó';
@@ -1114,12 +1049,10 @@ class L10nGa extends L10n {
   String get passwordHasBeenChanged => 'Athraíodh an pasfhocal';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Cuir athruithe ball i gcomhráite poiblí i bhfolach';
+  String get hideMemberChangesInPublicChats => 'Cuir athruithe ball i gcomhráite poiblí i bhfolach';
 
   @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Ná taispeáin san amlíne comhrá má théann duine isteach i gcomhrá poiblí nó má fhágann sé nó sí é chun inléiteacht a fheabhsú.';
+  String get hideMemberChangesInPublicChatsBody => 'Ná taispeáin san amlíne comhrá má théann duine isteach i gcomhrá poiblí nó má fhágann sé nó sí é chun inléiteacht a fheabhsú.';
 
   @override
   String get overview => 'Forbhreathnú';
@@ -1154,16 +1087,13 @@ class L10nGa extends L10n {
   String get pleaseChooseAPasscode => 'Roghnaigh paschód le do thoil';
 
   @override
-  String get pleaseClickOnLink =>
-      'Cliceáil ar an nasc sa ríomhphost agus ansin lean ar aghaidh.';
+  String get pleaseClickOnLink => 'Cliceáil ar an nasc sa ríomhphost agus ansin lean ar aghaidh.';
 
   @override
-  String get pleaseEnter4Digits =>
-      'Iontráil 4 dhigit le do thoil nó fág folamh chun glas aipe a dhíchumasú.';
+  String get pleaseEnter4Digits => 'Iontráil 4 dhigit le do thoil nó fág folamh chun glas aipe a dhíchumasú.';
 
   @override
-  String get pleaseEnterRecoveryKey =>
-      'Cuir isteach d\'eochair athshlánaithe le do thoil:';
+  String get pleaseEnterRecoveryKey => 'Cuir isteach d\'eochair athshlánaithe le do thoil:';
 
   @override
   String get pleaseEnterYourPassword => 'Iontráil do phasfhocal le do thoil';
@@ -1172,12 +1102,10 @@ class L10nGa extends L10n {
   String get pleaseEnterYourPin => 'Cuir isteach d\'uimhir PIN le do thoil';
 
   @override
-  String get pleaseEnterYourUsername =>
-      'Cuir isteach d\'ainm úsáideora le do thoil';
+  String get pleaseEnterYourUsername => 'Cuir isteach d\'ainm úsáideora le do thoil';
 
   @override
-  String get pleaseFollowInstructionsOnWeb =>
-      'Lean na treoracha ar an suíomh gréasáin agus tapáil \"ar aghaidh\".';
+  String get pleaseFollowInstructionsOnWeb => 'Lean na treoracha ar an suíomh gréasáin agus tapáil \"ar aghaidh\".';
 
   @override
   String get privacy => 'Príobháideacht';
@@ -1247,8 +1175,7 @@ class L10nGa extends L10n {
   String get removeYourAvatar => 'Bain d\'abhatár';
 
   @override
-  String get replaceRoomWithNewerVersion =>
-      'Cuir leagan seomra níos nuaí in ionad an tseomra';
+  String get replaceRoomWithNewerVersion => 'Cuir leagan seomra níos nuaí in ionad an tseomra';
 
   @override
   String get reply => 'Freagair';
@@ -1392,8 +1319,7 @@ class L10nGa extends L10n {
   String get presenceStyle => 'Láithreacht:';
 
   @override
-  String get presencesToggle =>
-      'Taispeáin teachtaireachtaí stádais ó úsáideoirí eile';
+  String get presencesToggle => 'Taispeáin teachtaireachtaí stádais ó úsáideoirí eile';
 
   @override
   String get singlesignon => 'Sínigh Aonair ar';
@@ -1457,8 +1383,7 @@ class L10nGa extends L10n {
   String get toggleUnread => 'Marcáil Léite/Neamhléite';
 
   @override
-  String get tooManyRequestsWarning =>
-      'An iomarca iarratas. Bain triail eile as níos déanaí!';
+  String get tooManyRequestsWarning => 'An iomarca iarratas. Bain triail eile as níos déanaí!';
 
   @override
   String get transferFromAnotherDevice => 'Aistriú ó ghléas eile';
@@ -1558,8 +1483,7 @@ class L10nGa extends L10n {
   String get visibilityOfTheChatHistory => 'Infheictheacht stair na comhrá';
 
   @override
-  String get visibleForAllParticipants =>
-      'Infheicthe do na rannpháirtithe go léir';
+  String get visibleForAllParticipants => 'Infheicthe do na rannpháirtithe go léir';
 
   @override
   String get visibleForEveryone => 'Infheicthe do gach duine';
@@ -1568,16 +1492,13 @@ class L10nGa extends L10n {
   String get voiceMessage => 'Glórphost';
 
   @override
-  String get waitingPartnerAcceptRequest =>
-      'Ag fanacht le comhpháirtí glacadh leis an iarratas…';
+  String get waitingPartnerAcceptRequest => 'Ag fanacht le comhpháirtí glacadh leis an iarratas…';
 
   @override
-  String get waitingPartnerEmoji =>
-      'Ag fanacht le comhpháirtí glacadh leis na straoiseoga…';
+  String get waitingPartnerEmoji => 'Ag fanacht le comhpháirtí glacadh leis na straoiseoga…';
 
   @override
-  String get waitingPartnerNumbers =>
-      'Ag fanacht le comhpháirtí glacadh leis na huimhreacha …';
+  String get waitingPartnerNumbers => 'Ag fanacht le comhpháirtí glacadh leis na huimhreacha …';
 
   @override
   String get wallpaper => 'Cúlbhrat:';
@@ -1592,20 +1513,16 @@ class L10nGa extends L10n {
   String get whoCanPerformWhichAction => 'Cé atá in ann an gníomh a dhéanamh';
 
   @override
-  String get whoIsAllowedToJoinThisGroup =>
-      'Cé a bhfuil cead aige/aici dul isteach sa ghrúpa seo';
+  String get whoIsAllowedToJoinThisGroup => 'Cé a bhfuil cead aige/aici dul isteach sa ghrúpa seo';
 
   @override
-  String get whyDoYouWantToReportThis =>
-      'Cén fáth ar mhaith leat é seo a thuairisciú?';
+  String get whyDoYouWantToReportThis => 'Cén fáth ar mhaith leat é seo a thuairisciú?';
 
   @override
-  String get wipeChatBackup =>
-      'An bhfuil fonn ort cúltaca do chomhrá a scriosadh chun eochair athshlánaithe nua a chruthú?';
+  String get wipeChatBackup => 'An bhfuil fonn ort cúltaca do chomhrá a scriosadh chun eochair athshlánaithe nua a chruthú?';
 
   @override
-  String get withTheseAddressesRecoveryDescription =>
-      'Leis na seoltaí seo is féidir leat do phasfhocal a athshlánú.';
+  String get withTheseAddressesRecoveryDescription => 'Leis na seoltaí seo is féidir leat do phasfhocal a athshlánú.';
 
   @override
   String get writeAMessage => 'Scríobh teachtaireacht…';
@@ -1617,12 +1534,10 @@ class L10nGa extends L10n {
   String get you => 'Tú';
 
   @override
-  String get youAreNoLongerParticipatingInThisChat =>
-      'Níl tú ag glacadh páirte sa chomhrá seo a thuilleadh';
+  String get youAreNoLongerParticipatingInThisChat => 'Níl tú ag glacadh páirte sa chomhrá seo a thuilleadh';
 
   @override
-  String get youHaveBeenBannedFromThisChat =>
-      'Cuireadh cosc ort ón gcomhrá seo';
+  String get youHaveBeenBannedFromThisChat => 'Cuireadh cosc ort ón gcomhrá seo';
 
   @override
   String get yourPublicKey => 'D\'eochair phoiblí';
@@ -1646,15 +1561,13 @@ class L10nGa extends L10n {
   String get removeFromSpace => 'Bain as spás';
 
   @override
-  String get addToSpaceDescription =>
-      'Roghnaigh spás chun an comhrá seo a chur leis.';
+  String get addToSpaceDescription => 'Roghnaigh spás chun an comhrá seo a chur leis.';
 
   @override
   String get start => 'Tosaigh';
 
   @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Chun do sheanteachtaireachtaí a dhíghlasáil, cuir isteach d\'eochair athshlánaithe a gineadh i seisiún eile. NÍ do phasfhocal í d\'eochair athshlánaithe.';
+  String get pleaseEnterRecoveryKeyDescription => 'Chun do sheanteachtaireachtaí a dhíghlasáil, cuir isteach d\'eochair athshlánaithe a gineadh i seisiún eile. NÍ do phasfhocal í d\'eochair athshlánaithe.';
 
   @override
   String get publish => 'Foilsigh';
@@ -1685,8 +1598,7 @@ class L10nGa extends L10n {
   String get pinMessage => 'PIN go seomra';
 
   @override
-  String get confirmEventUnpin =>
-      'An bhfuil tú cinnte an t-imeacht a dhíphionnáil go buan?';
+  String get confirmEventUnpin => 'An bhfuil tú cinnte an t-imeacht a dhíphionnáil go buan?';
 
   @override
   String get emojis => 'Emojis';
@@ -1701,12 +1613,10 @@ class L10nGa extends L10n {
   String get unsupportedAndroidVersion => 'Leagan Android gan tacaíocht';
 
   @override
-  String get unsupportedAndroidVersionLong =>
-      'Éilíonn an ghné seo leagan Android níos nuaí. Seiceáil le haghaidh nuashonruithe nó tacaíocht Lineage OS.';
+  String get unsupportedAndroidVersionLong => 'Éilíonn an ghné seo leagan Android níos nuaí. Seiceáil le haghaidh nuashonruithe nó tacaíocht Lineage OS.';
 
   @override
-  String get videoCallsBetaWarning =>
-      'Tabhair faoi deara go bhfuil físglaonna i béite. B\'fhéidir nach bhfeidhmíonn siad ar gach ardán chomh atá súil aige ná ar bith.';
+  String get videoCallsBetaWarning => 'Tabhair faoi deara go bhfuil físglaonna i béite. B\'fhéidir nach bhfeidhmíonn siad ar gach ardán chomh atá súil aige ná ar bith.';
 
   @override
   String get experimentalVideoCalls => 'Glaonna físe turgnamhacha';
@@ -1718,8 +1628,7 @@ class L10nGa extends L10n {
   String get indexedDbErrorTitle => 'Saincheisteanna mód príobháideach';
 
   @override
-  String get indexedDbErrorLong =>
-      'Ar an drochuair níl an stóráil teachtaireachta cumasaithe sa mhód príobháideach de réir réamhshocraithe.\nTabhair cuairt le do thoil\n - faoi: config\n - socraithe dom.indexedDB.privateBrowsing.enabled go fíor\nSeachas sin, ní féidir FluffyChat a rith.';
+  String get indexedDbErrorLong => 'Ar an drochuair níl an stóráil teachtaireachta cumasaithe sa mhód príobháideach de réir réamhshocraithe.\nTabhair cuairt le do thoil\n - faoi: config\n - socraithe dom.indexedDB.privateBrowsing.enabled go fíor\nSeachas sin, ní féidir FluffyChat a rith.';
 
   @override
   String switchToAccount(String number) {
@@ -1830,8 +1739,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'Níor cruthaíodh aon nasc poiblí go fóill';
+  String get noPublicLinkHasBeenCreatedYet => 'Níor cruthaíodh aon nasc poiblí go fóill';
 
   @override
   String get knock => 'Cnoc Mhuire';
@@ -1843,12 +1751,10 @@ class L10nGa extends L10n {
   String get unlockOldMessages => 'Díghlasáil seanteachtaireachtaí';
 
   @override
-  String get storeInSecureStorageDescription =>
-      'Stóráil an eochair aisghabhála i stóráil slán an ghléis seo.';
+  String get storeInSecureStorageDescription => 'Stóráil an eochair aisghabhála i stóráil slán an ghléis seo.';
 
   @override
-  String get saveKeyManuallyDescription =>
-      'Sábháil an eochair seo de láimh trí dialóg nó gearrthaisce comhroinnte an chórais a spreagadh.';
+  String get saveKeyManuallyDescription => 'Sábháil an eochair seo de láimh trí dialóg nó gearrthaisce comhroinnte an chórais a spreagadh.';
 
   @override
   String get storeInAndroidKeystore => 'Stóráil i Android KeyStore';
@@ -1871,8 +1777,7 @@ class L10nGa extends L10n {
   String get custom => 'Saincheaptha';
 
   @override
-  String get foregroundServiceRunning =>
-      'Tá an fógra seo le feiceáil nuair atá an tseirbhís tulra ag rith.';
+  String get foregroundServiceRunning => 'Tá an fógra seo le feiceáil nuair atá an tseirbhís tulra ag rith.';
 
   @override
   String get screenSharingTitle => 'comhroinnt scáileáin';
@@ -1887,27 +1792,22 @@ class L10nGa extends L10n {
   String get callingAccount => 'Cuntas ag glaoch';
 
   @override
-  String get callingAccountDetails =>
-      'Ceadaíonn FluffyChat an aip dhiailiú android dúchais a úsáid.';
+  String get callingAccountDetails => 'Ceadaíonn FluffyChat an aip dhiailiú android dúchais a úsáid.';
 
   @override
   String get appearOnTop => 'Le feiceáil ar an mbarr';
 
   @override
-  String get appearOnTopDetails =>
-      'Ceadaíonn sé don aip a bheith ar bharr (ní gá má tá socrú Fluffychat agat cheana féin mar chuntas glao)';
+  String get appearOnTopDetails => 'Ceadaíonn sé don aip a bheith ar bharr (ní gá má tá socrú Fluffychat agat cheana féin mar chuntas glao)';
 
   @override
-  String get otherCallingPermissions =>
-      'Micreafón, ceamara agus ceadanna FluffyChat eile';
+  String get otherCallingPermissions => 'Micreafón, ceamara agus ceadanna FluffyChat eile';
 
   @override
-  String get whyIsThisMessageEncrypted =>
-      'Cén fáth nach féidir an teachtaireacht seo a léamh?';
+  String get whyIsThisMessageEncrypted => 'Cén fáth nach féidir an teachtaireacht seo a léamh?';
 
   @override
-  String get noKeyForThisMessage =>
-      'Féadfaidh sé seo tarlú má seoladh an teachtaireacht sular shínigh tú isteach ar do chuntas ag an ngléas seo.\n\nIs féidir freisin gur chuir an seoltóir bac ar do ghléas nó go ndeachaigh rud éigin mícheart leis an nasc idirlín.\n\nAn bhfuil tú in ann an teachtaireacht a léamh ar sheisiún eile? Ansin is féidir leat an teachtaireacht a aistriú uaidh! Téigh go Socruithe > Gléasanna agus cinntigh go bhfuil do ghléasanna fíoraithe a chéile. Nuair a osclaíonn tú an seomra an chéad uair eile agus an dá sheisiún sa tulra, déanfar na heochracha a tharchur go huathoibríoch.\n\nNár mhaith leat na heochracha a chailleadh agus tú ag logáil amach nó ag aistriú gléasanna? Déan cinnte go bhfuil an cúltaca comhrá cumasaithe agat sna socruithe.';
+  String get noKeyForThisMessage => 'Féadfaidh sé seo tarlú má seoladh an teachtaireacht sular shínigh tú isteach ar do chuntas ag an ngléas seo.\n\nIs féidir freisin gur chuir an seoltóir bac ar do ghléas nó go ndeachaigh rud éigin mícheart leis an nasc idirlín.\n\nAn bhfuil tú in ann an teachtaireacht a léamh ar sheisiún eile? Ansin is féidir leat an teachtaireacht a aistriú uaidh! Téigh go Socruithe > Gléasanna agus cinntigh go bhfuil do ghléasanna fíoraithe a chéile. Nuair a osclaíonn tú an seomra an chéad uair eile agus an dá sheisiún sa tulra, déanfar na heochracha a tharchur go huathoibríoch.\n\nNár mhaith leat na heochracha a chailleadh agus tú ag logáil amach nó ag aistriú gléasanna? Déan cinnte go bhfuil an cúltaca comhrá cumasaithe agat sna socruithe.';
 
   @override
   String get newGroup => 'Grúpa nua';
@@ -1930,8 +1830,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get hideUnimportantStateEvents =>
-      'Folaigh imeachtaí stáit gan tábhacht';
+  String get hideUnimportantStateEvents => 'Folaigh imeachtaí stáit gan tábhacht';
 
   @override
   String get hidePresences => 'Folaigh Liosta Stádais?';
@@ -1945,15 +1844,13 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get newSpaceDescription =>
-      'Ligeann spásanna duit do chomhráite a chomhdhlúthú agus pobail phríobháideacha nó phoiblí a thógáil.';
+  String get newSpaceDescription => 'Ligeann spásanna duit do chomhráite a chomhdhlúthú agus pobail phríobháideacha nó phoiblí a thógáil.';
 
   @override
   String get encryptThisChat => 'Criptigh an comhrá seo';
 
   @override
-  String get disableEncryptionWarning =>
-      'Ar chúiseanna slándála ní féidir leat criptiú a dhíchumasú i gcomhrá, áit ar cumasaíodh é roimhe seo.';
+  String get disableEncryptionWarning => 'Ar chúiseanna slándála ní féidir leat criptiú a dhíchumasú i gcomhrá, áit ar cumasaíodh é roimhe seo.';
 
   @override
   String get sorryThatsNotPossible => 'Tá brón orm... nach féidir a dhéanamh';
@@ -1965,8 +1862,7 @@ class L10nGa extends L10n {
   String get reopenChat => 'Comhrá a athoscailt';
 
   @override
-  String get noBackupWarning =>
-      'Rabhadh! Gan cúltaca comhrá a chumasú, caillfidh tú rochtain ar do theachtaireachtaí criptithe. Moltar go mór an cúltaca comhrá a chumasú ar dtús sula logálann tú amach.';
+  String get noBackupWarning => 'Rabhadh! Gan cúltaca comhrá a chumasú, caillfidh tú rochtain ar do theachtaireachtaí criptithe. Moltar go mór an cúltaca comhrá a chumasú ar dtús sula logálann tú amach.';
 
   @override
   String get noOtherDevicesFound => 'Níor aimsíodh aon ghléas eile';
@@ -1982,8 +1878,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get jumpToLastReadMessage =>
-      'Léim go dtí an teachtaireacht léite is déanaí';
+  String get jumpToLastReadMessage => 'Léim go dtí an teachtaireacht léite is déanaí';
 
   @override
   String get readUpToHere => 'Léigh suas go dtí seo';
@@ -1995,8 +1890,7 @@ class L10nGa extends L10n {
   String get openLinkInBrowser => 'Oscail nasc sa bhrabhsálaí';
 
   @override
-  String get reportErrorDescription =>
-      '😭 Ó, a mhac go deo. Chuaigh rud éigin mícheart. Más mian leat, is féidir leat an fabht seo a thuairisciú do na forbróirí.';
+  String get reportErrorDescription => '😭 Ó, a mhac go deo. Chuaigh rud éigin mícheart. Más mian leat, is féidir leat an fabht seo a thuairisciú do na forbróirí.';
 
   @override
   String get report => 'tuairisc';
@@ -2005,8 +1899,7 @@ class L10nGa extends L10n {
   String get signInWithPassword => 'Sínigh isteach le pasfhocal';
 
   @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Bain triail eile as níos déanaí nó roghnaigh freastalaí eile.';
+  String get pleaseTryAgainLaterOrChooseDifferentServer => 'Bain triail eile as níos déanaí nó roghnaigh freastalaí eile.';
 
   @override
   String signInWith(String provider) {
@@ -2014,8 +1907,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get profileNotFound =>
-      'Níorbh fhéidir an t-úsáideoir a aimsiú ar an bhfreastalaí. B\'fhéidir go bhfuil fadhb nasctha ann nó nach bhfuil an t-úsáideoir ann.';
+  String get profileNotFound => 'Níorbh fhéidir an t-úsáideoir a aimsiú ar an bhfreastalaí. B\'fhéidir go bhfuil fadhb nasctha ann nó nach bhfuil an t-úsáideoir ann.';
 
   @override
   String get setTheme => 'Socraigh téama:';
@@ -2027,10 +1919,10 @@ class L10nGa extends L10n {
   String get invite => 'Tabhair cuireadh';
 
   @override
-  String get inviteGroupChat => '📨 Tabhair cuireadh comhrá grúpa';
+  String get inviteGroupChat => '📨 Cuireadh chuig comhrá grúpa';
 
   @override
-  String get invitePrivateChat => '📨 Tabhair cuireadh comhrá príobháideach';
+  String get invitePrivateChat => '📨 Cuireadh chuig comhrá príobháideach';
 
   @override
   String get invalidInput => 'Ionchur neamhbhailí!';
@@ -2044,32 +1936,25 @@ class L10nGa extends L10n {
   String get pleaseEnterANumber => 'Iontráil uimhir níos mó ná 0';
 
   @override
-  String get archiveRoomDescription =>
-      'Bogfar an comhrá go dtí an chartlann. Beidh úsáideoirí eile in ann a fheiceáil gur fhág tú an comhrá.';
+  String get archiveRoomDescription => 'Bogfar an comhrá go dtí an chartlann. Beidh úsáideoirí eile in ann a fheiceáil gur fhág tú an comhrá.';
 
   @override
-  String get roomUpgradeDescription =>
-      'Déanfar an comhrá a athchruthú ansin leis an leagan seomra nua. Cuirfear in iúl do gach rannpháirtí go gcaithfidh siad aistriú chuig an gcomhrá nua. Is féidir leat tuilleadh eolais a fháil faoi leaganacha seomra ag https://spec.matrix.org/latest/rooms/';
+  String get roomUpgradeDescription => 'Déanfar an comhrá a athchruthú ansin leis an leagan seomra nua. Cuirfear in iúl do gach rannpháirtí go gcaithfidh siad aistriú chuig an gcomhrá nua. Is féidir leat tuilleadh eolais a fháil faoi leaganacha seomra ag https://spec.matrix.org/latest/rooms/';
 
   @override
-  String get removeDevicesDescription =>
-      'Beidh tú logáilte amach as an ngléas seo agus ní bheidh tú in ann teachtaireachtaí a fháil a thuilleadh.';
+  String get removeDevicesDescription => 'Beidh tú logáilte amach as an ngléas seo agus ní bheidh tú in ann teachtaireachtaí a fháil a thuilleadh.';
 
   @override
-  String get banUserDescription =>
-      'Beidh cosc ar an úsáideoir ón gcomhrá agus ní bheidh sé in ann dul isteach sa chomhrá arís go dtí go mbeidh siad gan chosc.';
+  String get banUserDescription => 'Beidh cosc ar an úsáideoir ón gcomhrá agus ní bheidh sé in ann dul isteach sa chomhrá arís go dtí go mbeidh siad gan chosc.';
 
   @override
-  String get unbanUserDescription =>
-      'Beidh an t-úsáideoir in ann dul isteach sa chomhrá arís má dhéanann siad iarracht.';
+  String get unbanUserDescription => 'Beidh an t-úsáideoir in ann dul isteach sa chomhrá arís má dhéanann siad iarracht.';
 
   @override
-  String get kickUserDescription =>
-      'Ciceáiltear an t-úsáideoir as an gcomhrá ach níl cosc air. I gcomhráite poiblí, is féidir leis an úsáideoir teacht ar ais ag am ar bith.';
+  String get kickUserDescription => 'Ciceáiltear an t-úsáideoir as an gcomhrá ach níl cosc air. I gcomhráite poiblí, is féidir leis an úsáideoir teacht ar ais ag am ar bith.';
 
   @override
-  String get makeAdminDescription =>
-      'Nuair a dhéanann tú an riarachán úsáideora seo, b\'fhéidir nach mbeidh tú in ann é seo a chealú mar go mbeidh na ceadanna céanna acu agus atá agat.';
+  String get makeAdminDescription => 'Nuair a dhéanann tú an riarachán úsáideora seo, b\'fhéidir nach mbeidh tú in ann é seo a chealú mar go mbeidh na ceadanna céanna acu agus atá agat.';
 
   @override
   String get pushNotificationsNotAvailable => 'Níl fógraí brú ar fáil';
@@ -2103,16 +1988,13 @@ class L10nGa extends L10n {
   String get groupName => 'Ainm an ghrúpa';
 
   @override
-  String get createGroupAndInviteUsers =>
-      'Cruthaigh grúpa agus tabhair cuireadh d\'úsáideoirí';
+  String get createGroupAndInviteUsers => 'Cruthaigh grúpa agus tabhair cuireadh d\'úsáideoirí';
 
   @override
-  String get groupCanBeFoundViaSearch =>
-      'Is féidir teacht ar ghrúpa trí chuardach';
+  String get groupCanBeFoundViaSearch => 'Is féidir teacht ar ghrúpa trí chuardach';
 
   @override
-  String get wrongRecoveryKey =>
-      'Tá brón orm... Ní cosúil gurb é seo an eochair aisghabhála ceart.';
+  String get wrongRecoveryKey => 'Tá brón orm... Ní cosúil gurb é seo an eochair aisghabhála ceart.';
 
   @override
   String get startConversation => 'Tosaigh comhrá';
@@ -2124,8 +2006,7 @@ class L10nGa extends L10n {
   String get databaseMigrationTitle => 'Tá an bunachar sonraí optamaithe';
 
   @override
-  String get databaseMigrationBody =>
-      'Fan, le do thoil. B\'fhéidir go dtógfaidh sé seo nóiméad.';
+  String get databaseMigrationBody => 'Fan, le do thoil. B\'fhéidir go dtógfaidh sé seo nóiméad.';
 
   @override
   String get leaveEmptyToClearStatus => 'Fág folamh chun do stádas a ghlanadh.';
@@ -2137,8 +2018,7 @@ class L10nGa extends L10n {
   String get searchForUsers => 'Cuardaigh @users...';
 
   @override
-  String get pleaseEnterYourCurrentPassword =>
-      'Iontráil do phasfhocal reatha le do thoil';
+  String get pleaseEnterYourCurrentPassword => 'Iontráil do phasfhocal reatha le do thoil';
 
   @override
   String get newPassword => 'Pasfhocal nua';
@@ -2228,33 +2108,28 @@ class L10nGa extends L10n {
   String get sendReadReceipts => 'Seol admhálacha léite';
 
   @override
-  String get sendTypingNotificationsDescription =>
-      'Is féidir le rannpháirtithe eile i gcomhrá a fheiceáil nuair atá teachtaireacht nua á clóscríobh agat.';
+  String get sendTypingNotificationsDescription => 'Is féidir le rannpháirtithe eile i gcomhrá a fheiceáil nuair atá teachtaireacht nua á clóscríobh agat.';
 
   @override
-  String get sendReadReceiptsDescription =>
-      'Is féidir le rannpháirtithe eile i gcomhrá a fheiceáil nuair a bhíonn teachtaireacht léite agat.';
+  String get sendReadReceiptsDescription => 'Is féidir le rannpháirtithe eile i gcomhrá a fheiceáil nuair a bhíonn teachtaireacht léite agat.';
 
   @override
   String get formattedMessages => 'Teachtaireachtaí formáidithe';
 
   @override
-  String get formattedMessagesDescription =>
-      'Taispeáin ábhar saibhir teachtaireachta cosúil le téacs trom ag baint úsáide as marcáil síos.';
+  String get formattedMessagesDescription => 'Taispeáin ábhar saibhir teachtaireachta cosúil le téacs trom ag baint úsáide as marcáil síos.';
 
   @override
   String get verifyOtherUser => '🔐 Fíoraigh úsáideoir eile';
 
   @override
-  String get verifyOtherUserDescription =>
-      'Má fhíoraíonn tú úsáideoir eile, is féidir leat a bheith cinnte go bhfuil a fhios agat cé leis a bhfuil tú ag scríobh i ndáiríre. 💪\n\nNuair a thosaíonn tú fíorú, feicfidh tú féin agus an t-úsáideoir eile aníos san aip. Ansin feicfidh tú sraith emojis nó uimhreacha a chaithfidh tú a chur i gcomparáid lena chéile.\n\nIs é an bealach is fearr chun é seo a dhéanamh ná bualadh le chéile nó glao físe a thosú. 👭';
+  String get verifyOtherUserDescription => 'Má fhíoraíonn tú úsáideoir eile, is féidir leat a bheith cinnte go bhfuil a fhios agat cé leis a bhfuil tú ag scríobh i ndáiríre. 💪\n\nNuair a thosaíonn tú fíorú, feicfidh tú féin agus an t-úsáideoir eile aníos san aip. Ansin feicfidh tú sraith emojis nó uimhreacha a chaithfidh tú a chur i gcomparáid lena chéile.\n\nIs é an bealach is fearr chun é seo a dhéanamh ná bualadh le chéile nó glao físe a thosú. 👭';
 
   @override
   String get verifyOtherDevice => '🔐 Fíoraigh gléas eile';
 
   @override
-  String get verifyOtherDeviceDescription =>
-      'Nuair a fhíoraíonn tú gléas eile, is féidir leis na gléasanna sin eochracha a mhalartú, do shlándáil fhoriomlán a mhéadú. 💪 Nuair a thosaíonn tú fíorú, beidh preabfhuinneog le feiceáil san aip ar an dá ghléas. Ansin feicfidh tú sraith emojis nó uimhreacha a chaithfidh tú a chur i gcomparáid lena chéile. Is fearr an dá ghléas a bheith áisiúil sula dtosaíonn tú ar an bhfíorú. 🤳';
+  String get verifyOtherDeviceDescription => 'Nuair a fhíoraíonn tú gléas eile, is féidir leis na gléasanna sin eochracha a mhalartú, do shlándáil fhoriomlán a mhéadú. 💪 Nuair a thosaíonn tú fíorú, beidh preabfhuinneog le feiceáil san aip ar an dá ghléas. Ansin feicfidh tú sraith emojis nó uimhreacha a chaithfidh tú a chur i gcomparáid lena chéile. Is fearr an dá ghléas a bheith áisiúil sula dtosaíonn tú ar an bhfíorú. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
@@ -2299,8 +2174,7 @@ class L10nGa extends L10n {
   String get discover => 'Faigh amach';
 
   @override
-  String get commandHint_ignore =>
-      'Déan neamhaird d\'aitheantas na maitríse sonraithe';
+  String get commandHint_ignore => 'Déan neamhaird d\'aitheantas na maitríse sonraithe';
 
   @override
   String get commandHint_unignore => 'Unignore an ID maitrís tugtha';
@@ -2311,8 +2185,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get noDatabaseEncryption =>
-      'Ní thacaítear le criptiú bunachar sonraí ar an ardán seo';
+  String get noDatabaseEncryption => 'Ní thacaítear le criptiú bunachar sonraí ar an ardán seo';
 
   @override
   String thereAreCountUsersBlocked(Object count) {
@@ -2349,34 +2222,28 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get changeGeneralChatSettings =>
-      'Athraigh socruithe ginearálta comhrá';
+  String get changeGeneralChatSettings => 'Athraigh socruithe ginearálta comhrá';
 
   @override
-  String get inviteOtherUsers =>
-      'Tabhair cuireadh d\'úsáideoirí eile chuig an gcomhrá seo';
+  String get inviteOtherUsers => 'Tabhair cuireadh d\'úsáideoirí eile chuig an gcomhrá seo';
 
   @override
   String get changeTheChatPermissions => 'Athraigh na ceadanna comhrá';
 
   @override
-  String get changeTheVisibilityOfChatHistory =>
-      'Athraigh infheictheacht stair an chomhrá';
+  String get changeTheVisibilityOfChatHistory => 'Athraigh infheictheacht stair an chomhrá';
 
   @override
-  String get changeTheCanonicalRoomAlias =>
-      'Athraigh an príomhsheoladh comhrá poiblí';
+  String get changeTheCanonicalRoomAlias => 'Athraigh an príomhsheoladh comhrá poiblí';
 
   @override
   String get sendRoomNotifications => 'Seol fógraí @room';
 
   @override
-  String get changeTheDescriptionOfTheGroup =>
-      'Athraigh an cur síos ar an gcomhrá';
+  String get changeTheDescriptionOfTheGroup => 'Athraigh an cur síos ar an gcomhrá';
 
   @override
-  String get chatPermissionsDescription =>
-      'Sainmhínigh cén leibhéal cumhachta is gá le haghaidh gníomhartha áirithe sa chomhrá seo. De ghnáth bíonn na leibhéil chumhachta 0, 50 agus 100 ag déanamh ionadaíochta d\'úsáideoirí, do mhodhnóirí agus do riarthóirí, ach is féidir aon ghrádú a dhéanamh.';
+  String get chatPermissionsDescription => 'Sainmhínigh cén leibhéal cumhachta is gá le haghaidh gníomhartha áirithe sa chomhrá seo. De ghnáth bíonn na leibhéil chumhachta 0, 50 agus 100 ag déanamh ionadaíochta d\'úsáideoirí, do mhodhnóirí agus do riarthóirí, ach is féidir aon ghrádú a dhéanamh.';
 
   @override
   String updateInstalled(String version) {
@@ -2399,12 +2266,10 @@ class L10nGa extends L10n {
   String get whatIsAHomeserver => 'Cad is freastalaí baile ann?';
 
   @override
-  String get homeserverDescription =>
-      'Stóráiltear do chuid sonraí go léir ar an bhfreastalaí baile, díreach cosúil le soláthraí ríomhphoist. Is féidir leat an freastalaí baile is mian leat a úsáid a roghnú, agus is féidir leat cumarsáid a dhéanamh le gach duine fós. Foghlaim níos mó ag https://matrix.org.';
+  String get homeserverDescription => 'Stóráiltear do chuid sonraí go léir ar an bhfreastalaí baile, díreach cosúil le soláthraí ríomhphoist. Is féidir leat an freastalaí baile is mian leat a úsáid a roghnú, agus is féidir leat cumarsáid a dhéanamh le gach duine fós. Foghlaim níos mó ag https://matrix.org.';
 
   @override
-  String get doesNotSeemToBeAValidHomeserver =>
-      'Ní cosúil gur freastalaí baile comhoiriúnach é. URL mícheart?';
+  String get doesNotSeemToBeAValidHomeserver => 'Ní cosúil gur freastalaí baile comhoiriúnach é. URL mícheart?';
 
   @override
   String get calculatingFileSize => 'Méid an chomhaid á ríomh...';
@@ -2432,19 +2297,16 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get oneOfYourDevicesIsNotVerified =>
-      'Ní fhíoraítear ceann de do ghléasanna';
+  String get oneOfYourDevicesIsNotVerified => 'Ní fhíoraítear ceann de do ghléasanna';
 
   @override
-  String get noticeChatBackupDeviceVerification =>
-      'Nóta: Nuair a nascann tú do ghléasanna go léir leis an gcúltaca comhrá, déantar iad a fhíorú go huathoibríoch.';
+  String get noticeChatBackupDeviceVerification => 'Nóta: Nuair a nascann tú do ghléasanna go léir leis an gcúltaca comhrá, déantar iad a fhíorú go huathoibríoch.';
 
   @override
   String get continueText => 'Lean ar aghaidh';
 
   @override
-  String get welcomeText =>
-      'Hey Hey 👋 Is é seo FluffyChat. Is féidir leat síniú isteach in aon fhreastalaí baile, atá comhoiriúnach leis https://matrix.org. Agus ansin comhrá a dhéanamh le duine ar bith. Is líonra teachtaireachtaí díláraithe ollmhór é!';
+  String get welcomeText => 'Hey Hey 👋 Is é seo FluffyChat. Is féidir leat síniú isteach in aon fhreastalaí baile, atá comhoiriúnach leis https://matrix.org. Agus ansin comhrá a dhéanamh le duine ar bith. Is líonra teachtaireachtaí díláraithe ollmhór é!';
 
   @override
   String get blur => 'Doiléirigh:';
@@ -2459,15 +2321,13 @@ class L10nGa extends L10n {
   String get manageAccount => 'Bainistigh cuntas';
 
   @override
-  String get noContactInformationProvided =>
-      'Ní sholáthraíonn an freastalaí aon fhaisnéis teagmhála bhailí';
+  String get noContactInformationProvided => 'Ní sholáthraíonn an freastalaí aon fhaisnéis teagmhála bhailí';
 
   @override
   String get contactServerAdmin => 'Déan teagmháil le admin an fhreastalaí';
 
   @override
-  String get contactServerSecurity =>
-      'Déan teagmháil le slándáil an fhreastalaí';
+  String get contactServerSecurity => 'Déan teagmháil le slándáil an fhreastalaí';
 
   @override
   String get supportPage => 'Leathanach tacaíochta';
@@ -2506,15 +2366,13 @@ class L10nGa extends L10n {
   String get addLink => 'Cuir nasc leis';
 
   @override
-  String get unableToJoinChat =>
-      'Ní féidir páirt a ghlacadh sa chomhrá. B’fhéidir go bhfuil an comhrá dúnta cheana féin ag an bpáirtí eile.';
+  String get unableToJoinChat => 'Ní féidir páirt a ghlacadh sa chomhrá. B’fhéidir go bhfuil an comhrá dúnta cheana féin ag an bpáirtí eile.';
 
   @override
   String get previous => 'Roimhe Seo';
 
   @override
-  String get otherPartyNotLoggedIn =>
-      'Níl an páirtí eile logáilte isteach faoi láthair agus mar sin ní féidir leo teachtaireachtaí a fháil!';
+  String get otherPartyNotLoggedIn => 'Níl an páirtí eile logáilte isteach faoi láthair agus mar sin ní féidir leo teachtaireachtaí a fháil!';
 
   @override
   String appWantsToUseForLogin(String server) {
@@ -2522,8 +2380,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get appWantsToUseForLoginDescription =>
-      'Ligeann tú leis seo don aip agus don suíomh Gréasáin faisnéis a roinnt fút.';
+  String get appWantsToUseForLoginDescription => 'Ligeann tú leis seo don aip agus don suíomh Gréasáin faisnéis a roinnt fút.';
 
   @override
   String get open => 'Oscail';
@@ -2532,8 +2389,7 @@ class L10nGa extends L10n {
   String get waitingForServer => 'Ag fanacht leis an bhfreastalaí...';
 
   @override
-  String get appIntroduction =>
-      'Ligeann FluffyChat duit comhrá a dhéanamh le do chairde thar theachtairí éagsúla. Foghlaim tuilleadh ag https://matrix.org nó tapáil *Ar aghaidh*.';
+  String get appIntroduction => 'Ligeann FluffyChat duit comhrá a dhéanamh le do chairde thar theachtairí éagsúla. Foghlaim tuilleadh ag https://matrix.org nó tapáil *Ar aghaidh*.';
 
   @override
   String get newChatRequest => '📩 Iarratas comhrá nua';
@@ -2548,8 +2404,7 @@ class L10nGa extends L10n {
   String get roomNotificationSettings => 'Socruithe fógra seomra';
 
   @override
-  String get userSpecificNotificationSettings =>
-      'Socruithe fógra sainiúla don úsáideoir';
+  String get userSpecificNotificationSettings => 'Socruithe fógra sainiúla don úsáideoir';
 
   @override
   String get otherNotificationSettings => 'Socruithe fógra eile';
@@ -2558,143 +2413,121 @@ class L10nGa extends L10n {
   String get notificationRuleContainsUserName => 'Tá Ainm Úsáideora ann';
 
   @override
-  String get notificationRuleContainsUserNameDescription =>
-      'Cuireann sé sin in iúl don úsáideoir nuair a bhíonn a ainm úsáideora i dteachtaireacht.';
+  String get notificationRuleContainsUserNameDescription => 'Cuireann sé sin in iúl don úsáideoir nuair a bhíonn a ainm úsáideora i dteachtaireacht.';
 
   @override
   String get notificationRuleMaster => 'Balbhaigh gach fógra';
 
   @override
-  String get notificationRuleMasterDescription =>
-      'Sáraíonn sé gach riail eile agus díchumasaítear gach fógra.';
+  String get notificationRuleMasterDescription => 'Sáraíonn sé gach riail eile agus díchumasaítear gach fógra.';
 
   @override
-  String get notificationRuleSuppressNotices =>
-      'Bain Teachtaireachtaí Uathoibrithe';
+  String get notificationRuleSuppressNotices => 'Bain Teachtaireachtaí Uathoibrithe';
 
   @override
-  String get notificationRuleSuppressNoticesDescription =>
-      'Sochtann sé fógraí ó chliaint uathoibrithe amhail róbónna.';
+  String get notificationRuleSuppressNoticesDescription => 'Sochtann sé fógraí ó chliaint uathoibrithe amhail róbónna.';
 
   @override
   String get notificationRuleInviteForMe => 'Tabhair cuireadh Do Mhise';
 
   @override
-  String get notificationRuleInviteForMeDescription =>
-      'Cuireann sé seo ar an eolas don úsáideoir nuair a thugtar cuireadh dó/di go seomra.';
+  String get notificationRuleInviteForMeDescription => 'Cuireann sé seo ar an eolas don úsáideoir nuair a thugtar cuireadh dó/di go seomra.';
 
   @override
   String get notificationRuleMemberEvent => 'Imeacht Ball';
 
   @override
-  String get notificationRuleMemberEventDescription =>
-      'Sochtann fógraí le haghaidh imeachtaí ballraíochta.';
+  String get notificationRuleMemberEventDescription => 'Sochtann fógraí le haghaidh imeachtaí ballraíochta.';
 
   @override
   String get notificationRuleIsUserMention => 'Luaigh Úsáideoir';
 
   @override
-  String get notificationRuleIsUserMentionDescription =>
-      'Cuireann sé sin in iúl don úsáideoir nuair a luaitear go díreach iad i dteachtaireacht.';
+  String get notificationRuleIsUserMentionDescription => 'Cuireann sé sin in iúl don úsáideoir nuair a luaitear go díreach iad i dteachtaireacht.';
 
   @override
   String get notificationRuleContainsDisplayName => 'Tá Ainm Taispeána ann';
 
   @override
-  String get notificationRuleContainsDisplayNameDescription =>
-      'Cuireann sé sin in iúl don úsáideoir nuair a bhíonn a ainm taispeána i dteachtaireacht.';
+  String get notificationRuleContainsDisplayNameDescription => 'Cuireann sé sin in iúl don úsáideoir nuair a bhíonn a ainm taispeána i dteachtaireacht.';
 
   @override
   String get notificationRuleIsRoomMention => 'Luaigh Seomra';
 
   @override
-  String get notificationRuleIsRoomMentionDescription =>
-      'Cuireann sé sin in iúl don úsáideoir nuair a luaitear seomra.';
+  String get notificationRuleIsRoomMentionDescription => 'Cuireann sé sin in iúl don úsáideoir nuair a luaitear seomra.';
 
   @override
   String get notificationRuleRoomnotif => 'Fógra Seomra';
 
   @override
-  String get notificationRuleRoomnotifDescription =>
-      'Cuireann sé seo in iúl don úsáideoir nuair a bhíonn \'@room\' i dteachtaireacht.';
+  String get notificationRuleRoomnotifDescription => 'Cuireann sé seo in iúl don úsáideoir nuair a bhíonn \'@room\' i dteachtaireacht.';
 
   @override
   String get notificationRuleTombstone => 'Leac uaighe';
 
   @override
-  String get notificationRuleTombstoneDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí díghníomhaithe seomra.';
+  String get notificationRuleTombstoneDescription => 'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí díghníomhaithe seomra.';
 
   @override
   String get notificationRuleReaction => 'Imoibriú';
 
   @override
-  String get notificationRuleReactionDescription =>
-      'Sochtann fógraí le haghaidh frithghníomhartha.';
+  String get notificationRuleReactionDescription => 'Sochtann fógraí le haghaidh frithghníomhartha.';
 
   @override
   String get notificationRuleRoomServerAcl => 'Freastalaí Seomra ACL';
 
   @override
-  String get notificationRuleRoomServerAclDescription =>
-      'Sochtann sé fógraí do liostaí rialaithe rochtana freastalaí seomra (ACL).';
+  String get notificationRuleRoomServerAclDescription => 'Sochtann sé fógraí do liostaí rialaithe rochtana freastalaí seomra (ACL).';
 
   @override
   String get notificationRuleSuppressEdits => 'Cuir na hEagarthóirí ar ceal';
 
   @override
-  String get notificationRuleSuppressEditsDescription =>
-      'Sochtann fógraí le haghaidh teachtaireachtaí curtha in eagar.';
+  String get notificationRuleSuppressEditsDescription => 'Sochtann fógraí le haghaidh teachtaireachtaí curtha in eagar.';
 
   @override
   String get notificationRuleCall => 'Glaoigh';
 
   @override
-  String get notificationRuleCallDescription =>
-      'Cuireann sé an t-úsáideoir ar an eolas faoi ghlaonna.';
+  String get notificationRuleCallDescription => 'Cuireann sé an t-úsáideoir ar an eolas faoi ghlaonna.';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOne =>
-      'Seomra Duine le Duine Criptithe';
+  String get notificationRuleEncryptedRoomOneToOne => 'Seomra Duine le Duine Criptithe';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí duine le duine criptithe.';
+  String get notificationRuleEncryptedRoomOneToOneDescription => 'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí duine le duine criptithe.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Seomra duine le duine';
 
   @override
-  String get notificationRuleRoomOneToOneDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí duine le duine.';
+  String get notificationRuleRoomOneToOneDescription => 'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí duine le duine.';
 
   @override
   String get notificationRuleMessage => 'Teachtaireacht';
 
   @override
-  String get notificationRuleMessageDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí ginearálta.';
+  String get notificationRuleMessageDescription => 'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí ginearálta.';
 
   @override
   String get notificationRuleEncrypted => 'Criptithe';
 
   @override
-  String get notificationRuleEncryptedDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí criptithe.';
+  String get notificationRuleEncryptedDescription => 'Cuireann sé seo in iúl don úsáideoir faoi theachtaireachtaí i seomraí criptithe.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
-  String get notificationRuleJitsiDescription =>
-      'Cuireann sé seo in iúl don úsáideoir faoi imeachtaí giuirléidí Jitsi.';
+  String get notificationRuleJitsiDescription => 'Cuireann sé seo in iúl don úsáideoir faoi imeachtaí giuirléidí Jitsi.';
 
   @override
   String get notificationRuleServerAcl => 'Seachtaigh Freastalaí ACL Imeachtaí';
 
   @override
-  String get notificationRuleServerAclDescription =>
-      'Sochtann fógraí le haghaidh imeachtaí Freastalaí ACL.';
+  String get notificationRuleServerAclDescription => 'Sochtann fógraí le haghaidh imeachtaí Freastalaí ACL.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2707,8 +2540,7 @@ class L10nGa extends L10n {
   }
 
   @override
-  String get deletePushRuleCanNotBeUndone =>
-      'Má scriosann tú an socrú fógra seo, ní féidir é seo a chealú.';
+  String get deletePushRuleCanNotBeUndone => 'Má scriosann tú an socrú fógra seo, ní féidir é seo a chealú.';
 
   @override
   String get more => 'Tuilleadh';
@@ -2717,15 +2549,13 @@ class L10nGa extends L10n {
   String get shareKeysWith => 'Roinn na heochracha le...';
 
   @override
-  String get shareKeysWithDescription =>
-      'Cad iad na gléasanna ar cheart muinín a chur iontu ionas gur féidir leo do chuid teachtaireachtaí a léamh i gcomhráite criptithe?';
+  String get shareKeysWithDescription => 'Cad iad na gléasanna ar cheart muinín a chur iontu ionas gur féidir leo do chuid teachtaireachtaí a léamh i gcomhráite criptithe?';
 
   @override
   String get allDevices => 'Gach gléasanna';
 
   @override
-  String get crossVerifiedDevicesIfEnabled =>
-      'Gléasanna trasfhíoraithe má tá siad cumasaithe';
+  String get crossVerifiedDevicesIfEnabled => 'Gléasanna trasfhíoraithe má tá siad cumasaithe';
 
   @override
   String get crossVerifiedDevices => 'Feistí trasfhíoraithe';
@@ -2755,8 +2585,7 @@ class L10nGa extends L10n {
   String get youHaveKnocked => 'Bhuail tú';
 
   @override
-  String get pleaseWaitUntilInvited =>
-      'Fan anois, le do thoil, go dtí go dtabharfaidh duine éigin ón seomra cuireadh duit.';
+  String get pleaseWaitUntilInvited => 'Fan anois, le do thoil, go dtí go dtabharfaidh duine éigin ón seomra cuireadh duit.';
 
   @override
   String get commandHint_logout => 'Logáil amach as do ghléas reatha';
@@ -2765,9 +2594,14 @@ class L10nGa extends L10n {
   String get commandHint_logoutall => 'Logáil amach gach gléas gníomhach';
 
   @override
-  String get displayNavigationRail =>
-      'Taispeáin ráille nascleanúna ar fhóin phóca';
+  String get displayNavigationRail => 'Taispeáin ráille nascleanúna ar fhóin phóca';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Imoibriú saincheaptha';
+
+  @override
+  String get moreEvents => 'Tuilleadh imeachtaí';
+
+  @override
+  String get declineInvitation => 'Diúltaigh don chuireadh';
 }

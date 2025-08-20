@@ -73,7 +73,7 @@ class _MxcImageState extends State<MxcImage> {
     final event = widget.event;
 
     if (uri != null) {
-      final devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
+      final devicePixelRatio = MediaQuery.devicePixelRatioOf(context);
       final width = widget.width;
       final realWidth = width == null ? null : width * devicePixelRatio;
       final height = widget.height;
@@ -140,12 +140,9 @@ class _MxcImageState extends State<MxcImage> {
     final data = _imageData;
     final hasData = data != null && data.isNotEmpty;
 
-    return AnimatedCrossFade(
-      crossFadeState:
-          hasData ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+    return AnimatedSwitcher(
       duration: const Duration(milliseconds: 128),
-      firstChild: placeholder(context),
-      secondChild: hasData
+      child: hasData
           ? Image.memory(
               data,
               width: widget.width,
@@ -169,10 +166,7 @@ class _MxcImageState extends State<MxcImage> {
                 );
               },
             )
-          : SizedBox(
-              width: widget.width,
-              height: widget.height,
-            ),
+          : placeholder(context),
     );
   }
 }
