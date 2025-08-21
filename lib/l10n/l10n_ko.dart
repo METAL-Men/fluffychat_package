@@ -21,7 +21,8 @@ class L10nKo extends L10n {
   String get setCustomPermissionLevel => 'Set custom permission level';
 
   @override
-  String get setPermissionsLevelDescription => 'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+  String get setPermissionsLevelDescription =>
+      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
 
   @override
   String get ignoreUser => 'Ignore user';
@@ -101,7 +102,8 @@ class L10nKo extends L10n {
   String get allChats => '모든 채팅';
 
   @override
-  String get commandHint_roomupgrade => 'Upgrade this room to the given room version';
+  String get commandHint_roomupgrade =>
+      'Upgrade this room to the given room version';
 
   @override
   String get commandHint_googly => '왕눈이 눈알 보내기';
@@ -165,7 +167,11 @@ class L10nKo extends L10n {
   String get autoplayImages => '자동으로 움직이는 스티커와 이모트 재생';
 
   @override
-  String badServerLoginTypesException(String serverVersions, String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return '홈서버가 지원하는 로그인 유형:\n$serverVersions\n하지만 이 앱에서 지원하는 것은:\n$supportedVersions';
   }
 
@@ -179,7 +185,13 @@ class L10nKo extends L10n {
   String get sendOnEnter => '엔터로 보내기';
 
   @override
-  String badServerVersionsException(String serverVersions, String supportedVersions, Object serverVerions, Object supoortedVersions, Object suportedVersions) {
+  String badServerVersionsException(
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return '이 홈서버가 지원하는 Spec 버전:\n$serverVersions\n하지만 이 앱은 $supportedVersions만 지원합니다';
   }
 
@@ -192,7 +204,8 @@ class L10nKo extends L10n {
   String get noMoreChatsFound => '채팅을 찾을 수 없습니다...';
 
   @override
-  String get noChatsFoundHere => '대화가 발견되지 않았습니다. 아래 버튼을 사용하여 새 대화를 시작해 보세요. ⤵️';
+  String get noChatsFoundHere =>
+      '대화가 발견되지 않았습니다. 아래 버튼을 사용하여 새 대화를 시작해 보세요. ⤵️';
 
   @override
   String get joinedChats => '참가한 채팅';
@@ -335,7 +348,8 @@ class L10nKo extends L10n {
   String get chatBackup => '채팅 백업';
 
   @override
-  String get chatBackupDescription => '당신의 오래된 메시지는 보안 키로 보호됩니다. 이 키를 잃어버리지 마세요.';
+  String get chatBackupDescription =>
+      '당신의 오래된 메시지는 보안 키로 보호됩니다. 이 키를 잃어버리지 마세요.';
 
   @override
   String get chatDetails => '채팅 정보';
@@ -368,7 +382,8 @@ class L10nKo extends L10n {
   String get commandHint_clearcache => '캐시 지우기';
 
   @override
-  String get commandHint_create => '빈 그룹 채팅을 생성\n--no-encryption을 사용해 암호화를 비활성화';
+  String get commandHint_create =>
+      '빈 그룹 채팅을 생성\n--no-encryption을 사용해 암호화를 비활성화';
 
   @override
   String get commandHint_discardsession => '세션 삭제';
@@ -513,7 +528,8 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get deactivateAccountWarning => '이것은 당신의 계정을 비활성화할 것입니다. 이것은 되돌릴 수 없습니다! 확실한가요?';
+  String get deactivateAccountWarning =>
+      '이것은 당신의 계정을 비활성화할 것입니다. 이것은 되돌릴 수 없습니다! 확실한가요?';
 
   @override
   String get defaultPermissionLevel => '새로 참가하는 유저들의 기본 권한 레벨';
@@ -588,7 +604,8 @@ class L10nKo extends L10n {
   String get accessAndVisibility => '채팅 가입과 대화 기록';
 
   @override
-  String get accessAndVisibilityDescription => '채팅에 참가 할 수 있는 사람과 채팅을 볼 수 있는 범위';
+  String get accessAndVisibilityDescription =>
+      '채팅에 참가 할 수 있는 사람과 채팅을 볼 수 있는 범위';
 
   @override
   String get calls => '전화';
@@ -597,7 +614,8 @@ class L10nKo extends L10n {
   String get customEmojisAndStickers => '커스텀 이모지와 스티커';
 
   @override
-  String get customEmojisAndStickersBody => '모든 채팅에서 사용할 수있는 커스텀 이모지와 스티커를 추가하거나 공유합니다.';
+  String get customEmojisAndStickersBody =>
+      '모든 채팅에서 사용할 수있는 커스텀 이모지와 스티커를 추가하거나 공유합니다.';
 
   @override
   String get emoteShortcode => '이모트 단축키';
@@ -734,7 +752,8 @@ class L10nKo extends L10n {
   String get blockedUsers => '차단된 유저';
 
   @override
-  String get blockListDescription => '당신은 당신을 방해하는 유저들을 차단할 수 있습니다. 당신은 당신의 개인 차단 목록에 있는 어떠한 유저의 메시지와 방 초대도 받지 않을것 입니다.';
+  String get blockListDescription =>
+      '당신은 당신을 방해하는 유저들을 차단할 수 있습니다. 당신은 당신의 개인 차단 목록에 있는 어떠한 유저의 메시지와 방 초대도 받지 않을것 입니다.';
 
   @override
   String get blockUsername => '유저 이름 무시';
@@ -774,7 +793,8 @@ class L10nKo extends L10n {
   String get invited => '초대됨';
 
   @override
-  String get redactMessageDescription => '메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.';
+  String get redactMessageDescription =>
+      '메시지는 이 대화의 모든 참여자에게 삭제될 것 입니다. 되돌릴 수 없습니다.';
 
   @override
   String get optionalRedactReason => '(선택) 이 메시지를 편집하는 이유...';
@@ -872,7 +892,8 @@ class L10nKo extends L10n {
   String get locationDisabledNotice => '위치 서비스가 비활성화되었습니다. 위치를 공유하려면 활성화시켜주세요.';
 
   @override
-  String get locationPermissionDeniedNotice => '위치 권한이 거부되었습니다. 위치를 공유하기 위해서 허용해주세요.';
+  String get locationPermissionDeniedNotice =>
+      '위치 권한이 거부되었습니다. 위치를 공유하기 위해서 허용해주세요.';
 
   @override
   String get login => '로그인';
@@ -904,7 +925,8 @@ class L10nKo extends L10n {
   String get muteChat => '채팅 음소거';
 
   @override
-  String get needPantalaimonWarning => '지금 종단간 암호화를 사용하기 위해서는 Pantalaimon이 필요하다는 것을 알아주세요.';
+  String get needPantalaimonWarning =>
+      '지금 종단간 암호화를 사용하기 위해서는 Pantalaimon이 필요하다는 것을 알아주세요.';
 
   @override
   String get newChat => '새 채팅';
@@ -928,10 +950,12 @@ class L10nKo extends L10n {
   String get noEmotesFound => '이모트 발견되지 않음. 😕';
 
   @override
-  String get noEncryptionForPublicRooms => '당신은 방이 공개적으로 접근 가능하지 않을 때만 암호화를 켤 수 있습니다.';
+  String get noEncryptionForPublicRooms =>
+      '당신은 방이 공개적으로 접근 가능하지 않을 때만 암호화를 켤 수 있습니다.';
 
   @override
-  String get noGoogleServicesWarning => '이 휴대폰에 Firebase Cloud Messaging 서비스가 없는 것 같습니다. FluffyChat에서 푸시 알림을 받으려면 ntfy 사용을 추천합니다. ntfy 혹은 다른 푸시 알림 제공자를 사용하면 알림을 보안적인 방법으로 받을 수 있습니다. ntfy는 PlayStore와 F-Droid에서 설치 가능합니다.';
+  String get noGoogleServicesWarning =>
+      '이 휴대폰에 Firebase Cloud Messaging 서비스가 없는 것 같습니다. FluffyChat에서 푸시 알림을 받으려면 ntfy 사용을 추천합니다. ntfy 혹은 다른 푸시 알림 제공자를 사용하면 알림을 보안적인 방법으로 받을 수 있습니다. ntfy는 PlayStore와 F-Droid에서 설치 가능합니다.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -1052,7 +1076,8 @@ class L10nKo extends L10n {
   String get hideMemberChangesInPublicChats => '공개 채팅에서의 참가자 변화 숨김';
 
   @override
-  String get hideMemberChangesInPublicChatsBody => '공개 채팅에 누군가가 참가하거나 떠날때 타임라인에 표시하지 않습니다.';
+  String get hideMemberChangesInPublicChatsBody =>
+      '공개 채팅에 누군가가 참가하거나 떠날때 타임라인에 표시하지 않습니다.';
 
   @override
   String get overview => '개요';
@@ -1522,7 +1547,8 @@ class L10nKo extends L10n {
   String get wipeChatBackup => '새로운 복구키를 생성하기 위해 채팅 백업을 초기화할까요?';
 
   @override
-  String get withTheseAddressesRecoveryDescription => '이 주소로 당신의 비밀번호를 복구할 수 있습니다.';
+  String get withTheseAddressesRecoveryDescription =>
+      '이 주소로 당신의 비밀번호를 복구할 수 있습니다.';
 
   @override
   String get writeAMessage => '메시지 작성…';
@@ -1534,7 +1560,8 @@ class L10nKo extends L10n {
   String get you => '당신';
 
   @override
-  String get youAreNoLongerParticipatingInThisChat => '당신은 더 이상 이 채팅에 참여하지 않습니다';
+  String get youAreNoLongerParticipatingInThisChat =>
+      '당신은 더 이상 이 채팅에 참여하지 않습니다';
 
   @override
   String get youHaveBeenBannedFromThisChat => '당신은 이 채팅에서 영구 추방되었습니다';
@@ -1567,7 +1594,8 @@ class L10nKo extends L10n {
   String get start => '시작';
 
   @override
-  String get pleaseEnterRecoveryKeyDescription => '오래된 메시지를 잠금 해제하려면, 이전 세션에서 생성된 복호화 키를 입력하세요. 복호화 키는 비밀번호가 아닙니다.';
+  String get pleaseEnterRecoveryKeyDescription =>
+      '오래된 메시지를 잠금 해제하려면, 이전 세션에서 생성된 복호화 키를 입력하세요. 복호화 키는 비밀번호가 아닙니다.';
 
   @override
   String get publish => '공개';
@@ -1613,10 +1641,12 @@ class L10nKo extends L10n {
   String get unsupportedAndroidVersion => '지원되지 않는 안드로이드 버전';
 
   @override
-  String get unsupportedAndroidVersionLong => '이 기능은 새로운 안드로이드 버전을 요구합니다. Lineage OS 지원이나 업데이트를 확인해주세요.';
+  String get unsupportedAndroidVersionLong =>
+      '이 기능은 새로운 안드로이드 버전을 요구합니다. Lineage OS 지원이나 업데이트를 확인해주세요.';
 
   @override
-  String get videoCallsBetaWarning => '영상 통화는 베타임을 확인해주세요. 의도한 대로 작동하지 않거나 모든 플랫폼에서 작동하지 않을 수 있습니다.';
+  String get videoCallsBetaWarning =>
+      '영상 통화는 베타임을 확인해주세요. 의도한 대로 작동하지 않거나 모든 플랫폼에서 작동하지 않을 수 있습니다.';
 
   @override
   String get experimentalVideoCalls => '실험적인 영상 통화';
@@ -1628,7 +1658,8 @@ class L10nKo extends L10n {
   String get indexedDbErrorTitle => '사생활 보호 모드의 문제';
 
   @override
-  String get indexedDbErrorLong => '메시지 저장은 기본적으로 사생활 보호 모드에서 사용할 수 없습니다.\n- about:config 로 이동\n- dom.indexedDB.privateBrowsing.enabled 를 true로 설정\n그렇지 않으면 FluffyChat을 실행할 수 없습니다.';
+  String get indexedDbErrorLong =>
+      '메시지 저장은 기본적으로 사생활 보호 모드에서 사용할 수 없습니다.\n- about:config 로 이동\n- dom.indexedDB.privateBrowsing.enabled 를 true로 설정\n그렇지 않으면 FluffyChat을 실행할 수 없습니다.';
 
   @override
   String switchToAccount(String number) {
@@ -1798,7 +1829,8 @@ class L10nKo extends L10n {
   String get appearOnTop => '상단에 표시';
 
   @override
-  String get appearOnTopDetails => '앱이 상단에 표시되도록 허용 (이미 FluffyChat을 통화 계정으로 설정한 경우에는 필요하지 않음)';
+  String get appearOnTopDetails =>
+      '앱이 상단에 표시되도록 허용 (이미 FluffyChat을 통화 계정으로 설정한 경우에는 필요하지 않음)';
 
   @override
   String get otherCallingPermissions => '마이크, 카메라 그리고 다름 FluffyChat 권한';
@@ -1807,7 +1839,8 @@ class L10nKo extends L10n {
   String get whyIsThisMessageEncrypted => '왜 이 메시지를 읽을 수 없나요?';
 
   @override
-  String get noKeyForThisMessage => '이것은 이 메시지가 당신이 이 기기를 서명하기 전에 발송되었기 때문에 일어났을 수 있습니다.\n\n이것은 또한 발송자가 당신의 기기를 차단하였거나 혹은 인터넷 연결이 잘못되었을 수 있습니다.\n\n다른 세션에서 이 메시지를 읽을 수 있나요? 그렇다면 그 메시지를 옮길 수 있습니다! 설정 > 기기로 가서 기기를 서로 증명하세요. 다음번에 방을 열었을 때 두 세션이 모두 작동중이라면, 키가 자동으로 옮겨질것입니다.\n\n로그아웃하거나 기기를 바꿀 때 키를 잃고싶지 않으신가요? 설정에서 채팅 백업을 사용중인지 확인하세요.';
+  String get noKeyForThisMessage =>
+      '이것은 이 메시지가 당신이 이 기기를 서명하기 전에 발송되었기 때문에 일어났을 수 있습니다.\n\n이것은 또한 발송자가 당신의 기기를 차단하였거나 혹은 인터넷 연결이 잘못되었을 수 있습니다.\n\n다른 세션에서 이 메시지를 읽을 수 있나요? 그렇다면 그 메시지를 옮길 수 있습니다! 설정 > 기기로 가서 기기를 서로 증명하세요. 다음번에 방을 열었을 때 두 세션이 모두 작동중이라면, 키가 자동으로 옮겨질것입니다.\n\n로그아웃하거나 기기를 바꿀 때 키를 잃고싶지 않으신가요? 설정에서 채팅 백업을 사용중인지 확인하세요.';
 
   @override
   String get newGroup => '새 그룹 채팅';
@@ -1844,13 +1877,15 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get newSpaceDescription => '스페이스를 사용하면 채팅을 통합하고 비공개 또는 공개 커뮤니티를 구축할 수 있습니다.';
+  String get newSpaceDescription =>
+      '스페이스를 사용하면 채팅을 통합하고 비공개 또는 공개 커뮤니티를 구축할 수 있습니다.';
 
   @override
   String get encryptThisChat => '이 채팅을 암호화';
 
   @override
-  String get disableEncryptionWarning => '보안상의 이유로 암호화가 활성화된 채팅에서 암호화를 비활성화 할 수 없습니다.';
+  String get disableEncryptionWarning =>
+      '보안상의 이유로 암호화가 활성화된 채팅에서 암호화를 비활성화 할 수 없습니다.';
 
   @override
   String get sorryThatsNotPossible => '죄송합니다...그것은 불가능합니다';
@@ -1862,7 +1897,8 @@ class L10nKo extends L10n {
   String get reopenChat => '채팅 다시 열기';
 
   @override
-  String get noBackupWarning => '경고! 채팅 백업을 켜지 않을경우, 당신은 암호화된 메시지에 대한 접근권한을 잃을것 입니다. 로그아웃 하기 전에 채팅을 백업하는것이 강력히 권장됩니다.';
+  String get noBackupWarning =>
+      '경고! 채팅 백업을 켜지 않을경우, 당신은 암호화된 메시지에 대한 접근권한을 잃을것 입니다. 로그아웃 하기 전에 채팅을 백업하는것이 강력히 권장됩니다.';
 
   @override
   String get noOtherDevicesFound => '다른 기기 발견되지 않음';
@@ -1890,7 +1926,8 @@ class L10nKo extends L10n {
   String get openLinkInBrowser => '브라우저에서 링크 열기';
 
   @override
-  String get reportErrorDescription => '😭 이런. 무언가 잘못되었습니다. 원한다면, 개발자에게 버그를 신고할 수 있습니다.';
+  String get reportErrorDescription =>
+      '😭 이런. 무언가 잘못되었습니다. 원한다면, 개발자에게 버그를 신고할 수 있습니다.';
 
   @override
   String get report => '신고';
@@ -1899,7 +1936,8 @@ class L10nKo extends L10n {
   String get signInWithPassword => '비밀번호로 로그인';
 
   @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer => '나중에 다시 시도하거나 다른 서버를 선택하십시오.';
+  String get pleaseTryAgainLaterOrChooseDifferentServer =>
+      '나중에 다시 시도하거나 다른 서버를 선택하십시오.';
 
   @override
   String signInWith(String provider) {
@@ -1907,7 +1945,8 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get profileNotFound => '유저를 서버에서 찾을 수 있습니다. 연결 문제가 있거나 유저가 존재하지 않을 수 있습니다.';
+  String get profileNotFound =>
+      '유저를 서버에서 찾을 수 있습니다. 연결 문제가 있거나 유저가 존재하지 않을 수 있습니다.';
 
   @override
   String get setTheme => '테마 설정:';
@@ -1936,25 +1975,30 @@ class L10nKo extends L10n {
   String get pleaseEnterANumber => '0보다 큰 숫자를 입력하세요';
 
   @override
-  String get archiveRoomDescription => '채팅이 보관함으로 이동합니다. 다른 유저들은 당신이 떠난다는것을 볼 수 있습니다.';
+  String get archiveRoomDescription =>
+      '채팅이 보관함으로 이동합니다. 다른 유저들은 당신이 떠난다는것을 볼 수 있습니다.';
 
   @override
-  String get roomUpgradeDescription => '채팅이 새로운 방 버전으로 다시 생성됩니다. 모든 참가자는 새로운 채팅으로 전환해야합니다. https://spec.matrix.org/latest/rooms/ 에서 방 버전에 대해 자세히 알아볼 수 있습니다.';
+  String get roomUpgradeDescription =>
+      '채팅이 새로운 방 버전으로 다시 생성됩니다. 모든 참가자는 새로운 채팅으로 전환해야합니다. https://spec.matrix.org/latest/rooms/ 에서 방 버전에 대해 자세히 알아볼 수 있습니다.';
 
   @override
   String get removeDevicesDescription => '이 기기에서 로그아웃되며 더 이상 메시지를 받을 수 없습니다.';
 
   @override
-  String get banUserDescription => '유저는 채팅에서 영구 추방되며 추방 해제 전까지 채팅을 다시 입력할 수 없습니다.';
+  String get banUserDescription =>
+      '유저는 채팅에서 영구 추방되며 추방 해제 전까지 채팅을 다시 입력할 수 없습니다.';
 
   @override
   String get unbanUserDescription => '유저가 다시 채팅을 입력할 수 있습니다.';
 
   @override
-  String get kickUserDescription => '유저는 채팅에서 추방되지만 영구 추방되지 않습니다. 공개 채팅의 경우, 언제든 유저가 다시 참가할 수 있습니다.';
+  String get kickUserDescription =>
+      '유저는 채팅에서 추방되지만 영구 추방되지 않습니다. 공개 채팅의 경우, 언제든 유저가 다시 참가할 수 있습니다.';
 
   @override
-  String get makeAdminDescription => '유저를 한 번 관리자로 만들면, 당신과 같은 권한을 가지기때문에 권한 회수가 불가능합니다.';
+  String get makeAdminDescription =>
+      '유저를 한 번 관리자로 만들면, 당신과 같은 권한을 가지기때문에 권한 회수가 불가능합니다.';
 
   @override
   String get pushNotificationsNotAvailable => '푸시 알림 사용 불가';
@@ -2108,10 +2152,12 @@ class L10nKo extends L10n {
   String get sendReadReceipts => '읽음 확인 보내기';
 
   @override
-  String get sendTypingNotificationsDescription => '채팅의 다른 참가자들이 당신이 새 메시지를 입력중인것을 볼 수 있습니다.';
+  String get sendTypingNotificationsDescription =>
+      '채팅의 다른 참가자들이 당신이 새 메시지를 입력중인것을 볼 수 있습니다.';
 
   @override
-  String get sendReadReceiptsDescription => '채팅의 다른 참가자들이 당신이 메시지를 읽었는지 볼 수 있습니다.';
+  String get sendReadReceiptsDescription =>
+      '채팅의 다른 참가자들이 당신이 메시지를 읽었는지 볼 수 있습니다.';
 
   @override
   String get formattedMessages => '형식이 지정된 메시지';
@@ -2123,13 +2169,15 @@ class L10nKo extends L10n {
   String get verifyOtherUser => '🔐 다른 유저 확인';
 
   @override
-  String get verifyOtherUserDescription => '다른 유저를 확인하면, 당신은 당신이 누구에게 말하고있는지 알 수 있습니다. 💪\n\n확인을 시작할 때, 다른 유저는 앱에서 팝업을 볼 수 있습니다. 당신은 그런 다음 서로 비교해야 이모지 또는 숫자의 목록을 볼 수 있습니다.\n\n이 작업을 수행하는 가장 좋은 방법은 직접 만나거나 영상통화를 하는것입니다. 👭';
+  String get verifyOtherUserDescription =>
+      '다른 유저를 확인하면, 당신은 당신이 누구에게 말하고있는지 알 수 있습니다. 💪\n\n확인을 시작할 때, 다른 유저는 앱에서 팝업을 볼 수 있습니다. 당신은 그런 다음 서로 비교해야 이모지 또는 숫자의 목록을 볼 수 있습니다.\n\n이 작업을 수행하는 가장 좋은 방법은 직접 만나거나 영상통화를 하는것입니다. 👭';
 
   @override
   String get verifyOtherDevice => '🔐 다른 기기를 확인';
 
   @override
-  String get verifyOtherDeviceDescription => '다른 장치를 확인하면, 장치와 키를 교환하고, 전반적인 보안을 증가시킵니다. 💪 확인을 시작하면 팝업은 두 장치에 나타납니다. 그런 다음 서로 비교해야 이모지 또는 숫자의 목록를 볼 수 있습니다. 확인을 시작하기 전에 모든 장치를 준비하세요. 🤳';
+  String get verifyOtherDeviceDescription =>
+      '다른 장치를 확인하면, 장치와 키를 교환하고, 전반적인 보안을 증가시킵니다. 💪 확인을 시작하면 팝업은 두 장치에 나타납니다. 그런 다음 서로 비교해야 이모지 또는 숫자의 목록를 볼 수 있습니다. 확인을 시작하기 전에 모든 장치를 준비하세요. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
@@ -2243,7 +2291,8 @@ class L10nKo extends L10n {
   String get changeTheDescriptionOfTheGroup => '채팅 설명 바꾸기';
 
   @override
-  String get chatPermissionsDescription => '이 채팅에서 특정 작업에 요구할 권한 레벨을 정의합니다. 권한 레벨 0, 50, 100은 일반적으로 유저, 관리자, 운영자를 나타내지만, 모든 숫자가 가능합니다.';
+  String get chatPermissionsDescription =>
+      '이 채팅에서 특정 작업에 요구할 권한 레벨을 정의합니다. 권한 레벨 0, 50, 100은 일반적으로 유저, 관리자, 운영자를 나타내지만, 모든 숫자가 가능합니다.';
 
   @override
   String updateInstalled(String version) {
@@ -2266,10 +2315,12 @@ class L10nKo extends L10n {
   String get whatIsAHomeserver => '홈서버가 무엇인가요?';
 
   @override
-  String get homeserverDescription => '당신의 모든 데이터는 이메일과 흡사하게 당신의 홈서버에 저장됩니다. 당신이 소통하고 싶은 사람들과 다른 서버를 사용해도 무관하니 당신이 원하는 홈서버를 선택해도 됩니다. https://matrix.org에서 자세히 알아보세요.';
+  String get homeserverDescription =>
+      '당신의 모든 데이터는 이메일과 흡사하게 당신의 홈서버에 저장됩니다. 당신이 소통하고 싶은 사람들과 다른 서버를 사용해도 무관하니 당신이 원하는 홈서버를 선택해도 됩니다. https://matrix.org에서 자세히 알아보세요.';
 
   @override
-  String get doesNotSeemToBeAValidHomeserver => '호환되는 홈서버가 아닌 것 같습니다. URL을 올바르게 입력됐나요?';
+  String get doesNotSeemToBeAValidHomeserver =>
+      '호환되는 홈서버가 아닌 것 같습니다. URL을 올바르게 입력됐나요?';
 
   @override
   String get calculatingFileSize => '파일 크기 계산 중...';
@@ -2300,13 +2351,15 @@ class L10nKo extends L10n {
   String get oneOfYourDevicesIsNotVerified => '당신의 기기 중 하나가 인증되지 않았음';
 
   @override
-  String get noticeChatBackupDeviceVerification => '참고: 모든 기기에 채팅 백업을 설정하면 자동으로 서로 인증됩니다.';
+  String get noticeChatBackupDeviceVerification =>
+      '참고: 모든 기기에 채팅 백업을 설정하면 자동으로 서로 인증됩니다.';
 
   @override
   String get continueText => '계속하기';
 
   @override
-  String get welcomeText => '안녕하세요 👋 FluffyChat이에요. 당신은 htpps://matrix.org와 호환되는 모든 홈서버를 사용할 수 있어요. 그리고 모두와 대화해보세요. 거대한 분산 대화망이니까요!';
+  String get welcomeText =>
+      '안녕하세요 👋 FluffyChat이에요. 당신은 htpps://matrix.org와 호환되는 모든 홈서버를 사용할 수 있어요. 그리고 모두와 대화해보세요. 거대한 분산 대화망이니까요!';
 
   @override
   String get blur => '블러:';
@@ -2389,7 +2442,8 @@ class L10nKo extends L10n {
   String get waitingForServer => '서버를 기다리는중...';
 
   @override
-  String get appIntroduction => 'FluffyChat는 다른 메신저들을 사용하는 친구들과도 채팅할 수 있습니다. https://matrix.org에 방문하거나 *계속*을 눌러 자세한 정보를 확인하세요.';
+  String get appIntroduction =>
+      'FluffyChat는 다른 메신저들을 사용하는 친구들과도 채팅할 수 있습니다. https://matrix.org에 방문하거나 *계속*을 눌러 자세한 정보를 확인하세요.';
 
   @override
   String get newChatRequest => '📩 새 채팅 요청';
@@ -2404,7 +2458,8 @@ class L10nKo extends L10n {
   String get roomNotificationSettings => '채팅방 알림 설정';
 
   @override
-  String get userSpecificNotificationSettings => 'User specific notification settings';
+  String get userSpecificNotificationSettings =>
+      'User specific notification settings';
 
   @override
   String get otherNotificationSettings => '기타 알림 설정';
@@ -2413,7 +2468,8 @@ class L10nKo extends L10n {
   String get notificationRuleContainsUserName => '유저 이름을 포함함';
 
   @override
-  String get notificationRuleContainsUserNameDescription => '메시지가 유저의 이름을 포함할때 알림합니다.';
+  String get notificationRuleContainsUserNameDescription =>
+      '메시지가 유저의 이름을 포함할때 알림합니다.';
 
   @override
   String get notificationRuleMaster => '모든 알림 음소거';
@@ -2425,7 +2481,8 @@ class L10nKo extends L10n {
   String get notificationRuleSuppressNotices => '자동화된 메시지 무시';
 
   @override
-  String get notificationRuleSuppressNoticesDescription => '봇을 비롯한 자동화된 메시지로부터 발생하는 알림을 무시합니다.';
+  String get notificationRuleSuppressNoticesDescription =>
+      '봇을 비롯한 자동화된 메시지로부터 발생하는 알림을 무시합니다.';
 
   @override
   String get notificationRuleInviteForMe => '초대를 받음';
@@ -2437,19 +2494,22 @@ class L10nKo extends L10n {
   String get notificationRuleMemberEvent => '멤버 이벤트';
 
   @override
-  String get notificationRuleMemberEventDescription => '멤버 이벤트로 발생하는 알림을 무시합니다.';
+  String get notificationRuleMemberEventDescription =>
+      '멤버 이벤트로 발생하는 알림을 무시합니다.';
 
   @override
   String get notificationRuleIsUserMention => '유저가 멘션됨';
 
   @override
-  String get notificationRuleIsUserMentionDescription => '유저가 메시지에 멘션됐을 때 알림합니다.';
+  String get notificationRuleIsUserMentionDescription =>
+      '유저가 메시지에 멘션됐을 때 알림합니다.';
 
   @override
   String get notificationRuleContainsDisplayName => '표시 이름을 포함함';
 
   @override
-  String get notificationRuleContainsDisplayNameDescription => '메시지에 표시 이름이 포함되면 알림합니다.';
+  String get notificationRuleContainsDisplayNameDescription =>
+      '메시지에 표시 이름이 포함되면 알림합니다.';
 
   @override
   String get notificationRuleIsRoomMention => '방 멘션';
@@ -2461,7 +2521,8 @@ class L10nKo extends L10n {
   String get notificationRuleRoomnotif => '방 알림';
 
   @override
-  String get notificationRuleRoomnotifDescription => '메시지가 \'@room\'을 포함하면 알림합니다.';
+  String get notificationRuleRoomnotifDescription =>
+      '메시지가 \'@room\'을 포함하면 알림합니다.';
 
   @override
   String get notificationRuleTombstone => '비활성화';
@@ -2479,55 +2540,65 @@ class L10nKo extends L10n {
   String get notificationRuleRoomServerAcl => '채팅방 서버 ACL';
 
   @override
-  String get notificationRuleRoomServerAclDescription => '채팅방 서버의 접근 권한(ACL)으로부터 오는 알림을 무시합니다.';
+  String get notificationRuleRoomServerAclDescription =>
+      '채팅방 서버의 접근 권한(ACL)으로부터 오는 알림을 무시합니다.';
 
   @override
   String get notificationRuleSuppressEdits => '수정 음소거';
 
   @override
-  String get notificationRuleSuppressEditsDescription => '수정된 메시지로부터 오는 알림을 무시합니다.';
+  String get notificationRuleSuppressEditsDescription =>
+      '수정된 메시지로부터 오는 알림을 무시합니다.';
 
   @override
   String get notificationRuleCall => '전화';
 
   @override
-  String get notificationRuleCallDescription => 'Notifies the user about calls.';
+  String get notificationRuleCallDescription =>
+      'Notifies the user about calls.';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOne => 'Encrypted Room One-to-One';
+  String get notificationRuleEncryptedRoomOneToOne =>
+      'Encrypted Room One-to-One';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOneDescription => 'Notifies the user about messages in encrypted one-to-one rooms.';
+  String get notificationRuleEncryptedRoomOneToOneDescription =>
+      'Notifies the user about messages in encrypted one-to-one rooms.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Room One-to-One';
 
   @override
-  String get notificationRuleRoomOneToOneDescription => 'Notifies the user about messages in one-to-one rooms.';
+  String get notificationRuleRoomOneToOneDescription =>
+      'Notifies the user about messages in one-to-one rooms.';
 
   @override
   String get notificationRuleMessage => 'Message';
 
   @override
-  String get notificationRuleMessageDescription => 'Notifies the user about general messages.';
+  String get notificationRuleMessageDescription =>
+      'Notifies the user about general messages.';
 
   @override
   String get notificationRuleEncrypted => 'Encrypted';
 
   @override
-  String get notificationRuleEncryptedDescription => 'Notifies the user about messages in encrypted rooms.';
+  String get notificationRuleEncryptedDescription =>
+      'Notifies the user about messages in encrypted rooms.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
-  String get notificationRuleJitsiDescription => 'Notifies the user about Jitsi widget events.';
+  String get notificationRuleJitsiDescription =>
+      'Notifies the user about Jitsi widget events.';
 
   @override
   String get notificationRuleServerAcl => 'Suppress Server ACL Events';
 
   @override
-  String get notificationRuleServerAclDescription => 'Suppresses notifications for Server ACL events.';
+  String get notificationRuleServerAclDescription =>
+      'Suppresses notifications for Server ACL events.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2540,7 +2611,8 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get deletePushRuleCanNotBeUndone => 'If you delete this notification setting, this can not be undone.';
+  String get deletePushRuleCanNotBeUndone =>
+      'If you delete this notification setting, this can not be undone.';
 
   @override
   String get more => 'More';
@@ -2549,13 +2621,15 @@ class L10nKo extends L10n {
   String get shareKeysWith => 'Share keys with...';
 
   @override
-  String get shareKeysWithDescription => 'Which devices should be trusted so that they can read along your messages in encrypted chats?';
+  String get shareKeysWithDescription =>
+      'Which devices should be trusted so that they can read along your messages in encrypted chats?';
 
   @override
   String get allDevices => 'All devices';
 
   @override
-  String get crossVerifiedDevicesIfEnabled => 'Cross verified devices if enabled';
+  String get crossVerifiedDevicesIfEnabled =>
+      'Cross verified devices if enabled';
 
   @override
   String get crossVerifiedDevices => 'Cross verified devices';
@@ -2585,7 +2659,8 @@ class L10nKo extends L10n {
   String get youHaveKnocked => 'You have knocked';
 
   @override
-  String get pleaseWaitUntilInvited => 'Please wait now, until someone from the room invites you.';
+  String get pleaseWaitUntilInvited =>
+      'Please wait now, until someone from the room invites you.';
 
   @override
   String get commandHint_logout => 'Logout your current device';

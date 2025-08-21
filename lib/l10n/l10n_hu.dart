@@ -21,7 +21,8 @@ class L10nHu extends L10n {
   String get setCustomPermissionLevel => 'Egyedi engedélyszint beállítása';
 
   @override
-  String get setPermissionsLevelDescription => 'Kérem, válasszon egy előre meghatározott szerepkört, vagy adjon meg egy egyedi engedély szintet 0 és 100 között.';
+  String get setPermissionsLevelDescription =>
+      'Kérem, válasszon egy előre meghatározott szerepkört, vagy adjon meg egy egyedi engedély szintet 0 és 100 között.';
 
   @override
   String get ignoreUser => 'Felhasználó ignorálása';
@@ -75,7 +76,8 @@ class L10nHu extends L10n {
   String get addEmail => 'E-mail-cím hozzáadása';
 
   @override
-  String get confirmMatrixId => 'Kérem, igazolja vissza Matrix ID-jét a fiók törléséhez.';
+  String get confirmMatrixId =>
+      'Kérem, igazolja vissza Matrix ID-jét a fiók törléséhez.';
 
   @override
   String supposedMxid(String mxid) {
@@ -101,7 +103,8 @@ class L10nHu extends L10n {
   String get allChats => 'Összes csevegés';
 
   @override
-  String get commandHint_roomupgrade => 'Szoba frissítése a megadott szoba verzióra';
+  String get commandHint_roomupgrade =>
+      'Szoba frissítése a megadott szoba verzióra';
 
   @override
   String get commandHint_googly => 'Gülüszemek küldése';
@@ -139,7 +142,8 @@ class L10nHu extends L10n {
   String get appLock => 'Alkalmazás zár';
 
   @override
-  String get appLockDescription => 'Applikáció zárolása PIN kóddal használaton kívül';
+  String get appLockDescription =>
+      'Applikáció zárolása PIN kóddal használaton kívül';
 
   @override
   String get archive => 'Archívum';
@@ -154,7 +158,8 @@ class L10nHu extends L10n {
   String get areYouSureYouWantToLogout => 'Biztosan kijelentkezik?';
 
   @override
-  String get askSSSSSign => 'A másik fél igazolásához meg kell adnia a biztonságos tároló jelmondatát vagy a visszaállítási kulcsotát.';
+  String get askSSSSSign =>
+      'A másik fél igazolásához meg kell adnia a biztonságos tároló jelmondatát vagy a visszaállítási kulcsotát.';
 
   @override
   String askVerificationRequest(String username) {
@@ -162,10 +167,15 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get autoplayImages => 'Animált matricák és hangulatjelek automatikus lejátszása';
+  String get autoplayImages =>
+      'Animált matricák és hangulatjelek automatikus lejátszása';
 
   @override
-  String badServerLoginTypesException(String serverVersions, String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'A Matrix-kiszolgáló a következő bejelentkezéseket támogatja:\n$serverVersions\nDe ez az alkalmazást csak ezeket támogatja:\n$supportedVersions';
   }
 
@@ -179,7 +189,13 @@ class L10nHu extends L10n {
   String get sendOnEnter => 'Küldés Enterrel';
 
   @override
-  String badServerVersionsException(String serverVersions, String supportedVersions, Object serverVerions, Object supoortedVersions, Object suportedVersions) {
+  String badServerVersionsException(
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'A Matrix-kiszolgáló ezeket a specifikált verziókat támogatja:\n$serverVersions\nAzonban ez az app csak a következőket: $supportedVersions';
   }
 
@@ -192,7 +208,8 @@ class L10nHu extends L10n {
   String get noMoreChatsFound => 'Nem található több csevegés...';
 
   @override
-  String get noChatsFoundHere => 'Itt még nem található csevegés. Kezdjen egy új csevegést valakivel a lenti gomb segítéségvel. ⤵️';
+  String get noChatsFoundHere =>
+      'Itt még nem található csevegés. Kezdjen egy új csevegést valakivel a lenti gomb segítéségvel. ⤵️';
 
   @override
   String get joinedChats => 'Csatlakozott csevegések';
@@ -329,13 +346,15 @@ class L10nHu extends L10n {
   String get chat => 'Csevegés';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'A csevegés biztonsági mentés beállításra került.';
+  String get yourChatBackupHasBeenSetUp =>
+      'A csevegés biztonsági mentés beállításra került.';
 
   @override
   String get chatBackup => 'Csevegés biztonsági mentés';
 
   @override
-  String get chatBackupDescription => 'A régebbi beszélgetései egy biztonsági kulccsal vannak védve. Bizonyosodjon meg róla, hogy nem veszíti el.';
+  String get chatBackupDescription =>
+      'A régebbi beszélgetései egy biztonsági kulccsal vannak védve. Bizonyosodjon meg róla, hogy nem veszíti el.';
 
   @override
   String get chatDetails => 'Csevegés részletei';
@@ -356,7 +375,8 @@ class L10nHu extends L10n {
   String get close => 'Bezár';
 
   @override
-  String get commandHint_markasdm => 'Szoba megjelölése mint közvetlen csevegő szoba az adott Matrix ID-nél';
+  String get commandHint_markasdm =>
+      'Szoba megjelölése mint közvetlen csevegő szoba az adott Matrix ID-nél';
 
   @override
   String get commandHint_markasgroup => 'Jelölés csoportnak';
@@ -368,13 +388,15 @@ class L10nHu extends L10n {
   String get commandHint_clearcache => 'Gyorsítótár törlése';
 
   @override
-  String get commandHint_create => 'Egy üres csevegő csoport létrehozása\nA --no-encryption paraméterrel feloldhatja a titkosítást';
+  String get commandHint_create =>
+      'Egy üres csevegő csoport létrehozása\nA --no-encryption paraméterrel feloldhatja a titkosítást';
 
   @override
   String get commandHint_discardsession => 'Munkamenet elvetése';
 
   @override
-  String get commandHint_dm => 'Közvetlen csevegés indítása\nA --no-encryption paraméterrel kikapcsolhatja a titkosítást';
+  String get commandHint_dm =>
+      'Közvetlen csevegés indítása\nA --no-encryption paraméterrel kikapcsolhatja a titkosítást';
 
   @override
   String get commandHint_html => 'HTML formázott szöveg küldése';
@@ -395,13 +417,16 @@ class L10nHu extends L10n {
   String get commandHint_me => 'Írja le magát';
 
   @override
-  String get commandHint_myroomavatar => 'Profilképe hozzárendelése a szobához (mxc URI használatával)';
+  String get commandHint_myroomavatar =>
+      'Profilképe hozzárendelése a szobához (mxc URI használatával)';
 
   @override
-  String get commandHint_myroomnick => 'Megjelenített nevének hozzárendelése a szobához';
+  String get commandHint_myroomnick =>
+      'Megjelenített nevének hozzárendelése a szobához';
 
   @override
-  String get commandHint_op => 'Az adott felhasználó hozzáférési szintjének megadása (alapértelmezett: 50)';
+  String get commandHint_op =>
+      'Az adott felhasználó hozzáférési szintjének megadása (alapértelmezett: 50)';
 
   @override
   String get commandHint_plain => 'Formázatlan szöveg küldése';
@@ -413,7 +438,8 @@ class L10nHu extends L10n {
   String get commandHint_send => 'Szöveg küldése';
 
   @override
-  String get commandHint_unban => 'Adott felhasználó kitiltásának feloldása a szobához';
+  String get commandHint_unban =>
+      'Adott felhasználó kitiltásának feloldása a szobához';
 
   @override
   String get commandInvalid => 'Érvénytelen parancs';
@@ -439,7 +465,8 @@ class L10nHu extends L10n {
   String get connect => 'Csatlakozás';
 
   @override
-  String get contactHasBeenInvitedToTheGroup => 'Kapcsolat meghívásra került a csoportba';
+  String get contactHasBeenInvitedToTheGroup =>
+      'Kapcsolat meghívásra került a csoportba';
 
   @override
   String get containsDisplayName => 'Tartalmazza a megjelenített nevet';
@@ -448,7 +475,8 @@ class L10nHu extends L10n {
   String get containsUserName => 'Tartalmazza a felhasználónevet';
 
   @override
-  String get contentHasBeenReported => 'A tartalom jelentésre került a szerver adminisztrátorok számára';
+  String get contentHasBeenReported =>
+      'A tartalom jelentésre került a szerver adminisztrátorok számára';
 
   @override
   String get copiedToClipboard => 'Vágólapra másolva';
@@ -513,10 +541,12 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get deactivateAccountWarning => 'Ez deaktiválja a felhasználói fiókját. Ez nem vonható vissza! Biztos benne?';
+  String get deactivateAccountWarning =>
+      'Ez deaktiválja a felhasználói fiókját. Ez nem vonható vissza! Biztos benne?';
 
   @override
-  String get defaultPermissionLevel => 'Alapértelmezett hozzáférési szint új felhasználóknál';
+  String get defaultPermissionLevel =>
+      'Alapértelmezett hozzáférési szint új felhasználóknál';
 
   @override
   String get delete => 'Törlés';
@@ -573,7 +603,8 @@ class L10nHu extends L10n {
   String get emoteInvalid => 'Érvénytelen hangulatjel rövidkód!';
 
   @override
-  String get emoteKeyboardNoRecents => 'A nemrég használt hangulatjelek fognak itt megjelenni...';
+  String get emoteKeyboardNoRecents =>
+      'A nemrég használt hangulatjelek fognak itt megjelenni...';
 
   @override
   String get emotePacks => 'Hangulatjel csomagok a szobához';
@@ -588,7 +619,8 @@ class L10nHu extends L10n {
   String get accessAndVisibility => 'Hozzáférés és láthatóság';
 
   @override
-  String get accessAndVisibilityDescription => 'Ki számára engedélyezett a csevegéshez való csatlakozás, és hogyan találhatja azt meg.';
+  String get accessAndVisibilityDescription =>
+      'Ki számára engedélyezett a csevegéshez való csatlakozás, és hogyan találhatja azt meg.';
 
   @override
   String get calls => 'Hívások';
@@ -597,25 +629,29 @@ class L10nHu extends L10n {
   String get customEmojisAndStickers => 'Egyedi hangulatjelek és matricák';
 
   @override
-  String get customEmojisAndStickersBody => 'Egyedi hangulatjelek és matricák hozzáadása, amelyek bármely csevegésben felhasználhatóak.';
+  String get customEmojisAndStickersBody =>
+      'Egyedi hangulatjelek és matricák hozzáadása, amelyek bármely csevegésben felhasználhatóak.';
 
   @override
   String get emoteShortcode => 'Hangulatjel rövidkód';
 
   @override
-  String get emoteWarnNeedToPick => 'Ki kell választania egy hangulatjel rövidkódot és egy képet!';
+  String get emoteWarnNeedToPick =>
+      'Ki kell választania egy hangulatjel rövidkódot és egy képet!';
 
   @override
   String get emptyChat => 'Üres csevegés';
 
   @override
-  String get enableEmotesGlobally => 'Hangulatjel csomag engedélyezése globálisan';
+  String get enableEmotesGlobally =>
+      'Hangulatjel csomag engedélyezése globálisan';
 
   @override
   String get enableEncryption => 'Titkosítás engedélyezése';
 
   @override
-  String get enableEncryptionWarning => 'Többé nem fogja tudni kikapcsolni a titkosítást. Biztos benne?';
+  String get enableEncryptionWarning =>
+      'Többé nem fogja tudni kikapcsolni a titkosítást. Biztos benne?';
 
   @override
   String get encrypted => 'Titkosított';
@@ -713,10 +749,12 @@ class L10nHu extends L10n {
   String get hideRedactedMessages => 'Szerkesztett üzenetek elrejtése';
 
   @override
-  String get hideRedactedMessagesBody => 'Ha valaki szerkeszti az üzenetét, ez az üzenet nem jelenik meg a csevegés során.';
+  String get hideRedactedMessagesBody =>
+      'Ha valaki szerkeszti az üzenetét, ez az üzenet nem jelenik meg a csevegés során.';
 
   @override
-  String get hideInvalidOrUnknownMessageFormats => 'Érvénytelen vagy ismeretlen üzenetformátum elrejtése';
+  String get hideInvalidOrUnknownMessageFormats =>
+      'Érvénytelen vagy ismeretlen üzenetformátum elrejtése';
 
   @override
   String get howOffensiveIsThisContent => 'Mennyire sértő ez a tartalom?';
@@ -734,7 +772,8 @@ class L10nHu extends L10n {
   String get blockedUsers => 'Blokkolt felhasználók';
 
   @override
-  String get blockListDescription => 'Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.';
+  String get blockListDescription =>
+      'Az Önt zavaró felhasználókat blokkolhatja. A blokkolt listán található felhasználóktól nem tud fogadni üzenetet vagy szoba meghívást.';
 
   @override
   String get blockUsername => 'Felhasználónév ignorálása';
@@ -743,7 +782,8 @@ class L10nHu extends L10n {
   String get iHaveClickedOnLink => 'Rákattintottam a linkre';
 
   @override
-  String get incorrectPassphraseOrKey => 'Hibás jelmondat vagy visszaállítási kulcs';
+  String get incorrectPassphraseOrKey =>
+      'Hibás jelmondat vagy visszaállítási kulcs';
 
   @override
   String get inoffensive => 'Nem sértő';
@@ -774,7 +814,8 @@ class L10nHu extends L10n {
   String get invited => 'Meghívott';
 
   @override
-  String get redactMessageDescription => 'A társalgásban összes résztvevője számára módosításra kerül az üzenet. Ez nem visszavonható.';
+  String get redactMessageDescription =>
+      'A társalgásban összes résztvevője számára módosításra kerül az üzenet. Ez nem visszavonható.';
 
   @override
   String get optionalRedactReason => '(Választható) A szerkesztés oka...';
@@ -845,19 +886,22 @@ class L10nHu extends L10n {
   String get dehydrate => 'Munkamenet exportálása és az eszköz törlése';
 
   @override
-  String get dehydrateWarning => 'Ez nem visszavonható. Bizonyosodjon meg róla, hogy biztonságos helyre menti a fájlt.';
+  String get dehydrateWarning =>
+      'Ez nem visszavonható. Bizonyosodjon meg róla, hogy biztonságos helyre menti a fájlt.';
 
   @override
   String get dehydrateTor => 'TOR felhasználók: Munkamenet exportálása';
 
   @override
-  String get dehydrateTorLong => 'TOR felhasználóknak ajánlott a munkamenet exportálása az ablak bezárása előtt.';
+  String get dehydrateTorLong =>
+      'TOR felhasználóknak ajánlott a munkamenet exportálása az ablak bezárása előtt.';
 
   @override
   String get hydrateTor => 'TOR felhasználóknak: munkamenet export importálása';
 
   @override
-  String get hydrateTorLong => 'Legutóbb TOR segítségével exportálta korábbi munkamenetét? Gyorsan importálja őket vissza, és folytassa a csevegést.';
+  String get hydrateTorLong =>
+      'Legutóbb TOR segítségével exportálta korábbi munkamenetét? Gyorsan importálja őket vissza, és folytassa a csevegést.';
 
   @override
   String get hydrate => 'Visszaállítás mentett fájlból';
@@ -869,10 +913,12 @@ class L10nHu extends L10n {
   String get loadMore => 'Továbbiak betöltése…';
 
   @override
-  String get locationDisabledNotice => 'A helymeghatározás ki van kapcsolva. Kérem, kapcsolja be, hogy meg tudja osztani helyzetét.';
+  String get locationDisabledNotice =>
+      'A helymeghatározás ki van kapcsolva. Kérem, kapcsolja be, hogy meg tudja osztani helyzetét.';
 
   @override
-  String get locationPermissionDeniedNotice => 'A helymeghatározás visszautasításra került. Kérem engedélyezze, hogy meg tudja osztani helyzetét.';
+  String get locationPermissionDeniedNotice =>
+      'A helymeghatározás visszautasításra került. Kérem engedélyezze, hogy meg tudja osztani helyzetét.';
 
   @override
   String get login => 'Bejelentkezés';
@@ -904,7 +950,8 @@ class L10nHu extends L10n {
   String get muteChat => 'Csevegés némítása';
 
   @override
-  String get needPantalaimonWarning => 'Jelenleg a Pantalaimon szükséges a végpontok közötti titkosítás használatához.';
+  String get needPantalaimonWarning =>
+      'Jelenleg a Pantalaimon szükséges a végpontok közötti titkosítás használatához.';
 
   @override
   String get newChat => 'Új csevegés';
@@ -928,10 +975,12 @@ class L10nHu extends L10n {
   String get noEmotesFound => 'Nem találhatóak hangulatjelek. 😕';
 
   @override
-  String get noEncryptionForPublicRooms => 'Csak akkor kapcsolható be a titkosítás, ha a szoba nem nyilvánosan hozzáférhető.';
+  String get noEncryptionForPublicRooms =>
+      'Csak akkor kapcsolható be a titkosítás, ha a szoba nem nyilvánosan hozzáférhető.';
 
   @override
-  String get noGoogleServicesWarning => 'Úgy tűnik a Firebase Cloud Messaging nem elérhető a készülékén. Ha mégis push értesítéseket kíván kapni, javasoljuk a ntfy telepítését. A ntfy vagy más egyéb Egyesített Push szolgáltató esetében úgy kaphat értesítést, hogy adatai biztonságban maradnak. Letöltheti a ntfy-t a PlayStore-ból, vagy F-Droid-ról is.';
+  String get noGoogleServicesWarning =>
+      'Úgy tűnik a Firebase Cloud Messaging nem elérhető a készülékén. Ha mégis push értesítéseket kíván kapni, javasoljuk a ntfy telepítését. A ntfy vagy más egyéb Egyesített Push szolgáltató esetében úgy kaphat értesítést, hogy adatai biztonságban maradnak. Letöltheti a ntfy-t a PlayStore-ból, vagy F-Droid-ról is.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -948,7 +997,8 @@ class L10nHu extends L10n {
   String get none => 'Nincs';
 
   @override
-  String get noPasswordRecoveryDescription => 'Még nem adott meg semmilyen módszert a jelszava visszaállítására.';
+  String get noPasswordRecoveryDescription =>
+      'Még nem adott meg semmilyen módszert a jelszava visszaállítására.';
 
   @override
   String get noPermission => 'Nincs engedély';
@@ -960,7 +1010,8 @@ class L10nHu extends L10n {
   String get notifications => 'Értesítések';
 
   @override
-  String get notificationsEnabledForThisAccount => 'Értesítések be vannak kapcsolva ebben a fiókban';
+  String get notificationsEnabledForThisAccount =>
+      'Értesítések be vannak kapcsolva ebben a fiókban';
 
   @override
   String numUsersTyping(int count) {
@@ -986,13 +1037,15 @@ class L10nHu extends L10n {
   String get onlineKeyBackupEnabled => 'Online kulcsmentés engedélyezve';
 
   @override
-  String get oopsPushError => 'Hoppá! Sajnos hiba lépett fel a push értesítések beállításakor.';
+  String get oopsPushError =>
+      'Hoppá! Sajnos hiba lépett fel a push értesítések beállításakor.';
 
   @override
   String get oopsSomethingWentWrong => 'Hoppá, valami hiba lépett fel…';
 
   @override
-  String get openAppToReadMessages => 'Alkalmazás megnyitása az üzenetek elolvasásához';
+  String get openAppToReadMessages =>
+      'Alkalmazás megnyitása az üzenetek elolvasásához';
 
   @override
   String get openCamera => 'Kamera megnyitása';
@@ -1007,7 +1060,8 @@ class L10nHu extends L10n {
   String get addAccount => 'Fiók hozzáadása';
 
   @override
-  String get editBundlesForAccount => 'Fiókcsoportok szerkesztése ehhez a fiókhoz';
+  String get editBundlesForAccount =>
+      'Fiókcsoportok szerkesztése ehhez a fiókhoz';
 
   @override
   String get addToBundle => 'Hozzáadás fiókcsoporthoz';
@@ -1028,7 +1082,8 @@ class L10nHu extends L10n {
   String get link => 'Hivatkozás';
 
   @override
-  String get serverRequiresEmail => 'Ehhez a szerverhez szükséges az email címének visszaigazolása.';
+  String get serverRequiresEmail =>
+      'Ehhez a szerverhez szükséges az email címének visszaigazolása.';
 
   @override
   String get or => 'Vagy';
@@ -1049,10 +1104,12 @@ class L10nHu extends L10n {
   String get passwordHasBeenChanged => 'A jelszó módosításra került';
 
   @override
-  String get hideMemberChangesInPublicChats => 'Tag változások elrejtése a publikus csevegésben';
+  String get hideMemberChangesInPublicChats =>
+      'Tag változások elrejtése a publikus csevegésben';
 
   @override
-  String get hideMemberChangesInPublicChatsBody => 'Ne mutassa ha valaki be- vagy kilép a csevegésből az olvashatóság javítása érdekében.';
+  String get hideMemberChangesInPublicChatsBody =>
+      'Ne mutassa ha valaki be- vagy kilép a csevegésből az olvashatóság javítása érdekében.';
 
   @override
   String get overview => 'Áttekintés';
@@ -1087,10 +1144,12 @@ class L10nHu extends L10n {
   String get pleaseChooseAPasscode => 'Kérem, válasszon egy kódot';
 
   @override
-  String get pleaseClickOnLink => 'Kérem, kattintson a linkre az emailben, és folytassa a műveletet.';
+  String get pleaseClickOnLink =>
+      'Kérem, kattintson a linkre az emailben, és folytassa a műveletet.';
 
   @override
-  String get pleaseEnter4Digits => 'Írjon be 4 számjegyet, vagy hagyja üresen a zár kikapcsolásához.';
+  String get pleaseEnter4Digits =>
+      'Írjon be 4 számjegyet, vagy hagyja üresen a zár kikapcsolásához.';
 
   @override
   String get pleaseEnterRecoveryKey => 'Kérem, adja meg a visszaállító kódját:';
@@ -1105,7 +1164,8 @@ class L10nHu extends L10n {
   String get pleaseEnterYourUsername => 'Kérem, adja meg a felhasználónevét';
 
   @override
-  String get pleaseFollowInstructionsOnWeb => 'Kérem, kövesse az instrukciókat az oldalon, és nyomjon a tovább gombra.';
+  String get pleaseFollowInstructionsOnWeb =>
+      'Kérem, kövesse az instrukciókat az oldalon, és nyomjon a tovább gombra.';
 
   @override
   String get privacy => 'Adatvédelem';
@@ -1175,7 +1235,8 @@ class L10nHu extends L10n {
   String get removeYourAvatar => 'Profilképének törlése';
 
   @override
-  String get replaceRoomWithNewerVersion => 'Szoba cserélése egy újabb verzióra';
+  String get replaceRoomWithNewerVersion =>
+      'Szoba cserélése egy újabb verzióra';
 
   @override
   String get reply => 'Válasz';
@@ -1319,7 +1380,8 @@ class L10nHu extends L10n {
   String get presenceStyle => 'Állapot:';
 
   @override
-  String get presencesToggle => 'Más felhasználók állapot üzeneteinek megjelenítése';
+  String get presencesToggle =>
+      'Más felhasználók állapot üzeneteinek megjelenítése';
 
   @override
   String get singlesignon => 'Egyszeri Bejelentkezés';
@@ -1383,7 +1445,8 @@ class L10nHu extends L10n {
   String get toggleUnread => 'Jelölés Olvasottként/Olvasatlanként';
 
   @override
-  String get tooManyRequestsWarning => 'Túl sok egyidejű kérelem. Kérem próbálja meg később!';
+  String get tooManyRequestsWarning =>
+      'Túl sok egyidejű kérelem. Kérem próbálja meg később!';
 
   @override
   String get transferFromAnotherDevice => 'Átvitel másik eszközről';
@@ -1492,13 +1555,16 @@ class L10nHu extends L10n {
   String get voiceMessage => 'Hangüzenet';
 
   @override
-  String get waitingPartnerAcceptRequest => 'Várakozás a partnerre, hogy elfogadja a kérést…';
+  String get waitingPartnerAcceptRequest =>
+      'Várakozás a partnerre, hogy elfogadja a kérést…';
 
   @override
-  String get waitingPartnerEmoji => 'Várakozás a partnerre, hogy elfogadja a hangulatjelet…';
+  String get waitingPartnerEmoji =>
+      'Várakozás a partnerre, hogy elfogadja a hangulatjelet…';
 
   @override
-  String get waitingPartnerNumbers => 'Várakozás a partnerre, hogy elfogadja a számokat…';
+  String get waitingPartnerNumbers =>
+      'Várakozás a partnerre, hogy elfogadja a számokat…';
 
   @override
   String get wallpaper => 'Háttér:';
@@ -1519,10 +1585,12 @@ class L10nHu extends L10n {
   String get whyDoYouWantToReportThis => 'Miért kívánja ezt bejelenteni?';
 
   @override
-  String get wipeChatBackup => 'Le kívánja törölni a chat mentését, hogy létrehozhasson egy új visszaállítási kulcsot?';
+  String get wipeChatBackup =>
+      'Le kívánja törölni a chat mentését, hogy létrehozhasson egy új visszaállítási kulcsot?';
 
   @override
-  String get withTheseAddressesRecoveryDescription => 'Ezekkel a címekkel vissza tudja állítani a jelszavát.';
+  String get withTheseAddressesRecoveryDescription =>
+      'Ezekkel a címekkel vissza tudja állítani a jelszavát.';
 
   @override
   String get writeAMessage => 'Írjon egy üzenetet…';
@@ -1534,7 +1602,8 @@ class L10nHu extends L10n {
   String get you => 'Ön';
 
   @override
-  String get youAreNoLongerParticipatingInThisChat => 'Immáron nem vesz részt ebben a csevegésben';
+  String get youAreNoLongerParticipatingInThisChat =>
+      'Immáron nem vesz részt ebben a csevegésben';
 
   @override
   String get youHaveBeenBannedFromThisChat => 'Kitiltották ebből a csevegésből';
@@ -1561,13 +1630,15 @@ class L10nHu extends L10n {
   String get removeFromSpace => 'Eltávolítás a térről';
 
   @override
-  String get addToSpaceDescription => 'Válassza ki melyik térhez kívánja hozzáadni a csevegést.';
+  String get addToSpaceDescription =>
+      'Válassza ki melyik térhez kívánja hozzáadni a csevegést.';
 
   @override
   String get start => 'Kezdés';
 
   @override
-  String get pleaseEnterRecoveryKeyDescription => 'A régi üzenetei feloldásához adja meg a korábban generált visszaállítási jelszavát. A visszaállítási jelszó NEM EGYEZIK MEG a jelszóval.';
+  String get pleaseEnterRecoveryKeyDescription =>
+      'A régi üzenetei feloldásához adja meg a korábban generált visszaállítási jelszavát. A visszaállítási jelszó NEM EGYEZIK MEG a jelszóval.';
 
   @override
   String get publish => 'Közzététel';
@@ -1598,7 +1669,8 @@ class L10nHu extends L10n {
   String get pinMessage => 'Kitűzés a szobában';
 
   @override
-  String get confirmEventUnpin => 'Biztosan végleg le akarja venni a kitűzött eseményt?';
+  String get confirmEventUnpin =>
+      'Biztosan végleg le akarja venni a kitűzött eseményt?';
 
   @override
   String get emojis => 'Hangulatjelek';
@@ -1613,10 +1685,12 @@ class L10nHu extends L10n {
   String get unsupportedAndroidVersion => 'Nem támogatott Android verzió';
 
   @override
-  String get unsupportedAndroidVersionLong => 'Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.';
+  String get unsupportedAndroidVersionLong =>
+      'Ehhez a funkcióhoz egy újabb Android verzió kell. Kérem ellenőrizze be van e frissítve teljesen készüléke, esetlegesen van e LineageOS támogatás hozzá.';
 
   @override
-  String get videoCallsBetaWarning => 'Kérem vegye figyelembe, hogy a videó hívások jelenleg béta fázisban vannak. Nem biztos, hogy megfelelően fognak működni, vagy egyáltalán elindulnak egyes platformokon.';
+  String get videoCallsBetaWarning =>
+      'Kérem vegye figyelembe, hogy a videó hívások jelenleg béta fázisban vannak. Nem biztos, hogy megfelelően fognak működni, vagy egyáltalán elindulnak egyes platformokon.';
 
   @override
   String get experimentalVideoCalls => 'Kísérleti videó hívások';
@@ -1628,7 +1702,8 @@ class L10nHu extends L10n {
   String get indexedDbErrorTitle => 'Privát mód problémák';
 
   @override
-  String get indexedDbErrorLong => 'Sajnos az üzenet mentés alapból nincs bekapcsolva privát módban.\nKeresse meg a\n - about:config\n - állítsa a dom.indexedDB.privateBrowsing.enabled \"true\"-ra\nMáskülönben nem lehetséges a FluffyChat futtatása.';
+  String get indexedDbErrorLong =>
+      'Sajnos az üzenet mentés alapból nincs bekapcsolva privát módban.\nKeresse meg a\n - about:config\n - állítsa a dom.indexedDB.privateBrowsing.enabled \"true\"-ra\nMáskülönben nem lehetséges a FluffyChat futtatása.';
 
   @override
   String switchToAccount(String number) {
@@ -1739,7 +1814,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get noPublicLinkHasBeenCreatedYet => 'Nyilvános link nem került még létrehozásra';
+  String get noPublicLinkHasBeenCreatedYet =>
+      'Nyilvános link nem került még létrehozásra';
 
   @override
   String get knock => 'Kopogás';
@@ -1751,10 +1827,12 @@ class L10nHu extends L10n {
   String get unlockOldMessages => 'Régi üzenetek feloldása';
 
   @override
-  String get storeInSecureStorageDescription => 'Tárolja a visszaállítási kulcsot az eszköz biztonsági tárjában.';
+  String get storeInSecureStorageDescription =>
+      'Tárolja a visszaállítási kulcsot az eszköz biztonsági tárjában.';
 
   @override
-  String get saveKeyManuallyDescription => 'A kulcs manuális mentése rendszer megosztás vagy vágólap másolás segítségével.';
+  String get saveKeyManuallyDescription =>
+      'A kulcs manuális mentése rendszer megosztás vagy vágólap másolás segítségével.';
 
   @override
   String get storeInAndroidKeystore => 'Tárolás az Android KeyStore-ba';
@@ -1777,7 +1855,8 @@ class L10nHu extends L10n {
   String get custom => 'Egyedi';
 
   @override
-  String get foregroundServiceRunning => 'Ez az értesítés akkor jelenik meg ha az előtéri szolgáltatás fut.';
+  String get foregroundServiceRunning =>
+      'Ez az értesítés akkor jelenik meg ha az előtéri szolgáltatás fut.';
 
   @override
   String get screenSharingTitle => 'képernyő megosztás';
@@ -1792,22 +1871,26 @@ class L10nHu extends L10n {
   String get callingAccount => 'Hívási fiók';
 
   @override
-  String get callingAccountDetails => 'Engedélyezés a FluffyChat számára hogy használja a natív android hívás applikációt.';
+  String get callingAccountDetails =>
+      'Engedélyezés a FluffyChat számára hogy használja a natív android hívás applikációt.';
 
   @override
   String get appearOnTop => 'Megjelenés legfelül';
 
   @override
-  String get appearOnTopDetails => 'Engedélyezi az app számára, hogy mindig legfelül jelenjen meg (nem szükséges, ha a FluffyChat hívó fiókként lett beállítva)';
+  String get appearOnTopDetails =>
+      'Engedélyezi az app számára, hogy mindig legfelül jelenjen meg (nem szükséges, ha a FluffyChat hívó fiókként lett beállítva)';
 
   @override
-  String get otherCallingPermissions => 'Mikrofon, kamera, és más egyéb FluffyChat engedélyek';
+  String get otherCallingPermissions =>
+      'Mikrofon, kamera, és más egyéb FluffyChat engedélyek';
 
   @override
   String get whyIsThisMessageEncrypted => 'Miért olvashatatlan ez az üzenet?';
 
   @override
-  String get noKeyForThisMessage => 'Akkor fordulhat elő, ha az üzenet az eszközre való bejelentkezés előtt került küldésre.\n\nAz is elképzelhető, hogy a küldő blokkolta az eszközét, vagy valami probléma lépett fel az internet kapcsolatban.\n\nMás helyen látja az üzenetet? Akkor át tudja másolni ide is! Menjen a Beállítások > Eszközök részbe, és győződjön meg róla, hogy az eszközei megerősítették egymást. Legközelebb amikor ezt a szobát megnyitja, és mind a két kliens az előtérben van, akkor szikronizálódni fognak.\n\nNem akarja elveszíteni a kulcsokat amikor kijelentkezik, vagy eszközt cserél? Győződjön meg róla, hogy bekapcsolta a chat mentést a beállításokban.';
+  String get noKeyForThisMessage =>
+      'Akkor fordulhat elő, ha az üzenet az eszközre való bejelentkezés előtt került küldésre.\n\nAz is elképzelhető, hogy a küldő blokkolta az eszközét, vagy valami probléma lépett fel az internet kapcsolatban.\n\nMás helyen látja az üzenetet? Akkor át tudja másolni ide is! Menjen a Beállítások > Eszközök részbe, és győződjön meg róla, hogy az eszközei megerősítették egymást. Legközelebb amikor ezt a szobát megnyitja, és mind a két kliens az előtérben van, akkor szikronizálódni fognak.\n\nNem akarja elveszíteni a kulcsokat amikor kijelentkezik, vagy eszközt cserél? Győződjön meg róla, hogy bekapcsolta a chat mentést a beállításokban.';
 
   @override
   String get newGroup => 'Új csoport';
@@ -1830,7 +1913,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get hideUnimportantStateEvents => 'Jelentéktelen esemény státuszok elrejtése';
+  String get hideUnimportantStateEvents =>
+      'Jelentéktelen esemény státuszok elrejtése';
 
   @override
   String get hidePresences => 'El kívánja rejteni a státusz listát?';
@@ -1844,13 +1928,15 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get newSpaceDescription => 'A terek lehetővé teszik a csevegések konszolidációját, ezáltal létrehozva publikus vagy privát közösségeket.';
+  String get newSpaceDescription =>
+      'A terek lehetővé teszik a csevegések konszolidációját, ezáltal létrehozva publikus vagy privát közösségeket.';
 
   @override
   String get encryptThisChat => 'A csevegés titkosítása';
 
   @override
-  String get disableEncryptionWarning => 'Biztonsági okokból nem kapcsolható ki egy korábban bekapcsolt csevegés titkosítás.';
+  String get disableEncryptionWarning =>
+      'Biztonsági okokból nem kapcsolható ki egy korábban bekapcsolt csevegés titkosítás.';
 
   @override
   String get sorryThatsNotPossible => 'Ez sajnos nem lehetséges';
@@ -1862,7 +1948,8 @@ class L10nHu extends L10n {
   String get reopenChat => 'Csevegés újranyitása';
 
   @override
-  String get noBackupWarning => 'Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.';
+  String get noBackupWarning =>
+      'Figyelem! Ha nem kapcsolja be a csevegés mentést, elveszíti a hozzáférést a tikosított üzeneteihez. Erősen ajánlott a csevegés mentés bekapcsolása kijelentkezés előtt.';
 
   @override
   String get noOtherDevicesFound => 'Nem található más eszköz';
@@ -1890,7 +1977,8 @@ class L10nHu extends L10n {
   String get openLinkInBrowser => 'Hivatkozás megnyitása böngészőben';
 
   @override
-  String get reportErrorDescription => '😭 Sajnos, valami félresiklott. Ha kívánja, jelezheti a bugot a fejlesztőknek.';
+  String get reportErrorDescription =>
+      '😭 Sajnos, valami félresiklott. Ha kívánja, jelezheti a bugot a fejlesztőknek.';
 
   @override
   String get report => 'jelentés';
@@ -1899,7 +1987,8 @@ class L10nHu extends L10n {
   String get signInWithPassword => 'Bejelentkezés jelszóval';
 
   @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer => 'Próbálja meg később, vagy válasszon másik szervert.';
+  String get pleaseTryAgainLaterOrChooseDifferentServer =>
+      'Próbálja meg később, vagy válasszon másik szervert.';
 
   @override
   String signInWith(String provider) {
@@ -1907,7 +1996,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get profileNotFound => 'A felhasználó nem található a szerveren. Lehetséges, hogy csatlakozási problémák adódtak, vagy nem létezik a felhasználó.';
+  String get profileNotFound =>
+      'A felhasználó nem található a szerveren. Lehetséges, hogy csatlakozási problémák adódtak, vagy nem létezik a felhasználó.';
 
   @override
   String get setTheme => 'Téma beállítása:';
@@ -1936,25 +2026,32 @@ class L10nHu extends L10n {
   String get pleaseEnterANumber => 'Adjon meg egy 0-nál nagyobb számot';
 
   @override
-  String get archiveRoomDescription => 'A csevegés bekerül az archívumba. Más felhasználók látni fogják, hogy elhagyta a csevegést.';
+  String get archiveRoomDescription =>
+      'A csevegés bekerül az archívumba. Más felhasználók látni fogják, hogy elhagyta a csevegést.';
 
   @override
-  String get roomUpgradeDescription => 'A csevegés újra elkészül az új szoba verzióval. Minden résztvevő értesítést kap, hogy át kell állniuk az új csevegésre. További információkért a szoba verziókról látogasson el a https://spec.matrix.org/latest/rooms/ címre';
+  String get roomUpgradeDescription =>
+      'A csevegés újra elkészül az új szoba verzióval. Minden résztvevő értesítést kap, hogy át kell állniuk az új csevegésre. További információkért a szoba verziókról látogasson el a https://spec.matrix.org/latest/rooms/ címre';
 
   @override
-  String get removeDevicesDescription => 'Ki fog jelentkezni a készülékről, és többé nem fog tudni fogadni üzeneteket.';
+  String get removeDevicesDescription =>
+      'Ki fog jelentkezni a készülékről, és többé nem fog tudni fogadni üzeneteket.';
 
   @override
-  String get banUserDescription => 'A felhasználó kitiltásra kerül a csevegésből, és nem fog tudni visszajönni egészen a kitiltás feloldásáig.';
+  String get banUserDescription =>
+      'A felhasználó kitiltásra kerül a csevegésből, és nem fog tudni visszajönni egészen a kitiltás feloldásáig.';
 
   @override
-  String get unbanUserDescription => 'A felhasználó vissza tud jönni a csevegésbe ha akar.';
+  String get unbanUserDescription =>
+      'A felhasználó vissza tud jönni a csevegésbe ha akar.';
 
   @override
-  String get kickUserDescription => 'A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.';
+  String get kickUserDescription =>
+      'A felhasználó kirúgásra került a csevegésből, de nincs kitiltva. Publikus csevegés esetén a felhasználó bármikor visszatérhet.';
 
   @override
-  String get makeAdminDescription => 'Miután a felhasználót aminisztrátorrá lépteti elő, nem fogja tudni visszavonni döntését, mivel azonos jogosultsági szinttel fognak rendelkezni.';
+  String get makeAdminDescription =>
+      'Miután a felhasználót aminisztrátorrá lépteti elő, nem fogja tudni visszavonni döntését, mivel azonos jogosultsági szinttel fognak rendelkezni.';
 
   @override
   String get pushNotificationsNotAvailable => 'Push értesítések nem elérhetőek';
@@ -1988,13 +2085,16 @@ class L10nHu extends L10n {
   String get groupName => 'Csoport név';
 
   @override
-  String get createGroupAndInviteUsers => 'Hozzon létre egy csoportot és hívjon meg felhasználókat';
+  String get createGroupAndInviteUsers =>
+      'Hozzon létre egy csoportot és hívjon meg felhasználókat';
 
   @override
-  String get groupCanBeFoundViaSearch => 'A csoportokat kereséssel találhatja meg';
+  String get groupCanBeFoundViaSearch =>
+      'A csoportokat kereséssel találhatja meg';
 
   @override
-  String get wrongRecoveryKey => 'Sajnos, úgy tűnik hibásan adta meg a visszaállítási kulcsot.';
+  String get wrongRecoveryKey =>
+      'Sajnos, úgy tűnik hibásan adta meg a visszaállítási kulcsot.';
 
   @override
   String get startConversation => 'Társalgás kezdése';
@@ -2006,7 +2106,8 @@ class L10nHu extends L10n {
   String get databaseMigrationTitle => 'Adatbázis optimalizálva';
 
   @override
-  String get databaseMigrationBody => 'Kérem várjon. Ez igénybe vehet valamennyi időt.';
+  String get databaseMigrationBody =>
+      'Kérem várjon. Ez igénybe vehet valamennyi időt.';
 
   @override
   String get leaveEmptyToClearStatus => 'Hagyja üresen a státusz kitörléséhez.';
@@ -2018,7 +2119,8 @@ class L10nHu extends L10n {
   String get searchForUsers => 'Keressen @felhasználókat...';
 
   @override
-  String get pleaseEnterYourCurrentPassword => 'Kérem adja meg jelenlegi jelszavát';
+  String get pleaseEnterYourCurrentPassword =>
+      'Kérem adja meg jelenlegi jelszavát';
 
   @override
   String get newPassword => 'Új jelszó';
@@ -2108,28 +2210,33 @@ class L10nHu extends L10n {
   String get sendReadReceipts => 'Olvasási igazolás küldése';
 
   @override
-  String get sendTypingNotificationsDescription => 'A csevegés többi tagja látja amikor gépel.';
+  String get sendTypingNotificationsDescription =>
+      'A csevegés többi tagja látja amikor gépel.';
 
   @override
-  String get sendReadReceiptsDescription => 'A csevegés többi tagja láthatja, ha olvasta az üzeneteiket.';
+  String get sendReadReceiptsDescription =>
+      'A csevegés többi tagja láthatja, ha olvasta az üzeneteiket.';
 
   @override
   String get formattedMessages => 'Formázott üzenetek';
 
   @override
-  String get formattedMessagesDescription => 'Formázott szöveg - mint például félkövér - megjelenítése \"markdown\"-al.';
+  String get formattedMessagesDescription =>
+      'Formázott szöveg - mint például félkövér - megjelenítése \"markdown\"-al.';
 
   @override
   String get verifyOtherUser => '🔐 Más felhasználó igazolása';
 
   @override
-  String get verifyOtherUserDescription => 'Ha megerősít egy másik felhasználót, akkor teljesen biztos lehet abban kivel cseveg. 💪\n\nA megerősítési folyamat kezdetekor megjelenik egy felugró ablak mindkettőjüknél. Ekkor egy hangulatjel vagy szám sor összehasonlítási folyamat veszi kezdetét.\n\nA legpraktikusabb módja ennek, hogy találkozzanak, vagy videó hívás során beszéljék meg. 👭';
+  String get verifyOtherUserDescription =>
+      'Ha megerősít egy másik felhasználót, akkor teljesen biztos lehet abban kivel cseveg. 💪\n\nA megerősítési folyamat kezdetekor megjelenik egy felugró ablak mindkettőjüknél. Ekkor egy hangulatjel vagy szám sor összehasonlítási folyamat veszi kezdetét.\n\nA legpraktikusabb módja ennek, hogy találkozzanak, vagy videó hívás során beszéljék meg. 👭';
 
   @override
   String get verifyOtherDevice => '🔐 Más eszköz hitelesítése';
 
   @override
-  String get verifyOtherDeviceDescription => 'Amikor egy másik eszközt hitelesít, az eszközök kulcsokat cserélnek egymás között, ezáltal növelve az összbiztonságot. 💪 Amikor megkezdődik a folyamat, mind a két eszközön megjelenik egy felugró üzenet. Hangulatjelek és számok sorozata fog megjelenni, amit össze tud hasonlítani a két eszközön. Érdemes tehát mind a két eszközt a közelben tartani. 🤳';
+  String get verifyOtherDeviceDescription =>
+      'Amikor egy másik eszközt hitelesít, az eszközök kulcsokat cserélnek egymás között, ezáltal növelve az összbiztonságot. 💪 Amikor megkezdődik a folyamat, mind a két eszközön megjelenik egy felugró üzenet. Hangulatjelek és számok sorozata fog megjelenni, amit össze tud hasonlítani a két eszközön. Érdemes tehát mind a két eszközt a közelben tartani. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
@@ -2185,7 +2292,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get noDatabaseEncryption => 'Adatbázis titkosítás nem támogatott ezen a platformon';
+  String get noDatabaseEncryption =>
+      'Adatbázis titkosítás nem támogatott ezen a platformon';
 
   @override
   String thereAreCountUsersBlocked(Object count) {
@@ -2222,7 +2330,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get changeGeneralChatSettings => 'Általános csevegés beállítások módosítása';
+  String get changeGeneralChatSettings =>
+      'Általános csevegés beállítások módosítása';
 
   @override
   String get inviteOtherUsers => 'Más felhasználók meghívása a csevegésbe';
@@ -2231,19 +2340,23 @@ class L10nHu extends L10n {
   String get changeTheChatPermissions => 'Csevegés engedélyek változtatása';
 
   @override
-  String get changeTheVisibilityOfChatHistory => 'Csevegési előzmények láthatóságának változtatása';
+  String get changeTheVisibilityOfChatHistory =>
+      'Csevegési előzmények láthatóságának változtatása';
 
   @override
-  String get changeTheCanonicalRoomAlias => 'Csevegés fő, nyilvános címének változtatása';
+  String get changeTheCanonicalRoomAlias =>
+      'Csevegés fő, nyilvános címének változtatása';
 
   @override
   String get sendRoomNotifications => '@szoba értesítés küldése';
 
   @override
-  String get changeTheDescriptionOfTheGroup => 'Csevegés leírásának változtatása';
+  String get changeTheDescriptionOfTheGroup =>
+      'Csevegés leírásának változtatása';
 
   @override
-  String get chatPermissionsDescription => 'Adja meg milyen erősségi szint kell egyes csevegési művelethez. A 0, 50 és 100-as szintek általában felhasználókat, moderátorokat és adminisztrátorokat jelölnek de bármilyen szintezés lehetséges.';
+  String get chatPermissionsDescription =>
+      'Adja meg milyen erősségi szint kell egyes csevegési művelethez. A 0, 50 és 100-as szintek általában felhasználókat, moderátorokat és adminisztrátorokat jelölnek de bármilyen szintezés lehetséges.';
 
   @override
   String updateInstalled(String version) {
@@ -2266,10 +2379,12 @@ class L10nHu extends L10n {
   String get whatIsAHomeserver => 'Mi az a Matrix-kiszolgáló?';
 
   @override
-  String get homeserverDescription => 'Az összes adata a Mátrix-kiszolgálón tárolódik, pont mint egy e-mail kiszolgálón. Kiválaszthatja melyik Matrix-kiszolgálót akarja használni, miközben tud kommunikálni mindenkivel. Tudjon meg többet a https://matrix.org címen.';
+  String get homeserverDescription =>
+      'Az összes adata a Mátrix-kiszolgálón tárolódik, pont mint egy e-mail kiszolgálón. Kiválaszthatja melyik Matrix-kiszolgálót akarja használni, miközben tud kommunikálni mindenkivel. Tudjon meg többet a https://matrix.org címen.';
 
   @override
-  String get doesNotSeemToBeAValidHomeserver => 'Nem tűnik kompatibilisnek a Mátrix-kiszolgálónak. Hibás a hivatkozás?';
+  String get doesNotSeemToBeAValidHomeserver =>
+      'Nem tűnik kompatibilisnek a Mátrix-kiszolgálónak. Hibás a hivatkozás?';
 
   @override
   String get calculatingFileSize => 'Fájl méret kalkulálása...';
@@ -2297,16 +2412,19 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get oneOfYourDevicesIsNotVerified => 'Egyik készüléke nem hitelesített';
+  String get oneOfYourDevicesIsNotVerified =>
+      'Egyik készüléke nem hitelesített';
 
   @override
-  String get noticeChatBackupDeviceVerification => 'Megjegyzés: Minden eszköze amit a csevegés mentéshez kapcsol, automatikusan hitelesítésre kerül.';
+  String get noticeChatBackupDeviceVerification =>
+      'Megjegyzés: Minden eszköze amit a csevegés mentéshez kapcsol, automatikusan hitelesítésre kerül.';
 
   @override
   String get continueText => 'Folytatás';
 
   @override
-  String get welcomeText => 'Üdv 👋 Ez a FluffyChat. Bejelentkezhet bármely matrix-kiszolgálóhoz amely kompatibilis a https://matrix.org címmel. Ezután cseveghet bárkivel. Így képez egy óriási decentralizált üzenetküldő hálózatot!';
+  String get welcomeText =>
+      'Üdv 👋 Ez a FluffyChat. Bejelentkezhet bármely matrix-kiszolgálóhoz amely kompatibilis a https://matrix.org címmel. Ezután cseveghet bárkivel. Így képez egy óriási decentralizált üzenetküldő hálózatot!';
 
   @override
   String get blur => 'Homályosít:';
@@ -2321,13 +2439,15 @@ class L10nHu extends L10n {
   String get manageAccount => 'Fiók kezelése';
 
   @override
-  String get noContactInformationProvided => 'A szervertől nem érkezett vissza kapcsolati információ';
+  String get noContactInformationProvided =>
+      'A szervertől nem érkezett vissza kapcsolati információ';
 
   @override
   String get contactServerAdmin => 'Kapcsolatfelvétel a szerver adminnal';
 
   @override
-  String get contactServerSecurity => 'Kapcsolatfelvétel a szerver biztonsággal';
+  String get contactServerSecurity =>
+      'Kapcsolatfelvétel a szerver biztonsággal';
 
   @override
   String get supportPage => 'Támogatási oldal';
@@ -2366,13 +2486,15 @@ class L10nHu extends L10n {
   String get addLink => 'Hivatkozás hozzáadása';
 
   @override
-  String get unableToJoinChat => 'Nem csatlakozhat a csevegéshez. Elképzelhető, hogy a másik fél már kilépett.';
+  String get unableToJoinChat =>
+      'Nem csatlakozhat a csevegéshez. Elképzelhető, hogy a másik fél már kilépett.';
 
   @override
   String get previous => 'Előző';
 
   @override
-  String get otherPartyNotLoggedIn => 'A másik fél jelenleg nincs bejelentkezve, emiatt nem fogadhat üzeneteket!';
+  String get otherPartyNotLoggedIn =>
+      'A másik fél jelenleg nincs bejelentkezve, emiatt nem fogadhat üzeneteket!';
 
   @override
   String appWantsToUseForLogin(String server) {
@@ -2380,7 +2502,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get appWantsToUseForLoginDescription => 'Ezennel engedélyezi az applikáció és weboldal számára, hogy információkat gyűjtsön Önről.';
+  String get appWantsToUseForLoginDescription =>
+      'Ezennel engedélyezi az applikáció és weboldal számára, hogy információkat gyűjtsön Önről.';
 
   @override
   String get open => 'Megnyitás';
@@ -2389,7 +2512,8 @@ class L10nHu extends L10n {
   String get waitingForServer => 'Várakozás a szerverre...';
 
   @override
-  String get appIntroduction => 'A FluffyChat segítségével cseveghet barátaival, akár más üzenetküldő alkalmazásokon keresztül is. Tudjon meg erről többet a https://matrix.org oldalon, vagy nyomjon a \"Folytatás\" gombra.';
+  String get appIntroduction =>
+      'A FluffyChat segítségével cseveghet barátaival, akár más üzenetküldő alkalmazásokon keresztül is. Tudjon meg erről többet a https://matrix.org oldalon, vagy nyomjon a \"Folytatás\" gombra.';
 
   @override
   String get newChatRequest => '📩 Új csevegés kérelem';
@@ -2404,7 +2528,8 @@ class L10nHu extends L10n {
   String get roomNotificationSettings => 'Szoba értesítési beállítások';
 
   @override
-  String get userSpecificNotificationSettings => 'Felhasználó specifikus értesítés beállítások';
+  String get userSpecificNotificationSettings =>
+      'Felhasználó specifikus értesítés beállítások';
 
   @override
   String get otherNotificationSettings => 'Egyéb értesítés beállítások';
@@ -2413,121 +2538,144 @@ class L10nHu extends L10n {
   String get notificationRuleContainsUserName => 'Felhasználó nevet tartalmaz';
 
   @override
-  String get notificationRuleContainsUserNameDescription => 'Értesíti a felhasználót, ha az üzenet tartalmazza a nevét.';
+  String get notificationRuleContainsUserNameDescription =>
+      'Értesíti a felhasználót, ha az üzenet tartalmazza a nevét.';
 
   @override
   String get notificationRuleMaster => 'Minden értesítés némítása';
 
   @override
-  String get notificationRuleMasterDescription => 'Felülír minden más szabályt, és kikapcsolja az összes értesítést.';
+  String get notificationRuleMasterDescription =>
+      'Felülír minden más szabályt, és kikapcsolja az összes értesítést.';
 
   @override
-  String get notificationRuleSuppressNotices => 'Minden automata üzenetet némít';
+  String get notificationRuleSuppressNotices =>
+      'Minden automata üzenetet némít';
 
   @override
-  String get notificationRuleSuppressNoticesDescription => 'Némít minden automata klienstől érkező értesítést mint például botok.';
+  String get notificationRuleSuppressNoticesDescription =>
+      'Némít minden automata klienstől érkező értesítést mint például botok.';
 
   @override
   String get notificationRuleInviteForMe => 'Meghívás Számomra';
 
   @override
-  String get notificationRuleInviteForMeDescription => 'Értesíti a felhasználót szoba meghívás esetén.';
+  String get notificationRuleInviteForMeDescription =>
+      'Értesíti a felhasználót szoba meghívás esetén.';
 
   @override
   String get notificationRuleMemberEvent => 'Tagi Esemény';
 
   @override
-  String get notificationRuleMemberEventDescription => 'Némítja a tagi események értesítéseit.';
+  String get notificationRuleMemberEventDescription =>
+      'Némítja a tagi események értesítéseit.';
 
   @override
   String get notificationRuleIsUserMention => 'Felhasználó Említése';
 
   @override
-  String get notificationRuleIsUserMentionDescription => 'Értesíti a felhasználót, ha közvetlenül említésre kerül az üzenetben.';
+  String get notificationRuleIsUserMentionDescription =>
+      'Értesíti a felhasználót, ha közvetlenül említésre kerül az üzenetben.';
 
   @override
-  String get notificationRuleContainsDisplayName => 'Megjelenített Nevet Tartalmaz';
+  String get notificationRuleContainsDisplayName =>
+      'Megjelenített Nevet Tartalmaz';
 
   @override
-  String get notificationRuleContainsDisplayNameDescription => 'Értesíti a felhasználót, ha közvetlenül említésre kerül a megjelenített neve az üzenetben.';
+  String get notificationRuleContainsDisplayNameDescription =>
+      'Értesíti a felhasználót, ha közvetlenül említésre kerül a megjelenített neve az üzenetben.';
 
   @override
   String get notificationRuleIsRoomMention => 'Szoba Említés';
 
   @override
-  String get notificationRuleIsRoomMentionDescription => 'Értesíti a felhasználót szoba említéskor.';
+  String get notificationRuleIsRoomMentionDescription =>
+      'Értesíti a felhasználót szoba említéskor.';
 
   @override
   String get notificationRuleRoomnotif => 'Szoba Értesítés';
 
   @override
-  String get notificationRuleRoomnotifDescription => 'Értesíti a felhasználót ha az üzenet tartalmazza a \'@szoba\' említést.';
+  String get notificationRuleRoomnotifDescription =>
+      'Értesíti a felhasználót ha az üzenet tartalmazza a \'@szoba\' említést.';
 
   @override
   String get notificationRuleTombstone => 'Sírkő';
 
   @override
-  String get notificationRuleTombstoneDescription => 'Értesíti a felhasználót a szoba deaktiválás üzenetekről.';
+  String get notificationRuleTombstoneDescription =>
+      'Értesíti a felhasználót a szoba deaktiválás üzenetekről.';
 
   @override
   String get notificationRuleReaction => 'Reakció';
 
   @override
-  String get notificationRuleReactionDescription => 'Némítja a reakciók értesítéseit.';
+  String get notificationRuleReactionDescription =>
+      'Némítja a reakciók értesítéseit.';
 
   @override
   String get notificationRuleRoomServerAcl => 'Szoba Szerver ACL';
 
   @override
-  String get notificationRuleRoomServerAclDescription => 'Némítja a szoba szerver hozzáférési kezelő lista (ACL) értesítéseket.';
+  String get notificationRuleRoomServerAclDescription =>
+      'Némítja a szoba szerver hozzáférési kezelő lista (ACL) értesítéseket.';
 
   @override
   String get notificationRuleSuppressEdits => 'Szerkesztések némítása';
 
   @override
-  String get notificationRuleSuppressEditsDescription => 'Némítja a szerkesztett üzenetek értesítéseit.';
+  String get notificationRuleSuppressEditsDescription =>
+      'Némítja a szerkesztett üzenetek értesítéseit.';
 
   @override
   String get notificationRuleCall => 'Hívás';
 
   @override
-  String get notificationRuleCallDescription => 'Értesíti a felhasználót a hívásokról.';
+  String get notificationRuleCallDescription =>
+      'Értesíti a felhasználót a hívásokról.';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOne => 'Titkosított Négyszemközti Szoba';
+  String get notificationRuleEncryptedRoomOneToOne =>
+      'Titkosított Négyszemközti Szoba';
 
   @override
-  String get notificationRuleEncryptedRoomOneToOneDescription => 'Értesíti a felhasználót a titkosított négyszemközti szobákban levő üzenetekről.';
+  String get notificationRuleEncryptedRoomOneToOneDescription =>
+      'Értesíti a felhasználót a titkosított négyszemközti szobákban levő üzenetekről.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Négyszemközti Szoba';
 
   @override
-  String get notificationRuleRoomOneToOneDescription => 'Értesíti a felhasználót a négyszemközti szobában levő üzenetekről.';
+  String get notificationRuleRoomOneToOneDescription =>
+      'Értesíti a felhasználót a négyszemközti szobában levő üzenetekről.';
 
   @override
   String get notificationRuleMessage => 'Üzenet';
 
   @override
-  String get notificationRuleMessageDescription => 'Értesíti a felhasználót az általános üzenetekről.';
+  String get notificationRuleMessageDescription =>
+      'Értesíti a felhasználót az általános üzenetekről.';
 
   @override
   String get notificationRuleEncrypted => 'Titkosított';
 
   @override
-  String get notificationRuleEncryptedDescription => 'Értesíti a felhasználót a titkosított szobákban levő üzenetekről.';
+  String get notificationRuleEncryptedDescription =>
+      'Értesíti a felhasználót a titkosított szobákban levő üzenetekről.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
-  String get notificationRuleJitsiDescription => 'Értesíti a felhasználót a Jitsi widget eseményekről.';
+  String get notificationRuleJitsiDescription =>
+      'Értesíti a felhasználót a Jitsi widget eseményekről.';
 
   @override
   String get notificationRuleServerAcl => 'Némítja a Szerver ACL Eseményeket';
 
   @override
-  String get notificationRuleServerAclDescription => 'Némítja a Szerver ACL események értesítéseit.';
+  String get notificationRuleServerAclDescription =>
+      'Némítja a Szerver ACL események értesítéseit.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2540,7 +2688,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get deletePushRuleCanNotBeUndone => 'Ha törli ezt az értesítési beállítást, később nem vonható vissza.';
+  String get deletePushRuleCanNotBeUndone =>
+      'Ha törli ezt az értesítési beállítást, később nem vonható vissza.';
 
   @override
   String get more => 'Több';
@@ -2549,13 +2698,15 @@ class L10nHu extends L10n {
   String get shareKeysWith => 'Kulcsok megosztása...';
 
   @override
-  String get shareKeysWithDescription => 'Mely eszközök tekinthetőek megbízhatónak, hogy olvashassák a titkosított csevegéseket is?';
+  String get shareKeysWithDescription =>
+      'Mely eszközök tekinthetőek megbízhatónak, hogy olvashassák a titkosított csevegéseket is?';
 
   @override
   String get allDevices => 'Minden eszköz';
 
   @override
-  String get crossVerifiedDevicesIfEnabled => 'Kereszt-hitelesített eszközök ha be van kapcsolva';
+  String get crossVerifiedDevicesIfEnabled =>
+      'Kereszt-hitelesített eszközök ha be van kapcsolva';
 
   @override
   String get crossVerifiedDevices => 'Kereszt-hitelesített eszközök';
@@ -2585,7 +2736,8 @@ class L10nHu extends L10n {
   String get youHaveKnocked => 'Kopogott';
 
   @override
-  String get pleaseWaitUntilInvited => 'Kérem várjon, amíg valaki a szobából behívja Önt.';
+  String get pleaseWaitUntilInvited =>
+      'Kérem várjon, amíg valaki a szobából behívja Önt.';
 
   @override
   String get commandHint_logout => 'Logout your current device';
