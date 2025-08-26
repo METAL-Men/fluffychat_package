@@ -366,7 +366,7 @@ class BackgroundPush {
     Logs().v('Setup firebase');
     if (_fcmToken?.isEmpty ?? true) {
       try {
-        //<GOOGLE_SERVICES>_fcmToken = await firebase.getToken();
+        _fcmToken = await firebase.getToken();
         if (_fcmToken == null) throw ('PushToken is null');
       } catch (e, s) {
         Logs().w('[Push] cannot get token', e, e is String ? null : s);
