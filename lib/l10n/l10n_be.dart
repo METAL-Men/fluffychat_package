@@ -172,11 +172,8 @@ class L10nBe extends L10n {
       'Аўтаматычна прайграваць аніміраваныя стыкеры і эмодзі';
 
   @override
-  String badServerLoginTypesException(
-    String serverVersions,
-    String supportedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerLoginTypesException(String serverVersions,
+      String supportedVersions, Object suportedVersions) {
     return 'Хатні сервер падтрымлівае наступныя метады ўваходу:\n$serverVersions\nАле гэта праграма падтрымлівае толькі:\n$supportedVersions';
   }
 
@@ -191,12 +188,11 @@ class L10nBe extends L10n {
 
   @override
   String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
+      String serverVersions,
+      String supportedVersions,
+      Object serverVerions,
+      Object supoortedVersions,
+      Object suportedVersions) {
     return 'Хатні сервер падтрымлівае наступныя версіі спецыфікацыі:\n$serverVersions\nАле гэьа праграма падтрымлівае толькі:\n$supportedVersions';
   }
 

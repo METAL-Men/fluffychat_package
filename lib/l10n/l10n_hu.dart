@@ -171,11 +171,8 @@ class L10nHu extends L10n {
       'Animált matricák és hangulatjelek automatikus lejátszása';
 
   @override
-  String badServerLoginTypesException(
-    String serverVersions,
-    String supportedVersions,
-    Object suportedVersions,
-  ) {
+  String badServerLoginTypesException(String serverVersions,
+      String supportedVersions, Object suportedVersions) {
     return 'A Matrix-kiszolgáló a következő bejelentkezéseket támogatja:\n$serverVersions\nDe ez az alkalmazást csak ezeket támogatja:\n$supportedVersions';
   }
 
@@ -190,12 +187,11 @@ class L10nHu extends L10n {
 
   @override
   String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
+      String serverVersions,
+      String supportedVersions,
+      Object serverVerions,
+      Object supoortedVersions,
+      Object suportedVersions) {
     return 'A Matrix-kiszolgáló ezeket a specifikált verziókat támogatja:\n$serverVersions\nAzonban ez az app csak a következőket: $supportedVersions';
   }
 
