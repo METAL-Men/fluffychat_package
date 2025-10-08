@@ -1760,32 +1760,32 @@ class L10nNb extends L10n {
 
   @override
   String youInvitedToBy(String alias) {
-    return '📩 You have been invited via link to:\n$alias';
+    return '📩 Du har blitt invitert via lenke til:\n$alias';
   }
 
   @override
   String youInvitedBy(String user) {
-    return '📩 You have been invited by $user';
+    return '📩 Du har blitt invitert av $user';
   }
 
   @override
   String invitedBy(String user) {
-    return '📩 Invited by $user';
+    return '📩 Invitert av $user';
   }
 
   @override
   String youInvitedUser(String user) {
-    return '📩 You invited $user';
+    return '📩 Du inviterte $user';
   }
 
   @override
   String youKicked(String user) {
-    return '👞 You kicked $user';
+    return '👞 You sparket ut $user';
   }
 
   @override
   String youKickedAndBanned(String user) {
-    return '🙅 You kicked and banned $user';
+    return '🙅 Du sparket og stengte ute $user';
   }
 
   @override
@@ -1841,7 +1841,7 @@ class L10nNb extends L10n {
 
   @override
   String countFiles(int count) {
-    return '$count files';
+    return '$count filer';
   }
 
   @override
@@ -1948,20 +1948,20 @@ class L10nNb extends L10n {
       'Warning! Without enabling chat backup, you will lose access to your encrypted messages. It is highly recommended to enable the chat backup first before logging out.';
 
   @override
-  String get noOtherDevicesFound => 'No other devices found';
+  String get noOtherDevicesFound => 'Ingen andre enheter funnet';
 
   @override
   String fileIsTooBigForServer(String max) {
-    return 'Unable to send! The server only supports attachments up to $max.';
+    return 'Kan ikke sende! Serveren støtter bare vedlegg opptil $max.';
   }
 
   @override
   String fileHasBeenSavedAt(String path) {
-    return 'File has been saved at $path';
+    return 'Filen er lagret på $path';
   }
 
   @override
-  String get jumpToLastReadMessage => 'Jump to last read message';
+  String get jumpToLastReadMessage => 'Hopp til sist leste melding';
 
   @override
   String get readUpToHere => 'Read up to here';

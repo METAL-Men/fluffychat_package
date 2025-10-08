@@ -1242,7 +1242,7 @@ class L10nPl extends L10n {
   String get requestPermission => 'Prośba o pozwolenie';
 
   @override
-  String get roomHasBeenUpgraded => 'Pokój zostać zaktualizowany';
+  String get roomHasBeenUpgraded => 'Pokój został zaktualizowany';
 
   @override
   String get roomVersion => 'Wersja pokoju';
@@ -2686,7 +2686,7 @@ class L10nPl extends L10n {
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - $sender';
+    return '🎙️ $duration - Wiadomość głosowa od: $sender';
   }
 
   @override
@@ -2758,5 +2758,5 @@ class L10nPl extends L10n {
   String get moreEvents => 'Więcej zdarzeń';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Odrzuć zaproszenie';
 }

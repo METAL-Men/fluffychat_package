@@ -3108,6 +3108,11 @@ class L10nZhHant extends L10nZh {
   }
 
   @override
+  String countInvited(int count) {
+    return '已邀請$count位';
+  }
+
+  @override
   String get create => '建立';
 
   @override
