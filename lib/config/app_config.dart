@@ -31,7 +31,7 @@ abstract class AppConfig {
   static const String encryptionTutorial =
       'https://fluffy.chat/faq/#how_to_use_end_to_end_encryption';
   static const String startChatTutorial =
-      'https://github.com/krille-chan/fluffychat/wiki/How-to-Find-Users-in-FluffyChat';
+      'https://fluffy.chat/faq/#how_do_i_find_other_users';
   static const String appId = 'men.metal.connect';
   static const String appOpenUrlScheme = 'men.metal';
   static String _webBaseUrl = 'https://connect.metal.men';
@@ -39,8 +39,7 @@ abstract class AppConfig {
   static const String sourceCodeUrl =
       'https://github.com/krille-chan/fluffychat';
   static const String supportUrl = 'https://metal.men/connect-app-help';
-  static const String changelogUrl =
-      'https://github.com/krille-chan/fluffychat/blob/main/CHANGELOG.md';
+  static const String changelogUrl = 'https://fluffy.chat/en/changelog/';
   static final Uri newIssueUrl = Uri(
     scheme: 'https',
     host: 'github.com',
