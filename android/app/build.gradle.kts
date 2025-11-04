@@ -14,6 +14,7 @@ if (file("google-services.json").exists()) {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4") // For flutter_local_notifications // Workaround for: https://github.com/MaikuB/flutter_local_notifications/issues/2286
+    implementation("androidx.core:core-ktx:1.17.0") // For Android Auto
 }
 
 
@@ -35,7 +36,7 @@ configurations.all {
 android {
     namespace = "chat.fluffy.fluffychat"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -70,7 +71,7 @@ android {
 
     defaultConfig {
         applicationId = "chat.fluffy.fluffychat"
-        minSdk = 21
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

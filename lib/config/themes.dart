@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:fluffychat/config/setting_keys.dart';
 import 'app_config.dart';
 
 abstract class FluffyThemes {
@@ -106,6 +107,8 @@ abstract class FluffyThemes {
             isColumnMode ? colorScheme.surfaceContainer.withAlpha(128) : null,
         surfaceTintColor: isColumnMode ? colorScheme.surface : null,
         backgroundColor: isColumnMode ? colorScheme.surface : null,
+        actionsPadding:
+            isColumnMode ? const EdgeInsets.symmetric(horizontal: 16.0) : null,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: brightness.reversed,
@@ -126,8 +129,14 @@ abstract class FluffyThemes {
           ),
         ),
       ),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        strokeCap: StrokeCap.round,
+        color: colorScheme.primary,
+        refreshBackgroundColor: colorScheme.primaryContainer,
+      ),
       snackBarTheme: isColumnMode
           ? const SnackBarThemeData(
+              showCloseIcon: true,
               behavior: SnackBarBehavior.floating,
               width: FluffyThemes.columnWidth * 1.5,
             )

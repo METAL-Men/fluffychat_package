@@ -12,18 +12,14 @@ import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:matrix/matrix.dart';
-import 'package:record/record.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat_view.dart';
 import 'package:fluffychat/pages/chat/event_info_dialog.dart';
-import 'package:fluffychat/pages/chat/recording_dialog.dart';
 import 'package:fluffychat/pages/chat_details/chat_details.dart';
 import 'package:fluffychat/utils/error_reporter.dart';
 import 'package:fluffychat/utils/file_selector.dart';
@@ -226,7 +222,7 @@ class ChatController extends State<ChatPageWithRoom>
   }
 
   void _loadDraft() async {
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = Matrix.of(context).store;
     final draft = prefs.getString('draft_$roomId');
     if (draft != null && draft.isNotEmpty) {
       sendController.text = draft;
@@ -276,7 +272,7 @@ class ChatController extends State<ChatPageWithRoom>
   KeyEventResult _customEnterKeyHandling(FocusNode node, KeyEvent evt) {
     if (!HardwareKeyboard.instance.isShiftPressed &&
         evt.logicalKey.keyLabel == 'Enter' &&
-        (AppConfig.sendOnEnter ?? !PlatformInfos.isMobile)) {
+        AppSettings.sendOnEnter.value) {
       if (evt is KeyDownEvent) {
         send();
       }
@@ -327,7 +323,7 @@ class ChatController extends State<ChatPageWithRoom>
     WidgetsBinding.instance.addPostFrameCallback(_shareItems);
     super.initState();
     _displayChatDetailsColumn = ValueNotifier(
-      AppSettings.displayChatDetailsColumn.getItem(Matrix.of(context).store),
+      AppSettings.displayChatDetailsColumn.value,
     );
 
     sendingClient = Matrix.of(context).client;
@@ -367,7 +363,9 @@ class ChatController extends State<ChatPageWithRoom>
       var readMarkerEventIndex = readMarkerEventId.isEmpty
           ? -1
           : timeline!.events
-              .filterByVisibleInGui(exceptionEventId: readMarkerEventId)
+              .filterByVisibleInGui(
+                exceptionEventId: readMarkerEventId,
+              )
               .indexWhere((e) => e.eventId == readMarkerEventId);
 
       // Read marker is existing but not found in first events. Try a single
@@ -375,7 +373,9 @@ class ChatController extends State<ChatPageWithRoom>
       if (readMarkerEventId.isNotEmpty && readMarkerEventIndex == -1) {
         await timeline?.requestHistory(historyCount: _loadHistoryCount);
         readMarkerEventIndex = timeline!.events
-            .filterByVisibleInGui(exceptionEventId: readMarkerEventId)
+            .filterByVisibleInGui(
+              exceptionEventId: readMarkerEventId,
+            )
             .indexWhere((e) => e.eventId == readMarkerEventId);
       }
 
@@ -494,7 +494,7 @@ class ChatController extends State<ChatPageWithRoom>
     _setReadMarkerFuture = timeline
         .setReadMarker(
       eventId: eventId,
-      public: AppConfig.sendPublicReadReceipts,
+      public: AppSettings.sendPublicReadReceipts.value,
     )
         .then((_) {
       _setReadMarkerFuture = null;
@@ -544,7 +544,7 @@ class ChatController extends State<ChatPageWithRoom>
   Future<void> send() async {
     if (sendController.text.trim().isEmpty) return;
     _storeInputTimeoutTimer?.cancel();
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = Matrix.of(context).store;
     prefs.remove('draft_$roomId');
     var parseCommands = true;
 
@@ -648,31 +648,14 @@ class ChatController extends State<ChatPageWithRoom>
     );
   }
 
-  void voiceMessageAction() async {
-    room.client.getConfig(); // Preload server file configuration.
-
+  Future<void> onVoiceMessageSend(
+    String path,
+    int duration,
+    List<int> waveform,
+    String? fileName,
+  ) async {
     final scaffoldMessenger = ScaffoldMessenger.of(context);
-    if (PlatformInfos.isAndroid) {
-      final info = await DeviceInfoPlugin().androidInfo;
-      if (info.version.sdkInt < 19) {
-        showOkAlertDialog(
-          context: context,
-          title: L10n.of(context).unsupportedAndroidVersion,
-          message: L10n.of(context).unsupportedAndroidVersionLong,
-          okLabel: L10n.of(context).close,
-        );
-        return;
-      }
-    }
-
-    if (await AudioRecorder().hasPermission() == false) return;
-    final result = await showDialog<RecordingResult>(
-      context: context,
-      barrierDismissible: false,
-      builder: (c) => const RecordingDialog(),
-    );
-    if (result == null) return;
-    final audioFile = XFile(result.path);
+    final audioFile = XFile(path);
 
     final bytesResult = await showFutureLoadingDialog(
       context: context,
@@ -683,21 +666,24 @@ class ChatController extends State<ChatPageWithRoom>
 
     final file = MatrixAudioFile(
       bytes: bytes,
-      name: result.fileName ?? audioFile.path,
+      name: fileName ?? audioFile.path,
     );
 
-    await room.sendFileEvent(
+    setState(() {
+      replyEvent = null;
+    });
+    room.sendFileEvent(
       file,
       inReplyTo: replyEvent,
       extraContent: {
         'info': {
           ...file.info,
-          'duration': result.duration,
+          'duration': duration,
         },
         'org.matrix.msc3245.voice': {},
         'org.matrix.msc1767.audio': {
-          'duration': result.duration,
-          'waveform': result.waveform,
+          'duration': duration,
+          'waveform': waveform,
         },
       },
     ).catchError((e) {
@@ -710,9 +696,7 @@ class ChatController extends State<ChatPageWithRoom>
       );
       return null;
     });
-    setState(() {
-      replyEvent = null;
-    });
+    return;
   }
 
   void hideEmojiPicker() {
@@ -852,10 +836,12 @@ class ChatController extends State<ChatPageWithRoom>
         : null;
     if (reasonInput == null) return;
     final reason = reasonInput.isEmpty ? null : reasonInput;
-    for (final event in selectedEvents) {
-      await showFutureLoadingDialog(
-        context: context,
-        future: () async {
+    await showFutureLoadingDialog(
+      context: context,
+      futureWithProgress: (onProgress) async {
+        final count = selectedEvents.length;
+        for (final (i, event) in selectedEvents.indexed) {
+          onProgress(i / count);
           if (event.status.isSent) {
             if (event.canRedact) {
               await event.redactEvent(reason: reason);
@@ -875,9 +861,9 @@ class ChatController extends State<ChatPageWithRoom>
           } else {
             await event.cancelSend();
           }
-        },
-      );
-    }
+        }
+      },
+    );
     setState(() {
       showEmojiPicker = false;
       selectedEvents.clear();
@@ -976,7 +962,9 @@ class ChatController extends State<ChatPageWithRoom>
     final eventIndex = foundEvent == null
         ? -1
         : timeline!.events
-            .filterByVisibleInGui(exceptionEventId: eventId)
+            .filterByVisibleInGui(
+              exceptionEventId: eventId,
+            )
             .indexOf(foundEvent);
 
     if (eventIndex == -1) {
@@ -1219,7 +1207,7 @@ class ChatController extends State<ChatPageWithRoom>
 
     _storeInputTimeoutTimer?.cancel();
     _storeInputTimeoutTimer = Timer(_storeInputTimeout, () async {
-      final prefs = await SharedPreferences.getInstance();
+      final prefs = Matrix.of(context).store;
       await prefs.setString('draft_$roomId', text);
     });
     if (text.endsWith(' ') && Matrix.of(context).hasComplexBundles) {
@@ -1236,7 +1224,7 @@ class ChatController extends State<ChatPageWithRoom>
         }
       }
     }
-    if (AppConfig.sendTypingNotifications) {
+    if (AppSettings.sendTypingNotifications.value) {
       typingCoolDown?.cancel();
       typingCoolDown = Timer(const Duration(seconds: 2), () {
         typingCoolDown = null;
@@ -1323,7 +1311,6 @@ class ChatController extends State<ChatPageWithRoom>
 
   void toggleDisplayChatDetailsColumn() async {
     await AppSettings.displayChatDetailsColumn.setItem(
-      Matrix.of(context).store,
       !_displayChatDetailsColumn.value,
     );
     _displayChatDetailsColumn.value = !_displayChatDetailsColumn.value;

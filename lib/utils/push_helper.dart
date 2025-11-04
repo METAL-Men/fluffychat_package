@@ -8,13 +8,14 @@ import 'package:collection/collection.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_shortcuts_new/flutter_shortcuts_new.dart';
 import 'package:matrix/matrix.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:fluffychat/config/app_config.dart';
+import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/client_download_content_extension.dart';
 import 'package:fluffychat/utils/client_manager.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:fluffychat/utils/notification_background_handler.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 
 const notificationAvatarDimension = 128;
@@ -37,7 +38,7 @@ Future<void> pushHelper(
   } catch (e, s) {
     Logs().e('Push Helper has crashed! Writing into temporary file', e, s);
 
-    l10n ??= await lookupL10n(const Locale('en'));
+    l10n ??= await lookupL10n(PlatformDispatcher.instance.locale);
     flutterLocalNotificationsPlugin.show(
       notification.roomId?.hashCode ?? 0,
       l10n.newMessageInFluffyChat,
@@ -49,7 +50,7 @@ Future<void> pushHelper(
           l10n.incomingMessages,
           number: notification.counts?.unread,
           ticker: l10n.unreadChatsInApp(
-            AppConfig.applicationName,
+            AppSettings.applicationName.value,
             (notification.counts?.unread ?? 0).toString(),
           ),
           importance: Importance.high,
@@ -84,7 +85,7 @@ Future<void> _tryPushHelper(
 
   client ??= (await ClientManager.getClients(
     initialize: false,
-    store: await SharedPreferences.getInstance(),
+    store: await AppSettings.init(),
   ))
       .first;
   final event = await client.getEventByPushNotification(
@@ -277,6 +278,27 @@ Future<void> _tryPushHelper(
     importance: Importance.high,
     priority: Priority.max,
     groupKey: event.room.spaceParents.firstOrNull?.roomId ?? 'rooms',
+    actions: event.type == EventTypes.RoomMember
+        ? null
+        : <AndroidNotificationAction>[
+            AndroidNotificationAction(
+              FluffyChatNotificationActions.reply.name,
+              l10n.reply,
+              inputs: [
+                AndroidNotificationActionInput(
+                  label: l10n.writeAMessage,
+                ),
+              ],
+              cancelNotification: false,
+              allowGeneratedReplies: true,
+              semanticAction: SemanticAction.reply,
+            ),
+            AndroidNotificationAction(
+              FluffyChatNotificationActions.markAsRead.name,
+              l10n.markAsRead,
+              semanticAction: SemanticAction.markAsRead,
+            ),
+          ],
   );
   const iOSPlatformChannelSpecifics = DarwinNotificationDetails();
   final platformChannelSpecifics = NotificationDetails(
@@ -295,9 +317,28 @@ Future<void> _tryPushHelper(
     title,
     body,
     platformChannelSpecifics,
-    payload: event.roomId,
+    payload:
+        FluffyChatPushPayload(client.clientName, event.room.id, event.eventId)
+            .toString(),
   );
   Logs().v('Push helper has been completed!');
+}
+
+class FluffyChatPushPayload {
+  final String? clientName, roomId, eventId;
+
+  FluffyChatPushPayload(this.clientName, this.roomId, this.eventId);
+
+  factory FluffyChatPushPayload.fromString(String payload) {
+    final parts = payload.split('|');
+    if (parts.length != 3) {
+      return FluffyChatPushPayload(null, null, null);
+    }
+    return FluffyChatPushPayload(parts[0], parts[1], parts[2]);
+  }
+
+  @override
+  String toString() => '$clientName|$roomId|$eventId';
 }
 
 /// Creates a shortcut for Android platform but does not block displaying the

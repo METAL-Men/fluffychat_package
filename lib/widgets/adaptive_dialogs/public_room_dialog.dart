@@ -18,7 +18,7 @@ import 'adaptive_dialog_action.dart';
 
 class PublicRoomDialog extends StatelessWidget {
   final String? roomAlias;
-  final PublicRoomsChunk? chunk;
+  final PublishedRoomsChunk? chunk;
   final List<String>? via;
 
   const PublicRoomDialog({super.key, this.roomAlias, this.chunk, this.via});
@@ -30,7 +30,9 @@ class PublicRoomDialog extends StatelessWidget {
     final result = await showFutureLoadingDialog<String>(
       context: context,
       future: () async {
-        if (chunk != null && client.getRoomById(chunk.roomId) != null) {
+        if (chunk != null &&
+            client.getRoomById(chunk.roomId) != null &&
+            client.getRoomById(chunk.roomId)?.membership != Membership.leave) {
           return chunk.roomId;
         }
         final roomId = chunk != null && knock
@@ -64,13 +66,15 @@ class PublicRoomDialog extends StatelessWidget {
     if (chunk?.roomType != 'm.space' &&
         !client.getRoomById(result.result!)!.isSpace) {
       context.go('/rooms/$roomId');
+    } else {
+      context.go('/rooms?spaceId=$roomId');
     }
     return;
   }
 
-  bool _testRoom(PublicRoomsChunk r) => r.canonicalAlias == roomAlias;
+  bool _testRoom(PublishedRoomsChunk r) => r.canonicalAlias == roomAlias;
 
-  Future<PublicRoomsChunk> _search(BuildContext context) async {
+  Future<PublishedRoomsChunk> _search(BuildContext context) async {
     final chunk = this.chunk;
     if (chunk != null) return chunk;
     final query = await Matrix.of(context).client.queryPublicRooms(
@@ -100,7 +104,7 @@ class PublicRoomDialog extends StatelessWidget {
       ),
       content: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 256, maxHeight: 256),
-        child: FutureBuilder<PublicRoomsChunk>(
+        child: FutureBuilder<PublishedRoomsChunk>(
           future: _search(context),
           builder: (context, snapshot) {
             final theme = Theme.of(context);
@@ -210,6 +214,7 @@ class PublicRoomDialog extends StatelessWidget {
       actions: [
         AdaptiveDialogAction(
           bigButtons: true,
+          borderRadius: AdaptiveDialogAction.topRadius,
           onPressed: () => _joinRoom(context),
           child: Text(
             chunk?.joinRule == 'knock' &&
@@ -222,6 +227,7 @@ class PublicRoomDialog extends StatelessWidget {
         ),
         AdaptiveDialogAction(
           bigButtons: true,
+          borderRadius: AdaptiveDialogAction.bottomRadius,
           onPressed: Navigator.of(context).pop,
           child: Text(L10n.of(context).close),
         ),

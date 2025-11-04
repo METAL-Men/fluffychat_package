@@ -20,6 +20,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:isolate';
+import 'dart:ui';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -33,6 +35,7 @@ import 'package:unifiedpush/unifiedpush.dart';
 import 'package:unifiedpush_ui/unifiedpush_ui.dart';
 
 import 'package:fluffychat/l10n/l10n.dart';
+import 'package:fluffychat/utils/notification_background_handler.dart';
 import 'package:fluffychat/utils/push_helper.dart';
 import 'package:fluffychat/widgets/fluffy_chat_app.dart';
 import '../config/app_config.dart';
@@ -104,6 +107,7 @@ class BackgroundPush {
   }
 
   final pendingTests = <String, Completer<void>>{};
+  bool firebaseEnabled = false;
 
   final firebase = FirebaseMessaging.instance;
 
@@ -112,16 +116,65 @@ class BackgroundPush {
   bool upAction = false;
 
   void _init() async {
+    //<GOOGLE_SERVICES>firebaseEnabled = true;
     try {
+      if (PlatformInfos.isAndroid) {
+        final port = ReceivePort();
+        IsolateNameServer.removePortNameMapping('background_tab_port');
+        IsolateNameServer.registerPortWithName(
+          port.sendPort,
+          'background_tab_port',
+        );
+        port.listen(
+          (message) async {
+            try {
+              await notificationTap(
+                NotificationResponseJson.fromJsonString(message),
+                client: client,
+                router: FluffyChatApp.router,
+                l10n: l10n,
+              );
+            } catch (e, s) {
+              Logs().wtf('Main Notification Tap crashed', e, s);
+            }
+          },
+        );
+      }
       await _flutterLocalNotificationsPlugin.initialize(
         const InitializationSettings(
           android: AndroidInitializationSettings('notifications_icon'),
           iOS: DarwinInitializationSettings(),
         ),
-        onDidReceiveNotificationResponse: goToRoom,
+        onDidReceiveNotificationResponse: (response) => notificationTap(
+          response,
+          client: client,
+          router: FluffyChatApp.router,
+          l10n: l10n,
+        ),
+        onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
+      );
+      Logs().v('Flutter Local Notifications initialized');
+      //<GOOGLE_SERVICES>firebase.setListeners(
+      //<GOOGLE_SERVICES>  onMessage: (message) => pushHelper(
+      //<GOOGLE_SERVICES>    PushNotification.fromJson(
+      //<GOOGLE_SERVICES>      Map<String, dynamic>.from(message['data'] ?? message),
+      //<GOOGLE_SERVICES>    ),
+      //<GOOGLE_SERVICES>    client: client,
+      //<GOOGLE_SERVICES>    l10n: l10n,
+      //<GOOGLE_SERVICES>    activeRoomId: matrix?.activeRoomId,
+      //<GOOGLE_SERVICES>    flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
+      //<GOOGLE_SERVICES>  ),
+      //<GOOGLE_SERVICES>);
+      if (Platform.isAndroid) {
+        await UnifiedPush.initialize(
+          onNewEndpoint: _newUpEndpoint,
+          onRegistrationFailed: (_, i) => _upUnregistered(i),
+          onUnregistered: _upUnregistered,
+          onMessage: _onUpMessage,
         );
-    } catch (e) {
-      Logs().e('[Push] Error initializing local notifications', e);
+      }
+    } catch (e, s) {
+      Logs().e('Unable to initialize Flutter local notifications', e, s);
     }
   }
 
@@ -140,23 +193,29 @@ class BackgroundPush {
     FirebaseMessaging.instance.getInitialMessage().then((initialMessage) {
       Logs().v('initialMessage: ${initialMessage?.data}');
       if (initialMessage != null) {
-        goToRoom(
+        notificationTap(
           NotificationResponse(
             notificationResponseType:
                 NotificationResponseType.selectedNotification,
             payload: initialMessage.data['room_id'],
           ),
+          client: client,
+          router: FluffyChatApp.router,
+          l10n: l10n,
         );
       }
     });
     FirebaseMessaging.onMessageOpenedApp.listen((message) {
       Logs().v('onMessageOpenedApp: ${message.data}');
-      goToRoom(
+      notificationTap(
         NotificationResponse(
           notificationResponseType:
               NotificationResponseType.selectedNotification,
           payload: message.data['room_id'],
         ),
+        client: client,
+        router: FluffyChatApp.router,
+        l10n: l10n,
       );
     });
   }
@@ -244,8 +303,7 @@ class BackgroundPush {
           currentPushers.first.lang == 'en' &&
           currentPushers.first.data.url.toString() == gatewayUrl &&
           currentPushers.first.data.format ==
-              AppSettings.pushNotificationsPusherFormat
-                  .getItem(matrix!.store) &&
+              AppSettings.pushNotificationsPusherFormat.value &&
           mapEquals(
             currentPushers.single.data.additionalProperties,
             {"data_message": pusherDataMessageFormat},
@@ -285,8 +343,7 @@ class BackgroundPush {
             lang: 'en',
             data: PusherData(
               url: Uri.parse(gatewayUrl!),
-              format: AppSettings.pushNotificationsPusherFormat
-                  .getItem(matrix!.store),
+              format: AppSettings.pushNotificationsPusherFormat.value,
               additionalProperties: {"data_message": pusherDataMessageFormat},
             ),
             kind: 'http',
@@ -336,7 +393,15 @@ class BackgroundPush {
         return;
       }
       _wentToRoomOnStartup = true;
-      goToRoom(details.notificationResponse);
+      final response = details.notificationResponse;
+      if (response != null) {
+        notificationTap(
+          response,
+          client: client,
+          router: FluffyChatApp.router,
+          l10n: l10n,
+        );
+      }
     });
   }
 
@@ -344,7 +409,7 @@ class BackgroundPush {
     if (matrix == null) {
       return;
     }
-    if ((matrix?.store.getBool(SettingKeys.showNoGoogle) ?? false) == true) {
+    if (!AppSettings.showNoGoogle.value) {
       return;
     }
     await loadLocale();
@@ -375,43 +440,19 @@ class BackgroundPush {
       }
     }
     await setupPusher(
-      gatewayUrl:
-          AppSettings.pushNotificationsGatewayUrl.getItem(matrix!.store),
+      gatewayUrl: AppSettings.pushNotificationsGatewayUrl.value,
       token: _fcmToken,
     );
   }
 
-  Future<void> goToRoom(NotificationResponse? response) async {
-    if (response == null) {
-      Logs().v('[Push] No NotificationResponse');
-      return;
-    }
-    try {
-      final roomId = response?.payload;
-      Logs().v('[Push] Attempting to go to room $roomId...');
-      if (roomId == null) {
-        return;
-      }
-      await client.roomsLoading;
-      await client.accountDataLoading;
-      if (client.getRoomById(roomId) == null) {
-        await client
-            .waitForRoomInSync(roomId)
-            .timeout(const Duration(seconds: 30));
-      }
-      FluffyChatApp.router.go(
-        client.getRoomById(roomId)?.membership == Membership.invite
-            ? '/rooms'
-            : '/rooms/$roomId',
-      );
-    } catch (e, s) {
-      Logs().e('[Push] Failed to open room', e, s);
-    }
-  }
-
   Future<void> setupUp() async {
-    await UnifiedPushUi(matrix!.context, ["default"], UPFunctions())
-        .registerAppWithDialog();
+    await UnifiedPushUi(
+      context: matrix!.context,
+      instances: ["default"],
+      unifiedPushFunctions: UPFunctions(),
+      showNoDistribDialog: false,
+      onNoDistribDialogDismissed: () {}, // TODO: Implement me
+    ).registerAppWithDialog();
   }
 
   Future<void> _newUpEndpoint(PushEndpoint newPushEndpoint, String i) async {
@@ -456,18 +497,18 @@ class BackgroundPush {
       oldTokens: oldTokens,
       useDeviceSpecificAppId: true,
     );
-    await matrix?.store.setString(SettingKeys.unifiedPushEndpoint, newEndpoint);
-    await matrix?.store.setBool(SettingKeys.unifiedPushRegistered, true);
+    await AppSettings.unifiedPushEndpoint.setItem(newEndpoint);
+    await AppSettings.unifiedPushRegistered.setItem(true);
   }
 
   Future<void> _upUnregistered(String i) async {
     upAction = true;
     Logs().i('[Push] Removing UnifiedPush endpoint...');
-    final oldEndpoint =
-        matrix?.store.getString(SettingKeys.unifiedPushEndpoint);
-    await matrix?.store.setBool(SettingKeys.unifiedPushRegistered, false);
-    await matrix?.store.remove(SettingKeys.unifiedPushEndpoint);
-    if (oldEndpoint?.isNotEmpty ?? false) {
+    final oldEndpoint = AppSettings.unifiedPushEndpoint.value;
+    await AppSettings.unifiedPushEndpoint
+        .setItem(AppSettings.unifiedPushEndpoint.defaultValue);
+    await AppSettings.unifiedPushRegistered.setItem(false);
+    if (oldEndpoint.isNotEmpty) {
       // remove the old pusher
       await setupPusher(
         oldTokens: {oldEndpoint},
