@@ -9,7 +9,7 @@ class L10nAr extends L10n {
   L10nAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => '';
+  String get alwaysUse24HourFormat => 'علّم لعرض الوقت بنسق 24 ساعة دائما.‏';
 
   @override
   String get repeatPassword => 'كرّر كلمة السر';
@@ -18,7 +18,7 @@ class L10nAr extends L10n {
   String get notAnImage => 'ليس ملف صورة.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'حدد مستوى صلاحية مخصص';
 
   @override
   String get setPermissionsLevelDescription =>
@@ -2719,4 +2719,51 @@ class L10nAr extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

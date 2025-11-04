@@ -2411,7 +2411,7 @@ class L10nPl extends L10n {
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
-      'Tylko kiedy Twoje urządzenie nie jest zweryfikowane';
+      'Jedno z Twoich urządzeń nie jest zweryfikowane';
 
   @override
   String get noticeChatBackupDeviceVerification =>
@@ -2759,4 +2759,51 @@ class L10nPl extends L10n {
 
   @override
   String get declineInvitation => 'Odrzuć zaproszenie';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

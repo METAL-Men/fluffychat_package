@@ -2240,7 +2240,7 @@ class L10nDe extends L10n {
 
   @override
   String get verifyOtherDeviceDescription =>
-      'Wenn du ein anderes Gerät verifizieren, können diese Geräteschlüssel austauschen, was die Sicherheit insgesamt erhöht. 💪\n\nSobald du eine Verifizierung starten, erscheint ein Pop-up in der App auf beiden Geräten. Dort siehst du dann eine Reihe von Emojis oder Zahlen, die du miteinander vergleichen musst.\n\nAm besten hältst du beide Geräte bereit, bevor du die Verifizierung startest. 🤳';
+      'Wenn du ein anderes Gerät verifizierst, können diese Geräte Schlüssel austauschen, was die Sicherheit insgesamt erhöht. 💪Sobald du eine Verifizierung startest, erscheint ein Pop-up in der App auf beiden Geräten. Dort siehst du dann eine Reihe von Emojis oder Zahlen, die du miteinander vergleichen musst. Am besten hältst du beide Geräte bereit, bevor du die Verifizierung startest. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
@@ -2764,4 +2764,51 @@ class L10nDe extends L10n {
 
   @override
   String get declineInvitation => 'Einladung ablehnen';
+
+  @override
+  String get noMessagesYet => 'Noch keine Nachrichten';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Lange drücken, um eine Sprachnachricht aufzunehmen.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Fortsetzen';
+
+  @override
+  String get newSubSpace => 'Neuer Sub-Space';
+
+  @override
+  String get moveToDifferentSpace => 'In einen anderen space wechseln';
+
+  @override
+  String get moveUp => 'Nach oben';
+
+  @override
+  String get moveDown => 'Nach unten';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'Der Chat wird aus dem Space entfernt, erscheint aber weiterhin in Ihrer Chatliste.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats Chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space-Mitglieder von $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space-Mitglieder von $spaces kann klopfen';
+  }
+
+  @override
+  String get donate => 'Spenden';
 }

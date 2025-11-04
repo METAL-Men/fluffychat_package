@@ -2761,4 +2761,51 @@ class L10nEt extends L10n {
 
   @override
   String get declineInvitation => 'Keeldu kutsest';
+
+  @override
+  String get noMessagesYet => 'Pole veel ühtegi sõnumit';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Pika vajutusega saad salvestada häälsõnumi.';
+
+  @override
+  String get pause => 'Peata';
+
+  @override
+  String get resume => 'Jätka';
+
+  @override
+  String get newSubSpace => 'Uus alamkogukond';
+
+  @override
+  String get moveToDifferentSpace => 'Tõsta teise kogukonda';
+
+  @override
+  String get moveUp => 'Liiguta ülespoole';
+
+  @override
+  String get moveDown => 'Liiguta allapoole';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'See vestlus eemaldatakse nüüd kogukonnast, kuid on jätkuvalt nähtav sinu vestluste loendis.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats vestlust';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Kogukonna liige: $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return '$spaces kogukonna liige võib uksele koputada';
+  }
+
+  @override
+  String get donate => 'Toeta meid rahaliselt';
 }

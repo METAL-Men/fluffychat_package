@@ -18,17 +18,17 @@ class L10nTr extends L10n {
   String get notAnImage => 'Bir resim dosyası değil.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'Özel izin düzeyi ayarla';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      'Lütfen aşağıdan önceden tanımlanmış bir rol seçin veya 0 ile 100 arasında bir özel izin seviyesi girin.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Kullanıcıyı yok say';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => 'Normal kullanıcı';
 
   @override
   String get remove => 'Kaldır';
@@ -104,7 +104,7 @@ class L10nTr extends L10n {
 
   @override
   String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+      'Bu odayı belirtilen oda sürümüne yükseltin';
 
   @override
   String get commandHint_googly => 'Şaşkın gözler gönder';
@@ -488,7 +488,7 @@ class L10nTr extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Kontrol listesi';
 
   @override
   String countParticipants(int count) {
@@ -497,7 +497,7 @@ class L10nTr extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count davet edildi';
   }
 
   @override
@@ -1415,7 +1415,7 @@ class L10nTr extends L10n {
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
-    return ' Synchronizing… ($percentage%)';
+    return ' Senkronize ediliyor… ($percentage%)';
   }
 
   @override
@@ -2746,4 +2746,51 @@ class L10nTr extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

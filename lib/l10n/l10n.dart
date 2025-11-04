@@ -4888,6 +4888,84 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Decline invitation'**
   String get declineInvitation;
+
+  /// No description provided for @noMessagesYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No messages yet'**
+  String get noMessagesYet;
+
+  /// No description provided for @longPressToRecordVoiceMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Long press to record voice message.'**
+  String get longPressToRecordVoiceMessage;
+
+  /// No description provided for @pause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get pause;
+
+  /// No description provided for @resume.
+  ///
+  /// In en, this message translates to:
+  /// **'Resume'**
+  String get resume;
+
+  /// No description provided for @newSubSpace.
+  ///
+  /// In en, this message translates to:
+  /// **'New sub space'**
+  String get newSubSpace;
+
+  /// No description provided for @moveToDifferentSpace.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to different space'**
+  String get moveToDifferentSpace;
+
+  /// No description provided for @moveUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Move up'**
+  String get moveUp;
+
+  /// No description provided for @moveDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Move down'**
+  String get moveDown;
+
+  /// No description provided for @removeFromSpaceDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'The chat will be removed from the space but still appear in your chat list.'**
+  String get removeFromSpaceDescription;
+
+  /// No description provided for @countChats.
+  ///
+  /// In en, this message translates to:
+  /// **'{chats} chats'**
+  String countChats(int chats);
+
+  /// No description provided for @spaceMemberOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Space member of {spaces}'**
+  String spaceMemberOf(String spaces);
+
+  /// No description provided for @spaceMemberOfCanKnock.
+  ///
+  /// In en, this message translates to:
+  /// **'Space member of {spaces} can knock'**
+  String spaceMemberOfCanKnock(String spaces);
+
+  /// No description provided for @donate.
+  ///
+  /// In en, this message translates to:
+  /// **'Donate'**
+  String get donate;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

@@ -9,7 +9,7 @@ class L10nEs extends L10n {
   L10nEs([String locale = 'es']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'falso';
+  String get alwaysUse24HourFormat => 'true';
 
   @override
   String get repeatPassword => 'Repite la contraseña';
@@ -1745,7 +1745,8 @@ class L10nEs extends L10n {
   String get widgetUrlError => 'Esta no es una URL válida.';
 
   @override
-  String get widgetNameError => 'Por favor proporciona un nombre para mostrar.';
+  String get widgetNameError =>
+      'Por favor, proporciona un nombre para mostrar.';
 
   @override
   String get errorAddingWidget => 'Fallo al añadir el widget.';
@@ -2016,13 +2017,13 @@ class L10nEs extends L10n {
   String get setColorTheme => 'Poner tema de color:';
 
   @override
-  String get invite => 'Invitación';
+  String get invite => 'Invitar';
 
   @override
-  String get inviteGroupChat => '📨 Invitar a grupo de chat';
+  String get inviteGroupChat => '📨 Invitar a grupo';
 
   @override
-  String get invitePrivateChat => '📨 Invitar a chat privado';
+  String get invitePrivateChat => '📨 Invitar a grupo privado';
 
   @override
   String get invalidInput => '¡Entrada no válida!';
@@ -2767,4 +2768,51 @@ class L10nEs extends L10n {
 
   @override
   String get declineInvitation => 'Rechazar invitación';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

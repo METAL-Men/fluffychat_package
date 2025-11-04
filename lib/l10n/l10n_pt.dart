@@ -2738,6 +2738,53 @@ class L10nPt extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -2886,7 +2933,7 @@ class L10nPtBr extends L10nPt {
   String get archive => 'Arquivo';
 
   @override
-  String get areGuestsAllowedToJoin => 'Visitantes podem entrar?';
+  String get areGuestsAllowedToJoin => 'Visitantes podem entrar';
 
   @override
   String get areYouSure => 'Tem certeza?';
@@ -3819,7 +3866,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get serverRequiresEmail =>
-      'Este servidor precisa validar seu e-mail para efetuar o registro.';
+      'Este servidor precisa validar seu e-mail para efetuar o cadastro.';
 
   @override
   String get or => 'Ou';
@@ -3942,7 +3989,7 @@ class L10nPtBr extends L10nPt {
   String get redactMessage => 'Apagar mensagem';
 
   @override
-  String get register => 'Registrar';
+  String get register => 'Cadastrar-se';
 
   @override
   String get reject => 'Recusar';
@@ -5468,7 +5515,7 @@ class L10nPtBr extends L10nPt {
   String get recordAVideo => 'Gravar um vídeo';
 
   @override
-  String get optionalMessage => 'Mensagem... (opcional)';
+  String get optionalMessage => '(Opcional) mensagem...';
 
   @override
   String get notSupportedOnThisDevice => 'Não há suporte neste dispositivo';

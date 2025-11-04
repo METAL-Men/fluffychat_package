@@ -9,7 +9,7 @@ class L10nRu extends L10n {
   L10nRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => '';
+  String get alwaysUse24HourFormat => 'true';
 
   @override
   String get repeatPassword => 'Повторите пароль';
@@ -23,13 +23,13 @@ class L10nRu extends L10n {
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      'Выберите одну из стандартных ролей ниже или введите произвольный уровень прав от 0 до 100.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Заглушить пользователя';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => 'Обычный пользователь';
 
   @override
   String get remove => 'Удалить';
@@ -104,8 +104,7 @@ class L10nRu extends L10n {
   String get allChats => 'Все чаты';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+  String get commandHint_roomupgrade => 'Обновить комнату до указанной версии';
 
   @override
   String get commandHint_googly => 'Отправить выпученные глаза';
@@ -123,7 +122,7 @@ class L10nRu extends L10n {
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName улыбнулся(-ась) Вам';
+    return '$senderName улыбнулся(ась) Вам';
   }
 
   @override
@@ -182,7 +181,7 @@ class L10nRu extends L10n {
       'Отправлять уведомления о наборе текста';
 
   @override
-  String get swipeRightToLeftToReply => 'Для ответа проведите с права на лево';
+  String get swipeRightToLeftToReply => 'Для ответа проведите справа налево';
 
   @override
   String get sendOnEnter => 'Отправлять по Enter';
@@ -199,7 +198,7 @@ class L10nRu extends L10n {
 
   @override
   String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats чатов и $participants участников';
+    return '';
   }
 
   @override
@@ -493,7 +492,7 @@ class L10nRu extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Контрольный список';
 
   @override
   String countParticipants(int count) {
@@ -502,7 +501,7 @@ class L10nRu extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '';
   }
 
   @override
@@ -880,7 +879,7 @@ class L10nRu extends L10n {
 
   @override
   String loadCountMoreParticipants(int count) {
-    return 'Загрузить еще $count участника(ов)';
+    return '';
   }
 
   @override
@@ -1295,7 +1294,7 @@ class L10nRu extends L10n {
 
   @override
   String sendImages(int count) {
-    return 'Отправить $count изображений';
+    return '';
   }
 
   @override
@@ -1489,14 +1488,16 @@ class L10nRu extends L10n {
     String _temp0 = intl.Intl.pluralLogic(
       unreadCount,
       locale: localeName,
-      other: '$unreadCount непрочитанных чата(ов)',
+      other: '# непрочитанных чатов',
+      few: '# непрочитанных чата',
+      one: '# непрочитанный чат',
     );
     return '$_temp0';
   }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
-    return '$username и $count других участников печатают…';
+    return '';
   }
 
   @override
@@ -1846,7 +1847,7 @@ class L10nRu extends L10n {
 
   @override
   String countFiles(int count) {
-    return '$count файлов';
+    return '';
   }
 
   @override
@@ -1910,7 +1911,7 @@ class L10nRu extends L10n {
 
   @override
   String numChats(String number) {
-    return '$number чатов';
+    return '';
   }
 
   @override
@@ -2010,17 +2011,17 @@ class L10nRu extends L10n {
   String get invite => 'Пригласить';
 
   @override
-  String get inviteGroupChat => '📨 Пригласить в групповой чат';
+  String get inviteGroupChat => '📨 Вас пригласили в групповой чат';
 
   @override
-  String get invitePrivateChat => '📨 Пригласить в приватный чат';
+  String get invitePrivateChat => '📨 Вас пригласили в приватный чат';
 
   @override
   String get invalidInput => 'Недопустимый ввод!';
 
   @override
   String wrongPinEntered(int seconds) {
-    return 'Введён неверный пин-код! Повторите попытку через $seconds секунд...';
+    return '';
   }
 
   @override
@@ -2289,7 +2290,7 @@ class L10nRu extends L10n {
 
   @override
   String unreadChatsInApp(String appname, String unread) {
-    return '$appname: $unread непрочитанные чаты';
+    return '';
   }
 
   @override
@@ -2298,7 +2299,7 @@ class L10nRu extends L10n {
 
   @override
   String thereAreCountUsersBlocked(Object count) {
-    return 'Сейчас заблокировано $count пользователей.';
+    return '';
   }
 
   @override
@@ -2402,12 +2403,12 @@ class L10nRu extends L10n {
 
   @override
   String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Отправляю... $index $length...';
+    return 'Отправляется вложение $index из $length...';
   }
 
   @override
   String serverLimitReached(int seconds) {
-    return 'Ограничения сервера. Ожидайте$seconds секунд...';
+    return '';
   }
 
   @override
@@ -2537,7 +2538,7 @@ class L10nRu extends L10n {
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Уведомляет пользователя когда сообщение содержит его имя пользователя.';
+      'Уведомляет пользователя, когда сообщение содержит его имя пользователя.';
 
   @override
   String get notificationRuleMaster => 'Отключить все уведомления';
@@ -2559,7 +2560,7 @@ class L10nRu extends L10n {
 
   @override
   String get notificationRuleInviteForMeDescription =>
-      'Notifies the user when they are invited to a room.';
+      'Уведомляет пользователя, когда его приглашают в комнату.';
 
   @override
   String get notificationRuleMemberEvent => 'Member Event';
@@ -2676,7 +2677,7 @@ class L10nRu extends L10n {
 
   @override
   String unknownPushRule(String rule) {
-    return 'Unknown push rule \'$rule\'';
+    return 'Неизвестное правило оповещения \'$rule\'';
   }
 
   @override
@@ -2753,4 +2754,51 @@ class L10nRu extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

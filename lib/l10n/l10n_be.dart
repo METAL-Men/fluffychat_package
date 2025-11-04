@@ -19,11 +19,11 @@ class L10nBe extends L10n {
 
   @override
   String get setCustomPermissionLevel =>
-      'Задайце карыстальніцкі ўзровень дазволу';
+      'Задаць карыстальніцкі ўзровень дазволу';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Калі ласка, выберыце ролю ніжэй альбо ўвядзіце карыстальніцкі ўзровень дазволу паміж 0 і 100.';
+      'Калі ласка, выберыце ролю ніжэй ці ўвядзіце карыстальніцкі ўзровень дазволу паміж 0 і 100.';
 
   @override
   String get ignoreUser => 'Ігнараваць карыстальніка';
@@ -89,13 +89,13 @@ class L10nBe extends L10n {
   String get addChatDescription => 'Дадайце апісанне чату...';
 
   @override
-  String get addToSpace => 'Дадаць прастору';
+  String get addToSpace => 'Дадаць у прастору';
 
   @override
   String get admin => 'Адмін';
 
   @override
-  String get alias => 'займенне';
+  String get alias => 'псеўданім';
 
   @override
   String get all => 'Усё';
@@ -105,20 +105,20 @@ class L10nBe extends L10n {
 
   @override
   String get commandHint_roomupgrade =>
-      'Палепшыце гэты пакой да версіі дадзенага пакою';
+      'Абнавіце гэты пакой да згаданай версіі';
 
   @override
-  String get commandHint_googly => 'Дасылае смешныя вочы';
+  String get commandHint_googly => 'Даслаць смешныя вочы';
 
   @override
-  String get commandHint_cuddle => 'Дасылае ўсмешку';
+  String get commandHint_cuddle => 'Даслаць усмешку';
 
   @override
-  String get commandHint_hug => 'Дасылае абдыманне';
+  String get commandHint_hug => 'Даслаць абдымашкі';
 
   @override
   String googlyEyesContent(String senderName) {
-    return '$senderName даслаў вам смешныя вочы';
+    return '$senderName даслаў(-ла) вам смешныя вочы';
   }
 
   @override
@@ -133,7 +133,7 @@ class L10nBe extends L10n {
 
   @override
   String answeredTheCall(String senderName) {
-    return '$senderName адказаў на выклік';
+    return '$senderName адказаў(-ла) на выклік';
   }
 
   @override
@@ -144,13 +144,14 @@ class L10nBe extends L10n {
 
   @override
   String get appLockDescription =>
-      'Блакіруе праграму, пакуль вы не ўвядзеце пін-код';
+      'Блакіруе праграму, пакуль вы не ўвядзіце пін-код';
 
   @override
   String get archive => 'Архіў';
 
   @override
-  String get areGuestsAllowedToJoin => 'Карыстальнікі-госці могуць далучыцца';
+  String get areGuestsAllowedToJoin =>
+      'Ці дазволена карыстальнікам-гасцям далучыцца';
 
   @override
   String get areYouSure => 'Вы ўпэўнены?';
@@ -160,7 +161,7 @@ class L10nBe extends L10n {
 
   @override
   String get askSSSSSign =>
-      'Каб увайсці як іншы чалавек, калі ласка, увядзіце ключавую фразу ці ключ аднаўлення.';
+      'Каб спраўдзіць іншага чалавека, калі ласка, увядзіце фразу-пароль ці ключ аднаўлення.';
 
   @override
   String askVerificationRequest(String username) {
@@ -193,7 +194,7 @@ class L10nBe extends L10n {
       Object serverVerions,
       Object supoortedVersions,
       Object suportedVersions) {
-    return 'Хатні сервер падтрымлівае наступныя версіі спецыфікацыі:\n$serverVersions\nАле гэьа праграма падтрымлівае толькі:\n$supportedVersions';
+    return 'Хатні сервер падтрымлівае наступныя версіі спецыфікацыі:\n$serverVersions\nАле гэта праграма падтрымлівае толькі:$supportedVersions';
   }
 
   @override
@@ -206,13 +207,13 @@ class L10nBe extends L10n {
 
   @override
   String get noChatsFoundHere =>
-      'Здаецца, тут пуств. Пачніце новы чат з кімсьці праз кнопку ніжэй. ⤵️';
+      'Здаецца, тут пуста. Пачніце новы чат з кімсьці праз кнопку ніжэй. ⤵️';
 
   @override
-  String get joinedChats => 'Чаты, да якіх далучыўся';
+  String get joinedChats => 'Чаты, да якіх вы далучыліся';
 
   @override
-  String get unread => 'Непрачытана';
+  String get unread => 'Непрачытаные';
 
   @override
   String get space => 'Прастора';
@@ -228,7 +229,7 @@ class L10nBe extends L10n {
 
   @override
   String bannedUser(String username, String targetName) {
-    return '$username заюлакіраваў $targetName';
+    return '$username заблакіраваў $targetName';
   }
 
   @override
@@ -238,7 +239,7 @@ class L10nBe extends L10n {
   String get blocked => 'Заблакіравана';
 
   @override
-  String get botMessages => 'Паведамленні бота';
+  String get botMessages => 'Паведамленні ботаў';
 
   @override
   String get cancel => 'Скасаваць';
@@ -313,212 +314,212 @@ class L10nBe extends L10n {
 
   @override
   String changedTheRoomAliases(String username) {
-    return '$username changed the room aliases';
+    return '$username змяніў псеўданімы пакою';
   }
 
   @override
   String changedTheRoomInvitationLink(String username) {
-    return '$username changed the invitation link';
+    return '$username змяніў(-ла) запрашальную спасылку';
   }
 
   @override
-  String get changePassword => 'Change password';
+  String get changePassword => 'Змяніць пароль';
 
   @override
-  String get changeTheHomeserver => 'Change the homeserver';
+  String get changeTheHomeserver => 'Змяніць дамашні сервер';
 
   @override
-  String get changeTheme => 'Change your style';
+  String get changeTheme => 'Змяніць ваш стыль';
 
   @override
-  String get changeTheNameOfTheGroup => 'Change the name of the group';
+  String get changeTheNameOfTheGroup => 'Змяніць назву групы';
 
   @override
-  String get changeYourAvatar => 'Change your avatar';
+  String get changeYourAvatar => 'Змяніць вашу выяву';
 
   @override
-  String get channelCorruptedDecryptError =>
-      'The encryption has been corrupted';
+  String get channelCorruptedDecryptError => 'Шыфраванне было сапсавана';
 
   @override
-  String get chat => 'Chat';
+  String get chat => 'Чат';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Your chat backup has been set up.';
+  String get yourChatBackupHasBeenSetUp =>
+      'Рэзервовае капіраванне чатаў было наладжана.';
 
   @override
-  String get chatBackup => 'Chat backup';
+  String get chatBackup => 'Рэзервовае капіраванне чатаў';
 
   @override
   String get chatBackupDescription =>
-      'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.';
+      'Вашы старыя паведамленні абаронены ключом аднаўлення. Калі ласка, пераканайцеся ў тым, што вы яго не згубіце.';
 
   @override
-  String get chatDetails => 'Chat details';
+  String get chatDetails => 'Дэталі чата';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'Chat has been added to this space';
+  String get chatHasBeenAddedToThisSpace => 'Чат быў дададзены ў гэту прастору';
 
   @override
-  String get chats => 'Chats';
+  String get chats => 'Чаты';
 
   @override
-  String get chooseAStrongPassword => 'Choose a strong password';
+  String get chooseAStrongPassword => 'Стварыце надзейны пароль';
 
   @override
-  String get clearArchive => 'Clear archive';
+  String get clearArchive => 'Ачысціць архіў';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрыць';
 
   @override
   String get commandHint_markasdm =>
-      'Mark as direct message room for the giving Matrix ID';
+      'Пазначыць як пакой асабоных паведамленняў для дадання Matrix ID';
 
   @override
-  String get commandHint_markasgroup => 'Mark as group';
+  String get commandHint_markasgroup => 'Пазначыць як групу';
 
   @override
-  String get commandHint_ban => 'Ban the given user from this room';
+  String get commandHint_ban => 'Заблакіраваць карыстальніка у гэтым пакое';
 
   @override
-  String get commandHint_clearcache => 'Clear cache';
+  String get commandHint_clearcache => 'Ачысціць кэш';
 
   @override
   String get commandHint_create =>
-      'Create an empty group chat\nUse --no-encryption to disable encryption';
+      'Стварыць пусты групавы чат.\nВыкарыстоўвайце --no-encryption каб адключыць шыфраванне';
 
   @override
-  String get commandHint_discardsession => 'Discard session';
+  String get commandHint_discardsession => 'Спыніць сеанс';
 
   @override
   String get commandHint_dm =>
-      'Start a direct chat\nUse --no-encryption to disable encryption';
+      'Пачаць асобны чат.\nВыкарыстоўвайце --no-encryption, каб адключыць шыфраванне';
 
   @override
-  String get commandHint_html => 'Send HTML-formatted text';
+  String get commandHint_html => 'Даслаць тэкст з разметкай HTML';
 
   @override
-  String get commandHint_invite => 'Invite the given user to this room';
+  String get commandHint_invite => 'Запрасіць карыстальніка ў гэты пакой';
 
   @override
-  String get commandHint_join => 'Join the given room';
+  String get commandHint_join => 'Далучыцца да гэтага пакою';
 
   @override
-  String get commandHint_kick => 'Remove the given user from this room';
+  String get commandHint_kick => 'Выдаліць карыстальніка з гэтага пакою';
 
   @override
-  String get commandHint_leave => 'Leave this room';
+  String get commandHint_leave => 'Пакінуць гэты пакой';
 
   @override
-  String get commandHint_me => 'Describe yourself';
+  String get commandHint_me => 'Апішыце сябе';
 
   @override
   String get commandHint_myroomavatar =>
-      'Set your picture for this room (by mxc-uri)';
+      'Задаць выяву гэтага пакою (ад mxc-uri)';
 
   @override
-  String get commandHint_myroomnick => 'Set your display name for this room';
+  String get commandHint_myroomnick =>
+      'Задайце адлюстроўваемае імя для гэтага пакою';
 
   @override
   String get commandHint_op =>
-      'Set the given user\'s power level (default: 50)';
+      'Задайце ўзровень правоў гэтага карыстальніка (па змаўчанні: 50)';
 
   @override
-  String get commandHint_plain => 'Send unformatted text';
+  String get commandHint_plain => 'Даслаць неадфарматыраваны тэкст';
 
   @override
-  String get commandHint_react => 'Send reply as a reaction';
+  String get commandHint_react => 'Даслаць адказ як рэакцыю';
 
   @override
-  String get commandHint_send => 'Send text';
+  String get commandHint_send => 'Даслаць тэкст';
 
   @override
-  String get commandHint_unban => 'Unban the given user from this room';
+  String get commandHint_unban => 'Разблакіраваць карыстальніка ў гэтым пакое';
 
   @override
-  String get commandInvalid => 'Command invalid';
+  String get commandInvalid => 'Няслушная каманда';
 
   @override
   String commandMissing(String command) {
-    return '$command is not a command.';
+    return '$command не каманда.';
   }
 
   @override
-  String get compareEmojiMatch => 'Please compare the emojis';
+  String get compareEmojiMatch => 'Калі ласка, параўнайце эмодзі';
 
   @override
-  String get compareNumbersMatch => 'Please compare the numbers';
+  String get compareNumbersMatch => 'Калі ласка, параўнайце лічбы';
 
   @override
-  String get configureChat => 'Configure chat';
+  String get configureChat => 'Наладзіць чат';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Пацвердзіць';
 
   @override
-  String get connect => 'Connect';
+  String get connect => 'Далучыцца';
 
   @override
-  String get contactHasBeenInvitedToTheGroup =>
-      'Contact has been invited to the group';
+  String get contactHasBeenInvitedToTheGroup => 'Кантакт быў запрошаны ў групу';
 
   @override
-  String get containsDisplayName => 'Contains display name';
+  String get containsDisplayName => 'Мае адлюстроўваемае імя';
 
   @override
-  String get containsUserName => 'Contains username';
+  String get containsUserName => 'Мае імя карыстальніка';
 
   @override
   String get contentHasBeenReported =>
-      'The content has been reported to the server admins';
+      'Пра кантэнт было паведамлена адміністратарам сервера';
 
   @override
-  String get copiedToClipboard => 'Copied to clipboard';
+  String get copiedToClipboard => 'Скапіравана ў буфер';
 
   @override
-  String get copy => 'Copy';
+  String get copy => 'Капіраваць';
 
   @override
-  String get copyToClipboard => 'Copy to clipboard';
+  String get copyToClipboard => 'Скапіраваць у буфер';
 
   @override
   String couldNotDecryptMessage(String error) {
-    return 'Could not decrypt message: $error';
+    return 'Немагчыма расшыфраваць паведамленне: $error';
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Кантрольны спіс';
 
   @override
   String countParticipants(int count) {
-    return '$count participants';
+    return '$count удзельніка(-ў)';
   }
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return 'Запрошана $count';
   }
 
   @override
-  String get create => 'Create';
+  String get create => 'Стварыць';
 
   @override
   String createdTheChat(String username) {
-    return '💬 $username created the chat';
+    return '💬 $username стварыў(-ла) чат';
   }
 
   @override
-  String get createGroup => 'Create group';
+  String get createGroup => 'Стварыць групу';
 
   @override
-  String get createNewSpace => 'New space';
+  String get createNewSpace => 'Новая прастора';
 
   @override
-  String get currentlyActive => 'Currently active';
+  String get currentlyActive => 'Зараз актыўны';
 
   @override
-  String get darkTheme => 'Dark';
+  String get darkTheme => 'Цёмная';
 
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
@@ -527,7 +528,7 @@ class L10nBe extends L10n {
 
   @override
   String dateWithoutYear(String month, String day) {
-    return '$month-$day';
+    return '$day-$month';
   }
 
   @override
@@ -537,2205 +538,2260 @@ class L10nBe extends L10n {
 
   @override
   String get deactivateAccountWarning =>
-      'This will deactivate your user account. This can not be undone! Are you sure?';
+      'Гэта дэактывіруе ваш уліковы запіс. Гэта дзеянне не можа быць адменена! Вы ўпэўнены?';
 
   @override
-  String get defaultPermissionLevel => 'Default permission level for new users';
+  String get defaultPermissionLevel =>
+      'Узровень дазволаў для новых карыстальнікаў па змаўчанні';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Выдаліць';
 
   @override
-  String get deleteAccount => 'Delete account';
+  String get deleteAccount => 'Выдаліць уліковы запіс';
 
   @override
-  String get deleteMessage => 'Delete message';
+  String get deleteMessage => 'Выдаліць паведамленне';
 
   @override
-  String get device => 'Device';
+  String get device => 'Прылада';
 
   @override
-  String get deviceId => 'Device ID';
+  String get deviceId => 'ID прылады';
 
   @override
-  String get devices => 'Devices';
+  String get devices => 'Прылады';
 
   @override
-  String get directChats => 'Direct Chats';
+  String get directChats => 'Асобныя чаты';
 
   @override
-  String get allRooms => 'All Group Chats';
+  String get allRooms => 'Усе групавыя чаты';
 
   @override
-  String get displaynameHasBeenChanged => 'Displayname has been changed';
+  String get displaynameHasBeenChanged => 'Адлюстроўваемае імя было зменена';
 
   @override
-  String get downloadFile => 'Download file';
+  String get downloadFile => 'Спампаваць файл';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Змяніць';
 
   @override
-  String get editBlockedServers => 'Edit blocked servers';
+  String get editBlockedServers => 'Змяніць заблакіраваныя сервера';
 
   @override
-  String get chatPermissions => 'Chat permissions';
+  String get chatPermissions => 'Дазволы чату';
 
   @override
-  String get editDisplayname => 'Edit displayname';
+  String get editDisplayname => 'Змяніць адлюстроўваемае імя';
 
   @override
-  String get editRoomAliases => 'Edit room aliases';
+  String get editRoomAliases => 'Змяніць псеўданімы пакою';
 
   @override
-  String get editRoomAvatar => 'Edit room avatar';
+  String get editRoomAvatar => 'Змяніць выяву пакою';
 
   @override
-  String get emoteExists => 'Emote already exists!';
+  String get emoteExists => 'Эмодзі ўжо існуе!';
 
   @override
-  String get emoteInvalid => 'Invalid emote shortcode!';
+  String get emoteInvalid => 'Недапушчальнае скарачэнне эмодзі!';
 
   @override
-  String get emoteKeyboardNoRecents =>
-      'Recently-used emotes will appear here...';
+  String get emoteKeyboardNoRecents => 'Нядаўна ўжытыя эмодзі паявяцца тут...';
 
   @override
-  String get emotePacks => 'Emote packs for room';
+  String get emotePacks => 'Наборы эмодзі для пакою';
 
   @override
-  String get emoteSettings => 'Emote Settings';
+  String get emoteSettings => 'Налады эмодзі';
 
   @override
-  String get globalChatId => 'Global chat ID';
+  String get globalChatId => 'ID габальнага чату';
 
   @override
-  String get accessAndVisibility => 'Access and visibility';
+  String get accessAndVisibility => 'Даступнасць і бачнасць';
 
   @override
   String get accessAndVisibilityDescription =>
-      'Who is allowed to join this chat and how the chat can be discovered.';
+      'Каму дазволена далучацца да гэтага чату і як ён можа быць знойдзены.';
 
   @override
-  String get calls => 'Calls';
+  String get calls => 'Выклікі';
 
   @override
-  String get customEmojisAndStickers => 'Custom emojis and stickers';
+  String get customEmojisAndStickers => 'Карыстальніцкія эмодзі і стыкеры';
 
   @override
   String get customEmojisAndStickersBody =>
-      'Add or share custom emojis or stickers which can be used in any chat.';
+      'Дадаць ці падзяліцца карыстальніцкімі эмодзі ці стыкерамі, што могуць быць ужыты ў любым чаце.';
 
   @override
-  String get emoteShortcode => 'Emote shortcode';
+  String get emoteShortcode => 'Скарачэнне эмодзі';
 
   @override
   String get emoteWarnNeedToPick =>
-      'You need to pick an emote shortcode and an image!';
+      'Вы павінны задаць скарачэнне эмодзі і выяву!';
 
   @override
-  String get emptyChat => 'Empty chat';
+  String get emptyChat => 'Пусты чат';
 
   @override
-  String get enableEmotesGlobally => 'Enable emote pack globally';
+  String get enableEmotesGlobally => 'Уключыць набор эмодзі глабальна';
 
   @override
-  String get enableEncryption => 'Enable encryption';
+  String get enableEncryption => 'Уключыць шыфраванне';
 
   @override
   String get enableEncryptionWarning =>
-      'You won\'t be able to disable the encryption anymore. Are you sure?';
+      'Вы больш не зможаце адключыць шыфраванне. Вы ўпэўнены?';
 
   @override
-  String get encrypted => 'Encrypted';
+  String get encrypted => 'Зашыфравана';
 
   @override
-  String get encryption => 'Encryption';
+  String get encryption => 'Шыфраванне';
 
   @override
-  String get encryptionNotEnabled => 'Encryption is not enabled';
+  String get encryptionNotEnabled => 'Шыфраванне не ўключана';
 
   @override
   String endedTheCall(String senderName) {
-    return '$senderName ended the call';
+    return '$senderName скончыў выклік';
   }
 
   @override
-  String get enterAnEmailAddress => 'Enter an email address';
+  String get enterAnEmailAddress => 'Увядзіце электроную пошту (email)';
 
   @override
-  String get homeserver => 'Homeserver';
+  String get homeserver => 'Дамашні сервер';
 
   @override
-  String get enterYourHomeserver => 'Enter your homeserver';
+  String get enterYourHomeserver => 'Увядзіце адрас дамашняга сервера';
 
   @override
   String errorObtainingLocation(String error) {
-    return 'Error obtaining location: $error';
+    return 'Памылка атрымання месцазнаходжання: $error';
   }
 
   @override
-  String get everythingReady => 'Everything ready!';
+  String get everythingReady => 'Усё гатова!';
 
   @override
-  String get extremeOffensive => 'Extremely offensive';
+  String get extremeOffensive => 'Занадта абражальны';
 
   @override
-  String get fileName => 'File name';
+  String get fileName => 'Назва файла';
 
   @override
   String get fluffychat => 'FluffyChat';
 
   @override
-  String get fontSize => 'Font size';
+  String get fontSize => 'Памер шрыфту';
 
   @override
-  String get forward => 'Forward';
+  String get forward => 'Пераслаць';
 
   @override
-  String get fromJoining => 'From joining';
+  String get fromJoining => 'З далучэння';
 
   @override
-  String get fromTheInvitation => 'From the invitation';
+  String get fromTheInvitation => 'З запрашэння';
 
   @override
-  String get goToTheNewRoom => 'Go to the new room';
+  String get goToTheNewRoom => 'Перайсці ў новы пакой';
 
   @override
-  String get group => 'Group';
+  String get group => 'Група';
 
   @override
-  String get chatDescription => 'Chat description';
+  String get chatDescription => 'Апісанне чату';
 
   @override
-  String get chatDescriptionHasBeenChanged => 'Chat description changed';
+  String get chatDescriptionHasBeenChanged => 'Апісанне чату зменена';
 
   @override
-  String get groupIsPublic => 'Group is public';
+  String get groupIsPublic => 'Група публічная';
 
   @override
-  String get groups => 'Groups';
+  String get groups => 'Групы';
 
   @override
   String groupWith(String displayname) {
-    return 'Group with $displayname';
+    return 'Групы з $displayname';
   }
 
   @override
-  String get guestsAreForbidden => 'Guests are forbidden';
+  String get guestsAreForbidden => 'Госці забаронены';
 
   @override
-  String get guestsCanJoin => 'Guests can join';
+  String get guestsCanJoin => 'Госці могуць далучацца';
 
   @override
   String hasWithdrawnTheInvitationFor(String username, String targetName) {
-    return '$username has withdrawn the invitation for $targetName';
+    return '$username адазваў запрашэнне для $targetName';
   }
 
   @override
-  String get help => 'Help';
+  String get help => 'Дапамога';
 
   @override
-  String get hideRedactedEvents => 'Hide redacted events';
+  String get hideRedactedEvents => 'Схаваць адрэдагаваныя падзеі';
 
   @override
-  String get hideRedactedMessages => 'Hide redacted messages';
+  String get hideRedactedMessages => 'Схаваць адрэдагаваныя паведамленні';
 
   @override
   String get hideRedactedMessagesBody =>
-      'If someone redacts a message, this message won\'t be visible in the chat anymore.';
+      'Калі хтосьці рэдагуе паведамленне, яно будзе схавана ў чаце.';
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
-      'Hide invalid or unknown message formats';
+      'Хаваць памылковыя ці невядомыя фарматы паведамленняў';
 
   @override
-  String get howOffensiveIsThisContent => 'How offensive is this content?';
+  String get howOffensiveIsThisContent => 'Наколькі абражальны гэты кантэнт?';
 
   @override
   String get id => 'ID';
 
   @override
-  String get identity => 'Identity';
+  String get identity => 'Ідэнтыфікацыя';
 
   @override
-  String get block => 'Block';
+  String get block => 'Заблакіраваць';
 
   @override
-  String get blockedUsers => 'Blocked users';
+  String get blockedUsers => 'Заблакіраваныя карыстальнікі';
 
   @override
   String get blockListDescription =>
-      'You can block users who are disturbing you. You won\'t be able to receive any messages or room invites from the users on your personal block list.';
+      'Вы можаце заблакіраваць карыстальнікаў, якія вам перашкаджаюць. Вы не атрымаеце ад іх ні паведамленняў, ні запрашэнняў.';
 
   @override
-  String get blockUsername => 'Ignore username';
+  String get blockUsername => 'Ігнараваць імя карыстальніка';
 
   @override
-  String get iHaveClickedOnLink => 'I have clicked on the link';
+  String get iHaveClickedOnLink => 'Я перайшоў па спасылцы';
 
   @override
-  String get incorrectPassphraseOrKey => 'Incorrect passphrase or recovery key';
+  String get incorrectPassphraseOrKey =>
+      'Няслушныя фраза-пароль ці ключ аднаўлення';
 
   @override
-  String get inoffensive => 'Inoffensive';
+  String get inoffensive => 'Безабідны';
 
   @override
-  String get inviteContact => 'Invite contact';
+  String get inviteContact => 'Запрасіць кантакт';
 
   @override
   String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Do you want to invite $contact to the chat \"$groupName\"?';
+    return 'Вы хаціце запрасіць $contact да чату \"$groupName\"?';
   }
 
   @override
   String inviteContactToGroup(String groupName) {
-    return 'Invite contact to $groupName';
+    return 'Запрасіць кантакт да $groupName';
   }
 
   @override
-  String get noChatDescriptionYet => 'No chat description created yet.';
+  String get noChatDescriptionYet => 'Апісанне чату яшчэ няма.';
 
   @override
-  String get tryAgain => 'Try again';
+  String get tryAgain => 'Паспрабуйце зноў';
 
   @override
-  String get invalidServerName => 'Invalid server name';
+  String get invalidServerName => 'Недапушчальная назва сервера';
 
   @override
-  String get invited => 'Invited';
+  String get invited => 'Запрошаны';
 
   @override
   String get redactMessageDescription =>
-      'The message will be redacted for all participants in this conversation. This cannot be undone.';
+      'Гэта паведамленне будзе адрэдагавана для усіх карыстальнікаў. Вы не зможаце яго адмяніць.';
 
   @override
   String get optionalRedactReason =>
-      '(Optional) Reason for redacting this message...';
+      '(Неабавязкова) Прычына рэдагавання паведамлення...';
 
   @override
   String invitedUser(String username, String targetName) {
-    return '📩 $username invited $targetName';
+    return '📩 $username запрасіў(-ла) $targetName';
   }
 
   @override
-  String get invitedUsersOnly => 'Invited users only';
+  String get invitedUsersOnly => 'Толькі запрошаныя карыстальнікі';
 
   @override
-  String get inviteForMe => 'Invite for me';
+  String get inviteForMe => 'Запрашэнне для мяне';
 
   @override
   String inviteText(String username, String link) {
-    return '$username invited you to FluffyChat.\n1. Visit fluffychat.im and install the app \n2. Sign up or sign in \n3. Open the invite link: \n $link';
+    return '$username запрасіў вас у FluffyChat.\n1. Перайдзіце на fluffychat.im і ўстанавіце праграму\n2. Зарэгестрыруйцесь альбо ўвайдзіце\n3. Перайдзіце па запрашальнай спасылцы:\n$link';
   }
 
   @override
-  String get isTyping => 'is typing…';
+  String get isTyping => 'піша…';
 
   @override
   String joinedTheChat(String username) {
-    return '👋 $username joined the chat';
+    return '👋 $username далучыўся(лася) да чату';
   }
 
   @override
-  String get joinRoom => 'Join room';
+  String get joinRoom => 'Далучыцца да пакою';
 
   @override
   String kicked(String username, String targetName) {
-    return '👞 $username kicked $targetName';
+    return '👞 $username выгнаў(-ла) $targetName';
   }
 
   @override
   String kickedAndBanned(String username, String targetName) {
-    return '🙅 $username kicked and banned $targetName';
+    return '🙅 $username выгнаў(-ла) і заблакіраваў(-ла) $targetName';
   }
 
   @override
-  String get kickFromChat => 'Kick from chat';
+  String get kickFromChat => 'Выгнаць з чату';
 
   @override
   String lastActiveAgo(String localizedTimeShort) {
-    return 'Last active: $localizedTimeShort';
+    return 'Апошняя актыўнасць: $localizedTimeShort';
   }
 
   @override
-  String get leave => 'Leave';
+  String get leave => 'Выйсці';
 
   @override
-  String get leftTheChat => 'Left the chat';
+  String get leftTheChat => 'Выйсці з чату';
 
   @override
-  String get license => 'License';
+  String get license => 'Ліцэнзія';
 
   @override
-  String get lightTheme => 'Light';
+  String get lightTheme => 'Светлая';
 
   @override
   String loadCountMoreParticipants(int count) {
-    return 'Load $count more participants';
+    return 'Загрузіць яшчэ $count удзельнікаў';
   }
 
   @override
-  String get dehydrate => 'Export session and wipe device';
+  String get dehydrate => 'Экспарт сеансу і ачыстка прылады';
 
   @override
   String get dehydrateWarning =>
-      'This action cannot be undone. Ensure you safely store the backup file.';
+      'Гэта дзеянне не можа быць адменена. Пераканайцеся, што вы бяспечна захавалі файл рэзервовай копіі.';
 
   @override
-  String get dehydrateTor => 'TOR Users: Export session';
+  String get dehydrateTor => 'Карыстальнікі TOR: Экспарт сесіі';
 
   @override
   String get dehydrateTorLong =>
-      'For TOR users, it is recommended to export the session before closing the window.';
+      'Для карыстальнікаў TOR прапануем экспартаваць сесію перад тым, як закрыць акно.';
 
   @override
-  String get hydrateTor => 'TOR Users: Import session export';
+  String get hydrateTor => 'Карыстальнікі TOR: Імпарт экспарту сесіі';
 
   @override
   String get hydrateTorLong =>
-      'Did you export your session last time on TOR? Quickly import it and continue chatting.';
+      'Вы экспартавалі сесію ў мінулы раз праз TOR? Хутка імпартуйце яе і працягніце размовы.';
 
   @override
-  String get hydrate => 'Restore from backup file';
+  String get hydrate => 'Аднавіць з рэзервовай копіі';
 
   @override
-  String get loadingPleaseWait => 'Loading… Please wait.';
+  String get loadingPleaseWait => 'Загрузка... Калі ласка, пачакайце.';
 
   @override
-  String get loadMore => 'Load more…';
+  String get loadMore => 'Загрузіць больш…';
 
   @override
   String get locationDisabledNotice =>
-      'Location services are disabled. Please enable them to be able to share your location.';
+      'Сервісы месцазнаходжанн, адключаны. Калі ласка, уключыце іх, каб зноў дзяліцца месцазнаходжаннем.';
 
   @override
   String get locationPermissionDeniedNotice =>
-      'Location permission denied. Please grant them to be able to share your location.';
+      'Дазвол атрымання месцазнаходжання скасаваны. Калі ласка, дайце яго каб дзяліцца месцазнаходжаннем.';
 
   @override
-  String get login => 'Login';
+  String get login => 'Логін';
 
   @override
   String logInTo(String homeserver) {
-    return 'Log in to $homeserver';
+    return 'Увайсці ў $homeserver';
   }
 
   @override
-  String get logout => 'Logout';
+  String get logout => 'Выйсці';
 
   @override
-  String get memberChanges => 'Member changes';
+  String get memberChanges => 'Змяненні ўдзельнікаў';
 
   @override
-  String get mention => 'Mention';
+  String get mention => 'Згадаць';
 
   @override
-  String get messages => 'Messages';
+  String get messages => 'Паведамленні';
 
   @override
-  String get messagesStyle => 'Messages:';
+  String get messagesStyle => 'Паведамленні:';
 
   @override
-  String get moderator => 'Moderator';
+  String get moderator => 'Мадэратар';
 
   @override
-  String get muteChat => 'Mute chat';
+  String get muteChat => 'Заглушыць чат';
 
   @override
   String get needPantalaimonWarning =>
-      'Please be aware that you need Pantalaimon to use end-to-end encryption for now.';
+      'Пераканайцеся, калі ласка, што вы выкарыстоўваеце Pantalaimon для end-to-end шыфравання.';
 
   @override
-  String get newChat => 'New chat';
+  String get newChat => 'Новы чат';
 
   @override
-  String get newMessageInFluffyChat => '💬 New message in FluffyChat';
+  String get newMessageInFluffyChat => '💬 Новае паведамленне ў FluffyChat';
 
   @override
-  String get newVerificationRequest => 'New verification request!';
+  String get newVerificationRequest => 'Новы запыт на верыфікацыю!';
 
   @override
-  String get next => 'Next';
+  String get next => 'Далей';
 
   @override
-  String get no => 'No';
+  String get no => 'Не';
 
   @override
-  String get noConnectionToTheServer => 'No connection to the server';
+  String get noConnectionToTheServer => 'Няма злучэння з серверам';
 
   @override
-  String get noEmotesFound => 'No emotes found. 😕';
+  String get noEmotesFound => 'Эмодзі не знойдзены. 😕';
 
   @override
   String get noEncryptionForPublicRooms =>
-      'You can only activate encryption as soon as the room is no longer publicly accessible.';
+      'Вы зможаце актывіраваць шыфраванне як толькі пакой перастане быць агульнадаступным.';
 
   @override
   String get noGoogleServicesWarning =>
-      'Firebase Cloud Messaging doesn\'t appear to be available on your device. To still receive push notifications, we recommend installing ntfy. With ntfy or another Unified Push provider you can receive push notifications in a data secure way. You can download ntfy from the PlayStore or from F-Droid.';
+      'Здаецца, на вашай прыладзе няма ці недаступны Firebase Cloud Messaging. Каб далей атрымліваць паведамленні, мы прапануем усталяваць ntfy ці іншы правайдар паведамленняў, каб атрымліваць іх бяспечна. Вы можаце спампаваць ntfy з PlayStore ці F-Droid.';
 
   @override
   String noMatrixServer(String server1, String server2) {
-    return '$server1 is no matrix server, use $server2 instead?';
+    return '$server1 не з\'яўляецца серверам matrix. Выкарыстоўваць $server2 замест яго?';
   }
 
   @override
-  String get shareInviteLink => 'Share invite link';
+  String get shareInviteLink => 'Падзяліцца запрашальнай спасылкай';
 
   @override
-  String get scanQrCode => 'Scan QR code';
+  String get scanQrCode => 'Сканіраваць QR-код';
 
   @override
-  String get none => 'None';
+  String get none => 'Нічога';
 
   @override
   String get noPasswordRecoveryDescription =>
-      'You have not added a way to recover your password yet.';
+      'Вы яшчэ не дадалі метад аднаўлення пароля.';
 
   @override
-  String get noPermission => 'No permission';
+  String get noPermission => 'Няма дазволу';
 
   @override
-  String get noRoomsFound => 'No rooms found…';
+  String get noRoomsFound => 'Пакоі не знойдзены…';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Паведамленні';
 
   @override
   String get notificationsEnabledForThisAccount =>
-      'Notifications enabled for this account';
+      'Паведамленні ўклбчаны для гжтага ўліковага запісу';
 
   @override
   String numUsersTyping(int count) {
-    return '$count users are typing…';
+    return '$count карыстальнікаў пішуць…';
   }
 
   @override
-  String get obtainingLocation => 'Obtaining location…';
+  String get obtainingLocation => 'Атрыманне месцазнаходжання…';
 
   @override
-  String get offensive => 'Offensive';
+  String get offensive => 'Абражальна';
 
   @override
-  String get offline => 'Offline';
+  String get offline => 'Не ў сетцы';
 
   @override
-  String get ok => 'Ok';
+  String get ok => 'Ок';
 
   @override
-  String get online => 'Online';
+  String get online => 'У сетцы';
 
   @override
-  String get onlineKeyBackupEnabled => 'Online Key Backup is enabled';
+  String get onlineKeyBackupEnabled => 'Рэзервовае капіраванне ключэй уключана';
 
   @override
   String get oopsPushError =>
-      'Oops! Unfortunately, an error occurred when setting up the push notifications.';
+      'Упс! На жаль, пры наладжванні пуш-паведамленняў, адбылася памылка.';
 
   @override
-  String get oopsSomethingWentWrong => 'Oops, something went wrong…';
+  String get oopsSomethingWentWrong => 'Упс, штосьці пайшло не так…';
 
   @override
-  String get openAppToReadMessages => 'Open app to read messages';
+  String get openAppToReadMessages =>
+      'Адкройце праграму, каб прачытаць паведамленні';
 
   @override
-  String get openCamera => 'Open camera';
+  String get openCamera => 'Адкрыць камеру';
 
   @override
-  String get openVideoCamera => 'Open camera for a video';
+  String get openVideoCamera => 'Адкрыць камеру для відэа';
 
   @override
-  String get oneClientLoggedOut => 'One of your clients has been logged out';
+  String get oneClientLoggedOut => 'Адзін з вашых кліентаў выйшаў';
 
   @override
-  String get addAccount => 'Add account';
+  String get addAccount => 'Дадаць уліковы запіс';
 
   @override
-  String get editBundlesForAccount => 'Edit bundles for this account';
+  String get editBundlesForAccount =>
+      'Змяніць пакеты для гэтага ўліковага запісу';
 
   @override
-  String get addToBundle => 'Add to bundle';
+  String get addToBundle => 'Дадаць у пакет';
 
   @override
-  String get removeFromBundle => 'Remove from this bundle';
+  String get removeFromBundle => 'Выдаліць з пакета';
 
   @override
-  String get bundleName => 'Bundle name';
+  String get bundleName => 'Назва пакета';
 
   @override
   String get enableMultiAccounts =>
-      '(BETA) Enable multi accounts on this device';
+      '(БЭТА) Уключыць некалькі ўліковых запісаў на гэтай прыладзе';
 
   @override
-  String get openInMaps => 'Open in maps';
+  String get openInMaps => 'Адкрыць на картах';
 
   @override
-  String get link => 'Link';
+  String get link => 'Спасылка';
 
   @override
   String get serverRequiresEmail =>
-      'This server needs to validate your email address for registration.';
+      'Гэты сервер павінен спраўдзіць ваш email для рэгістрацыі.';
 
   @override
-  String get or => 'Or';
+  String get or => 'Ці';
 
   @override
-  String get participant => 'Participant';
+  String get participant => 'Удзельнік';
 
   @override
-  String get passphraseOrKey => 'passphrase or recovery key';
+  String get passphraseOrKey => 'фраза-пароль ці ключ аднаўлення';
 
   @override
-  String get password => 'Password';
+  String get password => 'Пароль';
 
   @override
-  String get passwordForgotten => 'Password forgotten';
+  String get passwordForgotten => 'Не памятаю пароль';
 
   @override
-  String get passwordHasBeenChanged => 'Password has been changed';
+  String get passwordHasBeenChanged => 'Пароль быў зменены';
 
   @override
   String get hideMemberChangesInPublicChats =>
-      'Hide member changes in public chats';
+      'Хаваць змяненні ўдзельнікаў у публічных чатах';
 
   @override
   String get hideMemberChangesInPublicChatsBody =>
-      'Do not show in the chat timeline if someone joins or leaves a public chat to improve readability.';
+      'Не паказваць далучэнні і выхады з чату ў шкале часу для лепшай чытальнасці.';
 
   @override
-  String get overview => 'Overview';
+  String get overview => 'Агляд';
 
   @override
-  String get notifyMeFor => 'Notify me for';
+  String get notifyMeFor => 'Паведамляць мяне пра';
 
   @override
-  String get passwordRecoverySettings => 'Password recovery settings';
+  String get passwordRecoverySettings => 'Налады скіду пароля';
 
   @override
-  String get passwordRecovery => 'Password recovery';
+  String get passwordRecovery => 'Аднаўленне пароля';
 
   @override
-  String get people => 'People';
+  String get people => 'Людзі';
 
   @override
-  String get pickImage => 'Pick an image';
+  String get pickImage => 'Абраць выяву';
 
   @override
-  String get pin => 'Pin';
+  String get pin => 'Замацаваць';
 
   @override
   String play(String fileName) {
-    return 'Play $fileName';
+    return 'Прайграць $fileName';
   }
 
   @override
-  String get pleaseChoose => 'Please choose';
+  String get pleaseChoose => 'Калі ласка, выберыце';
 
   @override
-  String get pleaseChooseAPasscode => 'Please choose a pass code';
+  String get pleaseChooseAPasscode => 'Калі ласка, выберыце код доступу';
 
   @override
   String get pleaseClickOnLink =>
-      'Please click on the link in the email and then proceed.';
+      'Калі ласка, націсніце на спасылку ў лісце на email, каб працягнуць.';
 
   @override
   String get pleaseEnter4Digits =>
-      'Please enter 4 digits or leave empty to disable app lock.';
+      'Калі ласка, увядзіце 4 лічбы ці пакіньце пустым, каб адключыць код-пароль.';
 
   @override
-  String get pleaseEnterRecoveryKey => 'Please enter your recovery key:';
+  String get pleaseEnterRecoveryKey => 'Увядзіце ключ аднаўлення:';
 
   @override
-  String get pleaseEnterYourPassword => 'Please enter your password';
+  String get pleaseEnterYourPassword => 'Калі ласка, увядзіце ваш пароль';
 
   @override
-  String get pleaseEnterYourPin => 'Please enter your pin';
+  String get pleaseEnterYourPin => 'Калі ласка, увядзіце пін-код';
 
   @override
-  String get pleaseEnterYourUsername => 'Please enter your username';
+  String get pleaseEnterYourUsername =>
+      'Калі ласка, увядзіце імя карыстальніка';
 
   @override
   String get pleaseFollowInstructionsOnWeb =>
-      'Please follow the instructions on the website and tap on next.';
+      'Калі ласка, сачыце за інстуркцыямі ў браўзеры і націсніце \"Далей\".';
 
   @override
-  String get privacy => 'Privacy';
+  String get privacy => 'Прыватнасць';
 
   @override
-  String get publicRooms => 'Public Rooms';
+  String get publicRooms => 'Публічныя пакоі';
 
   @override
-  String get pushRules => 'Push rules';
+  String get pushRules => 'Правілы пушэй';
 
   @override
-  String get reason => 'Reason';
+  String get reason => 'Прычына';
 
   @override
-  String get recording => 'Recording';
+  String get recording => 'Запіс';
 
   @override
   String redactedBy(String username) {
-    return 'Redacted by $username';
+    return 'Адрэдагавана $username';
   }
 
   @override
-  String get directChat => 'Direct chat';
+  String get directChat => 'Асобны чат';
 
   @override
   String redactedByBecause(String username, String reason) {
-    return 'Redacted by $username because: \"$reason\"';
+    return 'Адрэдагавана $username, прычына: \"$reason\"';
   }
 
   @override
   String redactedAnEvent(String username) {
-    return '$username redacted an event';
+    return '$username адрэдагаваў(-ла) падзею';
   }
 
   @override
-  String get redactMessage => 'Redact message';
+  String get redactMessage => 'Адрэдагаваць паведамленне';
 
   @override
-  String get register => 'Register';
+  String get register => 'Зарэгістравацца';
 
   @override
-  String get reject => 'Reject';
+  String get reject => 'Адмовіць';
 
   @override
   String rejectedTheInvitation(String username) {
-    return '$username rejected the invitation';
+    return '$username адмовіў запрашэнне';
   }
 
   @override
-  String get rejoin => 'Rejoin';
+  String get rejoin => 'Далучыцца зноў';
 
   @override
-  String get removeAllOtherDevices => 'Remove all other devices';
+  String get removeAllOtherDevices => 'Выдаліць усе іншыя прылады';
 
   @override
   String removedBy(String username) {
-    return 'Removed by $username';
+    return 'Выдалена $username';
   }
 
   @override
-  String get removeDevice => 'Remove device';
+  String get removeDevice => 'Выдаліць прыладу';
 
   @override
-  String get unbanFromChat => 'Unban from chat';
+  String get unbanFromChat => 'Разблакіраваць у чаце';
 
   @override
-  String get removeYourAvatar => 'Remove your avatar';
+  String get removeYourAvatar => 'Выдаліць выяву ўліковага запісу';
 
   @override
-  String get replaceRoomWithNewerVersion => 'Replace room with newer version';
+  String get replaceRoomWithNewerVersion => 'Замяніць пакой навейшай версіяй';
 
   @override
-  String get reply => 'Reply';
+  String get reply => 'Адказаць';
 
   @override
-  String get reportMessage => 'Report message';
+  String get reportMessage => 'Паведаміць пра паведамленне';
 
   @override
-  String get requestPermission => 'Request permission';
+  String get requestPermission => 'Запрасіць дазвол';
 
   @override
-  String get roomHasBeenUpgraded => 'Room has been upgraded';
+  String get roomHasBeenUpgraded => 'Пакой быў абноўлены';
 
   @override
-  String get roomVersion => 'Room version';
+  String get roomVersion => 'Версія пакою';
 
   @override
-  String get saveFile => 'Save file';
+  String get saveFile => 'Захаваць файл';
 
   @override
-  String get search => 'Search';
+  String get search => 'Пошук';
 
   @override
-  String get security => 'Security';
+  String get security => 'Бяспека';
 
   @override
-  String get recoveryKey => 'Recovery key';
+  String get recoveryKey => 'Ключ аднаўлення';
 
   @override
-  String get recoveryKeyLost => 'Recovery key lost?';
+  String get recoveryKeyLost => 'Ключ абнаўлення страчаны?';
 
   @override
   String seenByUser(String username) {
-    return 'Seen by $username';
+    return 'Прагледжана $username';
   }
 
   @override
-  String get send => 'Send';
+  String get send => 'Даслаць';
 
   @override
-  String get sendAMessage => 'Send a message';
+  String get sendAMessage => 'Даслаць паведамленне';
 
   @override
-  String get sendAsText => 'Send as text';
+  String get sendAsText => 'Даслаць як тэкст';
 
   @override
-  String get sendAudio => 'Send audio';
+  String get sendAudio => 'Даслаць аўдыё';
 
   @override
-  String get sendFile => 'Send file';
+  String get sendFile => 'Даслаць файл';
 
   @override
-  String get sendImage => 'Send image';
+  String get sendImage => 'Даслаць выяву';
 
   @override
   String sendImages(int count) {
-    return 'Send $count image';
+    return 'Даслаць $count выяў(-вы)';
   }
 
   @override
-  String get sendMessages => 'Send messages';
+  String get sendMessages => 'Даслаць паведамленні';
 
   @override
-  String get sendOriginal => 'Send original';
+  String get sendOriginal => 'Даслаць арыгінал';
 
   @override
-  String get sendSticker => 'Send sticker';
+  String get sendSticker => 'Даслаць стыкер';
 
   @override
-  String get sendVideo => 'Send video';
+  String get sendVideo => 'Даслаць відэа';
 
   @override
   String sentAFile(String username) {
-    return '📁 $username sent a file';
+    return '📁 $username даслаў файл';
   }
 
   @override
   String sentAnAudio(String username) {
-    return '🎤 $username sent an audio';
+    return '🎤 $username даслаў аўдыё';
   }
 
   @override
   String sentAPicture(String username) {
-    return '🖼️ $username sent a picture';
+    return '🖼️ $username даслаў выяву';
   }
 
   @override
   String sentASticker(String username) {
-    return '😊 $username sent a sticker';
+    return '😊 $username даслаў стыкер';
   }
 
   @override
   String sentAVideo(String username) {
-    return '🎥 $username sent a video';
+    return '🎥 $username даслаў відэа';
   }
 
   @override
   String sentCallInformations(String senderName) {
-    return '$senderName sent call information';
+    return '$senderName даслаў інфрамацыю пра выклік';
   }
 
   @override
-  String get separateChatTypes => 'Separate Direct Chats and Groups';
+  String get separateChatTypes => 'Падзяляць асобныя чаты і групы';
 
   @override
-  String get setAsCanonicalAlias => 'Set as main alias';
+  String get setAsCanonicalAlias => 'Задаць як асноўны псеўданім';
 
   @override
-  String get setCustomEmotes => 'Set custom emotes';
+  String get setCustomEmotes => 'Задаць карыстальніцкі эмодзі';
 
   @override
-  String get setChatDescription => 'Set chat description';
+  String get setChatDescription => 'Задаць апісанне чату';
 
   @override
-  String get setInvitationLink => 'Set invitation link';
+  String get setInvitationLink => 'Задаць запрашальную спасылку';
 
   @override
-  String get setPermissionsLevel => 'Set permissions level';
+  String get setPermissionsLevel => 'Задаць ўзровееь дазволаў';
 
   @override
-  String get setStatus => 'Set status';
+  String get setStatus => 'Задаць статус';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Налады';
 
   @override
-  String get share => 'Share';
+  String get share => 'Падзяліцца';
 
   @override
   String sharedTheLocation(String username) {
-    return '$username shared their location';
+    return '$username падзяліўся(-лася) сваім месцазнаходжаннем';
   }
 
   @override
-  String get shareLocation => 'Share location';
+  String get shareLocation => 'Падзяліцца месцазнаходжаннем';
 
   @override
-  String get showPassword => 'Show password';
+  String get showPassword => 'Паказаць пароль';
 
   @override
-  String get presenceStyle => 'Presence:';
+  String get presenceStyle => 'Прысутнасць:';
 
   @override
-  String get presencesToggle => 'Show status messages from other users';
+  String get presencesToggle =>
+      'Паказваць паведасленні статусаў іншых карыстальнікаў';
 
   @override
-  String get singlesignon => 'Single Sign on';
+  String get singlesignon => 'Адзіны ўваход';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Прапусціць';
 
   @override
-  String get sourceCode => 'Source code';
+  String get sourceCode => 'Зыходны код';
 
   @override
-  String get spaceIsPublic => 'Space is public';
+  String get spaceIsPublic => 'Прастора публічна';
 
   @override
-  String get spaceName => 'Space name';
+  String get spaceName => 'Назва прасторы';
 
   @override
   String startedACall(String senderName) {
-    return '$senderName started a call';
+    return '$senderName пачаў выклік';
   }
 
   @override
-  String get startFirstChat => 'Start your first chat';
+  String get startFirstChat => 'Пачніце ваш першы чат';
 
   @override
-  String get status => 'Status';
+  String get status => 'Статус';
 
   @override
-  String get statusExampleMessage => 'How are you today?';
+  String get statusExampleMessage => 'Як вашыя справы?';
 
   @override
-  String get submit => 'Submit';
+  String get submit => 'Дастасаваць';
 
   @override
-  String get synchronizingPleaseWait => 'Synchronizing… Please wait.';
+  String get synchronizingPleaseWait =>
+      'Сінхранізацыя... Калі ласка, пачакайце.';
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
-    return ' Synchronizing… ($percentage%)';
+    return ' Сінхарнізацыя… ($percentage%)';
   }
 
   @override
-  String get systemTheme => 'System';
+  String get systemTheme => 'Сістэма';
 
   @override
-  String get theyDontMatch => 'They Don\'t Match';
+  String get theyDontMatch => 'Яны не супадаюць';
 
   @override
-  String get theyMatch => 'They Match';
+  String get theyMatch => 'Яны супадаюць';
 
   @override
   String get title => 'FluffyChat';
 
   @override
-  String get toggleFavorite => 'Toggle Favorite';
+  String get toggleFavorite => 'Пераключыць Захаванае';
 
   @override
-  String get toggleMuted => 'Toggle Muted';
+  String get toggleMuted => 'Пераключыць гук';
 
   @override
-  String get toggleUnread => 'Mark Read/Unread';
+  String get toggleUnread => 'Пазначыць прачытаным/непрачытаным';
 
   @override
   String get tooManyRequestsWarning =>
-      'Too many requests. Please try again later!';
+      'Занадта шмат запытаў. Паспрабуйце пазней!';
 
   @override
-  String get transferFromAnotherDevice => 'Transfer from another device';
+  String get transferFromAnotherDevice => 'Перанесці з іншай прылады';
 
   @override
-  String get tryToSendAgain => 'Try to send again';
+  String get tryToSendAgain => 'Паспрабуйце даслаць зноў';
 
   @override
-  String get unavailable => 'Unavailable';
+  String get unavailable => 'Недаступна';
 
   @override
   String unbannedUser(String username, String targetName) {
-    return '$username unbanned $targetName';
+    return '$username разблакіраваў $targetName';
   }
 
   @override
-  String get unblockDevice => 'Unblock Device';
+  String get unblockDevice => 'Разблакіраваць прыладу';
 
   @override
-  String get unknownDevice => 'Unknown device';
+  String get unknownDevice => 'Невядомая прылада';
 
   @override
-  String get unknownEncryptionAlgorithm => 'Unknown encryption algorithm';
+  String get unknownEncryptionAlgorithm => 'Невядомы алгарытм шыфравання';
 
   @override
   String unknownEvent(String type) {
-    return 'Unknown event \'$type\'';
+    return 'Невядомая падзея \'$type\'';
   }
 
   @override
-  String get unmuteChat => 'Unmute chat';
+  String get unmuteChat => 'Уключыць павдеамленні чата';
 
   @override
-  String get unpin => 'Unpin';
+  String get unpin => 'Адмацаваць';
 
   @override
   String unreadChats(int unreadCount) {
     String _temp0 = intl.Intl.pluralLogic(
       unreadCount,
       locale: localeName,
-      other: '$unreadCount unread chats',
-      one: '1 unread chat',
+      other: '$unreadCount непрачытаных чатаў',
+      one: '1 непрачытаны чат',
     );
     return '$_temp0';
   }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
-    return '$username and $count others are typing…';
+    return '$username і $count іншых удзельнікаў пішуць…';
   }
 
   @override
   String userAndUserAreTyping(String username, String username2) {
-    return '$username and $username2 are typing…';
+    return '$username і $username2 пішуць…';
   }
 
   @override
   String userIsTyping(String username) {
-    return '$username is typing…';
+    return '$username піша…';
   }
 
   @override
   String userLeftTheChat(String username) {
-    return '🚪 $username left the chat';
+    return '🚪 $username пакінуў(-ла) чат';
   }
 
   @override
-  String get username => 'Username';
+  String get username => 'Імя карыстальніка';
 
   @override
   String userSentUnknownEvent(String username, String type) {
-    return '$username sent a $type event';
+    return '$username даслаў падзею $type';
   }
 
   @override
-  String get unverified => 'Unverified';
+  String get unverified => 'Не праверана';
 
   @override
-  String get verified => 'Verified';
+  String get verified => 'Праверана';
 
   @override
-  String get verify => 'Verify';
+  String get verify => 'Спраўдзіць';
 
   @override
-  String get verifyStart => 'Start Verification';
+  String get verifyStart => 'Пачаць спраўджванне';
 
   @override
-  String get verifySuccess => 'You successfully verified!';
+  String get verifySuccess => 'Вы паспяхова спраўджаны!';
 
   @override
-  String get verifyTitle => 'Verifying other account';
+  String get verifyTitle => 'Спраўдзіць іншы ўліковы запіс';
 
   @override
-  String get videoCall => 'Video call';
+  String get videoCall => 'Відэа выклік';
 
   @override
-  String get visibilityOfTheChatHistory => 'Visibility of the chat history';
+  String get visibilityOfTheChatHistory => 'Бачнасць гісторыі чату';
 
   @override
-  String get visibleForAllParticipants => 'Visible for all participants';
+  String get visibleForAllParticipants => 'Бачна для ўсіх удзельнікаў';
 
   @override
-  String get visibleForEveryone => 'Visible for everyone';
+  String get visibleForEveryone => 'Бачна ўсім';
 
   @override
-  String get voiceMessage => 'Voice message';
+  String get voiceMessage => 'Галасавое паведамленне';
 
   @override
-  String get waitingPartnerAcceptRequest =>
-      'Waiting for partner to accept the request…';
+  String get waitingPartnerAcceptRequest => 'Чакаем, калі партнёр прыме запыт…';
 
   @override
-  String get waitingPartnerEmoji => 'Waiting for partner to accept the emoji…';
+  String get waitingPartnerEmoji => 'Чакаем, калі партнёр прыме эмодзі…';
 
   @override
-  String get waitingPartnerNumbers =>
-      'Waiting for partner to accept the numbers…';
+  String get waitingPartnerNumbers => 'Чакаем, калі партнёр зацвердзіць лічбы…';
 
   @override
-  String get wallpaper => 'Wallpaper:';
+  String get wallpaper => 'Шпалеры:';
 
   @override
-  String get warning => 'Warning!';
+  String get warning => 'Увага!';
 
   @override
-  String get weSentYouAnEmail => 'We sent you an email';
+  String get weSentYouAnEmail => 'Мы даслалі вам ліст на email';
 
   @override
-  String get whoCanPerformWhichAction => 'Who can perform which action';
+  String get whoCanPerformWhichAction => 'Хто якія дзеянні можа выконваць';
 
   @override
-  String get whoIsAllowedToJoinThisGroup => 'Who is allowed to join this group';
+  String get whoIsAllowedToJoinThisGroup =>
+      'Каму дазволена далучацца да гэтай группы';
 
   @override
-  String get whyDoYouWantToReportThis => 'Why do you want to report this?';
+  String get whyDoYouWantToReportThis => 'Чаму вы хаціце паскардзіцца?';
 
   @override
   String get wipeChatBackup =>
-      'Wipe your chat backup to create a new recovery key?';
+      'Ачысціць рэзервовую копію чата, каб стварыць новы ключ аднаўлення?';
 
   @override
   String get withTheseAddressesRecoveryDescription =>
-      'With these addresses you can recover your password.';
+      'З гэтымі адрасамі, вы сожаце аднавіць свой пароль.';
 
   @override
-  String get writeAMessage => 'Write a message…';
+  String get writeAMessage => 'Напісать паведамленне…';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Так';
 
   @override
-  String get you => 'You';
+  String get you => 'Вы';
 
   @override
   String get youAreNoLongerParticipatingInThisChat =>
-      'You are no longer participating in this chat';
+      'Вы больш не ўдзельнічаеце ў гэтым чаце';
 
   @override
   String get youHaveBeenBannedFromThisChat =>
-      'You have been banned from this chat';
+      'Вы былі заблакіраваны ў гэтым чаце';
 
   @override
-  String get yourPublicKey => 'Your public key';
+  String get yourPublicKey => 'Ваш публічны ключ';
 
   @override
-  String get messageInfo => 'Message info';
+  String get messageInfo => 'Інфармацыя пра паведамленне';
 
   @override
-  String get time => 'Time';
+  String get time => 'Час';
 
   @override
-  String get messageType => 'Message Type';
+  String get messageType => 'Тып паведамлення';
 
   @override
-  String get sender => 'Sender';
+  String get sender => 'Адпраўшчык';
 
   @override
-  String get openGallery => 'Open gallery';
+  String get openGallery => 'Адкрыць галерэю';
 
   @override
-  String get removeFromSpace => 'Remove from space';
+  String get removeFromSpace => 'Выдаліць з прасторы';
 
   @override
-  String get addToSpaceDescription => 'Select a space to add this chat to it.';
+  String get addToSpaceDescription =>
+      'Выберыце прастору, да якой дадаць гэты чат.';
 
   @override
-  String get start => 'Start';
+  String get start => 'Пачаць';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
-      'To unlock your old messages, please enter your recovery key that has been generated in a previous session. Your recovery key is NOT your password.';
+      'Каб разблакіраваць вашы мінулыя паведамленні, калі ласка, увядзіце ключ аднаўлення, што быў згенерыраваны ў мінулай сесіі. Ключ аднаўлення гэта НЕ ваш пароль.';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'Апублікаваць';
 
   @override
   String videoWithSize(String size) {
-    return 'Video ($size)';
+    return 'Відэа ($size)';
   }
 
   @override
-  String get openChat => 'Open Chat';
+  String get openChat => 'Адкрыць чат';
 
   @override
-  String get markAsRead => 'Mark as read';
+  String get markAsRead => 'Адзначыць як прачытанае';
 
   @override
-  String get reportUser => 'Report user';
+  String get reportUser => 'Паскардзіцца на карыстальніка';
 
   @override
-  String get dismiss => 'Dismiss';
+  String get dismiss => 'Адхіліць';
 
   @override
   String reactedWith(String sender, String reaction) {
-    return '$sender reacted with $reaction';
+    return '$sender рэагуе з $reaction';
   }
 
   @override
-  String get pinMessage => 'Pin to room';
+  String get pinMessage => 'Прымацаваць да пакою';
 
   @override
   String get confirmEventUnpin =>
-      'Are you sure to permanently unpin the event?';
+      'Вы ўпэўнены ў тым, што хаціце назаўсёды адмацаваць гэту падзею?';
 
   @override
-  String get emojis => 'Emojis';
+  String get emojis => 'Эмодзі';
 
   @override
-  String get placeCall => 'Place call';
+  String get placeCall => 'Здзейсніць выклік';
 
   @override
-  String get voiceCall => 'Voice call';
+  String get voiceCall => 'Галасавы выклік';
 
   @override
-  String get unsupportedAndroidVersion => 'Unsupported Android version';
+  String get unsupportedAndroidVersion => 'Непадтрымліваемая версія Android';
 
   @override
   String get unsupportedAndroidVersionLong =>
-      'This feature requires a newer Android version. Please check for updates or Lineage OS support.';
+      'Гэта функцыя патрабуе навейшай версіі Android. Калі ласка, праверце наяўнасць абнаўленняў ці падтрымку Linage OS.';
 
   @override
   String get videoCallsBetaWarning =>
-      'Please note that video calls are currently in beta. They might not work as expected or work at all on all platforms.';
+      'Звярніце ўвагу, што відэа выклікі знаходзяцца ў бэце. Яны могуць працаваць некарэктна ці не на ўсіх платформах.';
 
   @override
-  String get experimentalVideoCalls => 'Experimental video calls';
+  String get experimentalVideoCalls => 'Эксперыментальныя відэа выклікі';
 
   @override
-  String get emailOrUsername => 'Email or username';
+  String get emailOrUsername => 'Email ці імя карыстальніка';
 
   @override
-  String get indexedDbErrorTitle => 'Private mode issues';
+  String get indexedDbErrorTitle => 'Праблемы з прыватным рэжымам';
 
   @override
   String get indexedDbErrorLong =>
-      'The message storage is unfortunately not enabled in private mode by default.\nPlease visit\n - about:config\n - set dom.indexedDB.privateBrowsing.enabled to true\nOtherwise, it is not possible to run FluffyChat.';
+      'Сховішча паведамленняў, на жаль, не ўключана ў прыватным рэжыме па змаўчанні.\nКалі ласка, наведайце\n - about:config\n - што dom.indexedDB.privateBrowsing.enabled уключаны\nІнакш, FluffyChat будзе немагчыма запусціць.';
 
   @override
   String switchToAccount(String number) {
-    return 'Switch to account $number';
+    return 'Пераключыцца на ўліковы запіс $number';
   }
 
   @override
-  String get nextAccount => 'Next account';
+  String get nextAccount => 'Наступны ўліковы запіс';
 
   @override
-  String get previousAccount => 'Previous account';
+  String get previousAccount => 'Мінулы ўліковы запіс';
 
   @override
-  String get addWidget => 'Add widget';
+  String get addWidget => 'Дадаць віджэт';
 
   @override
-  String get widgetVideo => 'Video';
+  String get widgetVideo => 'Відэа';
 
   @override
-  String get widgetEtherpad => 'Text note';
+  String get widgetEtherpad => 'Тэкставая нататка';
 
   @override
   String get widgetJitsi => 'Jitsi Meet';
 
   @override
-  String get widgetCustom => 'Custom';
+  String get widgetCustom => 'Карыстальніцкі';
 
   @override
-  String get widgetName => 'Name';
+  String get widgetName => 'Імя';
 
   @override
-  String get widgetUrlError => 'This is not a valid URL.';
+  String get widgetUrlError => 'Гэта хібны URL.';
 
   @override
-  String get widgetNameError => 'Please provide a display name.';
+  String get widgetNameError => 'Калі ласка, укажыце адлюстроўваемаем імя.';
 
   @override
-  String get errorAddingWidget => 'Error adding the widget.';
+  String get errorAddingWidget => 'Памылка дадання віджэту.';
 
   @override
-  String get youRejectedTheInvitation => 'You rejected the invitation';
+  String get youRejectedTheInvitation => 'Вы скасавалі запрашэнне';
 
   @override
-  String get youJoinedTheChat => 'You joined the chat';
+  String get youJoinedTheChat => 'Вы далучыліся да чату';
 
   @override
-  String get youAcceptedTheInvitation => '👍 You accepted the invitation';
+  String get youAcceptedTheInvitation => '👍 Вы прынялі запрашэнне';
 
   @override
   String youBannedUser(String user) {
-    return 'You banned $user';
+    return 'Вы заблакіравалі $user';
   }
 
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
-    return 'You have withdrawn the invitation for $user';
+    return 'Вы адазвалі запрашэнне для $user';
   }
 
   @override
   String youInvitedToBy(String alias) {
-    return '📩 You have been invited via link to:\n$alias';
+    return '📩 Вы былі запрошаны па спасылцы на:\n$alias';
   }
 
   @override
   String youInvitedBy(String user) {
-    return '📩 You have been invited by $user';
+    return '📩 Вы былі запрошаны карыстальнікам $user';
   }
 
   @override
   String invitedBy(String user) {
-    return '📩 Invited by $user';
+    return '📩 Запрошаны(-а) $user';
   }
 
   @override
   String youInvitedUser(String user) {
-    return '📩 You invited $user';
+    return '📩 Вы запрасілі $user';
   }
 
   @override
   String youKicked(String user) {
-    return '👞 You kicked $user';
+    return '👞 Вы выгналі $user';
   }
 
   @override
   String youKickedAndBanned(String user) {
-    return '🙅 You kicked and banned $user';
+    return '🙅 Вы выгналі і заблакіравалі $user';
   }
 
   @override
   String youUnbannedUser(String user) {
-    return 'You unbanned $user';
+    return 'Вы разблакіравалі $user';
   }
 
   @override
   String hasKnocked(String user) {
-    return '🚪 $user has knocked';
+    return '🚪 $user пагрукаўся';
   }
 
   @override
-  String get usersMustKnock => 'Users must knock';
+  String get usersMustKnock => 'Карыстальнікі абавязаны пагрукацца';
 
   @override
-  String get noOneCanJoin => 'No one can join';
+  String get noOneCanJoin => 'Ніхто не можа далучыцца';
 
   @override
   String userWouldLikeToChangeTheChat(String user) {
-    return '$user would like to join the chat.';
+    return '$user хоча далучыцца да чату.';
   }
 
   @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'No public link has been created yet';
+  String get noPublicLinkHasBeenCreatedYet => 'Публічны ключ яшчэ не створаны';
 
   @override
-  String get knock => 'Knock';
+  String get knock => 'Пагрукацца';
 
   @override
-  String get users => 'Users';
+  String get users => 'Карыстальнікі';
 
   @override
-  String get unlockOldMessages => 'Unlock old messages';
+  String get unlockOldMessages => 'Адкрыць старыя паведамленні';
 
   @override
   String get storeInSecureStorageDescription =>
-      'Store the recovery key in the secure storage of this device.';
+      'Захаваць код аднаўлення ў бяспечным месцы на прыладзе.';
 
   @override
   String get saveKeyManuallyDescription =>
-      'Save this key manually by triggering the system share dialog or clipboard.';
+      'Захаваць гэты ключ самастойна, выклікам сістэмнага акна Падзяліцца ці праз буфер.';
 
   @override
-  String get storeInAndroidKeystore => 'Store in Android KeyStore';
+  String get storeInAndroidKeystore => 'Захаваць у Android KeyStore';
 
   @override
-  String get storeInAppleKeyChain => 'Store in Apple KeyChain';
+  String get storeInAppleKeyChain => 'Захаваць у Apple KeyChain';
 
   @override
-  String get storeSecurlyOnThisDevice => 'Store securely on this device';
+  String get storeSecurlyOnThisDevice => 'Захаваць на гэтай прыладзе';
 
   @override
   String countFiles(int count) {
-    return '$count files';
+    return '$count файлаў';
   }
 
   @override
-  String get user => 'User';
+  String get user => 'Карыстальнік';
 
   @override
-  String get custom => 'Custom';
+  String get custom => 'Карыстальніцкае';
 
   @override
   String get foregroundServiceRunning =>
-      'This notification appears when the foreground service is running.';
+      'Гэта паведамленне з\'явіцца, калі асноўныя службы запрацуюць.';
 
   @override
-  String get screenSharingTitle => 'screen sharing';
+  String get screenSharingTitle => 'падзяліцца экранам';
 
   @override
-  String get screenSharingDetail => 'You are sharing your screen in FuffyChat';
+  String get screenSharingDetail => 'Вы дзеліцеся экранам у FluffyChat';
 
   @override
-  String get callingPermissions => 'Calling permissions';
+  String get callingPermissions => 'Дазволы на выклікі';
 
   @override
-  String get callingAccount => 'Calling account';
+  String get callingAccount => 'Уліковы запіс для выклікаў';
 
   @override
   String get callingAccountDetails =>
-      'Allows FluffyChat to use the native android dialer app.';
+      'Дазваляе FluffyChat выкарыстоўваць сістэмную праграму для выклікаў.';
 
   @override
-  String get appearOnTop => 'Appear on top';
+  String get appearOnTop => 'З\'яўляцца зверху';
 
   @override
   String get appearOnTopDetails =>
-      'Allows the app to appear on top (not needed if you already have Fluffychat setup as a calling account)';
+      'Дазваляе праграму з\'яўляцца наверсе (не патрэбна, калі FluffyChat наладжаны як уліковы запіс для выклікаў)';
 
   @override
   String get otherCallingPermissions =>
-      'Microphone, camera and other FluffyChat permissions';
+      'Мікрафон, камера і іншыя дазволы FluffyChat';
 
   @override
-  String get whyIsThisMessageEncrypted => 'Why is this message unreadable?';
+  String get whyIsThisMessageEncrypted =>
+      'Чаму гэта паведамленне нельга прачытаць?';
 
   @override
   String get noKeyForThisMessage =>
-      'This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.';
+      'Гэта можа здарыцца з-за таго, што паведамленне было даслана да таго, як вы увайшлі ў уліковы запіс на гэтай прыладзе.\n\nТаксама верагодна, што адпраўшчык заблакіраваў вашу прыладу ці ў вас хібы з інтэрнэтам.\n\nВы можаце чытаць гэта паведамленне з іншага сеансу? Тад далліце паведамленне адтуль! Перайдзіце ў Налады > Прылады і пераканайцеся ў тым, што вашы прылады верыфікавалі адна адну. Калі вы адкрыеце пакой наступны раз і абодве сэсіі будуць запушчаны, ключы павінны сінхранізавацца аўтаматычна.\n\nВы не хаціце згубіць клбчы, калі будзеце выходзіць ці змяняць прылады? Пераканайцеся ў тым, што вы уключылі рэзервовае капіраванне чатаў у наладах.';
 
   @override
-  String get newGroup => 'New group';
+  String get newGroup => 'Новая група';
 
   @override
-  String get newSpace => 'New space';
+  String get newSpace => 'Новая прастора';
 
   @override
-  String get enterSpace => 'Enter space';
+  String get enterSpace => 'Увайсці ў прастору';
 
   @override
-  String get enterRoom => 'Enter room';
+  String get enterRoom => 'Увайсці ў пакой';
 
   @override
-  String get allSpaces => 'All spaces';
+  String get allSpaces => 'Усе прасторы';
 
   @override
   String numChats(String number) {
-    return '$number chats';
+    return '$number чатаў';
   }
 
   @override
-  String get hideUnimportantStateEvents => 'Hide unimportant state events';
+  String get hideUnimportantStateEvents =>
+      'Хаваць неабавязковыя падзеі статусу';
 
   @override
-  String get hidePresences => 'Hide Status List?';
+  String get hidePresences => 'Хаваць спіс статусаў?';
 
   @override
-  String get doNotShowAgain => 'Do not show again';
+  String get doNotShowAgain => 'Не паказваць зноў';
 
   @override
   String wasDirectChatDisplayName(String oldDisplayName) {
-    return 'Empty chat (was $oldDisplayName)';
+    return 'Пусты чат (быў $oldDisplayName)';
   }
 
   @override
   String get newSpaceDescription =>
-      'Spaces allows you to consolidate your chats and build private or public communities.';
+      'Прасторы дазваляюць аб\'ядноўваць вашы чаты і ствараць агульныя ці асобныя супольнасці.';
 
   @override
-  String get encryptThisChat => 'Encrypt this chat';
+  String get encryptThisChat => 'Шывраваць гэты чат';
 
   @override
   String get disableEncryptionWarning =>
-      'For security reasons you can not disable encryption in a chat, where it has been enabled before.';
+      'У мэтах бяспекі, вы не можаце адклбчауь шыфраванне ў гэтым чаце, дзе яно было ўключана.';
 
   @override
-  String get sorryThatsNotPossible => 'Sorry... that is not possible';
+  String get sorryThatsNotPossible => 'Прабачце... Гэта немагчыма';
 
   @override
-  String get deviceKeys => 'Device keys:';
+  String get deviceKeys => 'Ключы прылад:';
 
   @override
-  String get reopenChat => 'Reopen chat';
+  String get reopenChat => 'Адкрыць чат зноў';
 
   @override
   String get noBackupWarning =>
-      'Warning! Without enabling chat backup, you will lose access to your encrypted messages. It is highly recommended to enable the chat backup first before logging out.';
+      'Увага! Без уключэння рэзервовага капіравання чатаў, вы страціце доступ да вашых зашыфраваных паведамленняў. Настойліва рэкамендуецца уключыць фукнцыю да таго, як выйсці.';
 
   @override
-  String get noOtherDevicesFound => 'No other devices found';
+  String get noOtherDevicesFound => 'Іншыя прылады не знойдзены';
 
   @override
   String fileIsTooBigForServer(String max) {
-    return 'Unable to send! The server only supports attachments up to $max.';
+    return 'Немагчыма даслаць! Сервер падтрымлівае файлы да $max.';
   }
 
   @override
   String fileHasBeenSavedAt(String path) {
-    return 'File has been saved at $path';
+    return 'Файл быў захаваны ў $path';
   }
 
   @override
-  String get jumpToLastReadMessage => 'Jump to last read message';
+  String get jumpToLastReadMessage => 'Перайсці да апошняга паведамлення';
 
   @override
-  String get readUpToHere => 'Read up to here';
+  String get readUpToHere => 'Чытаць тут';
 
   @override
-  String get jump => 'Jump';
+  String get jump => 'Перайсці';
 
   @override
-  String get openLinkInBrowser => 'Open link in browser';
+  String get openLinkInBrowser => 'Адкрыць спасылку ў браўзеры';
 
   @override
   String get reportErrorDescription =>
-      '😭 Oh no. Something went wrong. If you want, you can report this bug to the developers.';
+      '😭 О не, штосьці пайшло не так. Калі жадаеце, можаце падаць справаздачу аб памылке распрауоўшчыкам.';
 
   @override
-  String get report => 'report';
+  String get report => 'паскардзіцца';
 
   @override
-  String get signInWithPassword => 'Sign in with password';
+  String get signInWithPassword => 'Увайсці з паролем';
 
   @override
   String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Please try again later or choose a different server.';
+      'Калі ласка, паспрабуйце пазней ці абярыце іншы сервер.';
 
   @override
   String signInWith(String provider) {
-    return 'Sign in with $provider';
+    return 'Увайсці з $provider';
   }
 
   @override
   String get profileNotFound =>
-      'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
+      'Карыстальнік не знойдзены на гэтым серверы. Гэта можа быць памылка сеткі ці карыстальніка не існуе.';
 
   @override
-  String get setTheme => 'Set theme:';
+  String get setTheme => 'Тэма:';
 
   @override
-  String get setColorTheme => 'Set color theme:';
+  String get setColorTheme => 'Каляровая схема:';
 
   @override
-  String get invite => 'Invite';
+  String get invite => 'Запрасіць';
 
   @override
-  String get inviteGroupChat => '📨 Group chat invite';
+  String get inviteGroupChat => '📨 Запрашэнне ў групавы чат';
 
   @override
-  String get invitePrivateChat => '📨 Private chat invite';
+  String get invitePrivateChat => '📨 Запрашэнне ў асобны чат';
 
   @override
-  String get invalidInput => 'Invalid input!';
+  String get invalidInput => 'Недапушчальны ўвод!';
 
   @override
   String wrongPinEntered(int seconds) {
-    return 'Wrong pin entered! Try again in $seconds seconds...';
+    return 'Няверны пін-код! Паспрабуйце праз $seconds секунд...';
   }
 
   @override
-  String get pleaseEnterANumber => 'Please enter a number greater than 0';
+  String get pleaseEnterANumber => 'Калі ласка, увядзіце лічбу большую за 0';
 
   @override
   String get archiveRoomDescription =>
-      'The chat will be moved to the archive. Other users will be able to see that you have left the chat.';
+      'Чат перамясціцца ў архіў. Іншыя карыстальнікі будуць бачыць гэта так, быццам вы выйшлі з чату.';
 
   @override
   String get roomUpgradeDescription =>
-      'The chat will then be recreated with the new room version. All participants will be notified that they need to switch to the new chat. You can find out more about room versions at https://spec.matrix.org/latest/rooms/';
+      'Чат будзе пераствораны з новай версіяй пакою. Усе ўдзельнікі будуць паведамлены пра неабходнасць перайсці ў новы чат. Вы можаце даведацца пра версіі пакояў тут: https://spec.matrix.org/latest/rooms/';
 
   @override
   String get removeDevicesDescription =>
-      'You will be logged out of this device and will no longer be able to receive messages.';
+      'Вы выйдзеце з гэтай прылады і больш не будзеце атрымліваць паведамленні.';
 
   @override
   String get banUserDescription =>
-      'The user will be banned from the chat and will not be able to enter the chat again until they are unbanned.';
+      'Карыстальнік будзе заблакіраваны з чату і больш не зможа ўвайсці, пакуль вы яго не разблакіруеце.';
 
   @override
   String get unbanUserDescription =>
-      'The user will be able to enter the chat again if they try.';
+      'Карыстальнік зможа зноў далучыцца да чату.';
 
   @override
   String get kickUserDescription =>
-      'The user is kicked out of the chat but not banned. In public chats, the user can rejoin at any time.';
+      'Карыстальнік будзе выгнаны, але не заблакіраваны. У публічных чатах, ён зможа далучыцца зноў у любы час.';
 
   @override
   String get makeAdminDescription =>
-      'Once you make this user admin, you may not be able to undo this as they will then have the same permissions as you.';
+      'Калі вы зробіце карыстальніка адміністратарам, вы не зможаце адмяніць гэта дзеянне, бо ён будзе мець такія ж правы, як і вы.';
 
   @override
-  String get pushNotificationsNotAvailable =>
-      'Push notifications not available';
+  String get pushNotificationsNotAvailable => 'Пуш-паведамленні недаступны';
 
   @override
-  String get learnMore => 'Learn more';
+  String get learnMore => 'Даведацца больш';
 
   @override
-  String get yourGlobalUserIdIs => 'Your global user-ID is: ';
+  String get yourGlobalUserIdIs => 'Ваш глабальны ID-карыстальніка: ';
 
   @override
   String noUsersFoundWithQuery(String query) {
-    return 'Unfortunately no user could be found with \"$query\". Please check whether you made a typo.';
+    return 'На жаль, мы не змаглі знайсці карыстальніка з імём \"$query\". Калі ласка, праверце наяўнасць памылак.';
   }
 
   @override
-  String get knocking => 'Knocking';
+  String get knocking => 'Грукацца';
 
   @override
   String chatCanBeDiscoveredViaSearchOnServer(String server) {
-    return 'Chat can be discovered via the search on $server';
+    return 'Чат можа быць знойдзены праз пошук у $server';
   }
 
   @override
-  String get searchChatsRooms => 'Search for #chats, @users...';
+  String get searchChatsRooms => 'Пошук #чатаў, @карыстальнікаў...';
 
   @override
-  String get nothingFound => 'Nothing found...';
+  String get nothingFound => 'Нічога не знойдзена...';
 
   @override
-  String get groupName => 'Group name';
+  String get groupName => 'Назва групы';
 
   @override
-  String get createGroupAndInviteUsers => 'Create a group and invite users';
+  String get createGroupAndInviteUsers =>
+      'Стварыць групу і запрасіць карыстальнікаў';
 
   @override
-  String get groupCanBeFoundViaSearch => 'Group can be found via search';
+  String get groupCanBeFoundViaSearch => 'Група можа быць знойдзена праз пошук';
 
   @override
   String get wrongRecoveryKey =>
-      'Sorry... this does not seem to be the correct recovery key.';
+      'Прабачце... гэта не выглядае як ключ аднаўлення.';
 
   @override
-  String get startConversation => 'Start conversation';
+  String get startConversation => 'Пачаць размову';
 
   @override
-  String get commandHint_sendraw => 'Send raw json';
+  String get commandHint_sendraw => 'Даслаць толькі json';
 
   @override
-  String get databaseMigrationTitle => 'Database is optimized';
+  String get databaseMigrationTitle => 'База даных аптымізавана';
 
   @override
-  String get databaseMigrationBody => 'Please wait. This may take a moment.';
+  String get databaseMigrationBody =>
+      'Калі ласка, пачакайце. Гэта можа заняць некаторы час.';
 
   @override
-  String get leaveEmptyToClearStatus => 'Leave empty to clear your status.';
+  String get leaveEmptyToClearStatus =>
+      'Пакіньце пустым, каб ачысціць свой статус.';
 
   @override
-  String get select => 'Select';
+  String get select => 'Выбраць';
 
   @override
-  String get searchForUsers => 'Search for @users...';
+  String get searchForUsers => 'Пошук @карыстальнікаў...';
 
   @override
   String get pleaseEnterYourCurrentPassword =>
-      'Please enter your current password';
+      'Калі ласка, увядзіце свой бягучы пароль';
 
   @override
-  String get newPassword => 'New password';
+  String get newPassword => 'Новы пароль';
 
   @override
-  String get pleaseChooseAStrongPassword => 'Please choose a strong password';
+  String get pleaseChooseAStrongPassword =>
+      'Калі ласка, падбярыце больш надзейны пароль';
 
   @override
-  String get passwordsDoNotMatch => 'Passwords do not match';
+  String get passwordsDoNotMatch => 'Паролі не супадаюць';
 
   @override
-  String get passwordIsWrong => 'Your entered password is wrong';
+  String get passwordIsWrong => 'Вы ўвялі няверны пароль';
 
   @override
-  String get publicLink => 'Public link';
+  String get publicLink => 'Публічная спасылка';
 
   @override
-  String get publicChatAddresses => 'Public chat addresses';
+  String get publicChatAddresses => 'Публічныя адрасы чату';
 
   @override
-  String get createNewAddress => 'Create new address';
+  String get createNewAddress => 'Стварыць новы адрас';
 
   @override
-  String get joinSpace => 'Join space';
+  String get joinSpace => 'Далучыцца да прасторы';
 
   @override
-  String get publicSpaces => 'Public spaces';
+  String get publicSpaces => 'Публічныя прасторы';
 
   @override
-  String get addChatOrSubSpace => 'Add chat or sub space';
+  String get addChatOrSubSpace => 'Дадаць чат ці пад-прастору';
 
   @override
-  String get subspace => 'Subspace';
+  String get subspace => 'Пад-прастора';
 
   @override
-  String get decline => 'Decline';
+  String get decline => 'Адхіліць';
 
   @override
-  String get thisDevice => 'This device:';
+  String get thisDevice => 'Гэта прылада:';
 
   @override
-  String get initAppError => 'An error occured while init the app';
+  String get initAppError => 'Адбылася памылка пры ініцыялізацыі праграмы';
 
   @override
-  String get userRole => 'User role';
+  String get userRole => 'Роль карыстальніка';
 
   @override
   String minimumPowerLevel(String level) {
-    return '$level is the minimum power level.';
+    return '$level - мінімальны ўзровень дазволаў.';
   }
 
   @override
   String searchIn(String chat) {
-    return 'Search in chat \"$chat\"...';
+    return 'Пошук у чаце \"$chat\"...';
   }
 
   @override
-  String get searchMore => 'Search more...';
+  String get searchMore => 'Шукаць яшчэ...';
 
   @override
-  String get gallery => 'Gallery';
+  String get gallery => 'Галерэя';
 
   @override
-  String get files => 'Files';
+  String get files => 'Файлы';
 
   @override
   String databaseBuildErrorBody(String url, String error) {
-    return 'Unable to build the SQlite database. The app tries to use the legacy database for now. Please report this error to the developers at $url. The error message is: $error';
+    return 'Немагчыма стварыць базу даных SQlite. Праграма спрабуе выкарыстоўваць састарэлую базу. Калі ласка, паведаміце распрацоўшчыкам пра гэта: $url. Паведамленне памылкі: $error';
   }
 
   @override
   String sessionLostBody(String url, String error) {
-    return 'Your session is lost. Please report this error to the developers at $url. The error message is: $error';
+    return 'Ваш сеанс страчаны. Калі ласка, паведаміце пра гэта распрацоўшчыкам: $url. Паведамленне памылкі: $error';
   }
 
   @override
   String restoreSessionBody(String url, String error) {
-    return 'The app now tries to restore your session from the backup. Please report this error to the developers at $url. The error message is: $error';
+    return 'Праграма спрабуе аднавіць вашу сесію з рэзервовай копіі. Калі ласка, паведаміце пра памылку распрацоўшчыкам па спасылцы $url. Паведамленне памылкі: $error';
   }
 
   @override
   String forwardMessageTo(String roomName) {
-    return 'Forward message to $roomName?';
+    return 'Пераслаць паведамленне ў $roomName?';
   }
 
   @override
-  String get sendReadReceipts => 'Send read receipts';
+  String get sendReadReceipts => 'Дасылаць адзнаку аб чытанні';
 
   @override
   String get sendTypingNotificationsDescription =>
-      'Other participants in a chat can see when you are typing a new message.';
+      'Іншыя ўдзельнікі чату могуць бачыць, калі вы пішаце новае паведамленне.';
 
   @override
   String get sendReadReceiptsDescription =>
-      'Other participants in a chat can see when you have read a message.';
+      'Іншыя карыстальнікі чатаў будуць бачыць, калі вы прачыталі паведамленні.';
 
   @override
-  String get formattedMessages => 'Formatted messages';
+  String get formattedMessages => 'Фармаціраваныя паведамленні';
 
   @override
   String get formattedMessagesDescription =>
-      'Display rich message content like bold text using markdown.';
+      'Адлюстроўваць пашыраныя паведамленні разметкай markdown.';
 
   @override
-  String get verifyOtherUser => '🔐 Verify other user';
+  String get verifyOtherUser => '🔐 Спраўдзіць іншага карыстальніка';
 
   @override
   String get verifyOtherUserDescription =>
-      'If you verify another user, you can be sure that you know who you are really writing to. 💪\n\nWhen you start a verification, you and the other user will see a popup in the app. There you will then see a series of emojis or numbers that you have to compare with each other.\n\nThe best way to do this is to meet up or start a video call. 👭';
+      'Калі вы спраўдзілі іншага карыстальніка, вы можаце быць упэўненым з кім вы сапраўды перапісваецеся.💪\n\nКалі вы пачнеце спраўджванне, вы і іншы карыстальнік, убачыце ўсплывальнае акно ў праграме. У ім вы ўбачыце некалькі эмодзі ці лічб, якія вы павінны параўнаць адзін з адным.\n\nЛепшы метад зрабіць гэта - пачаць відэа выклік. 👭';
 
   @override
-  String get verifyOtherDevice => '🔐 Verify other device';
+  String get verifyOtherDevice => '🔐 Спраўдзіць іншую прыладу';
 
   @override
   String get verifyOtherDeviceDescription =>
-      'When you verify another device, those devices can exchange keys, increasing your overall security. 💪 When you start a verification, a popup will appear in the app on both devices. There you will then see a series of emojis or numbers that you have to compare with each other. It\'s best to have both devices handy before you start the verification. 🤳';
+      'Калі вы спраўдзіце другую прыладу, яны абмяняюцца ключамі, якія ўзмоцняць вашу бяспеку. 💪 Калі вы пачнеце спраўджванне, у праграмах прылад з\'явіцца ўсплывальнае паведамленне. Потым, вы ўбачыце некалькі эмодзі ці лічбаў, якія вы павінны параўнаць паміж сабой. Прасцей за ўсё гэта зрабіць, маючы дзве прылады побач. 🤳';
 
   @override
   String acceptedKeyVerification(String sender) {
-    return '$sender accepted key verification';
+    return '$sender прыняў(-ла) спраўджванне ключэй';
   }
 
   @override
   String canceledKeyVerification(String sender) {
-    return '$sender canceled key verification';
+    return '$sender адхіліў(-ла) спраўджванне ключэй';
   }
 
   @override
   String completedKeyVerification(String sender) {
-    return '$sender completed key verification';
+    return '$sender скочныў(-ла) спраўджванне ключэй';
   }
 
   @override
   String isReadyForKeyVerification(String sender) {
-    return '$sender is ready for key verification';
+    return '$sender гатовы(-а) да спраўджвання ключэй';
   }
 
   @override
   String requestedKeyVerification(String sender) {
-    return '$sender requested key verification';
+    return '$sender запрасіў(-ла) спраўджванне ключэй';
   }
 
   @override
   String startedKeyVerification(String sender) {
-    return '$sender started key verification';
+    return '$sender пачаў(-ла) спраўджванне ключэй';
   }
 
   @override
-  String get transparent => 'Transparent';
+  String get transparent => 'Празрысты';
 
   @override
-  String get incomingMessages => 'Incoming messages';
+  String get incomingMessages => 'Уваходныя паведамленні';
 
   @override
-  String get stickers => 'Stickers';
+  String get stickers => 'Стыкеры';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'Даследаваць';
 
   @override
-  String get commandHint_ignore => 'Ignore the given matrix ID';
+  String get commandHint_ignore => 'Ігнараваць дадзены matrix ID';
 
   @override
-  String get commandHint_unignore => 'Unignore the given matrix ID';
+  String get commandHint_unignore => 'Перастаць ігнараваць дадзены matrix ID';
 
   @override
   String unreadChatsInApp(String appname, String unread) {
-    return '$appname: $unread unread chats';
+    return '$appname: $unread непрачытаных чатаў';
   }
 
   @override
   String get noDatabaseEncryption =>
-      'Database encryption is not supported on this platform';
+      'Шыфраванне базы даных не падтрымліваецца гэтай платформай';
 
   @override
   String thereAreCountUsersBlocked(Object count) {
-    return 'Right now there are $count users blocked.';
+    return 'На гэты момант, $count карыстальнікаў заблакіравана.';
   }
 
   @override
-  String get restricted => 'Restricted';
+  String get restricted => 'Абмежавана';
 
   @override
-  String get knockRestricted => 'Knock restricted';
+  String get knockRestricted => 'Грук абмежаваны';
 
   @override
   String goToSpace(Object space) {
-    return 'Go to space: $space';
+    return 'Перайсці да прасторы: $space';
   }
 
   @override
-  String get markAsUnread => 'Mark as unread';
+  String get markAsUnread => 'Адзначыць як непрачытанае';
 
   @override
   String userLevel(int level) {
-    return '$level - User';
+    return '$level - Карыстальнік';
   }
 
   @override
   String moderatorLevel(int level) {
-    return '$level - Moderator';
+    return '$level - Мадэратар';
   }
 
   @override
   String adminLevel(int level) {
-    return '$level - Admin';
+    return '$level - Адміністратар';
   }
 
   @override
-  String get changeGeneralChatSettings => 'Change general chat settings';
+  String get changeGeneralChatSettings => 'Змяніць агульныя налады чату';
 
   @override
-  String get inviteOtherUsers => 'Invite other users to this chat';
+  String get inviteOtherUsers => 'Запрасіць іншых карыстальнікаў у гэты чат';
 
   @override
-  String get changeTheChatPermissions => 'Change the chat permissions';
+  String get changeTheChatPermissions => 'Змяніць дазволы чату';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
-      'Change the visibility of the chat history';
+      'Змяніць бачнасць гісторыі чату';
 
   @override
-  String get changeTheCanonicalRoomAlias =>
-      'Change the main public chat address';
+  String get changeTheCanonicalRoomAlias => 'Змяніць публічны адрас чату';
 
   @override
-  String get sendRoomNotifications => 'Send a @room notifications';
+  String get sendRoomNotifications => 'Дасылаць паведамленні @room';
 
   @override
-  String get changeTheDescriptionOfTheGroup =>
-      'Change the description of the chat';
+  String get changeTheDescriptionOfTheGroup => 'Змяніць апісанне чату';
 
   @override
   String get chatPermissionsDescription =>
-      'Define which power level is necessary for certain actions in this chat. The power levels 0, 50 and 100 are usually representing users, moderators and admins, but any gradation is possible.';
+      'Задаць узровень дазволаў, які неабходны для некаторых дзеянняў у чаце. Узроўні 0, 50 і 100 звычайна адлюстроўваюць карыстальнікаў, мадэратараў і адміністратараў, але любая градацыя магчыма.';
 
   @override
   String updateInstalled(String version) {
-    return '🎉 Update $version installed!';
+    return '🎉 Абнаўленне $version усталявана!';
   }
 
   @override
-  String get changelog => 'Changelog';
+  String get changelog => 'Спіс змен';
 
   @override
-  String get sendCanceled => 'Sending canceled';
+  String get sendCanceled => 'Адпраўка скасавана';
 
   @override
-  String get loginWithMatrixId => 'Login with Matrix-ID';
+  String get loginWithMatrixId => 'Увайсці з Matrix-ID';
 
   @override
-  String get discoverHomeservers => 'Discover homeservers';
+  String get discoverHomeservers => 'Даследаваць дамашнія сервера';
 
   @override
-  String get whatIsAHomeserver => 'What is a homeserver?';
+  String get whatIsAHomeserver => 'Што такое дамашні сервер?';
 
   @override
   String get homeserverDescription =>
-      'All your data is stored on the homeserver, just like an email provider. You can choose which homeserver you want to use, while you can still communicate with everyone. Learn more at at https://matrix.org.';
+      'Вашыя даныя захоўваюцца на дамашнім серверы, як у правайдара электронай пошты. Вы можаце самастойна абраць дамашні сервер, захоўвая пры тым магчымасць размаўляць. Даведайцеся болей на https://matrix.org.';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
-      'Doesn\'t seem to be a compatible homeserver. Wrong URL?';
+      'Гэта не выглядае як дамашні сервер. Няслушны URL?';
 
   @override
-  String get calculatingFileSize => 'Calculating file size...';
+  String get calculatingFileSize => 'Вылічэнне памеру файла...';
 
   @override
-  String get prepareSendingAttachment => 'Prepare sending attachment...';
+  String get prepareSendingAttachment => 'Падрыхтоўка адпраўкі прыкладання...';
 
   @override
-  String get sendingAttachment => 'Sending attachment...';
+  String get sendingAttachment => 'Адпраўка прыкладання...';
 
   @override
-  String get generatingVideoThumbnail => 'Generating video thumbnail...';
+  String get generatingVideoThumbnail => 'Стварэнне вокладкі відэа...';
 
   @override
-  String get compressVideo => 'Compressing video...';
+  String get compressVideo => 'Сцісканне відэа...';
 
   @override
   String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Sending attachment $index of $length...';
+    return 'Адпраўляецца прыкладанне $index з $length...';
   }
 
   @override
   String serverLimitReached(int seconds) {
-    return 'Server limit reached! Waiting $seconds seconds...';
+    return 'Дасягнуты серверны ліміт! Пачакайце $seconds секунд...';
   }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
-      'One of your devices is not verified';
+      'Адна з вашых прылад не спраўджана';
 
   @override
   String get noticeChatBackupDeviceVerification =>
-      'Note: When you connect all your devices to the chat backup, they are automatically verified.';
+      'Заўвага: Калі вы падключыце ўсе свае прылады да рэзервовага капіравання, яны аўтаматычна спраўдзяцца.';
 
   @override
-  String get continueText => 'Continue';
+  String get continueText => 'Працягнуць';
 
   @override
   String get welcomeText =>
-      'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
+      'Вітаначкі 👋 Гэта FluffyChat. Вы можаце ўвайсці на любы дамашні сервер, што сумяшчальны з https://matrix.org, а потым паразмаўляць з кім-небудзь. Гэта вялізная дэцэнтралізаваная сетка абмену паведамленнямі!';
 
   @override
-  String get blur => 'Blur:';
+  String get blur => 'Размыццё:';
 
   @override
-  String get opacity => 'Opacity:';
+  String get opacity => 'Празрыстасць:';
 
   @override
-  String get setWallpaper => 'Set wallpaper';
+  String get setWallpaper => 'Задаць шпалеры';
 
   @override
-  String get manageAccount => 'Manage account';
+  String get manageAccount => 'Кіраванне ўліковым запісам';
 
   @override
   String get noContactInformationProvided =>
-      'Server does not provide any valid contact information';
+      'Сервер не мае ніякай вернай кантактнай інфармацыі';
 
   @override
-  String get contactServerAdmin => 'Contact server admin';
+  String get contactServerAdmin => 'Звязацца з адміністратарам сервера';
 
   @override
-  String get contactServerSecurity => 'Contact server security';
+  String get contactServerSecurity => 'Звязацца з сервернай бяспекай';
 
   @override
-  String get supportPage => 'Support page';
+  String get supportPage => 'Падтрымка';
 
   @override
-  String get serverInformation => 'Server information:';
+  String get serverInformation => 'Серверная інфармацыя:';
 
   @override
-  String get name => 'Name';
+  String get name => 'Імя';
 
   @override
-  String get version => 'Version';
+  String get version => 'Версія';
 
   @override
-  String get website => 'Website';
+  String get website => 'Сайт';
 
   @override
-  String get compress => 'Compress';
+  String get compress => 'Сцісканне';
 
   @override
-  String get boldText => 'Bold text';
+  String get boldText => 'Цёмны';
 
   @override
-  String get italicText => 'Italic text';
+  String get italicText => 'Курсіў';
 
   @override
-  String get strikeThrough => 'Strikethrough';
+  String get strikeThrough => 'Перакрэслены';
 
   @override
-  String get pleaseFillOut => 'Please fill out';
+  String get pleaseFillOut => 'Калі ласка, запоўніце';
 
   @override
-  String get invalidUrl => 'Invalid url';
+  String get invalidUrl => 'Няслушны url';
 
   @override
-  String get addLink => 'Add link';
+  String get addLink => 'Дадаць спасылку';
 
   @override
   String get unableToJoinChat =>
-      'Unable to join chat. Maybe the other party has already closed the conversation.';
+      'Немагчыма далучыцца да чату. Магчыма, іншы бок ужо скончыў размову.';
 
   @override
-  String get previous => 'Previous';
+  String get previous => 'Мінулы';
 
   @override
   String get otherPartyNotLoggedIn =>
-      'The other party is currently not logged in and therefore cannot receive messages!';
+      'Іншы бок зараз не увайшоў, таму не можа атрымліваць паведамленні!';
 
   @override
   String appWantsToUseForLogin(String server) {
-    return 'Use \'$server\' to log in';
+    return 'Выкарыстоўваць \'$server\' для ўвахода';
   }
 
   @override
   String get appWantsToUseForLoginDescription =>
-      'You hereby allow the app and website to share information about you.';
+      'Тым самым, вы дазваляеце праграме і сайту дзяліцца інфармацыяй пра вас.';
 
   @override
-  String get open => 'Open';
+  String get open => 'Адкрыць';
 
   @override
-  String get waitingForServer => 'Waiting for server...';
+  String get waitingForServer => 'Чаканне сервера...';
 
   @override
   String get appIntroduction =>
-      'FluffyChat lets you chat with your friends across different messengers. Learn more at https://matrix.org or just tap *Continue*.';
+      'FluffyChat дазваляе вам і вашым сябрам размаўляць скрозь розныя мэсэнджары. Даведайцеся болей на https://matrix.org ці націсніце *Працягнуць*.';
 
   @override
-  String get newChatRequest => '📩 New chat request';
+  String get newChatRequest => '📩 Запыт новага чату';
 
   @override
-  String get contentNotificationSettings => 'Content notification settings';
+  String get contentNotificationSettings => 'Налады паведамленняў кантэнту';
 
   @override
-  String get generalNotificationSettings => 'General notification settings';
+  String get generalNotificationSettings => 'Агульныя налады паведамленняў';
 
   @override
-  String get roomNotificationSettings => 'Room notification settings';
+  String get roomNotificationSettings => 'Налады паведамленняў пакою';
 
   @override
   String get userSpecificNotificationSettings =>
-      'User specific notification settings';
+      'Налады паведамленняў карыстальніка';
 
   @override
-  String get otherNotificationSettings => 'Other notification settings';
+  String get otherNotificationSettings => 'Іншыя налады паведамленняў';
 
   @override
-  String get notificationRuleContainsUserName => 'Contains User Name';
+  String get notificationRuleContainsUserName => 'Змяшчае імя карыстальніка';
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Notifies the user when a message contains their username.';
+      'Паведамляе пра тое, што паведамленне мае імя карыстальніка.';
 
   @override
-  String get notificationRuleMaster => 'Mute all notifications';
+  String get notificationRuleMaster => 'Заглушыць усе паведамленні';
 
   @override
   String get notificationRuleMasterDescription =>
-      'Overrides all other rules and disables all notifications.';
+      'Перазапісвае ўсе іншыя правілы і адключае паведамленні.';
 
   @override
-  String get notificationRuleSuppressNotices => 'Suppress Automated Messages';
+  String get notificationRuleSuppressNotices =>
+      'Адключыць аўтаматычныя паведамленні';
 
   @override
   String get notificationRuleSuppressNoticesDescription =>
-      'Suppresses notifications from automated clients like bots.';
+      'Адключыць паведамленні ад аўтаматызаваных кліентаў, накшталт ботаў.';
 
   @override
-  String get notificationRuleInviteForMe => 'Invite for Me';
+  String get notificationRuleInviteForMe => 'Запрашэнне мяне';
 
   @override
   String get notificationRuleInviteForMeDescription =>
-      'Notifies the user when they are invited to a room.';
+      'Паведамляе карыстальніка, калі яго запрашаюць у пакой.';
 
   @override
-  String get notificationRuleMemberEvent => 'Member Event';
+  String get notificationRuleMemberEvent => 'Падзеі ўдзельніцтва';
 
   @override
   String get notificationRuleMemberEventDescription =>
-      'Suppresses notifications for membership events.';
+      'Спыніць усе паведамленні пра ўдзельніцтва.';
 
   @override
-  String get notificationRuleIsUserMention => 'User Mention';
+  String get notificationRuleIsUserMention => 'Згадванні карыстальніка';
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Notifies the user when they are directly mentioned in a message.';
+      'Паведамляе, калі карыстальніка згадалі ў паведамленні.';
 
   @override
-  String get notificationRuleContainsDisplayName => 'Contains Display Name';
+  String get notificationRuleContainsDisplayName => 'Мае адлюстроўваемае імя';
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
-      'Notifies the user when a message contains their display name.';
+      'Паведамляе, калі паведамленне мае іх адлюстроўваемае імя.';
 
   @override
-  String get notificationRuleIsRoomMention => 'Room Mention';
+  String get notificationRuleIsRoomMention => 'Згадванні пакою';
 
   @override
   String get notificationRuleIsRoomMentionDescription =>
-      'Notifies the user when there is a room mention.';
+      'Паведамляе карыстальніка, калі згадваюць пакой.';
 
   @override
-  String get notificationRuleRoomnotif => 'Room Notification';
+  String get notificationRuleRoomnotif => 'Паведамленні пакою';
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Notifies the user when a message contains \'@room\'.';
+      'Паведамляе пра згадванні \'@room\'.';
 
   @override
-  String get notificationRuleTombstone => 'Tombstone';
+  String get notificationRuleTombstone => 'Помнік';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Notifies the user about room deactivation messages.';
+      'Паведамляе пра дэактывацыю пакою.';
 
   @override
-  String get notificationRuleReaction => 'Reaction';
+  String get notificationRuleReaction => 'Рэакцыя';
 
   @override
   String get notificationRuleReactionDescription =>
-      'Suppresses notifications for reactions.';
+      'Адключыць усе паведамленні пра рэакцыі.';
 
   @override
-  String get notificationRuleRoomServerAcl => 'Room Server ACL';
+  String get notificationRuleRoomServerAcl => 'ACL сервера пакою';
 
   @override
   String get notificationRuleRoomServerAclDescription =>
-      'Suppresses notifications for room server access control lists (ACL).';
+      'Адключыць паведамленні пра серверныя спісы кантролю пакою (ACL).';
 
   @override
-  String get notificationRuleSuppressEdits => 'Suppress Edits';
+  String get notificationRuleSuppressEdits => 'Заглушыць змены';
 
   @override
   String get notificationRuleSuppressEditsDescription =>
-      'Suppresses notifications for edited messages.';
+      'Заглушыць паведамленні пра адрэдагаваныя паведамленні.';
 
   @override
-  String get notificationRuleCall => 'Call';
+  String get notificationRuleCall => 'Выклік';
 
   @override
-  String get notificationRuleCallDescription =>
-      'Notifies the user about calls.';
+  String get notificationRuleCallDescription => 'Паведамляе пра выклікі.';
 
   @override
   String get notificationRuleEncryptedRoomOneToOne =>
-      'Encrypted Room One-to-One';
+      'Шыфраваны пакой One-to-One';
 
   @override
   String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Notifies the user about messages in encrypted one-to-one rooms.';
+      'Паведамляе пра паведамленні ў шыфраваных one-to-one пакоях.';
 
   @override
-  String get notificationRuleRoomOneToOne => 'Room One-to-One';
+  String get notificationRuleRoomOneToOne => 'Пакой One-to-One';
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Notifies the user about messages in one-to-one rooms.';
+      'Паведамляе пра паведамленні ў пакоях one-to-one.';
 
   @override
-  String get notificationRuleMessage => 'Message';
+  String get notificationRuleMessage => 'Паведамленне';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Notifies the user about general messages.';
+      'Паведамляе пра звычайныя паведамленні.';
 
   @override
-  String get notificationRuleEncrypted => 'Encrypted';
+  String get notificationRuleEncrypted => 'Зашыфравана';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Notifies the user about messages in encrypted rooms.';
+      'Паведамляе пра паведамленні ў зашыфраваных пакоях.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
   String get notificationRuleJitsiDescription =>
-      'Notifies the user about Jitsi widget events.';
+      'Паведамляе пра падзеі віджэту Jitsi.';
 
   @override
-  String get notificationRuleServerAcl => 'Suppress Server ACL Events';
+  String get notificationRuleServerAcl => 'Заглушыць серверныя падзеі ACL';
 
   @override
   String get notificationRuleServerAclDescription =>
-      'Suppresses notifications for Server ACL events.';
+      'Заглушыць паведамленні пра серверныя падзеі ACL.';
 
   @override
   String unknownPushRule(String rule) {
-    return 'Unknown push rule \'$rule\'';
+    return 'Невядомае правіла пуша \'$rule\'';
   }
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - Voice message from $sender';
+    return '🎙️$duration - Галасавое паведамленне ад $sender';
   }
 
   @override
   String get deletePushRuleCanNotBeUndone =>
-      'If you delete this notification setting, this can not be undone.';
+      'Калі вы выдаліце гэтыя налады паведамленняў, гэта не можа быць адменена.';
 
   @override
-  String get more => 'More';
+  String get more => 'Больш';
 
   @override
-  String get shareKeysWith => 'Share keys with...';
+  String get shareKeysWith => 'Падзяліцца ключамі з...';
 
   @override
   String get shareKeysWithDescription =>
-      'Which devices should be trusted so that they can read along your messages in encrypted chats?';
+      'Якім прыладам вы давяраеце настолькі, каб яны маглі чытаць вашыя зашыфраваныя паведамленні?';
 
   @override
-  String get allDevices => 'All devices';
+  String get allDevices => 'Усе прылады';
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
-      'Cross verified devices if enabled';
+      'Перакрыжавана пацверджаныя прылады, калі ўключана';
 
   @override
-  String get crossVerifiedDevices => 'Cross verified devices';
+  String get crossVerifiedDevices => 'Перакрыжавана пацверджаныя прылады';
 
   @override
-  String get verifiedDevicesOnly => 'Verified devices only';
+  String get verifiedDevicesOnly => 'Толькі пацаерджаныя прылады';
 
   @override
-  String get takeAPhoto => 'Take a photo';
+  String get takeAPhoto => 'Зрабіць здымак';
 
   @override
-  String get recordAVideo => 'Record a video';
+  String get recordAVideo => 'Запісаць відэа';
 
   @override
-  String get optionalMessage => '(Optional) message...';
+  String get optionalMessage => '(Апцыянальна) паведамленне...';
 
   @override
-  String get notSupportedOnThisDevice => 'Not supported on this device';
+  String get notSupportedOnThisDevice => 'Не падтрымліваецца на гэтай прыладзе';
 
   @override
-  String get enterNewChat => 'Enter new chat';
+  String get enterNewChat => 'Увядзіце новы чат';
 
   @override
-  String get approve => 'Approve';
+  String get approve => 'Пацвердзіць';
 
   @override
-  String get youHaveKnocked => 'You have knocked';
+  String get youHaveKnocked => 'Вы былі выгнаны';
 
   @override
   String get pleaseWaitUntilInvited =>
-      'Please wait now, until someone from the room invites you.';
+      'Калі ласка, пачакайце, пакуль хтосьці з пакою вас не запрасіць.';
 
   @override
-  String get commandHint_logout => 'Logout your current device';
+  String get commandHint_logout => 'Выйсці з бягуяай прылады';
 
   @override
-  String get commandHint_logoutall => 'Logout all active devices';
+  String get commandHint_logoutall => 'Выйсці на ўсіх актыўных прыладах';
 
   @override
-  String get displayNavigationRail => 'Show navigation rail on mobile';
+  String get displayNavigationRail => 'Паказваць навігацыйны след на тэлефоне';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Карыстальніцкая рэакцыя';
 
   @override
-  String get moreEvents => 'More events';
+  String get moreEvents => 'Больш падзей';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Скасаваць запрашэнне';
+
+  @override
+  String get noMessagesYet => 'Паведамленняў пакуль што няма';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Доўга цісніце, каб запісаць галасавое паведамленне.';
+
+  @override
+  String get pause => 'Паўза';
+
+  @override
+  String get resume => 'Працягнуць';
+
+  @override
+  String get newSubSpace => 'Новая пад-прастора';
+
+  @override
+  String get moveToDifferentSpace => 'Перамясціцца ў іншую прастору';
+
+  @override
+  String get moveUp => 'Перамясціць вышэй';
+
+  @override
+  String get moveDown => 'Перамясціць ніжэй';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'Гэты чат будзе выдалены з прасторы, але з\'явіцца ў вашым спісе чатаў.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats чатаў';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Удзельнік прасторы $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Удзельнікі прасторы з $spaces могуць грукацца';
+  }
+
+  @override
+  String get donate => 'Даць грошы';
 }

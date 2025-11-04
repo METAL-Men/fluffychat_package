@@ -9,7 +9,7 @@ class L10nVi extends L10n {
   L10nVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => '';
+  String get alwaysUse24HourFormat => 'không';
 
   @override
   String get repeatPassword => 'Nhập lại mật khẩu';
@@ -18,17 +18,17 @@ class L10nVi extends L10n {
   String get notAnImage => 'Không phải tệp ảnh.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'Cài mức phân quyền';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      'Vui lòng chọn vai trò được xác định trước bên dưới hoặc nhập mức quyền tùy chỉnh từ 0 đến 100.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Chặn người dùng';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => 'Người dùng thường';
 
   @override
   String get remove => 'Loại bỏ';
@@ -102,26 +102,25 @@ class L10nVi extends L10n {
   String get allChats => 'Tất cả hội thoại';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+  String get commandHint_roomupgrade => 'Nâng cấp phòng lên phiên bản mặc định';
 
   @override
   String get commandHint_googly => 'Send some googly eyes';
 
   @override
-  String get commandHint_cuddle => 'Send a cuddle';
+  String get commandHint_cuddle => 'Gửi cái ôm';
 
   @override
   String get commandHint_hug => 'Gửi một cái ôm';
 
   @override
   String googlyEyesContent(String senderName) {
-    return '$senderName sends you googly eyes';
+    return '$senderName gửi nháy mắt';
   }
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName cuddles you';
+    return '$senderName ôm nào';
   }
 
   @override
@@ -158,7 +157,7 @@ class L10nVi extends L10n {
 
   @override
   String get askSSSSSign =>
-      'To be able to sign the other person, please enter your secure store passphrase or recovery key.';
+      'Để có thể ký tên cho người khác, vui lòng nhập mật khẩu lưu trữ an toàn hoặc khóa khôi phục của bạn.';
 
   @override
   String askVerificationRequest(String username) {
@@ -167,7 +166,7 @@ class L10nVi extends L10n {
 
   @override
   String get autoplayImages =>
-      'Automatically play animated stickers and emotes';
+      'Tự động chạy nhãn dán hình động và biểu tượng cảm xúc';
 
   @override
   String badServerLoginTypesException(String serverVersions,
@@ -176,13 +175,13 @@ class L10nVi extends L10n {
   }
 
   @override
-  String get sendTypingNotifications => 'Send typing notifications';
+  String get sendTypingNotifications => 'Gửi thông báo đang nhập';
 
   @override
-  String get swipeRightToLeftToReply => 'Swipe right to left to reply';
+  String get swipeRightToLeftToReply => 'Gạt từ phải sang trái để trả lời';
 
   @override
-  String get sendOnEnter => 'Send on enter';
+  String get sendOnEnter => 'Gửi bằng Enter';
 
   @override
   String badServerVersionsException(
@@ -191,7 +190,7 @@ class L10nVi extends L10n {
       Object serverVerions,
       Object supoortedVersions,
       Object suportedVersions) {
-    return 'Máy chủ nhà hỗ trợ Spec phiên bản:\n$serverVerions\nNhưng ứng dụng này chỉ hỗ trợ $supportedVersions';
+    return 'Máy chủ hỗ trợ Spec phiên bản:\n$serverVerions\nNhưng ứng dụng này chỉ hỗ trợ $supportedVersions';
   }
 
   @override
@@ -1640,25 +1639,24 @@ class L10nVi extends L10n {
   String get openChat => 'Open Chat';
 
   @override
-  String get markAsRead => 'Mark as read';
+  String get markAsRead => 'Đánh dấu đã đọc';
 
   @override
-  String get reportUser => 'Report user';
+  String get reportUser => 'Báo cáo người dùng';
 
   @override
-  String get dismiss => 'Dismiss';
+  String get dismiss => 'Bỏ';
 
   @override
   String reactedWith(String sender, String reaction) {
-    return '$sender reacted with $reaction';
+    return '$sender bày tỏ $reaction';
   }
 
   @override
-  String get pinMessage => 'Pin to room';
+  String get pinMessage => 'Ghim phòng';
 
   @override
-  String get confirmEventUnpin =>
-      'Are you sure to permanently unpin the event?';
+  String get confirmEventUnpin => 'Bạn có muốn bỏ ghim sự kiện?';
 
   @override
   String get emojis => 'Emojis';
@@ -2403,7 +2401,7 @@ class L10nVi extends L10n {
       'Note: When you connect all your devices to the chat backup, they are automatically verified.';
 
   @override
-  String get continueText => 'Continue';
+  String get continueText => 'Tiếp';
 
   @override
   String get welcomeText =>
@@ -2736,4 +2734,51 @@ class L10nVi extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

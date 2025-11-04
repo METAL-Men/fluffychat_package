@@ -2772,4 +2772,51 @@ class L10nGa extends L10n {
 
   @override
   String get declineInvitation => 'Diúltaigh don chuireadh';
+
+  @override
+  String get noMessagesYet => 'Gan aon teachtaireachtaí fós';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Brúigh go fada chun teachtaireacht gutha a thaifeadadh.';
+
+  @override
+  String get pause => 'Sos';
+
+  @override
+  String get resume => 'Atosú';
+
+  @override
+  String get newSubSpace => 'Fo-spás nua';
+
+  @override
+  String get moveToDifferentSpace => 'Bog go spás difriúil';
+
+  @override
+  String get moveUp => 'Bog suas';
+
+  @override
+  String get moveDown => 'Bog síos';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'Bainfear an comhrá as an spás ach beidh sé fós le feiceáil i do liosta comhrá.';
+
+  @override
+  String countChats(int chats) {
+    return 'comhráite $chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Ball spáis de $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Is féidir le ball spáis de $spaces cnagadh';
+  }
+
+  @override
+  String get donate => 'Tabhair Síntiús';
 }

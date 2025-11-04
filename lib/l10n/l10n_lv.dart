@@ -345,7 +345,7 @@ class L10nLv extends L10n {
 
   @override
   String get yourChatBackupHasBeenSetUp =>
-      'Tērzēšanu rezerves kopēšana tika iestatīta.';
+      'Tērzēšanu rezerves kopēšana iestatīta.';
 
   @override
   String get chatBackup => 'Tērzēšanu rezerves kopēšana';
@@ -1444,7 +1444,7 @@ class L10nLv extends L10n {
 
   @override
   String get tooManyRequestsWarning =>
-      'Pārāk daudz pieprasījumu. Lūgums vēlāk mēģināt vēlreiz.';
+      'Pārāk daudz pieprasījumu. Lūdzu, vēlāk mēģini vēlreiz!';
 
   @override
   String get transferFromAnotherDevice => 'Pārnest no citas ierīces';
@@ -2755,4 +2755,51 @@ class L10nLv extends L10n {
 
   @override
   String get declineInvitation => 'Noraidīt uzaicinājumu';
+
+  @override
+  String get noMessagesYet => 'Vēl nav ziņu';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Ilga piespiešana, lai ierakstītu balss ziņu.';
+
+  @override
+  String get pause => 'Apturēt';
+
+  @override
+  String get resume => 'Atsākt';
+
+  @override
+  String get newSubSpace => 'Jauna apakšvieta';
+
+  @override
+  String get moveToDifferentSpace => 'Pārvietot uz citu vietu';
+
+  @override
+  String get moveUp => 'Pārvietot augšup';
+
+  @override
+  String get moveDown => 'Pārvietot lejup';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'Tērzēšana tiks noņemta no vietas, bet tā joprojām būs redzama tērzēšanu sarakstā.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats tērzēšanas';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return '$spaces dalībnieks';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return '$spaces dalībnieks var pieklauvēt';
+  }
+
+  @override
+  String get donate => 'Ziedot';
 }

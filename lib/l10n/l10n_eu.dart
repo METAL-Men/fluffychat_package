@@ -2750,4 +2750,51 @@ class L10nEu extends L10n {
 
   @override
   String get declineInvitation => 'Uko egin gonbidapenari';
+
+  @override
+  String get noMessagesYet => 'Mezurik ez oraingoz';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Sakatuta mantendu ahots-mezua grabatzeko.';
+
+  @override
+  String get pause => 'Gelditu';
+
+  @override
+  String get resume => 'Jarraitu';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

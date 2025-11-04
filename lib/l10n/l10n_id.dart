@@ -2008,10 +2008,10 @@ class L10nId extends L10n {
   String get invite => 'Undang';
 
   @override
-  String get inviteGroupChat => '📨 Undang percakapan grup';
+  String get inviteGroupChat => '📨 Undangan percakapan grup';
 
   @override
-  String get invitePrivateChat => '📨 Undang percakapan privat';
+  String get invitePrivateChat => '📨 Undangan percakapan privat';
 
   @override
   String get invalidInput => 'Masukan tidak valid!';
@@ -2751,5 +2751,52 @@ class L10nId extends L10n {
   String get moreEvents => 'Peristiwa tambahan';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Tolak undangan';
+
+  @override
+  String get noMessagesYet => 'Belum ada pesan';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Tekan lama untuk merekam pesan suara.';
+
+  @override
+  String get pause => 'Jeda';
+
+  @override
+  String get resume => 'Lanjut';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

@@ -18,17 +18,17 @@ class L10nKo extends L10n {
   String get notAnImage => '이미지 파일이 아닙니다.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => '사용자 지정 권한 수준 설정';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      '아래에서 미리 정의된 역할을 선택하거나 0부터 100 사이의 사용자 지정 권한 수준을 입력해 주세요.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => '사용자 무시';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => '일반 사용자';
 
   @override
   String get remove => '지우기';
@@ -102,8 +102,7 @@ class L10nKo extends L10n {
   String get allChats => '모든 채팅';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+  String get commandHint_roomupgrade => '이 방을 주어진 방 버전으로 업그레이드합니다';
 
   @override
   String get commandHint_googly => '왕눈이 눈알 보내기';
@@ -476,7 +475,7 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => '체크리스트';
 
   @override
   String countParticipants(int count) {
@@ -485,7 +484,7 @@ class L10nKo extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count초대받은';
   }
 
   @override
@@ -2675,4 +2674,51 @@ class L10nKo extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

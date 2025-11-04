@@ -258,12 +258,12 @@ class L10nHr extends L10n {
 
   @override
   String changedTheChatDescriptionTo(String username, String description) {
-    return '$username je promijenio/la opis razgovora u: „$description”';
+    return '$username je promijenio/la opis razgovora u: \'$description\'';
   }
 
   @override
   String changedTheChatNameTo(String username, String chatname) {
-    return '$username je promijenio/la ime razgovora u: „$chatname”';
+    return '$username je promijenio/la ime razgovora u: \'$chatname\'';
   }
 
   @override
@@ -273,7 +273,7 @@ class L10nHr extends L10n {
 
   @override
   String changedTheDisplaynameTo(String username, String displayname) {
-    return '$username je promijenio/la ime u: „$displayname”';
+    return '$username je promijenio/la svoje prikazno ime u: \'$displayname\'';
   }
 
   @override
@@ -540,7 +540,8 @@ class L10nHr extends L10n {
       'Ovo će nepovratno deaktivirati tvoj korisnički račun. Stvarno to želiš?';
 
   @override
-  String get defaultPermissionLevel => 'Standardna razina dozvole';
+  String get defaultPermissionLevel =>
+      'Standardna razina dozvole za nove korisnike';
 
   @override
   String get delete => 'Izbriši';
@@ -974,7 +975,7 @@ class L10nHr extends L10n {
 
   @override
   String get noGoogleServicesWarning =>
-      'Čini se da Firebase Cloud Messaging nije dostupan na tvom uređaju. Za daljnje primanje push obavijesti, preporučujemo da instaliraš ntfy. S ntfy ili drugim pružateljem usluge Unified Push možeš primati push obavijesti na podatkovno siguran način. Ntfy možeš preuzeti s PlayStorea ili s F-Droida.';
+      'Čini se da Firebase Cloud Messaging nije dostupan na tvom uređaju. Za daljnje primanje push obavijesti, preporučujemo da instaliraš ntfy. S ntfy ili drugim pružateljem Unified Push usluge možeš primati push obavijesti na podatkovno siguran način. Ntfy možeš preuzeti s PlayStorea ili s F-Droida.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -1466,7 +1467,7 @@ class L10nHr extends L10n {
 
   @override
   String unknownEvent(String type) {
-    return 'Nepoznat događaj „$type”';
+    return 'Nepoznat događaj \'$type\'';
   }
 
   @override
@@ -2003,10 +2004,10 @@ class L10nHr extends L10n {
   String get invite => 'Pozovi';
 
   @override
-  String get inviteGroupChat => '📨 Pozovi u grupni razgovor';
+  String get inviteGroupChat => '📨 Pozivnica u grupni razgovor';
 
   @override
-  String get invitePrivateChat => '📨 Pozovi u privatni razgovor';
+  String get invitePrivateChat => '📨 Pozivnica u privatni razgovor';
 
   @override
   String get invalidInput => 'Neispravan unos!';
@@ -2746,4 +2747,51 @@ class L10nHr extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

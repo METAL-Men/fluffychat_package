@@ -2633,6 +2633,51 @@ class L10nZh extends L10n {
 
   @override
   String get declineInvitation => '拒绝邀请';
+
+  @override
+  String get noMessagesYet => '尚无消息';
+
+  @override
+  String get longPressToRecordVoiceMessage => '长按录制语音消息。';
+
+  @override
+  String get pause => '暂停';
+
+  @override
+  String get resume => '继续';
+
+  @override
+  String get newSubSpace => '新建子空间';
+
+  @override
+  String get moveToDifferentSpace => '移动到别的空间';
+
+  @override
+  String get moveUp => '上移';
+
+  @override
+  String get moveDown => '下移';
+
+  @override
+  String get removeFromSpaceDescription => '将从空间移除该聊天，但仍出现在聊天列表中。';
+
+  @override
+  String countChats(int chats) {
+    return '$chats 个聊天';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return '$spaces 的空间成员';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return '$spaces 的空间成员可以敲门';
+  }
+
+  @override
+  String get donate => '捐赠';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).

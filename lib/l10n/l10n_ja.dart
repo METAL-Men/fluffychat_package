@@ -1522,10 +1522,10 @@ class L10nJa extends L10n {
   String get voiceMessage => 'ボイスメッセージ';
 
   @override
-  String get waitingPartnerAcceptRequest => 'パートナーのリクエスト承諾待ちです...';
+  String get waitingPartnerAcceptRequest => 'パートナーのリクエスト承諾待ちです…';
 
   @override
-  String get waitingPartnerEmoji => 'パートナーの絵文字承諾待ちです...';
+  String get waitingPartnerEmoji => 'パートナーの絵文字承諾待ちです…';
 
   @override
   String get waitingPartnerNumbers => 'パートナーの数字承諾待ちです…';
@@ -2706,4 +2706,51 @@ class L10nJa extends L10n {
 
   @override
   String get declineInvitation => 'Decline invitation';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Long press to record voice message.';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get newSubSpace => 'New sub space';
+
+  @override
+  String get moveToDifferentSpace => 'Move to different space';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'The chat will be removed from the space but still appear in your chat list.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats chats';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Donate';
 }

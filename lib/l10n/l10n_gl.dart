@@ -490,7 +490,7 @@ class L10nGl extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Comprobar lista';
 
   @override
   String countParticipants(int count) {
@@ -2679,7 +2679,7 @@ class L10nGl extends L10n {
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - Mensaxe de voz de  $sender';
+    return '🎙️ $duration - Mensaxe de voz de $sender';
   }
 
   @override
@@ -2742,7 +2742,8 @@ class L10nGl extends L10n {
       'Fechar a sesión en todos os dispositivos activos';
 
   @override
-  String get displayNavigationRail => 'Show navigation rail on mobile';
+  String get displayNavigationRail =>
+      'Mostrar carril de navegación nos móbiles';
 
   @override
   String get customReaction => 'Reacción personalizada';
@@ -2752,4 +2753,51 @@ class L10nGl extends L10n {
 
   @override
   String get declineInvitation => 'Rexeitar o convite';
+
+  @override
+  String get noMessagesYet => 'Aínda non hai mensaxes';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Pulsación longa para gravar mensaxe de voz.';
+
+  @override
+  String get pause => 'Deter';
+
+  @override
+  String get resume => 'Continuar';
+
+  @override
+  String get newSubSpace => 'Novo sub espazo';
+
+  @override
+  String get moveToDifferentSpace => 'Mover a outro espazo';
+
+  @override
+  String get moveUp => 'Mover arriba';
+
+  @override
+  String get moveDown => 'Mover abaixo';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'Vaise quitar a conversa do espazo pero seguirá aparecendo na túa lista de conversas.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats conversas';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Space member of $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Space member of $spaces can knock';
+  }
+
+  @override
+  String get donate => 'Doar';
 }
