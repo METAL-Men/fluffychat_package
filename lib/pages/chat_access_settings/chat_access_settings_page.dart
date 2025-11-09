@@ -45,26 +45,24 @@ class ChatAccessSettingsPageView extends StatelessWidget {
                     ),
                   ),
                 ),
-                RadioGroup<HistoryVisibility>(
-                  groupValue: room.historyVisibility,
-                  onChanged: controller.historyVisibilityLoading ||
-                          !room.canChangeHistoryVisibility
-                      ? (_) {}
-                      : controller.setHistoryVisibility,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      for (final historyVisibility in HistoryVisibility.values)
-                        RadioListTile<HistoryVisibility>.adaptive(
-                          title: Text(
-                            historyVisibility.getLocalizedString(
-                              MatrixLocals(L10n.of(context)),
-                            ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    for (final historyVisibility in HistoryVisibility.values)
+                      RadioListTile<HistoryVisibility>.adaptive(
+                        title: Text(
+                          historyVisibility.getLocalizedString(
+                            MatrixLocals(L10n.of(context)),
                           ),
-                          value: historyVisibility,
                         ),
-                    ],
-                  ),
+                        value: historyVisibility,
+                        groupValue: room.historyVisibility,
+                        onChanged: controller.historyVisibilityLoading ||
+                                !room.canChangeHistoryVisibility
+                            ? null
+                            : controller.setHistoryVisibility,
+                      ),
+                  ],
                 ),
                 Divider(color: theme.dividerColor),
                 ListTile(
@@ -76,27 +74,26 @@ class ChatAccessSettingsPageView extends StatelessWidget {
                     ),
                   ),
                 ),
-                RadioGroup(
-                  groupValue: room.joinRules,
-                  onChanged: controller.setJoinRule,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      for (final joinRule in controller.availableJoinRules)
-                        if (joinRule != JoinRules.private)
-                          RadioListTile<JoinRules>.adaptive(
-                            enabled: !controller.joinRulesLoading &&
-                                room.canChangeJoinRules,
-                            title: Text(
-                              joinRule.localizedString(
-                                L10n.of(context),
-                                controller.knownSpaceParents,
-                              ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    for (final joinRule in controller.availableJoinRules)
+                      if (joinRule != JoinRules.private)
+                        RadioListTile<JoinRules>.adaptive(
+                          title: Text(
+                            joinRule.localizedString(
+                              L10n.of(context),
+                              controller.knownSpaceParents,
                             ),
-                            value: joinRule,
                           ),
-                    ],
-                  ),
+                          value: joinRule,
+                          groupValue: room.joinRules,
+                          onChanged: !controller.joinRulesLoading &&
+                                  room.canChangeJoinRules
+                              ? controller.setJoinRule
+                              : null,
+                        ),
+                  ],
                 ),
                 Divider(color: theme.dividerColor),
                 if ({JoinRules.public, JoinRules.knock}
@@ -110,25 +107,24 @@ class ChatAccessSettingsPageView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  RadioGroup(
-                    groupValue: room.guestAccess,
-                    onChanged: controller.setGuestAccess,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        for (final guestAccess in GuestAccess.values)
-                          RadioListTile<GuestAccess>.adaptive(
-                            enabled: !controller.guestAccessLoading &&
-                                room.canChangeGuestAccess,
-                            title: Text(
-                              guestAccess.getLocalizedString(
-                                MatrixLocals(L10n.of(context)),
-                              ),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      for (final guestAccess in GuestAccess.values)
+                        RadioListTile<GuestAccess>.adaptive(
+                          title: Text(
+                            guestAccess.getLocalizedString(
+                              MatrixLocals(L10n.of(context)),
                             ),
-                            value: guestAccess,
                           ),
-                      ],
-                    ),
+                          value: guestAccess,
+                          groupValue: room.guestAccess,
+                          onChanged: !controller.guestAccessLoading &&
+                                  room.canChangeGuestAccess
+                              ? controller.setGuestAccess
+                              : null,
+                        ),
+                    ],
                   ),
                   Divider(color: theme.dividerColor),
                   ListTile(
