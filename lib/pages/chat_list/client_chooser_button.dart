@@ -82,7 +82,7 @@ class ClientChooserButton extends StatelessWidget {
             Text(L10n.of(context).archive),
           ],
         ),
-      ),
+      ),*/
       PopupMenuItem(
         value: SettingsAction.settings,
         child: Row(
@@ -227,9 +227,9 @@ class ClientChooserButton extends StatelessWidget {
         case SettingsAction.invite:
           FluffyShare.shareInviteLink(context);
           break;
-        case SettingsAction.support:
-          launchUrlString(AppConfig.donationUrl);
-          break;
+        // case SettingsAction.support:
+        //   launchUrlString(AppConfig.supportUrl);
+        //   break;
         case SettingsAction.settings:
           context.go('/rooms/settings');
           break;
@@ -249,7 +249,7 @@ enum SettingsAction {
   newGroup,
   setStatus,
   invite,
-  support,
+  //support,
   settings,
   archive,
   metalConnect,
