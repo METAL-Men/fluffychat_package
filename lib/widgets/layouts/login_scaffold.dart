@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'package:fluffychat/config/app_config.dart';
@@ -108,7 +107,7 @@ class _PrivacyButtons extends StatelessWidget {
               ),
             ),
             TextButton(
-              onPressed: () => launchUrl(AppConfig.privacyUrl),
+              onPressed: () => launchUrlString(AppConfig.privacyUrl),
               child: Text(
                 L10n.of(context).privacy,
                 style: shadowTextStyle,

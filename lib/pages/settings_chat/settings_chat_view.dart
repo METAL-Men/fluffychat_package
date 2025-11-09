@@ -9,6 +9,7 @@ import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/widgets/layouts/max_width_body.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:fluffychat/widgets/settings_switch_list_tile.dart';
+import '../../config/app_config.dart';
 import 'settings_chat.dart';
 
 class SettingsChatView extends StatelessWidget {
@@ -58,12 +59,10 @@ class SettingsChatView extends StatelessWidget {
                 setting: AppSettings.swipeRightToLeftToReply,
               ),
               if (PlatformInfos.isMobile)
-                SettingsSwitchListTile.adaptive(
+                const SettingsSwitchListTile.adaptive(
                   title: "Spell check",
                   subtitle: "(Experimental feature)",
-                  onChanged: (b) => AppConfig.spellCheck = b,
-                  storeKey: SettingKeys.spellCheck,
-                  defaultValue: AppConfig.spellCheck,
+                  setting: AppSettings.spellCheck,
                 ),
               Divider(color: theme.dividerColor),
               ListTile(

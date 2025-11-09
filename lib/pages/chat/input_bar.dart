@@ -378,8 +378,6 @@ class InputBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Autocomplete<Map<String, String?>>(
-      focusNode: focusNode,
-      textEditingController: controller,
       optionsBuilder: getSuggestions,
       fieldViewBuilder: (context, controller, focusNode, _) => TextField(
         controller: controller,

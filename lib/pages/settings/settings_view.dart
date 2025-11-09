@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'package:fluffychat/config/app_config.dart';
@@ -245,7 +244,7 @@ class SettingsView extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.privacy_tip_outlined),
                     title: Text(L10n.of(context).privacy),
-                    onTap: () => launchUrl(AppConfig.privacyUrl),
+                    onTap: () => launchUrlString(AppConfig.privacyUrl),
                   ),
                   ListTile(
                     leading: const Icon(Icons.info_outline_rounded),
