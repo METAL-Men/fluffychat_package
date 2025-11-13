@@ -36,11 +36,11 @@ class SettingsChatView extends StatelessWidget {
                 subtitle: L10n.of(context).formattedMessagesDescription,
                 setting: AppSettings.renderHtml,
               ),
-              SettingsSwitchListTile.adaptive(
+              /* SettingsSwitchListTile.adaptive(
                 title: L10n.of(context).hideRedactedMessages,
                 subtitle: L10n.of(context).hideRedactedMessagesBody,
                 setting: AppSettings.hideRedactedEvents,
-              ),
+              ), */
               SettingsSwitchListTile.adaptive(
                 title: L10n.of(context).hideInvalidOrUnknownMessageFormats,
                 setting: AppSettings.hideUnknownEvents,
