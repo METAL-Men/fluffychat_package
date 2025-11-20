@@ -2291,7 +2291,7 @@ class L10nEu extends L10n {
       'Plataforma honetan ezin da datu-basea zifratu';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Une honetan $count erabiltzaile daude blokeatuta.';
   }
 
@@ -2765,36 +2765,106 @@ class L10nEu extends L10n {
   String get resume => 'Jarraitu';
 
   @override
-  String get newSubSpace => 'New sub space';
+  String get newSubSpace => 'Azpi-gune berria';
 
   @override
-  String get moveToDifferentSpace => 'Move to different space';
+  String get moveToDifferentSpace => 'Beste gune batera mugitu';
 
   @override
-  String get moveUp => 'Move up';
+  String get moveUp => 'Eraman gora';
 
   @override
-  String get moveDown => 'Move down';
+  String get moveDown => 'Eraman behera';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'Txata gunetik kenduko da, baina txaten zerrendan mantenduko da.';
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats txat';
   }
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return '$spaces guneko kidea';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return '$spaces guneko kideak sartzeko baimena eska dezake';
   }
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Egin dohaintza';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username(e)k bozketa hasi du.';
+  }
+
+  @override
+  String get poll => 'Bozketa';
+
+  @override
+  String get startPoll => 'Hasi bozketa';
+
+  @override
+  String get endPoll => 'Amaitu bozketa';
+
+  @override
+  String get answersVisible => 'Erakutsi emaitzak';
+
+  @override
+  String get answersHidden => 'Ezkutatu emaitzak';
+
+  @override
+  String get pollQuestion => 'Bozketako galdera';
+
+  @override
+  String get answerOption => 'Erantzun-aukera';
+
+  @override
+  String get addAnswerOption => 'Gehitu erantzun-aukera';
+
+  @override
+  String get allowMultipleAnswers => 'Baimendu erantzun bat baino gehiago';
+
+  @override
+  String get pollHasBeenEnded => 'Bozketa amaitu da';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count bozka',
+      one: 'Bozka bat',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Emaitzak bozketak amaitu duenean egongo dira ikusgai';
+
+  @override
+  String get replyInThread => 'Erantzun harian';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count erantzun',
+      one: 'Erantzun bat',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Haria';
+
+  @override
+  String get backToMainChat => 'Joan txat nagusira';
 }

@@ -1519,10 +1519,10 @@ class L10nBe extends L10n {
   }
 
   @override
-  String get unverified => 'Не праверана';
+  String get unverified => 'Не спраўджана';
 
   @override
-  String get verified => 'Праверана';
+  String get verified => 'Спраўджана';
 
   @override
   String get verify => 'Спраўдзіць';
@@ -1886,7 +1886,7 @@ class L10nBe extends L10n {
 
   @override
   String get noKeyForThisMessage =>
-      'Гэта можа здарыцца з-за таго, што паведамленне было даслана да таго, як вы увайшлі ў уліковы запіс на гэтай прыладзе.\n\nТаксама верагодна, што адпраўшчык заблакіраваў вашу прыладу ці ў вас хібы з інтэрнэтам.\n\nВы можаце чытаць гэта паведамленне з іншага сеансу? Тад далліце паведамленне адтуль! Перайдзіце ў Налады > Прылады і пераканайцеся ў тым, што вашы прылады верыфікавалі адна адну. Калі вы адкрыеце пакой наступны раз і абодве сэсіі будуць запушчаны, ключы павінны сінхранізавацца аўтаматычна.\n\nВы не хаціце згубіць клбчы, калі будзеце выходзіць ці змяняць прылады? Пераканайцеся ў тым, што вы уключылі рэзервовае капіраванне чатаў у наладах.';
+      'Гэта можа здарыцца з-за таго, што паведамленне было даслана да таго, як вы увайшлі ў уліковы запіс на гэтай прыладзе.\n\nТаксама верагодна, што адпраўшчык заблакіраваў вашу прыладу ці ў вас хібы з інтэрнэтам.\n\nВы можаце чытаць гэта паведамленне з іншага сеансу? Тад дашліце паведамленне адтуль! Перайдзіце ў Налады > Прылады і пераканайцеся ў тым, што вашы прылады верыфікавалі адна адну. Калі вы адкрыеце пакой наступны раз і абодве сэсіі будуць запушчаны, ключы павінны сінхранізавацца аўтаматычна.\n\nВы не хаціце згубіць клбчы, калі будзеце выходзіць ці змяняць прылады? Пераканайцеся ў тым, што вы уключылі рэзервовае капіраванне чатаў у наладах.';
 
   @override
   String get newGroup => 'Новая група';
@@ -1928,7 +1928,7 @@ class L10nBe extends L10n {
       'Прасторы дазваляюць аб\'ядноўваць вашы чаты і ствараць агульныя ці асобныя супольнасці.';
 
   @override
-  String get encryptThisChat => 'Шывраваць гэты чат';
+  String get encryptThisChat => 'Шыфраваць гэты чат';
 
   @override
   String get disableEncryptionWarning =>
@@ -2293,7 +2293,7 @@ class L10nBe extends L10n {
       'Шыфраванне базы даных не падтрымліваецца гэтай платформай';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'На гэты момант, $count карыстальнікаў заблакіравана.';
   }
 
@@ -2697,13 +2697,13 @@ class L10nBe extends L10n {
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
-      'Перакрыжавана пацверджаныя прылады, калі ўключана';
+      'З перакрыжаваным спраўджваннем прылад, калі ўключана';
 
   @override
-  String get crossVerifiedDevices => 'Перакрыжавана пацверджаныя прылады';
+  String get crossVerifiedDevices => 'Перакрыжавана спраўджаныя прылады';
 
   @override
-  String get verifiedDevicesOnly => 'Толькі пацаерджаныя прылады';
+  String get verifiedDevicesOnly => 'Толькі спраўджаныя прылады';
 
   @override
   String get takeAPhoto => 'Зрабіць здымак';
@@ -2794,4 +2794,74 @@ class L10nBe extends L10n {
 
   @override
   String get donate => 'Даць грошы';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username пачаў апытанне.';
+  }
+
+  @override
+  String get poll => 'Апытанне';
+
+  @override
+  String get startPoll => 'Пачаць апытанне';
+
+  @override
+  String get endPoll => 'Скончыць апытанне';
+
+  @override
+  String get answersVisible => 'Адказы бачны';
+
+  @override
+  String get answersHidden => 'Адказы схаваны';
+
+  @override
+  String get pollQuestion => 'Пытанне апытання';
+
+  @override
+  String get answerOption => 'Варыянт адказу';
+
+  @override
+  String get addAnswerOption => 'Дадаць варыянт адказу';
+
+  @override
+  String get allowMultipleAnswers => 'Дазволіць некалькі адказаў';
+
+  @override
+  String get pollHasBeenEnded => 'Апытанне было скончана';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count галасы(-оў)',
+      one: 'Адзін голас',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Вынікі будуць бачны, калі апытанне скончыцца';
+
+  @override
+  String get replyInThread => 'Адказаць у гутарку';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count адказа(-ў)',
+      one: 'Адзін адказ',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Гутарка';
+
+  @override
+  String get backToMainChat => 'Вярнуцца ў галоўны чат';
 }

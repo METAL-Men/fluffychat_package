@@ -2298,7 +2298,7 @@ class L10nLv extends L10n {
       'Šajā platformā datubāzes šifrēšana netiek nodrošināta';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Šobrīd ir izslēgti $count lietotāji.';
   }
 
@@ -2802,4 +2802,76 @@ class L10nLv extends L10n {
 
   @override
   String get donate => 'Ziedot';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username uzsāka aptauju.';
+  }
+
+  @override
+  String get poll => 'Aptauja';
+
+  @override
+  String get startPoll => 'Sākt aptauju';
+
+  @override
+  String get endPoll => 'Noslēgt aptauju';
+
+  @override
+  String get answersVisible => 'Atbildes ir redzamas';
+
+  @override
+  String get answersHidden => 'Atbildes ir paslēptas';
+
+  @override
+  String get pollQuestion => 'Aptaujas jautājums';
+
+  @override
+  String get answerOption => 'Atbildes iespēja';
+
+  @override
+  String get addAnswerOption => 'Pievienot atbildes iespēju';
+
+  @override
+  String get allowMultipleAnswers => 'Atļaut vairākas atbildes';
+
+  @override
+  String get pollHasBeenEnded => 'Aptauja ir noslēgusies';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count balsis',
+      one: '$count balss',
+      zero: '$count balsu',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Atbildes būs redzams, kad aptauja noslēgsies';
+
+  @override
+  String get replyInThread => 'Atbildēt pavedienā';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count atbildes',
+      one: '$count atbilde',
+      zero: '$count atbilžu',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Pavediens';
+
+  @override
+  String get backToMainChat => 'Atgriezties galvenajā tērzēšanā';
 }

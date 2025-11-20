@@ -2285,7 +2285,7 @@ class L10nSl extends L10n {
       'Database encryption is not supported on this platform';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Right now there are $count users blocked.';
   }
 
@@ -2788,4 +2788,74 @@ class L10nSl extends L10n {
 
   @override
   String get donate => 'Donate';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username started a poll.';
+  }
+
+  @override
+  String get poll => 'Poll';
+
+  @override
+  String get startPoll => 'Start poll';
+
+  @override
+  String get endPoll => 'End poll';
+
+  @override
+  String get answersVisible => 'Answers visible';
+
+  @override
+  String get answersHidden => 'Answers hidden';
+
+  @override
+  String get pollQuestion => 'Poll question';
+
+  @override
+  String get answerOption => 'Answer option';
+
+  @override
+  String get addAnswerOption => 'Add answer option';
+
+  @override
+  String get allowMultipleAnswers => 'Allow multiple answers';
+
+  @override
+  String get pollHasBeenEnded => 'Poll has been ended';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count votes',
+      one: 'One vote',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Answers will be visible when poll has ended';
+
+  @override
+  String get replyInThread => 'Reply in thread';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count replies',
+      one: 'One reply',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Thread';
+
+  @override
+  String get backToMainChat => 'Back to main chat';
 }

@@ -2311,7 +2311,7 @@ class L10nGa extends L10n {
       'Ní thacaítear le criptiú bunachar sonraí ar an ardán seo';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Faoi láthair tá bac curtha ar úsáideoirí $count.';
   }
 
@@ -2819,4 +2819,74 @@ class L10nGa extends L10n {
 
   @override
   String get donate => 'Tabhair Síntiús';
+
+  @override
+  String startedAPoll(String username) {
+    return 'Chuir $username tús le pobalbhreith.';
+  }
+
+  @override
+  String get poll => 'Polaitíocht';
+
+  @override
+  String get startPoll => 'Tosaigh pobalbhreith';
+
+  @override
+  String get endPoll => 'Deireadh leis an pobalbhreith';
+
+  @override
+  String get answersVisible => 'Freagraí le feiceáil';
+
+  @override
+  String get answersHidden => 'Freagraí i bhfolach';
+
+  @override
+  String get pollQuestion => 'Ceist pobalbhreithe';
+
+  @override
+  String get answerOption => 'Rogha freagartha';
+
+  @override
+  String get addAnswerOption => 'Cuir rogha freagra leis';
+
+  @override
+  String get allowMultipleAnswers => 'Ceadaigh freagraí iolracha';
+
+  @override
+  String get pollHasBeenEnded => 'Tá deireadh leis an pobalbhreith';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count vótaí',
+      one: 'Vóta amháin',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Beidh freagraí le feiceáil nuair a bheidh an pobalbhreith thart';
+
+  @override
+  String get replyInThread => 'Freagra sa snáithe';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count freagraí',
+      one: 'Freagra amháin',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Snáithe';
+
+  @override
+  String get backToMainChat => 'Ar ais chuig an bpríomhchomhrá';
 }

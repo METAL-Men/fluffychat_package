@@ -2294,7 +2294,7 @@ class L10nGl extends L10n {
       'Nesta plataforma non temos soporte para cifrar a base de datos';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Agora mesmo hai $count usuarias bloqueadas.';
   }
 
@@ -2790,14 +2790,84 @@ class L10nGl extends L10n {
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return 'Participa no espazo $spaces';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return 'Os membros de $spaces poden petar á porta';
   }
 
   @override
   String get donate => 'Doar';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username publicou unha enquisa.';
+  }
+
+  @override
+  String get poll => 'Enquisa';
+
+  @override
+  String get startPoll => 'Publicar enquisa';
+
+  @override
+  String get endPoll => 'Finalizar enquisa';
+
+  @override
+  String get answersVisible => 'Resultados visibles';
+
+  @override
+  String get answersHidden => 'Non se ven os resultados';
+
+  @override
+  String get pollQuestion => 'Pregunta da enquisa';
+
+  @override
+  String get answerOption => 'Opción de resposta';
+
+  @override
+  String get addAnswerOption => 'Engadir opción';
+
+  @override
+  String get allowMultipleAnswers => 'Permitir varias respostas';
+
+  @override
+  String get pollHasBeenEnded => 'Rematou a enquisa';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count votos',
+      one: 'Un voto',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'As respostas son visibles ao finalizar a enquisa';
+
+  @override
+  String get replyInThread => 'Responder ao fío';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count respostas',
+      one: 'Unha resposta',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Fío';
+
+  @override
+  String get backToMainChat => 'Volver á conversa principal';
 }

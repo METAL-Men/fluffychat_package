@@ -52,6 +52,7 @@ import 'l10n_te.dart' deferred as l10n_te;
 import 'l10n_th.dart' deferred as l10n_th;
 import 'l10n_tr.dart' deferred as l10n_tr;
 import 'l10n_uk.dart' deferred as l10n_uk;
+import 'l10n_uz.dart' deferred as l10n_uz;
 import 'l10n_vi.dart' deferred as l10n_vi;
 import 'l10n_yue.dart' deferred as l10n_yue;
 import 'l10n_zh.dart' deferred as l10n_zh;
@@ -191,6 +192,7 @@ abstract class L10n {
     Locale('th'),
     Locale('tr'),
     Locale('uk'),
+    Locale('uz'),
     Locale('vi'),
     Locale('yue'),
     Locale('zh'),
@@ -4101,7 +4103,7 @@ abstract class L10n {
   ///
   /// In en, this message translates to:
   /// **'Right now there are {count} users blocked.'**
-  String thereAreCountUsersBlocked(Object count);
+  String thereAreCountUsersBlocked(num count);
 
   /// No description provided for @restricted.
   ///
@@ -4966,6 +4968,108 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Donate'**
   String get donate;
+
+  /// No description provided for @startedAPoll.
+  ///
+  /// In en, this message translates to:
+  /// **'{username} started a poll.'**
+  String startedAPoll(String username);
+
+  /// No description provided for @poll.
+  ///
+  /// In en, this message translates to:
+  /// **'Poll'**
+  String get poll;
+
+  /// No description provided for @startPoll.
+  ///
+  /// In en, this message translates to:
+  /// **'Start poll'**
+  String get startPoll;
+
+  /// No description provided for @endPoll.
+  ///
+  /// In en, this message translates to:
+  /// **'End poll'**
+  String get endPoll;
+
+  /// No description provided for @answersVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Answers visible'**
+  String get answersVisible;
+
+  /// No description provided for @answersHidden.
+  ///
+  /// In en, this message translates to:
+  /// **'Answers hidden'**
+  String get answersHidden;
+
+  /// No description provided for @pollQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Poll question'**
+  String get pollQuestion;
+
+  /// No description provided for @answerOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer option'**
+  String get answerOption;
+
+  /// No description provided for @addAnswerOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Add answer option'**
+  String get addAnswerOption;
+
+  /// No description provided for @allowMultipleAnswers.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow multiple answers'**
+  String get allowMultipleAnswers;
+
+  /// No description provided for @pollHasBeenEnded.
+  ///
+  /// In en, this message translates to:
+  /// **'Poll has been ended'**
+  String get pollHasBeenEnded;
+
+  /// No description provided for @countVotes.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{One vote} other{{count} votes}}'**
+  String countVotes(int count);
+
+  /// No description provided for @answersWillBeVisibleWhenPollHasEnded.
+  ///
+  /// In en, this message translates to:
+  /// **'Answers will be visible when poll has ended'**
+  String get answersWillBeVisibleWhenPollHasEnded;
+
+  /// No description provided for @replyInThread.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply in thread'**
+  String get replyInThread;
+
+  /// No description provided for @countReplies.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{One reply} other{{count} replies}}'**
+  String countReplies(int count);
+
+  /// No description provided for @thread.
+  ///
+  /// In en, this message translates to:
+  /// **'Thread'**
+  String get thread;
+
+  /// No description provided for @backToMainChat.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to main chat'**
+  String get backToMainChat;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
@@ -5026,6 +5130,7 @@ class _L10nDelegate extends LocalizationsDelegate<L10n> {
         'th',
         'tr',
         'uk',
+        'uz',
         'vi',
         'yue',
         'zh'
@@ -5166,6 +5271,8 @@ Future<L10n> lookupL10n(Locale locale) {
       return l10n_tr.loadLibrary().then((dynamic _) => l10n_tr.L10nTr());
     case 'uk':
       return l10n_uk.loadLibrary().then((dynamic _) => l10n_uk.L10nUk());
+    case 'uz':
+      return l10n_uz.loadLibrary().then((dynamic _) => l10n_uz.L10nUz());
     case 'vi':
       return l10n_vi.loadLibrary().then((dynamic _) => l10n_vi.L10nVi());
     case 'yue':

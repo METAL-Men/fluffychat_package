@@ -2206,7 +2206,7 @@ class L10nZh extends L10n {
   String get noDatabaseEncryption => '数据库加密在此平台上不受支持';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return '目前有 $count 名用户被封禁。';
   }
 
@@ -2678,6 +2678,75 @@ class L10nZh extends L10n {
 
   @override
   String get donate => '捐赠';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username 启动了投票。';
+  }
+
+  @override
+  String get poll => '投票';
+
+  @override
+  String get startPoll => '启动投票';
+
+  @override
+  String get endPoll => '结束投票';
+
+  @override
+  String get answersVisible => '结果可见';
+
+  @override
+  String get answersHidden => '结果隐藏';
+
+  @override
+  String get pollQuestion => '投票问题';
+
+  @override
+  String get answerOption => '结果选项';
+
+  @override
+  String get addAnswerOption => '添加结果选项';
+
+  @override
+  String get allowMultipleAnswers => '允许多个结果';
+
+  @override
+  String get pollHasBeenEnded => '投票已结束';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count 票',
+      one: '票',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded => '投票结束后将显示结果';
+
+  @override
+  String get replyInThread => '在嘟文串中回复';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count 则回复',
+      one: '则回复',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => '嘟文串';
+
+  @override
+  String get backToMainChat => '返回主聊天';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4879,7 +4948,7 @@ class L10nZhHant extends L10nZh {
   String get noDatabaseEncryption => '此平台不支援資料庫加密';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return '目前有 $count 名使用者被封鎖。';
   }
 

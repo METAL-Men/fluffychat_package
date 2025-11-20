@@ -501,7 +501,14 @@ class L10nRu extends L10n {
 
   @override
   String countInvited(int count) {
-    return '';
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Приглашены # участников',
+      few: 'Приглашены # участника',
+      one: 'Приглашён # участник',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -879,7 +886,14 @@ class L10nRu extends L10n {
 
   @override
   String loadCountMoreParticipants(int count) {
-    return '';
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Загрузить еще # участников',
+      few: 'Загрузить еще # участников',
+      one: 'Загрузить еще # участника',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -1294,7 +1308,7 @@ class L10nRu extends L10n {
 
   @override
   String sendImages(int count) {
-    return '';
+    return 'Отправить $count изображение';
   }
 
   @override
@@ -1497,7 +1511,7 @@ class L10nRu extends L10n {
 
   @override
   String userAndOthersAreTyping(String username, int count) {
-    return '';
+    return '$username и еще $count печатают…';
   }
 
   @override
@@ -1847,7 +1861,14 @@ class L10nRu extends L10n {
 
   @override
   String countFiles(int count) {
-    return '';
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '# файлов',
+      few: '# файла',
+      one: '# файл',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -2298,8 +2319,15 @@ class L10nRu extends L10n {
       'Шифрование базы данных не поддерживается на этой платформе';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
-    return '';
+  String thereAreCountUsersBlocked(num count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'заблокированы # пользователей',
+      few: 'заблокированы # пользователя',
+      one: 'заблокирован # пользователь',
+    );
+    return 'Сейчас $_temp0.';
   }
 
   @override
@@ -2801,4 +2829,74 @@ class L10nRu extends L10n {
 
   @override
   String get donate => 'Donate';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username started a poll.';
+  }
+
+  @override
+  String get poll => 'Poll';
+
+  @override
+  String get startPoll => 'Start poll';
+
+  @override
+  String get endPoll => 'End poll';
+
+  @override
+  String get answersVisible => 'Answers visible';
+
+  @override
+  String get answersHidden => 'Answers hidden';
+
+  @override
+  String get pollQuestion => 'Poll question';
+
+  @override
+  String get answerOption => 'Answer option';
+
+  @override
+  String get addAnswerOption => 'Add answer option';
+
+  @override
+  String get allowMultipleAnswers => 'Allow multiple answers';
+
+  @override
+  String get pollHasBeenEnded => 'Poll has been ended';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count голосов',
+      one: 'Один голос',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Answers will be visible when poll has ended';
+
+  @override
+  String get replyInThread => 'Reply in thread';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ответов',
+      one: 'Один ответ',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Thread';
+
+  @override
+  String get backToMainChat => 'Back to main chat';
 }

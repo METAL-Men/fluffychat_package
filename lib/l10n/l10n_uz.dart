@@ -4,186 +4,190 @@ import 'l10n.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for Danish (`da`).
-class L10nDa extends L10n {
-  L10nDa([String locale = 'da']) : super(locale);
+/// The translations for Uzbek (`uz`).
+class L10nUz extends L10n {
+  L10nUz([String locale = 'uz']) : super(locale);
 
   @override
   String get alwaysUse24HourFormat => 'true';
 
   @override
-  String get repeatPassword => 'Gentag password';
+  String get repeatPassword => 'Parolni takrorlang';
 
   @override
-  String get notAnImage => 'Ikke en billedfil.';
+  String get notAnImage => 'Rasm fayli emas.';
 
   @override
-  String get setCustomPermissionLevel => 'Indstil særligt tilladelsesniveau';
+  String get setCustomPermissionLevel => 'Maxsus ruxsatlar darajasini sozlash';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Vælg en prædefineret rolle herunder eller indtaste et særligt tilladelsesniveau mellem 0 og 100.';
+      'Quyidagi oldindan belgilangan rolni tanlang yoki 0-100 orasidagi maxsus ruxsatlar darajasini kiriting.';
 
   @override
-  String get ignoreUser => 'Ignorér bruger';
+  String get ignoreUser => 'Foydalanuvchini e’tiborsiz qoldirish';
 
   @override
-  String get normalUser => 'Normal bruger';
+  String get normalUser => 'Oddiy foydalanuvchi';
 
   @override
-  String get remove => 'Fjern';
+  String get remove => 'O‘chirish';
 
   @override
-  String get importNow => 'Importer nu';
+  String get importNow => 'Hozir import qilish';
 
   @override
-  String get importEmojis => 'Importer emojis';
+  String get importEmojis => 'Emojilarni import qilish';
 
   @override
-  String get importFromZipFile => 'Importer fra .zip fil';
+  String get importFromZipFile => '.zip faylidan import qilish';
 
   @override
-  String get exportEmotePack => 'Eksportér Emote-pakke som .zip-fil';
+  String get exportEmotePack =>
+      'Emotsiyalar to‘plamini .zip fayl ko‘rinishida eksport qilish';
 
   @override
-  String get replace => 'Erstat';
+  String get replace => 'Almashtirmoq';
 
   @override
-  String get about => 'Om';
+  String get about => 'Biz haqimizda';
 
   @override
   String aboutHomeserver(String homeserver) {
-    return 'About $homeserver';
+    return '$homeserver haqida';
   }
 
   @override
-  String get accept => 'Accept';
+  String get accept => 'Qabul qilmoq';
 
   @override
   String acceptedTheInvitation(String username) {
-    return '👍 $username accepted the invitation';
+    return '👍 $username taklifni qabul qildi';
   }
 
   @override
-  String get account => 'Account';
+  String get account => 'Hisob';
 
   @override
   String activatedEndToEndEncryption(String username) {
-    return '🔐 $username activated end to end encryption';
+    return '🔐 $username shifrlashni yakunlash uchun faollashtirdi';
   }
 
   @override
-  String get addEmail => 'Add email';
+  String get addEmail => 'Email qo‘shish';
 
   @override
   String get confirmMatrixId =>
-      'Please confirm your Matrix ID in order to delete your account.';
+      'Hisobingizni o‘chirish uchun Matrix ID hisobingizni tasdiqlang.';
 
   @override
   String supposedMxid(String mxid) {
-    return 'This should be $mxid';
+    return 'Bu $mxid bo‘lishi kerak';
   }
 
   @override
-  String get addChatDescription => 'Add a chat description...';
+  String get addChatDescription => 'Chat tavsifini kiriting...';
 
   @override
-  String get addToSpace => 'Add to space';
+  String get addToSpace => 'Maydonga qo‘shish';
 
   @override
   String get admin => 'Admin';
 
   @override
-  String get alias => 'alias';
+  String get alias => 'taxallus';
 
   @override
-  String get all => 'All';
+  String get all => 'Hammasi';
 
   @override
-  String get allChats => 'All chats';
+  String get allChats => 'Hamma chatlar';
 
   @override
   String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+      'Bu guruhni berilgan guruh versiyasiga yangilang';
 
   @override
-  String get commandHint_googly => 'Send some googly eyes';
+  String get commandHint_googly => 'G‘ilay ko‘zlarini yuboring';
 
   @override
-  String get commandHint_cuddle => 'Send a cuddle';
+  String get commandHint_cuddle => 'Erkalash yuborish';
 
   @override
-  String get commandHint_hug => 'Send a hug';
+  String get commandHint_hug => 'Quchoqlash yuborish';
 
   @override
   String googlyEyesContent(String senderName) {
-    return '$senderName sends you googly eyes';
+    return '$senderName sizga gʻilay ko‘zlarini yubormoqda';
   }
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName cuddles you';
+    return '$senderName sizni erkalamoqda';
   }
 
   @override
   String hugContent(String senderName) {
-    return '$senderName hugs you';
+    return '$senderName sizni quchoqlamoqda';
   }
 
   @override
   String answeredTheCall(String senderName) {
-    return '$senderName answered the call';
+    return '$senderName chaqiruvga javob berdi';
   }
 
   @override
-  String get anyoneCanJoin => 'Anyone can join';
+  String get anyoneCanJoin => 'Har kim qo‘shilishi mumkin';
 
   @override
-  String get appLock => 'App lock';
+  String get appLock => 'Ilova qulfi';
 
   @override
   String get appLockDescription =>
-      'Lock the app when not using with a pin code';
+      'PIN kod ishlatilmayotganida ilovani qulflash';
 
   @override
-  String get archive => 'Archive';
+  String get archive => 'Arxiv';
 
   @override
-  String get areGuestsAllowedToJoin => 'Are guest users allowed to join';
+  String get areGuestsAllowedToJoin =>
+      'Mehmon foydalanuvchilarga qo‘shilishga ruxsat berilganmi';
 
   @override
-  String get areYouSure => 'Are you sure?';
+  String get areYouSure => 'Ishonchingiz komilmi?';
 
   @override
-  String get areYouSureYouWantToLogout => 'Are you sure you want to log out?';
+  String get areYouSureYouWantToLogout =>
+      'Haqiqatan ham hisobingizdan chiqamoqchimisiz?';
 
   @override
   String get askSSSSSign =>
-      'To be able to sign the other person, please enter your secure store passphrase or recovery key.';
+      'Narigi foydalanuvchini imzolash uchun xavfsiz do‘kon parol iborasi yoki tiklash kalitini kiriting.';
 
   @override
   String askVerificationRequest(String username) {
-    return 'Accept this verification request from $username?';
+    return '${username}dan ushbu tasdiqlash so‘rovi qabul qilinsinmi?';
   }
 
   @override
   String get autoplayImages =>
-      'Automatically play animated stickers and emotes';
+      'Animatsiyali stikerlar va emojilarni avtomatik ijro etish';
 
   @override
   String badServerLoginTypesException(String serverVersions,
       String supportedVersions, Object suportedVersions) {
-    return 'The homeserver supports the login types:\n$serverVersions\nBut this app supports only:\n$supportedVersions';
+    return 'Homeserver quyidagi kirish turlarini qo\'llab-quvvatlaydi:\n$serverVersions\nLekin bu ilova faqat quyidagi turlarni qo\'llab-quvvatlaydi:\n$supportedVersions';
   }
 
   @override
-  String get sendTypingNotifications => 'Send typing notifications';
+  String get sendTypingNotifications => 'Yozish bildirishnomalarini yuborish';
 
   @override
-  String get swipeRightToLeftToReply => 'Swipe right to left to reply';
+  String get swipeRightToLeftToReply =>
+      'Javob berish uchun o‘ngdan chapga suring';
 
   @override
-  String get sendOnEnter => 'Send on enter';
+  String get sendOnEnter => 'Enterda yuborish';
 
   @override
   String badServerVersionsException(
@@ -192,122 +196,122 @@ class L10nDa extends L10n {
       Object serverVerions,
       Object supoortedVersions,
       Object suportedVersions) {
-    return 'The homeserver supports the Spec versions:\n$serverVersions\nBut this app supports only $supportedVersions';
+    return 'Homeserver quyidagi Spec versiyalarini qo\'llab-quvvatlaydi:\n$serverVersions\nLekin bu ilova faqat $supportedVersions versiyalarini qo\'llab-quvvatlaydi';
   }
 
   @override
   String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats chats and $participants participants';
+    return '$chats chatlar va $participants ishtirokchilar';
   }
 
   @override
-  String get noMoreChatsFound => 'No more chats found...';
+  String get noMoreChatsFound => 'Boshqa chatlar topilmadi...';
 
   @override
   String get noChatsFoundHere =>
-      'No chats found here yet. Start a new chat with someone by using the button below. ⤵️';
+      'Bu yerda hali chat topilmadi. Quyidagi tugmadan foydalanib, kimdir bilan yangi chat boshlang. ⤵️';
 
   @override
-  String get joinedChats => 'Joined chats';
+  String get joinedChats => 'Qo\'shilgan chatlar';
 
   @override
-  String get unread => 'Unread';
+  String get unread => 'Oʻqilmagan';
 
   @override
-  String get space => 'Space';
+  String get space => 'Boʻshliq';
 
   @override
-  String get spaces => 'Spaces';
+  String get spaces => 'Boʻshliqlar';
 
   @override
-  String get banFromChat => 'Ban from chat';
+  String get banFromChat => 'Chatdan taqiqlash';
 
   @override
-  String get banned => 'Banned';
+  String get banned => 'Taqiqlangan';
 
   @override
   String bannedUser(String username, String targetName) {
-    return '$username banned $targetName';
+    return '$username taqiqladi $targetName(ni)';
   }
 
   @override
-  String get blockDevice => 'Block Device';
+  String get blockDevice => 'Qurilmani bloklash';
 
   @override
-  String get blocked => 'Blocked';
+  String get blocked => 'Bloklandi';
 
   @override
-  String get botMessages => 'Bot messages';
+  String get botMessages => 'Bot xabarlari';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Bekor qilish';
 
   @override
   String cantOpenUri(String uri) {
-    return 'Can\'t open the URI $uri';
+    return '$uri URIni ochib boʻlmadi';
   }
 
   @override
-  String get changeDeviceName => 'Change device name';
+  String get changeDeviceName => 'Qurilma nomini oʻzgartirish';
 
   @override
   String changedTheChatAvatar(String username) {
-    return '$username changed the chat avatar';
+    return '$username chat avatarini oʻzgartirdi';
   }
 
   @override
   String changedTheChatDescriptionTo(String username, String description) {
-    return '$username changed the chat description to: \'$description\'';
+    return '$username chat tavsifini \'$description\'ga oʻzgartirdi';
   }
 
   @override
   String changedTheChatNameTo(String username, String chatname) {
-    return '$username changed the chat name to: \'$chatname\'';
+    return '$username chat nomini: \'$chatname\'ga oʻzgartirdi';
   }
 
   @override
   String changedTheChatPermissions(String username) {
-    return '$username changed the chat permissions';
+    return '$username chat ruxsatnomalarini oʻzgartirdi';
   }
 
   @override
   String changedTheDisplaynameTo(String username, String displayname) {
-    return '$username changed their displayname to: \'$displayname\'';
+    return '$username oʻzining nomini \'$displayname\'ga oʻzgartirdi';
   }
 
   @override
   String changedTheGuestAccessRules(String username) {
-    return '$username changed the guest access rules';
+    return '$username mehmon kirish qoidalarini oʻzgartirdi';
   }
 
   @override
   String changedTheGuestAccessRulesTo(String username, String rules) {
-    return '$username changed the guest access rules to: $rules';
+    return '$username mehmon kirish qoidalarini: ${rules}ga oʻzgartirdi';
   }
 
   @override
   String changedTheHistoryVisibility(String username) {
-    return '$username changed the history visibility';
+    return '$username tarix koʻrinishini oʻzgartirdi';
   }
 
   @override
   String changedTheHistoryVisibilityTo(String username, String rules) {
-    return '$username changed the history visibility to: $rules';
+    return '$username tarix koʻrinishini: ${rules}ga oʻzgartirdi';
   }
 
   @override
   String changedTheJoinRules(String username) {
-    return '$username changed the join rules';
+    return '$username qoʻshilish qoidalarini oʻzgartirdi';
   }
 
   @override
   String changedTheJoinRulesTo(String username, String joinRules) {
-    return '$username changed the join rules to: $joinRules';
+    return '$username qoʻshilish qoidalarini: ${joinRules}ga oʻzgartirdi';
   }
 
   @override
   String changedTheProfileAvatar(String username) {
-    return '$username changed their avatar';
+    return '$username avatarini oʻzgartirdi';
   }
 
   @override

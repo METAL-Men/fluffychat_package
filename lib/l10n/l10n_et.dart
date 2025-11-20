@@ -1128,7 +1128,7 @@ class L10nEt extends L10n {
   String get pickImage => 'Vali pilt';
 
   @override
-  String get pin => 'Klammerda';
+  String get pin => 'Tõsta esile';
 
   @override
   String play(String fileName) {
@@ -1477,7 +1477,7 @@ class L10nEt extends L10n {
   String get unmuteChat => 'Lõpeta vestluse vaigistamine';
 
   @override
-  String get unpin => 'Eemalda klammerdus';
+  String get unpin => 'Eemalda esiletõstmine';
 
   @override
   String unreadChats(int unreadCount) {
@@ -1666,11 +1666,11 @@ class L10nEt extends L10n {
   }
 
   @override
-  String get pinMessage => 'Klammerda sõnum jututuppa';
+  String get pinMessage => 'Tõsta sõnum jututoas esile';
 
   @override
   String get confirmEventUnpin =>
-      'Kas sa oled kindel, et tahad klammerdatud sündmuse eemaldada?';
+      'Kas sa oled kindel, et tahad esiletõstetud sündmuse jäädavalt eemaldada?';
 
   @override
   String get emojis => 'Emotikonid';
@@ -2299,7 +2299,7 @@ class L10nEt extends L10n {
       'Andmebaasi krüptimine pole sellel platvormil toetatud';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Hetkel on $count blokeeritud kasutajat.';
   }
 
@@ -2808,4 +2808,74 @@ class L10nEt extends L10n {
 
   @override
   String get donate => 'Toeta meid rahaliselt';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username koostas küsitluse.';
+  }
+
+  @override
+  String get poll => 'Küsitlus';
+
+  @override
+  String get startPoll => 'Koosta küsitlus';
+
+  @override
+  String get endPoll => 'Lõpeta küsitlus';
+
+  @override
+  String get answersVisible => 'Vastused on näha';
+
+  @override
+  String get answersHidden => 'Vastused on peidetud';
+
+  @override
+  String get pollQuestion => 'Küsitluse küsimus';
+
+  @override
+  String get answerOption => 'Valikvastus';
+
+  @override
+  String get addAnswerOption => 'Lisa valikvastus';
+
+  @override
+  String get allowMultipleAnswers => 'Luba mitu vastusevalikut';
+
+  @override
+  String get pollHasBeenEnded => 'Küsitlus on lõppenud';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count häält',
+      one: 'Üks hääl',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Vastused on näha küsitluse lõppedes';
+
+  @override
+  String get replyInThread => 'Vasta jutulõngas';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count vastust',
+      one: 'Üks vastus',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Jutulõng';
+
+  @override
+  String get backToMainChat => 'Tagasi põhivestlusesse';
 }

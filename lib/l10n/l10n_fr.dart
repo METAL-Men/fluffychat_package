@@ -18,17 +18,17 @@ class L10nFr extends L10n {
   String get notAnImage => 'Pas un fichier image.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'Définir un niveau d’autorisation';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      'Veuillez choisir un rôle prédéfini ci-dessous ou saisir un niveau d’autorisation entre 0 et 100.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Ignorer l\'utilisateur';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => 'Utilisateur standard';
 
   @override
   String get remove => 'Supprimer';
@@ -495,7 +495,7 @@ class L10nFr extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Check-list';
 
   @override
   String countParticipants(int count) {
@@ -504,7 +504,7 @@ class L10nFr extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count invité(e/s)';
   }
 
   @override
@@ -1305,7 +1305,7 @@ class L10nFr extends L10n {
 
   @override
   String sendImages(int count) {
-    return 'Send $count image';
+    return 'Envoyer $count image(s)';
   }
 
   @override
@@ -2325,7 +2325,7 @@ class L10nFr extends L10n {
       'Le chiffrement de la base de données n\'est pas supporté sur cette plateforme';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Actuellement, il y a $count utilisateurs/trices bloqués.';
   }
 
@@ -2411,40 +2411,40 @@ class L10nFr extends L10n {
 
   @override
   String get homeserverDescription =>
-      'All your data is stored on the homeserver, just like an email provider. You can choose which homeserver you want to use, while you can still communicate with everyone. Learn more at at https://matrix.org.';
+      'Toutes vos données sont stockées sur le serveur de votre fournisseur matrix, comme chez un fournisseur d\'e-mails. Vous pouvez choisir le serveur que vous souhaitez utiliser, tout en pouvant communiquer avec tout le monde. Pour en savoir plus, rendez-vous sur https://matrix.org.';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Doesn\'t seem to be a compatible homeserver. Wrong URL?';
 
   @override
-  String get calculatingFileSize => 'Calculating file size...';
+  String get calculatingFileSize => 'Calcul en cours...';
 
   @override
-  String get prepareSendingAttachment => 'Prepare sending attachment...';
+  String get prepareSendingAttachment => 'Préparation à l\'envoi...';
 
   @override
-  String get sendingAttachment => 'Sending attachment...';
+  String get sendingAttachment => 'Envoi en cours...';
 
   @override
-  String get generatingVideoThumbnail => 'Generating video thumbnail...';
+  String get generatingVideoThumbnail => 'Génération de la vignette...';
 
   @override
-  String get compressVideo => 'Compressing video...';
+  String get compressVideo => 'Compression de la vidéo...';
 
   @override
   String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Sending attachment $index of $length...';
+    return 'Envoi $index sur $length...';
   }
 
   @override
   String serverLimitReached(int seconds) {
-    return 'Server limit reached! Waiting $seconds seconds...';
+    return 'Nombre de tentatives dépassé! Patientez $seconds secondes...';
   }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
-      'One of your devices is not verified';
+      'Un de vos appareils n\'est pas vérifié';
 
   @override
   String get noticeChatBackupDeviceVerification =>
@@ -2510,10 +2510,10 @@ class L10nFr extends L10n {
   String get pleaseFillOut => 'Please fill out';
 
   @override
-  String get invalidUrl => 'Invalid url';
+  String get invalidUrl => 'Adresse incorrecte';
 
   @override
-  String get addLink => 'Add link';
+  String get addLink => 'Ajouter un lien';
 
   @override
   String get unableToJoinChat =>
@@ -2777,13 +2777,13 @@ class L10nFr extends L10n {
   String get displayNavigationRail => 'Show navigation rail on mobile';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Réaction';
 
   @override
   String get moreEvents => 'More events';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Refuser l\'invitation';
 
   @override
   String get noMessagesYet => 'No messages yet';
@@ -2831,4 +2831,74 @@ class L10nFr extends L10n {
 
   @override
   String get donate => 'Donate';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username started a poll.';
+  }
+
+  @override
+  String get poll => 'Poll';
+
+  @override
+  String get startPoll => 'Start poll';
+
+  @override
+  String get endPoll => 'End poll';
+
+  @override
+  String get answersVisible => 'Answers visible';
+
+  @override
+  String get answersHidden => 'Answers hidden';
+
+  @override
+  String get pollQuestion => 'Poll question';
+
+  @override
+  String get answerOption => 'Answer option';
+
+  @override
+  String get addAnswerOption => 'Ajouter une réponse';
+
+  @override
+  String get allowMultipleAnswers => 'Autoriser plusieurs réponses';
+
+  @override
+  String get pollHasBeenEnded => 'Poll has been ended';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count votes',
+      one: 'One vote',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Answers will be visible when poll has ended';
+
+  @override
+  String get replyInThread => 'Reply in thread';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count replies',
+      one: 'One reply',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Thread';
+
+  @override
+  String get backToMainChat => 'Back to main chat';
 }

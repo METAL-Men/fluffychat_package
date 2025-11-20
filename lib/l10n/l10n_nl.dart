@@ -621,7 +621,7 @@ class L10nNl extends L10n {
   String get calls => 'Gesprekken';
 
   @override
-  String get customEmojisAndStickers => 'Aangepaste emoticons en stickers';
+  String get customEmojisAndStickers => 'Aangepaste emoji\'s en stickers';
 
   @override
   String get customEmojisAndStickersBody =>
@@ -2287,7 +2287,7 @@ class L10nNl extends L10n {
       'Database versleuteling is niet ondersteund op dit platform';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Momenteel zijn er $count personen geblokkeerd.';
   }
 
@@ -2791,4 +2791,74 @@ class L10nNl extends L10n {
 
   @override
   String get donate => 'Doneer';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username is een peiling begonnen.';
+  }
+
+  @override
+  String get poll => 'Peiling';
+
+  @override
+  String get startPoll => 'Peiling starten';
+
+  @override
+  String get endPoll => 'Peiling beëindigen';
+
+  @override
+  String get answersVisible => 'Zichtbaar invullen';
+
+  @override
+  String get answersHidden => 'Antwoorden verborgen';
+
+  @override
+  String get pollQuestion => 'Peiling vraag';
+
+  @override
+  String get answerOption => 'Antwoord optie';
+
+  @override
+  String get addAnswerOption => 'Antwoord optie toevoegen';
+
+  @override
+  String get allowMultipleAnswers => 'Meerdere antwoorden toestaan';
+
+  @override
+  String get pollHasBeenEnded => 'Peiling is geëindigd';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count stemmen',
+      one: 'Één stem',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Antwoorden zullen zichtbaar zijn wanneer de peiling is geëindigd';
+
+  @override
+  String get replyInThread => 'Antwoord in draad';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count antwoorden',
+      one: 'Één antwoord',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Draad';
+
+  @override
+  String get backToMainChat => 'Terug naar hoofdchat';
 }

@@ -1829,7 +1829,7 @@ class L10nNb extends L10n {
 
   @override
   String get storeInSecureStorageDescription =>
-      'Store the recovery key in the secure storage of this device.';
+      'Oppbevar gjenopprettingsnøkkelen på en sikker lagringsplass på denne enheten.';
 
   @override
   String get saveKeyManuallyDescription =>
@@ -1857,7 +1857,7 @@ class L10nNb extends L10n {
 
   @override
   String get foregroundServiceRunning =>
-      'This notification appears when the foreground service is running.';
+      'Denne varslingen vises når forgrunnstjenesten kjører.';
 
   @override
   String get screenSharingTitle => 'skjermdeling';
@@ -1869,7 +1869,7 @@ class L10nNb extends L10n {
   String get callingPermissions => 'Anropstillatelser';
 
   @override
-  String get callingAccount => 'Calling account';
+  String get callingAccount => 'Ringekonto';
 
   @override
   String get callingAccountDetails =>
@@ -1880,7 +1880,7 @@ class L10nNb extends L10n {
 
   @override
   String get appearOnTopDetails =>
-      'Allows the app to appear on top (not needed if you already have Fluffychat setup as a calling account)';
+      'Lar appen vises øverst (ikke nødvendig hvis du allerede har Fluffychat konfigurert som en ringekonto)';
 
   @override
   String get otherCallingPermissions =>
@@ -2298,7 +2298,7 @@ class L10nNb extends L10n {
       'Databasekryptering støttes ikke på denne plattformen';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Akkurat nå er det $count blokkerte brukere.';
   }
 
@@ -2801,4 +2801,74 @@ class L10nNb extends L10n {
 
   @override
   String get donate => 'Doner';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username started a poll.';
+  }
+
+  @override
+  String get poll => 'Poll';
+
+  @override
+  String get startPoll => 'Start poll';
+
+  @override
+  String get endPoll => 'End poll';
+
+  @override
+  String get answersVisible => 'Answers visible';
+
+  @override
+  String get answersHidden => 'Answers hidden';
+
+  @override
+  String get pollQuestion => 'Poll question';
+
+  @override
+  String get answerOption => 'Answer option';
+
+  @override
+  String get addAnswerOption => 'Add answer option';
+
+  @override
+  String get allowMultipleAnswers => 'Allow multiple answers';
+
+  @override
+  String get pollHasBeenEnded => 'Poll has been ended';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count votes',
+      one: 'One vote',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Answers will be visible when poll has ended';
+
+  @override
+  String get replyInThread => 'Reply in thread';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count replies',
+      one: 'One reply',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Thread';
+
+  @override
+  String get backToMainChat => 'Back to main chat';
 }

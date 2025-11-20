@@ -85,6 +85,7 @@ abstract class AppConfig {
       'https://github.com/googlefonts/noto-emoji/';
   static const double borderRadius = 18.0;
   static const double columnWidth = 360.0;
+  static bool spellCheck = false;
   // TODO - remove these statics after confirming they are not used anymore -- end
   static final Uri homeserverList = Uri(
     scheme: 'https',
@@ -166,8 +167,6 @@ abstract class AppConfig {
   static String defaultRoutePath = '/rooms';
   static String metalConnectRoutePath = '/metal-connect';
   static const metalClient = 'men.metal';
-
-  static bool spellCheck = false;
 
   static const String mainIsolatePortName = 'main_isolate';
   static const String pushIsolatePortName = 'push_isolate';

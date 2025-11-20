@@ -2301,7 +2301,7 @@ class L10nDe extends L10n {
       'Datenbankverschlüsselung wird auf dieser Plattform nicht unterstützt';
 
   @override
-  String thereAreCountUsersBlocked(Object count) {
+  String thereAreCountUsersBlocked(num count) {
     return 'Im Augenblick werden $count Benutzer blockiert.';
   }
 
@@ -2811,4 +2811,74 @@ class L10nDe extends L10n {
 
   @override
   String get donate => 'Spenden';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username hat eine Umfrage gestartet.';
+  }
+
+  @override
+  String get poll => 'Umfrage';
+
+  @override
+  String get startPoll => 'Umfrage starten';
+
+  @override
+  String get endPoll => 'Umfrage beenden';
+
+  @override
+  String get answersVisible => 'Antworten sichtbar';
+
+  @override
+  String get answersHidden => 'Antworten sind verborgen';
+
+  @override
+  String get pollQuestion => 'Frage';
+
+  @override
+  String get answerOption => 'Antwortmöglichkeit';
+
+  @override
+  String get addAnswerOption => 'Antwortoption hinzufügen';
+
+  @override
+  String get allowMultipleAnswers => 'Mehrere Antworten zulassen';
+
+  @override
+  String get pollHasBeenEnded => 'Umfrage ist beendet';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Stimmen',
+      one: 'Eine Stimme',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'Die Antworten werden nach Ende der Umfrage sichtbar sein';
+
+  @override
+  String get replyInThread => 'Im Thread antworten';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Antworten',
+      one: 'Eine Antwort',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Thread';
+
+  @override
+  String get backToMainChat => 'Zurück zum Hauptchat';
 }
