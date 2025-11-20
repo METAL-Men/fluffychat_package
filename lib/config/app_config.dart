@@ -48,6 +48,8 @@ abstract class AppConfig {
     host: 'github.com',
     path: '/krille-chan/fluffychat/issues/new',
   );
+  // TODO - remove these statics after confirming they are not used anymore -- start
+  static bool showEmojiPicker = true;
   static bool renderHtml = true;
   static bool hideRedactedEvents = true;
   static bool hideUnknownEvents = true;
@@ -83,6 +85,7 @@ abstract class AppConfig {
       'https://github.com/googlefonts/noto-emoji/';
   static const double borderRadius = 18.0;
   static const double columnWidth = 360.0;
+  // TODO - remove these statics after confirming they are not used anymore -- end
   static final Uri homeserverList = Uri(
     scheme: 'https',
     host: 'servers.joinmatrix.org',
@@ -165,4 +168,7 @@ abstract class AppConfig {
   static const metalClient = 'men.metal';
 
   static bool spellCheck = false;
+
+  static const String mainIsolatePortName = 'main_isolate';
+  static const String pushIsolatePortName = 'push_isolate';
 }
