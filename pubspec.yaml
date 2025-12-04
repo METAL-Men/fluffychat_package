@@ -67,7 +67,7 @@ dependencies:
   punycode: ^1.0.0
   qr_code_scanner_plus: ^2.0.14
   qr_image: ^1.0.0
-  #eceive_sharing_intent: ^1.8.1
+  receive_sharing_intent: ^1.8.1
   record: ^6.1.2
   scroll_to_index: ^3.0.1
   share_plus: ^12.0.1
@@ -120,3 +120,4 @@ flutter:
 # 2. Always link an (upstream?) issue
 # 3. Explain how and when this can be removed (overrides must be temporarily)
 dependency_overrides:
+  webcrypto: ^0.5.3
