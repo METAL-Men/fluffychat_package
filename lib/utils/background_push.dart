@@ -46,43 +46,51 @@ import 'platform_infos.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // Note: We can't access instance methods/properties here since this runs in isolation
-  // Only perform minimal work needed for the notification
-
-  final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
-      FlutterLocalNotificationsPlugin();
-  _flutterLocalNotificationsPlugin.initialize(
-    const InitializationSettings(
-      android: AndroidInitializationSettings('notifications_icon'),
-      iOS: DarwinInitializationSettings(),
-    ),
+  // Initialize notifications for the background isolate
+  final FlutterLocalNotificationsPlugin localNotifications = FlutterLocalNotificationsPlugin();
+  
+  const AndroidInitializationSettings initializationSettingsAndroid = AndroidInitializationSettings('notifications_icon');
+  const DarwinInitializationSettings initializationSettingsIOS = DarwinInitializationSettings();
+  const InitializationSettings initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+    iOS: initializationSettingsIOS,
   );
+  
+  await localNotifications.initialize(initializationSettings);
 
-  final notification = PushNotification.fromJson(
-    Map<String, dynamic>.from(message.data),
-  );
+  final data = Map<String, dynamic>.from(message.data);
+  final notification = PushNotification.fromJson(data);
 
+  // Extract content from payload (previews)
+  String? content = data['content'] as String?;
+  if (content == null || content.isEmpty) {
+    content = data['body'] as String?;
+  }
+  
+  // Fallback to sender display name if no content (package default)
+  final String body = (content != null && content.isNotEmpty) 
+      ? content 
+      : (notification.senderDisplayName ?? 'New message');
+
+  // Load locale for channel name
   final l10n = await L10n.delegate.load(const Locale('en'));
 
-  _flutterLocalNotificationsPlugin.show(
+  await localNotifications.show(
     notification.roomId?.hashCode ?? 0,
-    notification.roomName,
-    notification.senderDisplayName,
-    payload: notification.roomId,
+    notification.roomName ?? notification.senderDisplayName ?? AppConfig.applicationName,
+    body,
     NotificationDetails(
       android: AndroidNotificationDetails(
         AppConfig.pushNotificationsChannelId,
         l10n.incomingMessages,
         number: notification.counts?.unread,
-        ticker: l10n.unreadChatsInApp(
-          AppConfig.applicationName,
-          (notification.counts?.unread ?? 0).toString(),
-        ),
         importance: Importance.high,
         priority: Priority.max,
         shortcutId: notification.roomId,
+        styleInformation: BigTextStyleInformation(body),
       ),
     ),
+    payload: notification.roomId,
   );
 }
 
