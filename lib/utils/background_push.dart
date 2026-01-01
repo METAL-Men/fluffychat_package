@@ -31,6 +31,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_new_badger/flutter_new_badger.dart';
 import 'package:http/http.dart' as http;
 import 'package:matrix/matrix.dart';
+import 'package:flutter_vodozemac/flutter_vodozemac.dart' as vod;
 import 'package:unifiedpush/unifiedpush.dart';
 import 'package:unifiedpush_ui/unifiedpush_ui.dart';
 
@@ -38,6 +39,7 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/main.dart';
 import 'package:fluffychat/utils/notification_background_handler.dart';
 import 'package:fluffychat/utils/push_helper.dart';
+import 'package:fluffychat/utils/client_manager.dart';
 import 'package:fluffychat/widgets/fluffy_chat_app.dart';
 import '../config/app_config.dart';
 import '../config/setting_keys.dart';
@@ -46,38 +48,71 @@ import 'platform_infos.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  // Our background push shared isolate accesses flutter-internal things very early in the startup proccess
+  // To make sure that the parts of flutter needed are started up already, we need to ensure that the
+  // widget bindings are initialized already.
+  WidgetsFlutterBinding.ensureInitialized();
+
   // Initialize notifications for the background isolate
-  final FlutterLocalNotificationsPlugin localNotifications = FlutterLocalNotificationsPlugin();
-  
-  const AndroidInitializationSettings initializationSettingsAndroid = AndroidInitializationSettings('notifications_icon');
-  const DarwinInitializationSettings initializationSettingsIOS = DarwinInitializationSettings();
+  final FlutterLocalNotificationsPlugin localNotifications =
+      FlutterLocalNotificationsPlugin();
+
+  const AndroidInitializationSettings initializationSettingsAndroid =
+      AndroidInitializationSettings('notifications_icon');
+  const DarwinInitializationSettings initializationSettingsIOS =
+      DarwinInitializationSettings();
   const InitializationSettings initializationSettings = InitializationSettings(
     android: initializationSettingsAndroid,
     iOS: initializationSettingsIOS,
   );
-  
+
   await localNotifications.initialize(initializationSettings);
 
   final data = Map<String, dynamic>.from(message.data);
   final notification = PushNotification.fromJson(data);
 
-  // Extract content from payload (previews)
+  // Initialize vodozemac for decryption
+  try {
+    await vod.init(wasmPath: './assets/assets/vodozemac/');
+  } catch (e) {
+    Logs().w('Vodozemac initialization failed in background: $e');
+  }
+
+  // Try to use pushHelper for rich notifications
+  try {
+    final store = await AppSettings.init();
+    final clients = await ClientManager.getClients(
+      initialize: true, // Try to initialize to get token and database
+      store: store,
+    );
+    if (clients.isNotEmpty) {
+      await pushHelper(
+        notification,
+        client: clients.first,
+        flutterLocalNotificationsPlugin: localNotifications,
+      );
+      return;
+    }
+  } catch (e, s) {
+    Logs().e('Push Helper failed in background handler', e, s);
+  }
+
+  // Fallback to basic notification if pushHelper fails or no client
   String? content = data['content'] as String?;
   if (content == null || content.isEmpty) {
     content = data['body'] as String?;
   }
-  
-  // Fallback to sender display name if no content (package default)
-  final String body = (content != null && content.isNotEmpty) 
-      ? content 
+  final String body = (content != null && content.isNotEmpty)
+      ? content
       : (notification.senderDisplayName ?? 'New message');
 
-  // Load locale for channel name
   final l10n = await L10n.delegate.load(const Locale('en'));
 
   await localNotifications.show(
     notification.roomId?.hashCode ?? 0,
-    notification.roomName ?? notification.senderDisplayName ?? AppConfig.applicationName,
+    notification.roomName ??
+        notification.senderDisplayName ??
+        AppConfig.applicationName,
     body,
     NotificationDetails(
       android: AndroidNotificationDetails(
