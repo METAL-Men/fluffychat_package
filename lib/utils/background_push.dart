@@ -409,7 +409,7 @@ class BackgroundPush {
           append: false,
         );
       } catch (e, s) {
-        Logs().e('[Push] Unable to set pushers', e, s);
+        Logs().e('[Push] ❌ Failed to set pusher', e, s);
       }
     }
   }
@@ -488,13 +488,40 @@ class BackgroundPush {
   Future<void> setupFirebase() async {
     Logs().v('Setup firebase');
     if (_fcmToken?.isEmpty ?? true) {
-      try {
-        _fcmToken = await firebase.getToken();
-        if (_fcmToken == null) throw ('PushToken is null');
-      } catch (e, s) {
-        Logs().w('[Push] cannot get token', e, e is String ? null : s);
-        await _noFcmWarning();
-        return;
+      int retryCount = 0;
+      const maxRetries = 5;
+      const retryDelays = [1000, 2000, 4000, 8000, 16000];
+      
+      while (retryCount < maxRetries) {
+        try {
+          if (retryCount > 0) {
+            await Future.delayed(Duration(milliseconds: retryDelays[retryCount - 1]));
+          }
+          
+          if (retryCount == 0) {
+            try {
+              await firebase.deleteToken();
+            } catch (e) {
+              Logs().w('[Push] Failed to reset token (non-critical): $e');
+            }
+          }
+          
+          _fcmToken = await firebase.getToken();
+          
+          if (_fcmToken != null) {
+            break;
+          } else {
+            throw ('PushToken is null');
+          }
+        } catch (e, s) {
+          retryCount++;
+          Logs().w('[Push] Failed to get token (attempt $retryCount/$maxRetries): $e');
+          if (retryCount >= maxRetries) {
+            Logs().e('[Push] Max retries reached. Cannot get token.', e, s);
+            await _noFcmWarning();
+            return;
+          }
+        }
       }
     }
     await setupPusher(

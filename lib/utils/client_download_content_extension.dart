@@ -39,6 +39,10 @@ extension ClientDownloadContentExtension on Client {
           )
         : await mxc.getDownloadUri(this);
 
+    if (httpUri.host.isEmpty) {
+      throw Exception('Invalid MXC URI: No host specified');
+    }
+
     final response = await httpClient.get(
       httpUri,
       headers:
