@@ -23,7 +23,7 @@ import 'dart:io';
 import 'dart:isolate';
 import 'dart:ui';
 
-import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:fcm_shared_isolate/fcm_shared_isolate.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -46,88 +46,6 @@ import '../config/setting_keys.dart';
 import '../widgets/matrix.dart';
 import 'platform_infos.dart';
 
-@pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // Our background push shared isolate accesses flutter-internal things very early in the startup proccess
-  // To make sure that the parts of flutter needed are started up already, we need to ensure that the
-  // widget bindings are initialized already.
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize notifications for the background isolate
-  final FlutterLocalNotificationsPlugin localNotifications =
-      FlutterLocalNotificationsPlugin();
-
-  const AndroidInitializationSettings initializationSettingsAndroid =
-      AndroidInitializationSettings('notifications_icon');
-  const DarwinInitializationSettings initializationSettingsIOS =
-      DarwinInitializationSettings();
-  const InitializationSettings initializationSettings = InitializationSettings(
-    android: initializationSettingsAndroid,
-    iOS: initializationSettingsIOS,
-  );
-
-  await localNotifications.initialize(initializationSettings);
-
-  final data = Map<String, dynamic>.from(message.data);
-  final notification = PushNotification.fromJson(data);
-
-  // Initialize vodozemac for decryption
-  try {
-    await vod.init(wasmPath: './assets/assets/vodozemac/');
-  } catch (e) {
-    Logs().w('Vodozemac initialization failed in background: $e');
-  }
-
-  // Try to use pushHelper for rich notifications
-  try {
-    final store = await AppSettings.init();
-    final clients = await ClientManager.getClients(
-      initialize: true, // Try to initialize to get token and database
-      store: store,
-    );
-    if (clients.isNotEmpty) {
-      await pushHelper(
-        notification,
-        client: clients.first,
-        flutterLocalNotificationsPlugin: localNotifications,
-      );
-      return;
-    }
-  } catch (e, s) {
-    Logs().e('Push Helper failed in background handler', e, s);
-  }
-
-  // Fallback to basic notification if pushHelper fails or no client
-  String? content = data['content'] as String?;
-  if (content == null || content.isEmpty) {
-    content = data['body'] as String?;
-  }
-  final String body = (content != null && content.isNotEmpty)
-      ? content
-      : (notification.senderDisplayName ?? 'New message');
-
-  final l10n = await L10n.delegate.load(const Locale('en'));
-
-  await localNotifications.show(
-    notification.roomId?.hashCode ?? 0,
-    notification.roomName ??
-        notification.senderDisplayName ??
-        AppConfig.applicationName,
-    body,
-    NotificationDetails(
-      android: AndroidNotificationDetails(
-        AppConfig.pushNotificationsChannelId,
-        l10n.incomingMessages,
-        number: notification.counts?.unread,
-        importance: Importance.high,
-        priority: Priority.max,
-        shortcutId: notification.roomId,
-        styleInformation: BigTextStyleInformation(body),
-      ),
-    ),
-    payload: notification.roomId,
-  );
-}
 
 class NoTokenException implements Exception {
   String get cause => 'Cannot get firebase token';
@@ -153,14 +71,14 @@ class BackgroundPush {
   final pendingTests = <String, Completer<void>>{};
   bool firebaseEnabled = false;
 
-  final firebase = FirebaseMessaging.instance;
+  final firebase = FcmSharedIsolate();
 
   DateTime? lastReceivedPush;
 
   bool upAction = false;
 
   void _init() async {
-    //<GOOGLE_SERVICES>firebaseEnabled = true;
+    firebaseEnabled = true;
     try {
       mainIsolateReceivePort?.listen(
         (message) async {
@@ -212,17 +130,17 @@ class BackgroundPush {
         onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
       );
       Logs().v('Flutter Local Notifications initialized');
-      //<GOOGLE_SERVICES>firebase.setListeners(
-      //<GOOGLE_SERVICES>  onMessage: (message) => pushHelper(
-      //<GOOGLE_SERVICES>    PushNotification.fromJson(
-      //<GOOGLE_SERVICES>      Map<String, dynamic>.from(message['data'] ?? message),
-      //<GOOGLE_SERVICES>    ),
-      //<GOOGLE_SERVICES>    client: client,
-      //<GOOGLE_SERVICES>    l10n: l10n,
-      //<GOOGLE_SERVICES>    activeRoomId: matrix?.activeRoomId,
-      //<GOOGLE_SERVICES>    flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
-      //<GOOGLE_SERVICES>  ),
-      //<GOOGLE_SERVICES>);
+      firebase.setListeners(
+        onMessage: (message) => pushHelper(
+          PushNotification.fromJson(
+            Map<String, dynamic>.from(message['data'] ?? message),
+          ),
+          client: client,
+          l10n: l10n,
+          activeRoomId: matrix?.activeRoomId,
+          flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
+        ),
+      );
       if (Platform.isAndroid) {
         await UnifiedPush.initialize(
           onNewEndpoint: _newUpEndpoint,
@@ -238,54 +156,12 @@ class BackgroundPush {
 
   BackgroundPush._(this.client) {
     _init();
-    FirebaseMessaging.onMessage.listen((message) {
-      lastReceivedPush = DateTime.now();
-      pushHelper(
-        PushNotification.fromJson(Map<String, dynamic>.from(message.data)),
-        client: client,
-        l10n: l10n,
-        activeRoomId: matrix?.activeRoomId,
-        flutterLocalNotificationsPlugin: _flutterLocalNotificationsPlugin,
-      );
-    });
-    FirebaseMessaging.instance.getInitialMessage().then((initialMessage) {
-      Logs().v('initialMessage: ${initialMessage?.data}');
-      if (initialMessage != null) {
-        notificationTap(
-          NotificationResponse(
-            notificationResponseType:
-                NotificationResponseType.selectedNotification,
-            payload: initialMessage.data['room_id'],
-          ),
-          client: client,
-          router: FluffyChatApp.router,
-          l10n: l10n,
-        );
-      }
-    });
-    FirebaseMessaging.onMessageOpenedApp.listen((message) {
-      Logs().v('onMessageOpenedApp: ${message.data}');
-      notificationTap(
-        NotificationResponse(
-          notificationResponseType:
-              NotificationResponseType.selectedNotification,
-          payload: message.data['room_id'],
-        ),
-        client: client,
-        router: FluffyChatApp.router,
-        l10n: l10n,
-      );
-    });
   }
 
   factory BackgroundPush.clientOnly(Client client) {
     return _instance ??= BackgroundPush._(client);
   }
 
-  // Add this static method to initialize Firebase background handler
-  static Future<void> initializeFirebaseBackgroundHandler() async {
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  }
 
   factory BackgroundPush(
     MatrixState matrix, {
@@ -322,9 +198,6 @@ class BackgroundPush {
     Set<String?>? oldTokens,
     bool useDeviceSpecificAppId = false,
   }) async {
-    if (PlatformInfos.isIOS) {
-      //<GOOGLE_SERVICES>await firebase.requestPermission();
-    }
     if (PlatformInfos.isAndroid) {
       _flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
@@ -487,6 +360,9 @@ class BackgroundPush {
 
   Future<void> setupFirebase() async {
     Logs().v('Setup firebase');
+    if (PlatformInfos.isIOS) {
+      await firebase.requestPermission();
+    }
     if (_fcmToken?.isEmpty ?? true) {
       int retryCount = 0;
       const maxRetries = 5;
@@ -497,22 +373,9 @@ class BackgroundPush {
           if (retryCount > 0) {
             await Future.delayed(Duration(milliseconds: retryDelays[retryCount - 1]));
           }
-          
-          if (retryCount == 0) {
-            try {
-              await firebase.deleteToken();
-            } catch (e) {
-              Logs().w('[Push] Failed to reset token (non-critical): $e');
-            }
-          }
-          
           _fcmToken = await firebase.getToken();
-          
-          if (_fcmToken != null) {
-            break;
-          } else {
-            throw ('PushToken is null');
-          }
+          if (_fcmToken != null) break;
+          throw ('PushToken is null');
         } catch (e, s) {
           retryCount++;
           Logs().w('[Push] Failed to get token (attempt $retryCount/$maxRetries): $e');
@@ -573,8 +436,8 @@ class BackgroundPush {
     Logs().i('[Push] UnifiedPush using endpoint $endpoint');
     final oldTokens = <String?>{};
     try {
-      //<GOOGLE_SERVICES>final fcmToken = await firebase.getToken();
-      //<GOOGLE_SERVICES>oldTokens.add(fcmToken);
+      final fcmToken = await firebase.getToken();
+      oldTokens.add(fcmToken);
     } catch (_) {}
     await setupPusher(
       gatewayUrl: endpoint,
