@@ -31,26 +31,12 @@ class ChatSettingsPopupMenuState extends State<ChatSettingsPopupMenu> {
     super.dispose();
   }
 
-  void goToEmoteSettings() async {
-    final room = widget.room;
-    // okay, we need to test if there are any emote state events other than the default one
-    // if so, we need to be directed to a selection screen for which pack we want to look at
-    // otherwise, we just open the normal one.
-    if ((room.states['im.ponies.room_emotes'] ?? <String, Event>{})
-        .keys
-        .any((String s) => s.isNotEmpty)) {
-      context.push('/rooms/${room.id}/details/multiple_emotes');
-    } else {
-      context.push('/rooms/${room.id}/details/emotes');
-    }
-  }
+  void goToEmoteSettings() =>
+      context.push('/rooms/${widget.room.id}/details/emotes');
 
   @override
   Widget build(BuildContext context) {
-    notificationChangeSub ??= Matrix.of(context)
-        .client
-        .onSync
-        .stream
+    notificationChangeSub ??= Matrix.of(context).client.onSync.stream
         .where(
           (syncUpdate) =>
               syncUpdate.accountData?.any(
@@ -58,9 +44,7 @@ class ChatSettingsPopupMenuState extends State<ChatSettingsPopupMenu> {
               ) ??
               false,
         )
-        .listen(
-          (u) => setState(() {}),
-        );
+        .listen((u) => setState(() {}));
     return Stack(
       alignment: Alignment.center,
       children: [

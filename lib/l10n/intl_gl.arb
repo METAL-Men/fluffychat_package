@@ -381,7 +381,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "chatBackupDescription": "As mensaxes antigas están protexidas cunha chave de recuperación. Pon coidado e non a perdas.",
+    "chatBackupDescription": "As mensaxes están protexidas cunha clave de recuperación. Pon coidado e non a perdas.",
     "@chatBackupDescription": {
         "type": "String",
         "placeholders": {}
@@ -2042,7 +2042,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "Queres eliminar a copia de apoio da conversa e crear unha nova chave de recuperación?",
+    "wipeChatBackup": "Queres eliminar a copia de apoio e crear unha nova chave de recuperación?",
     "@wipeChatBackup": {
         "type": "String",
         "placeholders": {}
@@ -3069,7 +3069,7 @@
     },
     "sendCanceled": "Cancelouse o envío",
     "@sendCanceled": {},
-    "noChatsFoundHere": "Sen charlas por aquí. Comeza unha nova conversa con alguén premendo no botón de abaixo. ⤵️",
+    "noChatsFoundHere": "Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️",
     "@noChatsFoundHere": {},
     "discoverHomeservers": "Atopar servidores",
     "@discoverHomeservers": {},
@@ -3487,5 +3487,33 @@
     "thread": "Fío",
     "@thread": {},
     "backToMainChat": "Volver á conversa principal",
-    "@backToMainChat": {}
+    "@backToMainChat": {},
+    "attribution": "Atribución",
+    "@attribution": {},
+    "saveChanges": "Gardar cambios",
+    "@saveChanges": {},
+    "createSticker": "Crear adhesivo ou emoji",
+    "@createSticker": {},
+    "useAsSticker": "Usar como adhesivo",
+    "@useAsSticker": {},
+    "useAsEmoji": "Usar como emoji",
+    "@useAsEmoji": {},
+    "stickerPackNameAlreadyExists": "Xa existe ese nome de paquete de adhesivos",
+    "@stickerPackNameAlreadyExists": {},
+    "newStickerPack": "Novo paquete de adhesivos",
+    "@newStickerPack": {},
+    "stickerPackName": "Nome do paquete de adhesivos",
+    "@stickerPackName": {},
+    "skipChatBackup": "Omitir copia da conversa",
+    "@skipChatBackup": {},
+    "skipChatBackupWarning": "Tes certeza? A non activar a copia de apoio da conversa poderías perder o acceso ás mensaxes se cambias de dispositivo.",
+    "@skipChatBackupWarning": {},
+    "loadingMessages": "Cargando mensaxes",
+    "@loadingMessages": {},
+    "setupChatBackup": "Configurar copia de apoio",
+    "@setupChatBackup": {},
+    "changedTheChatDescription": "{username} cambiou a descrición da sala",
+    "@changedTheChatDescription": {},
+    "changedTheChatName": "{username} cambiou o nome da sala",
+    "@changedTheChatName": {}
 }

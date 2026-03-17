@@ -35,8 +35,9 @@ class StateMessage extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   child: Material(
                     color: theme.colorScheme.surface.withAlpha(128),
-                    borderRadius:
-                        BorderRadius.circular(AppConfig.borderRadius / 3),
+                    borderRadius: BorderRadius.circular(
+                      AppConfig.borderRadius / 3,
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8.0,
@@ -51,10 +52,7 @@ class StateMessage extends StatelessWidget {
                               ),
                             ),
                             if (onExpand != null) ...[
-                              const TextSpan(
-                                text: ' + ',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
+                              const TextSpan(text: '\n'),
                               TextSpan(
                                 style: TextStyle(
                                   color: theme.colorScheme.primary,
@@ -69,7 +67,7 @@ class StateMessage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 12 * AppSettings.fontSizeFactor.value,
+                          fontSize: 11 * AppSettings.fontSizeFactor.value,
                           decoration: event.redacted
                               ? TextDecoration.lineThrough
                               : null,

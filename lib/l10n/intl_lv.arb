@@ -2348,7 +2348,7 @@
             }
         }
     },
-    "chatBackupDescription": "Iepriekšējās ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.",
+    "chatBackupDescription": "Ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.",
     "@chatBackupDescription": {
         "type": "String",
         "placeholders": {}
@@ -3470,5 +3470,33 @@
     "thread": "Pavediens",
     "@thread": {},
     "backToMainChat": "Atgriezties galvenajā tērzēšanā",
-    "@backToMainChat": {}
+    "@backToMainChat": {},
+    "saveChanges": "Saglabāt izmaiņas",
+    "@saveChanges": {},
+    "createSticker": "Izveidot uzlīmi vai emocijzīmi",
+    "@createSticker": {},
+    "useAsSticker": "Izmantot kā uzlīmi",
+    "@useAsSticker": {},
+    "useAsEmoji": "Izmantot kā emocijzīmi",
+    "@useAsEmoji": {},
+    "stickerPackNameAlreadyExists": "Uzlīmju pakas nosaukums jau pastāv",
+    "@stickerPackNameAlreadyExists": {},
+    "newStickerPack": "Jauna uzlīmju paka",
+    "@newStickerPack": {},
+    "stickerPackName": "Uzlīmju pakas nosaukums",
+    "@stickerPackName": {},
+    "attribution": "Piedēvējums",
+    "@attribution": {},
+    "skipChatBackup": "Izlaist tērzēšanu rezerves kopēšanu",
+    "@skipChatBackup": {},
+    "skipChatBackupWarning": "Vai tiešām? Bez tērzēšanu rezerves kopēšanas var tikt zaudēta piekļuve savām ziņām, kad tiks mainīta ierīce.",
+    "@skipChatBackupWarning": {},
+    "loadingMessages": "Ielādē ziņas",
+    "@loadingMessages": {},
+    "setupChatBackup": "Iestatīt tērzēšanu rezerves kopēšanu",
+    "@setupChatBackup": {},
+    "changedTheChatDescription": "{username} nomainīja tērzēšanas aprakstu",
+    "@changedTheChatDescription": {},
+    "changedTheChatName": "{username} nomainīja tērzēšanas nosaukumu",
+    "@changedTheChatName": {}
 }

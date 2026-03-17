@@ -2052,7 +2052,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "writeAMessage": "Kirjuta üks sõnum…",
+    "writeAMessage": "Koosta sõnum…",
     "@writeAMessage": {
         "type": "String",
         "placeholders": {}
@@ -3487,5 +3487,44 @@
     "thread": "Jutulõng",
     "@thread": {},
     "backToMainChat": "Tagasi põhivestlusesse",
-    "@backToMainChat": {}
+    "@backToMainChat": {},
+    "saveChanges": "Salvesta muudatused",
+    "@saveChanges": {},
+    "createSticker": "Loo kleeps või emoji",
+    "@createSticker": {},
+    "useAsSticker": "Kasuta kleepsuna",
+    "@useAsSticker": {},
+    "useAsEmoji": "Kasuta emojina",
+    "@useAsEmoji": {},
+    "stickerPackNameAlreadyExists": "Selline kleepsupaki nimi on juba olemas",
+    "@stickerPackNameAlreadyExists": {},
+    "newStickerPack": "Uus kleepsupakk",
+    "@newStickerPack": {},
+    "stickerPackName": "Kleepsupaki nimi",
+    "@stickerPackName": {},
+    "attribution": "Autoriõigused",
+    "@attribution": {},
+    "skipChatBackup": "Jäta vestluse varundamine vahele",
+    "@skipChatBackup": {},
+    "skipChatBackupWarning": "Kas oled kindel? Kui sa pole lülitanud sisse vestluste krüptovõtmete varundust, siis võid oma seadme vahetamisel kaotada ligipääsu oma senistele sõnumitele.",
+    "@skipChatBackupWarning": {},
+    "loadingMessages": "Laadin sõnumeid",
+    "@loadingMessages": {},
+    "setupChatBackup": "Võta kasutusele vestluste varundus",
+    "@setupChatBackup": {},
+    "changedTheChatDescription": "{username} muutis vestluse kirjeldust",
+    "@changedTheChatDescription": {},
+    "changedTheChatName": "{username} muutis vestluse nime",
+    "@changedTheChatName": {},
+    "noMoreResultsFound": "Rohkem tulemusi ei leidu",
+    "@noMoreResultsFound": {},
+    "chatSearchedUntil": "Otsing vestlusest kuni {time}",
+    "@chatSearchedUntil": {
+        "type": "String",
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    }
 }
