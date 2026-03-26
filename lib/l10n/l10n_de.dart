@@ -172,8 +172,11 @@ class L10nDe extends L10n {
       'Animierte Sticker und Emotes automatisch abspielen';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Der Homeserver unterstützt diese Anmelde-Typen:\n$serverVersions\nAber diese App unterstützt nur:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nDe extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Der Homeserver unterstützt die Spec-Versionen:\n$serverVersions\nAber diese App unterstützt nur:\n$supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nDe extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username hat die Chatbeschreibung geändert';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username hat die Chatbeschreibung geändert in: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username den Chatnamen geändert';
   }
 
   @override
@@ -353,7 +367,7 @@ class L10nDe extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Deine alten Nachrichten sind mit einem Wiederherstellungsschlüssel gesichert. Bitte stellen sicher, dass du ihn nicht verlierst.';
+      'Deine Nachrichten sind mit einem Wiederherstellungsschlüssel gesichert. Bitte stelle sicher, dass du ihn nicht verlierst.';
 
   @override
   String get chatDetails => 'Chatdetails';
@@ -432,7 +446,7 @@ class L10nDe extends L10n {
   String get commandHint_plain => 'Sende unformatierten Text';
 
   @override
-  String get commandHint_react => 'Sende die Antwort als Reaction';
+  String get commandHint_react => 'Sende die Antwort als Reaktion';
 
   @override
   String get commandHint_send => 'Text senden';
@@ -1993,11 +2007,6 @@ class L10nDe extends L10n {
       'Bitte versuche es später noch einmal oder wähle einen anderen Server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Anmelden mit $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Der Benutzer konnte auf dem Server nicht gefunden werden. Vielleicht gibt es ein Verbindungsproblem oder der Benutzer existiert nicht.';
 
@@ -2301,7 +2310,7 @@ class L10nDe extends L10n {
       'Datenbankverschlüsselung wird auf dieser Plattform nicht unterstützt';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Im Augenblick werden $count Benutzer blockiert.';
   }
 
@@ -2881,4 +2890,79 @@ class L10nDe extends L10n {
 
   @override
   String get backToMainChat => 'Zurück zum Hauptchat';
+
+  @override
+  String get saveChanges => 'Änderungen speichern';
+
+  @override
+  String get createSticker => 'Sticker oder Emoji erstellen';
+
+  @override
+  String get useAsSticker => 'Als Sticker verwenden';
+
+  @override
+  String get useAsEmoji => 'Als Emoji verwenden';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Name des Sticker-Pakets existiert bereits';
+
+  @override
+  String get newStickerPack => 'Neues Sticker-Paket';
+
+  @override
+  String get stickerPackName => 'Name des Sticker-Pakets';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Chatsicherung überspringen';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Bist du sicher? Ohne die Chatsicherung zu aktivieren, kannst du den Zugriff auf deine Nachrichten verlieren, wenn du dein Gerät wechselst.';
+
+  @override
+  String get loadingMessages => 'Nachrichten werden geladen';
+
+  @override
+  String get setupChatBackup => 'Chatsicherung einrichten';
+
+  @override
+  String get noMoreResultsFound => 'Keine weiteren Ergebnisse gefunden';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat durchsucht bis $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Anmelden mit';
 }

@@ -173,8 +173,11 @@ class L10nEu extends L10n {
       'Automatikoki abiarazi pegatina eta emote animatuak';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Zerbitzariak ondorengo aukerak onartzen ditu saioa hasteko:\n$serverVersions\nBaina aplikazioak hauek onartzen ditu bakarrik:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nEu extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Zerbitzariak ondorengo ezaugarriak onartzen ditu:\n$serverVersions\nBaina aplikazioak hauek onartzen ditu bakarrik: $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nEu extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username(e)k txataren deskribapena aldatu du';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username(e)k txataren deskribapena aldatu du: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username(e)k txataren izena aldatu du';
   }
 
   @override
@@ -1986,11 +2000,6 @@ class L10nEu extends L10n {
       'Saiatu geroago edo aukeratu beste zerbitzari bat.';
 
   @override
-  String signInWith(String provider) {
-    return 'Hasi saioa $provider(r)ekin';
-  }
-
-  @override
   String get profileNotFound =>
       'Ezin izan da erabiltzailea zerbitzarian aurkitu. Agian arazo bat dago konexioarekin edo erabiltzailea ez da existitzen.';
 
@@ -2291,7 +2300,7 @@ class L10nEu extends L10n {
       'Plataforma honetan ezin da datu-basea zifratu';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Une honetan $count erabiltzaile daude blokeatuta.';
   }
 
@@ -2867,4 +2876,79 @@ class L10nEu extends L10n {
 
   @override
   String get backToMainChat => 'Joan txat nagusira';
+
+  @override
+  String get saveChanges => 'Gorde aldaketak';
+
+  @override
+  String get createSticker => 'Sortu pegatina edo emojia';
+
+  @override
+  String get useAsSticker => 'Erabili pegatina gisa';
+
+  @override
+  String get useAsEmoji => 'Erabili emoji gisa';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Pegatina-sortaren izena badago lehendik ere';
+
+  @override
+  String get newStickerPack => 'Pegatina-sorta berria';
+
+  @override
+  String get stickerPackName => 'Pegatina-sortaren izena';
+
+  @override
+  String get attribution => 'Sortzailea';
+
+  @override
+  String get skipChatBackup => 'Ez egin txataren babeskopia';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Ziur? Txataren babeskopia gaitzen ez baduzu, gailuz aldatuz gero mezuen sarbidea gal zenezake.';
+
+  @override
+  String get loadingMessages => 'Mezuak kargatzen';
+
+  @override
+  String get setupChatBackup => 'Ezarri txataren babeskopia';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

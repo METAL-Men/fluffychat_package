@@ -172,8 +172,11 @@ class L10nNl extends L10n {
       'Automatisch geanimeerde stickers en emoticons afspelen';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'De homeserver ondersteunt de login types:\n$serverVersions\nMaar deze app ondersteunt alleen:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nNl extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'De homeserver ondersteunt de Spec-versies:\n$serverVersions\nMaar deze app ondersteunt alleen $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nNl extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username heeft de chatomschrijving gewijzigd';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username heeft de chatomschrijving gewijzigd in: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username heeft de chatnaam gewijzigd';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nNl extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Je oude berichten zijn beveiligd met een herstelsleutel. Zorg ervoor dat je deze niet verliest.';
+      'Je berichten zijn beveiligd met een herstelsleutel. Zorg ervoor dat je deze niet verliest.';
 
   @override
   String get chatDetails => 'Chatdetails';
@@ -372,8 +386,7 @@ class L10nNl extends L10n {
   String get close => 'Sluiten';
 
   @override
-  String get commandHint_markasdm =>
-      'Markeer als privéberichtenkamer voor Matrix ID';
+  String get commandHint_markasdm => 'Markeer als privé-chat voor de Matrix-ID';
 
   @override
   String get commandHint_markasgroup => 'Markeer als groep';
@@ -625,7 +638,7 @@ class L10nNl extends L10n {
 
   @override
   String get customEmojisAndStickersBody =>
-      'Voeg toe of deel aangepaste emoji\'s of stickers die gebruikt kunnen worden in elke chat.';
+      'Voeg toe of deel aangepaste emoji\'s en stickers die in elke chat gebruikt kunnen worden.';
 
   @override
   String get emoteShortcode => 'Emoticon korte code';
@@ -662,7 +675,7 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get enterAnEmailAddress => 'Voer een email in';
+  String get enterAnEmailAddress => 'Voer een emailadres in';
 
   @override
   String get homeserver => 'Server';
@@ -740,7 +753,7 @@ class L10nNl extends L10n {
   String get hideRedactedEvents => 'Bewerkte gebeurtenissen verbergen';
 
   @override
-  String get hideRedactedMessages => 'Verberg verwijderde berichten';
+  String get hideRedactedMessages => 'Verwijderde berichten verbergen';
 
   @override
   String get hideRedactedMessagesBody =>
@@ -748,7 +761,7 @@ class L10nNl extends L10n {
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
-      'Verberg ongeldige of onbekende berichtformaten';
+      'Ongeldige of onbekende berichtformaten verbergen';
 
   @override
   String get howOffensiveIsThisContent => 'Hoe beledigend is deze inhoud?';
@@ -946,7 +959,7 @@ class L10nNl extends L10n {
 
   @override
   String get needPantalaimonWarning =>
-      'Houd er rekening mee dat je voorlopig Pantalaimon nodig hebt om eind-tot-eindversleuteling te gebruiken.';
+      'Houd er rekening mee dat je voorlopig Pantalaimon nodig hebt om eind-tot-eind versleuteling te gebruiken.';
 
   @override
   String get newChat => 'Nieuwe chat';
@@ -1067,7 +1080,7 @@ class L10nNl extends L10n {
 
   @override
   String get enableMultiAccounts =>
-      '(BETA) Multi-accounts inschakelen op dit apparaat';
+      '(BETA) Meerdere accounts op dit apparaat inschakelen';
 
   @override
   String get openInMaps => 'In kaarten openen';
@@ -1373,7 +1386,7 @@ class L10nNl extends L10n {
   String get presenceStyle => 'Aanwezigheid:';
 
   @override
-  String get presencesToggle => 'Toon statusberichten van andere personen';
+  String get presencesToggle => 'Statusberichten van andere personen tonen';
 
   @override
   String get singlesignon => 'Eenmalig Inloggen';
@@ -1984,11 +1997,6 @@ class L10nNl extends L10n {
       'Probeer het later nog eens of kies een andere server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Aanmelden met $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'De persoon kan niet gevonden worden op de server. Misschien is er een verbindingsprobleem of de persoon bestaat niet.';
 
@@ -2054,7 +2062,7 @@ class L10nNl extends L10n {
   String get learnMore => 'Lees meer';
 
   @override
-  String get yourGlobalUserIdIs => 'Je Matrix ID is: ';
+  String get yourGlobalUserIdIs => 'Je Matrix-ID is: ';
 
   @override
   String noUsersFoundWithQuery(String query) {
@@ -2070,7 +2078,7 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get searchChatsRooms => 'Zoek naar #chats, @personen...';
+  String get searchChatsRooms => 'Zoek #chats, @personen...';
 
   @override
   String get nothingFound => 'Niets gevonden...';
@@ -2107,7 +2115,7 @@ class L10nNl extends L10n {
   String get select => 'Selecteer';
 
   @override
-  String get searchForUsers => 'Zoek naar @personen...';
+  String get searchForUsers => 'Zoek @personen...';
 
   @override
   String get pleaseEnterYourCurrentPassword => 'Vul je huidige wachtwoord in';
@@ -2272,10 +2280,10 @@ class L10nNl extends L10n {
   String get discover => 'Ontdek';
 
   @override
-  String get commandHint_ignore => 'Negeer de gegeven Matrix ID';
+  String get commandHint_ignore => 'Negeer de gegeven Matrix-ID';
 
   @override
-  String get commandHint_unignore => 'Herstel de negeerde Matrix ID';
+  String get commandHint_unignore => 'Herstel de negeerde Matrix-ID';
 
   @override
   String unreadChatsInApp(String appname, String unread) {
@@ -2287,7 +2295,7 @@ class L10nNl extends L10n {
       'Database versleuteling is niet ondersteund op dit platform';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Momenteel zijn er $count personen geblokkeerd.';
   }
 
@@ -2359,7 +2367,7 @@ class L10nNl extends L10n {
   String get sendCanceled => 'Versturen geannuleerd';
 
   @override
-  String get loginWithMatrixId => 'Inloggen met Matrix ID';
+  String get loginWithMatrixId => 'Inloggen met Matrix-ID';
 
   @override
   String get discoverHomeservers => 'Ontdek servers';
@@ -2527,14 +2535,14 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Stuurt een melding als een bericht de persoon vermeld.';
+      'Stuur een melding als je inlognaam vermeld wordt in een bericht.';
 
   @override
   String get notificationRuleMaster => 'Alle meldingen dempen';
 
   @override
   String get notificationRuleMasterDescription =>
-      'Overschrijf alle andere regels en meldingen uitschakelen.';
+      'Overschrijf alle andere regels en schakel alle meldingen uit.';
 
   @override
   String get notificationRuleSuppressNotices =>
@@ -2549,7 +2557,7 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleInviteForMeDescription =>
-      'Stuur een melding wanneer een persoon wordt uitgenodigd voor een chat.';
+      'Stuur een melding wanneer je wordt uitgenodigd voor een chat.';
 
   @override
   String get notificationRuleMemberEvent => 'Chat-gebeurtenis';
@@ -2563,35 +2571,35 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Stuur een melding als de persoon direct genoemd wordt in een bericht.';
+      'Stuur een melding als je direct genoemd wordt in een bericht.';
 
   @override
   String get notificationRuleContainsDisplayName => 'Bevat de naam';
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
-      'Stuur een melding als de persoon genoemd wordt in het bericht.';
+      'Stuur een melding als je genoemd wordt in een bericht.';
 
   @override
   String get notificationRuleIsRoomMention => 'Kamervermelding';
 
   @override
   String get notificationRuleIsRoomMentionDescription =>
-      'Stuur een melding naar de persoon als er in een kamervermelding is.';
+      'Stuur een melding als er een kamervermelding is.';
 
   @override
   String get notificationRuleRoomnotif => 'Kamermelding';
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Stuur een melding naar de persoon wanneer een bericht \'@room\' bevat.';
+      'Stuur je een melding als een bericht \'@room\' bevat.';
 
   @override
-  String get notificationRuleTombstone => 'Sleutingsbericht';
+  String get notificationRuleTombstone => 'Sluitingsbericht';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Stuur een melding naar de persoon over chat-sluitingsberichten.';
+      'Stuur een melding naar je over chat-sluitingsberichten.';
 
   @override
   String get notificationRuleReaction => 'Reactie';
@@ -2619,7 +2627,7 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleCallDescription =>
-      'Stuur een melding naar de persoon over oproepen.';
+      'Stuur een melding naar je over oproepen.';
 
   @override
   String get notificationRuleEncryptedRoomOneToOne =>
@@ -2627,43 +2635,43 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Stuur een melding naar de persoon over berichten in versleutelde een-op-een chats.';
+      'Stuur een melding naar je over berichten in versleutelde een-op-een chats.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Een-op-een chat';
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Stuur een melding naar de persoon over berichten in een-op-een chats.';
+      'Stuur een melding naar je over berichten in een-op-een chats.';
 
   @override
   String get notificationRuleMessage => 'Bericht';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Stuur een melding naar de persoon over algemene berichten.';
+      'Stuur een melding naar je over algemene berichten.';
 
   @override
   String get notificationRuleEncrypted => 'Versleuteld';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Stuur een melding naar de persoon over berichten in versleutelde chats.';
+      'Stuur een melding naar je over berichten in versleutelde chats.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
   String get notificationRuleJitsiDescription =>
-      'Stuur een melding naar de persoon over Jitsi widget gebeurtenissen.';
+      'Stuur een melding naar je over Jitsi widget-gebeurtenissen.';
 
   @override
   String get notificationRuleServerAcl =>
-      'Server ACL gebeurtenissen uitschakelen';
+      'Server ACL-gebeurtenissen uitschakelen';
 
   @override
   String get notificationRuleServerAclDescription =>
-      'Meldingen over server ACL gebeurtenissen uitschakelen.';
+      'Meldingen over server ACL-gebeurtenissen uitschakelen.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2861,4 +2869,78 @@ class L10nNl extends L10n {
 
   @override
   String get backToMainChat => 'Terug naar hoofdchat';
+
+  @override
+  String get saveChanges => 'Wijzigingen opslaan';
+
+  @override
+  String get createSticker => 'Sticker of emoji maken';
+
+  @override
+  String get useAsSticker => 'Gebruik als sticker';
+
+  @override
+  String get useAsEmoji => 'Gebruik als emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Stickerpakketnaam bestaat al';
+
+  @override
+  String get newStickerPack => 'Nieuw stickerpakket';
+
+  @override
+  String get stickerPackName => 'Stickerpakketnaam';
+
+  @override
+  String get attribution => 'Toeschrijving';
+
+  @override
+  String get skipChatBackup => 'Chatback-up overslaan';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Weet je het zeker? Zonder chat back-up verlies je toegang tot je berichten als je van apparaat wisselt.';
+
+  @override
+  String get loadingMessages => 'Berichten laden';
+
+  @override
+  String get setupChatBackup => 'Chatback-up instellen';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

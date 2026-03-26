@@ -122,7 +122,7 @@ class L10nRu extends L10n {
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName улыбнулся(ась) Вам';
+    return '$senderName обнимает вас';
   }
 
   @override
@@ -171,8 +171,11 @@ class L10nRu extends L10n {
       'Автоматически воспроизводить анимированные стикеры и эмодзи';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домашний сервер поддерживает следующие типы входа в систему:\n$serverVersions\nНо это приложение поддерживает только:\n$supportedVersions';
   }
 
@@ -188,17 +191,18 @@ class L10nRu extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домашний сервер поддерживает следующие версии спецификации:\n$serverVersions\nНо это приложение поддерживает только $supportedVersions';
   }
 
   @override
   String countChatsAndCountParticipants(int chats, int participants) {
-    return '';
+    return '$chats chats and $participants participants';
   }
 
   @override
@@ -257,13 +261,23 @@ class L10nRu extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username изменил описание чата';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username изменил(а) описание чата на: \'$description\'';
   }
 
   @override
+  String changedTheChatName(Object username) {
+    return '$username изменил(а) имя чата';
+  }
+
+  @override
   String changedTheChatNameTo(String username, String chatname) {
-    return '$username изменил(а) имя чата на: \'$chatname\'';
+    return '$username изменил(а) имя чата на \'$chatname\'';
   }
 
   @override
@@ -273,7 +287,7 @@ class L10nRu extends L10n {
 
   @override
   String changedTheDisplaynameTo(String username, String displayname) {
-    return '$username изменил(а) отображаемое имя на: \'$displayname\'';
+    return '$username изменил(а) отображаемое имя на \'$displayname\'';
   }
 
   @override
@@ -283,7 +297,7 @@ class L10nRu extends L10n {
 
   @override
   String changedTheGuestAccessRulesTo(String username, String rules) {
-    return '$username изменил(а) правила гостевого доступа на: $rules';
+    return '$username изменил(а) правила гостевого доступа на $rules';
   }
 
   @override
@@ -293,7 +307,7 @@ class L10nRu extends L10n {
 
   @override
   String changedTheHistoryVisibilityTo(String username, String rules) {
-    return '$username изменил(а) видимость истории на: $rules';
+    return '$username изменил(а) видимость истории на $rules';
   }
 
   @override
@@ -303,7 +317,7 @@ class L10nRu extends L10n {
 
   @override
   String changedTheJoinRulesTo(String username, String joinRules) {
-    return '$username изменил(а) правила присоединения на: $joinRules';
+    return '$username изменил(а) правила присоединения на $joinRules';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nRu extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Резервная старых сообщений защищена ключом восстановления. Пожалуйста, не потеряйте его.';
+      'Ваши сообщения защищены ключом восстановления. Пожалуйста, не потеряйте его.';
 
   @override
   String get chatDetails => 'Детали чата';
@@ -501,14 +515,7 @@ class L10nRu extends L10n {
 
   @override
   String countInvited(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'Приглашены # участников',
-      few: 'Приглашены # участника',
-      one: 'Приглашён # участник',
-    );
-    return '$_temp0';
+    return '$count invited';
   }
 
   @override
@@ -886,14 +893,7 @@ class L10nRu extends L10n {
 
   @override
   String loadCountMoreParticipants(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'Загрузить еще # участников',
-      few: 'Загрузить еще # участников',
-      one: 'Загрузить еще # участника',
-    );
-    return '$_temp0';
+    return 'Load $count more participants';
   }
 
   @override
@@ -1502,9 +1502,8 @@ class L10nRu extends L10n {
     String _temp0 = intl.Intl.pluralLogic(
       unreadCount,
       locale: localeName,
-      other: '# непрочитанных чатов',
-      few: '# непрочитанных чата',
-      one: '# непрочитанный чат',
+      other: '$unreadCount unread chats',
+      one: '1 unread chat',
     );
     return '$_temp0';
   }
@@ -1861,14 +1860,7 @@ class L10nRu extends L10n {
 
   @override
   String countFiles(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '# файлов',
-      few: '# файла',
-      one: '# файл',
-    );
-    return '$_temp0';
+    return '$count files';
   }
 
   @override
@@ -1932,7 +1924,7 @@ class L10nRu extends L10n {
 
   @override
   String numChats(String number) {
-    return '';
+    return '$number чатов';
   }
 
   @override
@@ -2014,11 +2006,6 @@ class L10nRu extends L10n {
       'Повторите попытку позже или выберите другой сервер.';
 
   @override
-  String signInWith(String provider) {
-    return 'Войти с $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Пользователь не найден на сервере. Это может быть проблемой подключения или пользователь не существует.';
 
@@ -2042,7 +2029,7 @@ class L10nRu extends L10n {
 
   @override
   String wrongPinEntered(int seconds) {
-    return '';
+    return 'Wrong pin entered! Try again in $seconds seconds...';
   }
 
   @override
@@ -2311,7 +2298,7 @@ class L10nRu extends L10n {
 
   @override
   String unreadChatsInApp(String appname, String unread) {
-    return '';
+    return '$appname: $unread unread chats';
   }
 
   @override
@@ -2319,15 +2306,8 @@ class L10nRu extends L10n {
       'Шифрование базы данных не поддерживается на этой платформе';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'заблокированы # пользователей',
-      few: 'заблокированы # пользователя',
-      one: 'заблокирован # пользователь',
-    );
-    return 'Сейчас $_temp0.';
+  String thereAreCountUsersBlocked(Object count) {
+    return 'Right now there are $count users blocked.';
   }
 
   @override
@@ -2436,7 +2416,7 @@ class L10nRu extends L10n {
 
   @override
   String serverLimitReached(int seconds) {
-    return '';
+    return 'Server limit reached! Waiting $seconds seconds...';
   }
 
   @override
@@ -2591,7 +2571,7 @@ class L10nRu extends L10n {
       'Уведомляет пользователя, когда его приглашают в комнату.';
 
   @override
-  String get notificationRuleMemberEvent => 'Member Event';
+  String get notificationRuleMemberEvent => 'Мероприятие участника';
 
   @override
   String get notificationRuleMemberEventDescription =>
@@ -2602,35 +2582,35 @@ class L10nRu extends L10n {
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Notifies the user when they are directly mentioned in a message.';
+      'Уведомляет пользователя, когда он упоминается непосредственно в сообщении.';
 
   @override
   String get notificationRuleContainsDisplayName => 'Содержит отображаемое имя';
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
-      'Notifies the user when a message contains their display name.';
+      'Уведомляет пользователя, когда сообщение содержит его имя отображения.';
 
   @override
   String get notificationRuleIsRoomMention => 'Упоминание комнаты';
 
   @override
   String get notificationRuleIsRoomMentionDescription =>
-      'Notifies the user when there is a room mention.';
+      'Уведомляет пользователя о наличии упоминания о комнате.';
 
   @override
-  String get notificationRuleRoomnotif => 'Room Notification';
+  String get notificationRuleRoomnotif => 'Уведомление о комнате';
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Notifies the user when a message contains \'@room\'.';
+      'Уведомляет пользователя, когда сообщение содержит \'@room\'.';
 
   @override
-  String get notificationRuleTombstone => 'Tombstone';
+  String get notificationRuleTombstone => 'Надгробный камень';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Notifies the user about room deactivation messages.';
+      'Уведомляет пользователя о сообщениях о деактивации комнаты.';
 
   @override
   String get notificationRuleReaction => 'Реакция';
@@ -2640,14 +2620,14 @@ class L10nRu extends L10n {
       'Отключить уведомления о реакциях.';
 
   @override
-  String get notificationRuleRoomServerAcl => 'Room Server ACL';
+  String get notificationRuleRoomServerAcl => 'ACL сервера комнаты';
 
   @override
   String get notificationRuleRoomServerAclDescription =>
-      'Suppresses notifications for room server access control lists (ACL).';
+      'Удаляет уведомления о списках контроля доступа к серверу комнат (ACL).';
 
   @override
-  String get notificationRuleSuppressEdits => 'Suppress Edits';
+  String get notificationRuleSuppressEdits => 'Подавление правки';
 
   @override
   String get notificationRuleSuppressEditsDescription =>
@@ -2673,35 +2653,35 @@ class L10nRu extends L10n {
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Notifies the user about messages in one-to-one rooms.';
+      'Уведомляет пользователя о сообщениях в разделах один на один.';
 
   @override
   String get notificationRuleMessage => 'Сообщение';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Notifies the user about general messages.';
+      'Уведомляет пользователя об общих сообщениях.';
 
   @override
   String get notificationRuleEncrypted => 'Зашифровано';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Notifies the user about messages in encrypted rooms.';
+      'Уведомляет пользователя о сообщениях в зашифрованных комнатах.';
 
   @override
-  String get notificationRuleJitsi => 'Jitsi';
+  String get notificationRuleJitsi => 'Джици';
 
   @override
   String get notificationRuleJitsiDescription =>
-      'Notifies the user about Jitsi widget events.';
+      'Уведомляет пользователя о событиях виджета Jitsi.';
 
   @override
-  String get notificationRuleServerAcl => 'Suppress Server ACL Events';
+  String get notificationRuleServerAcl => 'Запретить события ACL сервера';
 
   @override
   String get notificationRuleServerAclDescription =>
-      'Suppresses notifications for Server ACL events.';
+      'Удаляет уведомления о событиях ACL сервера.';
 
   @override
   String unknownPushRule(String rule) {
@@ -2710,35 +2690,35 @@ class L10nRu extends L10n {
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - Voice message from $sender';
+    return '️🎙️ $duration - Голосовое сообщение от $sender';
   }
 
   @override
   String get deletePushRuleCanNotBeUndone =>
-      'If you delete this notification setting, this can not be undone.';
+      'Если вы удалите эту настройку уведомлений, это невозможно отменить.';
 
   @override
   String get more => 'Больше';
 
   @override
-  String get shareKeysWith => 'Share keys with...';
+  String get shareKeysWith => 'Поделиться ключами с...';
 
   @override
   String get shareKeysWithDescription =>
-      'Which devices should be trusted so that they can read along your messages in encrypted chats?';
+      'Каким устройствам следует доверять, чтобы они могли читать ваши сообщения в зашифрованных чатах?';
 
   @override
   String get allDevices => 'Все устройства';
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
-      'Cross verified devices if enabled';
+      'Если включено, перекрестите проверенные устройства';
 
   @override
-  String get crossVerifiedDevices => 'Cross verified devices';
+  String get crossVerifiedDevices => 'Кросс-верифицированные устройства';
 
   @override
-  String get verifiedDevicesOnly => 'Verified devices only';
+  String get verifiedDevicesOnly => 'Только проверенные устройства';
 
   @override
   String get takeAPhoto => 'Снять фото';
@@ -2747,156 +2727,232 @@ class L10nRu extends L10n {
   String get recordAVideo => 'Записать видео';
 
   @override
-  String get optionalMessage => '(Optional) message...';
+  String get optionalMessage => '(Необязательно) сообщение...';
 
   @override
-  String get notSupportedOnThisDevice => 'Not supported on this device';
+  String get notSupportedOnThisDevice => 'Не поддерживается на этом устройстве';
 
   @override
   String get enterNewChat => 'Введите новый чат';
 
   @override
-  String get approve => 'Approve';
+  String get approve => 'Утверждать';
 
   @override
-  String get youHaveKnocked => 'You have knocked';
+  String get youHaveKnocked => 'Вы постучали';
 
   @override
   String get pleaseWaitUntilInvited =>
-      'Please wait now, until someone from the room invites you.';
+      'Пожалуйста, подождите, пока кто-нибудь из комнаты не пригласит вас.';
 
   @override
-  String get commandHint_logout => 'Logout your current device';
+  String get commandHint_logout => 'Выйти из текущего устройства';
 
   @override
-  String get commandHint_logoutall => 'Logout all active devices';
+  String get commandHint_logoutall => 'Выйти из всех активных устройств';
 
   @override
-  String get displayNavigationRail => 'Show navigation rail on mobile';
+  String get displayNavigationRail =>
+      'Показать навигационный рельс на мобильном устройстве';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Пользовательская реакция';
 
   @override
-  String get moreEvents => 'More events';
+  String get moreEvents => 'Больше событий';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Отказаться от приглашения';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'Пока нет сообщений';
 
   @override
   String get longPressToRecordVoiceMessage =>
-      'Long press to record voice message.';
+      'Нажмите длиннее, чтобы записать голосовое сообщение.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Пауза';
 
   @override
-  String get resume => 'Resume';
+  String get resume => 'Резюмировать';
 
   @override
-  String get newSubSpace => 'New sub space';
+  String get newSubSpace => 'Новое подпространство';
 
   @override
-  String get moveToDifferentSpace => 'Move to different space';
+  String get moveToDifferentSpace => 'Переместить в другое пространство';
 
   @override
-  String get moveUp => 'Move up';
+  String get moveUp => 'Переместить вверх';
 
   @override
-  String get moveDown => 'Move down';
+  String get moveDown => 'Переместить вниз';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'Чат будет удален из пространства, но все равно появится в вашем списке чатов.';
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats чатов';
   }
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return 'Участник пространства из $spaces';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return 'Участник пространства из $spaces может постучать';
   }
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Пожертвовать';
 
   @override
   String startedAPoll(String username) {
-    return '$username started a poll.';
+    return '$username начал опрос.';
   }
 
   @override
-  String get poll => 'Poll';
+  String get poll => 'Опрос';
 
   @override
-  String get startPoll => 'Start poll';
+  String get startPoll => 'Начать опрос';
 
   @override
-  String get endPoll => 'End poll';
+  String get endPoll => 'Завершить опрос';
 
   @override
-  String get answersVisible => 'Answers visible';
+  String get answersVisible => 'Ответы видны';
 
   @override
-  String get answersHidden => 'Answers hidden';
+  String get answersHidden => 'Ответы скрыты';
 
   @override
-  String get pollQuestion => 'Poll question';
+  String get pollQuestion => 'Вопрос по опросу';
 
   @override
-  String get answerOption => 'Answer option';
+  String get answerOption => 'Вариант ответа';
 
   @override
-  String get addAnswerOption => 'Add answer option';
+  String get addAnswerOption => 'Добавить вариант ответа';
 
   @override
-  String get allowMultipleAnswers => 'Allow multiple answers';
+  String get allowMultipleAnswers => 'Разрешить несколько ответов';
 
   @override
-  String get pollHasBeenEnded => 'Poll has been ended';
+  String get pollHasBeenEnded => 'Опрос завершен';
 
   @override
   String countVotes(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count голосов',
-      one: 'Один голос',
+      other: '$count votes',
+      one: 'One vote',
     );
     return '$_temp0';
   }
 
   @override
   String get answersWillBeVisibleWhenPollHasEnded =>
-      'Answers will be visible when poll has ended';
+      'Ответы будут видны после завершения опроса';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'Ответить в потоке';
 
   @override
   String countReplies(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count ответов',
-      one: 'Один ответ',
+      other: '$count replies',
+      one: 'One reply',
     );
     return '$_temp0';
   }
 
   @override
-  String get thread => 'Thread';
+  String get thread => 'Нить';
 
   @override
-  String get backToMainChat => 'Back to main chat';
+  String get backToMainChat => 'Вернуться в основной чат';
+
+  @override
+  String get saveChanges => 'Сохранить изменения';
+
+  @override
+  String get createSticker => 'Создать стикер или эмоджи';
+
+  @override
+  String get useAsSticker => 'Использовать как стикер';
+
+  @override
+  String get useAsEmoji => 'Использовать в качестве эмоджи';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Имя набора стикеров уже существует';
+
+  @override
+  String get newStickerPack => 'Новая упаковка стикеров';
+
+  @override
+  String get stickerPackName => 'Имя упаковки стикеров';
+
+  @override
+  String get attribution => 'Атрибуция';
+
+  @override
+  String get skipChatBackup => 'Пропустить резервную копию чата';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Вы уверены? Без включения резервного копирования чата вы можете потерять доступ к своим сообщениям, если переключите устройство.';
+
+  @override
+  String get loadingMessages => 'Загрузка сообщений';
+
+  @override
+  String get setupChatBackup => 'Настроить резервную копию чата';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

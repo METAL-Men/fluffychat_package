@@ -86,7 +86,7 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get addChatDescription => 'Chat tavsifini kiriting...';
+  String get addChatDescription => 'Suhbat tavsifini kiriting...';
 
   @override
   String get addToSpace => 'Maydonga qo‘shish';
@@ -101,7 +101,7 @@ class L10nUz extends L10n {
   String get all => 'Hammasi';
 
   @override
-  String get allChats => 'Hamma chatlar';
+  String get allChats => 'Hamma suhbatlar';
 
   @override
   String get commandHint_roomupgrade =>
@@ -174,8 +174,11 @@ class L10nUz extends L10n {
       'Animatsiyali stikerlar va emojilarni avtomatik ijro etish';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Homeserver quyidagi kirish turlarini qo\'llab-quvvatlaydi:\n$serverVersions\nLekin bu ilova faqat quyidagi turlarni qo\'llab-quvvatlaydi:\n$supportedVersions';
   }
 
@@ -191,17 +194,18 @@ class L10nUz extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Homeserver quyidagi Spec versiyalarini qo\'llab-quvvatlaydi:\n$serverVersions\nLekin bu ilova faqat $supportedVersions versiyalarini qo\'llab-quvvatlaydi';
   }
 
   @override
   String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats chatlar va $participants ishtirokchilar';
+    return '$chats suhbatlar va $participants ishtirokchilar';
   }
 
   @override
@@ -209,10 +213,10 @@ class L10nUz extends L10n {
 
   @override
   String get noChatsFoundHere =>
-      'Bu yerda hali chat topilmadi. Quyidagi tugmadan foydalanib, kimdir bilan yangi chat boshlang. ⤵️';
+      'Bu yerda hali chat topilmadi. Quyidagi tugmadan foydalanib, kimdir bilan yangi suhbat boshlang. ⤵️';
 
   @override
-  String get joinedChats => 'Qo\'shilgan chatlar';
+  String get joinedChats => 'Qo\'shilgan suhbatlar';
 
   @override
   String get unread => 'Oʻqilmagan';
@@ -224,7 +228,7 @@ class L10nUz extends L10n {
   String get spaces => 'Boʻshliqlar';
 
   @override
-  String get banFromChat => 'Chatdan taqiqlash';
+  String get banFromChat => 'Suhbatdan taqiqlash';
 
   @override
   String get banned => 'Taqiqlangan';
@@ -256,22 +260,32 @@ class L10nUz extends L10n {
 
   @override
   String changedTheChatAvatar(String username) {
-    return '$username chat avatarini oʻzgartirdi';
+    return '$username suhbat avatarini oʻzgartirdi';
+  }
+
+  @override
+  String changedTheChatDescription(Object username) {
+    return '$username chat tavsifini o‘zgartirdi';
   }
 
   @override
   String changedTheChatDescriptionTo(String username, String description) {
-    return '$username chat tavsifini \'$description\'ga oʻzgartirdi';
+    return '$username suhbat tavsifini \'$description\'ga oʻzgartirdi';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username chat nomini o‘zgartirdi';
   }
 
   @override
   String changedTheChatNameTo(String username, String chatname) {
-    return '$username chat nomini: \'$chatname\'ga oʻzgartirdi';
+    return '$username suhbat nomini: \'$chatname\'ga oʻzgartirdi';
   }
 
   @override
   String changedTheChatPermissions(String username) {
-    return '$username chat ruxsatnomalarini oʻzgartirdi';
+    return '$username suhbat ruxsatnomalarini oʻzgartirdi';
   }
 
   @override
@@ -316,212 +330,213 @@ class L10nUz extends L10n {
 
   @override
   String changedTheRoomAliases(String username) {
-    return '$username changed the room aliases';
+    return '$username xona taxalluslarini oʻzgartirdi';
   }
 
   @override
   String changedTheRoomInvitationLink(String username) {
-    return '$username changed the invitation link';
+    return '$username taklif havolasini oʻzgartirdi';
   }
 
   @override
-  String get changePassword => 'Change password';
+  String get changePassword => 'Parolni o‘zgartirish';
 
   @override
-  String get changeTheHomeserver => 'Change the homeserver';
+  String get changeTheHomeserver => 'Homeserverni almashtirish';
 
   @override
-  String get changeTheme => 'Change your style';
+  String get changeTheme => 'Uslubingizni o‘zgartiring';
 
   @override
-  String get changeTheNameOfTheGroup => 'Change the name of the group';
+  String get changeTheNameOfTheGroup => 'Guruh nomini o‘zgartirish';
 
   @override
-  String get changeYourAvatar => 'Change your avatar';
+  String get changeYourAvatar => 'Avataringizni almashtiring';
 
   @override
-  String get channelCorruptedDecryptError =>
-      'The encryption has been corrupted';
+  String get channelCorruptedDecryptError => 'Shifrlash buzilgan';
 
   @override
-  String get chat => 'Chat';
+  String get chat => 'Suhbat';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Your chat backup has been set up.';
+  String get yourChatBackupHasBeenSetUp => 'Suhbat zaxirangiz sozlandi.';
 
   @override
-  String get chatBackup => 'Chat backup';
+  String get chatBackup => 'Suhbat zaxirasi';
 
   @override
   String get chatBackupDescription =>
-      'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.';
+      'Eski xabarlaringiz tiklash kaliti bilan himoyalangan. Uni yo‘qotib qo‘ymasligingizga ishonch hosil qiling.';
 
   @override
-  String get chatDetails => 'Chat details';
+  String get chatDetails => 'Suhbat tafsilotlari';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'Chat has been added to this space';
+  String get chatHasBeenAddedToThisSpace => 'Suhbat bu maydonga kiritildi';
 
   @override
-  String get chats => 'Chats';
+  String get chats => 'Suhbatlar';
 
   @override
-  String get chooseAStrongPassword => 'Choose a strong password';
+  String get chooseAStrongPassword => 'Kuchli parol tanlang';
 
   @override
-  String get clearArchive => 'Clear archive';
+  String get clearArchive => 'Arxivni tozalash';
 
   @override
-  String get close => 'Close';
+  String get close => 'Yopish';
 
   @override
   String get commandHint_markasdm =>
-      'Mark as direct message room for the giving Matrix ID';
+      'Matrix identifikatorini berish uchun shaxsiy xabar guruhi sifatida belgilang';
 
   @override
-  String get commandHint_markasgroup => 'Mark as group';
+  String get commandHint_markasgroup => 'Guruh sifatida belgilash';
 
   @override
-  String get commandHint_ban => 'Ban the given user from this room';
+  String get commandHint_ban => 'Bu guruhdan berilgan foydalanuvchini bloklash';
 
   @override
-  String get commandHint_clearcache => 'Clear cache';
+  String get commandHint_clearcache => 'Kesh tozalash';
 
   @override
   String get commandHint_create =>
-      'Create an empty group chat\nUse --no-encryption to disable encryption';
+      'Boʻsh guruh suhbati yarating\nShifrlashni oʻchirish uchun --no-encryption dan foydalaning';
 
   @override
-  String get commandHint_discardsession => 'Discard session';
+  String get commandHint_discardsession => 'Seansni bekor qilish';
 
   @override
   String get commandHint_dm =>
-      'Start a direct chat\nUse --no-encryption to disable encryption';
+      'Jonli suhbatni boshlash\nShifrlashni o‘chirish uchun --no-encryption dan foydalaning';
 
   @override
-  String get commandHint_html => 'Send HTML-formatted text';
+  String get commandHint_html => 'HTML formatidagi matnni yuborish';
 
   @override
-  String get commandHint_invite => 'Invite the given user to this room';
+  String get commandHint_invite =>
+      'Berilgan foydalanuvchini ushbu guruhga taklif qiling';
 
   @override
-  String get commandHint_join => 'Join the given room';
+  String get commandHint_join => 'Berilgan guruhga qoʻshilish';
 
   @override
-  String get commandHint_kick => 'Remove the given user from this room';
+  String get commandHint_kick => 'Berilgan foydalanuvchini guruhdan oʻchirish';
 
   @override
-  String get commandHint_leave => 'Leave this room';
+  String get commandHint_leave => 'Guruhni tark etish';
 
   @override
-  String get commandHint_me => 'Describe yourself';
+  String get commandHint_me => 'Oʻzingizni tariflang';
 
   @override
   String get commandHint_myroomavatar =>
-      'Set your picture for this room (by mxc-uri)';
+      'Bu guruh uchun rasmingizni sozlang (mxc-uri tomonidan)';
 
   @override
-  String get commandHint_myroomnick => 'Set your display name for this room';
+  String get commandHint_myroomnick => 'Bu guruh uchun displey nomini sozlang';
 
   @override
   String get commandHint_op =>
-      'Set the given user\'s power level (default: 50)';
+      'Berilgan foydalanuvchi quvvat darajasini oʻrnating (standart: 50)';
 
   @override
-  String get commandHint_plain => 'Send unformatted text';
+  String get commandHint_plain => 'Formatlanmagan matnni yuboring';
 
   @override
-  String get commandHint_react => 'Send reply as a reaction';
+  String get commandHint_react => 'Javobni reaksiya sifatida yuboring';
 
   @override
-  String get commandHint_send => 'Send text';
+  String get commandHint_send => 'Matn yuborish';
 
   @override
-  String get commandHint_unban => 'Unban the given user from this room';
+  String get commandHint_unban =>
+      'Berilgan foydalanuvchini bu guruhdan blokdan chiqazish';
 
   @override
-  String get commandInvalid => 'Command invalid';
+  String get commandInvalid => 'Buyruq yaroqsiz';
 
   @override
   String commandMissing(String command) {
-    return '$command is not a command.';
+    return '$command komanda emas.';
   }
 
   @override
-  String get compareEmojiMatch => 'Please compare the emojis';
+  String get compareEmojiMatch => 'Iltimos emojilarni taqqoslang';
 
   @override
-  String get compareNumbersMatch => 'Please compare the numbers';
+  String get compareNumbersMatch => 'Iltimos raqamlarni taqqoslang';
 
   @override
-  String get configureChat => 'Configure chat';
+  String get configureChat => 'Suhbatni sozlash';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Tasdiqlash';
 
   @override
-  String get connect => 'Connect';
+  String get connect => 'Ulanish';
 
   @override
   String get contactHasBeenInvitedToTheGroup =>
-      'Contact has been invited to the group';
+      'Kontakt guruhga taklif qilindi';
 
   @override
-  String get containsDisplayName => 'Contains display name';
+  String get containsDisplayName => 'Displey nomni oʻz ichiga oladi';
 
   @override
-  String get containsUserName => 'Contains username';
+  String get containsUserName => 'Foydalanuvchi nomini oʻz ichiga oladi';
 
   @override
   String get contentHasBeenReported =>
-      'The content has been reported to the server admins';
+      'Kontent server administratorlariga xabar qilindi';
 
   @override
-  String get copiedToClipboard => 'Copied to clipboard';
+  String get copiedToClipboard => 'Buferga nusxalandi';
 
   @override
-  String get copy => 'Copy';
+  String get copy => 'Nusxalash';
 
   @override
-  String get copyToClipboard => 'Copy to clipboard';
+  String get copyToClipboard => 'Buferga nusxalash';
 
   @override
   String couldNotDecryptMessage(String error) {
-    return 'Could not decrypt message: $error';
+    return 'Xabarni shifrlab boʻlmadi: $error';
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Tekshirish roʻyxati';
 
   @override
   String countParticipants(int count) {
-    return '$count participants';
+    return '$count qatnashuvchilar';
   }
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count taklif qilindi';
   }
 
   @override
-  String get create => 'Create';
+  String get create => 'Yaratish';
 
   @override
   String createdTheChat(String username) {
-    return '💬 $username created the chat';
+    return '💬 $username suhbat yaratdi';
   }
 
   @override
-  String get createGroup => 'Create group';
+  String get createGroup => 'Guruh yaratish';
 
   @override
-  String get createNewSpace => 'New space';
+  String get createNewSpace => 'Yangi maydon';
 
   @override
-  String get currentlyActive => 'Currently active';
+  String get currentlyActive => 'Hozirda faol';
 
   @override
-  String get darkTheme => 'Dark';
+  String get darkTheme => 'Qorongʻi';
 
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
@@ -540,1100 +555,1107 @@ class L10nUz extends L10n {
 
   @override
   String get deactivateAccountWarning =>
-      'This will deactivate your user account. This can not be undone! Are you sure?';
+      'Bu sizning foydalanuvchi hisobingizni oʻchirib qoʻyadi. Buni qaytarib boʻlmaydi! Ishonchingiz komilmi?';
 
   @override
-  String get defaultPermissionLevel => 'Default permission level for new users';
+  String get defaultPermissionLevel =>
+      'Yangi foydalanuvchilar uchun standart ruxsat darajasi';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Oʻchirish';
 
   @override
-  String get deleteAccount => 'Delete account';
+  String get deleteAccount => 'Hisobni oʻchirish';
 
   @override
-  String get deleteMessage => 'Delete message';
+  String get deleteMessage => 'Xabarni oʻchirish';
 
   @override
-  String get device => 'Device';
+  String get device => 'Qurilma';
 
   @override
-  String get deviceId => 'Device ID';
+  String get deviceId => 'Qurilma ID';
 
   @override
-  String get devices => 'Devices';
+  String get devices => 'Qurilmalar';
 
   @override
-  String get directChats => 'Direct Chats';
+  String get directChats => 'Shaxsiy suhbatlar';
 
   @override
-  String get allRooms => 'All Group Chats';
+  String get allRooms => 'Barcha guruh suhbatlar';
 
   @override
-  String get displaynameHasBeenChanged => 'Displayname has been changed';
+  String get displaynameHasBeenChanged => 'Displey nomi o‘zgartirildi';
 
   @override
-  String get downloadFile => 'Download file';
+  String get downloadFile => 'Faylni yuklab olish';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Tahrirlash';
 
   @override
-  String get editBlockedServers => 'Edit blocked servers';
+  String get editBlockedServers => 'Bloklangan serverlarni tahrirlash';
 
   @override
-  String get chatPermissions => 'Chat permissions';
+  String get chatPermissions => 'Suhbat ruxsatlari';
 
   @override
-  String get editDisplayname => 'Edit displayname';
+  String get editDisplayname => 'Displey nomini tahrirlash';
 
   @override
-  String get editRoomAliases => 'Edit room aliases';
+  String get editRoomAliases => 'Xona taxalluslarini tahrirlash';
 
   @override
-  String get editRoomAvatar => 'Edit room avatar';
+  String get editRoomAvatar => 'Xona avatarini tahrirlash';
 
   @override
-  String get emoteExists => 'Emote already exists!';
+  String get emoteExists => 'Emotsiya allaqachon mavjud!';
 
   @override
-  String get emoteInvalid => 'Invalid emote shortcode!';
+  String get emoteInvalid => 'Noto‘g‘ri emotsiya kodi!';
 
   @override
   String get emoteKeyboardNoRecents =>
-      'Recently-used emotes will appear here...';
+      'Yaqinda ishlatilgan emotsiyalar shu yerda chiqadi...';
 
   @override
-  String get emotePacks => 'Emote packs for room';
+  String get emotePacks => 'Guruh uchun Emote toʻplamlar';
 
   @override
-  String get emoteSettings => 'Emote Settings';
+  String get emoteSettings => 'Emote Sozlamalari';
 
   @override
-  String get globalChatId => 'Global chat ID';
+  String get globalChatId => 'Ommaviy suhbat IDʼsi';
 
   @override
-  String get accessAndVisibility => 'Access and visibility';
+  String get accessAndVisibility => 'Kirish va koʻrinish';
 
   @override
   String get accessAndVisibilityDescription =>
-      'Who is allowed to join this chat and how the chat can be discovered.';
+      'Bu suhbatga kim qoʻshilishi mumkin va suhbatni qanday topish mumkin.';
 
   @override
-  String get calls => 'Calls';
+  String get calls => 'Qoʻngʻiroqlar';
 
   @override
-  String get customEmojisAndStickers => 'Custom emojis and stickers';
+  String get customEmojisAndStickers => 'Maxsus emojilar va stikerlar';
 
   @override
   String get customEmojisAndStickersBody =>
-      'Add or share custom emojis or stickers which can be used in any chat.';
+      'Istalgan suhbatda ishlatilishi mumkin boʻlgan maxsus emojilar yoki stikerlarni qoʻshing yoki ulashing.';
 
   @override
-  String get emoteShortcode => 'Emote shortcode';
+  String get emoteShortcode => 'Emote qisqa kodi';
 
   @override
   String get emoteWarnNeedToPick =>
-      'You need to pick an emote shortcode and an image!';
+      'Siz emote qisqa kodi va rasmni tanlashingiz kerak!';
 
   @override
-  String get emptyChat => 'Empty chat';
+  String get emptyChat => 'Boʻsh suhbat';
 
   @override
-  String get enableEmotesGlobally => 'Enable emote pack globally';
+  String get enableEmotesGlobally => 'Emote paketini global miqyosda yoqish';
 
   @override
-  String get enableEncryption => 'Enable encryption';
+  String get enableEncryption => 'Shifrlashni yoqish';
 
   @override
   String get enableEncryptionWarning =>
-      'You won\'t be able to disable the encryption anymore. Are you sure?';
+      'Siz endi shifrlashni oʻchira olmaysiz. Ishonchingiz komilmi?';
 
   @override
-  String get encrypted => 'Encrypted';
+  String get encrypted => 'Shifrlangan';
 
   @override
-  String get encryption => 'Encryption';
+  String get encryption => 'Shifrlash';
 
   @override
-  String get encryptionNotEnabled => 'Encryption is not enabled';
+  String get encryptionNotEnabled => 'Shifrlash yoqilmagan';
 
   @override
   String endedTheCall(String senderName) {
-    return '$senderName ended the call';
+    return '$senderName chaqiruvni tugatdi';
   }
 
   @override
-  String get enterAnEmailAddress => 'Enter an email address';
+  String get enterAnEmailAddress => 'Email manzilini kiriting';
 
   @override
-  String get homeserver => 'Homeserver';
+  String get homeserver => 'Uy serveri';
 
   @override
-  String get enterYourHomeserver => 'Enter your homeserver';
+  String get enterYourHomeserver => 'Uy serveriga kiring';
 
   @override
   String errorObtainingLocation(String error) {
-    return 'Error obtaining location: $error';
+    return 'Joylashuv axboroti olinmadi: $error';
   }
 
   @override
-  String get everythingReady => 'Everything ready!';
+  String get everythingReady => 'Hammasi tayyor!';
 
   @override
-  String get extremeOffensive => 'Extremely offensive';
+  String get extremeOffensive => 'O‘ta haqoratomuz';
 
   @override
-  String get fileName => 'File name';
+  String get fileName => 'Fayl nomi';
 
   @override
   String get fluffychat => 'FluffyChat';
 
   @override
-  String get fontSize => 'Font size';
+  String get fontSize => 'Shrift oʻlchami';
 
   @override
-  String get forward => 'Forward';
+  String get forward => 'Yuborvorish';
 
   @override
-  String get fromJoining => 'From joining';
+  String get fromJoining => 'Qoʻshilishdan';
 
   @override
-  String get fromTheInvitation => 'From the invitation';
+  String get fromTheInvitation => 'Taklifnomadan';
 
   @override
-  String get goToTheNewRoom => 'Go to the new room';
+  String get goToTheNewRoom => 'Yangi guruhga oʻtish';
 
   @override
-  String get group => 'Group';
+  String get group => 'Guruh';
 
   @override
-  String get chatDescription => 'Chat description';
+  String get chatDescription => 'Suhbat tavsifi';
 
   @override
-  String get chatDescriptionHasBeenChanged => 'Chat description changed';
+  String get chatDescriptionHasBeenChanged => 'Suhbat tavsifi oʻzgartirildi';
 
   @override
-  String get groupIsPublic => 'Group is public';
+  String get groupIsPublic => 'Guruh ommaviy';
 
   @override
-  String get groups => 'Groups';
+  String get groups => 'Guruhlar';
 
   @override
   String groupWith(String displayname) {
-    return 'Group with $displayname';
+    return '$displayname bilan guruh';
   }
 
   @override
-  String get guestsAreForbidden => 'Guests are forbidden';
+  String get guestsAreForbidden => 'Mehmonlarga kirish taqiqlangan';
 
   @override
-  String get guestsCanJoin => 'Guests can join';
+  String get guestsCanJoin => 'Mehmonlar qoʻshila oladi';
 
   @override
   String hasWithdrawnTheInvitationFor(String username, String targetName) {
-    return '$username has withdrawn the invitation for $targetName';
+    return '$username $targetName uchun taklifnomani qaytarib oldi';
   }
 
   @override
-  String get help => 'Help';
+  String get help => 'Yordam';
 
   @override
-  String get hideRedactedEvents => 'Hide redacted events';
+  String get hideRedactedEvents => 'Tahrirlangan tadbirlarni yashirish';
 
   @override
-  String get hideRedactedMessages => 'Hide redacted messages';
+  String get hideRedactedMessages => 'Oʻchirilgan xabarlarni yashirish';
 
   @override
   String get hideRedactedMessagesBody =>
-      'If someone redacts a message, this message won\'t be visible in the chat anymore.';
+      'Agar kimdir xabarni oʻchirsa, bu xabar endi suhbatda koʻrinmaydi.';
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
-      'Hide invalid or unknown message formats';
+      'Notoʻgʻri yoki nomaʼlum xabar formatlarini yashirish';
 
   @override
-  String get howOffensiveIsThisContent => 'How offensive is this content?';
+  String get howOffensiveIsThisContent => 'Bu kontent qanchalik haqoratli?';
 
   @override
   String get id => 'ID';
 
   @override
-  String get identity => 'Identity';
+  String get identity => 'Shaxs';
 
   @override
-  String get block => 'Block';
+  String get block => 'Bloklash';
 
   @override
-  String get blockedUsers => 'Blocked users';
+  String get blockedUsers => 'Bloklangan foydalanuvchilar';
 
   @override
   String get blockListDescription =>
-      'You can block users who are disturbing you. You won\'t be able to receive any messages or room invites from the users on your personal block list.';
+      'Sizni bezovta qilayotgan foydalanuvchilarni bloklashingiz mumkin. Shaxsiy bloklash roʻyxatingizdagi foydalanuvchilardan hech qanday xabar yoki guruhga taklifnomalarni qabul qila olmaysiz.';
 
   @override
-  String get blockUsername => 'Ignore username';
+  String get blockUsername => 'Foydalanuvchi nomini eʻtiborsiz qoldirish';
 
   @override
-  String get iHaveClickedOnLink => 'I have clicked on the link';
+  String get iHaveClickedOnLink => 'Men havolani bosdim';
 
   @override
-  String get incorrectPassphraseOrKey => 'Incorrect passphrase or recovery key';
+  String get incorrectPassphraseOrKey => 'Notoʻgʻri parol yoki tiklash kaliti';
 
   @override
-  String get inoffensive => 'Inoffensive';
+  String get inoffensive => 'Zararsiz';
 
   @override
-  String get inviteContact => 'Invite contact';
+  String get inviteContact => 'Kontaktni taklif qilish';
 
   @override
   String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Do you want to invite $contact to the chat \"$groupName\"?';
+    return '$contact ni \"$groupName\" suhbatiga taklif qilishni istaysizmi?';
   }
 
   @override
   String inviteContactToGroup(String groupName) {
-    return 'Invite contact to $groupName';
+    return 'Kontaktni $groupName ga taklif qiling';
   }
 
   @override
-  String get noChatDescriptionYet => 'No chat description created yet.';
+  String get noChatDescriptionYet => 'Hali suhbat tavsifi yaratilmagan.';
 
   @override
-  String get tryAgain => 'Try again';
+  String get tryAgain => 'Qayta urinib koʻrish';
 
   @override
-  String get invalidServerName => 'Invalid server name';
+  String get invalidServerName => 'Server nomi notoʻgʻri';
 
   @override
-  String get invited => 'Invited';
+  String get invited => 'Taklif qilindi';
 
   @override
   String get redactMessageDescription =>
-      'The message will be redacted for all participants in this conversation. This cannot be undone.';
+      'Xabar ushbu suhbatdagi barcha ishtirokchilar uchun oʻchiriladi. Buni bekor qilib boʻlmaydi.';
 
   @override
   String get optionalRedactReason =>
-      '(Optional) Reason for redacting this message...';
+      '(Ixtiyoriy) Ushbu xabarni oʻchirish sababi...';
 
   @override
   String invitedUser(String username, String targetName) {
-    return '📩 $username invited $targetName';
+    return '📩 $username ${targetName}ni taklif qildi';
   }
 
   @override
-  String get invitedUsersOnly => 'Invited users only';
+  String get invitedUsersOnly => 'Faqat taklif qilingan foydalanuvchilar';
 
   @override
-  String get inviteForMe => 'Invite for me';
+  String get inviteForMe => 'Men uchun taklif qilish';
 
   @override
   String inviteText(String username, String link) {
-    return '$username invited you to FluffyChat.\n1. Visit fluffychat.im and install the app \n2. Sign up or sign in \n3. Open the invite link: \n $link';
+    return '$username sizni FluffyChat’ga taklif qildi.\n1. fluffychat.im saytiga tashrif buyuring va ilovani oʻrnating.\n2. Roʻyxatdan oʻting yoki tizimga kiring.\n3. Taklif havolasini oching:\n$link';
   }
 
   @override
-  String get isTyping => 'is typing…';
+  String get isTyping => 'yozmoqda…';
 
   @override
   String joinedTheChat(String username) {
-    return '👋 $username joined the chat';
+    return '👋 $username suhbatga qoʻshildi';
   }
 
   @override
-  String get joinRoom => 'Join room';
+  String get joinRoom => 'Guruhga qoʻshilish';
 
   @override
   String kicked(String username, String targetName) {
-    return '👞 $username kicked $targetName';
+    return '👞 $username ${targetName}ni tepdi';
   }
 
   @override
   String kickedAndBanned(String username, String targetName) {
-    return '🙅 $username kicked and banned $targetName';
+    return '🙅 $username ${targetName}ni tepdi va blokladi';
   }
 
   @override
-  String get kickFromChat => 'Kick from chat';
+  String get kickFromChat => 'Suhbatdan tepish';
 
   @override
   String lastActiveAgo(String localizedTimeShort) {
-    return 'Last active: $localizedTimeShort';
+    return 'Oxirgi faol: $localizedTimeShort';
   }
 
   @override
-  String get leave => 'Leave';
+  String get leave => 'Chiqish';
 
   @override
-  String get leftTheChat => 'Left the chat';
+  String get leftTheChat => 'Suhbatni tark etdi';
 
   @override
-  String get license => 'License';
+  String get license => 'Litsenziya';
 
   @override
-  String get lightTheme => 'Light';
+  String get lightTheme => 'Yorugʻlik';
 
   @override
   String loadCountMoreParticipants(int count) {
-    return 'Load $count more participants';
+    return 'Yana $count ishtirokchini yuklang';
   }
 
   @override
-  String get dehydrate => 'Export session and wipe device';
+  String get dehydrate => 'Sessiyani eksport qilish va qurilmani oʻchirish';
 
   @override
   String get dehydrateWarning =>
-      'This action cannot be undone. Ensure you safely store the backup file.';
+      'Bu amalni bekor qilib boʻlmaydi. Zaxira faylini xavfsiz saqlang.';
 
   @override
-  String get dehydrateTor => 'TOR Users: Export session';
+  String get dehydrateTor => 'TOR foydalanuvchilari: Seansni eksport qilish';
 
   @override
   String get dehydrateTorLong =>
-      'For TOR users, it is recommended to export the session before closing the window.';
+      'TOR foydalanuvchilari uchun oynani yopishdan oldin seansni eksport qilish tavsiya etiladi.';
 
   @override
-  String get hydrateTor => 'TOR Users: Import session export';
+  String get hydrateTor =>
+      'TOR foydalanuvchilari: Seans eksportini import qilish';
 
   @override
   String get hydrateTorLong =>
-      'Did you export your session last time on TOR? Quickly import it and continue chatting.';
+      'Seansingizni oxirgi marta TOR’da eksport qildingizmi? Uni tezda import qiling va suhbatni davom ettiring.';
 
   @override
-  String get hydrate => 'Restore from backup file';
+  String get hydrate => 'Zaxira faylidan tiklash';
 
   @override
-  String get loadingPleaseWait => 'Loading… Please wait.';
+  String get loadingPleaseWait => 'Yuklanmoqda… Iltimos, kuting.';
 
   @override
-  String get loadMore => 'Load more…';
+  String get loadMore => 'Koʻproq yuklash…';
 
   @override
   String get locationDisabledNotice =>
-      'Location services are disabled. Please enable them to be able to share your location.';
+      'Joylashuv xizmatlari oʻchirib qoʻyilgan. Joylashuvingizni ulashish uchun ularni yoqing.';
 
   @override
   String get locationPermissionDeniedNotice =>
-      'Location permission denied. Please grant them to be able to share your location.';
+      'Joylashuvga ruxsat berilmadi. Iltimos, ularga joylashuvingizni ulashishga ruxsat bering.';
 
   @override
-  String get login => 'Login';
+  String get login => 'Kirish';
 
   @override
   String logInTo(String homeserver) {
-    return 'Log in to $homeserver';
+    return '$homeserver ga kirish';
   }
 
   @override
-  String get logout => 'Logout';
+  String get logout => 'Chiqish';
 
   @override
-  String get memberChanges => 'Member changes';
+  String get memberChanges => 'Aʼzo oʻzgarishlari';
 
   @override
-  String get mention => 'Mention';
+  String get mention => 'Qayd etmoq';
 
   @override
-  String get messages => 'Messages';
+  String get messages => 'Xabarlar';
 
   @override
-  String get messagesStyle => 'Messages:';
+  String get messagesStyle => 'Xabarlar:';
 
   @override
   String get moderator => 'Moderator';
 
   @override
-  String get muteChat => 'Mute chat';
+  String get muteChat => 'Suhbatni ovozsizlantirish';
 
   @override
   String get needPantalaimonWarning =>
-      'Please be aware that you need Pantalaimon to use end-to-end encryption for now.';
+      'Iltimos, hozircha Pantalaimon boshdan-oyoq shifrlashdan foydalanishi kerakligini yodda tuting.';
 
   @override
-  String get newChat => 'New chat';
+  String get newChat => 'Yangi suhbat';
 
   @override
-  String get newMessageInFluffyChat => '💬 New message in FluffyChat';
+  String get newMessageInFluffyChat => '💬 FluffyChat yangi xabarlar';
 
   @override
-  String get newVerificationRequest => 'New verification request!';
+  String get newVerificationRequest => 'Yangi tasdiqlash so\'rovi!';
 
   @override
-  String get next => 'Next';
+  String get next => 'Keyingi';
 
   @override
-  String get no => 'No';
+  String get no => 'Yoʻq';
 
   @override
-  String get noConnectionToTheServer => 'No connection to the server';
+  String get noConnectionToTheServer => 'Serverga ulanish yoʻq';
 
   @override
-  String get noEmotesFound => 'No emotes found. 😕';
+  String get noEmotesFound => 'Hech qanday emoteʼlar topilmadi 😕';
 
   @override
   String get noEncryptionForPublicRooms =>
-      'You can only activate encryption as soon as the room is no longer publicly accessible.';
+      'Shifrlashni faqat guruh endi hamma uchun ochiq bo\'lmay qolgandan keyingina faollashtirishingiz mumkin.';
 
   @override
   String get noGoogleServicesWarning =>
-      'Firebase Cloud Messaging doesn\'t appear to be available on your device. To still receive push notifications, we recommend installing ntfy. With ntfy or another Unified Push provider you can receive push notifications in a data secure way. You can download ntfy from the PlayStore or from F-Droid.';
+      'Firebase Cloud Messaging qurilmangizda mavjud emasga o\'xshaydi. Push-bildirishnomalarni olishda davom etish uchun ntfy-ni o\'rnatishingizni tavsiya qilamiz. NTFY yoki boshqa Unified Push provayderi yordamida siz ma\'lumotlar xavfsizligini ta\'minlash orqali push-bildirishnomalarni olishingiz mumkin. Siz ntfy-ni PlayStore yoki F-Droid-dan yuklab olishingiz mumkin.';
 
   @override
   String noMatrixServer(String server1, String server2) {
-    return '$server1 is no matrix server, use $server2 instead?';
+    return '$server1 matrix serveri emas, buning o\'rniga $server2 dan foydalanilsinmi?';
   }
 
   @override
-  String get shareInviteLink => 'Share invite link';
+  String get shareInviteLink => 'Taklifnoma havolasini ulashish';
 
   @override
-  String get scanQrCode => 'Scan QR code';
+  String get scanQrCode => 'QR kodini skanerlang';
 
   @override
-  String get none => 'None';
+  String get none => 'Hech biri';
 
   @override
   String get noPasswordRecoveryDescription =>
-      'You have not added a way to recover your password yet.';
+      'Siz hali parolingizni tiklash usulini qoʻshmadingiz.';
 
   @override
-  String get noPermission => 'No permission';
+  String get noPermission => 'Ruxsat yoʻq';
 
   @override
-  String get noRoomsFound => 'No rooms found…';
+  String get noRoomsFound => 'Hech qanday guruhlar topilmadi…';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Bildirishnomalar';
 
   @override
   String get notificationsEnabledForThisAccount =>
-      'Notifications enabled for this account';
+      'Ushbu hisob uchun bildirishnomalar yoqildi';
 
   @override
   String numUsersTyping(int count) {
-    return '$count users are typing…';
+    return '$count foydalanuvchilar yozmoqda…';
   }
 
   @override
-  String get obtainingLocation => 'Obtaining location…';
+  String get obtainingLocation => 'Joylashuv aniqlanmoqda…';
 
   @override
-  String get offensive => 'Offensive';
+  String get offensive => 'Haqoratomuz';
 
   @override
-  String get offline => 'Offline';
+  String get offline => 'Oflayn';
 
   @override
-  String get ok => 'Ok';
+  String get ok => 'Hop';
 
   @override
-  String get online => 'Online';
+  String get online => 'Onlayn';
 
   @override
-  String get onlineKeyBackupEnabled => 'Online Key Backup is enabled';
+  String get onlineKeyBackupEnabled => 'Onlayn kalit zaxira nusxasi yoqilgan';
 
   @override
   String get oopsPushError =>
-      'Oops! Unfortunately, an error occurred when setting up the push notifications.';
+      'Afsuski, push-bildirishnomalarni sozlashda xatolik yuz berdi.';
 
   @override
-  String get oopsSomethingWentWrong => 'Oops, something went wrong…';
+  String get oopsSomethingWentWrong => 'Voy, nimadir notoʻgʻri ketdi…';
 
   @override
-  String get openAppToReadMessages => 'Open app to read messages';
+  String get openAppToReadMessages => 'Xabarlarni oʻqish uchun ilovani oching';
 
   @override
-  String get openCamera => 'Open camera';
+  String get openCamera => 'Kamerani ochish';
 
   @override
-  String get openVideoCamera => 'Open camera for a video';
+  String get openVideoCamera => 'Video uchun kamerani oching';
 
   @override
-  String get oneClientLoggedOut => 'One of your clients has been logged out';
+  String get oneClientLoggedOut => 'Mijozlaringizdan biri tizimdan chiqdi';
 
   @override
-  String get addAccount => 'Add account';
+  String get addAccount => 'Hisob qoʻshish';
 
   @override
-  String get editBundlesForAccount => 'Edit bundles for this account';
+  String get editBundlesForAccount => 'Bu hisob uchun toʻplamlarni tahrirlash';
 
   @override
-  String get addToBundle => 'Add to bundle';
+  String get addToBundle => 'Toʻplamga qoʻshish';
 
   @override
-  String get removeFromBundle => 'Remove from this bundle';
+  String get removeFromBundle => 'Bu toʻplamdan oʻchirish';
 
   @override
-  String get bundleName => 'Bundle name';
+  String get bundleName => 'Toʻplam nomi';
 
   @override
   String get enableMultiAccounts =>
-      '(BETA) Enable multi accounts on this device';
+      '(BETA) Ushbu qurilmada bir nechta hisoblarni yoqish';
 
   @override
-  String get openInMaps => 'Open in maps';
+  String get openInMaps => 'Xaritalarda ochish';
 
   @override
-  String get link => 'Link';
+  String get link => 'Havola';
 
   @override
   String get serverRequiresEmail =>
-      'This server needs to validate your email address for registration.';
+      'Ushbu server roʻyxatdan oʻtish uchun elektron pochta manzilingizni tasdiqlashi kerak.';
 
   @override
-  String get or => 'Or';
+  String get or => 'Yoki';
 
   @override
-  String get participant => 'Participant';
+  String get participant => 'Qatnashuvchi';
 
   @override
-  String get passphraseOrKey => 'passphrase or recovery key';
+  String get passphraseOrKey => 'parol yoki tiklash kaliti';
 
   @override
-  String get password => 'Password';
+  String get password => 'Parol';
 
   @override
-  String get passwordForgotten => 'Password forgotten';
+  String get passwordForgotten => 'Parol unitilgan';
 
   @override
-  String get passwordHasBeenChanged => 'Password has been changed';
+  String get passwordHasBeenChanged => 'Parol oʻzgartirildi';
 
   @override
   String get hideMemberChangesInPublicChats =>
-      'Hide member changes in public chats';
+      'Ommaviy suhbatlarda aʼzolarga oʻzgartirishlarni yashirish';
 
   @override
   String get hideMemberChangesInPublicChatsBody =>
-      'Do not show in the chat timeline if someone joins or leaves a public chat to improve readability.';
+      'Oʻqish qulayligini oshirish uchun kimdir ochiq suhbatga qoʻshilsa yoki undan chiqsa, suhbat vaqt jadvalida koʻrsatilmasin.';
 
   @override
-  String get overview => 'Overview';
+  String get overview => 'Umumiy ma\'lumot';
 
   @override
-  String get notifyMeFor => 'Notify me for';
+  String get notifyMeFor => 'Menga bildirishnoma yuborish';
 
   @override
-  String get passwordRecoverySettings => 'Password recovery settings';
+  String get passwordRecoverySettings => 'Parolni qayta tiklash sozlamalari';
 
   @override
-  String get passwordRecovery => 'Password recovery';
+  String get passwordRecovery => 'Parolni qayta tiklash';
 
   @override
-  String get people => 'People';
+  String get people => 'Odamlar';
 
   @override
-  String get pickImage => 'Pick an image';
+  String get pickImage => 'Rasm tanlash';
 
   @override
-  String get pin => 'Pin';
+  String get pin => 'Toʻgʻnash';
 
   @override
   String play(String fileName) {
-    return 'Play $fileName';
+    return '${fileName}ni oʻynash';
   }
 
   @override
-  String get pleaseChoose => 'Please choose';
+  String get pleaseChoose => 'Iltimos tanlang';
 
   @override
-  String get pleaseChooseAPasscode => 'Please choose a pass code';
+  String get pleaseChooseAPasscode => 'Iltimos, kirish kodini tanlang';
 
   @override
   String get pleaseClickOnLink =>
-      'Please click on the link in the email and then proceed.';
+      'Iltimos, elektron pochtadagi havolani bosing va keyin davom eting.';
 
   @override
   String get pleaseEnter4Digits =>
-      'Please enter 4 digits or leave empty to disable app lock.';
+      'Ilova qulfini oʻchirish uchun 4 ta raqamni kiriting yoki boʻsh qoldiring.';
 
   @override
-  String get pleaseEnterRecoveryKey => 'Please enter your recovery key:';
+  String get pleaseEnterRecoveryKey =>
+      'Iltimos, tiklash kalitingizni kiriting:';
 
   @override
-  String get pleaseEnterYourPassword => 'Please enter your password';
+  String get pleaseEnterYourPassword => 'Iltimos parolingizni kiriting';
 
   @override
-  String get pleaseEnterYourPin => 'Please enter your pin';
+  String get pleaseEnterYourPin => 'Iltimos PIN kodingizni kiriting';
 
   @override
-  String get pleaseEnterYourUsername => 'Please enter your username';
+  String get pleaseEnterYourUsername => 'Iltimos foydalanuvchi nomini kiriting';
 
   @override
   String get pleaseFollowInstructionsOnWeb =>
-      'Please follow the instructions on the website and tap on next.';
+      'Iltimos, veb-saytdagi koʻrsatmalarga amal qiling va keyingisini bosing.';
 
   @override
-  String get privacy => 'Privacy';
+  String get privacy => 'Maxfiylik';
 
   @override
-  String get publicRooms => 'Public Rooms';
+  String get publicRooms => 'Ommaviy guruhlar';
 
   @override
-  String get pushRules => 'Push rules';
+  String get pushRules => 'Push qoidalari';
 
   @override
-  String get reason => 'Reason';
+  String get reason => 'Sabab';
 
   @override
-  String get recording => 'Recording';
+  String get recording => 'Yozilmoqda';
 
   @override
   String redactedBy(String username) {
-    return 'Redacted by $username';
+    return '$username tomonidan tahrirlangan';
   }
 
   @override
-  String get directChat => 'Direct chat';
+  String get directChat => 'Shaxsiy suhbat';
 
   @override
   String redactedByBecause(String username, String reason) {
-    return 'Redacted by $username because: \"$reason\"';
+    return '$username tomonidan tahrirlandi, sababi: \"$reason\"';
   }
 
   @override
   String redactedAnEvent(String username) {
-    return '$username redacted an event';
+    return '$username tadbirni oʻchirib tashladi';
   }
 
   @override
-  String get redactMessage => 'Redact message';
+  String get redactMessage => 'Xabarni tahrirlash';
 
   @override
-  String get register => 'Register';
+  String get register => 'Roʻyxatdan oʻtish';
 
   @override
-  String get reject => 'Reject';
+  String get reject => 'Rad qilish';
 
   @override
   String rejectedTheInvitation(String username) {
-    return '$username rejected the invitation';
+    return '$username taklifni rad qildi';
   }
 
   @override
-  String get rejoin => 'Rejoin';
+  String get rejoin => 'Qayta qoʻshilish';
 
   @override
-  String get removeAllOtherDevices => 'Remove all other devices';
+  String get removeAllOtherDevices => 'Qolgan barcha qurilmalarni oʻchirish';
 
   @override
   String removedBy(String username) {
-    return 'Removed by $username';
+    return '$username tomonidan oʻchirildi';
   }
 
   @override
-  String get removeDevice => 'Remove device';
+  String get removeDevice => 'Qurilmani oʻchirish';
 
   @override
-  String get unbanFromChat => 'Unban from chat';
+  String get unbanFromChat => 'Suhbat blokidan chiqazish';
 
   @override
-  String get removeYourAvatar => 'Remove your avatar';
+  String get removeYourAvatar => 'Avatarni oʻchirish';
 
   @override
-  String get replaceRoomWithNewerVersion => 'Replace room with newer version';
+  String get replaceRoomWithNewerVersion =>
+      'Guruhni yangiroq versiya bilan almashtirish';
 
   @override
-  String get reply => 'Reply';
+  String get reply => 'Javob yozish';
 
   @override
-  String get reportMessage => 'Report message';
+  String get reportMessage => 'Xabar berish';
 
   @override
-  String get requestPermission => 'Request permission';
+  String get requestPermission => 'Ruxsat soʻrash';
 
   @override
-  String get roomHasBeenUpgraded => 'Room has been upgraded';
+  String get roomHasBeenUpgraded => 'Xona takomillashtirildi';
 
   @override
-  String get roomVersion => 'Room version';
+  String get roomVersion => 'Guruh versiyasi';
 
   @override
-  String get saveFile => 'Save file';
+  String get saveFile => 'Fayl saqlash';
 
   @override
-  String get search => 'Search';
+  String get search => 'Qidiruv';
 
   @override
-  String get security => 'Security';
+  String get security => 'Xavfsizlik';
 
   @override
-  String get recoveryKey => 'Recovery key';
+  String get recoveryKey => 'Tiklash kaliti';
 
   @override
-  String get recoveryKeyLost => 'Recovery key lost?';
+  String get recoveryKeyLost => 'Tiklash kaliti yo‘qolib qoldimi?';
 
   @override
   String seenByUser(String username) {
-    return 'Seen by $username';
+    return '$username ko‘rgan';
   }
 
   @override
-  String get send => 'Send';
+  String get send => 'Yuborish';
 
   @override
-  String get sendAMessage => 'Send a message';
+  String get sendAMessage => 'Xabar yuborish';
 
   @override
-  String get sendAsText => 'Send as text';
+  String get sendAsText => 'Matn sifatida yuborish';
 
   @override
-  String get sendAudio => 'Send audio';
+  String get sendAudio => 'Audio yuborish';
 
   @override
-  String get sendFile => 'Send file';
+  String get sendFile => 'Faylni yuborish';
 
   @override
-  String get sendImage => 'Send image';
+  String get sendImage => 'Rasm yuborish';
 
   @override
   String sendImages(int count) {
-    return 'Send $count image';
+    return '$count ta rasm yuborish';
   }
 
   @override
-  String get sendMessages => 'Send messages';
+  String get sendMessages => 'Xabarlar yuborish';
 
   @override
-  String get sendOriginal => 'Send original';
+  String get sendOriginal => 'Asl nusxani yuborish';
 
   @override
-  String get sendSticker => 'Send sticker';
+  String get sendSticker => 'Stiker yuborish';
 
   @override
-  String get sendVideo => 'Send video';
+  String get sendVideo => 'Video yuborish';
 
   @override
   String sentAFile(String username) {
-    return '📁 $username sent a file';
+    return '📁 $username fayl yubordi';
   }
 
   @override
   String sentAnAudio(String username) {
-    return '🎤 $username sent an audio';
+    return '🎤 $username audio yubordi';
   }
 
   @override
   String sentAPicture(String username) {
-    return '🖼️ $username sent a picture';
+    return '️ 🖼️ $username rasm yubordi';
   }
 
   @override
   String sentASticker(String username) {
-    return '😊 $username sent a sticker';
+    return '😊 $username stiker yubordi';
   }
 
   @override
   String sentAVideo(String username) {
-    return '🎥 $username sent a video';
+    return '🎥 $username video yubordi';
   }
 
   @override
   String sentCallInformations(String senderName) {
-    return '$senderName sent call information';
+    return '$senderName chaqiruv axborotini yubordi';
   }
 
   @override
-  String get separateChatTypes => 'Separate Direct Chats and Groups';
+  String get separateChatTypes =>
+      'To‘g‘ridan-to‘g‘ri suhbatlar va guruhlarni alohida ajratish';
 
   @override
-  String get setAsCanonicalAlias => 'Set as main alias';
+  String get setAsCanonicalAlias => 'Asosiy taxallus sifatida belgilash';
 
   @override
-  String get setCustomEmotes => 'Set custom emotes';
+  String get setCustomEmotes => 'Maxsus hissiyotlarni sozlash';
 
   @override
-  String get setChatDescription => 'Set chat description';
+  String get setChatDescription => 'Suhbat tavsifini sozlash';
 
   @override
-  String get setInvitationLink => 'Set invitation link';
+  String get setInvitationLink => 'Taklif havolasini sozlash';
 
   @override
-  String get setPermissionsLevel => 'Set permissions level';
+  String get setPermissionsLevel => 'Ruxsatlar darajasini belgilash';
 
   @override
-  String get setStatus => 'Set status';
+  String get setStatus => 'Holatni sozlash';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Sozlamalar';
 
   @override
-  String get share => 'Share';
+  String get share => 'Bo‘lishmoq';
 
   @override
   String sharedTheLocation(String username) {
-    return '$username shared their location';
+    return '$username joylashuvini ulashdi';
   }
 
   @override
-  String get shareLocation => 'Share location';
+  String get shareLocation => 'Joylashuvni ulashish';
 
   @override
-  String get showPassword => 'Show password';
+  String get showPassword => 'Parolni ko‘rsatish';
 
   @override
-  String get presenceStyle => 'Presence:';
+  String get presenceStyle => 'Mavjudlik:';
 
   @override
-  String get presencesToggle => 'Show status messages from other users';
+  String get presencesToggle =>
+      'Boshqa foydalanuvchilarning holat xabarlarini ko‘rsatish';
 
   @override
-  String get singlesignon => 'Single Sign on';
+  String get singlesignon => 'Yagona kirish';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Tashlab ketish';
 
   @override
-  String get sourceCode => 'Source code';
+  String get sourceCode => 'Manba kodi';
 
   @override
-  String get spaceIsPublic => 'Space is public';
+  String get spaceIsPublic => 'Guruh ochiq';
 
   @override
-  String get spaceName => 'Space name';
+  String get spaceName => 'Guruh nomi';
 
   @override
   String startedACall(String senderName) {
-    return '$senderName started a call';
+    return '$senderName chaqiruv boshladi';
   }
 
   @override
-  String get startFirstChat => 'Start your first chat';
+  String get startFirstChat => 'Birinchi suhbatni boshlash';
 
   @override
-  String get status => 'Status';
+  String get status => 'Holati';
 
   @override
-  String get statusExampleMessage => 'How are you today?';
+  String get statusExampleMessage => 'Bugun ahvolingiz qalay?';
 
   @override
-  String get submit => 'Submit';
+  String get submit => 'Yuborish';
 
   @override
-  String get synchronizingPleaseWait => 'Synchronizing… Please wait.';
+  String get synchronizingPleaseWait => 'Sinxronlanmoqda... Iltimos, kuting.';
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
-    return ' Synchronizing… ($percentage%)';
+    return ' Sinxronlanmoqda... ($percentage%)';
   }
 
   @override
-  String get systemTheme => 'System';
+  String get systemTheme => 'Tizim';
 
   @override
-  String get theyDontMatch => 'They Don\'t Match';
+  String get theyDontMatch => 'Ular mos emas';
 
   @override
-  String get theyMatch => 'They Match';
+  String get theyMatch => 'Ular mos keladi';
 
   @override
   String get title => 'FluffyChat';
 
   @override
-  String get toggleFavorite => 'Toggle Favorite';
+  String get toggleFavorite => 'Saralanganni almashtirish';
 
   @override
-  String get toggleMuted => 'Toggle Muted';
+  String get toggleMuted => 'O‘chirib qo‘yish';
 
   @override
-  String get toggleUnread => 'Mark Read/Unread';
+  String get toggleUnread => 'O‘qilgan/O‘qilmaganni belgilash';
 
   @override
   String get tooManyRequestsWarning =>
-      'Too many requests. Please try again later!';
+      'Talablar soni oshib ketdi. Keyinroq qayta urining!';
 
   @override
-  String get transferFromAnotherDevice => 'Transfer from another device';
+  String get transferFromAnotherDevice => 'Boshqa qurilmadan uzatish';
 
   @override
-  String get tryToSendAgain => 'Try to send again';
+  String get tryToSendAgain => 'Qayta yuborishga urining';
 
   @override
-  String get unavailable => 'Unavailable';
+  String get unavailable => 'Mavjud emas';
 
   @override
   String unbannedUser(String username, String targetName) {
-    return '$username unbanned $targetName';
+    return '$username ${targetName}ni blokdan chiqardi';
   }
 
   @override
-  String get unblockDevice => 'Unblock Device';
+  String get unblockDevice => 'Qurilmani blokdan chiqarish';
 
   @override
-  String get unknownDevice => 'Unknown device';
+  String get unknownDevice => 'Notanish qurilma';
 
   @override
-  String get unknownEncryptionAlgorithm => 'Unknown encryption algorithm';
+  String get unknownEncryptionAlgorithm => 'Noma’lum shifrlash algoritmi';
 
   @override
   String unknownEvent(String type) {
-    return 'Unknown event \'$type\'';
+    return 'Noma’lum hodisa \'$type\'';
   }
 
   @override
-  String get unmuteChat => 'Unmute chat';
+  String get unmuteChat => 'Suhbatni ovozli qilish';
 
   @override
-  String get unpin => 'Unpin';
+  String get unpin => 'Olib tashlash';
 
   @override
   String unreadChats(int unreadCount) {
     String _temp0 = intl.Intl.pluralLogic(
       unreadCount,
       locale: localeName,
-      other: '$unreadCount unread chats',
-      one: '1 unread chat',
+      other: '$unreadCount ta o‘qilmagan chat',
+      one: '1 ta oʻqilmagan suhbat',
     );
     return '$_temp0';
   }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
-    return '$username and $count others are typing…';
+    return '$username va yana $count kishi yozmoqda…';
   }
 
   @override
   String userAndUserAreTyping(String username, String username2) {
-    return '$username and $username2 are typing…';
+    return '$username va $username2 yozmoqda…';
   }
 
   @override
   String userIsTyping(String username) {
-    return '$username is typing…';
+    return '$username yozmoqda…';
   }
 
   @override
   String userLeftTheChat(String username) {
-    return '🚪 $username left the chat';
+    return '🚪 $username suhbatni tark etdi';
   }
 
   @override
-  String get username => 'Username';
+  String get username => 'Foydalanuvchi nomi';
 
   @override
   String userSentUnknownEvent(String username, String type) {
-    return '$username sent a $type event';
+    return '$username $type tadbirini yubordi';
   }
 
   @override
-  String get unverified => 'Unverified';
+  String get unverified => 'Tasdiqlanmagan';
 
   @override
-  String get verified => 'Verified';
+  String get verified => 'Tasdiqlangan';
 
   @override
-  String get verify => 'Verify';
+  String get verify => 'Tasdiqlash';
 
   @override
-  String get verifyStart => 'Start Verification';
+  String get verifyStart => 'Tasdiqlashni boshlash';
 
   @override
-  String get verifySuccess => 'You successfully verified!';
+  String get verifySuccess => 'Siz tasdiqladingiz!';
 
   @override
-  String get verifyTitle => 'Verifying other account';
+  String get verifyTitle => 'Boshqa hisob tasdiqlanmoqda';
 
   @override
-  String get videoCall => 'Video call';
+  String get videoCall => 'Video chaqiruv';
 
   @override
-  String get visibilityOfTheChatHistory => 'Visibility of the chat history';
+  String get visibilityOfTheChatHistory => 'Suhbat tarixining ko‘rinishi';
 
   @override
-  String get visibleForAllParticipants => 'Visible for all participants';
+  String get visibleForAllParticipants => 'Barcha ishtirokchilarga ko‘rinadi';
 
   @override
-  String get visibleForEveryone => 'Visible for everyone';
+  String get visibleForEveryone => 'Hammaga ko‘rinadigan';
 
   @override
-  String get voiceMessage => 'Voice message';
+  String get voiceMessage => 'Ovozli xabar';
 
   @override
   String get waitingPartnerAcceptRequest =>
-      'Waiting for partner to accept the request…';
+      'Hamkor so‘rovni qabul qilishi kutilmoqda…';
 
   @override
-  String get waitingPartnerEmoji => 'Waiting for partner to accept the emoji…';
+  String get waitingPartnerEmoji => 'Hamkor emoji qabul qilishini kutmoqda…';
 
   @override
   String get waitingPartnerNumbers =>
-      'Waiting for partner to accept the numbers…';
+      'Hamkor raqamlarni qabul qilishi kutilmoqda…';
 
   @override
-  String get wallpaper => 'Wallpaper:';
+  String get wallpaper => 'Fon rasmi:';
 
   @override
-  String get warning => 'Warning!';
+  String get warning => 'Ogohlantirish!';
 
   @override
-  String get weSentYouAnEmail => 'We sent you an email';
+  String get weSentYouAnEmail => 'Sizga xat yubordik';
 
   @override
-  String get whoCanPerformWhichAction => 'Who can perform which action';
+  String get whoCanPerformWhichAction => 'Kim qaysi amalni bajarishi mumkin';
 
   @override
-  String get whoIsAllowedToJoinThisGroup => 'Who is allowed to join this group';
+  String get whoIsAllowedToJoinThisGroup => 'Bu guruhga kim qo‘shilishi mumkin';
 
   @override
-  String get whyDoYouWantToReportThis => 'Why do you want to report this?';
+  String get whyDoYouWantToReportThis =>
+      'Nima uchun bu haqda xabar bermoqchisiz?';
 
   @override
   String get wipeChatBackup =>
-      'Wipe your chat backup to create a new recovery key?';
+      'Yangi tiklash kalitini yaratish uchun suhbat zaxirasi tozalansinmi?';
 
   @override
   String get withTheseAddressesRecoveryDescription =>
-      'With these addresses you can recover your password.';
+      'Ushbu manzillar yordamida parolingizni tiklashingiz mumkin.';
 
   @override
-  String get writeAMessage => 'Write a message…';
+  String get writeAMessage => 'Xabar yozish…';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ha';
 
   @override
-  String get you => 'You';
+  String get you => 'Siz';
 
   @override
   String get youAreNoLongerParticipatingInThisChat =>
-      'You are no longer participating in this chat';
+      'Siz ortiq bu suhbatda qatnashmayapsiz';
 
   @override
-  String get youHaveBeenBannedFromThisChat =>
-      'You have been banned from this chat';
+  String get youHaveBeenBannedFromThisChat => 'Bu suhbatdan bloklandingiz';
 
   @override
-  String get yourPublicKey => 'Your public key';
+  String get yourPublicKey => 'Ochiq kalitingiz';
 
   @override
-  String get messageInfo => 'Message info';
+  String get messageInfo => 'Xabar axboroti';
 
   @override
-  String get time => 'Time';
+  String get time => 'Vaqt';
 
   @override
-  String get messageType => 'Message Type';
+  String get messageType => 'Xabar turi';
 
   @override
-  String get sender => 'Sender';
+  String get sender => 'Yuboruvchi';
 
   @override
-  String get openGallery => 'Open gallery';
+  String get openGallery => 'Galereyani ochish';
 
   @override
-  String get removeFromSpace => 'Remove from space';
+  String get removeFromSpace => 'Guruhdan olib tashlash';
 
   @override
-  String get addToSpaceDescription => 'Select a space to add this chat to it.';
+  String get addToSpaceDescription =>
+      'Bu suhbatni unga kiritish uchun guruhni tanlang.';
 
   @override
-  String get start => 'Start';
+  String get start => 'Boshlash';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
-      'To unlock your old messages, please enter your recovery key that has been generated in a previous session. Your recovery key is NOT your password.';
+      'Eski xabarlaringizni qulfdan chiqarish uchun, iltimos, avvalgi seansdan yaratilgan tiklash kalitingizni kiriting. Sizning tiklash kalitingiz parolingiz EMAS.';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'Nashr qilish';
 
   @override
   String videoWithSize(String size) {
@@ -1641,671 +1663,676 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get openChat => 'Open Chat';
+  String get openChat => 'Suhbatni ochish';
 
   @override
-  String get markAsRead => 'Mark as read';
+  String get markAsRead => 'Oʻqilgan sifatida belgilash';
 
   @override
-  String get reportUser => 'Report user';
+  String get reportUser => 'Foydalanuvchi haqida xabar berish';
 
   @override
-  String get dismiss => 'Dismiss';
+  String get dismiss => 'Rad qilmoq';
 
   @override
   String reactedWith(String sender, String reaction) {
-    return '$sender reacted with $reaction';
+    return '$sender $reaction bilan reaksiya bildirdi';
   }
 
   @override
-  String get pinMessage => 'Pin to room';
+  String get pinMessage => 'Xonaga mahkamlash';
 
   @override
   String get confirmEventUnpin =>
-      'Are you sure to permanently unpin the event?';
+      'Tadbirni butunlay olib tashlashga ishonchingiz komilmi?';
 
   @override
-  String get emojis => 'Emojis';
+  String get emojis => 'Emojilar';
 
   @override
-  String get placeCall => 'Place call';
+  String get placeCall => 'Qoʻngʻiroq qilish';
 
   @override
-  String get voiceCall => 'Voice call';
+  String get voiceCall => 'Ovozli qoʻngʻiroq';
 
   @override
-  String get unsupportedAndroidVersion => 'Unsupported Android version';
+  String get unsupportedAndroidVersion =>
+      'Qoʻllab-quvvatlanmaydigan Android versiyasi';
 
   @override
   String get unsupportedAndroidVersionLong =>
-      'This feature requires a newer Android version. Please check for updates or Lineage OS support.';
+      'Bu funksiya Androidning yangi versiyasini talab qiladi. Iltimos, yangilanishlar yoki Lineage OS qoʻllab-quvvatlashini tekshiring.';
 
   @override
   String get videoCallsBetaWarning =>
-      'Please note that video calls are currently in beta. They might not work as expected or work at all on all platforms.';
+      'Iltimos, video qoʻngʻiroqlar hozirda beta-versiyada ekanligini unutmang. Ular kutilganidek ishlamasligi yoki barcha platformalarda umuman ishlamasligi mumkin.';
 
   @override
-  String get experimentalVideoCalls => 'Experimental video calls';
+  String get experimentalVideoCalls => 'Tajriba video qoʻngʻiroqlar';
 
   @override
-  String get emailOrUsername => 'Email or username';
+  String get emailOrUsername => 'Elektron pochta yoki foydalanuvchi nomi';
 
   @override
-  String get indexedDbErrorTitle => 'Private mode issues';
+  String get indexedDbErrorTitle => 'Shaxsiy rejim bilan bogʻliq muammolar';
 
   @override
   String get indexedDbErrorLong =>
-      'The message storage is unfortunately not enabled in private mode by default.\nPlease visit\n - about:config\n - set dom.indexedDB.privateBrowsing.enabled to true\nOtherwise, it is not possible to run FluffyChat.';
+      'Xabarlarni saqlash, afsuski, sukut bo\'yicha maxfiy rejimda yoqilmagan.\nIltimos, tashrif buyuring\n- about:config\n- dom.indexedDB.privateBrowsing.enabled ga true berilgan\nAks holda, FluffyChat ni ishga tushirish mumkin emas.';
 
   @override
   String switchToAccount(String number) {
-    return 'Switch to account $number';
+    return '$number hisobiga oʻtish';
   }
 
   @override
-  String get nextAccount => 'Next account';
+  String get nextAccount => 'Keyingi hisob';
 
   @override
-  String get previousAccount => 'Previous account';
+  String get previousAccount => 'Oldingi hisob';
 
   @override
-  String get addWidget => 'Add widget';
+  String get addWidget => 'Vidjet qoʻshish';
 
   @override
   String get widgetVideo => 'Video';
 
   @override
-  String get widgetEtherpad => 'Text note';
+  String get widgetEtherpad => 'Matnli qayd';
 
   @override
   String get widgetJitsi => 'Jitsi Meet';
 
   @override
-  String get widgetCustom => 'Custom';
+  String get widgetCustom => 'Maxsus';
 
   @override
-  String get widgetName => 'Name';
+  String get widgetName => 'Nomi';
 
   @override
-  String get widgetUrlError => 'This is not a valid URL.';
+  String get widgetUrlError => 'Bu yaroqli URL emas.';
 
   @override
-  String get widgetNameError => 'Please provide a display name.';
+  String get widgetNameError => 'Iltimos, displey nomini kiriting.';
 
   @override
-  String get errorAddingWidget => 'Error adding the widget.';
+  String get errorAddingWidget => 'Vidjet kiritilmadi.';
 
   @override
-  String get youRejectedTheInvitation => 'You rejected the invitation';
+  String get youRejectedTheInvitation => 'Taklifni rad etdingiz';
 
   @override
-  String get youJoinedTheChat => 'You joined the chat';
+  String get youJoinedTheChat => 'Siz suhbatga qoʻshildingiz';
 
   @override
-  String get youAcceptedTheInvitation => '👍 You accepted the invitation';
+  String get youAcceptedTheInvitation => '👍 Taklifni qabul qildingiz';
 
   @override
   String youBannedUser(String user) {
-    return 'You banned $user';
+    return 'Siz ${user}ni blokladingiz';
   }
 
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
-    return 'You have withdrawn the invitation for $user';
+    return 'Siz $user uchun taklifnomani bekor qildingiz';
   }
 
   @override
   String youInvitedToBy(String alias) {
-    return '📩 You have been invited via link to:\n$alias';
+    return '📩 Sizni quyidagi havola orqali taklif qilishdi:\n$alias';
   }
 
   @override
   String youInvitedBy(String user) {
-    return '📩 You have been invited by $user';
+    return '📩 Sizni $user taklif qildi';
   }
 
   @override
   String invitedBy(String user) {
-    return '📩 Invited by $user';
+    return '📩 $user taklif qilgan';
   }
 
   @override
   String youInvitedUser(String user) {
-    return '📩 You invited $user';
+    return '📩 Siz ${user}ni taklif qildingiz';
   }
 
   @override
   String youKicked(String user) {
-    return '👞 You kicked $user';
+    return '👞 Siz ${user}ni chiqarib yubordingiz';
   }
 
   @override
   String youKickedAndBanned(String user) {
-    return '🙅 You kicked and banned $user';
+    return '🙅 Siz ${user}ni chiqardingiz va blokladingiz';
   }
 
   @override
   String youUnbannedUser(String user) {
-    return 'You unbanned $user';
+    return '${user}ni blokdan chiqardingiz';
   }
 
   @override
   String hasKnocked(String user) {
-    return '🚪 $user has knocked';
+    return '🚪 $user taqillatdi';
   }
 
   @override
-  String get usersMustKnock => 'Users must knock';
+  String get usersMustKnock => 'Foydalanuvchilar taqillatishi kerak';
 
   @override
-  String get noOneCanJoin => 'No one can join';
+  String get noOneCanJoin => 'Hech kim qoʻshila olmaydi';
 
   @override
   String userWouldLikeToChangeTheChat(String user) {
-    return '$user would like to join the chat.';
+    return '$user suhbatga qoʻshilmoqchi.';
   }
 
   @override
   String get noPublicLinkHasBeenCreatedYet =>
-      'No public link has been created yet';
+      'Hech qanday ochiq havola yaratilmagan';
 
   @override
-  String get knock => 'Knock';
+  String get knock => 'Taqillating';
 
   @override
-  String get users => 'Users';
+  String get users => 'Foydalanuvchilar';
 
   @override
-  String get unlockOldMessages => 'Unlock old messages';
+  String get unlockOldMessages => 'Eski xabarlarni qulfdan chiqaring';
 
   @override
   String get storeInSecureStorageDescription =>
-      'Store the recovery key in the secure storage of this device.';
+      'Qayta tiklash kalitini ushbu qurilmaning xavfsiz xotirasida saqlang.';
 
   @override
   String get saveKeyManuallyDescription =>
-      'Save this key manually by triggering the system share dialog or clipboard.';
+      'Tizim ulashish dialog oynasi yoki buferni ishga tushirish orqali ushbu kalitni qoʻlda saqlang.';
 
   @override
-  String get storeInAndroidKeystore => 'Store in Android KeyStore';
+  String get storeInAndroidKeystore => 'Android KeyStoreʼda saqlang';
 
   @override
-  String get storeInAppleKeyChain => 'Store in Apple KeyChain';
+  String get storeInAppleKeyChain => 'Apple KeyChainʼda saqlang';
 
   @override
-  String get storeSecurlyOnThisDevice => 'Store securely on this device';
+  String get storeSecurlyOnThisDevice => 'Ushbu qurilmada xavfsiz saqlang';
 
   @override
   String countFiles(int count) {
-    return '$count files';
+    return '$count fayllar';
   }
 
   @override
-  String get user => 'User';
+  String get user => 'Foydalanuvchi';
 
   @override
-  String get custom => 'Custom';
+  String get custom => 'Maxsus';
 
   @override
   String get foregroundServiceRunning =>
-      'This notification appears when the foreground service is running.';
+      'Bu bildirishnoma old plan xizmati ishlab turgan paytda paydo bo‘ladi.';
 
   @override
-  String get screenSharingTitle => 'screen sharing';
+  String get screenSharingTitle => 'Ekranni ulashish';
 
   @override
-  String get screenSharingDetail => 'You are sharing your screen in FuffyChat';
+  String get screenSharingDetail =>
+      'Siz ekraningizni FuffyChat’da ulashmoqdasiz';
 
   @override
-  String get callingPermissions => 'Calling permissions';
+  String get callingPermissions => 'Qoʻngʻiroq qilish ruxsatlar';
 
   @override
-  String get callingAccount => 'Calling account';
+  String get callingAccount => 'Qoʻngʻiroq qilishi hisobi';
 
   @override
   String get callingAccountDetails =>
-      'Allows FluffyChat to use the native android dialer app.';
+      'FluffyChat’ga mahalliy android terish ilovasidan foydalanishga ruxsat beradi.';
 
   @override
-  String get appearOnTop => 'Appear on top';
+  String get appearOnTop => 'Teppada paydo boʻladi';
 
   @override
   String get appearOnTopDetails =>
-      'Allows the app to appear on top (not needed if you already have Fluffychat setup as a calling account)';
+      'Ilovaning yuqori qismida koʻrinishiga ruxsat beradi (agar sizda Fluffychat qoʻngʻiroq qiluvchi hisobi sifatida oʻrnatilgan boʻlsa, kerak emas)';
 
   @override
   String get otherCallingPermissions =>
-      'Microphone, camera and other FluffyChat permissions';
+      'Mikrofon, kamera va boshqa FluffyChat ruxsatnomalari';
 
   @override
-  String get whyIsThisMessageEncrypted => 'Why is this message unreadable?';
+  String get whyIsThisMessageEncrypted =>
+      'Nima uchun bu xabarni oʻqib boʻlmaydi?';
 
   @override
   String get noKeyForThisMessage =>
-      'This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.';
+      'Bu xabar siz ushbu qurilmada hisobingizga kirishdan oldin yuborilgan boʻlsa sodir boʻlishi mumkin.\n\nShuningdek, joʻnatuvchi qurilmangizni bloklagan yoki internet ulanishida biron bir muammo yuzaga kelgan boʻlishi mumkin.\n\nXabarni boshqa sessiyada oʻqiy olasizmi? Keyin xabarni undan uzatishingiz mumkin! Sozlamalar > Qurilmalar boʻlimiga oʻting va qurilmalaringiz bir-birini tasdiqlaganligiga ishonch hosil qiling. Keyingi safar xonani ochganingizda va ikkala sessiya ham oldinda boʻlganda, kalitlar avtomatik ravishda uzatiladi.\n\nTizimdan chiqishda yoki qurilmalarni almashtirishda kalitlarni yoʻqotishni xohlamaysizmi? Sozlamalarda suhbatning zaxira nusxasini yoqganingizga ishonch hosil qiling.';
 
   @override
-  String get newGroup => 'New group';
+  String get newGroup => 'Yangi guruh';
 
   @override
-  String get newSpace => 'New space';
+  String get newSpace => 'Yangi maydon';
 
   @override
-  String get enterSpace => 'Enter space';
+  String get enterSpace => 'Maydonga kirish';
 
   @override
-  String get enterRoom => 'Enter room';
+  String get enterRoom => 'Guruhga kirish';
 
   @override
-  String get allSpaces => 'All spaces';
+  String get allSpaces => 'Barcha maydonlar';
 
   @override
   String numChats(String number) {
-    return '$number chats';
+    return '$number suhbatlar';
   }
 
   @override
-  String get hideUnimportantStateEvents => 'Hide unimportant state events';
+  String get hideUnimportantStateEvents =>
+      'Muhim boʻlmagan shtat tadbirlarini yashirish';
 
   @override
-  String get hidePresences => 'Hide Status List?';
+  String get hidePresences => 'Holat roʻyxati yashirilsinmi?';
 
   @override
-  String get doNotShowAgain => 'Do not show again';
+  String get doNotShowAgain => 'Qaytib koʻrsatilmasin';
 
   @override
   String wasDirectChatDisplayName(String oldDisplayName) {
-    return 'Empty chat (was $oldDisplayName)';
+    return 'Boʻsh suhbat ($oldDisplayName edi)';
   }
 
   @override
   String get newSpaceDescription =>
-      'Spaces allows you to consolidate your chats and build private or public communities.';
+      'Maydonlar sizga suhbatlaringizni birlashtirish va shaxsiy yoki ommaviy hamjamiyatlarni yaratish imkonini beradi.';
 
   @override
-  String get encryptThisChat => 'Encrypt this chat';
+  String get encryptThisChat => 'Bu suhbatni shifrlash';
 
   @override
   String get disableEncryptionWarning =>
-      'For security reasons you can not disable encryption in a chat, where it has been enabled before.';
+      'Xavfsizlik nuqtai nazaridan, agar u ilgari yoqilgan boʻlsa, suhbatda shifrlashni oʻchirib qoʻyolmaysiz.';
 
   @override
-  String get sorryThatsNotPossible => 'Sorry... that is not possible';
+  String get sorryThatsNotPossible => 'Kechirasiz... bu mumkin emas';
 
   @override
-  String get deviceKeys => 'Device keys:';
+  String get deviceKeys => 'Qurilma kalitlari:';
 
   @override
-  String get reopenChat => 'Reopen chat';
+  String get reopenChat => 'Suhbatni qayta ochish';
 
   @override
   String get noBackupWarning =>
-      'Warning! Without enabling chat backup, you will lose access to your encrypted messages. It is highly recommended to enable the chat backup first before logging out.';
+      'Diqqat! Suhbatni zaxiralashni yoqmasangiz, shifrlangan xabarlaringizga kirish huquqini yoʻqotasiz. Tizimdan chiqishdan oldin chatni zaxiralashni yoqishingiz tavsiya etiladi.';
 
   @override
-  String get noOtherDevicesFound => 'No other devices found';
+  String get noOtherDevicesFound => 'Boshqa qurilma topilmadi';
 
   @override
   String fileIsTooBigForServer(String max) {
-    return 'Unable to send! The server only supports attachments up to $max.';
+    return 'Yuborish imkonsiz! Server faqat $max hajmgacha bo‘lgan ilovalarni qo‘llab-quvvatlaydi.';
   }
 
   @override
   String fileHasBeenSavedAt(String path) {
-    return 'File has been saved at $path';
+    return 'Fayl ${path}da saqlandi';
   }
 
   @override
-  String get jumpToLastReadMessage => 'Jump to last read message';
+  String get jumpToLastReadMessage => 'Oxirgi o‘qilgan xabarga o‘tish';
 
   @override
-  String get readUpToHere => 'Read up to here';
+  String get readUpToHere => 'Bu yerga qadar o‘qish';
 
   @override
-  String get jump => 'Jump';
+  String get jump => 'Sakrash';
 
   @override
-  String get openLinkInBrowser => 'Open link in browser';
+  String get openLinkInBrowser => 'Havolani brauzerda ochish';
 
   @override
   String get reportErrorDescription =>
-      '😭 Oh no. Something went wrong. If you want, you can report this bug to the developers.';
+      '😭 Voy yo‘q. Nimadir xato ketdi. Agar xohlasangiz, bu xato haqida dasturchilarga xabar berishingiz mumkin.';
 
   @override
-  String get report => 'report';
+  String get report => 'hisobot';
 
   @override
-  String get signInWithPassword => 'Sign in with password';
+  String get signInWithPassword => 'Parol bilan kirish';
 
   @override
   String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Please try again later or choose a different server.';
-
-  @override
-  String signInWith(String provider) {
-    return 'Sign in with $provider';
-  }
+      'Keyinroq qayta urining yoki boshqa serverni tanlang.';
 
   @override
   String get profileNotFound =>
-      'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
+      'Foydalanuvchi serverda topilmadi. Ehtimol, ulanishda muammo bor yoki foydalanuvchi mavjud emas.';
 
   @override
-  String get setTheme => 'Set theme:';
+  String get setTheme => 'Mavzu tanlash:';
 
   @override
-  String get setColorTheme => 'Set color theme:';
+  String get setColorTheme => 'Rang mavzusini sozlash:';
 
   @override
-  String get invite => 'Invite';
+  String get invite => 'Taklif qilish';
 
   @override
-  String get inviteGroupChat => '📨 Group chat invite';
+  String get inviteGroupChat => '📨 Guruh suhbatiga taklif';
 
   @override
-  String get invitePrivateChat => '📨 Private chat invite';
+  String get invitePrivateChat => '📨 Shaxsiy suhbatga taklif';
 
   @override
-  String get invalidInput => 'Invalid input!';
+  String get invalidInput => 'Xato kiritildi!';
 
   @override
   String wrongPinEntered(int seconds) {
-    return 'Wrong pin entered! Try again in $seconds seconds...';
+    return 'PIN noto‘g‘ri kiritildi! $seconds soniyadan keyin qayta urining...';
   }
 
   @override
-  String get pleaseEnterANumber => 'Please enter a number greater than 0';
+  String get pleaseEnterANumber => '0 dan katta son kiriting';
 
   @override
   String get archiveRoomDescription =>
-      'The chat will be moved to the archive. Other users will be able to see that you have left the chat.';
+      'Suhbat arxivga koʻchiriladi. Boshqa foydalanuvchilar sizning suhbatdan chiqqaningizni koʻra oladilar.';
 
   @override
   String get roomUpgradeDescription =>
-      'The chat will then be recreated with the new room version. All participants will be notified that they need to switch to the new chat. You can find out more about room versions at https://spec.matrix.org/latest/rooms/';
+      'Keyin suhbat yangi guruh versiyasi bilan qayta yaratiladi. Barcha ishtirokchilarga yangi suhbatga oʻtishlari kerakligi haqida xabar beriladi. Guruh versiyalari haqida koʻproq maʼlumotni https://spec.matrix.org/latest/rooms/ manzilida topishingiz mumkin';
 
   @override
   String get removeDevicesDescription =>
-      'You will be logged out of this device and will no longer be able to receive messages.';
+      'Bu qurilmadan chiqarilasiz va ortiq xabarlarni qabul qila olmaysiz.';
 
   @override
   String get banUserDescription =>
-      'The user will be banned from the chat and will not be able to enter the chat again until they are unbanned.';
+      'Foydalanuvchi suhbatdan bloklanadi va blokdan chiqarilmaguncha suhbatga qayta kira olmaydi.';
 
   @override
   String get unbanUserDescription =>
-      'The user will be able to enter the chat again if they try.';
+      'Foydalanuvchi qayta suhbatga kira oladi agar ular urinib koʻrishsa.';
 
   @override
   String get kickUserDescription =>
-      'The user is kicked out of the chat but not banned. In public chats, the user can rejoin at any time.';
+      'Foydalanuvchi suhbatdan chiqarib yuboriladi, ammo taqiqlanmaydi. Ommaviy chatlarda foydalanuvchi istalgan vaqtda qayta qoʻshilishi mumkin.';
 
   @override
   String get makeAdminDescription =>
-      'Once you make this user admin, you may not be able to undo this as they will then have the same permissions as you.';
+      'Bu foydalanuvchini admini qilsangiz, uni bekor qila olmasligingiz mumkin, chunki u siz bilan bir xil ruxsatlarga ega bo‘ladi.';
 
   @override
   String get pushNotificationsNotAvailable =>
-      'Push notifications not available';
+      'Push-bildirishnomalar mavjud emas';
 
   @override
-  String get learnMore => 'Learn more';
+  String get learnMore => 'Batafsil';
 
   @override
-  String get yourGlobalUserIdIs => 'Your global user-ID is: ';
+  String get yourGlobalUserIdIs => 'Global foydalanuvchi ID raqamingiz: ';
 
   @override
   String noUsersFoundWithQuery(String query) {
-    return 'Unfortunately no user could be found with \"$query\". Please check whether you made a typo.';
+    return 'Afsuski, \"$query\" soʻrovi bilan foydalanuvchi topilmadi. Iltimos, xato qilganingizni tekshiring.';
   }
 
   @override
-  String get knocking => 'Knocking';
+  String get knocking => 'Taqillatmoqda';
 
   @override
   String chatCanBeDiscoveredViaSearchOnServer(String server) {
-    return 'Chat can be discovered via the search on $server';
+    return 'Suhbatni $server saytidagi qidiruv orqali topish mumkin';
   }
 
   @override
-  String get searchChatsRooms => 'Search for #chats, @users...';
+  String get searchChatsRooms => 'Qidiruv #chats, @users...';
 
   @override
-  String get nothingFound => 'Nothing found...';
+  String get nothingFound => 'Hech nima topilmadi...';
 
   @override
-  String get groupName => 'Group name';
+  String get groupName => 'Guruh nomi';
 
   @override
-  String get createGroupAndInviteUsers => 'Create a group and invite users';
+  String get createGroupAndInviteUsers =>
+      'Guruh yaratish va foydalanuvchilarni taklif qilish';
 
   @override
-  String get groupCanBeFoundViaSearch => 'Group can be found via search';
+  String get groupCanBeFoundViaSearch =>
+      'Guruh qidiruv orqali topilishi mumkin';
 
   @override
   String get wrongRecoveryKey =>
-      'Sorry... this does not seem to be the correct recovery key.';
+      'Kechirasiz... bu toʻgʻri tiklash kaliti emasga oʻxshaydi.';
 
   @override
-  String get startConversation => 'Start conversation';
+  String get startConversation => 'Suhbat boshlash';
 
   @override
-  String get commandHint_sendraw => 'Send raw json';
+  String get commandHint_sendraw => 'Xom jsonni yuborish';
 
   @override
-  String get databaseMigrationTitle => 'Database is optimized';
+  String get databaseMigrationTitle => 'Maʼlumotlar bazasi optimallashtirilgan';
 
   @override
-  String get databaseMigrationBody => 'Please wait. This may take a moment.';
+  String get databaseMigrationBody =>
+      'Iltimos, kuting. Bu biroz vaqt olishi mumkin.';
 
   @override
-  String get leaveEmptyToClearStatus => 'Leave empty to clear your status.';
+  String get leaveEmptyToClearStatus =>
+      'Holatingizni tozalash uchun boʻsh qoldiring.';
 
   @override
-  String get select => 'Select';
+  String get select => 'Tanlash';
 
   @override
-  String get searchForUsers => 'Search for @users...';
+  String get searchForUsers => '@users ni qidiring...';
 
   @override
   String get pleaseEnterYourCurrentPassword =>
-      'Please enter your current password';
+      'Iltimos, joriy maxfiy soʻzingizni kiriting';
 
   @override
-  String get newPassword => 'New password';
+  String get newPassword => 'Yangi maxfiy soʻz';
 
   @override
-  String get pleaseChooseAStrongPassword => 'Please choose a strong password';
+  String get pleaseChooseAStrongPassword =>
+      'Iltimos kuchli maxfiy soʻz tanlang';
 
   @override
-  String get passwordsDoNotMatch => 'Passwords do not match';
+  String get passwordsDoNotMatch => 'Maxfiy soʻzlar mos kelmadi';
 
   @override
-  String get passwordIsWrong => 'Your entered password is wrong';
+  String get passwordIsWrong => 'Siz kiritgan maxfiy soʻz xato';
 
   @override
-  String get publicLink => 'Public link';
+  String get publicLink => 'Ommaviy havola';
 
   @override
-  String get publicChatAddresses => 'Public chat addresses';
+  String get publicChatAddresses => 'Ommaviy suhbat manzillari';
 
   @override
-  String get createNewAddress => 'Create new address';
+  String get createNewAddress => 'Yangi manzil yarating';
 
   @override
-  String get joinSpace => 'Join space';
+  String get joinSpace => 'Maydonga qoʻshiling';
 
   @override
-  String get publicSpaces => 'Public spaces';
+  String get publicSpaces => 'Ommaviy maydonlar';
 
   @override
-  String get addChatOrSubSpace => 'Add chat or sub space';
+  String get addChatOrSubSpace => 'Suhbat yoki sub-maydon qoʻshing';
 
   @override
-  String get subspace => 'Subspace';
+  String get subspace => 'Sub-maydonlar';
 
   @override
-  String get decline => 'Decline';
+  String get decline => 'Rad qilish';
 
   @override
-  String get thisDevice => 'This device:';
+  String get thisDevice => 'Ushbu qurilma:';
 
   @override
-  String get initAppError => 'An error occured while init the app';
+  String get initAppError => 'Ilovani ishga tushirishda xatolik yuz berdi';
 
   @override
-  String get userRole => 'User role';
+  String get userRole => 'Foydalanuvchi roli';
 
   @override
   String minimumPowerLevel(String level) {
-    return '$level is the minimum power level.';
+    return '$level minimal quvvat darajasidir.';
   }
 
   @override
   String searchIn(String chat) {
-    return 'Search in chat \"$chat\"...';
+    return 'Suhbat \"$chat\"da qidiring...';
   }
 
   @override
-  String get searchMore => 'Search more...';
+  String get searchMore => 'Koʻproq qidirish...';
 
   @override
-  String get gallery => 'Gallery';
+  String get gallery => 'Galereya';
 
   @override
-  String get files => 'Files';
+  String get files => 'Fayllar';
 
   @override
   String databaseBuildErrorBody(String url, String error) {
-    return 'Unable to build the SQlite database. The app tries to use the legacy database for now. Please report this error to the developers at $url. The error message is: $error';
+    return 'SQlite maʼlumotlar bazasini yaratib boʻlmadi. Ilova hozircha eski maʼlumotlar bazasidan foydalanishga harakat qilmoqda. Iltimos, ushbu xato haqida $url manzilidagi dasturchilarga xabar bering. Xato xabari: $error';
   }
 
   @override
   String sessionLostBody(String url, String error) {
-    return 'Your session is lost. Please report this error to the developers at $url. The error message is: $error';
+    return 'Seansingiz yoʻqoldi. Iltimos, ushbu xato haqida $url manzilidagi dasturchilarga xabar bering. Xato xabari: $error';
   }
 
   @override
   String restoreSessionBody(String url, String error) {
-    return 'The app now tries to restore your session from the backup. Please report this error to the developers at $url. The error message is: $error';
+    return 'Ilova endi seansingizni zaxira nusxasidan tiklashga harakat qiladi. Iltimos, ushbu xato haqida $url manzilidagi dasturchilarga xabar bering. Xato xabari: $error';
   }
 
   @override
   String forwardMessageTo(String roomName) {
-    return 'Forward message to $roomName?';
+    return 'Xabarni ${roomName}ga yoʻnaltirilsinmi?';
   }
 
   @override
-  String get sendReadReceipts => 'Send read receipts';
+  String get sendReadReceipts => 'Oʻqilganlik haqida xabarnomalarni yuborish';
 
   @override
   String get sendTypingNotificationsDescription =>
-      'Other participants in a chat can see when you are typing a new message.';
+      'Suhbatdagi boshqa ishtirokchilar siz yangi xabar yozayotganingizni koʻrishlari mumkin.';
 
   @override
   String get sendReadReceiptsDescription =>
-      'Other participants in a chat can see when you have read a message.';
+      'Suhbatdagi boshqa ishtirokchilar sizning xabarni qachon oʻqiganingizni koʻrishlari mumkin.';
 
   @override
-  String get formattedMessages => 'Formatted messages';
+  String get formattedMessages => 'Formatlangan xabarlar';
 
   @override
   String get formattedMessagesDescription =>
-      'Display rich message content like bold text using markdown.';
+      'Markdown yordamida qalin matn kabi boy xabar mazmunini koʻrsating.';
 
   @override
-  String get verifyOtherUser => '🔐 Verify other user';
+  String get verifyOtherUser => '🔐 Boshqa foydalanuvchini tasdiqlang';
 
   @override
   String get verifyOtherUserDescription =>
-      'If you verify another user, you can be sure that you know who you are really writing to. 💪\n\nWhen you start a verification, you and the other user will see a popup in the app. There you will then see a series of emojis or numbers that you have to compare with each other.\n\nThe best way to do this is to meet up or start a video call. 👭';
+      'Agar siz boshqa foydalanuvchini tasdiqlasangiz, aslida kimga yozayotganingizni bilishingizga amin boʻlishingiz mumkin. 💪\n\nTekshiruvni boshlaganingizda, siz va boshqa foydalanuvchi ilovada qalqib chiquvchi oynani koʻrasiz. Keyin u yerda siz bir-biringiz bilan taqqoslashingiz kerak boʻlgan bir qator emojilar yoki raqamlarni koʻrasiz.\n\nBuning eng yaxshi usuli - uchrashish yoki video qoʻngʻiroqni boshlash. 👭';
 
   @override
-  String get verifyOtherDevice => '🔐 Verify other device';
+  String get verifyOtherDevice => '🔐 Boshqa qurilmani tasdiqlang';
 
   @override
   String get verifyOtherDeviceDescription =>
-      'When you verify another device, those devices can exchange keys, increasing your overall security. 💪 When you start a verification, a popup will appear in the app on both devices. There you will then see a series of emojis or numbers that you have to compare with each other. It\'s best to have both devices handy before you start the verification. 🤳';
+      'Boshqa qurilmani tasdiqlaganingizda, bu qurilmalar kalitlarni almashishi mumkin, bu umumiy xavfsizligingizni oshiradi. 💪 Tasdiqlashni boshlaganingizda, ikkala qurilmada ham ilovada qalqib chiquvchi oyna paydo bo‘ladi. U yerda siz bir-biri bilan taqqoslashingiz kerak bo‘lgan emojilar yoki raqamlar qatorini ko‘rasiz. Tasdiqlashni boshlashdan oldin ikkala qurilma ham yoningizda bo‘lgani ma’qul. ✓';
 
   @override
   String acceptedKeyVerification(String sender) {
-    return '$sender accepted key verification';
+    return '$sender kalit tekshiruvini qabul qildi';
   }
 
   @override
   String canceledKeyVerification(String sender) {
-    return '$sender canceled key verification';
+    return '$sender kalit tekshiruvini bekor qildi';
   }
 
   @override
   String completedKeyVerification(String sender) {
-    return '$sender completed key verification';
+    return '$sender kalitni tasdiqlashni yakunladi';
   }
 
   @override
   String isReadyForKeyVerification(String sender) {
-    return '$sender is ready for key verification';
+    return '$sender kalitni tasdiqlash uchun tayyor';
   }
 
   @override
   String requestedKeyVerification(String sender) {
-    return '$sender requested key verification';
+    return '$sender kalitni tasdiqlash talabini yubordi';
   }
 
   @override
   String startedKeyVerification(String sender) {
-    return '$sender started key verification';
+    return '$sender kalit tekshiruvini so‘radi';
   }
 
   @override
-  String get transparent => 'Transparent';
+  String get transparent => 'Shaffof';
 
   @override
-  String get incomingMessages => 'Incoming messages';
+  String get incomingMessages => 'Kiruvchi xabarlar';
 
   @override
-  String get stickers => 'Stickers';
+  String get stickers => 'Stikerlar';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'Kashf etish';
 
   @override
-  String get commandHint_ignore => 'Ignore the given matrix ID';
+  String get commandHint_ignore => 'Berilgan matriks ID e’tiborga olinmasin';
 
   @override
-  String get commandHint_unignore => 'Unignore the given matrix ID';
+  String get commandHint_unignore =>
+      'Berilgan matriks IDni e’tiborsiz qoldirish';
 
   @override
   String unreadChatsInApp(String appname, String unread) {
-    return '$appname: $unread unread chats';
+    return '$appname: $unread ta oʻqilmagan suhbatlar';
   }
 
   @override
   String get noDatabaseEncryption =>
-      'Database encryption is not supported on this platform';
+      'Bu platformada ma’lumotlar bazasini shifrlash ishlamaydi';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
-    return 'Right now there are $count users blocked.';
+  String thereAreCountUsersBlocked(Object count) {
+    return 'Hozirda $count ta foydalanuvchi bloklangan.';
   }
 
   @override
-  String get restricted => 'Restricted';
+  String get restricted => 'Cheklangan';
 
   @override
-  String get knockRestricted => 'Knock restricted';
+  String get knockRestricted => 'Taqillatish cheklangan';
 
   @override
   String goToSpace(Object space) {
-    return 'Go to space: $space';
+    return 'Maydonga o‘tish: $space';
   }
 
   @override
-  String get markAsUnread => 'Mark as unread';
+  String get markAsUnread => 'Ochilmagan deb belgilash';
 
   @override
   String userLevel(int level) {
-    return '$level - User';
+    return '$level - Foydalanuvchi';
   }
 
   @override
@@ -2319,543 +2346,626 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get changeGeneralChatSettings => 'Change general chat settings';
+  String get changeGeneralChatSettings =>
+      'Umumiy suhbat sozlamalarini oʻzgartirish';
 
   @override
-  String get inviteOtherUsers => 'Invite other users to this chat';
+  String get inviteOtherUsers =>
+      'Boshqa foydalanuvchilarni bu suhbatga taklif qilish';
 
   @override
-  String get changeTheChatPermissions => 'Change the chat permissions';
+  String get changeTheChatPermissions => 'Suhbat ruxsatnomalarini oʻzgartirish';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
-      'Change the visibility of the chat history';
+      'Suhbat tarix koʻrinishini oʻzgartirish';
 
   @override
   String get changeTheCanonicalRoomAlias =>
-      'Change the main public chat address';
+      'Asosiy umumiy suhbat manzilini oʻzgartirish';
 
   @override
-  String get sendRoomNotifications => 'Send a @room notifications';
+  String get sendRoomNotifications => '@room bildirishnomalarini yuborish';
 
   @override
-  String get changeTheDescriptionOfTheGroup =>
-      'Change the description of the chat';
+  String get changeTheDescriptionOfTheGroup => 'Suhbat tavsifini oʻzgartirish';
 
   @override
   String get chatPermissionsDescription =>
-      'Define which power level is necessary for certain actions in this chat. The power levels 0, 50 and 100 are usually representing users, moderators and admins, but any gradation is possible.';
+      'Ushbu suhbatda muayyan harakatlar uchun qaysi quvvat darajasi zarurligini aniqlang. 0, 50 va 100 quvvat darajalari odatda foydalanuvchilar, moderatorlar va administratorlarni ifodalaydi, ammo har qanday gradatsiya mumkin.';
 
   @override
   String updateInstalled(String version) {
-    return '🎉 Update $version installed!';
+    return '🎉 $version versiyasiga yangilandi!';
   }
 
   @override
-  String get changelog => 'Changelog';
+  String get changelog => 'O‘zgarishlar jurnali';
 
   @override
-  String get sendCanceled => 'Sending canceled';
+  String get sendCanceled => 'Yuborish bekor qilindi';
 
   @override
-  String get loginWithMatrixId => 'Login with Matrix-ID';
+  String get loginWithMatrixId => 'Matriks-ID bilan kirish';
 
   @override
-  String get discoverHomeservers => 'Discover homeservers';
+  String get discoverHomeservers => 'Uy serverlarini kashf eting';
 
   @override
-  String get whatIsAHomeserver => 'What is a homeserver?';
+  String get whatIsAHomeserver => 'Uy serveri nima?';
 
   @override
   String get homeserverDescription =>
-      'All your data is stored on the homeserver, just like an email provider. You can choose which homeserver you want to use, while you can still communicate with everyone. Learn more at at https://matrix.org.';
+      'Barcha ma’lumotlaringiz xuddi elektron pochta provayderi kabi homeserverda saqlanadi. Siz qaysi uy serveridan foydalanishni tanlashingiz mumkin, shu bilan birga siz hamma bilan muloqot qilishingiz mumkin. Batafsil: https://matrix.org.';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
-      'Doesn\'t seem to be a compatible homeserver. Wrong URL?';
+      'Uy serveri mos emasga o‘xshaydi. URL xato kiritilganmi?';
 
   @override
-  String get calculatingFileSize => 'Calculating file size...';
+  String get calculatingFileSize => 'Fayl hajmi hisoblanmoqda...';
 
   @override
-  String get prepareSendingAttachment => 'Prepare sending attachment...';
+  String get prepareSendingAttachment =>
+      'Yuborish uchun biriktirmani tayyorlang...';
 
   @override
-  String get sendingAttachment => 'Sending attachment...';
+  String get sendingAttachment => 'Biriktirish yuborilmoqda...';
 
   @override
-  String get generatingVideoThumbnail => 'Generating video thumbnail...';
+  String get generatingVideoThumbnail => 'Video eskizi yaratilmoqda...';
 
   @override
-  String get compressVideo => 'Compressing video...';
+  String get compressVideo => 'Video siqilmoqda...';
 
   @override
   String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Sending attachment $index of $length...';
+    return 'Biriktirma yuborilmoqda: $index of $length...';
   }
 
   @override
   String serverLimitReached(int seconds) {
-    return 'Server limit reached! Waiting $seconds seconds...';
+    return 'Server limiti tugadi! $seconds soniya kutilmoqda...';
   }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
-      'One of your devices is not verified';
+      'Qurilmalaringizdan biri tasdiqlanmagan';
 
   @override
   String get noticeChatBackupDeviceVerification =>
-      'Note: When you connect all your devices to the chat backup, they are automatically verified.';
+      'Eslatma: Barcha qurilmalaringizni suhbat zaxira nusxasiga ulaganingizda, ular avtomatik ravishda tasdiqlanadi.';
 
   @override
-  String get continueText => 'Continue';
+  String get continueText => 'Davom ettirish';
 
   @override
   String get welcomeText =>
-      'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
+      'Hey Hey 👋 Bu FluffyChat. Siz https://matrix.org bilan mos keladigan istalgan uy serveriga kirishingiz mumkin. Va keyin istalgan kishi bilan suhbatlashishingiz mumkin. Bu ulkan markazlashtirilmagan xabar almashish tarmog\'i!';
 
   @override
-  String get blur => 'Blur:';
+  String get blur => 'Xiralashtirish:';
 
   @override
-  String get opacity => 'Opacity:';
+  String get opacity => 'Noaniqlik:';
 
   @override
-  String get setWallpaper => 'Set wallpaper';
+  String get setWallpaper => 'Fon rasmini sozlash';
 
   @override
-  String get manageAccount => 'Manage account';
+  String get manageAccount => 'Hisobni boshqarish';
 
   @override
   String get noContactInformationProvided =>
-      'Server does not provide any valid contact information';
+      'Server hech qanday yaroqli kontakt axborotini taqdim etmaydi';
 
   @override
-  String get contactServerAdmin => 'Contact server admin';
+  String get contactServerAdmin => 'Server administratori bilan bog‘lanish';
 
   @override
-  String get contactServerSecurity => 'Contact server security';
+  String get contactServerSecurity => 'Aloqa serveri xavfsizligi';
 
   @override
-  String get supportPage => 'Support page';
+  String get supportPage => 'Yordam sahifasi';
 
   @override
-  String get serverInformation => 'Server information:';
+  String get serverInformation => 'Server haqida ma’lumot:';
 
   @override
-  String get name => 'Name';
+  String get name => 'Nomi';
 
   @override
-  String get version => 'Version';
+  String get version => 'Versiya';
 
   @override
-  String get website => 'Website';
+  String get website => 'Sayt';
 
   @override
-  String get compress => 'Compress';
+  String get compress => 'Siqmoq';
 
   @override
-  String get boldText => 'Bold text';
+  String get boldText => 'Qalin matn';
 
   @override
-  String get italicText => 'Italic text';
+  String get italicText => 'Qiya matn';
 
   @override
-  String get strikeThrough => 'Strikethrough';
+  String get strikeThrough => 'O‘tish joyi';
 
   @override
-  String get pleaseFillOut => 'Please fill out';
+  String get pleaseFillOut => 'Iltimos, to‘ldiring';
 
   @override
-  String get invalidUrl => 'Invalid url';
+  String get invalidUrl => 'Yaroqsiz url';
 
   @override
-  String get addLink => 'Add link';
+  String get addLink => 'Havola kiritish';
 
   @override
   String get unableToJoinChat =>
-      'Unable to join chat. Maybe the other party has already closed the conversation.';
+      'Chatga qoʻshilib boʻlmadi. Ehtimol, boshqa tomon suhbatni allaqachon yopib qoʻygan.';
 
   @override
-  String get previous => 'Previous';
+  String get previous => 'Avvalgi';
 
   @override
   String get otherPartyNotLoggedIn =>
-      'The other party is currently not logged in and therefore cannot receive messages!';
+      'Narigi tomon hozirda hisobingizga kirmagan va shuning uchun xabarlarni qabul qila olmaydi!';
 
   @override
   String appWantsToUseForLogin(String server) {
-    return 'Use \'$server\' to log in';
+    return 'Hisobga kirish \'$server\' ishlating';
   }
 
   @override
   String get appWantsToUseForLoginDescription =>
-      'You hereby allow the app and website to share information about you.';
+      'Siz bu bilan ilova va veb-saytga siz haqingizdagi axborotni ulashishga ruxsat berasiz.';
 
   @override
-  String get open => 'Open';
+  String get open => 'Ochish';
 
   @override
-  String get waitingForServer => 'Waiting for server...';
+  String get waitingForServer => 'Server kutilmoqda...';
 
   @override
   String get appIntroduction =>
-      'FluffyChat lets you chat with your friends across different messengers. Learn more at https://matrix.org or just tap *Continue*.';
+      'FluffyChat sizga turli messenjerlar orqali doʻstlaringiz bilan suhbatlashish imkonini beradi. Batafsil maʼlumotni https://matrix.org saytida oling yoki shunchaki *Davom etish* tugmasini bosing.';
 
   @override
-  String get newChatRequest => '📩 New chat request';
+  String get newChatRequest => '📩 Yangi suhbat uchun soʻrov';
 
   @override
-  String get contentNotificationSettings => 'Content notification settings';
+  String get contentNotificationSettings =>
+      'Kontent bildirishnomasi sozlamalari';
 
   @override
-  String get generalNotificationSettings => 'General notification settings';
+  String get generalNotificationSettings => 'Umumiy bildirishnoma sozlamalari';
 
   @override
-  String get roomNotificationSettings => 'Room notification settings';
+  String get roomNotificationSettings => 'Xona bildirishnomasi sozlamalari';
 
   @override
   String get userSpecificNotificationSettings =>
-      'User specific notification settings';
+      'Foydalanuvchiga xos bildirishnoma sozlamalari';
 
   @override
-  String get otherNotificationSettings => 'Other notification settings';
+  String get otherNotificationSettings => 'Boshqa bildirishnoma sozlamalari';
 
   @override
-  String get notificationRuleContainsUserName => 'Contains User Name';
+  String get notificationRuleContainsUserName =>
+      'Foydalanuvchi nomini ichiga oladi';
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Notifies the user when a message contains their username.';
+      'Xabarda foydalanuvchi nomi mavjud bo‘lsa, foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleMaster => 'Mute all notifications';
+  String get notificationRuleMaster =>
+      'Barcha bildirishnomalarni ovozsiz qilish';
 
   @override
   String get notificationRuleMasterDescription =>
-      'Overrides all other rules and disables all notifications.';
+      'Boshqa barcha qoidalarni bekor qiladi va barcha bildirishnomalarni faolsizlantiradi.';
 
   @override
-  String get notificationRuleSuppressNotices => 'Suppress Automated Messages';
+  String get notificationRuleSuppressNotices =>
+      'Avtomatlashtirilgan xabarlarni o‘chirish';
 
   @override
   String get notificationRuleSuppressNoticesDescription =>
-      'Suppresses notifications from automated clients like bots.';
+      'Botlar kabi avtomatlashtirilgan mijozlardan kelgan bildirishnomalarni to‘xtatadi.';
 
   @override
-  String get notificationRuleInviteForMe => 'Invite for Me';
+  String get notificationRuleInviteForMe => 'Men uchun taklif qilish';
 
   @override
   String get notificationRuleInviteForMeDescription =>
-      'Notifies the user when they are invited to a room.';
+      'Foydalanuvchi xonaga taklif qilinganda unga xabar beradi.';
 
   @override
-  String get notificationRuleMemberEvent => 'Member Event';
+  String get notificationRuleMemberEvent => 'A’zo tadbirlari';
 
   @override
   String get notificationRuleMemberEventDescription =>
-      'Suppresses notifications for membership events.';
+      'Obuna tadbirlari uchun bildirishnomalarni o‘chiradi.';
 
   @override
-  String get notificationRuleIsUserMention => 'User Mention';
+  String get notificationRuleIsUserMention => 'Foydalanuvchi zikri';
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Notifies the user when they are directly mentioned in a message.';
+      'Foydalanuvchi xabarida to‘g‘ridan-to‘g‘ri tilga olinganida unga xabar beradi.';
 
   @override
-  String get notificationRuleContainsDisplayName => 'Contains Display Name';
+  String get notificationRuleContainsDisplayName =>
+      'Tarkibida displey nomi bor';
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
-      'Notifies the user when a message contains their display name.';
+      'Xabarda foydalanuvchining displey nomi mavjudligi haqida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleIsRoomMention => 'Room Mention';
+  String get notificationRuleIsRoomMention => 'Xonaga eslatma';
 
   @override
   String get notificationRuleIsRoomMentionDescription =>
-      'Notifies the user when there is a room mention.';
+      'Xona zikri mavjudligida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleRoomnotif => 'Room Notification';
+  String get notificationRuleRoomnotif => 'Xona bildirishnomasi';
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Notifies the user when a message contains \'@room\'.';
+      'Xabar tarkibida @room bo‘lsa, foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleTombstone => 'Tombstone';
+  String get notificationRuleTombstone => 'Qabrtosh';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Notifies the user about room deactivation messages.';
+      'Xonani faolsizlantirish xabarlari haqida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleReaction => 'Reaction';
+  String get notificationRuleReaction => 'Reaksiya';
 
   @override
   String get notificationRuleReactionDescription =>
-      'Suppresses notifications for reactions.';
+      'Munosabat bildirishnomalarini o‘chiradi.';
 
   @override
-  String get notificationRuleRoomServerAcl => 'Room Server ACL';
+  String get notificationRuleRoomServerAcl => 'Guruh serveri ACL';
 
   @override
   String get notificationRuleRoomServerAclDescription =>
-      'Suppresses notifications for room server access control lists (ACL).';
+      'Guruh serveriga kirishni boshqarish ro‘yxatlari (ACL) uchun bildirishnomalarni bostiradi.';
 
   @override
-  String get notificationRuleSuppressEdits => 'Suppress Edits';
+  String get notificationRuleSuppressEdits => 'Tahrirlarni bostirish';
 
   @override
   String get notificationRuleSuppressEditsDescription =>
-      'Suppresses notifications for edited messages.';
+      'Tahrirlangan xabarlar uchun bildirishnomalarni o‘chiradi.';
 
   @override
-  String get notificationRuleCall => 'Call';
+  String get notificationRuleCall => 'Chaqiruv';
 
   @override
   String get notificationRuleCallDescription =>
-      'Notifies the user about calls.';
+      'Chaqiruvlar haqida foydalanuvchiga xabar beradi.';
 
   @override
   String get notificationRuleEncryptedRoomOneToOne =>
-      'Encrypted Room One-to-One';
+      'Shifrlangan birga-bir guruh';
 
   @override
   String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Notifies the user about messages in encrypted one-to-one rooms.';
+      'Shifrlangan birga-bir guruhlardagi xabarlar haqida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleRoomOneToOne => 'Room One-to-One';
+  String get notificationRuleRoomOneToOne => 'Birga-bir guruh';
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Notifies the user about messages in one-to-one rooms.';
+      'Birga-bir guruhlardagidagi xabarlar haqida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleMessage => 'Message';
+  String get notificationRuleMessage => 'Xabar';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Notifies the user about general messages.';
+      'Foydalanuvchiga umumiy xabarlar haqida xabar beradi.';
 
   @override
-  String get notificationRuleEncrypted => 'Encrypted';
+  String get notificationRuleEncrypted => 'Shifrlangan';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Notifies the user about messages in encrypted rooms.';
+      'Shifrlangan guruhlardagi xabarlar haqida foydalanuvchiga xabar beradi.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
   String get notificationRuleJitsiDescription =>
-      'Notifies the user about Jitsi widget events.';
+      'Jitsi vidjet hodisalari haqida foydalanuvchiga xabar beradi.';
 
   @override
-  String get notificationRuleServerAcl => 'Suppress Server ACL Events';
+  String get notificationRuleServerAcl => 'Server ACL hodisalarini bostirish';
 
   @override
   String get notificationRuleServerAclDescription =>
-      'Suppresses notifications for Server ACL events.';
+      'Server ACL hodisalari uchun bildirishnomalarni o‘chiradi.';
 
   @override
   String unknownPushRule(String rule) {
-    return 'Unknown push rule \'$rule\'';
+    return 'Noma’lum push qoidasi \'$rule\'';
   }
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - Voice message from $sender';
+    return '️ 🎙️$duration - ${sender}dan ovozli xabar';
   }
 
   @override
   String get deletePushRuleCanNotBeUndone =>
-      'If you delete this notification setting, this can not be undone.';
+      'Agar ushbu bildirishnoma sozlamasini o‘chirib tashlasangiz, buni bekor qilib bo‘lmaydi.';
 
   @override
-  String get more => 'More';
+  String get more => 'Yana';
 
   @override
-  String get shareKeysWith => 'Share keys with...';
+  String get shareKeysWith => 'Kalitlarni ulashish...';
 
   @override
   String get shareKeysWithDescription =>
-      'Which devices should be trusted so that they can read along your messages in encrypted chats?';
+      'Shifrlangan suhbatlarda xabarlaringizni oʻqishlari uchun qaysi qurilmalarga ishonish kerak?';
 
   @override
-  String get allDevices => 'All devices';
+  String get allDevices => 'Barcha qurilmalar';
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
-      'Cross verified devices if enabled';
+      'Agar yoqilgan bo‘lsa, tasdiqlangan qurilmalarni kesib o‘tish';
 
   @override
-  String get crossVerifiedDevices => 'Cross verified devices';
+  String get crossVerifiedDevices => 'O‘zaro tekshirilgan qurilmalar';
 
   @override
-  String get verifiedDevicesOnly => 'Verified devices only';
+  String get verifiedDevicesOnly => 'Faqat tasdiqlangan qurilmalar';
 
   @override
-  String get takeAPhoto => 'Take a photo';
+  String get takeAPhoto => 'Suratga olish';
 
   @override
-  String get recordAVideo => 'Record a video';
+  String get recordAVideo => 'Video yozib olish';
 
   @override
-  String get optionalMessage => '(Optional) message...';
+  String get optionalMessage => '(Ixtiyoriy) xabar...';
 
   @override
-  String get notSupportedOnThisDevice => 'Not supported on this device';
+  String get notSupportedOnThisDevice => 'Bu qurilmada ishlamaydi';
 
   @override
-  String get enterNewChat => 'Enter new chat';
+  String get enterNewChat => 'Yangi suhbatga kirish';
 
   @override
-  String get approve => 'Approve';
+  String get approve => 'Tasdiqlash';
 
   @override
-  String get youHaveKnocked => 'You have knocked';
+  String get youHaveKnocked => 'Siz taqillatdingiz';
 
   @override
   String get pleaseWaitUntilInvited =>
-      'Please wait now, until someone from the room invites you.';
+      'Iltimos, hozir kutib turing, xonadan kimdir sizni taklif qilguncha.';
 
   @override
-  String get commandHint_logout => 'Logout your current device';
+  String get commandHint_logout => 'Joriy qurilmadan chiqish';
 
   @override
-  String get commandHint_logoutall => 'Logout all active devices';
+  String get commandHint_logoutall => 'Barcha faol qurilmalardan chiqish';
 
   @override
-  String get displayNavigationRail => 'Show navigation rail on mobile';
+  String get displayNavigationRail =>
+      'Mobilda navigatsiya temir yo‘lini ko‘rsatish';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Maxsus reaksiya';
 
   @override
-  String get moreEvents => 'More events';
+  String get moreEvents => 'Boshqa hodisalar';
 
   @override
-  String get declineInvitation => 'Decline invitation';
+  String get declineInvitation => 'Taklifni rad etish';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'Hozircha xabarlar yo‘q';
 
   @override
   String get longPressToRecordVoiceMessage =>
-      'Long press to record voice message.';
+      'Ovozli xabarni yozib olish uchun uzoq bosing.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Pauza';
 
   @override
-  String get resume => 'Resume';
+  String get resume => 'Davom etish';
 
   @override
-  String get newSubSpace => 'New sub space';
+  String get newSubSpace => 'Yangi quyi maydon';
 
   @override
-  String get moveToDifferentSpace => 'Move to different space';
+  String get moveToDifferentSpace => 'Boshqa maydonga o‘tish';
 
   @override
-  String get moveUp => 'Move up';
+  String get moveUp => 'Yuqoriga surish';
 
   @override
-  String get moveDown => 'Move down';
+  String get moveDown => 'Pastga surish';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'Suhbat maydondan olib tashlanadi, lekin hali ham suhbatlarlar ro‘yxatida chiqadi.';
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats suhbatlar';
   }
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return '$spaces maydoni a’zosi';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return '$spaces maydoni a’zosi eshikni taqillatishi mumkin';
   }
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Xayriya qilmoq';
 
   @override
   String startedAPoll(String username) {
-    return '$username started a poll.';
+    return '$username so‘rovnoma boshladi.';
   }
 
   @override
-  String get poll => 'Poll';
+  String get poll => 'So‘rov';
 
   @override
-  String get startPoll => 'Start poll';
+  String get startPoll => 'So‘rovni boshlash';
 
   @override
-  String get endPoll => 'End poll';
+  String get endPoll => 'So‘rovnomani yakunlash';
 
   @override
-  String get answersVisible => 'Answers visible';
+  String get answersVisible => 'Javoblar ko‘rinadi';
 
   @override
-  String get answersHidden => 'Answers hidden';
+  String get answersHidden => 'Javoblar berkitildi';
 
   @override
-  String get pollQuestion => 'Poll question';
+  String get pollQuestion => 'So‘rovnoma savoli';
 
   @override
-  String get answerOption => 'Answer option';
+  String get answerOption => 'Javob varianti';
 
   @override
-  String get addAnswerOption => 'Add answer option';
+  String get addAnswerOption => 'Javob variantini kiritish';
 
   @override
-  String get allowMultipleAnswers => 'Allow multiple answers';
+  String get allowMultipleAnswers => 'Bir nechta javobga ruxsat berish';
 
   @override
-  String get pollHasBeenEnded => 'Poll has been ended';
+  String get pollHasBeenEnded => 'So‘rovnoma yakunlandi';
 
   @override
   String countVotes(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count votes',
-      one: 'One vote',
+      other: '$count ta ovoz',
+      one: 'Bir ovoz',
     );
     return '$_temp0';
   }
 
   @override
   String get answersWillBeVisibleWhenPollHasEnded =>
-      'Answers will be visible when poll has ended';
+      'So‘rovnoma tugaganida javoblar chiqadi';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'Sahifada javob berish';
 
   @override
   String countReplies(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count replies',
-      one: 'One reply',
+      other: '$count ta javob',
+      one: 'Bitta javob',
     );
     return '$_temp0';
   }
 
   @override
-  String get thread => 'Thread';
+  String get thread => 'Sahifa';
 
   @override
-  String get backToMainChat => 'Back to main chat';
+  String get backToMainChat => 'Asosiy suhbatga qaytish';
+
+  @override
+  String get saveChanges => 'O‘zgarishlarni saqlash';
+
+  @override
+  String get createSticker => 'Stiker yoki emoji yaratish';
+
+  @override
+  String get useAsSticker => 'Stiker sifatida ishlatish';
+
+  @override
+  String get useAsEmoji => 'Emoji sifatida ishlatish';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Stiker paketi nomi allaqachon mavjud';
+
+  @override
+  String get newStickerPack => 'Yangi stikerlar paketi';
+
+  @override
+  String get stickerPackName => 'Stiker paketi nomi';
+
+  @override
+  String get attribution => 'Atributsiya';
+
+  @override
+  String get skipChatBackup => 'Chat zaxirasini tashlab ketish';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Ishonchingiz komilmi? Chat zaxirasini yoqmasdan qurilmangizni almashtirsangiz, xabarlaringizga kira olmay qolishingiz mumkin.';
+
+  @override
+  String get loadingMessages => 'Xabarlar yuklanmoqda';
+
+  @override
+  String get setupChatBackup => 'Chat zaxirasini sozlash';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

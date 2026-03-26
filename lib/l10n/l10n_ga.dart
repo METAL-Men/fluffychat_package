@@ -174,8 +174,11 @@ class L10nGa extends L10n {
       'Seinn greamáin agus straoiseog beoite go huathoibríoch';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Tá na cineálacha logála isteach seo ar fáil faoin freastalaí baile:\n$serverVersions\nAch níl ach na ceann seo ar fáil faoin aip seo:\n$supportedVersions';
   }
 
@@ -191,11 +194,12 @@ class L10nGa extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Tá na leaganacha sonraíochta seo ar fáil faoin freastalaí baile:\n$serverVersions\nAch níl ach na ceann seo ar fáil faoin aip seo $supportedVersions';
   }
 
@@ -260,8 +264,18 @@ class L10nGa extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return 'D\'athraigh $username cur síos an chomhrá';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return 'D\'athraigh $username an cur síos comhrá go: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return 'D\'athraigh $username ainm an chomhrá';
   }
 
   @override
@@ -353,7 +367,7 @@ class L10nGa extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Tá do sheanteachtaireachtaí slán le eochair athshlánaithe. Le do thoil déan cinnte nach gcaillfidh tú é.';
+      'Tá do theachtaireachtaí slán le heochair aisghabhála. Déan cinnte nach gcaillfidh tú í.';
 
   @override
   String get chatDetails => 'Sonraí comhrá';
@@ -2005,11 +2019,6 @@ class L10nGa extends L10n {
       'Bain triail eile as níos déanaí nó roghnaigh freastalaí eile.';
 
   @override
-  String signInWith(String provider) {
-    return 'Sínigh isteach le $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Níorbh fhéidir an t-úsáideoir a aimsiú ar an bhfreastalaí. B\'fhéidir go bhfuil fadhb nasctha ann nó nach bhfuil an t-úsáideoir ann.';
 
@@ -2311,7 +2320,7 @@ class L10nGa extends L10n {
       'Ní thacaítear le criptiú bunachar sonraí ar an ardán seo';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Faoi láthair tá bac curtha ar úsáideoirí $count.';
   }
 
@@ -2889,4 +2898,79 @@ class L10nGa extends L10n {
 
   @override
   String get backToMainChat => 'Ar ais chuig an bpríomhchomhrá';
+
+  @override
+  String get saveChanges => 'Sábháil athruithe';
+
+  @override
+  String get createSticker => 'Cruthaigh greamán nó emoji';
+
+  @override
+  String get useAsSticker => 'Úsáid mar ghreamán';
+
+  @override
+  String get useAsEmoji => 'Úsáid mar emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Tá ainm an phacáiste greamán ann cheana féin';
+
+  @override
+  String get newStickerPack => 'Pacáiste greamán nua';
+
+  @override
+  String get stickerPackName => 'Ainm an phacáiste greamán';
+
+  @override
+  String get attribution => 'Atribution';
+
+  @override
+  String get skipChatBackup => 'Seachain cúltaca comhrá';
+
+  @override
+  String get skipChatBackupWarning =>
+      'An bhfuil tú cinnte? Mura gcumasaíonn tú an cúltaca comhrá, d’fhéadfá rochtain ar do theachtaireachtaí a chailleadh má athraíonn tú do ghléas.';
+
+  @override
+  String get loadingMessages => 'Ag lódáil teachtaireachtaí';
+
+  @override
+  String get setupChatBackup => 'Socraigh cúltaca comhrá';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

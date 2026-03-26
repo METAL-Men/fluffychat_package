@@ -172,8 +172,11 @@ class L10nFr extends L10n {
       'Lire automatiquement les autocollants et les émojis animés';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Le serveur d\'accueil prend en charge les types de connexion :\n$serverVersions\nMais cette application ne prend en charge que :\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nFr extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Le serveur d\'accueil prend en charge les versions des spécifications :\n$serverVersions\nMais cette application ne prend en charge que $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nFr extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username a changé la description de la discussion en : \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -750,11 +764,11 @@ class L10nFr extends L10n {
   String get hideRedactedEvents => 'Cacher les évènements supprimés';
 
   @override
-  String get hideRedactedMessages => 'Cacher les messages édités';
+  String get hideRedactedMessages => 'Cacher les messages supprimés';
 
   @override
   String get hideRedactedMessagesBody =>
-      'Si quelqu\'un modifie un message, celui-ci ne sera plus visible dans la discussion.';
+      'Si quelqu\'un supprime un message, celui-ci ne sera plus visible dans la discussion.';
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
@@ -821,11 +835,11 @@ class L10nFr extends L10n {
 
   @override
   String get redactMessageDescription =>
-      'Le message sera modifié pour tous les participants de cette conversation. Il n\'est pas possible de revenir en arrière.';
+      'Le message sera supprimé pour tous les participants de cette conversation. Il n\'est pas possible de revenir en arrière.';
 
   @override
   String get optionalRedactReason =>
-      '(Facultatif) Raison de la modification de ce message...';
+      '(Facultatif) Raison de la suppression de ce message...';
 
   @override
   String invitedUser(String username, String targetName) {
@@ -1196,7 +1210,7 @@ class L10nFr extends L10n {
 
   @override
   String redactedBy(String username) {
-    return 'Modifié par $username';
+    return 'Supprimé par $username';
   }
 
   @override
@@ -1204,7 +1218,7 @@ class L10nFr extends L10n {
 
   @override
   String redactedByBecause(String username, String reason) {
-    return 'Modifié par $username car : \"$reason\"';
+    return 'Supprimé par $username car : \"$reason\"';
   }
 
   @override
@@ -2013,11 +2027,6 @@ class L10nFr extends L10n {
       'Veuillez réessayer plus tard ou choisir un autre serveur.';
 
   @override
-  String signInWith(String provider) {
-    return 'Se connecter avec $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Cet utilisateur/trice n\'a pu être trouvé sur le serveur. Peut-être est-ce un problème de connexion ou l\'utilisateur/trice n\'existe pas.';
 
@@ -2325,7 +2334,7 @@ class L10nFr extends L10n {
       'Le chiffrement de la base de données n\'est pas supporté sur cette plateforme';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Actuellement, il y a $count utilisateurs/trices bloqués.';
   }
 
@@ -2901,4 +2910,78 @@ class L10nFr extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }
