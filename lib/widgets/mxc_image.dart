@@ -75,24 +75,28 @@ class _MxcImageState extends State<MxcImage> {
     final event = widget.event;
 
     if (uri != null) {
-      final devicePixelRatio = MediaQuery.devicePixelRatioOf(context);
-      final width = widget.width;
-      final realWidth = width == null ? null : width * devicePixelRatio;
-      final height = widget.height;
-      final realHeight = height == null ? null : height * devicePixelRatio;
+      try {
+        final devicePixelRatio = MediaQuery.devicePixelRatioOf(context);
+        final width = widget.width;
+        final realWidth = width == null ? null : width * devicePixelRatio;
+        final height = widget.height;
+        final realHeight = height == null ? null : height * devicePixelRatio;
 
-      final remoteData = await client.downloadMxcCached(
-        uri,
-        width: realWidth,
-        height: realHeight,
-        thumbnailMethod: widget.thumbnailMethod,
-        isThumbnail: widget.isThumbnail,
-        animated: widget.animated,
-      );
-      if (!mounted) return;
-      setState(() {
-        _imageData = remoteData;
-      });
+        final remoteData = await client.downloadMxcCached(
+          uri,
+          width: realWidth,
+          height: realHeight,
+          thumbnailMethod: widget.thumbnailMethod,
+          isThumbnail: widget.isThumbnail,
+          animated: widget.animated,
+        );
+        if (!mounted) return;
+        setState(() {
+          _imageData = remoteData;
+        });
+      } catch (e) {
+        Logs().w('MxcImage: Failed to download mxc image $uri: $e');
+      }
     }
 
     if (event != null) {
