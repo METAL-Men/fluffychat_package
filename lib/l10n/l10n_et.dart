@@ -172,8 +172,11 @@ class L10nEt extends L10n {
       'Esita liikuvad kleepse ja emotikone automaatselt';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'See koduserver toetab Matrixi võrku sisselogimiseks:\n$serverVersions\nAga see rakendus toetab vaid järgmisi võimalusi:\n$supportedVersions';
   }
 
@@ -188,11 +191,12 @@ class L10nEt extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'See koduserver toetab Matrixi spetsifikatsioonist järgmisi versioone:\n$serverVersions\nAga see rakendus toetab vaid järgmisi versioone: $supportedVersions';
   }
 
@@ -257,8 +261,18 @@ class L10nEt extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username muutis vestluse kirjeldust';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username muutis vestluse uueks kirjelduseks \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username muutis vestluse nime';
   }
 
   @override
@@ -1592,7 +1606,7 @@ class L10nEt extends L10n {
       'Nende e-posti aadresside abil saad taastada oma salasõna.';
 
   @override
-  String get writeAMessage => 'Kirjuta üks sõnum…';
+  String get writeAMessage => 'Koosta sõnum…';
 
   @override
   String get yes => 'Jah';
@@ -1993,11 +2007,6 @@ class L10nEt extends L10n {
       'Palun proovi hiljem uuesti või muuda serveri nime.';
 
   @override
-  String signInWith(String provider) {
-    return 'Logi sisse kasutades teenusepakkujat $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Sellist kasutajat serveris ei leidu. Tegemist võib olla kas võrguühenduse probleemiga või sellist kasutajat tõesti pole olemas.';
 
@@ -2299,7 +2308,7 @@ class L10nEt extends L10n {
       'Andmebaasi krüptimine pole sellel platvormil toetatud';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Hetkel on $count blokeeritud kasutajat.';
   }
 
@@ -2878,4 +2887,79 @@ class L10nEt extends L10n {
 
   @override
   String get backToMainChat => 'Tagasi põhivestlusesse';
+
+  @override
+  String get saveChanges => 'Salvesta muudatused';
+
+  @override
+  String get createSticker => 'Loo kleeps või emoji';
+
+  @override
+  String get useAsSticker => 'Kasuta kleepsuna';
+
+  @override
+  String get useAsEmoji => 'Kasuta emojina';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Selline kleepsupaki nimi on juba olemas';
+
+  @override
+  String get newStickerPack => 'Uus kleepsupakk';
+
+  @override
+  String get stickerPackName => 'Kleepsupaki nimi';
+
+  @override
+  String get attribution => 'Autoriõigused';
+
+  @override
+  String get skipChatBackup => 'Jäta vestluse varundamine vahele';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Kas oled kindel? Kui sa pole lülitanud sisse vestluste krüptovõtmete varundust, siis võid oma seadme vahetamisel kaotada ligipääsu oma senistele sõnumitele.';
+
+  @override
+  String get loadingMessages => 'Laadin sõnumeid';
+
+  @override
+  String get setupChatBackup => 'Võta kasutusele vestluste varundus';
+
+  @override
+  String get noMoreResultsFound => 'Rohkem tulemusi ei leidu';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Otsing vestlusest kuni $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

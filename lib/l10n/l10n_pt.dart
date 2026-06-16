@@ -172,8 +172,11 @@ class L10nPt extends L10n {
       'Automatically play animated stickers and emotes';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'The homeserver supports the login types:\n$serverVersions\nBut this app supports only:\n$supportedVersions';
   }
 
@@ -188,11 +191,12 @@ class L10nPt extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'The homeserver supports the Spec versions:\n$serverVersions\nBut this app supports only $supportedVersions';
   }
 
@@ -257,8 +261,18 @@ class L10nPt extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username changed the chat description to: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nPt extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.';
+      'Your messages are secured with a recovery key. Please make sure you don\'t lose it.';
 
   @override
   String get chatDetails => 'Chat details';
@@ -1979,11 +1993,6 @@ class L10nPt extends L10n {
       'Please try again later or choose a different server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Sign in with $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
 
@@ -2282,7 +2291,7 @@ class L10nPt extends L10n {
       'Database encryption is not supported on this platform';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
 
@@ -2855,6 +2864,80 @@ class L10nPt extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -2872,11 +2955,11 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get setCustomPermissionLevel =>
-      'Definir nível personalizado de permissão';
+      'Configurar nível personalizado de permissão';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Por favor, selecione um cargo predefinido abaixo ou digite um nível de permissão personalizado entre 0 e 100.';
+      'Selecione um cargo pré-definido abaixo ou digite um nível de permissão personalizado entre 0 e 100.';
 
   @override
   String get ignoreUser => 'Ignorar usuário';
@@ -2930,8 +3013,7 @@ class L10nPtBr extends L10nPt {
   String get addEmail => 'Adicionar e-mail';
 
   @override
-  String get confirmMatrixId =>
-      'Por favor, confirme seu ID Matrix para apagar sua conta.';
+  String get confirmMatrixId => 'Confirme seu ID Matrix para apagar sua conta.';
 
   @override
   String supposedMxid(String mxid) {
@@ -3014,7 +3096,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get askSSSSSign =>
-      'Para poder validar a outra pessoa, por favor, digite sua frase secreta ou chave de recuperação.';
+      'Para poder validar a outra pessoa, digite sua frase secreta ou chave de recuperação.';
 
   @override
   String askVerificationRequest(String username) {
@@ -3026,8 +3108,11 @@ class L10nPtBr extends L10nPt {
       'Reproduzir automaticamente figurinhas animadas e emojis';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor suporta os tipos de entrada/login:\n$serverVersions\nMas este app suporta apenas:\n$supportedVersions';
   }
 
@@ -3043,11 +3128,12 @@ class L10nPtBr extends L10nPt {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor suporta as versões de especificação:\n$serverVersions\nMas este app suporta apenas $supportedVersions';
   }
 
@@ -3112,8 +3198,18 @@ class L10nPtBr extends L10nPt {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username alterou a descrição da conversa';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username alterou a descrição da conversa para: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username alterou o nome da conversa';
   }
 
   @override
@@ -3168,7 +3264,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String changedTheRoomAliases(String username) {
-    return '$username alterou os cognomes da sala';
+    return '$username alterou os apelidos da sala';
   }
 
   @override
@@ -3206,7 +3302,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get chatBackupDescription =>
-      'Suas mensagens antigas são protegidas com sua chave de recuperação. Por favor, evite perdê-la.';
+      'Suas mensagens são protegidas com sua chave de recuperação. Evite perdê-la.';
 
   @override
   String get chatDetails => 'Detalhes da conversa';
@@ -3272,11 +3368,11 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get commandHint_myroomavatar =>
-      'Definir sua imagem para esta sala (via mxc-uri)';
+      'Configurar sua imagem para esta sala (via mxc-uri)';
 
   @override
   String get commandHint_myroomnick =>
-      'Definir seu nome de exibição para esta sala';
+      'Configurar seu nome de exibição para esta sala';
 
   @override
   String get commandHint_op =>
@@ -3303,10 +3399,10 @@ class L10nPtBr extends L10nPt {
   }
 
   @override
-  String get compareEmojiMatch => 'Por favor compare os emojis';
+  String get compareEmojiMatch => 'Compare os emojis';
 
   @override
-  String get compareNumbersMatch => 'Por favor compare os números';
+  String get compareNumbersMatch => 'Compare os números';
 
   @override
   String get configureChat => 'Configurar conversa';
@@ -3444,7 +3540,7 @@ class L10nPtBr extends L10nPt {
   String get editDisplayname => 'Editar nome de exibição';
 
   @override
-  String get editRoomAliases => 'Editar cognomes da sala';
+  String get editRoomAliases => 'Editar apelidos da sala';
 
   @override
   String get editRoomAvatar => 'Editar o avatar da sala';
@@ -3767,7 +3863,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get locationDisabledNotice =>
-      'Os serviços de localização estão desativados. Por favor, ative-os para compartilhar sua localização.';
+      'Os serviços de localização estão desativados. Ative-os para compartilhar sua localização.';
 
   @override
   String get locationPermissionDeniedNotice =>
@@ -3804,7 +3900,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get needPantalaimonWarning =>
-      'Por favor, observe que, por enquanto, você precisa do Pantalaimon para usar criptografia de ponta-a-ponta.';
+      'Esteja ciente que você precisa do Pantalaimon para usar a criptografia de ponta a ponta.';
 
   @override
   String get newChat => 'Nova conversa';
@@ -3992,35 +4088,33 @@ class L10nPtBr extends L10nPt {
   }
 
   @override
-  String get pleaseChoose => 'Por favor, selecione';
+  String get pleaseChoose => 'Selecione';
 
   @override
-  String get pleaseChooseAPasscode => 'Por favor, selecione um código';
+  String get pleaseChooseAPasscode => 'Escolha um código';
 
   @override
-  String get pleaseClickOnLink =>
-      'Por favor, clique no link do e-mail para prosseguir.';
+  String get pleaseClickOnLink => 'Clique no link do e-mail para prosseguir.';
 
   @override
   String get pleaseEnter4Digits =>
-      'Por favor, digite 4 dígitos ou deixe em branco para desativar o bloqueio do app.';
+      'Digite 4 dígitos ou deixe em branco para desativar o bloqueio do app.';
 
   @override
-  String get pleaseEnterRecoveryKey =>
-      'Por favor, insira sua chave de recuperação:';
+  String get pleaseEnterRecoveryKey => 'Digite sua chave de recuperação:';
 
   @override
-  String get pleaseEnterYourPassword => 'Por favor, digite sua senha';
+  String get pleaseEnterYourPassword => 'Digite sua senha';
 
   @override
-  String get pleaseEnterYourPin => 'Por favor, digite seu PIN';
+  String get pleaseEnterYourPin => 'Digite seu PIN';
 
   @override
-  String get pleaseEnterYourUsername => 'Por favor, digite seu nome de usuário';
+  String get pleaseEnterYourUsername => 'Digite seu nome de usuário';
 
   @override
   String get pleaseFollowInstructionsOnWeb =>
-      'Por favor, siga as instruções no site e toque em avançar.';
+      'Siga as instruções no site e toque em avançar.';
 
   @override
   String get privacy => 'Privacidade';
@@ -4197,19 +4291,19 @@ class L10nPtBr extends L10nPt {
   String get separateChatTypes => 'Separar conversas diretas e grupos';
 
   @override
-  String get setAsCanonicalAlias => 'Definir como cognome principal';
+  String get setAsCanonicalAlias => 'Configurar como apelido principal';
 
   @override
   String get setCustomEmotes => 'Implantar emojis personalizados';
 
   @override
-  String get setChatDescription => 'Definir descrição da conversa';
+  String get setChatDescription => 'Configurar descrição da conversa';
 
   @override
   String get setInvitationLink => 'Enviar link de convite';
 
   @override
-  String get setPermissionsLevel => 'Definir níveis de permissão';
+  String get setPermissionsLevel => 'Configurar níveis de permissão';
 
   @override
   String get setStatus => 'Alterar estado';
@@ -4271,7 +4365,7 @@ class L10nPtBr extends L10nPt {
   String get submit => 'Enviar';
 
   @override
-  String get synchronizingPleaseWait => 'Sincronizando… Por favor, aguarde.';
+  String get synchronizingPleaseWait => 'Sincronizando… Aguarde.';
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
@@ -4495,7 +4589,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
-      'Para desbloquear as suas mensagens antigas, por favor, insira sua chave de recuperação gerada numa sessão prévia. Sua chave de recuperação NÃO é sua senha.';
+      'Para desbloquear as suas mensagens antigas, digite a sua chave de recuperação gerada numa sessão prévia. Sua chave de recuperação NÃO é sua senha.';
 
   @override
   String get publish => 'Publicar';
@@ -4543,11 +4637,11 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get unsupportedAndroidVersionLong =>
-      'Esta funcionalidade requer uma versão mais nova do Android. Por favor, verifique se há atualizações ou suporte ao LineageOS.';
+      'Esta funcionalidade requer uma versão mais nova do Android. Verifique se há atualizações ou suporte ao LineageOS.';
 
   @override
   String get videoCallsBetaWarning =>
-      'Por favor, observe que chamadas de vídeo estão atualmente em teste. Podem não funcionar como esperado ou sequer funcionar em algumas plataformas.';
+      'Observe que chamadas de vídeo estão atualmente em teste. Podem não funcionar como esperado ou sequer funcionar em algumas plataformas.';
 
   @override
   String get experimentalVideoCalls => 'Vídeo chamadas experimentais';
@@ -4560,7 +4654,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get indexedDbErrorLong =>
-      'Infelizmente, o armazenamento de mensagens não é ativado por padrão no modo privado.\nPor favor, visite\n- about:config\n- atribua \"true\" a \"dom.indexedDB.privateBrowsing.enabled\"\nSe não fizer isto, não será possível executar o FluffyChat.';
+      'Infelizmente, o armazenamento de mensagens não é ativado por padrão no modo privado.\nVisite\n- about:config\n- atribua \"true\" a \"dom.indexedDB.privateBrowsing.enabled\"\nSe não fizer isto, não será possível executar o FluffyChat.';
 
   @override
   String switchToAccount(String number) {
@@ -4595,7 +4689,7 @@ class L10nPtBr extends L10nPt {
   String get widgetUrlError => 'Isto não é uma URL válida.';
 
   @override
-  String get widgetNameError => 'Por favor, forneça um nome de exibição.';
+  String get widgetNameError => 'Forneça um nome de exibição.';
 
   @override
   String get errorAddingWidget => 'Erro ao adicionar o widget.';
@@ -4848,12 +4942,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Por favor, tente novamente mais tarde ou escolha um servidor diferente.';
-
-  @override
-  String signInWith(String provider) {
-    return 'Conectar com $provider';
-  }
+      'Tente novamente mais tarde ou escolha um servidor diferente.';
 
   @override
   String get profileNotFound =>
@@ -4883,7 +4972,7 @@ class L10nPtBr extends L10nPt {
   }
 
   @override
-  String get pleaseEnterANumber => 'Por favor, digite um número maior que 0';
+  String get pleaseEnterANumber => 'Digite um número maior que 0';
 
   @override
   String get archiveRoomDescription =>
@@ -4925,7 +5014,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String noUsersFoundWithQuery(String query) {
-    return 'Infelizmente, não foi encontrado usuário com \"$query\". Por favor, verifique se digitou corretamente.';
+    return 'Infelizmente, não foi encontrado usuário com \"$query\". Verifique se digitou corretamente.';
   }
 
   @override
@@ -4966,8 +5055,7 @@ class L10nPtBr extends L10nPt {
   String get databaseMigrationTitle => 'O banco de dados está otimizado';
 
   @override
-  String get databaseMigrationBody =>
-      'Por favor, aguarde. Isto pode demorar um pouco.';
+  String get databaseMigrationBody => 'Aguarde. Isto pode demorar um pouco.';
 
   @override
   String get leaveEmptyToClearStatus =>
@@ -4980,15 +5068,13 @@ class L10nPtBr extends L10nPt {
   String get searchForUsers => 'Pesquisar por @usuários...';
 
   @override
-  String get pleaseEnterYourCurrentPassword =>
-      'Por favor, digite sua senha atual';
+  String get pleaseEnterYourCurrentPassword => 'Digite sua senha atual';
 
   @override
   String get newPassword => 'Nova senha';
 
   @override
-  String get pleaseChooseAStrongPassword =>
-      'Por favor, escolha uma senha forte';
+  String get pleaseChooseAStrongPassword => 'Escolha uma senha forte';
 
   @override
   String get passwordsDoNotMatch => 'As senhas não correspondem';
@@ -5050,17 +5136,17 @@ class L10nPtBr extends L10nPt {
 
   @override
   String databaseBuildErrorBody(String url, String error) {
-    return 'Não foi possível construir o banco de dados SQLite. O app tentará utilizar o banco de dados legado por enquanto. Por favor, relate este erro aos desenvolvedores em $url. A mensagem de erro é: $error';
+    return 'Não foi possível construir o banco de dados SQLite. O app tentará utilizar o banco de dados legado por enquanto. Relate este erro aos desenvolvedores em $url. A mensagem de erro é: $error';
   }
 
   @override
   String sessionLostBody(String url, String error) {
-    return 'Sua sessão foi desconectada. Por favor, relate este ao desenvolvedor em $url. A mensagem de erro é: $error';
+    return 'Sua sessão foi desconectada. Relate este ao desenvolvedor em $url. A mensagem de erro é: $error';
   }
 
   @override
   String restoreSessionBody(String url, String error) {
-    return 'O app tentará agora restaurar sua sessão a partir do backup. Por favor, relate isto ao desenvolvedor em $url. A mensagem de erro é: $error';
+    return 'O app tentará agora restaurar sua sessão a partir do backup. Relate isto ao desenvolvedor em $url. A mensagem de erro é: $error';
   }
 
   @override
@@ -5159,7 +5245,7 @@ class L10nPtBr extends L10nPt {
       'A criptografia do banco de dados não é suportada nesta plataforma';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Nesse momento, há $count usuários bloqueados.';
   }
 
@@ -5219,7 +5305,7 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get chatPermissionsDescription =>
-      'Definir qual o nível de poder é necessário para certas ações nesta conversa. Os níveis de poder 0, 50, e 100 são normalmente para representar usuários, moderadores, e administradores, mas qualquer definição é possível.';
+      'Configurar qual o nível de poder é necessário para certas ações nesta conversa. Os níveis de poder 0, 50, e 100 são normalmente para representar usuários, moderadores, e administradores, mas qualquer configuração é possível.';
 
   @override
   String updateInstalled(String version) {
@@ -5296,7 +5382,7 @@ class L10nPtBr extends L10nPt {
   String get opacity => 'Opacidade:';
 
   @override
-  String get setWallpaper => 'Definir plano de fundo';
+  String get setWallpaper => 'Configurar plano de fundo';
 
   @override
   String get manageAccount => 'Gerenciar conta';
@@ -5339,7 +5425,7 @@ class L10nPtBr extends L10nPt {
   String get strikeThrough => 'Risco';
 
   @override
-  String get pleaseFillOut => 'Por favor preencha';
+  String get pleaseFillOut => 'Preencha';
 
   @override
   String get invalidUrl => 'URL inválida';
@@ -5622,6 +5708,161 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get declineInvitation => 'Rejeitar convite';
+
+  @override
+  String get noMessagesYet => 'Nenhuma mensagem ainda';
+
+  @override
+  String get longPressToRecordVoiceMessage =>
+      'Segure para gravar uma mensagem de voz.';
+
+  @override
+  String get pause => 'Pausar';
+
+  @override
+  String get resume => 'Retomar';
+
+  @override
+  String get newSubSpace => 'Novo sub espaço';
+
+  @override
+  String get moveToDifferentSpace => 'Mover para espaço diferente';
+
+  @override
+  String get moveUp => 'Mover para cima';
+
+  @override
+  String get moveDown => 'Mover para baixo';
+
+  @override
+  String get removeFromSpaceDescription =>
+      'A conversa será removida do espaço mas ainda aparecerá na sua lista de conversas.';
+
+  @override
+  String countChats(int chats) {
+    return '$chats conversas';
+  }
+
+  @override
+  String spaceMemberOf(String spaces) {
+    return 'Membro do espaço de $spaces';
+  }
+
+  @override
+  String spaceMemberOfCanKnock(String spaces) {
+    return 'Membro do espaço de $spaces pode bater na porta';
+  }
+
+  @override
+  String get donate => 'Doar';
+
+  @override
+  String startedAPoll(String username) {
+    return '$username iniciou uma enquete.';
+  }
+
+  @override
+  String get poll => 'Enquete';
+
+  @override
+  String get startPoll => 'Abrir enquete';
+
+  @override
+  String get endPoll => 'Fechar enquete';
+
+  @override
+  String get answersVisible => 'Respostas visíveis';
+
+  @override
+  String get answersHidden => 'Respostas ocultas';
+
+  @override
+  String get pollQuestion => 'Questão da enquete';
+
+  @override
+  String get answerOption => 'Opção de resposta';
+
+  @override
+  String get addAnswerOption => 'Adicionar opção de resposta';
+
+  @override
+  String get allowMultipleAnswers => 'Permitir várias respostas';
+
+  @override
+  String get pollHasBeenEnded => 'A enquete terminou';
+
+  @override
+  String countVotes(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count votos',
+      one: 'Um voto',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get answersWillBeVisibleWhenPollHasEnded =>
+      'As respostas ficarão visíveis quando a enquete terminar';
+
+  @override
+  String get replyInThread => 'Responder no tópico';
+
+  @override
+  String countReplies(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count respostas',
+      one: 'Uma resposta',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get thread => 'Tópico';
+
+  @override
+  String get backToMainChat => 'Voltar à conversa principal';
+
+  @override
+  String get saveChanges => 'Salvar alterações';
+
+  @override
+  String get createSticker => 'Criar figurinha ou emoji';
+
+  @override
+  String get useAsSticker => 'Usar como figurinha';
+
+  @override
+  String get useAsEmoji => 'Usar como emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'O nome do pacote de figurinhas já existe';
+
+  @override
+  String get newStickerPack => 'Novo pacote de figurinhas';
+
+  @override
+  String get stickerPackName => 'Nome do pacote de figurinhas';
+
+  @override
+  String get attribution => 'Créditos';
+
+  @override
+  String get skipChatBackup => 'Pular backup de conversas';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Tem certeza? Se não ativar o backup de conversas, você pode perder o acesso às suas mensagens se trocar de dispositivo.';
+
+  @override
+  String get loadingMessages => 'Carregando mensagens';
+
+  @override
+  String get setupChatBackup => 'Configurar backup de conversas';
 }
 
 /// The translations for Portuguese, as used in Portugal (`pt_PT`).
@@ -5708,8 +5949,11 @@ class L10nPtPt extends L10nPt {
       'Automaticamente reproduzir autocolantes e emotes animados';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor suporta os tipos de início de sessão:\n$serverVersions\nMas esta aplicação apenas suporta:\n$suportedVersions';
   }
 
@@ -5718,11 +5962,12 @@ class L10nPtPt extends L10nPt {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor suporta as versões Spec:\n$serverVersions\nMas esta aplicação apenas suporta $suportedVersions';
   }
 

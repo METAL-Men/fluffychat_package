@@ -171,8 +171,11 @@ class L10nGl extends L10n {
   String get autoplayImages => 'Reproducir automáticamente adhesivos e emotes';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor soporta as seguintes formas de conexión:\n$serverVersions\nPero esta app só soporta:\n$supportedVersions';
   }
 
@@ -188,11 +191,12 @@ class L10nGl extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'O servidor soporta as seguintes características:\n$serverVersions\nPero esta app só soporta $supportedVersions';
   }
 
@@ -206,7 +210,7 @@ class L10nGl extends L10n {
 
   @override
   String get noChatsFoundHere =>
-      'Sen charlas por aquí. Comeza unha nova conversa con alguén premendo no botón de abaixo. ⤵️';
+      'Aínda non hai conversas. Comeza a conversar con alguén premendo no botón de abaixo. ⤵️';
 
   @override
   String get joinedChats => 'Charlas nas que participas';
@@ -257,8 +261,18 @@ class L10nGl extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username cambiou a descrición da sala';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username mudou a descrición da conversa a: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username cambiou o nome da sala';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nGl extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'As mensaxes antigas están protexidas cunha chave de recuperación. Pon coidado e non a perdas.';
+      'As mensaxes están protexidas cunha clave de recuperación. Pon coidado e non a perdas.';
 
   @override
   String get chatDetails => 'Detalles da conversa';
@@ -1585,7 +1599,7 @@ class L10nGl extends L10n {
 
   @override
   String get wipeChatBackup =>
-      'Queres eliminar a copia de apoio da conversa e crear unha nova chave de recuperación?';
+      'Queres eliminar a copia de apoio e crear unha nova chave de recuperación?';
 
   @override
   String get withTheseAddressesRecoveryDescription =>
@@ -1991,11 +2005,6 @@ class L10nGl extends L10n {
       'Inténtao máis tarde ou elixe un servidor diferente.';
 
   @override
-  String signInWith(String provider) {
-    return 'Accede con $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Non se atopa a usuaria no servidor. Pode que haxa un problema coa conexión ou que a usuaria non exista.';
 
@@ -2294,7 +2303,7 @@ class L10nGl extends L10n {
       'Nesta plataforma non temos soporte para cifrar a base de datos';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Agora mesmo hai $count usuarias bloqueadas.';
   }
 
@@ -2870,4 +2879,79 @@ class L10nGl extends L10n {
 
   @override
   String get backToMainChat => 'Volver á conversa principal';
+
+  @override
+  String get saveChanges => 'Gardar cambios';
+
+  @override
+  String get createSticker => 'Crear adhesivo ou emoji';
+
+  @override
+  String get useAsSticker => 'Usar como adhesivo';
+
+  @override
+  String get useAsEmoji => 'Usar como emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Xa existe ese nome de paquete de adhesivos';
+
+  @override
+  String get newStickerPack => 'Novo paquete de adhesivos';
+
+  @override
+  String get stickerPackName => 'Nome do paquete de adhesivos';
+
+  @override
+  String get attribution => 'Atribución';
+
+  @override
+  String get skipChatBackup => 'Omitir copia da conversa';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Tes certeza? A non activar a copia de apoio da conversa poderías perder o acceso ás mensaxes se cambias de dispositivo.';
+
+  @override
+  String get loadingMessages => 'Cargando mensaxes';
+
+  @override
+  String get setupChatBackup => 'Configurar copia de apoio';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

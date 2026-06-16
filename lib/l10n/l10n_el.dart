@@ -172,8 +172,11 @@ class L10nEl extends L10n {
       'Αυτόματη αναπαραγωγή κινούμενων αυτοκόλλητων και emotes';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Ο οικιακός διακομιστής υποστηρίζει τους τύπους σύνδεσης:\n$serverVersions\nΑλλά αυτή η εφαρμογή υποστηρίζει μόνο:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nEl extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Ο οικιακός διακομιστής υποστηρίζει τις εκδόσεις Spec:\n$serverVersions\nΑλλά αυτή η εφαρμογή υποστηρίζει μόνο $supportedVersions';
   }
 
@@ -210,7 +214,7 @@ class L10nEl extends L10n {
       'Δεν υπάρχουν συνομιλίες ακόμα. Ξεκίνα μια νέα συνομιλία με κάποιον χρησιμοποιώντας το κουμπί παρακάτω. ⤵️';
 
   @override
-  String get joinedChats => 'Joined chats';
+  String get joinedChats => 'Συνδεδεμένες συνομιλίες';
 
   @override
   String get unread => 'Μη αναγνωσμένα';
@@ -258,8 +262,18 @@ class L10nEl extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username άλλαξε την περιγραφή συνομιλίας σε: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -309,7 +323,7 @@ class L10nEl extends L10n {
 
   @override
   String changedTheProfileAvatar(String username) {
-    return '$username changed their avatar';
+    return 'Ο χρήστης $username άλλαξε την εικόνα προφίλ του';
   }
 
   @override
@@ -323,19 +337,19 @@ class L10nEl extends L10n {
   }
 
   @override
-  String get changePassword => 'Change password';
+  String get changePassword => 'Αλλαγή κωδικού πρόσβασης';
 
   @override
   String get changeTheHomeserver => 'Change the homeserver';
 
   @override
-  String get changeTheme => 'Change your style';
+  String get changeTheme => 'Άλλαξε το στυλ σου';
 
   @override
   String get changeTheNameOfTheGroup => 'Change the name of the group';
 
   @override
-  String get changeYourAvatar => 'Change your avatar';
+  String get changeYourAvatar => 'Αλλαγή εικόνας προφιλ';
 
   @override
   String get channelCorruptedDecryptError =>
@@ -348,29 +362,30 @@ class L10nEl extends L10n {
   String get yourChatBackupHasBeenSetUp => 'Your chat backup has been set up.';
 
   @override
-  String get chatBackup => 'Chat backup';
+  String get chatBackup => 'Αντίγραφο ασφαλείας συνομιλίας';
 
   @override
   String get chatBackupDescription =>
-      'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.';
+      'Your messages are secured with a recovery key. Please make sure you don\'t lose it.';
 
   @override
-  String get chatDetails => 'Chat details';
+  String get chatDetails => 'Λεπτομέρειες συνομιλίας';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'Chat has been added to this space';
+  String get chatHasBeenAddedToThisSpace =>
+      'Η συνομιλία προστέθηκε στο δωμάτιο';
 
   @override
-  String get chats => 'Chats';
+  String get chats => 'Συνομιλίες';
 
   @override
-  String get chooseAStrongPassword => 'Choose a strong password';
+  String get chooseAStrongPassword => 'Εισάγετε ένα δυνατό κωδικό πρόσβασης';
 
   @override
   String get clearArchive => 'Clear archive';
 
   @override
-  String get close => 'Close';
+  String get close => 'Κλείσιμο';
 
   @override
   String get commandHint_markasdm =>
@@ -380,10 +395,10 @@ class L10nEl extends L10n {
   String get commandHint_markasgroup => 'Mark as group';
 
   @override
-  String get commandHint_ban => 'Ban the given user from this room';
+  String get commandHint_ban => 'Αποκλεισμός χρήστη από το δωμάτιο';
 
   @override
-  String get commandHint_clearcache => 'Clear cache';
+  String get commandHint_clearcache => 'Εκκαθάριση προσωρινής μνήμης';
 
   @override
   String get commandHint_create =>
@@ -400,7 +415,7 @@ class L10nEl extends L10n {
   String get commandHint_html => 'Send HTML-formatted text';
 
   @override
-  String get commandHint_invite => 'Invite the given user to this room';
+  String get commandHint_invite => 'Πρόσκληση αυτού του χρήστη στο δωμάτιο';
 
   @override
   String get commandHint_join => 'Join the given room';
@@ -1980,11 +1995,6 @@ class L10nEl extends L10n {
       'Please try again later or choose a different server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Sign in with $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
 
@@ -2283,7 +2293,7 @@ class L10nEl extends L10n {
       'Database encryption is not supported on this platform';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
 
@@ -2856,4 +2866,78 @@ class L10nEl extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

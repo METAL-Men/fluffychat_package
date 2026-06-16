@@ -15,7 +15,6 @@ import 'package:universal_html/html.dart' as html;
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/custom_http_client.dart';
-import 'package:fluffychat/utils/custom_image_resizer.dart';
 import 'package:fluffychat/utils/init_with_restore.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
 import 'matrix_sdk_extensions/flutter_matrix_dart_sdk_database/builder.dart';
@@ -39,22 +38,27 @@ abstract class ClientManager {
       clientNames.add(PlatformInfos.clientName);
       await store.setStringList(clientNamespace, clientNames.toList());
     }
-    final clients =
-        await Future.wait(clientNames.map((name) => createClient(name, store)));
+    final clients = await Future.wait(
+      clientNames.map((name) => createClient(name, store)),
+    );
     if (initialize) {
       await Future.wait(
         clients.map(
-          (client) => client.initWithRestore(
-            onMigration: () async {
-              final l10n = await lookupL10n(PlatformDispatcher.instance.locale);
-              sendInitNotification(
-                l10n.databaseMigrationTitle,
-                l10n.databaseMigrationBody,
-              );
-            },
-          ).catchError(
-            (e, s) => Logs().e('Unable to initialize client', e, s),
-          ),
+          (client) => client
+              .initWithRestore(
+                onMigration: () async {
+                  final l10n = await lookupL10n(
+                    PlatformDispatcher.instance.locale,
+                  );
+                  sendInitNotification(
+                    l10n.databaseMigrationTitle,
+                    l10n.databaseMigrationBody,
+                  );
+                },
+              )
+              .catchError(
+                (e, s) => Logs().e('Unable to initialize client', e, s),
+              ),
         ),
       );
     }
@@ -91,7 +95,10 @@ abstract class ClientManager {
   }
 
   static NativeImplementations get nativeImplementations => kIsWeb
-      ? const NativeImplementationsDummy()
+      ? NativeImplementationsWebWorker(
+          Uri.parse('native_executor.js'),
+          timeout: const Duration(minutes: 1),
+        )
       : NativeImplementationsIsolate(
           compute,
           vodozemacInit: () => vod.init(wasmPath: './assets/assets/vodozemac/'),
@@ -123,25 +130,23 @@ abstract class ClientManager {
         AuthenticationTypes.sso,
       },
       nativeImplementations: nativeImplementations,
-      customImageResizer:
-          PlatformInfos.isMobile || kIsWeb ? customImageResizer : null,
       defaultNetworkRequestTimeout: const Duration(minutes: 30),
       enableDehydratedDevices: true,
-      shareKeysWith: ShareKeysWith.values
-              .singleWhereOrNull((share) => share.name == shareKeysWith) ??
+      shareKeysWith:
+          ShareKeysWith.values.singleWhereOrNull(
+            (share) => share.name == shareKeysWith,
+          ) ??
           ShareKeysWith.all,
       convertLinebreaksInFormatting: false,
-      onSoftLogout:
-          enableSoftLogout ? (client) => client.refreshAccessToken() : null,
+      onSoftLogout: enableSoftLogout
+          ? (client) => client.refreshAccessToken()
+          : null,
     );
   }
 
   static void sendInitNotification(String title, String body) async {
     if (kIsWeb) {
-      html.Notification(
-        title,
-        body: body,
-      );
+      html.Notification(title, body: body);
       return;
     }
     if (Platform.isLinux) {
@@ -149,9 +154,7 @@ abstract class ClientManager {
         title,
         body: body,
         appName: AppSettings.applicationName.value,
-        hints: [
-          NotificationHint.soundName('message-new-instant'),
-        ],
+        hints: [NotificationHint.soundName('message-new-instant')],
       );
       return;
     }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:flutter_highlighter/flutter_highlighter.dart';
-import 'package:flutter_highlighter/themes/shades-of-purple.dart';
 import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -40,10 +38,9 @@ class ErrorReporter {
           height: 256,
           width: 256,
           child: SingleChildScrollView(
-            child: HighlightView(
+            child: Text(
               text,
-              language: 'sh',
-              theme: shadesOfPurpleTheme,
+              style: const TextStyle(fontSize: 14, fontFamily: 'RobotoMono'),
             ),
           ),
         ),
@@ -53,9 +50,7 @@ class ErrorReporter {
             child: Text(L10n.of(context).close),
           ),
           AdaptiveDialogAction(
-            onPressed: () => Clipboard.setData(
-              ClipboardData(text: text),
-            ),
+            onPressed: () => Clipboard.setData(ClipboardData(text: text)),
             child: Text(L10n.of(context).copy),
           ),
           AdaptiveDialogAction(

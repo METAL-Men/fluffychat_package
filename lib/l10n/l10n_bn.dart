@@ -9,16 +9,16 @@ class L10nBn extends L10n {
   L10nBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'false';
+  String get alwaysUse24HourFormat => 'না';
 
   @override
-  String get repeatPassword => 'Repeat password';
+  String get repeatPassword => 'পাসওয়ার্ড আবার লিখো';
 
   @override
-  String get notAnImage => 'Not an image file.';
+  String get notAnImage => 'ইমেজ ফাইল না।';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'কাস্টম অনুমতি লেভেল ঠিক করো';
 
   @override
   String get setPermissionsLevelDescription =>
@@ -91,10 +91,10 @@ class L10nBn extends L10n {
   String get addToSpace => 'Add to space';
 
   @override
-  String get admin => 'Admin';
+  String get admin => 'অ্যাডমিস';
 
   @override
-  String get alias => 'alias';
+  String get alias => 'অ্যালিয়াস';
 
   @override
   String get all => 'All';
@@ -146,7 +146,7 @@ class L10nBn extends L10n {
       'Lock the app when not using with a pin code';
 
   @override
-  String get archive => 'Archive';
+  String get archive => 'আর্কাইভ';
 
   @override
   String get areGuestsAllowedToJoin => 'Are guest users allowed to join';
@@ -171,8 +171,11 @@ class L10nBn extends L10n {
       'Automatically play animated stickers and emotes';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'The homeserver supports the login types:\n$serverVersions\nBut this app supports only:\n$supportedVersions';
   }
 
@@ -187,11 +190,12 @@ class L10nBn extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'The homeserver supports the Spec versions:\n$serverVersions\nBut this app supports only $supportedVersions';
   }
 
@@ -223,7 +227,7 @@ class L10nBn extends L10n {
   String get banFromChat => 'Ban from chat';
 
   @override
-  String get banned => 'Banned';
+  String get banned => 'ব্যানড';
 
   @override
   String bannedUser(String username, String targetName) {
@@ -240,7 +244,7 @@ class L10nBn extends L10n {
   String get botMessages => 'Bot messages';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'বাতিল';
 
   @override
   String cantOpenUri(String uri) {
@@ -256,8 +260,18 @@ class L10nBn extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username changed the chat description to: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -340,7 +354,7 @@ class L10nBn extends L10n {
       'The encryption has been corrupted';
 
   @override
-  String get chat => 'Chat';
+  String get chat => 'চ্যাট';
 
   @override
   String get yourChatBackupHasBeenSetUp => 'Your chat backup has been set up.';
@@ -350,7 +364,7 @@ class L10nBn extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.';
+      'Your messages are secured with a recovery key. Please make sure you don\'t lose it.';
 
   @override
   String get chatDetails => 'Chat details';
@@ -368,7 +382,7 @@ class L10nBn extends L10n {
   String get clearArchive => 'Clear archive';
 
   @override
-  String get close => 'Close';
+  String get close => 'বন্ধ';
 
   @override
   String get commandHint_markasdm =>
@@ -453,10 +467,10 @@ class L10nBn extends L10n {
   String get configureChat => 'Configure chat';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'নিশ্চিত করো';
 
   @override
-  String get connect => 'Connect';
+  String get connect => 'কানেক্ট';
 
   @override
   String get contactHasBeenInvitedToTheGroup =>
@@ -476,7 +490,7 @@ class L10nBn extends L10n {
   String get copiedToClipboard => 'Copied to clipboard';
 
   @override
-  String get copy => 'Copy';
+  String get copy => 'অনুলিপি';
 
   @override
   String get copyToClipboard => 'Copy to clipboard';
@@ -500,7 +514,7 @@ class L10nBn extends L10n {
   }
 
   @override
-  String get create => 'Create';
+  String get create => 'তৈরি';
 
   @override
   String createdTheChat(String username) {
@@ -542,7 +556,7 @@ class L10nBn extends L10n {
   String get defaultPermissionLevel => 'Default permission level for new users';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'অপসারণ';
 
   @override
   String get deleteAccount => 'Delete account';
@@ -551,13 +565,13 @@ class L10nBn extends L10n {
   String get deleteMessage => 'Delete message';
 
   @override
-  String get device => 'Device';
+  String get device => 'ডিভাইস';
 
   @override
   String get deviceId => 'Device ID';
 
   @override
-  String get devices => 'Devices';
+  String get devices => 'ডিভাইস';
 
   @override
   String get directChats => 'Direct Chats';
@@ -572,7 +586,7 @@ class L10nBn extends L10n {
   String get downloadFile => 'Download file';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'সম্পাদন';
 
   @override
   String get editBlockedServers => 'Edit blocked servers';
@@ -646,10 +660,10 @@ class L10nBn extends L10n {
       'You won\'t be able to disable the encryption anymore. Are you sure?';
 
   @override
-  String get encrypted => 'Encrypted';
+  String get encrypted => 'এনক্রিপ্টকৃত';
 
   @override
-  String get encryption => 'Encryption';
+  String get encryption => 'এনক্রিপশন';
 
   @override
   String get encryptionNotEnabled => 'Encryption is not enabled';
@@ -683,13 +697,13 @@ class L10nBn extends L10n {
   String get fileName => 'File name';
 
   @override
-  String get fluffychat => 'FluffyChat';
+  String get fluffychat => 'ফ্লাফিচ্যাট';
 
   @override
   String get fontSize => 'Font size';
 
   @override
-  String get forward => 'Forward';
+  String get forward => 'ফরওয়ার্ড';
 
   @override
   String get fromJoining => 'From joining';
@@ -701,7 +715,7 @@ class L10nBn extends L10n {
   String get goToTheNewRoom => 'Go to the new room';
 
   @override
-  String get group => 'Group';
+  String get group => 'গ্রুপ';
 
   @override
   String get chatDescription => 'Chat description';
@@ -732,7 +746,7 @@ class L10nBn extends L10n {
   }
 
   @override
-  String get help => 'Help';
+  String get help => 'সাহায্য';
 
   @override
   String get hideRedactedEvents => 'Hide redacted events';
@@ -752,10 +766,10 @@ class L10nBn extends L10n {
   String get howOffensiveIsThisContent => 'How offensive is this content?';
 
   @override
-  String get id => 'ID';
+  String get id => 'আইডি';
 
   @override
-  String get identity => 'Identity';
+  String get identity => 'পরিচয়';
 
   @override
   String get block => 'Block';
@@ -802,7 +816,7 @@ class L10nBn extends L10n {
   String get invalidServerName => 'Invalid server name';
 
   @override
-  String get invited => 'Invited';
+  String get invited => 'আমন্ত্রিত';
 
   @override
   String get redactMessageDescription =>
@@ -858,13 +872,13 @@ class L10nBn extends L10n {
   }
 
   @override
-  String get leave => 'Leave';
+  String get leave => 'ছেড়ে যাও';
 
   @override
   String get leftTheChat => 'Left the chat';
 
   @override
-  String get license => 'License';
+  String get license => 'অনুমতিপত্র (লাইসেন্স)';
 
   @override
   String get lightTheme => 'Light';
@@ -913,7 +927,7 @@ class L10nBn extends L10n {
       'Location permission denied. Please grant them to be able to share your location.';
 
   @override
-  String get login => 'Login';
+  String get login => 'প্রবেশ';
 
   @override
   String logInTo(String homeserver) {
@@ -921,7 +935,7 @@ class L10nBn extends L10n {
   }
 
   @override
-  String get logout => 'Logout';
+  String get logout => 'প্রস্থান';
 
   @override
   String get memberChanges => 'Member changes';
@@ -999,7 +1013,7 @@ class L10nBn extends L10n {
   String get noRoomsFound => 'No rooms found…';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'বিজ্ঞপ্তি';
 
   @override
   String get notificationsEnabledForThisAccount =>
@@ -1978,11 +1992,6 @@ class L10nBn extends L10n {
       'Please try again later or choose a different server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Sign in with $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
 
@@ -2281,7 +2290,7 @@ class L10nBn extends L10n {
       'Database encryption is not supported on this platform';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
 
@@ -2854,4 +2863,78 @@ class L10nBn extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

@@ -105,7 +105,7 @@ class L10nEs extends L10n {
 
   @override
   String get commandHint_roomupgrade =>
-      'Actualizar este chat a la versión de chat dada';
+      'Actualizar este chat a la versión de chat asignada';
 
   @override
   String get commandHint_googly => 'Enviar unos ojos saltones';
@@ -172,8 +172,11 @@ class L10nEs extends L10n {
       'Reproducir emoticonos y stickers animados automáticamente';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'El servidor soporta los siguientes mecanismos para autenticación:\n$serverVersions\npero esta aplicación sólo soporta:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nEs extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'El servidor soporta las siguientes versiones de la especificación:\n$serverVersions\npero esta aplicación sólo soporta las versiones $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nEs extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username ha cambiado la descripción del chat';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username cambió la descripción del chat a: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username ha cambiado el nombre del chat';
   }
 
   @override
@@ -352,7 +366,7 @@ class L10nEs extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'La copia de respaldo del chat está protegida por una llave de seguridad. Procure no perderla.';
+      'Tus mensajes están protegidos por una llave de seguridad. Procura no perderla.';
 
   @override
   String get chatDetails => 'Detalles del chat';
@@ -2002,11 +2016,6 @@ class L10nEs extends L10n {
       'Por favor, intente luego o elija un servidor distinto.';
 
   @override
-  String signInWith(String provider) {
-    return 'Entrar con $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'El usuario no se encontró en el servidor. Puede que haya un problema de conexión o el usuario no exista.';
 
@@ -2306,7 +2315,7 @@ class L10nEs extends L10n {
       'En esta plataforma no hay cifrado de base de datos';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Ahora mismo, hay $count usuarios bloqueados.';
   }
 
@@ -2745,7 +2754,7 @@ class L10nEs extends L10n {
   String get approve => 'Aprobar';
 
   @override
-  String get youHaveKnocked => 'Has sido golpeado';
+  String get youHaveKnocked => 'Has sido expulsado';
 
   @override
   String get pleaseWaitUntilInvited =>
@@ -2770,33 +2779,33 @@ class L10nEs extends L10n {
   String get declineInvitation => 'Rechazar invitación';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'Sin mensajes';
 
   @override
   String get longPressToRecordVoiceMessage =>
-      'Long press to record voice message.';
+      'Deja presionado para grabar un mensaje.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Pausa';
 
   @override
-  String get resume => 'Resume';
+  String get resume => 'Continuar';
 
   @override
-  String get newSubSpace => 'New sub space';
+  String get newSubSpace => 'Nuevo sub espacio';
 
   @override
-  String get moveToDifferentSpace => 'Move to different space';
+  String get moveToDifferentSpace => 'Mover a otro espacio';
 
   @override
-  String get moveUp => 'Move up';
+  String get moveUp => 'Mover arriba';
 
   @override
-  String get moveDown => 'Move down';
+  String get moveDown => 'Mover abajo';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'El chat sera removido del espacio pero continuara apareciendo en tu lista de chats.';
 
   @override
   String countChats(int chats) {
@@ -2818,20 +2827,20 @@ class L10nEs extends L10n {
 
   @override
   String startedAPoll(String username) {
-    return '$username started a poll.';
+    return '$username inició una encuesta.';
   }
 
   @override
-  String get poll => 'Poll';
+  String get poll => 'Encuesta';
 
   @override
-  String get startPoll => 'Start poll';
+  String get startPoll => 'Iniciar encuesta';
 
   @override
-  String get endPoll => 'End poll';
+  String get endPoll => 'Finalizar encuesta';
 
   @override
-  String get answersVisible => 'Answers visible';
+  String get answersVisible => 'Respuestas visibles';
 
   @override
   String get answersHidden => 'Answers hidden';
@@ -2885,4 +2894,78 @@ class L10nEs extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

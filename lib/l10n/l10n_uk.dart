@@ -9,7 +9,7 @@ class L10nUk extends L10n {
   L10nUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'false';
+  String get alwaysUse24HourFormat => 'вимкнено';
 
   @override
   String get repeatPassword => 'Повторіть пароль';
@@ -169,11 +169,14 @@ class L10nUk extends L10n {
 
   @override
   String get autoplayImages =>
-      'Автоматично відтворювати анімовані наліпки та емоджі';
+      'Автоматично відтворювати анімовані наліпки та емодзі';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домашній сервер підтримує такі типи входу:\n$serverVersions\nАле цей застосунок підтримує лише:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nUk extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домашній сервер підтримує такі версії специфікацій:\n$serverVersions\nАле цей застосунок підтримує лише $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nUk extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username змінює опис бесіди';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username змінює опис бесіди на: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username змінює назву бесіди';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nUk extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Ваші старі повідомлення захищені ключем відновлення. Переконайтеся, що ви не втратите його.';
+      'Ваші повідомлення захищені ключем відновлення. Переконайтеся, що ви не втратите його.';
 
   @override
   String get chatDetails => 'Подробиці бесіди';
@@ -605,7 +619,7 @@ class L10nUk extends L10n {
       'Тут з\'являться нещодавно використані смайлики...';
 
   @override
-  String get emotePacks => 'Набори емоджі для кімнати';
+  String get emotePacks => 'Набори емодзі для кімнати';
 
   @override
   String get emoteSettings => 'Налаштування емодзі';
@@ -624,11 +638,11 @@ class L10nUk extends L10n {
   String get calls => 'Виклики';
 
   @override
-  String get customEmojisAndStickers => 'Власні емоджі та наліпки';
+  String get customEmojisAndStickers => 'Власні емодзі та наліпки';
 
   @override
   String get customEmojisAndStickersBody =>
-      'Додавайте або діліться власними емоджі або наліпками, які можна використовувати в будь-якій бесіді.';
+      'Додавайте або діліться власними емодзі або наліпками, які можна використовувати в будь-якій бесіді.';
 
   @override
   String get emoteShortcode => 'Короткий код для емодзі';
@@ -641,7 +655,7 @@ class L10nUk extends L10n {
   String get emptyChat => 'Порожня бесіда';
 
   @override
-  String get enableEmotesGlobally => 'Увімкнути пакунок емоджі глобально';
+  String get enableEmotesGlobally => 'Увімкнути набір емодзі глобально';
 
   @override
   String get enableEncryption => 'Увімкнути шифрування';
@@ -970,7 +984,7 @@ class L10nUk extends L10n {
   String get noConnectionToTheServer => 'Немає з\'єднання з сервером';
 
   @override
-  String get noEmotesFound => 'Емоджі не знайдено. 😕';
+  String get noEmotesFound => 'Емодзі не знайдено. 😕';
 
   @override
   String get noEncryptionForPublicRooms =>
@@ -1345,7 +1359,7 @@ class L10nUk extends L10n {
   String get setAsCanonicalAlias => 'Установити основним псевдонімом';
 
   @override
-  String get setCustomEmotes => 'Установити користувацькі емоджі';
+  String get setCustomEmotes => 'Встановити власні емодзі';
 
   @override
   String get setChatDescription => 'Налаштувати опис бесіди';
@@ -1560,7 +1574,7 @@ class L10nUk extends L10n {
       'Очікування прийняття запиту партнером…';
 
   @override
-  String get waitingPartnerEmoji => 'Очікування прийняття емоджі партнером…';
+  String get waitingPartnerEmoji => 'Очікування прийняття емодзі партнером…';
 
   @override
   String get waitingPartnerNumbers => 'Очікування прийняття чисел партнером…';
@@ -1671,10 +1685,10 @@ class L10nUk extends L10n {
 
   @override
   String get confirmEventUnpin =>
-      'Ви впевнені, що бажаєте назавжди відкріпите подію?';
+      'Ви впевнені, що бажаєте назавжди відкріпити подію?';
 
   @override
-  String get emojis => 'Емоджі';
+  String get emojis => 'Емодзі';
 
   @override
   String get placeCall => 'Здійснити виклик';
@@ -1992,11 +2006,6 @@ class L10nUk extends L10n {
       'Спробуйте пізніше або виберіть інший сервер.';
 
   @override
-  String signInWith(String provider) {
-    return 'Увійти через $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Не вдалося знайти користувача на сервері. Можливо, проблема зі з\'єднанням або користувач не існує.';
 
@@ -2295,7 +2304,7 @@ class L10nUk extends L10n {
       'Шифрування бази даних не підтримується на цій платформі';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Наразі заблоковано $count користувачів.';
   }
 
@@ -2551,7 +2560,7 @@ class L10nUk extends L10n {
 
   @override
   String get notificationRuleSuppressNoticesDescription =>
-      'Забороняє сповіщення від автоматизованих клієнтів, таких як боти.';
+      'Забороняє сповіщення від автоматизованих клієнтів, як-от боти.';
 
   @override
   String get notificationRuleInviteForMe => 'Запрошення мене';
@@ -2680,7 +2689,7 @@ class L10nUk extends L10n {
 
   @override
   String sentVoiceMessage(String sender, String duration) {
-    return '🎙️ $duration - $sender - Голосове повідомлення від $sender';
+    return '🎙️Голосове повідомлення від $sender ($duration)';
   }
 
   @override
@@ -2755,119 +2764,194 @@ class L10nUk extends L10n {
   String get declineInvitation => 'Відхилити запрошення';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'Поки немає повідомлень';
 
   @override
   String get longPressToRecordVoiceMessage =>
-      'Long press to record voice message.';
+      'Довге натискання, щоби записати голосове повідомлення.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Призупинити';
 
   @override
-  String get resume => 'Resume';
+  String get resume => 'Продовжити';
 
   @override
-  String get newSubSpace => 'New sub space';
+  String get newSubSpace => 'Новий вкладений простір';
 
   @override
-  String get moveToDifferentSpace => 'Move to different space';
+  String get moveToDifferentSpace => 'Перемістити в інший простір';
 
   @override
-  String get moveUp => 'Move up';
+  String get moveUp => 'Перемістити вище';
 
   @override
-  String get moveDown => 'Move down';
+  String get moveDown => 'Переместити нижче';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'Бесіду буде видалено з простору, та вона залишиться у вашому списку бесід.';
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats бесід';
   }
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return 'Учасник $spaces просторів';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return 'Учасник просторів $spaces може постукати';
   }
 
   @override
-  String get donate => 'Donate';
+  String get donate => 'Задонатити';
 
   @override
   String startedAPoll(String username) {
-    return '$username started a poll.';
+    return 'Нове опитування від $username.';
   }
 
   @override
-  String get poll => 'Poll';
+  String get poll => 'Опитування';
 
   @override
-  String get startPoll => 'Start poll';
+  String get startPoll => 'Розпочати опитування';
 
   @override
-  String get endPoll => 'End poll';
+  String get endPoll => 'Завершити опитування';
 
   @override
-  String get answersVisible => 'Answers visible';
+  String get answersVisible => 'Публічні відповіді';
 
   @override
-  String get answersHidden => 'Answers hidden';
+  String get answersHidden => 'Приховані відповіді';
 
   @override
-  String get pollQuestion => 'Poll question';
+  String get pollQuestion => 'Запитання';
 
   @override
-  String get answerOption => 'Answer option';
+  String get answerOption => 'Варіант відповіді';
 
   @override
-  String get addAnswerOption => 'Add answer option';
+  String get addAnswerOption => 'Додати варіант відповіді';
 
   @override
-  String get allowMultipleAnswers => 'Allow multiple answers';
+  String get allowMultipleAnswers => 'Дозволити декілька варіантів відповіді';
 
   @override
-  String get pollHasBeenEnded => 'Poll has been ended';
+  String get pollHasBeenEnded => 'Опитування завершилось';
 
   @override
   String countVotes(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count votes',
-      one: 'One vote',
+      other: '$count голосів',
+      one: 'Один голос',
     );
     return '$_temp0';
   }
 
   @override
   String get answersWillBeVisibleWhenPollHasEnded =>
-      'Answers will be visible when poll has ended';
+      'Відповіді стануть публічними після завершення опитування';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'Відповісти у вітці';
 
   @override
   String countReplies(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count replies',
-      one: 'One reply',
+      other: '$count відповідей',
+      one: 'Одна відповідь',
     );
     return '$_temp0';
   }
 
   @override
-  String get thread => 'Thread';
+  String get thread => 'Вітка';
 
   @override
-  String get backToMainChat => 'Back to main chat';
+  String get backToMainChat => 'Повернутись до основної бесіди';
+
+  @override
+  String get saveChanges => 'Зберегти зміни';
+
+  @override
+  String get createSticker => 'Створити наліпку чи емодзі';
+
+  @override
+  String get useAsSticker => 'Використати як наліпку';
+
+  @override
+  String get useAsEmoji => 'Використати як емодзі';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Набір наліпок з такою назвою вже є';
+
+  @override
+  String get newStickerPack => 'Новий набір наліпок';
+
+  @override
+  String get stickerPackName => 'Назва набору наліпок';
+
+  @override
+  String get attribution => 'Атрибуція';
+
+  @override
+  String get skipChatBackup => 'Пропустити резервне копіювання бесід';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Ви впевнені? Без резервного копіювання бесід ви можете втратити доступ до повідомлень, якщо ви зміните пристрій.';
+
+  @override
+  String get loadingMessages => 'Завантажуються повідомлення';
+
+  @override
+  String get setupChatBackup => 'Налаштувати резервне копіювання бесід';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

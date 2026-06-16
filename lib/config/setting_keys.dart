@@ -46,18 +46,13 @@ enum AppSettings<T> {
     'chat.fluffy.no_encryption_warning_shown',
     false,
   ),
-  displayChatDetailsColumn(
-    'chat.fluffy.display_chat_details_column',
-    false,
-  ),
+  displayChatDetailsColumn('chat.fluffy.display_chat_details_column', false),
   // AppConfig-mirrored settings
   applicationName<String>('chat.fluffy.application_name', 'FluffyChat'),
   defaultHomeserver<String>('chat.fluffy.default_homeserver', 'matrix.org'),
   // colorSchemeSeed stored as ARGB int
-  colorSchemeSeedInt<int>(
-    'chat.fluffy.color_scheme_seed',
-    0xFF5625BA,
-  ),
+  colorSchemeSeedInt<int>('chat.fluffy.color_scheme_seed', 0xFF5625BA),
+  emojiSuggestionLocale<String>('emoji_suggestion_locale', ''),
   enableSoftLogout<bool>('chat.fluffy.enable_soft_logout', false),
   spellCheck<bool>('chat.metalconnect.spell_check', false);
 
@@ -69,16 +64,15 @@ enum AppSettings<T> {
   static SharedPreferences get store => _store!;
   static SharedPreferences? _store;
 
-  static Future<SharedPreferences> init({loadWebConfigFile = true}) async {
+  static Future<SharedPreferences> init({bool loadWebConfigFile = true}) async {
     if (AppSettings._store != null) return AppSettings.store;
 
     final store = AppSettings._store = await SharedPreferences.getInstance();
 
     // Migrate wrong datatype for fontSizeFactor
-    final fontSizeFactorString =
-        Result(() => store.getString(AppSettings.fontSizeFactor.key))
-            .asValue
-            ?.value;
+    final fontSizeFactorString = Result(
+      () => store.getString(AppSettings.fontSizeFactor.key),
+    ).asValue?.value;
     if (fontSizeFactorString != null) {
       Logs().i('Migrate wrong datatype for fontSizeFactor!');
       await store.remove(AppSettings.fontSizeFactor.key);
@@ -93,8 +87,9 @@ enum AppSettings<T> {
     }
     if (kIsWeb && loadWebConfigFile) {
       try {
-        final configJsonString =
-            utf8.decode((await http.get(Uri.parse('config.json'))).bodyBytes);
+        final configJsonString = utf8.decode(
+          (await http.get(Uri.parse('config.json'))).bodyBytes,
+        );
         final configJson =
             json.decode(configJsonString) as Map<String, Object?>;
         for (final setting in AppSettings.values) {

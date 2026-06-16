@@ -173,8 +173,11 @@ class L10nBe extends L10n {
       'Аўтаматычна прайграваць аніміраваныя стыкеры і эмодзі';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Хатні сервер падтрымлівае наступныя метады ўваходу:\n$serverVersions\nАле гэта праграма падтрымлівае толькі:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nBe extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Хатні сервер падтрымлівае наступныя версіі спецыфікацыі:\n$serverVersions\nАле гэта праграма падтрымлівае толькі:$supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nBe extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username змяніў апісанне чата на :\'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -352,7 +366,7 @@ class L10nBe extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Вашы старыя паведамленні абаронены ключом аднаўлення. Калі ласка, пераканайцеся ў тым, што вы яго не згубіце.';
+      'Вашы паведамленні абаронены ключом аднаўлення. Калі ласка, пераканайцеся ў тым, што вы яго не згубіце.';
 
   @override
   String get chatDetails => 'Дэталі чата';
@@ -1987,11 +2001,6 @@ class L10nBe extends L10n {
       'Калі ласка, паспрабуйце пазней ці абярыце іншы сервер.';
 
   @override
-  String signInWith(String provider) {
-    return 'Увайсці з $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Карыстальнік не знойдзены на гэтым серверы. Гэта можа быць памылка сеткі ці карыстальніка не існуе.';
 
@@ -2293,7 +2302,7 @@ class L10nBe extends L10n {
       'Шыфраванне базы даных не падтрымліваецца гэтай платформай';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'На гэты момант, $count карыстальнікаў заблакіравана.';
   }
 
@@ -2864,4 +2873,78 @@ class L10nBe extends L10n {
 
   @override
   String get backToMainChat => 'Вярнуцца ў галоўны чат';
+
+  @override
+  String get saveChanges => 'Захаваць змены';
+
+  @override
+  String get createSticker => 'Стварыць стыкер ці эмадзі';
+
+  @override
+  String get useAsSticker => 'Ужыць як стыкер';
+
+  @override
+  String get useAsEmoji => 'Ужыць як эмадзі';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Назва набору стыкераў ужо існуе';
+
+  @override
+  String get newStickerPack => 'Новы набор стыкераў';
+
+  @override
+  String get stickerPackName => 'Назва набору стыкераў';
+
+  @override
+  String get attribution => 'Атрыбуцыя';
+
+  @override
+  String get skipChatBackup => 'Прапусціць рэзервовае капіраванне чатаў';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Вы ўпэўнены? Без наладжвання рэзервовага капіравання чатаў, вы можаце згубіць доступ да ўсіх вашых чатаў, калі вы зменіце прыладу.';
+
+  @override
+  String get loadingMessages => 'Загрузка паведамленняў';
+
+  @override
+  String get setupChatBackup => 'Наладзіць рэзервовае капіраванне чатаў';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

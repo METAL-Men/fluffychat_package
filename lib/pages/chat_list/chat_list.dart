@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:fluffychat/config/app_config.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -30,10 +29,6 @@ import '../../../utils/account_bundles.dart';
 import '../../config/setting_keys.dart';
 import '../../utils/url_launcher.dart';
 import '../../widgets/matrix.dart';
-import '../bootstrap/bootstrap_dialog.dart';
-
-import 'package:fluffychat/utils/tor_stub.dart'
-    if (dart.library.html) 'package:tor_detector_web/tor_detector_web.dart';
 
 enum PopupMenuAction {
   settings,
@@ -44,13 +39,7 @@ enum PopupMenuAction {
   archive,
 }
 
-enum ActiveFilter {
-  allChats,
-  messages,
-  groups,
-  unread,
-  spaces,
-}
+enum ActiveFilter { allChats, messages, groups, unread, spaces }
 
 extension LocalizedActiveFilter on ActiveFilter {
   String toLocalizedString(BuildContext context) {
@@ -108,8 +97,8 @@ class ChatListController extends State<ChatList>
   }
 
   void clearActiveSpace() => setState(() {
-        _activeSpaceId = null;
-      });
+    _activeSpaceId = null;
+  });
 
   void onChatTap(Room room) async {
     if (room.membership == Membership.invite) {
@@ -130,9 +119,7 @@ class ChatListController extends State<ChatList>
 
     if (room.membership == Membership.ban) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(L10n.of(context).youHaveBeenBannedFromThisChat),
-        ),
+        SnackBar(content: Text(L10n.of(context).youHaveBeenBannedFromThisChat)),
       );
       return;
     }
@@ -165,11 +152,9 @@ class ChatListController extends State<ChatList>
     }
   }
 
-  List<Room> get filteredRooms => Matrix.of(context)
-      .client
-      .rooms
-      .where(getRoomFilterByActiveFilter(activeFilter))
-      .toList();
+  List<Room> get filteredRooms => Matrix.of(
+    context,
+  ).client.rooms.where(getRoomFilterByActiveFilter(activeFilter)).toList();
 
   bool isSearchMode = false;
   Future<QueryPublicRoomsResponse>? publicRoomsResponse;
@@ -228,8 +213,9 @@ class ChatListController extends State<ChatList>
 
       if (searchQuery.isValidMatrixId &&
           searchQuery.sigil == '#' &&
-          roomSearchResult.chunk
-                  .any((room) => room.canonicalAlias == searchQuery) ==
+          roomSearchResult.chunk.any(
+                (room) => room.canonicalAlias == searchQuery,
+              ) ==
               false) {
         final response = await client.getRoomIdByAlias(searchQuery);
         final roomId = response.roomId;
@@ -252,13 +238,9 @@ class ChatListController extends State<ChatList>
       );
     } catch (e, s) {
       Logs().w('Searching has crashed', e, s);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(
-            e.toLocalizedString(context),
-          ),
-        ),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(e.toLocalizedString(context))));
     }
     if (!isSearchMode) return;
     setState(() {
@@ -302,8 +284,6 @@ class ChatListController extends State<ChatList>
     if (unfocus) searchFocusNode.unfocus();
   }
 
-  bool isTorBrowser = false;
-
   BoxConstraints? snappingSheetContainerSize;
 
   final ScrollController scrollController = ScrollController();
@@ -341,22 +321,17 @@ class ChatListController extends State<ChatList>
     showScaffoldDialog(
       context: context,
       builder: (context) => ShareScaffoldDialog(
-        items: files.map(
-          (file) {
-            if ({
-              SharedMediaType.text,
-              SharedMediaType.url,
-            }.contains(file.type)) {
-              return TextShareItem(file.path);
-            }
-            return FileShareItem(
-              XFile(
-                file.path.replaceFirst('file://', ''),
-                mimeType: file.mimeType,
-              ),
-            );
-          },
-        ).toList(),
+        items: files.map((file) {
+          if ({SharedMediaType.text, SharedMediaType.url}.contains(file.type)) {
+            return TextShareItem(file.path);
+          }
+          return FileShareItem(
+            XFile(
+              file.path.replaceFirst('file://', ''),
+              mimeType: file.mimeType,
+            ),
+          );
+        }).toList(),
       ),
     );
   }
@@ -378,22 +353,23 @@ class ChatListController extends State<ChatList>
         .listen(_processIncomingSharedMedia, onError: print);
 
     // For sharing images coming from outside the app while the app is closed
-    ReceiveSharingIntent.instance
-        .getInitialMedia()
-        .then(_processIncomingSharedMedia);
+    ReceiveSharingIntent.instance.getInitialMedia().then(
+      _processIncomingSharedMedia,
+    );
 
     // For receiving shared Uris
-    _intentUriStreamSubscription =
-        AppLinks().uriLinkStream.listen(_processIncomingUris);
+    _intentUriStreamSubscription = AppLinks().uriLinkStream.listen(
+      _processIncomingUris,
+    );
 
     if (PlatformInfos.isAndroid) {
       final shortcuts = FlutterShortcuts();
       shortcuts.initialize().then(
-            (_) => shortcuts.listenAction((action) {
-              if (!mounted) return;
-              UrlLauncher(context, action).launchUrl();
-            }),
-          );
+        (_) => shortcuts.listenAction((action) {
+          if (!mounted) return;
+          UrlLauncher(context, action).launchUrl();
+        }),
+      );
     }
   }
 
@@ -410,8 +386,9 @@ class ChatListController extends State<ChatList>
     _hackyWebRTCFixForWeb();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) {
-        searchServer =
-            Matrix.of(context).store.getString(_serverStoreNamespace);
+        searchServer = Matrix.of(
+          context,
+        ).store.getString(_serverStoreNamespace);
         Matrix.of(context).backgroundPush?.setupPush();
         UpdateNotifier.showUpdateSnackBar(context);
       }
@@ -421,8 +398,6 @@ class ChatListController extends State<ChatList>
         Theme.of(context).appBarTheme.systemOverlayStyle!,
       );
     });
-
-    _checkTorBrowser();
 
     super.initState();
   }
@@ -457,8 +432,9 @@ class ChatListController extends State<ChatList>
       Offset.zero & overlay.size,
     );
 
-    final displayname =
-        room.getLocalizedDisplayname(MatrixLocals(L10n.of(context)));
+    final displayname = room.getLocalizedDisplayname(
+      MatrixLocals(L10n.of(context)),
+    );
 
     final spacesWithPowerLevels = room.client.rooms
         .where(
@@ -476,19 +452,17 @@ class ChatListController extends State<ChatList>
         PopupMenuItem(
           value: ChatContextAction.open,
           child: Row(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: .min,
             spacing: 12.0,
             children: [
-              Avatar(
-                mxContent: room.avatar,
-                name: displayname,
-              ),
+              Avatar(mxContent: room.avatar, name: displayname),
               ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 128),
                 child: Text(
                   displayname,
-                  style:
-                      TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -501,7 +475,7 @@ class ChatListController extends State<ChatList>
           PopupMenuItem(
             value: ChatContextAction.goToSpace,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: .min,
               children: [
                 Avatar(
                   mxContent: space.avatar,
@@ -521,7 +495,7 @@ class ChatListController extends State<ChatList>
           PopupMenuItem(
             value: ChatContextAction.mute,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: .min,
               children: [
                 Icon(
                   room.pushRuleState == PushRuleState.notify
@@ -540,7 +514,7 @@ class ChatListController extends State<ChatList>
           PopupMenuItem(
             value: ChatContextAction.markUnread,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: .min,
               children: [
                 Icon(
                   room.markedUnread
@@ -559,7 +533,7 @@ class ChatListController extends State<ChatList>
           PopupMenuItem(
             value: ChatContextAction.favorite,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: .min,
               children: [
                 Icon(
                   room.isFavourite ? Icons.push_pin : Icons.push_pin_outlined,
@@ -577,7 +551,7 @@ class ChatListController extends State<ChatList>
             PopupMenuItem(
               value: ChatContextAction.addToSpace,
               child: Row(
-                mainAxisSize: MainAxisSize.min,
+                mainAxisSize: .min,
                 children: [
                   const Icon(Icons.group_work_outlined),
                   const SizedBox(width: 12),
@@ -589,7 +563,7 @@ class ChatListController extends State<ChatList>
         PopupMenuItem(
           value: ChatContextAction.leave,
           child: Row(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: .min,
             children: [
               Icon(
                 Icons.delete_outlined,
@@ -611,7 +585,7 @@ class ChatListController extends State<ChatList>
           PopupMenuItem(
             value: ChatContextAction.block,
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: .min,
               children: [
                 Icon(
                   Icons.block_outlined,
@@ -694,8 +668,9 @@ class ChatListController extends State<ChatList>
               .map(
                 (space) => AdaptiveModalAction(
                   value: space,
-                  label: space
-                      .getLocalizedDisplayname(MatrixLocals(L10n.of(context))),
+                  label: space.getLocalizedDisplayname(
+                    MatrixLocals(L10n.of(context)),
+                  ),
                 ),
               )
               .toList(),
@@ -756,30 +731,23 @@ class ChatListController extends State<ChatList>
     await client.accountDataLoading;
     await client.userDeviceKeysLoading;
     if (client.prevBatch == null) {
-      await client.onSyncStatus.stream
-          .firstWhere((status) => status.status == SyncStatus.finished);
+      await client.onSyncStatus.stream.firstWhere(
+        (status) => status.status == SyncStatus.finished,
+      );
 
       if (!mounted) return;
       setState(() {
         waitForFirstSync = true;
       });
-
-      // Display first login bootstrap if enabled
-      if (client.encryption?.keyManager.enabled == true) {
-        if (await client.encryption?.keyManager.isCached() == false ||
-            await client.encryption?.crossSigning.isCached() == false ||
-            client.isUnknownSession && !mounted) {
-          await BootstrapDialog(client: client).show(context);
-        }
-      }
     }
     if (!mounted) return;
     setState(() {
       waitForFirstSync = true;
     });
 
-    if (client.userDeviceKeys[client.userID!]?.deviceKeys.values
-            .any((device) => !device.verified && !device.blocked) ??
+    if (client.userDeviceKeys[client.userID!]?.deviceKeys.values.any(
+          (device) => !device.verified && !device.blocked,
+        ) ??
         false) {
       late final ScaffoldFeatureController controller;
       final theme = Theme.of(context);
@@ -791,9 +759,7 @@ class ChatListController extends State<ChatList>
           closeIconColor: theme.colorScheme.onErrorContainer,
           content: Text(
             L10n.of(context).oneOfYourDevicesIsNotVerified,
-            style: TextStyle(
-              color: theme.colorScheme.onErrorContainer,
-            ),
+            style: TextStyle(color: theme.colorScheme.onErrorContainer),
           ),
           action: SnackBarAction(
             onPressed: () {
@@ -829,20 +795,21 @@ class ChatListController extends State<ChatList>
     setState(() {
       _activeSpaceId = null;
       Matrix.of(context).activeBundle = bundle;
-      if (!Matrix.of(context)
-          .currentBundle!
-          .any((client) => client == Matrix.of(context).client)) {
-        Matrix.of(context)
-            .setActiveClient(Matrix.of(context).currentBundle!.first);
+      if (!Matrix.of(
+        context,
+      ).currentBundle!.any((client) => client == Matrix.of(context).client)) {
+        Matrix.of(
+          context,
+        ).setActiveClient(Matrix.of(context).currentBundle!.first);
       }
     });
   }
 
   void editBundlesForAccount(String? userId, String? activeBundle) async {
     final l10n = L10n.of(context);
-    final client = Matrix.of(context)
-        .widget
-        .clients[Matrix.of(context).getClientIndexByMatrixId(userId!)];
+    final client = Matrix.of(
+      context,
+    ).widget.clients[Matrix.of(context).getClientIndexByMatrixId(userId!)];
     final action = await showModalActionPopup<EditBundleAction>(
       context: context,
       title: L10n.of(context).editBundlesForAccount,
@@ -887,10 +854,9 @@ class ChatListController extends State<ChatList>
 
   String? get secureActiveBundle {
     if (Matrix.of(context).activeBundle == null ||
-        !Matrix.of(context)
-            .accountBundles
-            .keys
-            .contains(Matrix.of(context).activeBundle)) {
+        !Matrix.of(
+          context,
+        ).accountBundles.keys.contains(Matrix.of(context).activeBundle)) {
       return Matrix.of(context).accountBundles.keys.first;
     }
     return Matrix.of(context).activeBundle;
@@ -911,22 +877,12 @@ class ChatListController extends State<ChatList>
     ChatList.contextForVoip = context;
   }
 
-  Future<void> _checkTorBrowser() async {
-    if (!kIsWeb) return;
-    final isTor = await TorBrowserDetector.isTorBrowser;
-    isTorBrowser = isTor;
-  }
-
   Future<void> dehydrate() => Matrix.of(context).dehydrateAction(context);
 }
 
 enum EditBundleAction { addToBundle, removeFromBundle }
 
-enum InviteActions {
-  accept,
-  decline,
-  block,
-}
+enum InviteActions { accept, decline, block }
 
 enum ChatContextAction {
   open,

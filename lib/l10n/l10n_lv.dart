@@ -172,8 +172,11 @@ class L10nLv extends L10n {
       'Automātiski atskaņot animētas uzlīmes un emocijas';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Mājasserveris nodrošina pieteikšanās veidus:\n$serverVersions\nSavukārt, šī lietotne atbalsta tikai:\n$supportedVersions';
   }
 
@@ -189,11 +192,12 @@ class L10nLv extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Mājasserveris nodrošina specifikācijas versijas:\n$serverVersions\nSavukārt, lietotne atbalsta tikai $supportedVersions';
   }
 
@@ -258,8 +262,18 @@ class L10nLv extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username nomainīja tērzēšanas aprakstu';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username nomainīja tērzēšanas aprakstu uz \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username nomainīja tērzēšanas nosaukumu';
   }
 
   @override
@@ -352,7 +366,7 @@ class L10nLv extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Iepriekšējās ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.';
+      'Ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.';
 
   @override
   String get chatDetails => 'Tērzēšanas izvērsums';
@@ -1992,11 +2006,6 @@ class L10nLv extends L10n {
       'Lūgums vēlāk mēģināt vēlreiz vai izvēlēties citu serveri.';
 
   @override
-  String signInWith(String provider) {
-    return 'Pieteikties ar $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Lietotāju serverī nevarēja atrast. Varbūt ir nebūšanas ar savienojumu vai lietotājs nepastāv.';
 
@@ -2298,7 +2307,7 @@ class L10nLv extends L10n {
       'Šajā platformā datubāzes šifrēšana netiek nodrošināta';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Šobrīd ir izslēgti $count lietotāji.';
   }
 
@@ -2874,4 +2883,79 @@ class L10nLv extends L10n {
 
   @override
   String get backToMainChat => 'Atgriezties galvenajā tērzēšanā';
+
+  @override
+  String get saveChanges => 'Saglabāt izmaiņas';
+
+  @override
+  String get createSticker => 'Izveidot uzlīmi vai emocijzīmi';
+
+  @override
+  String get useAsSticker => 'Izmantot kā uzlīmi';
+
+  @override
+  String get useAsEmoji => 'Izmantot kā emocijzīmi';
+
+  @override
+  String get stickerPackNameAlreadyExists =>
+      'Uzlīmju pakas nosaukums jau pastāv';
+
+  @override
+  String get newStickerPack => 'Jauna uzlīmju paka';
+
+  @override
+  String get stickerPackName => 'Uzlīmju pakas nosaukums';
+
+  @override
+  String get attribution => 'Piedēvējums';
+
+  @override
+  String get skipChatBackup => 'Izlaist tērzēšanu rezerves kopēšanu';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Vai tiešām? Bez tērzēšanu rezerves kopēšanas var tikt zaudēta piekļuve savām ziņām, kad tiks mainīta ierīce.';
+
+  @override
+  String get loadingMessages => 'Ielādē ziņas';
+
+  @override
+  String get setupChatBackup => 'Iestatīt tērzēšanu rezerves kopēšanu';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

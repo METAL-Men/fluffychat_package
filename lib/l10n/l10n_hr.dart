@@ -18,17 +18,17 @@ class L10nHr extends L10n {
   String get notAnImage => 'Nije slikovna datoteka.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
+  String get setCustomPermissionLevel => 'Postavi razinu dozvole';
 
   @override
   String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
+      'Odaberi unaprijed definiranu ulogu u nastavku ili upiši prilagođenu razinu dozvole između 0 i 100.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Zanemari korisnika';
 
   @override
-  String get normalUser => 'Normal user';
+  String get normalUser => 'Normalni korisnik';
 
   @override
   String get remove => 'Ukloni';
@@ -53,7 +53,7 @@ class L10nHr extends L10n {
 
   @override
   String aboutHomeserver(String homeserver) {
-    return 'About $homeserver';
+    return 'Informacije o $homeserver';
   }
 
   @override
@@ -104,7 +104,7 @@ class L10nHr extends L10n {
 
   @override
   String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+      'Nadogradi ovu sobu na zadanu verziju sobe';
 
   @override
   String get commandHint_googly => 'Pošalji kotrljajuće oči';
@@ -171,8 +171,11 @@ class L10nHr extends L10n {
       'Automatski pokreni animirane naljepnice i emotikone';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Domaći poslužitelj podržava vrste prijave:\n$serverVersions\nMeđutim ovaj program podržava samo:\n$supportedVersions';
   }
 
@@ -188,11 +191,12 @@ class L10nHr extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Domaći poslužitelj podržava verzije specifikacije:\n$serverVersions\nMeđutim ovaj program podržava samo $supportedVersions';
   }
 
@@ -257,8 +261,18 @@ class L10nHr extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username je promijenio/la opis razgovora u: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -351,7 +365,7 @@ class L10nHr extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Tvoji su stari razgovori osigurani s ključem za obnavljanje. Pazi da ga ne izgubiš.';
+      'Tvoje poruke su osigurane s ključem za obnavljanje. Pazi da ga ne izgubiš.';
 
   @override
   String get chatDetails => 'Detalji razgovora';
@@ -1986,11 +2000,6 @@ class L10nHr extends L10n {
       'Pokušaj ponovo kasnije ili odaberi jedan drugi poslužitelj.';
 
   @override
-  String signInWith(String provider) {
-    return 'Prijavi se pomoću $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'Korisnik nije pronađen na poslužitelju. Možda postoji problem s vezom ili korisnik ne postoji.';
 
@@ -2291,7 +2300,7 @@ class L10nHr extends L10n {
       'Šifriranje baze podataka nije podržano na ovoj platformi';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Broj trenutačno blokiranih korisnika: $count.';
   }
 
@@ -2864,4 +2873,78 @@ class L10nHr extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }

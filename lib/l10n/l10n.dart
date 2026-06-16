@@ -112,7 +112,7 @@ import 'l10n_zh.dart' deferred as l10n_zh;
 /// property.
 abstract class L10n {
   L10n(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -134,11 +134,11 @@ abstract class L10n {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -196,7 +196,7 @@ abstract class L10n {
     Locale('vi'),
     Locale('yue'),
     Locale('zh'),
-    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant')
+    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
   ];
 
   /// Set to true to always display time of day in 24 hour format.
@@ -480,7 +480,10 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'The homeserver supports the login types:\n{serverVersions}\nBut this app supports only:\n{supportedVersions}'**
   String badServerLoginTypesException(
-      String serverVersions, String supportedVersions, Object suportedVersions);
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  );
 
   /// No description provided for @sendTypingNotifications.
   ///
@@ -505,11 +508,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'The homeserver supports the Spec versions:\n{serverVersions}\nBut this app supports only {supportedVersions}'**
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions);
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  );
 
   /// No description provided for @countChatsAndCountParticipants.
   ///
@@ -613,11 +617,23 @@ abstract class L10n {
   /// **'{username} changed the chat avatar'**
   String changedTheChatAvatar(String username);
 
+  /// No description provided for @changedTheChatDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'{username} changed the chat description'**
+  String changedTheChatDescription(Object username);
+
   /// No description provided for @changedTheChatDescriptionTo.
   ///
   /// In en, this message translates to:
   /// **'{username} changed the chat description to: \'{description}\''**
   String changedTheChatDescriptionTo(String username, String description);
+
+  /// No description provided for @changedTheChatName.
+  ///
+  /// In en, this message translates to:
+  /// **'{username} changed the chat name'**
+  String changedTheChatName(Object username);
 
   /// No description provided for @changedTheChatNameTo.
   ///
@@ -748,7 +764,7 @@ abstract class L10n {
   /// No description provided for @chatBackupDescription.
   ///
   /// In en, this message translates to:
-  /// **'Your old messages are secured with a recovery key. Please make sure you don\'t lose it.'**
+  /// **'Your messages are secured with a recovery key. Please make sure you don\'t lose it.'**
   String get chatBackupDescription;
 
   /// No description provided for @chatDetails.
@@ -3595,12 +3611,6 @@ abstract class L10n {
   /// **'Please try again later or choose a different server.'**
   String get pleaseTryAgainLaterOrChooseDifferentServer;
 
-  /// No description provided for @signInWith.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with {provider}'**
-  String signInWith(String provider);
-
   /// No description provided for @profileNotFound.
   ///
   /// In en, this message translates to:
@@ -4103,7 +4113,7 @@ abstract class L10n {
   ///
   /// In en, this message translates to:
   /// **'Right now there are {count} users blocked.'**
-  String thereAreCountUsersBlocked(num count);
+  String thereAreCountUsersBlocked(Object count);
 
   /// No description provided for @restricted.
   ///
@@ -5070,6 +5080,144 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Back to main chat'**
   String get backToMainChat;
+
+  /// No description provided for @saveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get saveChanges;
+
+  /// No description provided for @createSticker.
+  ///
+  /// In en, this message translates to:
+  /// **'Create sticker or emoji'**
+  String get createSticker;
+
+  /// No description provided for @useAsSticker.
+  ///
+  /// In en, this message translates to:
+  /// **'Use as sticker'**
+  String get useAsSticker;
+
+  /// No description provided for @useAsEmoji.
+  ///
+  /// In en, this message translates to:
+  /// **'Use as emoji'**
+  String get useAsEmoji;
+
+  /// No description provided for @stickerPackNameAlreadyExists.
+  ///
+  /// In en, this message translates to:
+  /// **'Sticker pack name already exists'**
+  String get stickerPackNameAlreadyExists;
+
+  /// No description provided for @newStickerPack.
+  ///
+  /// In en, this message translates to:
+  /// **'New sticker pack'**
+  String get newStickerPack;
+
+  /// No description provided for @stickerPackName.
+  ///
+  /// In en, this message translates to:
+  /// **'Sticker pack name'**
+  String get stickerPackName;
+
+  /// No description provided for @attribution.
+  ///
+  /// In en, this message translates to:
+  /// **'Attribution'**
+  String get attribution;
+
+  /// No description provided for @skipChatBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip chat backup'**
+  String get skipChatBackup;
+
+  /// No description provided for @skipChatBackupWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.'**
+  String get skipChatBackupWarning;
+
+  /// No description provided for @loadingMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading messages'**
+  String get loadingMessages;
+
+  /// No description provided for @setupChatBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up chat backup'**
+  String get setupChatBackup;
+
+  /// No description provided for @noMoreResultsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No more results found'**
+  String get noMoreResultsFound;
+
+  /// No description provided for @chatSearchedUntil.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat searched until {time}'**
+  String chatSearchedUntil(String time);
+
+  /// No description provided for @federationBaseUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Federation Base URL'**
+  String get federationBaseUrl;
+
+  /// No description provided for @clientWellKnownInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'Client-Well-Known Information:'**
+  String get clientWellKnownInformation;
+
+  /// No description provided for @baseUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Base URL'**
+  String get baseUrl;
+
+  /// No description provided for @identityServer.
+  ///
+  /// In en, this message translates to:
+  /// **'Identity Server:'**
+  String get identityServer;
+
+  /// No description provided for @versionWithNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Version: {version}'**
+  String versionWithNumber(String version);
+
+  /// No description provided for @logs.
+  ///
+  /// In en, this message translates to:
+  /// **'Logs'**
+  String get logs;
+
+  /// No description provided for @advancedConfigs.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced Configs'**
+  String get advancedConfigs;
+
+  /// No description provided for @advancedConfigurations.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced configurations'**
+  String get advancedConfigurations;
+
+  /// No description provided for @signInWithLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with:'**
+  String get signInWithLabel;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
@@ -5082,59 +5230,59 @@ class _L10nDelegate extends LocalizationsDelegate<L10n> {
 
   @override
   bool isSupported(Locale locale) => <String>[
-        'ar',
-        'be',
-        'bn',
-        'bo',
-        'ca',
-        'cs',
-        'da',
-        'de',
-        'el',
-        'en',
-        'eo',
-        'es',
-        'et',
-        'eu',
-        'fa',
-        'fi',
-        'fil',
-        'fr',
-        'ga',
-        'gl',
-        'he',
-        'hi',
-        'hr',
-        'hu',
-        'ia',
-        'id',
-        'ie',
-        'it',
-        'ja',
-        'ka',
-        'ko',
-        'lt',
-        'lv',
-        'nb',
-        'nl',
-        'pl',
-        'pt',
-        'ro',
-        'ru',
-        'sk',
-        'sl',
-        'sr',
-        'sv',
-        'ta',
-        'te',
-        'th',
-        'tr',
-        'uk',
-        'uz',
-        'vi',
-        'yue',
-        'zh'
-      ].contains(locale.languageCode);
+    'ar',
+    'be',
+    'bn',
+    'bo',
+    'ca',
+    'cs',
+    'da',
+    'de',
+    'el',
+    'en',
+    'eo',
+    'es',
+    'et',
+    'eu',
+    'fa',
+    'fi',
+    'fil',
+    'fr',
+    'ga',
+    'gl',
+    'he',
+    'hi',
+    'hr',
+    'hu',
+    'ia',
+    'id',
+    'ie',
+    'it',
+    'ja',
+    'ka',
+    'ko',
+    'lt',
+    'lv',
+    'nb',
+    'nl',
+    'pl',
+    'pt',
+    'ro',
+    'ru',
+    'sk',
+    'sl',
+    'sr',
+    'sv',
+    'ta',
+    'te',
+    'th',
+    'tr',
+    'uk',
+    'uz',
+    'vi',
+    'yue',
+    'zh',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_L10nDelegate old) => false;
@@ -5147,9 +5295,9 @@ Future<L10n> lookupL10n(Locale locale) {
       {
         switch (locale.scriptCode) {
           case 'Hant':
-            return l10n_zh
-                .loadLibrary()
-                .then((dynamic _) => l10n_zh.L10nZhHant());
+            return l10n_zh.loadLibrary().then(
+              (dynamic _) => l10n_zh.L10nZhHant(),
+            );
         }
         break;
       }
@@ -5161,13 +5309,13 @@ Future<L10n> lookupL10n(Locale locale) {
       {
         switch (locale.countryCode) {
           case 'BR':
-            return l10n_pt
-                .loadLibrary()
-                .then((dynamic _) => l10n_pt.L10nPtBr());
+            return l10n_pt.loadLibrary().then(
+              (dynamic _) => l10n_pt.L10nPtBr(),
+            );
           case 'PT':
-            return l10n_pt
-                .loadLibrary()
-                .then((dynamic _) => l10n_pt.L10nPtPt());
+            return l10n_pt.loadLibrary().then(
+              (dynamic _) => l10n_pt.L10nPtPt(),
+            );
         }
         break;
       }
@@ -5282,8 +5430,9 @@ Future<L10n> lookupL10n(Locale locale) {
   }
 
   throw FlutterError(
-      'L10n.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'L10n.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
 }

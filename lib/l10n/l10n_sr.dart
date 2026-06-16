@@ -12,7 +12,7 @@ class L10nSr extends L10n {
   String get alwaysUse24HourFormat => 'false';
 
   @override
-  String get repeatPassword => 'Repeat password';
+  String get repeatPassword => 'Ponovite lozinku';
 
   @override
   String get notAnImage => 'Not an image file.';
@@ -110,7 +110,7 @@ class L10nSr extends L10n {
   String get commandHint_googly => 'Send some googly eyes';
 
   @override
-  String get commandHint_cuddle => 'Send a cuddle';
+  String get commandHint_cuddle => 'Pošalji zagrljaj';
 
   @override
   String get commandHint_hug => 'Send a hug';
@@ -171,8 +171,11 @@ class L10nSr extends L10n {
       'Automatically play animated stickers and emotes';
 
   @override
-  String badServerLoginTypesException(String serverVersions,
-      String supportedVersions, Object suportedVersions) {
+  String badServerLoginTypesException(
+    String serverVersions,
+    String supportedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домаћи сервер подржава начине пријаве:\n$serverVersions\nали ова апликација подржава само:\n$supportedVersions';
   }
 
@@ -187,11 +190,12 @@ class L10nSr extends L10n {
 
   @override
   String badServerVersionsException(
-      String serverVersions,
-      String supportedVersions,
-      Object serverVerions,
-      Object supoortedVersions,
-      Object suportedVersions) {
+    String serverVersions,
+    String supportedVersions,
+    Object serverVerions,
+    Object supoortedVersions,
+    Object suportedVersions,
+  ) {
     return 'Домаћи сервер подржава верзије:\n$serverVersions\nали ова апликација подржава само $supportedVersions';
   }
 
@@ -256,8 +260,18 @@ class L10nSr extends L10n {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username changed the chat description';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username промени опис ћаскања у: „$description“';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username changed the chat name';
   }
 
   @override
@@ -1974,11 +1988,6 @@ class L10nSr extends L10n {
       'Please try again later or choose a different server.';
 
   @override
-  String signInWith(String provider) {
-    return 'Sign in with $provider';
-  }
-
-  @override
   String get profileNotFound =>
       'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
 
@@ -2277,7 +2286,7 @@ class L10nSr extends L10n {
       'Database encryption is not supported on this platform';
 
   @override
-  String thereAreCountUsersBlocked(num count) {
+  String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
 
@@ -2850,4 +2859,78 @@ class L10nSr extends L10n {
 
   @override
   String get backToMainChat => 'Back to main chat';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get createSticker => 'Create sticker or emoji';
+
+  @override
+  String get useAsSticker => 'Use as sticker';
+
+  @override
+  String get useAsEmoji => 'Use as emoji';
+
+  @override
+  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+
+  @override
+  String get newStickerPack => 'New sticker pack';
+
+  @override
+  String get stickerPackName => 'Sticker pack name';
+
+  @override
+  String get attribution => 'Attribution';
+
+  @override
+  String get skipChatBackup => 'Skip chat backup';
+
+  @override
+  String get skipChatBackupWarning =>
+      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+
+  @override
+  String get loadingMessages => 'Loading messages';
+
+  @override
+  String get setupChatBackup => 'Set up chat backup';
+
+  @override
+  String get noMoreResultsFound => 'No more results found';
+
+  @override
+  String chatSearchedUntil(String time) {
+    return 'Chat searched until $time';
+  }
+
+  @override
+  String get federationBaseUrl => 'Federation Base URL';
+
+  @override
+  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+
+  @override
+  String get baseUrl => 'Base URL';
+
+  @override
+  String get identityServer => 'Identity Server:';
+
+  @override
+  String versionWithNumber(String version) {
+    return 'Version: $version';
+  }
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get advancedConfigs => 'Advanced Configs';
+
+  @override
+  String get advancedConfigurations => 'Advanced configurations';
+
+  @override
+  String get signInWithLabel => 'Sign in with:';
 }
