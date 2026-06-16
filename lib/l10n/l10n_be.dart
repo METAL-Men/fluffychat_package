@@ -18,18 +18,7 @@ class L10nBe extends L10n {
   String get notAnImage => 'Не файл выявы.';
 
   @override
-  String get setCustomPermissionLevel =>
-      'Задаць карыстальніцкі ўзровень дазволу';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Калі ласка, выберыце ролю ніжэй ці ўвядзіце карыстальніцкі ўзровень дазволу паміж 0 і 100.';
-
-  @override
   String get ignoreUser => 'Ігнараваць карыстальніка';
-
-  @override
-  String get normalUser => 'Звычайны карыстальнік';
 
   @override
   String get remove => 'Прыбраць';
@@ -84,9 +73,6 @@ class L10nBe extends L10n {
   String supposedMxid(String mxid) {
     return 'Гэта павінна быць накшталт $mxid';
   }
-
-  @override
-  String get addChatDescription => 'Дадайце апісанне чату...';
 
   @override
   String get addToSpace => 'Дадаць у прастору';
@@ -151,10 +137,13 @@ class L10nBe extends L10n {
 
   @override
   String get areGuestsAllowedToJoin =>
-      'Ці дазволена карыстальнікам-гасцям далучыцца';
+      'Ці дазволена карыстальнікам-гасцям далучыцца?';
 
   @override
   String get areYouSure => 'Вы ўпэўнены?';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout => 'Вы ўпэўнены, што хаціце выйсці?';
@@ -191,30 +180,11 @@ class L10nBe extends L10n {
   String get sendOnEnter => 'Дасылаць на enter';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'Хатні сервер падтрымлівае наступныя версіі спецыфікацыі:\n$serverVersions\nАле гэта праграма падтрымлівае толькі:$supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats чатаў і $participants удзельнікаў';
-  }
-
-  @override
   String get noMoreChatsFound => 'Болей чатаў не знойдзена...';
 
   @override
   String get noChatsFoundHere =>
       'Здаецца, тут пуста. Пачніце новы чат з кімсьці праз кнопку ніжэй. ⤵️';
-
-  @override
-  String get joinedChats => 'Чаты, да якіх вы далучыліся';
 
   @override
   String get unread => 'Непрачытаные';
@@ -243,9 +213,6 @@ class L10nBe extends L10n {
   String get blocked => 'Заблакіравана';
 
   @override
-  String get botMessages => 'Паведамленні ботаў';
-
-  @override
   String get cancel => 'Скасаваць';
 
   @override
@@ -263,7 +230,7 @@ class L10nBe extends L10n {
 
   @override
   String changedTheChatDescription(Object username) {
-    return '$username changed the chat description';
+    return '$username змяніў апісанне чата';
   }
 
   @override
@@ -273,7 +240,7 @@ class L10nBe extends L10n {
 
   @override
   String changedTheChatName(Object username) {
-    return '$username changed the chat name';
+    return '$username змяніў назву чата';
   }
 
   @override
@@ -372,9 +339,6 @@ class L10nBe extends L10n {
   String get chatDetails => 'Дэталі чата';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'Чат быў дададзены ў гэту прастору';
-
-  @override
   String get chats => 'Чаты';
 
   @override
@@ -470,19 +434,7 @@ class L10nBe extends L10n {
   String get configureChat => 'Наладзіць чат';
 
   @override
-  String get confirm => 'Пацвердзіць';
-
-  @override
-  String get connect => 'Далучыцца';
-
-  @override
   String get contactHasBeenInvitedToTheGroup => 'Кантакт быў запрошаны ў групу';
-
-  @override
-  String get containsDisplayName => 'Мае адлюстроўваемае імя';
-
-  @override
-  String get containsUserName => 'Мае імя карыстальніка';
 
   @override
   String get contentHasBeenReported =>
@@ -541,16 +493,6 @@ class L10nBe extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$day-$month';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year-$month-$day';
-  }
-
-  @override
   String get deactivateAccountWarning =>
       'Гэта дэактывіруе ваш уліковы запіс. Гэта дзеянне не можа быць адменена! Вы ўпэўнены?';
 
@@ -578,9 +520,6 @@ class L10nBe extends L10n {
 
   @override
   String get directChats => 'Асобныя чаты';
-
-  @override
-  String get allRooms => 'Усе групавыя чаты';
 
   @override
   String get displaynameHasBeenChanged => 'Адлюстроўваемае імя было зменена';
@@ -645,10 +584,6 @@ class L10nBe extends L10n {
   String get emoteShortcode => 'Скарачэнне эмодзі';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'Вы павінны задаць скарачэнне эмодзі і выяву!';
-
-  @override
   String get emptyChat => 'Пусты чат';
 
   @override
@@ -682,18 +617,12 @@ class L10nBe extends L10n {
   String get homeserver => 'Дамашні сервер';
 
   @override
-  String get enterYourHomeserver => 'Увядзіце адрас дамашняга сервера';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Памылка атрымання месцазнаходжання: $error';
   }
 
   @override
   String get everythingReady => 'Усё гатова!';
-
-  @override
-  String get extremeOffensive => 'Занадта абражальны';
 
   @override
   String get fileName => 'Назва файла';
@@ -712,9 +641,6 @@ class L10nBe extends L10n {
 
   @override
   String get fromTheInvitation => 'З запрашэння';
-
-  @override
-  String get goToTheNewRoom => 'Перайсці ў новы пакой';
 
   @override
   String get group => 'Група';
@@ -765,13 +691,7 @@ class L10nBe extends L10n {
       'Хаваць памылковыя ці невядомыя фарматы паведамленняў';
 
   @override
-  String get howOffensiveIsThisContent => 'Наколькі абражальны гэты кантэнт?';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => 'Ідэнтыфікацыя';
 
   @override
   String get block => 'Заблакіраваць';
@@ -794,15 +714,7 @@ class L10nBe extends L10n {
       'Няслушныя фраза-пароль ці ключ аднаўлення';
 
   @override
-  String get inoffensive => 'Безабідны';
-
-  @override
   String get inviteContact => 'Запрасіць кантакт';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Вы хаціце запрасіць $contact да чату \"$groupName\"?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -836,9 +748,6 @@ class L10nBe extends L10n {
 
   @override
   String get invitedUsersOnly => 'Толькі запрошаныя карыстальнікі';
-
-  @override
-  String get inviteForMe => 'Запрашэнне для мяне';
 
   @override
   String inviteText(String username, String link) {
@@ -881,9 +790,6 @@ class L10nBe extends L10n {
   String get leftTheChat => 'Выйсці з чату';
 
   @override
-  String get license => 'Ліцэнзія';
-
-  @override
   String get lightTheme => 'Светлая';
 
   @override
@@ -897,20 +803,6 @@ class L10nBe extends L10n {
   @override
   String get dehydrateWarning =>
       'Гэта дзеянне не можа быць адменена. Пераканайцеся, што вы бяспечна захавалі файл рэзервовай копіі.';
-
-  @override
-  String get dehydrateTor => 'Карыстальнікі TOR: Экспарт сесіі';
-
-  @override
-  String get dehydrateTorLong =>
-      'Для карыстальнікаў TOR прапануем экспартаваць сесію перад тым, як закрыць акно.';
-
-  @override
-  String get hydrateTor => 'Карыстальнікі TOR: Імпарт экспарту сесіі';
-
-  @override
-  String get hydrateTorLong =>
-      'Вы экспартавалі сесію ў мінулы раз праз TOR? Хутка імпартуйце яе і працягніце размовы.';
 
   @override
   String get hydrate => 'Аднавіць з рэзервовай копіі';
@@ -939,9 +831,6 @@ class L10nBe extends L10n {
 
   @override
   String get logout => 'Выйсці';
-
-  @override
-  String get memberChanges => 'Змяненні ўдзельнікаў';
 
   @override
   String get mention => 'Згадаць';
@@ -1019,19 +908,12 @@ class L10nBe extends L10n {
   String get notifications => 'Паведамленні';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Паведамленні ўклбчаны для гжтага ўліковага запісу';
-
-  @override
   String numUsersTyping(int count) {
     return '$count карыстальнікаў пішуць…';
   }
 
   @override
   String get obtainingLocation => 'Атрыманне месцазнаходжання…';
-
-  @override
-  String get offensive => 'Абражальна';
 
   @override
   String get offline => 'Не ў сетцы';
@@ -1060,9 +942,6 @@ class L10nBe extends L10n {
   String get openCamera => 'Адкрыць камеру';
 
   @override
-  String get openVideoCamera => 'Адкрыць камеру для відэа';
-
-  @override
   String get oneClientLoggedOut => 'Адзін з вашых кліентаў выйшаў';
 
   @override
@@ -1080,10 +959,6 @@ class L10nBe extends L10n {
 
   @override
   String get bundleName => 'Назва пакета';
-
-  @override
-  String get enableMultiAccounts =>
-      '(БЭТА) Уключыць некалькі ўліковых запісаў на гэтай прыладзе';
 
   @override
   String get openInMaps => 'Адкрыць на картах';
@@ -1114,27 +989,13 @@ class L10nBe extends L10n {
   String get passwordHasBeenChanged => 'Пароль быў зменены';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Хаваць змяненні ўдзельнікаў у публічных чатах';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Не паказваць далучэнні і выхады з чату ў шкале часу для лепшай чытальнасці.';
-
-  @override
   String get overview => 'Агляд';
-
-  @override
-  String get notifyMeFor => 'Паведамляць мяне пра';
 
   @override
   String get passwordRecoverySettings => 'Налады скіду пароля';
 
   @override
   String get passwordRecovery => 'Аднаўленне пароля';
-
-  @override
-  String get people => 'Людзі';
 
   @override
   String get pickImage => 'Абраць выяву';
@@ -1148,9 +1009,6 @@ class L10nBe extends L10n {
   }
 
   @override
-  String get pleaseChoose => 'Калі ласка, выберыце';
-
-  @override
   String get pleaseChooseAPasscode => 'Калі ласка, выберыце код доступу';
 
   @override
@@ -1160,9 +1018,6 @@ class L10nBe extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'Калі ласка, увядзіце 4 лічбы ці пакіньце пустым, каб адключыць код-пароль.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'Увядзіце ключ аднаўлення:';
 
   @override
   String get pleaseEnterYourPassword => 'Калі ласка, увядзіце ваш пароль';
@@ -1226,18 +1081,12 @@ class L10nBe extends L10n {
   }
 
   @override
-  String get rejoin => 'Далучыцца зноў';
-
-  @override
   String get removeAllOtherDevices => 'Выдаліць усе іншыя прылады';
 
   @override
   String removedBy(String username) {
     return 'Выдалена $username';
   }
-
-  @override
-  String get removeDevice => 'Выдаліць прыладу';
 
   @override
   String get unbanFromChat => 'Разблакіраваць у чаце';
@@ -1279,11 +1128,6 @@ class L10nBe extends L10n {
   String get recoveryKeyLost => 'Ключ абнаўлення страчаны?';
 
   @override
-  String seenByUser(String username) {
-    return 'Прагледжана $username';
-  }
-
-  @override
   String get send => 'Даслаць';
 
   @override
@@ -1308,12 +1152,6 @@ class L10nBe extends L10n {
 
   @override
   String get sendMessages => 'Даслаць паведамленні';
-
-  @override
-  String get sendOriginal => 'Даслаць арыгінал';
-
-  @override
-  String get sendSticker => 'Даслаць стыкер';
 
   @override
   String get sendVideo => 'Даслаць відэа';
@@ -1349,22 +1187,10 @@ class L10nBe extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Падзяляць асобныя чаты і групы';
-
-  @override
   String get setAsCanonicalAlias => 'Задаць як асноўны псеўданім';
 
   @override
-  String get setCustomEmotes => 'Задаць карыстальніцкі эмодзі';
-
-  @override
   String get setChatDescription => 'Задаць апісанне чату';
-
-  @override
-  String get setInvitationLink => 'Задаць запрашальную спасылку';
-
-  @override
-  String get setPermissionsLevel => 'Задаць ўзровееь дазволаў';
 
   @override
   String get setStatus => 'Задаць статус';
@@ -1387,14 +1213,8 @@ class L10nBe extends L10n {
   String get showPassword => 'Паказаць пароль';
 
   @override
-  String get presenceStyle => 'Прысутнасць:';
-
-  @override
   String get presencesToggle =>
-      'Паказваць паведасленні статусаў іншых карыстальнікаў';
-
-  @override
-  String get singlesignon => 'Адзіны ўваход';
+      'Паказваць паведамленні статусаў іншых карыстальнікаў';
 
   @override
   String get skip => 'Прапусціць';
@@ -1412,9 +1232,6 @@ class L10nBe extends L10n {
   String startedACall(String senderName) {
     return '$senderName пачаў выклік';
   }
-
-  @override
-  String get startFirstChat => 'Пачніце ваш першы чат';
 
   @override
   String get status => 'Статус';
@@ -1445,15 +1262,6 @@ class L10nBe extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'Пераключыць Захаванае';
-
-  @override
-  String get toggleMuted => 'Пераключыць гук';
-
-  @override
-  String get toggleUnread => 'Пазначыць прачытаным/непрачытаным';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1492,17 +1300,6 @@ class L10nBe extends L10n {
 
   @override
   String get unpin => 'Адмацаваць';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount непрачытаных чатаў',
-      one: '1 непрачытаны чат',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1575,9 +1372,6 @@ class L10nBe extends L10n {
   String get waitingPartnerNumbers => 'Чакаем, калі партнёр зацвердзіць лічбы…';
 
   @override
-  String get wallpaper => 'Шпалеры:';
-
-  @override
   String get warning => 'Увага!';
 
   @override
@@ -1640,26 +1434,11 @@ class L10nBe extends L10n {
   String get removeFromSpace => 'Выдаліць з прасторы';
 
   @override
-  String get addToSpaceDescription =>
-      'Выберыце прастору, да якой дадаць гэты чат.';
-
-  @override
   String get start => 'Пачаць';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'Каб разблакіраваць вашы мінулыя паведамленні, калі ласка, увядзіце ключ аднаўлення, што быў згенерыраваны ў мінулай сесіі. Ключ аднаўлення гэта НЕ ваш пароль.';
-
-  @override
-  String get publish => 'Апублікаваць';
-
-  @override
-  String videoWithSize(String size) {
-    return 'Відэа ($size)';
-  }
-
-  @override
-  String get openChat => 'Адкрыць чат';
 
   @override
   String get markAsRead => 'Адзначыць як прачытанае';
@@ -1706,54 +1485,6 @@ class L10nBe extends L10n {
   String get experimentalVideoCalls => 'Эксперыментальныя відэа выклікі';
 
   @override
-  String get emailOrUsername => 'Email ці імя карыстальніка';
-
-  @override
-  String get indexedDbErrorTitle => 'Праблемы з прыватным рэжымам';
-
-  @override
-  String get indexedDbErrorLong =>
-      'Сховішча паведамленняў, на жаль, не ўключана ў прыватным рэжыме па змаўчанні.\nКалі ласка, наведайце\n - about:config\n - што dom.indexedDB.privateBrowsing.enabled уключаны\nІнакш, FluffyChat будзе немагчыма запусціць.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'Пераключыцца на ўліковы запіс $number';
-  }
-
-  @override
-  String get nextAccount => 'Наступны ўліковы запіс';
-
-  @override
-  String get previousAccount => 'Мінулы ўліковы запіс';
-
-  @override
-  String get addWidget => 'Дадаць віджэт';
-
-  @override
-  String get widgetVideo => 'Відэа';
-
-  @override
-  String get widgetEtherpad => 'Тэкставая нататка';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => 'Карыстальніцкі';
-
-  @override
-  String get widgetName => 'Імя';
-
-  @override
-  String get widgetUrlError => 'Гэта хібны URL.';
-
-  @override
-  String get widgetNameError => 'Калі ласка, укажыце адлюстроўваемаем імя.';
-
-  @override
-  String get errorAddingWidget => 'Памылка дадання віджэту.';
-
-  @override
   String get youRejectedTheInvitation => 'Вы скасавалі запрашэнне';
 
   @override
@@ -1770,11 +1501,6 @@ class L10nBe extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return 'Вы адазвалі запрашэнне для $user';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 Вы былі запрошаны па спасылцы на:\n$alias';
   }
 
   @override
@@ -1817,14 +1543,6 @@ class L10nBe extends L10n {
 
   @override
   String get noOneCanJoin => 'Ніхто не можа далучыцца';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user хоча далучыцца да чату.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet => 'Публічны ключ яшчэ не створаны';
 
   @override
   String get knock => 'Пагрукацца';
@@ -1874,27 +1592,6 @@ class L10nBe extends L10n {
   String get screenSharingDetail => 'Вы дзеліцеся экранам у FluffyChat';
 
   @override
-  String get callingPermissions => 'Дазволы на выклікі';
-
-  @override
-  String get callingAccount => 'Уліковы запіс для выклікаў';
-
-  @override
-  String get callingAccountDetails =>
-      'Дазваляе FluffyChat выкарыстоўваць сістэмную праграму для выклікаў.';
-
-  @override
-  String get appearOnTop => 'З\'яўляцца зверху';
-
-  @override
-  String get appearOnTopDetails =>
-      'Дазваляе праграму з\'яўляцца наверсе (не патрэбна, калі FluffyChat наладжаны як уліковы запіс для выклікаў)';
-
-  @override
-  String get otherCallingPermissions =>
-      'Мікрафон, камера і іншыя дазволы FluffyChat';
-
-  @override
   String get whyIsThisMessageEncrypted =>
       'Чаму гэта паведамленне нельга прачытаць?';
 
@@ -1909,22 +1606,7 @@ class L10nBe extends L10n {
   String get newSpace => 'Новая прастора';
 
   @override
-  String get enterSpace => 'Увайсці ў прастору';
-
-  @override
-  String get enterRoom => 'Увайсці ў пакой';
-
-  @override
   String get allSpaces => 'Усе прасторы';
-
-  @override
-  String numChats(String number) {
-    return '$number чатаў';
-  }
-
-  @override
-  String get hideUnimportantStateEvents =>
-      'Хаваць неабавязковыя падзеі статусу';
 
   @override
   String get hidePresences => 'Хаваць спіс статусаў?';
@@ -1994,20 +1676,6 @@ class L10nBe extends L10n {
   String get report => 'паскардзіцца';
 
   @override
-  String get signInWithPassword => 'Увайсці з паролем';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Калі ласка, паспрабуйце пазней ці абярыце іншы сервер.';
-
-  @override
-  String get profileNotFound =>
-      'Карыстальнік не знойдзены на гэтым серверы. Гэта можа быць памылка сеткі ці карыстальніка не існуе.';
-
-  @override
-  String get setTheme => 'Тэма:';
-
-  @override
   String get setColorTheme => 'Каляровая схема:';
 
   @override
@@ -2015,9 +1683,6 @@ class L10nBe extends L10n {
 
   @override
   String get inviteGroupChat => '📨 Запрашэнне ў групавы чат';
-
-  @override
-  String get invitePrivateChat => '📨 Запрашэнне ў асобны чат';
 
   @override
   String get invalidInput => 'Недапушчальны ўвод!';
@@ -2101,9 +1766,6 @@ class L10nBe extends L10n {
       'Прабачце... гэта не выглядае як ключ аднаўлення.';
 
   @override
-  String get startConversation => 'Пачаць размову';
-
-  @override
   String get commandHint_sendraw => 'Даслаць толькі json';
 
   @override
@@ -2141,9 +1803,6 @@ class L10nBe extends L10n {
   String get passwordIsWrong => 'Вы ўвялі няверны пароль';
 
   @override
-  String get publicLink => 'Публічная спасылка';
-
-  @override
   String get publicChatAddresses => 'Публічныя адрасы чату';
 
   @override
@@ -2159,24 +1818,10 @@ class L10nBe extends L10n {
   String get addChatOrSubSpace => 'Дадаць чат ці пад-прастору';
 
   @override
-  String get subspace => 'Пад-прастора';
-
-  @override
-  String get decline => 'Адхіліць';
-
-  @override
   String get thisDevice => 'Гэта прылада:';
 
   @override
   String get initAppError => 'Адбылася памылка пры ініцыялізацыі праграмы';
-
-  @override
-  String get userRole => 'Роль карыстальніка';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level - мінімальны ўзровень дазволаў.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2193,11 +1838,6 @@ class L10nBe extends L10n {
   String get files => 'Файлы';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'Немагчыма стварыць базу даных SQlite. Праграма спрабуе выкарыстоўваць састарэлую базу. Калі ласка, паведаміце распрацоўшчыкам пра гэта: $url. Паведамленне памылкі: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'Ваш сеанс страчаны. Калі ласка, паведаміце пра гэта распрацоўшчыкам: $url. Паведамленне памылкі: $error';
   }
@@ -2205,11 +1845,6 @@ class L10nBe extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'Праграма спрабуе аднавіць вашу сесію з рэзервовай копіі. Калі ласка, паведаміце пра памылку распрацоўшчыкам па спасылцы $url. Паведамленне памылкі: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Пераслаць паведамленне ў $roomName?';
   }
 
   @override
@@ -2376,16 +2011,6 @@ class L10nBe extends L10n {
   String get loginWithMatrixId => 'Увайсці з Matrix-ID';
 
   @override
-  String get discoverHomeservers => 'Даследаваць дамашнія сервера';
-
-  @override
-  String get whatIsAHomeserver => 'Што такое дамашні сервер?';
-
-  @override
-  String get homeserverDescription =>
-      'Вашыя даныя захоўваюцца на дамашнім серверы, як у правайдара электронай пошты. Вы можаце самастойна абраць дамашні сервер, захоўвая пры тым магчымасць размаўляць. Даведайцеся болей на https://matrix.org.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Гэта не выглядае як дамашні сервер. Няслушны URL?';
 
@@ -2393,26 +2018,10 @@ class L10nBe extends L10n {
   String get calculatingFileSize => 'Вылічэнне памеру файла...';
 
   @override
-  String get prepareSendingAttachment => 'Падрыхтоўка адпраўкі прыкладання...';
-
-  @override
   String get sendingAttachment => 'Адпраўка прыкладання...';
 
   @override
-  String get generatingVideoThumbnail => 'Стварэнне вокладкі відэа...';
-
-  @override
   String get compressVideo => 'Сцісканне відэа...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Адпраўляецца прыкладанне $index з $length...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Дасягнуты серверны ліміт! Пачакайце $seconds секунд...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2512,10 +2121,6 @@ class L10nBe extends L10n {
 
   @override
   String get waitingForServer => 'Чаканне сервера...';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChat дазваляе вам і вашым сябрам размаўляць скрозь розныя мэсэнджары. Даведайцеся болей на https://matrix.org ці націсніце *Працягнуць*.';
 
   @override
   String get newChatRequest => '📩 Запыт новага чату';
@@ -2706,7 +2311,7 @@ class L10nBe extends L10n {
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
-      'З перакрыжаваным спраўджваннем прылад, калі ўключана';
+      'Перакрыжавана спраўджаныя прылады, калі ўключаны';
 
   @override
   String get crossVerifiedDevices => 'Перакрыжавана спраўджаныя прылады';
@@ -2771,18 +2376,6 @@ class L10nBe extends L10n {
   String get resume => 'Працягнуць';
 
   @override
-  String get newSubSpace => 'Новая пад-прастора';
-
-  @override
-  String get moveToDifferentSpace => 'Перамясціцца ў іншую прастору';
-
-  @override
-  String get moveUp => 'Перамясціць вышэй';
-
-  @override
-  String get moveDown => 'Перамясціць ніжэй';
-
-  @override
   String get removeFromSpaceDescription =>
       'Гэты чат будзе выдалены з прасторы, але з\'явіцца ў вашым спісе чатаў.';
 
@@ -2802,9 +2395,6 @@ class L10nBe extends L10n {
   }
 
   @override
-  String get donate => 'Даць грошы';
-
-  @override
   String startedAPoll(String username) {
     return '$username пачаў апытанне.';
   }
@@ -2820,9 +2410,6 @@ class L10nBe extends L10n {
 
   @override
   String get answersVisible => 'Адказы бачны';
-
-  @override
-  String get answersHidden => 'Адказы схаваны';
 
   @override
   String get pollQuestion => 'Пытанне апытання';
@@ -2912,39 +2499,163 @@ class L10nBe extends L10n {
   String get setupChatBackup => 'Наладзіць рэзервовае капіраванне чатаў';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => 'Нічога не знойдзена';
 
   @override
   String chatSearchedUntil(String time) {
-    return 'Chat searched until $time';
+    return 'Пошук у чаце да $time';
   }
 
   @override
-  String get federationBaseUrl => 'Federation Base URL';
+  String get federationBaseUrl => 'Асноўны URL федэрацыі';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation => 'Client-Well-Known інфармацыя:';
 
   @override
-  String get baseUrl => 'Base URL';
+  String get baseUrl => 'Базавы URL';
 
   @override
-  String get identityServer => 'Identity Server:';
+  String get identityServer => 'Сервер профілей:';
 
   @override
   String versionWithNumber(String version) {
-    return 'Version: $version';
+    return 'Версія: $version';
   }
 
   @override
-  String get logs => 'Logs';
+  String get logs => 'Логі';
 
   @override
-  String get advancedConfigs => 'Advanced Configs';
+  String get advancedConfigs => 'Пашыраныя налады';
 
   @override
-  String get advancedConfigurations => 'Advanced configurations';
+  String get advancedConfigurations => 'Пашыраная канфігурацыя';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Увайсці';
+
+  @override
+  String get createNewAccount => 'Стварыць новы ўліковы запіс';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat дэцэнтралізаваны! Выберыце свой сервер, дзе вы хаціце стварыць уліковы запіс і прайягвайце!';
+
+  @override
+  String get signInGreeting =>
+      'Вы ўжо маеце ўліковы запіс у Matrix? З вяртаннем! Выберыце свой хатні сервер і аўтарызуйцеся.';
+
+  @override
+  String get appIntro =>
+      'З дапамогай FluffyChat вы можаце размаўляць з вашымі сябрамі. Гэта бяспечны дэцэнтралізаваны [matrix] мэнэджэр! Даведайцеся больш на https://matrix.org, калі хаціце ці проста ўвайдзіце.';
+
+  @override
+  String get theProcessWasCanceled => 'Працэс быў скасаваны.';
+
+  @override
+  String get join => 'Далучыцца';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Пашукайце ці ўвядзіце адрас хатняга сервера';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Прызначыць узровень магчымасцей';
+
+  @override
+  String get makeModerator => 'Прызначыць мадэратарам';
+
+  @override
+  String get makeAdmin => 'Прызначыць адміністратарам';
+
+  @override
+  String get removeModeratorRights => 'Адабраць правы мадэратара';
+
+  @override
+  String get removeAdminRights => 'Прыбраць адміністратарскія правы';
+
+  @override
+  String get powerLevel => 'Узровень дазволаў';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Узровень дазволаў вызначае, што ўдзельнік можа рабіць у пакое і звычайна знаходзіцца паміж 0 і 100.';
+
+  @override
+  String get owner => 'Уладальнік';
+
+  @override
+  String get mute => 'Сцішыць';
+
+  @override
+  String get createNewChat => 'Стварыць новы чат';
+
+  @override
+  String get reset => 'Скінуць';
+
+  @override
+  String get supportFluffyChat => 'Падтрымаць FluffyChat';
+
+  @override
+  String get support => 'Падтрымаць';
+
+  @override
+  String get setLowPriority => 'Прызначыць нізкі прыярытэт';
+
+  @override
+  String get unsetLowPriority => 'Скасаваць нізкі прыярытэт';
+
+  @override
+  String get removeCallFromChat => 'Прыбраць выклік з чату';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Вы хаціце прыбраць выклік з чату для ўсіх удзельнікаў?';
+
+  @override
+  String get removeCallForEveryone => 'Прыбраць выклікі для ўсіх';
+
+  @override
+  String get startVoiceCall => 'Пачаць галасавы выклік';
+
+  @override
+  String get startVideoCall => 'Пачаць відэа-выклік';
+
+  @override
+  String get joinVoiceCall => 'Далучыцца да галасавога выкліка';
+
+  @override
+  String get joinVideoCall => 'Далучыцца да відэа-выкліка';
+
+  @override
+  String get live => 'Трансляцыя';
+
+  @override
+  String get playSoundOnNotification => 'Прайграваць гук апавяшчэння';
+
+  @override
+  String get addTag => 'Дадаць тэг';
+
+  @override
+  String get removeTag => 'Выдаліць тэг';
+
+  @override
+  String get tagName => 'Назва тэга';
+
+  @override
+  String get createNewTag => 'Стварыць новы тэг';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

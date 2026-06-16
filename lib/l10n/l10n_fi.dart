@@ -18,17 +18,7 @@ class L10nFi extends L10n {
   String get notAnImage => 'Tämä ei ole kuvatiedosto.';
 
   @override
-  String get setCustomPermissionLevel => 'Aseta mukautettu lupataso';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Valitse alla oleva ennalta määritetty rooli tai anna mukautettu lupataso väliltä 0–100.';
-
-  @override
   String get ignoreUser => 'Jätä huomiotta';
-
-  @override
-  String get normalUser => 'Peruskäyttäjä';
 
   @override
   String get remove => 'Poista';
@@ -83,9 +73,6 @@ class L10nFi extends L10n {
   String supposedMxid(String mxid) {
     return 'Tämän pitäisi olla $mxid';
   }
-
-  @override
-  String get addChatDescription => 'Lisää keskustelulle kuvaus...';
 
   @override
   String get addToSpace => 'Lisää tilaan';
@@ -155,6 +142,9 @@ class L10nFi extends L10n {
   String get areYouSure => 'Oletko varma?';
 
   @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+
+  @override
   String get areYouSureYouWantToLogout => 'Haluatko varmasti kirjautua ulos?';
 
   @override
@@ -190,30 +180,11 @@ class L10nFi extends L10n {
   String get sendOnEnter => 'Lähetä painamalla rivinvaihtonäppäintä';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'Kotipalvelin tukee Matrix Spec versio(it)a:\n$serverVersions, mutta tämä sovellus tukee vain versio(it)a $supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats pikakeskustelut ja $participants osallistujat';
-  }
-
-  @override
   String get noMoreChatsFound => 'Lisää keskusteluja ei löytynyt...';
 
   @override
   String get noChatsFoundHere =>
       'Täältä ei löytynyt vielä pikakeskusteluja. Aloita uusi pikakeskustelu jonkun kanssa alla olevalla painikkeella. ⤵️';
-
-  @override
-  String get joinedChats => 'Liittyneet pikakeskustelut';
 
   @override
   String get unread => 'Lukemattomat';
@@ -240,9 +211,6 @@ class L10nFi extends L10n {
 
   @override
   String get blocked => 'Estetty';
-
-  @override
-  String get botMessages => 'Bottien lähettämät viestit';
 
   @override
   String get cancel => 'Peruuta';
@@ -371,10 +339,6 @@ class L10nFi extends L10n {
   String get chatDetails => 'Keskustelun tiedot';
 
   @override
-  String get chatHasBeenAddedToThisSpace =>
-      'Keskustelu on lisätty tähän tilaan';
-
-  @override
   String get chats => 'Keskustelut';
 
   @override
@@ -471,20 +435,8 @@ class L10nFi extends L10n {
   String get configureChat => 'Määritä keskustelu';
 
   @override
-  String get confirm => 'Vahvista';
-
-  @override
-  String get connect => 'Yhdistä';
-
-  @override
   String get contactHasBeenInvitedToTheGroup =>
       'Yhteystieto on kutsuttu ryhmään';
-
-  @override
-  String get containsDisplayName => 'Sisältää näyttönimen';
-
-  @override
-  String get containsUserName => 'Sisältää käyttäjätunnuksen';
 
   @override
   String get contentHasBeenReported =>
@@ -543,16 +495,6 @@ class L10nFi extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$day.$month';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$day.$month.$year';
-  }
-
-  @override
   String get deactivateAccountWarning =>
       'Tämä poistaa tunnuksesi käytöstä. Tätä ei voi kumota! Oletko varma?';
 
@@ -580,9 +522,6 @@ class L10nFi extends L10n {
 
   @override
   String get directChats => 'Suorat keskustelut';
-
-  @override
-  String get allRooms => 'Kaikki ryhmäkeskustelut';
 
   @override
   String get displaynameHasBeenChanged => 'Näyttönimi on vaihdettu';
@@ -648,9 +587,6 @@ class L10nFi extends L10n {
   String get emoteShortcode => 'Emote-lyhytkoodi';
 
   @override
-  String get emoteWarnNeedToPick => 'Emote-lyhytkoodi ja kuva on valittava!';
-
-  @override
   String get emptyChat => 'Tyhjä keskustelu';
 
   @override
@@ -684,18 +620,12 @@ class L10nFi extends L10n {
   String get homeserver => 'Kotipalvelin';
 
   @override
-  String get enterYourHomeserver => 'Syötä kotipalvelimesi';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Virhe paikannuksessa: $error';
   }
 
   @override
   String get everythingReady => 'Kaikki on valmista!';
-
-  @override
-  String get extremeOffensive => 'Erittäin loukkaavaa';
 
   @override
   String get fileName => 'Tiedostonimi';
@@ -714,9 +644,6 @@ class L10nFi extends L10n {
 
   @override
   String get fromTheInvitation => 'Alkaen kutsumisesta';
-
-  @override
-  String get goToTheNewRoom => 'Mene uuteen huoneeseen';
 
   @override
   String get group => 'Ryhmä';
@@ -768,13 +695,7 @@ class L10nFi extends L10n {
       'Piilota virheelliset tai tuntemattomat viestimuodot';
 
   @override
-  String get howOffensiveIsThisContent => 'Kuinka loukkaavaa tämä sisältö on?';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => 'Identiteetti';
 
   @override
   String get block => 'Estä';
@@ -797,15 +718,7 @@ class L10nFi extends L10n {
       'Virheellinen salasana tai palautusavain';
 
   @override
-  String get inoffensive => 'Loukkaamatonta';
-
-  @override
   String get inviteContact => 'Kutsu yhteystieto';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Tahdotko kutsua yhteystiedon $contact keskusteluun \"$groupName\"?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -839,9 +752,6 @@ class L10nFi extends L10n {
 
   @override
   String get invitedUsersOnly => 'Vain kutsutut käyttäjät';
-
-  @override
-  String get inviteForMe => 'Kutsu minua varten';
 
   @override
   String inviteText(String username, String link) {
@@ -884,9 +794,6 @@ class L10nFi extends L10n {
   String get leftTheChat => 'Poistui keskustelusta';
 
   @override
-  String get license => 'Lisenssi';
-
-  @override
   String get lightTheme => 'Vaalea';
 
   @override
@@ -900,20 +807,6 @@ class L10nFi extends L10n {
   @override
   String get dehydrateWarning =>
       'Tätä toimenpidettä ei voi kumota. Varmista varmuuskopiotiedoston turvallinen tallennus.';
-
-  @override
-  String get dehydrateTor => 'TOR-käyttäjät: vie istunto';
-
-  @override
-  String get dehydrateTorLong =>
-      'Tor-käyttäjille suositellaan istunnon vientiä ennen ikkunan sulkemista.';
-
-  @override
-  String get hydrateTor => 'TOR-käyttäjät: tuo viety istunto';
-
-  @override
-  String get hydrateTorLong =>
-      'Veitkö edellisen istuntosi käyttäessäsi TORia? Tuo se nopeasti ja jatka jutustelua.';
 
   @override
   String get hydrate => 'Palauta varmuuskopiotiedostosta';
@@ -942,9 +835,6 @@ class L10nFi extends L10n {
 
   @override
   String get logout => 'Kirjaudu ulos';
-
-  @override
-  String get memberChanges => 'Jäsenmuutoksia';
 
   @override
   String get mention => 'Mainitse';
@@ -1022,19 +912,12 @@ class L10nFi extends L10n {
   String get notifications => 'Ilmoitukset';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Tämän tunnuksen ilmoitukset ovat käytössä';
-
-  @override
   String numUsersTyping(int count) {
     return '$count käyttäjää kirjoittavat…';
   }
 
   @override
   String get obtainingLocation => 'Paikannetaan sijantia…';
-
-  @override
-  String get offensive => 'Loukkaava';
 
   @override
   String get offline => 'Poissa verkosta';
@@ -1062,9 +945,6 @@ class L10nFi extends L10n {
   String get openCamera => 'Avaa kamera';
 
   @override
-  String get openVideoCamera => 'Avaa kamera videokuvausta varten';
-
-  @override
   String get oneClientLoggedOut => 'Yksi tunnuksistasi on kirjattu ulos';
 
   @override
@@ -1081,10 +961,6 @@ class L10nFi extends L10n {
 
   @override
   String get bundleName => 'Kääreen nimi';
-
-  @override
-  String get enableMultiAccounts =>
-      '(BETA) Ota käyttöön tuki usealle tilille tällä laitteella';
 
   @override
   String get openInMaps => 'Avaa kartoissa';
@@ -1115,27 +991,13 @@ class L10nFi extends L10n {
   String get passwordHasBeenChanged => 'Salasana on vaihdettu';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Piilota jäsenten muutokset julkisissa pikakeskusteluissa';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Älä näytä pikakeskustelun aikajanalla, jos joku liittyy julkiseen pikakeskusteluun tai poistuu siitä luettavuuden parantamiseksi.';
-
-  @override
   String get overview => 'Yleiskatsaus';
-
-  @override
-  String get notifyMeFor => 'Ilmoita minulle';
 
   @override
   String get passwordRecoverySettings => 'Salasanan palautusasetukset';
 
   @override
   String get passwordRecovery => 'Salasanan palautus';
-
-  @override
-  String get people => 'Ihmiset';
 
   @override
   String get pickImage => 'Valitse kuva';
@@ -1149,9 +1011,6 @@ class L10nFi extends L10n {
   }
 
   @override
-  String get pleaseChoose => 'Valitse';
-
-  @override
   String get pleaseChooseAPasscode => 'Valitse pääsykoodi';
 
   @override
@@ -1161,9 +1020,6 @@ class L10nFi extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'Syötä 4 numeroa tai jätä tyhjäksi poistaaksesi sovelluksen lukituksen.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'Syötä palautusavaimesi:';
 
   @override
   String get pleaseEnterYourPassword => 'Syötä salasanasi';
@@ -1226,18 +1082,12 @@ class L10nFi extends L10n {
   }
 
   @override
-  String get rejoin => 'Liity uudelleen';
-
-  @override
   String get removeAllOtherDevices => 'Poista kaikki muut laitteet';
 
   @override
   String removedBy(String username) {
     return 'Poistanut $username';
   }
-
-  @override
-  String get removeDevice => 'Poista laite';
 
   @override
   String get unbanFromChat => 'Poista porttikielto keskusteluun';
@@ -1279,11 +1129,6 @@ class L10nFi extends L10n {
   String get recoveryKeyLost => 'Kadonnut palautusavain?';
 
   @override
-  String seenByUser(String username) {
-    return 'Nähnyt $username';
-  }
-
-  @override
   String get send => 'Lähetä';
 
   @override
@@ -1308,12 +1153,6 @@ class L10nFi extends L10n {
 
   @override
   String get sendMessages => 'Lähetä viestejä';
-
-  @override
-  String get sendOriginal => 'Lähetä alkuperäinen';
-
-  @override
-  String get sendSticker => 'Lähetä tarra';
 
   @override
   String get sendVideo => 'Lähetä video';
@@ -1349,22 +1188,10 @@ class L10nFi extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Erota yksityiskeskustelut ryhmistä';
-
-  @override
   String get setAsCanonicalAlias => 'Aseta pääalias';
 
   @override
-  String get setCustomEmotes => 'Aseta mukautetut emotet';
-
-  @override
   String get setChatDescription => 'Asetti keskustelun kuvauksen';
-
-  @override
-  String get setInvitationLink => 'Aseta kutsulinkki';
-
-  @override
-  String get setPermissionsLevel => 'Aseta oikeustasot';
 
   @override
   String get setStatus => 'Aseta tila';
@@ -1387,13 +1214,7 @@ class L10nFi extends L10n {
   String get showPassword => 'Näytä salasana';
 
   @override
-  String get presenceStyle => 'Läsnäolo:';
-
-  @override
   String get presencesToggle => 'Näytä muiden käyttäjien tilaviestit';
-
-  @override
-  String get singlesignon => 'Kertakirjautuminen';
 
   @override
   String get skip => 'Ohita';
@@ -1411,9 +1232,6 @@ class L10nFi extends L10n {
   String startedACall(String senderName) {
     return '$senderName aloitti puhelun';
   }
-
-  @override
-  String get startFirstChat => 'Aloita ensimmäinen keskustelusi';
 
   @override
   String get status => 'Tila';
@@ -1443,15 +1261,6 @@ class L10nFi extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'Suosikki-kytkin';
-
-  @override
-  String get toggleMuted => 'Mykistetty-kytkin';
-
-  @override
-  String get toggleUnread => 'Merkitse lukemattomaksi/luetuksi';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1490,17 +1299,6 @@ class L10nFi extends L10n {
 
   @override
   String get unpin => 'Poista kiinnitys';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount lukematonta keskustelua',
-      one: '1 lukematon keskustelu',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1574,9 +1372,6 @@ class L10nFi extends L10n {
   String get waitingPartnerNumbers => 'Odotetaan kumppanin hyväksyvän numerot…';
 
   @override
-  String get wallpaper => 'Taustakuva:';
-
-  @override
   String get warning => 'Varoitus!';
 
   @override
@@ -1640,26 +1435,11 @@ class L10nFi extends L10n {
   String get removeFromSpace => 'Poista tilasta';
 
   @override
-  String get addToSpaceDescription =>
-      'Valitse tila, johon tämä keskustelu lisätään.';
-
-  @override
   String get start => 'Aloita';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'Avataksesi vanhojen viestiesi salauksen, syötä palautusavaimesi, joka luotiin edellisessä istunnossa. Palautusavaimesi EI OLE salasanasi.';
-
-  @override
-  String get publish => 'Julkaise';
-
-  @override
-  String videoWithSize(String size) {
-    return 'Video ($size)';
-  }
-
-  @override
-  String get openChat => 'Avaa Keskustelu';
 
   @override
   String get markAsRead => 'Merkitse luetuksi';
@@ -1706,54 +1486,6 @@ class L10nFi extends L10n {
   String get experimentalVideoCalls => 'Kokeelliset videopuhelut';
 
   @override
-  String get emailOrUsername => 'Sähköposti-osoite tai käyttäjätunnus';
-
-  @override
-  String get indexedDbErrorTitle => 'Yksityisen selauksen ongelmat';
-
-  @override
-  String get indexedDbErrorLong =>
-      'Viestivarasto ei ole käytössä yksityisselauksessa oletuksena.\nKäythän osoitteessa\n - about:config\n - Aseta dom.indexedDB.privateBrowsing.enabled arvoon true\nMuuten FluffyChatin käyttäminen ei ole mahdollista.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'Siirry tilille $number';
-  }
-
-  @override
-  String get nextAccount => 'Seuraava tili';
-
-  @override
-  String get previousAccount => 'Edellinen tili';
-
-  @override
-  String get addWidget => 'Lisää pienoissovellus';
-
-  @override
-  String get widgetVideo => 'Video';
-
-  @override
-  String get widgetEtherpad => 'Tekstimuotoinen muistiinpano';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => 'Mukautettu';
-
-  @override
-  String get widgetName => 'Nimi';
-
-  @override
-  String get widgetUrlError => 'Epäkelvollinen URL.';
-
-  @override
-  String get widgetNameError => 'Syötä näyttönimi.';
-
-  @override
-  String get errorAddingWidget => 'Virhe lisättäessä pienoissovellusta.';
-
-  @override
   String get youRejectedTheInvitation => 'Kieltäydyit kutsusta';
 
   @override
@@ -1770,11 +1502,6 @@ class L10nFi extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return 'Olet perunut kutsun käyttäjälle $user';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 Sinut on kutsuttu linkin kautta kohteeseen:\n$alias';
   }
 
   @override
@@ -1817,15 +1544,6 @@ class L10nFi extends L10n {
 
   @override
   String get noOneCanJoin => 'Kukaan ei voi liittyä';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user haluaa liittyä pikakeskusteluun.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'Julkista linkkiä ei ole vielä luotu';
 
   @override
   String get knock => 'Koputa';
@@ -1876,27 +1594,6 @@ class L10nFi extends L10n {
   String get screenSharingDetail => 'Jaat ruutuasi FluffyChatissä';
 
   @override
-  String get callingPermissions => 'Puheluoikeudet';
-
-  @override
-  String get callingAccount => 'Soittamistunnus';
-
-  @override
-  String get callingAccountDetails =>
-      'Sallii FluffyChatin käyttää Androidin omaa Puhelut-sovellusta.';
-
-  @override
-  String get appearOnTop => 'Näy päällä';
-
-  @override
-  String get appearOnTopDetails =>
-      'Sallii sovelluksen näkyä muiden sovellusten päällä (tätä ei tarvita, mikäli olet jo määrittänyt FluffyChatin puhelin-tunnukseksi)';
-
-  @override
-  String get otherCallingPermissions =>
-      'Mikrofoni, kamera ja muut FluffyChatin oikeudet';
-
-  @override
   String get whyIsThisMessageEncrypted => 'Miksei tätä viestiä voida lukea?';
 
   @override
@@ -1910,22 +1607,7 @@ class L10nFi extends L10n {
   String get newSpace => 'Uusi tila';
 
   @override
-  String get enterSpace => 'Siirry tilaan';
-
-  @override
-  String get enterRoom => 'Siirry huoneeseen';
-
-  @override
   String get allSpaces => 'Kaikki tilat';
-
-  @override
-  String numChats(String number) {
-    return '$number keskustelua';
-  }
-
-  @override
-  String get hideUnimportantStateEvents =>
-      'Piilota ei-niin-tärkeät tilatapahtumat';
 
   @override
   String get hidePresences => 'Piilotetaanko tilaluettelo?';
@@ -1995,20 +1677,6 @@ class L10nFi extends L10n {
   String get report => 'ilmoita';
 
   @override
-  String get signInWithPassword => 'Kirjaudu sisään salasanalla';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Yritä myöhemmin uudelleen tai valitse toinen palvelin.';
-
-  @override
-  String get profileNotFound =>
-      'Käyttäjää ei löydy palvelimelta. Tämä voi olla yhteysongelma tai käyttäjä ei ole olemassa.';
-
-  @override
-  String get setTheme => 'Aseta teema:';
-
-  @override
   String get setColorTheme => 'Aseta väriteema:';
 
   @override
@@ -2016,9 +1684,6 @@ class L10nFi extends L10n {
 
   @override
   String get inviteGroupChat => '📨 Kutsu ryhmäkeskusteluun';
-
-  @override
-  String get invitePrivateChat => '📨 Kutsu yksityiskeskusteluun';
 
   @override
   String get invalidInput => 'Virheellinen syöte!';
@@ -2101,9 +1766,6 @@ class L10nFi extends L10n {
       'Pahoittelut... tämä ei vaikuta olevan oikea palautusavain.';
 
   @override
-  String get startConversation => 'Aloita keskustelu';
-
-  @override
   String get commandHint_sendraw => 'Lähetä raaka JSON';
 
   @override
@@ -2138,9 +1800,6 @@ class L10nFi extends L10n {
   String get passwordIsWrong => 'Salasanasi on väärä';
 
   @override
-  String get publicLink => 'Julkinen linkki';
-
-  @override
   String get publicChatAddresses => 'Julkiset keskusteluosoitteet';
 
   @override
@@ -2156,24 +1815,10 @@ class L10nFi extends L10n {
   String get addChatOrSubSpace => 'Lisää pikakeskustelu tai alitila';
 
   @override
-  String get subspace => 'Alitila';
-
-  @override
-  String get decline => 'Hylkää';
-
-  @override
   String get thisDevice => 'Tämä laite:';
 
   @override
   String get initAppError => 'Sovelluksen alustamisessa tapahtui virhe';
-
-  @override
-  String get userRole => 'Käyttäjärooli';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level on pienin tehotaso.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2190,11 +1835,6 @@ class L10nFi extends L10n {
   String get files => 'Tiedostot';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'SQlite-tietokantaa ei voida rakentaa. Sovellus yrittää toistaiseksi käyttää vanhaa tietokantaa. Ilmoita tästä virheestä kehittäjille osoitteessa $url. Virheviesti on: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'Istuntosi on menetetty. Ilmoita tästä virheestä kehittäjille osoitteessa $url. Virheviesti on: $error';
   }
@@ -2202,11 +1842,6 @@ class L10nFi extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'Sovellus yrittää nyt palauttaa istuntosi varmuuskopiosta. Ilmoita tästä virheestä kehittäjille osoitteessa $url. Virheviesti on: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Lähetätkö viestin edelleen kohteeseen $roomName?';
   }
 
   @override
@@ -2375,16 +2010,6 @@ class L10nFi extends L10n {
   String get loginWithMatrixId => 'Kirjaudu sisään Matrix-tunnuksella';
 
   @override
-  String get discoverHomeservers => 'Tutustu kotipalvelimiin';
-
-  @override
-  String get whatIsAHomeserver => 'Mikä on kotipalvelin?';
-
-  @override
-  String get homeserverDescription =>
-      'Kaikki tietosi tallennetaan kotipalvelimelle, aivan kuten sähköpostipalveluntarjoaja. Voit valita, mitä kotipalvelinta haluat käyttää, ja silti kommunikoida kaikkien kanssa. Lisätietoja osoitteessa https://matrix.org.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Ei näytä olevan yhteensopiva kotipalvelin. Väärä URL-osoite?';
 
@@ -2392,26 +2017,10 @@ class L10nFi extends L10n {
   String get calculatingFileSize => 'Lasketaan tiedoston kokoa...';
 
   @override
-  String get prepareSendingAttachment => 'Valmistele lähetettävä liite...';
-
-  @override
   String get sendingAttachment => 'Lähetetään liitettä...';
 
   @override
-  String get generatingVideoThumbnail => 'Videon pikkukuvan luominen...';
-
-  @override
   String get compressVideo => 'Pakataan videota...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Lähetetään $length pituista liitettä $index...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Palvelinraja saavutettu! Odotetaan $seconds sekuntia...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2512,10 +2121,6 @@ class L10nFi extends L10n {
 
   @override
   String get waitingForServer => 'Odotetaan palvelinta...';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChatin avulla voit keskustella ystäviesi kanssa eri pikaviestimien kautta. Lue lisää osoitteesta https://matrix.org tai napauta *Jatka*.';
 
   @override
   String get newChatRequest => '📩 Uusi pikakeskustelupyyntö';
@@ -2775,18 +2380,6 @@ class L10nFi extends L10n {
   String get resume => 'Jatka';
 
   @override
-  String get newSubSpace => 'Uusi alitila';
-
-  @override
-  String get moveToDifferentSpace => 'Siirry eri tilaan';
-
-  @override
-  String get moveUp => 'Siirrä ylös';
-
-  @override
-  String get moveDown => 'Siirrä alas';
-
-  @override
   String get removeFromSpaceDescription =>
       'Pikakeskustelu poistetaan tilasta, mutta se näkyy edelleen pikakeskusteluluettelossasi.';
 
@@ -2806,9 +2399,6 @@ class L10nFi extends L10n {
   }
 
   @override
-  String get donate => 'Lahjoita';
-
-  @override
   String startedAPoll(String username) {
     return '$username aloitti kyselyn.';
   }
@@ -2824,9 +2414,6 @@ class L10nFi extends L10n {
 
   @override
   String get answersVisible => 'Vastaukset näkyvissä';
-
-  @override
-  String get answersHidden => 'Vastaukset piilotettu';
 
   @override
   String get pollQuestion => 'Kyselykysymys';
@@ -2950,5 +2537,129 @@ class L10nFi extends L10n {
   String get advancedConfigurations => 'Advanced configurations';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Sign in';
+
+  @override
+  String get createNewAccount => 'Create new account';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat is decentralized! Select a server where you want to create your account and let\'s go!';
+
+  @override
+  String get signInGreeting =>
+      'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
+
+  @override
+  String get appIntro =>
+      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
+
+  @override
+  String get theProcessWasCanceled => 'The process was canceled.';
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Search or enter homeserver address';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Set power level';
+
+  @override
+  String get makeModerator => 'Make moderator';
+
+  @override
+  String get makeAdmin => 'Make admin';
+
+  @override
+  String get removeModeratorRights => 'Remove moderator rights';
+
+  @override
+  String get removeAdminRights => 'Remove admin rights';
+
+  @override
+  String get powerLevel => 'Power level';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get mute => 'Mute';
+
+  @override
+  String get createNewChat => 'Create new chat';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

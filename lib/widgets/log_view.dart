@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
@@ -81,10 +86,10 @@ extension on LogEvent {
   String toDisplayString() {
     var str = '# [${level.toString().split('.').last.toUpperCase()}] $title';
     if (exception != null) {
-      str += ' - ${exception.toString()}';
+      str += ' - $exception';
     }
     if (stackTrace != null) {
-      str += '\n${stackTrace.toString()}';
+      str += '\n$stackTrace';
     }
     return str;
   }

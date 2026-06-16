@@ -18,17 +18,7 @@ class L10nZh extends L10n {
   String get notAnImage => '不是图像文件。';
 
   @override
-  String get setCustomPermissionLevel => '设置自定义权限等级';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      '请在下方选择预定义的角色或输入 0 到 100 间的自定义权限等级。';
-
-  @override
   String get ignoreUser => '忽略用户';
-
-  @override
-  String get normalUser => '正常用户';
 
   @override
   String get remove => '移除';
@@ -82,9 +72,6 @@ class L10nZh extends L10n {
   String supposedMxid(String mxid) {
     return '应为 $mxid';
   }
-
-  @override
-  String get addChatDescription => '添加聊天说明…';
 
   @override
   String get addToSpace => '添加到空间';
@@ -146,10 +133,13 @@ class L10nZh extends L10n {
   String get archive => '存档';
 
   @override
-  String get areGuestsAllowedToJoin => '是否允许访客加入';
+  String get areGuestsAllowedToJoin => '允许访客加入吗？';
 
   @override
   String get areYouSure => '你确定吗？';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout => '你确定要退出登录吗？';
@@ -184,29 +174,10 @@ class L10nZh extends L10n {
   String get sendOnEnter => '按 Enter 键发送';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return '主服务器支持的 Spec 版本：\n$serverVersions\n但此应用仅支持 $supportedVersions 版本';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats 个聊天和 $participants 名参与者';
-  }
-
-  @override
   String get noMoreChatsFound => '找不到更多聊天…';
 
   @override
   String get noChatsFoundHere => '此处尚未找到聊天。使用下方按钮 ⤵️ 开始和某人的新聊天';
-
-  @override
-  String get joinedChats => '已加入的聊天';
 
   @override
   String get unread => '未读';
@@ -233,9 +204,6 @@ class L10nZh extends L10n {
 
   @override
   String get blocked => '已屏蔽';
-
-  @override
-  String get botMessages => '机器人消息';
 
   @override
   String get cancel => '取消';
@@ -362,9 +330,6 @@ class L10nZh extends L10n {
   String get chatDetails => '聊天详情';
 
   @override
-  String get chatHasBeenAddedToThisSpace => '聊天已添加到此空间';
-
-  @override
   String get chats => '聊天';
 
   @override
@@ -454,19 +419,7 @@ class L10nZh extends L10n {
   String get configureChat => '配置聊天';
 
   @override
-  String get confirm => '确认';
-
-  @override
-  String get connect => '连接';
-
-  @override
   String get contactHasBeenInvitedToTheGroup => '联系人已被邀请至群组';
-
-  @override
-  String get containsDisplayName => '包含昵称';
-
-  @override
-  String get containsUserName => '包含用户名';
 
   @override
   String get contentHasBeenReported => '此内容已被报告至服务器管理员处';
@@ -524,16 +477,6 @@ class L10nZh extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$month-$day';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year-$month-$day';
-  }
-
-  @override
   String get deactivateAccountWarning => '这将停用你的用户账户。这不能被撤销！你确定吗？';
 
   @override
@@ -559,9 +502,6 @@ class L10nZh extends L10n {
 
   @override
   String get directChats => '私聊';
-
-  @override
-  String get allRooms => '所有群聊';
 
   @override
   String get displaynameHasBeenChanged => '昵称已更改';
@@ -624,9 +564,6 @@ class L10nZh extends L10n {
   String get emoteShortcode => '表情快捷码';
 
   @override
-  String get emoteWarnNeedToPick => '你需要选择一个表情快捷码和一张图片！';
-
-  @override
   String get emptyChat => '空聊天';
 
   @override
@@ -659,18 +596,12 @@ class L10nZh extends L10n {
   String get homeserver => '服务器';
 
   @override
-  String get enterYourHomeserver => '输入你的主服务器地址';
-
-  @override
   String errorObtainingLocation(String error) {
     return '取得地址错误: $error';
   }
 
   @override
   String get everythingReady => '一切就绪！';
-
-  @override
-  String get extremeOffensive => '令人极度反感';
 
   @override
   String get fileName => '文件名';
@@ -689,9 +620,6 @@ class L10nZh extends L10n {
 
   @override
   String get fromTheInvitation => '自邀请起';
-
-  @override
-  String get goToTheNewRoom => '前往新的聊天室';
 
   @override
   String get group => '群组';
@@ -740,13 +668,7 @@ class L10nZh extends L10n {
   String get hideInvalidOrUnknownMessageFormats => '隐藏无效或未知的消息格式';
 
   @override
-  String get howOffensiveIsThisContent => '这些内容有多令人反感？';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => '身份';
 
   @override
   String get block => '屏蔽';
@@ -767,15 +689,7 @@ class L10nZh extends L10n {
   String get incorrectPassphraseOrKey => '不正确的密码短语或恢复密钥';
 
   @override
-  String get inoffensive => '不令人反感';
-
-  @override
   String get inviteContact => '邀请联系人';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return '你是否要邀请 $contact 参与聊天 \"$groupName\"？';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -807,9 +721,6 @@ class L10nZh extends L10n {
 
   @override
   String get invitedUsersOnly => '仅被邀请用户';
-
-  @override
-  String get inviteForMe => '发给我的邀请';
 
   @override
   String inviteText(String username, String link) {
@@ -852,9 +763,6 @@ class L10nZh extends L10n {
   String get leftTheChat => '离开了聊天';
 
   @override
-  String get license => '许可证';
-
-  @override
   String get lightTheme => '浅色';
 
   @override
@@ -867,18 +775,6 @@ class L10nZh extends L10n {
 
   @override
   String get dehydrateWarning => '此操作无法撤消。 确保你安全地存储备份文件。';
-
-  @override
-  String get dehydrateTor => 'TOR 用户：导出会话';
-
-  @override
-  String get dehydrateTorLong => '建议 TOR 用户在关闭窗口之前导出会话。';
-
-  @override
-  String get hydrateTor => 'TOR 用户：导入会话导出';
-
-  @override
-  String get hydrateTorLong => '你上次是否导出 TOR 会话？ 快速导入它并继续聊天。';
 
   @override
   String get hydrate => '从备份文件恢复';
@@ -905,9 +801,6 @@ class L10nZh extends L10n {
 
   @override
   String get logout => '退出登录';
-
-  @override
-  String get memberChanges => '成员变更';
 
   @override
   String get mention => '提及';
@@ -982,18 +875,12 @@ class L10nZh extends L10n {
   String get notifications => '通知';
 
   @override
-  String get notificationsEnabledForThisAccount => '已为此账户启用通知';
-
-  @override
   String numUsersTyping(int count) {
     return '$count 人正在输入…';
   }
 
   @override
   String get obtainingLocation => '获取位置中…';
-
-  @override
-  String get offensive => '令人反感';
 
   @override
   String get offline => '离线';
@@ -1020,9 +907,6 @@ class L10nZh extends L10n {
   String get openCamera => '打开相机';
 
   @override
-  String get openVideoCamera => '打开相机拍摄视频';
-
-  @override
   String get oneClientLoggedOut => '你的一个客户端已登出';
 
   @override
@@ -1039,9 +923,6 @@ class L10nZh extends L10n {
 
   @override
   String get bundleName => '集合名称';
-
-  @override
-  String get enableMultiAccounts => '（测试功能）在此设备上添加多个账户';
 
   @override
   String get openInMaps => '在地图中打开';
@@ -1071,26 +952,13 @@ class L10nZh extends L10n {
   String get passwordHasBeenChanged => '密码已被更改';
 
   @override
-  String get hideMemberChangesInPublicChats => '在公开聊天中隐藏成员变化';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      '不在聊天时间线中显示某人是否加入或离开了公开聊天来改进可读性。';
-
-  @override
   String get overview => '概览';
-
-  @override
-  String get notifyMeFor => '提示内容';
 
   @override
   String get passwordRecoverySettings => '密码发现设置';
 
   @override
   String get passwordRecovery => '密码恢复';
-
-  @override
-  String get people => '联系人';
 
   @override
   String get pickImage => '选择图像';
@@ -1104,9 +972,6 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get pleaseChoose => '请选择';
-
-  @override
   String get pleaseChooseAPasscode => '请选择一个密码';
 
   @override
@@ -1114,9 +979,6 @@ class L10nZh extends L10n {
 
   @override
   String get pleaseEnter4Digits => '请输入 4 位数字或留空以停用应用锁。';
-
-  @override
-  String get pleaseEnterRecoveryKey => '请输入你的恢复密钥：';
 
   @override
   String get pleaseEnterYourPassword => '请输入你的密码';
@@ -1178,18 +1040,12 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get rejoin => '重新加入';
-
-  @override
   String get removeAllOtherDevices => '移除所有其它设备';
 
   @override
   String removedBy(String username) {
     return '被 $username 移除';
   }
-
-  @override
-  String get removeDevice => '移除设备';
 
   @override
   String get unbanFromChat => '从聊天中解封';
@@ -1231,11 +1087,6 @@ class L10nZh extends L10n {
   String get recoveryKeyLost => '丢失了恢复密钥？';
 
   @override
-  String seenByUser(String username) {
-    return '被 $username 看见';
-  }
-
-  @override
   String get send => '发送';
 
   @override
@@ -1260,12 +1111,6 @@ class L10nZh extends L10n {
 
   @override
   String get sendMessages => '发送消息';
-
-  @override
-  String get sendOriginal => '发送原图';
-
-  @override
-  String get sendSticker => '发送贴纸';
 
   @override
   String get sendVideo => '发送视频';
@@ -1301,22 +1146,10 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get separateChatTypes => '分开私聊和群组';
-
-  @override
   String get setAsCanonicalAlias => '设为主要别名';
 
   @override
-  String get setCustomEmotes => '设置自定义表情';
-
-  @override
   String get setChatDescription => '设置聊天描述';
-
-  @override
-  String get setInvitationLink => '设置邀请链接';
-
-  @override
-  String get setPermissionsLevel => '设置权限级别';
 
   @override
   String get setStatus => '设置状态';
@@ -1339,13 +1172,7 @@ class L10nZh extends L10n {
   String get showPassword => '显示密码';
 
   @override
-  String get presenceStyle => '是否在线：';
-
-  @override
   String get presencesToggle => '显示其他用户的状态消息';
-
-  @override
-  String get singlesignon => '单点登录';
 
   @override
   String get skip => '跳过';
@@ -1363,9 +1190,6 @@ class L10nZh extends L10n {
   String startedACall(String senderName) {
     return '$senderName 开始了通话';
   }
-
-  @override
-  String get startFirstChat => '发起你的第一个聊天';
 
   @override
   String get status => '状态';
@@ -1395,15 +1219,6 @@ class L10nZh extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => '切换收藏';
-
-  @override
-  String get toggleMuted => '切换静音';
-
-  @override
-  String get toggleUnread => '标记已读/未读';
 
   @override
   String get tooManyRequestsWarning => '请求过多。请稍后再试！';
@@ -1441,17 +1256,6 @@ class L10nZh extends L10n {
 
   @override
   String get unpin => '取消置顶';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount 个未读聊天',
-      one: '1 个未读聊天',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1524,9 +1328,6 @@ class L10nZh extends L10n {
   String get waitingPartnerNumbers => '等待对方接受数字…';
 
   @override
-  String get wallpaper => '壁纸：';
-
-  @override
   String get warning => '警告！';
 
   @override
@@ -1584,25 +1385,11 @@ class L10nZh extends L10n {
   String get removeFromSpace => '从此空间中移除';
 
   @override
-  String get addToSpaceDescription => '选择一个空间以添加此聊天。';
-
-  @override
   String get start => '开始';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       '要解锁你的旧邮件，请输入你在之前会话中生成的恢复密钥。 你的恢复密钥不是你的密码。';
-
-  @override
-  String get publish => '发布';
-
-  @override
-  String videoWithSize(String size) {
-    return '视频 ($size)';
-  }
-
-  @override
-  String get openChat => '打开聊天';
 
   @override
   String get markAsRead => '标为已读';
@@ -1648,54 +1435,6 @@ class L10nZh extends L10n {
   String get experimentalVideoCalls => '实验性的视频通话';
 
   @override
-  String get emailOrUsername => '电子邮箱或用户名';
-
-  @override
-  String get indexedDbErrorTitle => '私有模式问题';
-
-  @override
-  String get indexedDbErrorLong =>
-      '遗憾的是，默认情况下未在私有模式下启用消息存储。\n请访问\n - about:config\n - 将 dom.indexedDB.privateBrowsing.enabled 设置为 true\n否则，无法运行 FluffyChat。';
-
-  @override
-  String switchToAccount(String number) {
-    return '切换到账户 $number';
-  }
-
-  @override
-  String get nextAccount => '下个账户';
-
-  @override
-  String get previousAccount => '上个账户';
-
-  @override
-  String get addWidget => '添加小部件';
-
-  @override
-  String get widgetVideo => '视频';
-
-  @override
-  String get widgetEtherpad => '文本笔记';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => '自定义';
-
-  @override
-  String get widgetName => '名称';
-
-  @override
-  String get widgetUrlError => '这不是有效的 URL。';
-
-  @override
-  String get widgetNameError => '请提供昵称。';
-
-  @override
-  String get errorAddingWidget => '添加小部件出错。';
-
-  @override
   String get youRejectedTheInvitation => '你拒绝了邀请';
 
   @override
@@ -1712,11 +1451,6 @@ class L10nZh extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return '你撤回了对 $user 的邀请';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 你已通过链接被邀请到：\n$alias';
   }
 
   @override
@@ -1759,14 +1493,6 @@ class L10nZh extends L10n {
 
   @override
   String get noOneCanJoin => '无人可以加入';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user 想加入聊天。';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet => '尚未创建公开链接';
 
   @override
   String get knock => '请求';
@@ -1813,25 +1539,6 @@ class L10nZh extends L10n {
   String get screenSharingDetail => '你正在 FluffyChat 中共享屏幕';
 
   @override
-  String get callingPermissions => '呼叫权限';
-
-  @override
-  String get callingAccount => '呼叫账户';
-
-  @override
-  String get callingAccountDetails => '允许 FluffyChat 使用本机 android 拨号器应用。';
-
-  @override
-  String get appearOnTop => '显示在其它应用上方';
-
-  @override
-  String get appearOnTopDetails =>
-      '允许应用显示在顶部（如果你已经将 Fluffychat 设置为呼叫账户，则不需要授予此权限）';
-
-  @override
-  String get otherCallingPermissions => '麦克风、摄像头和其它 FluffyChat 权限';
-
-  @override
   String get whyIsThisMessageEncrypted => '为什么此消息不可读？';
 
   @override
@@ -1845,21 +1552,7 @@ class L10nZh extends L10n {
   String get newSpace => '新的空间';
 
   @override
-  String get enterSpace => '进入空间';
-
-  @override
-  String get enterRoom => '进入聊天室';
-
-  @override
   String get allSpaces => '所有空间';
-
-  @override
-  String numChats(String number) {
-    return '$number 个聊天';
-  }
-
-  @override
-  String get hideUnimportantStateEvents => '隐藏不重要的状态事件';
 
   @override
   String get hidePresences => '隐藏状态列表？';
@@ -1925,18 +1618,6 @@ class L10nZh extends L10n {
   String get report => '报错';
 
   @override
-  String get signInWithPassword => '使用密码登录';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer => '请稍后再试或选择其它服务器。';
-
-  @override
-  String get profileNotFound => '服务器上找不到此用户。可能是连接有问题或者用户不存在。';
-
-  @override
-  String get setTheme => '设置主题：';
-
-  @override
   String get setColorTheme => '设置主题颜色：';
 
   @override
@@ -1944,9 +1625,6 @@ class L10nZh extends L10n {
 
   @override
   String get inviteGroupChat => '📨 群聊邀请';
-
-  @override
-  String get invitePrivateChat => '📨 私聊邀请';
 
   @override
   String get invalidInput => '无效的输入！';
@@ -2022,9 +1700,6 @@ class L10nZh extends L10n {
   String get wrongRecoveryKey => '抱歉…这似乎不是正确的恢复密钥。';
 
   @override
-  String get startConversation => '开始对话';
-
-  @override
   String get commandHint_sendraw => '发送原始 json';
 
   @override
@@ -2058,9 +1733,6 @@ class L10nZh extends L10n {
   String get passwordIsWrong => '你输入的密码有误';
 
   @override
-  String get publicLink => '公开链接';
-
-  @override
   String get publicChatAddresses => '公开聊天的地址';
 
   @override
@@ -2076,24 +1748,10 @@ class L10nZh extends L10n {
   String get addChatOrSubSpace => '添加聊天或子空间';
 
   @override
-  String get subspace => '子空间';
-
-  @override
-  String get decline => '拒绝';
-
-  @override
   String get thisDevice => '此设备：';
 
   @override
   String get initAppError => '在初始化应用时发生错误';
-
-  @override
-  String get userRole => '用户角色';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level 是最低权限等级。';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2110,11 +1768,6 @@ class L10nZh extends L10n {
   String get files => '文件';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return '无法构建 SQLite 数据库。目前应用尝试使用旧数据库。请将此错误报告给开发者，网址为 $url。错误消息为：$error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return '你的会话已丢失。请将此错误报告给开发者，网址为 $url。错误消息为：$error';
   }
@@ -2122,11 +1775,6 @@ class L10nZh extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return '应用现在尝试从备份中恢复你的会话。请将此错误报告给开发者，网址为 $url。错误消息为：$error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return '转发消息至 $roomName ？';
   }
 
   @override
@@ -2288,42 +1936,16 @@ class L10nZh extends L10n {
   String get loginWithMatrixId => '使用 Matrix-ID 登录';
 
   @override
-  String get discoverHomeservers => '发现主服务器';
-
-  @override
-  String get whatIsAHomeserver => '什么是主服务器？';
-
-  @override
-  String get homeserverDescription =>
-      '主服务器上就像电子邮件提供商，你的所有数据都存储在上面。你可以选择你想使用哪个主服务器。在 https://matrix.org 上了解更多信息。';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver => '似乎不是兼容的主服务器。URL 不正确？';
 
   @override
   String get calculatingFileSize => '计算文件尺寸中…';
 
   @override
-  String get prepareSendingAttachment => '准备发送附件…';
-
-  @override
   String get sendingAttachment => '发送附件中…';
 
   @override
-  String get generatingVideoThumbnail => '生成视频缩略图中…';
-
-  @override
   String get compressVideo => '压缩视频中…';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return '正在发送附件 $index，共 $length 个附件…';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return '达到了服务器限制！等待 $seconds 秒…';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified => '您设备中的一台未验证';
@@ -2418,10 +2040,6 @@ class L10nZh extends L10n {
 
   @override
   String get waitingForServer => '正在等待服务器…';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChat 让使用不同即时通信工具的你和你的好友得以聊天。 访问 https://matrix.org 了解详情或轻按 *继续*。';
 
   @override
   String get newChatRequest => '📩 新的聊天请求';
@@ -2656,18 +2274,6 @@ class L10nZh extends L10n {
   String get resume => '继续';
 
   @override
-  String get newSubSpace => '新建子空间';
-
-  @override
-  String get moveToDifferentSpace => '移动到别的空间';
-
-  @override
-  String get moveUp => '上移';
-
-  @override
-  String get moveDown => '下移';
-
-  @override
   String get removeFromSpaceDescription => '将从空间移除该聊天，但仍出现在聊天列表中。';
 
   @override
@@ -2686,9 +2292,6 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get donate => '捐赠';
-
-  @override
   String startedAPoll(String username) {
     return '$username 启动了投票。';
   }
@@ -2704,9 +2307,6 @@ class L10nZh extends L10n {
 
   @override
   String get answersVisible => '结果可见';
-
-  @override
-  String get answersHidden => '结果隐藏';
 
   @override
   String get pollQuestion => '投票问题';
@@ -2794,41 +2394,160 @@ class L10nZh extends L10n {
   String get setupChatBackup => '设置聊天备份';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => '未找到更多结果';
 
   @override
   String chatSearchedUntil(String time) {
-    return 'Chat searched until $time';
+    return '搜索了截至 $time 的聊天记录';
   }
 
   @override
-  String get federationBaseUrl => 'Federation Base URL';
+  String get federationBaseUrl => '联邦基础 URL';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation => 'Client-Well-Known 信息：';
 
   @override
-  String get baseUrl => 'Base URL';
+  String get baseUrl => '基础 URL';
 
   @override
-  String get identityServer => 'Identity Server:';
+  String get identityServer => '身份服务器：';
 
   @override
   String versionWithNumber(String version) {
-    return 'Version: $version';
+    return '版本：$version';
   }
 
   @override
-  String get logs => 'Logs';
+  String get logs => '日志';
 
   @override
-  String get advancedConfigs => 'Advanced Configs';
+  String get advancedConfigs => '高级配置';
 
   @override
-  String get advancedConfigurations => 'Advanced configurations';
+  String get advancedConfigurations => '高级配置';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => '登录';
+
+  @override
+  String get createNewAccount => '创建新账户';
+
+  @override
+  String get signUpGreeting => 'FluffyChat 是去中心化的！选择您希望创建账户的服务器！';
+
+  @override
+  String get signInGreeting => '已经有 Matrix 账户了？欢迎回来！选择 homeserver 登录。';
+
+  @override
+  String get appIntro =>
+      '借助 FluffyChat，您可以和好友聊天。它是安全的去中心化 [matrix] 消息收发应用！如果愿意，可以在 https://matrix.org 了解更多信息，也可直接注册账户。';
+
+  @override
+  String get theProcessWasCanceled => '过程被取消。';
+
+  @override
+  String get join => '加入';
+
+  @override
+  String get searchOrEnterHomeserverAddress => '搜索或输入 homeserver 地址';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => '设置权限级别';
+
+  @override
+  String get makeModerator => '协管员';
+
+  @override
+  String get makeAdmin => '管理员';
+
+  @override
+  String get removeModeratorRights => '删除协管员权限';
+
+  @override
+  String get removeAdminRights => '删除管理员权限';
+
+  @override
+  String get powerLevel => '权限级别';
+
+  @override
+  String get setPowerLevelDescription => '权限级别定义群成员在这个聊天室中可以做什么，取值范围 0 到 100。';
+
+  @override
+  String get owner => '所有者';
+
+  @override
+  String get mute => '静音';
+
+  @override
+  String get createNewChat => '新建聊天';
+
+  @override
+  String get reset => '重置';
+
+  @override
+  String get supportFluffyChat => '支持 FluffyChat';
+
+  @override
+  String get support => '支持';
+
+  @override
+  String get setLowPriority => '设置低优先级';
+
+  @override
+  String get unsetLowPriority => '取消设置低优先级';
+
+  @override
+  String get removeCallFromChat => '从聊天中删除通话';
+
+  @override
+  String get removeCallFromChatDescription => '要为所有成员从聊天中删除通话吗？';
+
+  @override
+  String get removeCallForEveryone => '为所有人删除通话';
+
+  @override
+  String get startVoiceCall => '开始语音通话';
+
+  @override
+  String get startVideoCall => '开始视频通话';
+
+  @override
+  String get joinVoiceCall => '加入语音通话';
+
+  @override
+  String get joinVideoCall => '加入视频通话';
+
+  @override
+  String get live => '实时';
+
+  @override
+  String get playSoundOnNotification => '播放通知声音';
+
+  @override
+  String get addTag => '添加标签';
+
+  @override
+  String get removeTag => '删除标签';
+
+  @override
+  String get tagName => '标签名';
+
+  @override
+  String get createNewTag => '创建新标签';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -2845,17 +2564,7 @@ class L10nZhHant extends L10nZh {
   String get notAnImage => '不是圖片檔案。';
 
   @override
-  String get setCustomPermissionLevel => '設置自定義權限等級';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      '請在下方選擇預先定義的角色，或輸入在 0 到 100 之間的自訂權限等級。';
-
-  @override
   String get ignoreUser => '忽略用户';
-
-  @override
-  String get normalUser => '正常用户';
 
   @override
   String get remove => '移除';
@@ -2909,9 +2618,6 @@ class L10nZhHant extends L10nZh {
   String supposedMxid(String mxid) {
     return '此處應爲 $mxid';
   }
-
-  @override
-  String get addChatDescription => '新增聊天室描述......';
 
   @override
   String get addToSpace => '加入空間';
@@ -3011,29 +2717,10 @@ class L10nZhHant extends L10nZh {
   String get sendOnEnter => '按 Enter 鍵傳送';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return '目前伺服器支援的協議版本：\n$serverVersions\n但本應用程式僅支援 $supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats 個聊天室和 $participants 位參與者';
-  }
-
-  @override
   String get noMoreChatsFound => '沒有更多聊天室了...';
 
   @override
   String get noChatsFoundHere => '還沒開始聊天嗎？點擊下方按鈕找個人聊聊吧⤵';
-
-  @override
-  String get joinedChats => '已加入的聊天室';
 
   @override
   String get unread => '未讀';
@@ -3060,9 +2747,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get blocked => '已封鎖';
-
-  @override
-  String get botMessages => '機器人訊息';
 
   @override
   String get cancel => '取消';
@@ -3179,9 +2863,6 @@ class L10nZhHant extends L10nZh {
   String get chatDetails => '對話詳細';
 
   @override
-  String get chatHasBeenAddedToThisSpace => '聊天室已新增到此空間';
-
-  @override
   String get chats => '聊天室';
 
   @override
@@ -3271,19 +2952,7 @@ class L10nZhHant extends L10nZh {
   String get configureChat => '設定聊天室';
 
   @override
-  String get confirm => '確認';
-
-  @override
-  String get connect => '連接';
-
-  @override
   String get contactHasBeenInvitedToTheGroup => '聯絡人已被邀請至群組';
-
-  @override
-  String get containsDisplayName => '包含顯示名稱';
-
-  @override
-  String get containsUserName => '包含使用者名稱';
 
   @override
   String get contentHasBeenReported => '此內容已被回報給伺服器管理員們';
@@ -3338,16 +3007,6 @@ class L10nZhHant extends L10nZh {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$month - $day';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year - $month - $day';
-  }
-
-  @override
   String get deactivateAccountWarning => '這將停用您的帳號。這個決定是不能挽回的！您確定嗎？';
 
   @override
@@ -3373,9 +3032,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get directChats => '直接傳訊';
-
-  @override
-  String get allRooms => '所有群組聊天室';
 
   @override
   String get displaynameHasBeenChanged => '顯示名稱已被變更';
@@ -3438,9 +3094,6 @@ class L10nZhHant extends L10nZh {
   String get emoteShortcode => '表情快捷鍵';
 
   @override
-  String get emoteWarnNeedToPick => '您需要選取一個表情快捷鍵和一張圖片！';
-
-  @override
   String get emptyChat => '空的聊天室';
 
   @override
@@ -3473,18 +3126,12 @@ class L10nZhHant extends L10nZh {
   String get homeserver => '伺服器';
 
   @override
-  String get enterYourHomeserver => '輸入伺服器位址';
-
-  @override
   String errorObtainingLocation(String error) {
     return '取得位置錯誤：$error';
   }
 
   @override
   String get everythingReady => '一切就緒！';
-
-  @override
-  String get extremeOffensive => '極端令人反感';
 
   @override
   String get fileName => '檔案名稱';
@@ -3503,9 +3150,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get fromTheInvitation => '自邀請起';
-
-  @override
-  String get goToTheNewRoom => '前往新聊天室';
 
   @override
   String get group => '群組';
@@ -3554,13 +3198,7 @@ class L10nZhHant extends L10nZh {
   String get hideInvalidOrUnknownMessageFormats => '隱藏無效或未知的訊息格式';
 
   @override
-  String get howOffensiveIsThisContent => '這個內容有多令人反感？';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => '身份';
 
   @override
   String get block => '封鎖';
@@ -3581,15 +3219,7 @@ class L10nZhHant extends L10nZh {
   String get incorrectPassphraseOrKey => '錯誤的密碼短語或恢復金鑰';
 
   @override
-  String get inoffensive => '不令人反感';
-
-  @override
   String get inviteContact => '邀請聯絡人';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return '您想邀請 $contact 加入 「$groupName」 聊天室嗎？';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -3621,9 +3251,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get invitedUsersOnly => '只有被邀請的使用者';
-
-  @override
-  String get inviteForMe => '來自我的邀請';
 
   @override
   String inviteText(String username, String link) {
@@ -3666,9 +3293,6 @@ class L10nZhHant extends L10nZh {
   String get leftTheChat => '離開了聊天室';
 
   @override
-  String get license => '授權';
-
-  @override
   String get lightTheme => '日間模式';
 
   @override
@@ -3681,18 +3305,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get dehydrateWarning => '此操作不能反悔。請確保安全地存儲備份文件。';
-
-  @override
-  String get dehydrateTor => 'TOR 使用者：匯出會話';
-
-  @override
-  String get dehydrateTorLong => '對 TOR 使用者，建議在關閉窗口前匯出會話。';
-
-  @override
-  String get hydrateTor => 'TOR 使用者：匯入會話';
-
-  @override
-  String get hydrateTorLong => '上次在 TOR 上匯出會話了嗎？快速匯入它已繼續使用聊天室。';
 
   @override
   String get hydrate => '從備份文件恢復';
@@ -3719,9 +3331,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get logout => '登出';
-
-  @override
-  String get memberChanges => '變更成員';
 
   @override
   String get mention => '提及';
@@ -3796,18 +3405,12 @@ class L10nZhHant extends L10nZh {
   String get notifications => '通知';
 
   @override
-  String get notificationsEnabledForThisAccount => '已為此帳號啟用通知';
-
-  @override
   String numUsersTyping(int count) {
     return '$count 個人正在輸入...…';
   }
 
   @override
   String get obtainingLocation => '正在取得位置…';
-
-  @override
-  String get offensive => '令人反感';
 
   @override
   String get offline => '離線';
@@ -3834,9 +3437,6 @@ class L10nZhHant extends L10nZh {
   String get openCamera => '開啟相機';
 
   @override
-  String get openVideoCamera => '打開錄影';
-
-  @override
   String get oneClientLoggedOut => '您的一個客戶端已登出';
 
   @override
@@ -3853,9 +3453,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get bundleName => '套組名稱';
-
-  @override
-  String get enableMultiAccounts => '（實驗性功能）在此裝置上啟用多個帳號';
 
   @override
   String get openInMaps => '在地圖中打開';
@@ -3885,26 +3482,13 @@ class L10nZhHant extends L10nZh {
   String get passwordHasBeenChanged => '密碼已被變更';
 
   @override
-  String get hideMemberChangesInPublicChats => '在公開聊天室中隱藏成員變動';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      '若有人加入或離開公開聊天室，將不在聊天室時間軸顯示，以提升資訊可讀性。';
-
-  @override
   String get overview => '概觀';
-
-  @override
-  String get notifyMeFor => '通知我';
 
   @override
   String get passwordRecoverySettings => '恢復密碼設定';
 
   @override
   String get passwordRecovery => '恢復密碼';
-
-  @override
-  String get people => '人';
 
   @override
   String get pickImage => '選擇圖片';
@@ -3918,9 +3502,6 @@ class L10nZhHant extends L10nZh {
   }
 
   @override
-  String get pleaseChoose => '請選擇';
-
-  @override
   String get pleaseChooseAPasscode => '請選擇一個密碼';
 
   @override
@@ -3928,9 +3509,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get pleaseEnter4Digits => '請輸入4位數字，或留空以停用密碼鎖定。';
-
-  @override
-  String get pleaseEnterRecoveryKey => '請輸入您的恢復金鑰：';
 
   @override
   String get pleaseEnterYourPassword => '請輸入您的密碼';
@@ -3992,18 +3570,12 @@ class L10nZhHant extends L10nZh {
   }
 
   @override
-  String get rejoin => '重新加入';
-
-  @override
   String get removeAllOtherDevices => '移除所有其他裝置';
 
   @override
   String removedBy(String username) {
     return '被 $username 移除';
   }
-
-  @override
-  String get removeDevice => '移除裝置';
 
   @override
   String get unbanFromChat => '解封聊天室';
@@ -4045,11 +3617,6 @@ class L10nZhHant extends L10nZh {
   String get recoveryKeyLost => '遺失恢復金鑰？';
 
   @override
-  String seenByUser(String username) {
-    return '$username 已讀';
-  }
-
-  @override
   String get send => '傳送';
 
   @override
@@ -4074,12 +3641,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get sendMessages => '傳送訊息';
-
-  @override
-  String get sendOriginal => '傳送原始內容';
-
-  @override
-  String get sendSticker => '傳送貼圖';
 
   @override
   String get sendVideo => '傳送影片';
@@ -4115,22 +3676,10 @@ class L10nZhHant extends L10nZh {
   }
 
   @override
-  String get separateChatTypes => '分開私訊和群組';
-
-  @override
   String get setAsCanonicalAlias => '設為主要別名';
 
   @override
-  String get setCustomEmotes => '自訂表情符號';
-
-  @override
   String get setChatDescription => '設定聊天室描述';
-
-  @override
-  String get setInvitationLink => '設定邀請連結';
-
-  @override
-  String get setPermissionsLevel => '設定權限等級';
 
   @override
   String get setStatus => '設定狀態';
@@ -4153,13 +3702,7 @@ class L10nZhHant extends L10nZh {
   String get showPassword => '顯示密碼';
 
   @override
-  String get presenceStyle => '目前狀態：';
-
-  @override
   String get presencesToggle => '顯示其他使用者的狀態訊息';
-
-  @override
-  String get singlesignon => '單一登入';
 
   @override
   String get skip => '跳過';
@@ -4177,9 +3720,6 @@ class L10nZhHant extends L10nZh {
   String startedACall(String senderName) {
     return '$senderName 開始了通話';
   }
-
-  @override
-  String get startFirstChat => '開始您的第一次聊天室';
 
   @override
   String get status => '狀態';
@@ -4209,15 +3749,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => '切換收藏夾';
-
-  @override
-  String get toggleMuted => '切換靜音';
-
-  @override
-  String get toggleUnread => '標示為已讀/未讀';
 
   @override
   String get tooManyRequestsWarning => '太多請求了。請稍候再試！';
@@ -4255,17 +3786,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get unpin => '取消釘選';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: ' $unreadCount 個未讀聊天室',
-      one: '1 unread chat',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -4338,9 +3858,6 @@ class L10nZhHant extends L10nZh {
   String get waitingPartnerNumbers => '正在等待夥伴接受數字...…';
 
   @override
-  String get wallpaper => '桌布：';
-
-  @override
   String get warning => '警告！';
 
   @override
@@ -4398,25 +3915,11 @@ class L10nZhHant extends L10nZh {
   String get removeFromSpace => '從空間中移除';
 
   @override
-  String get addToSpaceDescription => '選擇一個空間將此聊天室加入。';
-
-  @override
   String get start => '開始';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       '要解鎖您的舊訊息，請輸入在之前的會話中生成的恢復密鑰。您的恢復密鑰不是您的密碼。';
-
-  @override
-  String get publish => '發布';
-
-  @override
-  String videoWithSize(String size) {
-    return '影片（$size）';
-  }
-
-  @override
-  String get openChat => '開啟聊天室';
 
   @override
   String get markAsRead => '標示為已讀';
@@ -4462,54 +3965,6 @@ class L10nZhHant extends L10nZh {
   String get experimentalVideoCalls => '實驗性視訊通話';
 
   @override
-  String get emailOrUsername => '電子郵件或使用者名';
-
-  @override
-  String get indexedDbErrorTitle => '私密模式問題';
-
-  @override
-  String get indexedDbErrorLong =>
-      '預設情況下，私密模式不啟用消息存儲。\n請訪問\n - about:config\n - 將 dom.indexedDB.privateBrowsing.enabled 設定為 true\n否則，無法運行 FluffyChat。';
-
-  @override
-  String switchToAccount(String number) {
-    return '切換到帳戶 $number';
-  }
-
-  @override
-  String get nextAccount => '下一個帳戶';
-
-  @override
-  String get previousAccount => '上一個帳戶';
-
-  @override
-  String get addWidget => '新增小工具';
-
-  @override
-  String get widgetVideo => '影片';
-
-  @override
-  String get widgetEtherpad => '文字筆記';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => '自訂';
-
-  @override
-  String get widgetName => '名稱';
-
-  @override
-  String get widgetUrlError => '這不是一個有效的URL。';
-
-  @override
-  String get widgetNameError => '請提供一個顯示名稱。';
-
-  @override
-  String get errorAddingWidget => '新增小工具時發生錯誤。';
-
-  @override
   String get youRejectedTheInvitation => '您拒絕了邀請';
 
   @override
@@ -4526,11 +3981,6 @@ class L10nZhHant extends L10nZh {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return '您已收回對 $user 的邀請';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 您通過網址被邀請至：\n$alias';
   }
 
   @override
@@ -4573,14 +4023,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get noOneCanJoin => '沒有人可以加入';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user 想要加入聊天室。';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet => '尚未建立公開網址';
 
   @override
   String get knock => '敲門';
@@ -4627,24 +4069,6 @@ class L10nZhHant extends L10nZh {
   String get screenSharingDetail => '您正在 FuffyChat 中分享您的螢幕';
 
   @override
-  String get callingPermissions => '通話權限';
-
-  @override
-  String get callingAccount => '通話帳戶';
-
-  @override
-  String get callingAccountDetails => '允許 FluffyChat 使用原生 Android 撥號應用程式。';
-
-  @override
-  String get appearOnTop => '顯示在最上層';
-
-  @override
-  String get appearOnTopDetails => '允許應用程式顯示在最上層（如果您已將 Fluffychat 設定為通話帳戶則不需要）';
-
-  @override
-  String get otherCallingPermissions => '麥克風、相機和其他 FluffyChat 權限';
-
-  @override
   String get whyIsThisMessageEncrypted => '為什麼這條訊息無法讀取？';
 
   @override
@@ -4658,21 +4082,7 @@ class L10nZhHant extends L10nZh {
   String get newSpace => '新空間';
 
   @override
-  String get enterSpace => '進入空間';
-
-  @override
-  String get enterRoom => '進入房間';
-
-  @override
   String get allSpaces => '所有空間';
-
-  @override
-  String numChats(String number) {
-    return '$number 個聊天室';
-  }
-
-  @override
-  String get hideUnimportantStateEvents => '隱藏不重要的狀態事件';
 
   @override
   String get hidePresences => '隱藏狀態列表？';
@@ -4738,18 +4148,6 @@ class L10nZhHant extends L10nZh {
   String get report => '報告';
 
   @override
-  String get signInWithPassword => '使用密碼登入';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer => '請稍後再試，或選擇不同的伺服器。';
-
-  @override
-  String get profileNotFound => '在伺服器上找不到該使用者。可能是連接問題或該使用者不存在。';
-
-  @override
-  String get setTheme => '設定主題：';
-
-  @override
   String get setColorTheme => '設定主題顏色：';
 
   @override
@@ -4757,9 +4155,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get inviteGroupChat => '📨 邀請群組聊天室';
-
-  @override
-  String get invitePrivateChat => '📨 邀請私人聊天室';
 
   @override
   String get invalidInput => '無效的輸入！';
@@ -4836,9 +4231,6 @@ class L10nZhHant extends L10nZh {
   String get wrongRecoveryKey => '抱歉......這似乎不是正確的恢復密鑰。';
 
   @override
-  String get startConversation => '開始對話';
-
-  @override
   String get commandHint_sendraw => '傳送原始 json';
 
   @override
@@ -4872,9 +4264,6 @@ class L10nZhHant extends L10nZh {
   String get passwordIsWrong => '您輸入的密碼錯誤';
 
   @override
-  String get publicLink => '公開網址';
-
-  @override
   String get publicChatAddresses => '公開聊天室地址';
 
   @override
@@ -4890,24 +4279,10 @@ class L10nZhHant extends L10nZh {
   String get addChatOrSubSpace => '新增聊天室或子空間';
 
   @override
-  String get subspace => '子空間';
-
-  @override
-  String get decline => '拒絕';
-
-  @override
   String get thisDevice => '這個裝置：';
 
   @override
   String get initAppError => '初始化應用時發生錯誤';
-
-  @override
-  String get userRole => '使用者角色';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level 是最低權限等級。';
-  }
 
   @override
   String searchIn(String chat) {
@@ -4924,11 +4299,6 @@ class L10nZhHant extends L10nZh {
   String get files => '文件';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return '無法建立 SQLite 資料庫。應用程式目前嘗試使用遺留資料庫。請將此錯誤報告給開發人員，網址為 $url。錯誤訊息為：$error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return '您的會話已丟失。請將此錯誤報告給開發人員，網址為 $url。錯誤訊息為：$error';
   }
@@ -4936,11 +4306,6 @@ class L10nZhHant extends L10nZh {
   @override
   String restoreSessionBody(String url, String error) {
     return '應用程式現在嘗試從備份中恢復您的會話。請將此錯誤報告給開發人員，網址為 $url。錯誤訊息為：$error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return '將訊息轉發至 $roomName？';
   }
 
   @override
@@ -5102,42 +4467,16 @@ class L10nZhHant extends L10nZh {
   String get loginWithMatrixId => '以Matrix-ID登入';
 
   @override
-  String get discoverHomeservers => '探索歸屬伺服器';
-
-  @override
-  String get whatIsAHomeserver => '什麼是歸屬伺服器?';
-
-  @override
-  String get homeserverDescription =>
-      '您的所有資料都儲存在歸屬伺服器上，就像電子郵件提供商一樣。 您可以選擇要使用的歸屬伺服器，同時您仍然可以與每個人溝通。 請訪問https://matrix.org瞭解更多資訊。';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver => '似乎不是能匹配的歸屬伺服器。伺服器域名打錯了嗎？';
 
   @override
   String get calculatingFileSize => '正在計算檔案大小…';
 
   @override
-  String get prepareSendingAttachment => '準備傳送附件…';
-
-  @override
   String get sendingAttachment => '附件傳送中…';
 
   @override
-  String get generatingVideoThumbnail => '生成影片縮圖中…';
-
-  @override
   String get compressVideo => '影片壓縮中…';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return '附件傳送中 $index/$length…';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return '已達伺服器上限! 請稍等$seconds秒…';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified => '你的其中一個裝置尚未驗證';
@@ -5232,10 +4571,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get waitingForServer => '等待伺服器中...';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChat 讓你和你的朋友跨越工具聊天。在 https://matrix.org 了解更多或*繼續*。';
 
   @override
   String get newChatRequest => '📩 新的聊天邀請';

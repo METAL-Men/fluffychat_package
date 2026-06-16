@@ -1,6 +1,11 @@
-import 'package:flutter/material.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/themes.dart';
+import 'package:flutter/material.dart';
+
 import 'dismiss_keyboard.dart';
 
 class PIPView extends StatefulWidget {
@@ -105,7 +110,7 @@ class PIPViewState extends State<PIPView> with TickerProviderStateMixin {
     });
   }
 
-  void _onPanEnd(dynamic _) {
+  void _onPanEnd(_) {
     if (!_isDragging) return;
 
     final nearestCorner = _calculateNearestCorner(
@@ -122,7 +127,7 @@ class PIPViewState extends State<PIPView> with TickerProviderStateMixin {
     });
   }
 
-  void _onPanStart(dynamic _) {
+  void _onPanStart(_) {
     if (_isAnimating()) return;
     setState(() {
       _dragOffset = _offsets[_corner]!;

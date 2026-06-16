@@ -39,7 +39,6 @@
         "placeholders": {}
     },
     "addToSpace": "Aan space toevoegen",
-    "@addToSpace": {},
     "admin": "Beheerder",
     "@admin": {
         "type": "String",
@@ -84,7 +83,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "areGuestsAllowedToJoin": "Mogen gasten deelnemen",
+    "areGuestsAllowedToJoin": "Mogen gasten deelnemen?",
     "@areGuestsAllowedToJoin": {
         "type": "String",
         "placeholders": {}
@@ -130,18 +129,6 @@
             }
         }
     },
-    "badServerVersionsException": "De homeserver ondersteunt de Spec-versies:\n{serverVersions}\nMaar deze app ondersteunt alleen {supportedVersions}",
-    "@badServerVersionsException": {
-        "type": "String",
-        "placeholders": {
-            "serverVersions": {
-                "type": "String"
-            },
-            "supportedVersions": {
-                "type": "String"
-            }
-        }
-    },
     "banFromChat": "Van chat verbannen",
     "@banFromChat": {
         "type": "String",
@@ -171,11 +158,6 @@
     },
     "blocked": "Geblokkeerd",
     "@blocked": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "botMessages": "Bot-berichten",
-    "@botMessages": {
         "type": "String",
         "placeholders": {}
     },
@@ -392,8 +374,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "chatHasBeenAddedToThisSpace": "Chat is toegevoegd aan deze space",
-    "@chatHasBeenAddedToThisSpace": {},
     "chats": "Chats",
     "@chats": {
         "type": "String",
@@ -405,7 +385,6 @@
         "placeholders": {}
     },
     "clearArchive": "Archief wissen",
-    "@clearArchive": {},
     "close": "Sluiten",
     "@close": {
         "type": "String",
@@ -456,7 +435,7 @@
         "type": "String",
         "description": "Usage hint for the command /myroomnick"
     },
-    "commandHint_op": "Machtsniveau van de persoon instellen (standaard: 50)",
+    "commandHint_op": "Rechtenniveau van de persoon instellen (standaard: 50)",
     "@commandHint_op": {
         "type": "String",
         "description": "Usage hint for the command /op"
@@ -510,28 +489,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "confirm": "Bevestigen",
-    "@confirm": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "connect": "Verbinden",
-    "@connect": {
-        "type": "String",
-        "placeholders": {}
-    },
     "contactHasBeenInvitedToTheGroup": "Contact is voor de groep uitgenodigd",
     "@contactHasBeenInvitedToTheGroup": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "containsDisplayName": "Bevat naam",
-    "@containsDisplayName": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "containsUserName": "Bevat inlognaam",
-    "@containsUserName": {
         "type": "String",
         "placeholders": {}
     },
@@ -610,33 +569,6 @@
                 "type": "String"
             },
             "timeOfDay": {
-                "type": "String"
-            }
-        }
-    },
-    "dateWithoutYear": "{day}-{month}",
-    "@dateWithoutYear": {
-        "type": "String",
-        "placeholders": {
-            "month": {
-                "type": "String"
-            },
-            "day": {
-                "type": "String"
-            }
-        }
-    },
-    "dateWithYear": "{day}-{month}-{year}",
-    "@dateWithYear": {
-        "type": "String",
-        "placeholders": {
-            "year": {
-                "type": "String"
-            },
-            "month": {
-                "type": "String"
-            },
-            "day": {
                 "type": "String"
             }
         }
@@ -746,11 +678,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "emoteWarnNeedToPick": "Je moet een emoticon korte code en afbeelding kiezen!",
-    "@emoteWarnNeedToPick": {
-        "type": "String",
-        "placeholders": {}
-    },
     "emptyChat": "Lege chat",
     "@emptyChat": {
         "type": "String",
@@ -800,11 +727,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "enterYourHomeserver": "Vul je homeserver in",
-    "@enterYourHomeserver": {
-        "type": "String",
-        "placeholders": {}
-    },
     "errorObtainingLocation": "Locatie ophalen fout: {error}",
     "@errorObtainingLocation": {
         "type": "String",
@@ -816,11 +738,6 @@
     },
     "everythingReady": "Alles klaar!",
     "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "extremeOffensive": "Extreem beledigend",
-    "@extremeOffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -854,17 +771,12 @@
         "type": "String",
         "placeholders": {}
     },
-    "goToTheNewRoom": "Ga naar de nieuwe chat",
-    "@goToTheNewRoom": {
-        "type": "String",
-        "placeholders": {}
-    },
     "group": "Groep",
     "@group": {
         "type": "String",
         "placeholders": {}
     },
-    "groupIsPublic": "Groep is openbaar",
+    "groupIsPublic": "Groep is publiek",
     "@groupIsPublic": {
         "type": "String",
         "placeholders": {}
@@ -920,18 +832,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "howOffensiveIsThisContent": "Hoe beledigend is deze inhoud?",
-    "@howOffensiveIsThisContent": {
-        "type": "String",
-        "placeholders": {}
-    },
     "id": "ID",
     "@id": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "identity": "Identiteit",
-    "@identity": {
         "type": "String",
         "placeholders": {}
     },
@@ -952,11 +854,6 @@
     },
     "incorrectPassphraseOrKey": "Onjuiste wachtwoordzin of herstelsleutel",
     "@incorrectPassphraseOrKey": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inoffensive": "Niet beledigend",
-    "@inoffensive": {
         "type": "String",
         "placeholders": {}
     },
@@ -993,11 +890,6 @@
     },
     "invitedUsersOnly": "Alleen uitgenodigde personen",
     "@invitedUsersOnly": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "inviteForMe": "Persoonlijke uitnodiging",
-    "@inviteForMe": {
         "type": "String",
         "placeholders": {}
     },
@@ -1080,11 +972,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "license": "Licentie",
-    "@license": {
-        "type": "String",
-        "placeholders": {}
-    },
     "lightTheme": "Licht",
     "@lightTheme": {
         "type": "String",
@@ -1135,11 +1022,6 @@
     },
     "logout": "Uitloggen",
     "@logout": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "memberChanges": "Persoon wijzigingen",
-    "@memberChanges": {
         "type": "String",
         "placeholders": {}
     },
@@ -1203,7 +1085,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "noEncryptionForPublicRooms": "Je kunt de versleuteling pas activeren zodra de chat niet meer openbaar toegankelijk is.",
+    "noEncryptionForPublicRooms": "Je kunt de versleuteling pas activeren zodra de chat niet meer publiek toegankelijk is.",
     "@noEncryptionForPublicRooms": {
         "type": "String",
         "placeholders": {}
@@ -1250,11 +1132,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "notificationsEnabledForThisAccount": "Meldingen ingeschakeld voor dit account",
-    "@notificationsEnabledForThisAccount": {
-        "type": "String",
-        "placeholders": {}
-    },
     "numUsersTyping": "{count} personen typen…",
     "@numUsersTyping": {
         "type": "String",
@@ -1269,17 +1146,12 @@
         "type": "String",
         "placeholders": {}
     },
-    "offensive": "Beledigend",
-    "@offensive": {
-        "type": "String",
-        "placeholders": {}
-    },
     "offline": "Offline",
     "@offline": {
         "type": "String",
         "placeholders": {}
     },
-    "ok": "OK",
+    "ok": "Ok",
     "@ok": {
         "type": "String",
         "placeholders": {}
@@ -1354,11 +1226,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "people": "Personen",
-    "@people": {
-        "type": "String",
-        "placeholders": {}
-    },
     "pickImage": "Kies een afbeelding",
     "@pickImage": {
         "type": "String",
@@ -1377,11 +1244,6 @@
                 "type": "String"
             }
         }
-    },
-    "pleaseChoose": "Maak een keuze",
-    "@pleaseChoose": {
-        "type": "String",
-        "placeholders": {}
     },
     "pleaseChooseAPasscode": "Kies een toegangscode",
     "@pleaseChooseAPasscode": {
@@ -1423,7 +1285,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "publicRooms": "Openbare chats",
+    "publicRooms": "Publieke chats",
     "@publicRooms": {
         "type": "String",
         "placeholders": {}
@@ -1476,11 +1338,6 @@
             }
         }
     },
-    "rejoin": "Opnieuw deelnemen",
-    "@rejoin": {
-        "type": "String",
-        "placeholders": {}
-    },
     "remove": "Verwijder",
     "@remove": {
         "type": "String",
@@ -1499,11 +1356,6 @@
                 "type": "String"
             }
         }
-    },
-    "removeDevice": "Verwijder apparaat",
-    "@removeDevice": {
-        "type": "String",
-        "placeholders": {}
     },
     "unbanFromChat": "Verbanning opheffen",
     "@unbanFromChat": {
@@ -1560,15 +1412,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "seenByUser": "Gezien door {username}",
-    "@seenByUser": {
-        "type": "String",
-        "placeholders": {
-            "username": {
-                "type": "String"
-            }
-        }
-    },
     "send": "Verstuur",
     "@send": {
         "type": "String",
@@ -1600,16 +1443,6 @@
     },
     "sendMessages": "Berichten versturen",
     "@sendMessages": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "sendOriginal": "Origineel versturen",
-    "@sendOriginal": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "sendSticker": "Sticker versturen",
-    "@sendSticker": {
         "type": "String",
         "placeholders": {}
     },
@@ -1677,21 +1510,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "setCustomEmotes": "Aangepaste emoticons instellen",
-    "@setCustomEmotes": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "setInvitationLink": "Uitnodigingslink instellen",
-    "@setInvitationLink": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "setPermissionsLevel": "Rechten-niveau instellen",
-    "@setPermissionsLevel": {
-        "type": "String",
-        "placeholders": {}
-    },
     "setStatus": "Status instellen",
     "@setStatus": {
         "type": "String",
@@ -1726,11 +1544,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "singlesignon": "Eenmalig Inloggen",
-    "@singlesignon": {
-        "type": "String",
-        "placeholders": {}
-    },
     "skip": "Overslaan",
     "@skip": {
         "type": "String",
@@ -1741,7 +1554,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "spaceIsPublic": "Space is openbaar",
+    "spaceIsPublic": "Space is publiek",
     "@spaceIsPublic": {
         "type": "String",
         "placeholders": {}
@@ -1798,21 +1611,6 @@
     "title": "FluffyChat",
     "@title": {
         "description": "Title for the application",
-        "type": "String",
-        "placeholders": {}
-    },
-    "toggleFavorite": "Favoriet in- of uitschakelen",
-    "@toggleFavorite": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "toggleMuted": "Dempen in- of uitschakelen",
-    "@toggleMuted": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "toggleUnread": "Markeer gelezen/ongelezen",
-    "@toggleUnread": {
         "type": "String",
         "placeholders": {}
     },
@@ -1881,15 +1679,6 @@
     "@unpin": {
         "type": "String",
         "placeholders": {}
-    },
-    "unreadChats": "{unreadCount, plural, =1{1 ongelezen chat} other{{unreadCount} ongelezen chats}}",
-    "@unreadChats": {
-        "type": "String",
-        "placeholders": {
-            "unreadCount": {
-                "type": "int"
-            }
-        }
     },
     "userAndOthersAreTyping": "{username} en {count} anderen zijn aan het typen …",
     "@userAndOthersAreTyping": {
@@ -2015,11 +1804,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "wallpaper": "Achtergrond:",
-    "@wallpaper": {
-        "type": "String",
-        "placeholders": {}
-    },
     "warning": "Waarschuwing!",
     "@warning": {
         "type": "String",
@@ -2086,51 +1870,26 @@
         "placeholders": {}
     },
     "scanQrCode": "QR-code scannen",
-    "@scanQrCode": {},
     "sendOnEnter": "Verstuur met enter",
-    "@sendOnEnter": {},
     "homeserver": "Server",
-    "@homeserver": {},
     "serverRequiresEmail": "Deze server wil je email laten bevestigen bij de registratie.",
-    "@serverRequiresEmail": {},
     "oneClientLoggedOut": "Één van jouw apparaten is uitgelogd",
-    "@oneClientLoggedOut": {},
-    "enableMultiAccounts": "(BETA) Meerdere accounts op dit apparaat inschakelen",
-    "@enableMultiAccounts": {},
     "bundleName": "Bundelnaam",
-    "@bundleName": {},
     "removeFromBundle": "Van bundel verwijderen",
-    "@removeFromBundle": {},
     "addToBundle": "Aan bundel toevoegen",
-    "@addToBundle": {},
     "editBundlesForAccount": "Bundels voor dit account wijzigen",
-    "@editBundlesForAccount": {},
     "addAccount": "Account toevoegen",
-    "@addAccount": {},
     "link": "Link",
-    "@link": {},
     "yourChatBackupHasBeenSetUp": "Jouw chatback-up is ingesteld.",
-    "@yourChatBackupHasBeenSetUp": {},
     "unverified": "Niet geverifieerd",
-    "@unverified": {},
     "repeatPassword": "Wachtwoord herhalen",
-    "@repeatPassword": {},
     "messageInfo": "Berichtinfo",
-    "@messageInfo": {},
     "time": "Tijd",
-    "@time": {},
     "messageType": "Berichttype",
-    "@messageType": {},
     "sender": "Afzender",
-    "@sender": {},
     "openGallery": "Galerij openen",
-    "@openGallery": {},
-    "addToSpaceDescription": "Selecteer een space om deze chat aan toe te voegen.",
-    "@addToSpaceDescription": {},
     "removeFromSpace": "Uit de space verwijderen",
-    "@removeFromSpace": {},
     "start": "Start",
-    "@start": {},
     "commandHint_clearcache": "Cache wissen",
     "@commandHint_clearcache": {
         "type": "String",
@@ -2151,30 +1910,9 @@
         "type": "String",
         "description": "Usage hint for the command /discardsession"
     },
-    "openVideoCamera": "Videocamera openen",
-    "@openVideoCamera": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "videoWithSize": "Video ({size})",
-    "@videoWithSize": {
-        "type": "String",
-        "placeholders": {
-            "size": {
-                "type": "String"
-            }
-        }
-    },
-    "publish": "Publiceren",
-    "@publish": {},
     "dismiss": "Sluiten",
-    "@dismiss": {},
     "markAsRead": "Markeer als gelezen",
-    "@markAsRead": {},
     "reportUser": "Persoon rapporteren",
-    "@reportUser": {},
-    "openChat": "Chat openen",
-    "@openChat": {},
     "reactedWith": "{sender} reageerde met {reaction}",
     "@reactedWith": {
         "type": "String",
@@ -2188,67 +1926,17 @@
         }
     },
     "pinMessage": "Maak vast aan chat",
-    "@pinMessage": {},
     "emojis": "Emoji's",
-    "@emojis": {},
     "placeCall": "Bellen",
-    "@placeCall": {},
     "unsupportedAndroidVersion": "Niet-ondersteunde Android-versie",
-    "@unsupportedAndroidVersion": {},
     "unsupportedAndroidVersionLong": "Voor deze functie is een nieuwe Android-versie verplicht. Controleer je updates of Lineage OS-ondersteuning.",
-    "@unsupportedAndroidVersionLong": {},
     "videoCallsBetaWarning": "Houd er rekening mee dat videogesprekken momenteel in bèta zijn. Ze werken misschien niet zoals je verwacht of werken niet op alle platformen.",
-    "@videoCallsBetaWarning": {},
-    "voiceCall": "Spraakoproep",
-    "@voiceCall": {},
+    "voiceCall": "Spraakgesprek",
     "confirmEventUnpin": "Weet je zeker dat je de gebeurtenis definitief wilt losmaken?",
-    "@confirmEventUnpin": {},
     "experimentalVideoCalls": "Videogesprekken (experimenteel)",
-    "@experimentalVideoCalls": {},
-    "emailOrUsername": "Email of inlognaam",
-    "@emailOrUsername": {},
-    "nextAccount": "Volgende account",
-    "@nextAccount": {},
-    "switchToAccount": "Naar account {number} overschakelen",
-    "@switchToAccount": {
-        "type": "number",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "previousAccount": "Vorige account",
-    "@previousAccount": {},
-    "widgetCustom": "Aangepast",
-    "@widgetCustom": {},
-    "widgetName": "Naam",
-    "@widgetName": {},
-    "widgetUrlError": "Dit is geen geldige link.",
-    "@widgetUrlError": {},
-    "widgetNameError": "Geef een naam op.",
-    "@widgetNameError": {},
-    "errorAddingWidget": "Fout bij het toevoegen van de widget.",
-    "@errorAddingWidget": {},
-    "widgetJitsi": "Jitsi Meet",
-    "@widgetJitsi": {},
-    "addWidget": "Widget toevoegen",
-    "@addWidget": {},
-    "widgetVideo": "Video",
-    "@widgetVideo": {},
-    "widgetEtherpad": "Tekstnotitie",
-    "@widgetEtherpad": {},
-    "separateChatTypes": "Directe chats en groepen los weergeven",
-    "@separateChatTypes": {
-        "type": "String",
-        "placeholders": {}
-    },
     "youAcceptedTheInvitation": "👍 Je hebt de uitnodiging geaccepteerd",
-    "@youAcceptedTheInvitation": {},
     "youRejectedTheInvitation": "Je hebt de uitnodiging afgewezen",
-    "@youRejectedTheInvitation": {},
     "youJoinedTheChat": "Je bent toegetreden tot de chat",
-    "@youJoinedTheChat": {},
     "youBannedUser": "Je hebt {user} verbannen",
     "@youBannedUser": {
         "placeholders": {
@@ -2306,45 +1994,18 @@
         }
     },
     "recoveryKey": "Herstelsleutel",
-    "@recoveryKey": {},
     "recoveryKeyLost": "Herstelsleutel verloren?",
-    "@recoveryKeyLost": {},
-    "pleaseEnterRecoveryKey": "Voer jouw herstelsleutel in:",
-    "@pleaseEnterRecoveryKey": {},
     "users": "Personen",
-    "@users": {},
     "unlockOldMessages": "Oude berichten ontgrendelen",
-    "@unlockOldMessages": {},
     "storeInAndroidKeystore": "In Android KeyStore opslaan",
-    "@storeInAndroidKeystore": {},
     "storeInAppleKeyChain": "In Apple KeyChain opslaan",
-    "@storeInAppleKeyChain": {},
     "saveKeyManuallyDescription": "Sla deze sleutel handmatig op via delen of het klembord.",
-    "@saveKeyManuallyDescription": {},
     "pleaseEnterRecoveryKeyDescription": "Om je oude berichten te ontgrendelen voer je jouw herstelsleutel in die gemaakt is in je vorige sessie. Je sleutel is niet je wachtwoord.",
-    "@pleaseEnterRecoveryKeyDescription": {},
     "storeInSecureStorageDescription": "Sla de herstelsleutel op in de beveiligde opslag van dit apparaat.",
-    "@storeInSecureStorageDescription": {},
     "storeSecurlyOnThisDevice": "Veilig opslaan op dit apparaat",
-    "@storeSecurlyOnThisDevice": {},
     "dehydrate": "Sessie exporteren en apparaat wissen",
-    "@dehydrate": {},
     "dehydrateWarning": "Deze actie kan niet ongedaan worden gemaakt. Zorg ervoor dat je het back-upbestand veilig opslaat.",
-    "@dehydrateWarning": {},
-    "dehydrateTor": "TOR-sessies: Exporteer sessie",
-    "@dehydrateTor": {},
-    "dehydrateTorLong": "Voor TOR-sessies is het aanbevolen de sessie te exporteren alvorens het venster te sluiten.",
-    "@dehydrateTorLong": {},
-    "hydrateTor": "TOR-sessie: Importeren sessie export",
-    "@hydrateTor": {},
-    "hydrateTorLong": "Heb je de vorige keer jouw sessie geëxporteerd met TOR? Importeer het dan snel en ga verder met chatten.",
-    "@hydrateTorLong": {},
     "hydrate": "Herstellen vanuit back-upbestand",
-    "@hydrate": {},
-    "indexedDbErrorTitle": "Problemen met privémodus",
-    "@indexedDbErrorTitle": {},
-    "indexedDbErrorLong": "Het opslaan van berichten is helaas niet standaard ingeschakeld in de privémodus.\nBezoek alsjeblieft\n - about:config\n - stel dom.indexedDB.privateBrowsing.enabled in op true\nAnders is het niet mogelijk om FluffyChat op te starten.",
-    "@indexedDbErrorLong": {},
     "countFiles": "{count} bestanden",
     "@countFiles": {
         "placeholders": {
@@ -2354,11 +2015,8 @@
         }
     },
     "user": "Persoon",
-    "@user": {},
     "custom": "Aangepast",
-    "@custom": {},
     "confirmMatrixId": "Bevestig jouw Matrix-ID om je account te verwijderen.",
-    "@confirmMatrixId": {},
     "supposedMxid": "Dit moet {mxid} zijn",
     "@supposedMxid": {
         "type": "String",
@@ -2369,54 +2027,16 @@
         }
     },
     "commandHint_markasdm": "Markeer als privé-chat voor de Matrix-ID",
-    "@commandHint_markasdm": {},
     "commandHint_markasgroup": "Markeer als groep",
-    "@commandHint_markasgroup": {},
     "whyIsThisMessageEncrypted": "Waarom is dit bericht onleesbaar?",
-    "@whyIsThisMessageEncrypted": {},
     "noKeyForThisMessage": "Dit kan gebeuren als het bericht is verzonden voordat je bij je account op dit apparaat hebt aangemeld.\n\nHet is ook mogelijk dat de afzender je apparaat heeft geblokkeerd of dat er iets mis is gegaan met de internetverbinding.\n\nKan je het bericht wel lezen in een andere sessie? Dan kan je het bericht daarvandaan overzetten! Ga naar Instellingen > Apparaten en zorg ervoor dat je apparaten elkaar hebben geverifieerd. Wanneer je de chat de volgende keer opent en beide sessies op de voorgrond staan, zullen de sleutels automatisch worden verzonden.\n\nWil je de sleutels niet verliezen als je uitlogt of van apparaat wisselt? Zorg er dan voor dat je de chatback-up hebt aangezet in de instellingen.",
-    "@noKeyForThisMessage": {},
-    "enterSpace": "Space betreden",
-    "@enterSpace": {},
     "allSpaces": "Alle spaces",
-    "@allSpaces": {},
     "foregroundServiceRunning": "Deze melding verschijnt wanneer de voorgronddienst draait.",
-    "@foregroundServiceRunning": {},
     "screenSharingTitle": "scherm delen",
-    "@screenSharingTitle": {},
     "screenSharingDetail": "Je deelt je scherm in FuffyChat",
-    "@screenSharingDetail": {},
-    "callingPermissions": "Telefoon-rechten",
-    "@callingPermissions": {},
-    "callingAccount": "Telefoon-account",
-    "@callingAccount": {},
-    "callingAccountDetails": "Hiermee kan FluffyChat de Android telefoon-app gebruiken.",
-    "@callingAccountDetails": {},
-    "appearOnTop": "Bovenaan verschijnen",
-    "@appearOnTop": {},
-    "appearOnTopDetails": "Laat de app bovenaan verschijnen (niet nodig als je FluffyChat al hebt ingesteld als een bel-account)",
-    "@appearOnTopDetails": {},
-    "otherCallingPermissions": "Microfoon, camera en andere FluffyChat-rechten",
-    "@otherCallingPermissions": {},
     "newGroup": "Nieuwe groep",
-    "@newGroup": {},
     "newSpace": "Space aanmaken",
-    "@newSpace": {},
-    "enterRoom": "Chat betreden",
-    "@enterRoom": {},
-    "numChats": "{number} chats",
-    "@numChats": {
-        "type": "number",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "hideUnimportantStateEvents": "Onbelangrijke statusgebeurtenissen verbergen",
-    "@hideUnimportantStateEvents": {},
     "doNotShowAgain": "Niet meer tonen",
-    "@doNotShowAgain": {},
     "googlyEyesContent": "{senderName} stuurt je wiebelogen",
     "@googlyEyesContent": {
         "type": "String",
@@ -2427,11 +2047,8 @@
         }
     },
     "commandHint_googly": "Wiebel-ogen versturen",
-    "@commandHint_googly": {},
     "commandHint_cuddle": "Een knuffel versturen",
-    "@commandHint_cuddle": {},
     "commandHint_hug": "Een knuffel versturen",
-    "@commandHint_hug": {},
     "cuddleContent": "{senderName} knuffelt je",
     "@cuddleContent": {
         "type": "String",
@@ -2460,25 +2077,14 @@
         }
     },
     "disableEncryptionWarning": "Om veiligheidsredenen kun je versleuteling niet uitschakelen in een chat, waar deze eerder is ingeschakeld.",
-    "@disableEncryptionWarning": {},
     "sorryThatsNotPossible": "Sorry, dat is niet mogelijk",
-    "@sorryThatsNotPossible": {},
     "reopenChat": "Chat heropenen",
-    "@reopenChat": {},
     "encryptThisChat": "Versleutel deze chat",
-    "@encryptThisChat": {},
     "deviceKeys": "Apparaatsleutels:",
-    "@deviceKeys": {},
-    "startFirstChat": "Begin je eerste chat",
-    "@startFirstChat": {},
-    "newSpaceDescription": "Met spaces kun je je chats samenvoegen en privé- of openbare community's bouwen.",
-    "@newSpaceDescription": {},
+    "newSpaceDescription": "Met spaces kun je je chats samenvoegen en privé- of publieke community's bouwen.",
     "noOtherDevicesFound": "Geen andere apparaten gevonden",
-    "@noOtherDevicesFound": {},
     "noBackupWarning": "Waarschuwing! Zonder de chatback-up in te schakelen, verlies je de toegang tot je versleutelde berichten. Het is sterk aanbevolen om eerst de chatback-up in te schakelen voordat je uitlogt.",
-    "@noBackupWarning": {},
     "fileIsTooBigForServer": "Kan niet verzenden! De server ondersteunt alleen bijlages tot {max}.",
-    "@fileIsTooBigForServer": {},
     "fileHasBeenSavedAt": "Het bestand is opgeslagen op {path}",
     "@fileHasBeenSavedAt": {
         "type": "String",
@@ -2489,61 +2095,24 @@
         }
     },
     "jumpToLastReadMessage": "Spring naar het laatst gelezen bericht",
-    "@jumpToLastReadMessage": {},
     "readUpToHere": "Lees tot hier",
-    "@readUpToHere": {},
     "jump": "Spring",
-    "@jump": {},
     "openLinkInBrowser": "Link in browser openen",
-    "@openLinkInBrowser": {},
-    "allRooms": "Alle groepschats",
-    "@allRooms": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "signInWith": "Aanmelden met {provider}",
-    "@signInWith": {
-        "type": "String",
-        "placeholders": {
-            "provider": {
-                "type": "String"
-            }
-        }
-    },
     "notAnImage": "Geen afbeeldingsbestand.",
-    "@notAnImage": {},
     "importNow": "Nu importeren",
-    "@importNow": {},
     "importEmojis": "Emoji's importeren",
-    "@importEmojis": {},
     "importFromZipFile": "Uit zip-bestand importeren",
-    "@importFromZipFile": {},
     "exportEmotePack": "Emote-pakket als zip exporteren",
-    "@exportEmotePack": {},
     "replace": "Vervang",
-    "@replace": {},
     "report": "Rapporteer",
-    "@report": {},
     "reportErrorDescription": "😭 Oh nee. Er is iets misgegaan. Probeer het later nog eens. Als je wilt, kun je de bug rapporteren aan de ontwikkelaars.",
-    "@reportErrorDescription": {},
-    "sendTypingNotifications": "Typemeldingen verzenden",
-    "@sendTypingNotifications": {},
-    "pleaseTryAgainLaterOrChooseDifferentServer": "Probeer het later nog eens of kies een andere server.",
-    "@pleaseTryAgainLaterOrChooseDifferentServer": {},
-    "signInWithPassword": "Aanmelden met wachtwoord",
-    "@signInWithPassword": {},
-    "chatPermissions": "Chat rechten",
-    "@chatPermissions": {},
-    "chatDescription": "Chatomschrijving",
-    "@chatDescription": {},
-    "chatDescriptionHasBeenChanged": "Chatomschrijving gewijzigd",
-    "@chatDescriptionHasBeenChanged": {},
-    "noChatDescriptionYet": "Nog geen chatomschrijving gemaakt.",
-    "@noChatDescriptionYet": {},
+    "sendTypingNotifications": "Toon 'aan het typen'-meldingen",
+    "chatPermissions": "Chatrechten",
+    "chatDescription": "Onderwerp",
+    "chatDescriptionHasBeenChanged": "Onderwerp gewijzigd",
+    "noChatDescriptionYet": "Nog geen onderwerp gemaakt.",
     "tryAgain": "Opnieuw proberen",
-    "@tryAgain": {},
     "redactMessageDescription": "Het bericht zal worden aangepast voor alle deelnemers in dit gesprek. Dit kan niet ongedaan gemaakt worden.",
-    "@redactMessageDescription": {},
     "redactedByBecause": "Aangepast door {username}, reden: \"{reason}\"",
     "@redactedByBecause": {
         "type": "String",
@@ -2556,22 +2125,11 @@
             }
         }
     },
-    "profileNotFound": "De persoon kan niet gevonden worden op de server. Misschien is er een verbindingsprobleem of de persoon bestaat niet.",
-    "@profileNotFound": {},
     "createGroup": "Groep aanmaken",
-    "@createGroup": {},
-    "inviteContactToGroupQuestion": "Wil je {contact} uitnodigingen voor de chat \"{groupName}\"?",
-    "@inviteContactToGroupQuestion": {},
     "optionalRedactReason": "(Optioneel) Reden voor aanpassing van dit bericht...",
-    "@optionalRedactReason": {},
-    "addChatDescription": "Voeg een chatomschrijving toe...",
-    "@addChatDescription": {},
     "invalidServerName": "Foute servernaam",
-    "@invalidServerName": {},
     "messagesStyle": "Berichten:",
-    "@messagesStyle": {},
     "shareInviteLink": "Uitnodigingslink delen",
-    "@shareInviteLink": {},
     "redactedBy": "Aangepast door {username}",
     "@redactedBy": {
         "type": "String",
@@ -2582,26 +2140,16 @@
         }
     },
     "directChat": "Directe chat",
-    "@directChat": {},
-    "setChatDescription": "Chatomschrijving instellen",
-    "@setChatDescription": {},
-    "setTheme": "Thema instellen:",
-    "@setTheme": {},
+    "setChatDescription": "Onderwerp instellen",
     "setColorTheme": "Kleurthema instellen:",
-    "@setColorTheme": {},
     "invite": "Uitnodigen",
-    "@invite": {},
     "inviteGroupChat": "📨 Groeps-chat uitnodiging",
-    "@inviteGroupChat": {},
-    "invitePrivateChat": "📨 Privé-chat uitnodiging",
-    "@invitePrivateChat": {},
     "emoteKeyboardNoRecents": "Recent gebruikte emoticons zullen hier verschijnen...",
     "@emoteKeyboardNoRecents": {
         "type": "String",
         "placeholders": {}
     },
     "invalidInput": "Ongeldige invoer!",
-    "@invalidInput": {},
     "wrongPinEntered": "Verkeerde pin ingevoerd! Probeer het nog eens over {seconds} seconden...",
     "@wrongPinEntered": {
         "type": "String",
@@ -2612,17 +2160,11 @@
         }
     },
     "banUserDescription": "De persoon zal worden verbannen van de chat en kan niet meer toetreden totdat de verbanning is opgeheven.",
-    "@banUserDescription": {},
     "removeDevicesDescription": "Je wordt op dit apparaat uitgelogd en zal niet langer in staat zijn om berichten te ontvangen.",
-    "@removeDevicesDescription": {},
     "unbanUserDescription": "De persoon zal weer in staat zijn om de chat te betreden als ze het proberen.",
-    "@unbanUserDescription": {},
     "pushNotificationsNotAvailable": "Pushmeldingen zijn niet beschikbaar",
-    "@pushNotificationsNotAvailable": {},
     "makeAdminDescription": "Wanneer je deze persoon beheerder maakt kun je dit niet ongedaan maken als jullie dezelfde rechten hebben.",
-    "@makeAdminDescription": {},
     "archiveRoomDescription": "De chat zal naar het archief worden verplaatst. Andere personen zullen in staat zijn te zien dat je de chat hebt verlaten.",
-    "@archiveRoomDescription": {},
     "hasKnocked": "🚪 {user} heeft geklopt",
     "@hasKnocked": {
         "placeholders": {
@@ -2632,72 +2174,34 @@
         }
     },
     "learnMore": "Lees meer",
-    "@learnMore": {},
     "roomUpgradeDescription": "De chat zal dan opnieuw gemaakt worden met de nieuwe kamerversie. Alle deelnemers worden geïnformeerd dat ze moeten overstappen naar de nieuwe chat. Je kan meer lezen over kamerversies op https://spec.matrix.org/latest/rooms/",
-    "@roomUpgradeDescription": {},
     "pleaseEnterANumber": "Vul een getal in groter dan 0",
-    "@pleaseEnterANumber": {},
-    "kickUserDescription": "De persoon is verwijderd uit de chat, maar is niet verbannen. In openbare chats kan de persoon op elk moment opnieuw deelnemen.",
-    "@kickUserDescription": {},
+    "kickUserDescription": "De persoon is verwijderd uit de chat, maar is niet verbannen. In publieke chats kan de persoon op elk moment opnieuw deelnemen.",
     "alwaysUse24HourFormat": "true",
     "@alwaysUse24HourFormat": {
         "description": "Set to true to always display time of day in 24 hour format."
     },
     "joinSpace": "Toetreden tot de space",
-    "@joinSpace": {},
     "block": "Blokkeren",
-    "@block": {},
     "blockedUsers": "Geblokkeerde personen",
-    "@blockedUsers": {},
-    "presenceStyle": "Aanwezigheid:",
-    "@presenceStyle": {
-        "type": "String",
-        "placeholders": {}
-    },
     "searchChatsRooms": "Zoek #chats, @personen...",
-    "@searchChatsRooms": {},
     "swipeRightToLeftToReply": "Veeg van rechts naar links om te reageren",
-    "@swipeRightToLeftToReply": {},
     "calls": "Gesprekken",
-    "@calls": {},
     "customEmojisAndStickers": "Aangepaste emoji's en stickers",
-    "@customEmojisAndStickers": {},
     "accessAndVisibilityDescription": "Wie mag toetreden tot deze chat en hoe de chat ontdekt kan worden.",
-    "@accessAndVisibilityDescription": {},
     "customEmojisAndStickersBody": "Voeg toe of deel aangepaste emoji's en stickers die in elke chat gebruikt kunnen worden.",
-    "@customEmojisAndStickersBody": {},
     "hideRedactedMessages": "Verwijderde berichten verbergen",
-    "@hideRedactedMessages": {},
-    "hideRedactedMessagesBody": "Als iemand een bericht verwijdert, is dit bericht niet meer zichtbaar in de chat.",
-    "@hideRedactedMessagesBody": {},
+    "hideRedactedMessagesBody": "Als iemand een bericht verwijdert is dit bericht niet meer zichtbaar in de chat.",
     "hideInvalidOrUnknownMessageFormats": "Ongeldige of onbekende berichtformaten verbergen",
-    "@hideInvalidOrUnknownMessageFormats": {},
     "passwordRecoverySettings": "Wachtwoordherstel-instellingen",
-    "@passwordRecoverySettings": {},
-    "youInvitedToBy": "📩 Je bent uitgenodigd via een link voor:\n{alias}",
-    "@youInvitedToBy": {
-        "placeholders": {
-            "alias": {
-                "type": "String"
-            }
-        }
-    },
     "knock": "Klop",
-    "@knock": {},
     "overview": "Overzicht",
-    "@overview": {},
     "hidePresences": "Verberg statuslijst?",
-    "@hidePresences": {},
     "noOneCanJoin": "Niemand kan deelnemen",
-    "@noOneCanJoin": {},
     "yourGlobalUserIdIs": "Je Matrix-ID is: ",
-    "@yourGlobalUserIdIs": {},
     "appLockDescription": "Vergendel de app wanneer het niet gebruikt wordt met een pincode",
-    "@appLockDescription": {},
     "globalChatId": "Globale chat ID",
-    "@globalChatId": {},
     "accessAndVisibility": "Toegang en zichtbaarheid",
-    "@accessAndVisibility": {},
     "invitedBy": "📩 Uitgenodigd door: {user}",
     "@invitedBy": {
         "placeholders": {
@@ -2706,64 +2210,21 @@
             }
         }
     },
-    "publicSpaces": "Openbare spaces",
-    "@publicSpaces": {},
+    "publicSpaces": "Publieke spaces",
     "blockUsername": "Negeer inlognaam",
-    "@blockUsername": {},
-    "publicChatAddresses": "Openbare chat adressen",
-    "@publicChatAddresses": {},
+    "publicChatAddresses": "Publieke chat adressen",
     "createNewAddress": "Creëer nieuw adres",
-    "@createNewAddress": {},
-    "countChatsAndCountParticipants": "{chats} chats en {participants} deelnemers",
-    "@countChatsAndCountParticipants": {
-        "type": "String",
-        "placeholders": {
-            "chats": {
-                "type": "int"
-            },
-            "participants": {
-                "type": "int"
-            }
-        }
-    },
     "noMoreChatsFound": "Geen chats gevonden...",
-    "@noMoreChatsFound": {},
-    "joinedChats": "Chats waaraan je deelneemt",
-    "@joinedChats": {},
     "knocking": "Kloppen",
-    "@knocking": {},
     "space": "Space",
-    "@space": {},
     "spaces": "Spaces",
-    "@spaces": {},
     "unread": "Ongelezen",
-    "@unread": {},
-    "databaseBuildErrorBody": "Het aanmaken van de SQlite database is mislukt. De app probeert nu een traditionele database te gebruiken. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze {url}. De foutmelding is: {error}",
-    "@databaseBuildErrorBody": {
-        "type": "String",
-        "placeholders": {
-            "url": {
-                "type": "String"
-            },
-            "error": {
-                "type": "String"
-            }
-        }
-    },
     "groupName": "Groepsnaam",
-    "@groupName": {},
     "changeGeneralChatSettings": "Algemene chat instellingen wijzigen",
-    "@changeGeneralChatSettings": {},
     "restricted": "Beperkt",
-    "@restricted": {},
     "searchForUsers": "Zoek @personen...",
-    "@searchForUsers": {},
     "searchMore": "Zoek meer...",
-    "@searchMore": {},
-    "noPublicLinkHasBeenCreatedYet": "Openbare link is nog niet gecreëerd",
-    "@noPublicLinkHasBeenCreatedYet": {},
     "groupCanBeFoundViaSearch": "Groep kan gevonden worden via zoeken",
-    "@groupCanBeFoundViaSearch": {},
     "searchIn": "Zoek in chat \"{chat}\"...",
     "@searchIn": {
         "type": "String",
@@ -2774,7 +2235,6 @@
         }
     },
     "files": "Bestanden",
-    "@files": {},
     "unreadChatsInApp": "{appname}: {unread} ongelezen chats",
     "@unreadChatsInApp": {
         "type": "String",
@@ -2788,14 +2248,12 @@
         }
     },
     "noDatabaseEncryption": "Database versleuteling is niet ondersteund op dit platform",
-    "@noDatabaseEncryption": {},
     "thereAreCountUsersBlocked": "Momenteel zijn er {count} personen geblokkeerd.",
     "@thereAreCountUsersBlocked": {
         "type": "String",
         "count": {}
     },
     "markAsUnread": "Als ongelezen markeren",
-    "@markAsUnread": {},
     "userLevel": "{level} - Persoon",
     "@userLevel": {
         "type": "String",
@@ -2824,23 +2282,14 @@
         }
     },
     "stickers": "Stickers",
-    "@stickers": {},
     "nothingFound": "Niets gevonden...",
-    "@nothingFound": {},
     "gallery": "Galerij",
-    "@gallery": {},
     "transparent": "Transparant",
-    "@transparent": {},
     "incomingMessages": "Inkomende berichten",
-    "@incomingMessages": {},
     "discover": "Ontdek",
-    "@discover": {},
     "commandHint_ignore": "Negeer de gegeven Matrix-ID",
-    "@commandHint_ignore": {},
     "noChatsFoundHere": "Hier zijn nog geen chats. Begin een nieuwe chat met iemand door op de onderstaande knop te klikken. ⤵️",
-    "@noChatsFoundHere": {},
     "unableToJoinChat": "Kan niet toetreden tot de chat. Misschien heeft de andere partij het gesprek al afgesloten.",
-    "@unableToJoinChat": {},
     "aboutHomeserver": "Over {homeserver}",
     "@aboutHomeserver": {
         "type": "String",
@@ -2851,27 +2300,15 @@
         }
     },
     "boldText": "Vet gedrukte tekst",
-    "@boldText": {},
     "italicText": "Cursieve tekst",
-    "@italicText": {},
     "strikeThrough": "Doorhalen",
-    "@strikeThrough": {},
     "pleaseFillOut": "Vul alsjeblieft in",
-    "@pleaseFillOut": {},
     "invalidUrl": "Ongeldige url",
-    "@invalidUrl": {},
     "addLink": "Koppeling toevoegen",
-    "@addLink": {},
     "compress": "Comprimeren",
-    "@compress": {},
     "previous": "Vorige",
-    "@previous": {},
     "otherPartyNotLoggedIn": "De andere partij is momenteel niet ingelogd en kan daarom geen berichten ontvangen!",
-    "@otherPartyNotLoggedIn": {},
-    "notifyMeFor": "Waarschuw mij voor",
-    "@notifyMeFor": {},
     "blockListDescription": "Je kunt personen blokkeren die je lastig vallen. Je kan dan geen berichten meer ontvangen of chat uitnodigingen krijgen van de personen op je blokkeerlijst.",
-    "@blockListDescription": {},
     "sendImages": "Stuur {count} afbeelding(en)",
     "@sendImages": {
         "type": "String",
@@ -2887,15 +2324,7 @@
         "placeholders": {}
     },
     "website": "Website",
-    "@website": {},
-    "hideMemberChangesInPublicChats": "Verberg persoon veranderingen in openbare chats",
-    "@hideMemberChangesInPublicChats": {},
-    "hideMemberChangesInPublicChatsBody": "Verberg in de tijdlijn van de chat als iemand zich aanmeldt bij een openbare chat of deze verlaat om de leesbaarheid te verbeteren.",
-    "@hideMemberChangesInPublicChatsBody": {},
-    "startConversation": "Start gesprek",
-    "@startConversation": {},
     "usersMustKnock": "Personen moeten kloppen",
-    "@usersMustKnock": {},
     "noUsersFoundWithQuery": "Helaas kan er geen persoon gevonden worden met \"{query}\". Controleer of je een typfout hebt gemaakt.",
     "@noUsersFoundWithQuery": {
         "type": "String",
@@ -2906,15 +2335,6 @@
         }
     },
     "createGroupAndInviteUsers": "Maak groep en nodig personen uit",
-    "@createGroupAndInviteUsers": {},
-    "userWouldLikeToChangeTheChat": "{user} wil graag deelnemen aan de chat.",
-    "@userWouldLikeToChangeTheChat": {
-        "placeholders": {
-            "user": {
-                "type": "String"
-            }
-        }
-    },
     "chatCanBeDiscoveredViaSearchOnServer": "Chat kan worden gevonden via een zoekopdracht op {server}",
     "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",
@@ -2925,7 +2345,6 @@
         }
     },
     "wrongRecoveryKey": "Helaas... dit lijkt niet de correcte herstelsleutel.",
-    "@wrongRecoveryKey": {},
     "synchronizingPleaseWaitCounter": " Synchroniseren… ({percentage}%)",
     "@synchronizingPleaseWaitCounter": {
         "type": "String",
@@ -2936,57 +2355,28 @@
         }
     },
     "databaseMigrationTitle": "Database is geoptimaliseerd",
-    "@databaseMigrationTitle": {},
     "databaseMigrationBody": "Een ogenblik. Dit kan even duren.",
-    "@databaseMigrationBody": {},
     "commandHint_sendraw": "Stuur kale json",
-    "@commandHint_sendraw": {},
     "passwordIsWrong": "Je ingevoerde wachtwoord is fout",
-    "@passwordIsWrong": {},
     "newPassword": "Nieuw wachtwoord",
-    "@newPassword": {},
     "pleaseChooseAStrongPassword": "Kies a.j.b. een sterk wachtwoord",
-    "@pleaseChooseAStrongPassword": {},
-    "publicLink": "Openbare link",
-    "@publicLink": {},
     "select": "Selecteer",
-    "@select": {},
-    "leaveEmptyToClearStatus": "Laat leeg om je status te resetten.",
-    "@leaveEmptyToClearStatus": {},
+    "leaveEmptyToClearStatus": "Laat leeg om jouw status te herstellen.",
     "addChatOrSubSpace": "Voeg chat of subspace toe",
-    "@addChatOrSubSpace": {},
-    "subspace": "Subspace",
-    "@subspace": {},
     "pleaseEnterYourCurrentPassword": "Vul je huidige wachtwoord in",
-    "@pleaseEnterYourCurrentPassword": {},
     "passwordsDoNotMatch": "Wachtwoorden komen niet overeen",
-    "@passwordsDoNotMatch": {},
-    "decline": "Weiger",
-    "@decline": {},
     "thisDevice": "Dit apparaat:",
-    "@thisDevice": {},
     "contentNotificationSettings": "Contentmelding instellingen",
-    "@contentNotificationSettings": {},
     "roomNotificationSettings": "Kamermelding instellingen",
-    "@roomNotificationSettings": {},
     "userSpecificNotificationSettings": "Persoon specifieke melding instellingen",
-    "@userSpecificNotificationSettings": {},
     "otherNotificationSettings": "Andere melding instellingen",
-    "@otherNotificationSettings": {},
     "notificationRuleContainsUserName": "Bevat naam van persoon",
-    "@notificationRuleContainsUserName": {},
-    "notificationRuleContainsUserNameDescription": "Stuur een melding als je inlognaam vermeld wordt in een bericht.",
-    "@notificationRuleContainsUserNameDescription": {},
-    "notificationRuleMaster": "Alle meldingen dempen",
-    "@notificationRuleMaster": {},
+    "notificationRuleContainsUserNameDescription": "Stuur een melding als een bericht je inlognaam vermeld.",
+    "notificationRuleMaster": "Alle meldingen uitschakelen",
     "notificationRuleMasterDescription": "Overschrijf alle andere regels en schakel alle meldingen uit.",
-    "@notificationRuleMasterDescription": {},
     "notificationRuleMemberEventDescription": "Meldingen voor chat-gebeurtenissen uitschakelen.",
-    "@notificationRuleMemberEventDescription": {},
     "notificationRuleIsUserMention": "Persoonvermelding",
-    "@notificationRuleIsUserMention": {},
     "initAppError": "Er is een fout opgetreden bij het laden van de app",
-    "@initAppError": {},
     "requestedKeyVerification": "{sender} vraagt een sleutelverificatie",
     "@requestedKeyVerification": {
         "type": "String",
@@ -3009,53 +2399,28 @@
         }
     },
     "sendTypingNotificationsDescription": "Andere deelnemers in de chat kunnen zien wanneer je een bericht aan het typen bent.",
-    "@sendTypingNotificationsDescription": {},
     "sendCanceled": "Versturen geannuleerd",
-    "@sendCanceled": {},
     "opacity": "Doorzichtigheid:",
-    "@opacity": {},
     "verifyOtherUserDescription": "Als je een persoon verifieert ben je er zeker van dat je echt met haar contact hebt. 💪\n\nWanneer je een verificatie start ziet de persoon een popup in de app. Hier staat een serie van emoji's of getallen die je met elkaar moet vergelijken.\n\nDe beste manier om dit te doen is in persoon of met een videogesprek. 👭",
-    "@verifyOtherUserDescription": {},
     "changeTheVisibilityOfChatHistory": "Zichtbaarheid van de chat-geschiedenis wijzigen",
-    "@changeTheVisibilityOfChatHistory": {},
-    "whatIsAHomeserver": "Wat is een server?",
-    "@whatIsAHomeserver": {},
     "sendRoomNotifications": "@room-meldingen versturen",
-    "@sendRoomNotifications": {},
     "noticeChatBackupDeviceVerification": "Opmerking: Als al je apparaten zijn verbonden met de chat back-up worden ze automatisch geverifieerd.",
-    "@noticeChatBackupDeviceVerification": {},
-    "notificationRuleMemberEvent": "Chat-gebeurtenis",
-    "@notificationRuleMemberEvent": {},
+    "notificationRuleMemberEvent": "Chat-gebeurtenis uitschakelen",
     "notificationRuleSuppressNotices": "Automatische berichten uitschakelen",
-    "@notificationRuleSuppressNotices": {},
     "setWallpaper": "Achtergrond instellen",
-    "@setWallpaper": {},
     "oneOfYourDevicesIsNotVerified": "Een van jouw apparaten is niet geverifieerd",
-    "@oneOfYourDevicesIsNotVerified": {},
     "contactServerAdmin": "Contact opnemen met serverbeheerder",
-    "@contactServerAdmin": {},
     "manageAccount": "Account beheren",
-    "@manageAccount": {},
     "noContactInformationProvided": "Server geeft geen geldige contactinformatie",
-    "@noContactInformationProvided": {},
     "waitingForServer": "Wachten op server...",
-    "@waitingForServer": {},
     "generalNotificationSettings": "Algemene melding instellingen",
-    "@generalNotificationSettings": {},
     "notificationRuleInviteForMeDescription": "Stuur een melding wanneer je wordt uitgenodigd voor een chat.",
-    "@notificationRuleInviteForMeDescription": {},
     "notificationRuleSuppressNoticesDescription": "Meldingen van automatische accounts zoals bots uitschakelen.",
-    "@notificationRuleSuppressNoticesDescription": {},
-    "notificationRuleInviteForMe": "Uitnodiging voor mij",
-    "@notificationRuleInviteForMe": {},
+    "notificationRuleInviteForMe": "Persoonlijke uitnodiging",
     "inviteOtherUsers": "Personen voor deze chat uitnodigen",
-    "@inviteOtherUsers": {},
-    "changeTheChatPermissions": "Chat-rechten wijzigen",
-    "@changeTheChatPermissions": {},
-    "changeTheCanonicalRoomAlias": "Standaard openbaar chat-adres wijzigen",
-    "@changeTheCanonicalRoomAlias": {},
+    "changeTheChatPermissions": "Chatrechten wijzigen",
+    "changeTheCanonicalRoomAlias": "Standaard publiek chat-adres wijzigen",
     "blur": "Vervaag:",
-    "@blur": {},
     "isReadyForKeyVerification": "{sender} is klaar voor de sleutelverificatie",
     "@isReadyForKeyVerification": {
         "type": "String",
@@ -3093,16 +2458,13 @@
         }
     },
     "knockRestricted": "Kloppen is beperkt",
-    "@knockRestricted": {},
     "goToSpace": "Ga naar space: {space}",
     "@goToSpace": {
         "type": "String",
         "space": {}
     },
     "contactServerSecurity": "Contact opnemen met serverbeveiliger",
-    "@contactServerSecurity": {},
     "newChatRequest": "📩 Nieuw chat verzoek",
-    "@newChatRequest": {},
     "updateInstalled": "🎉 Update {version} geïnstalleerd!",
     "@updateInstalled": {
         "type": "String",
@@ -3112,52 +2474,17 @@
             }
         }
     },
-    "discoverHomeservers": "Ontdek servers",
-    "@discoverHomeservers": {},
     "changelog": "Wijzigingengeschiedenis",
-    "@changelog": {},
     "loginWithMatrixId": "Inloggen met Matrix-ID",
-    "@loginWithMatrixId": {},
     "calculatingFileSize": "Bestandsgrootte berekenen...",
-    "@calculatingFileSize": {},
     "sendingAttachment": "Bijlage versturen...",
-    "@sendingAttachment": {},
-    "generatingVideoThumbnail": "Video-voorbeeld genereren...",
-    "@generatingVideoThumbnail": {},
-    "prepareSendingAttachment": "Bijlage versturen voorbereiden...",
-    "@prepareSendingAttachment": {},
     "compressVideo": "Video comprimeren...",
-    "@compressVideo": {},
-    "serverLimitReached": "Server limiet bereikt! Wacht {seconds} seconden...",
-    "@serverLimitReached": {
-        "type": "integer",
-        "placeholders": {
-            "seconds": {
-                "type": "int"
-            }
-        }
-    },
     "version": "Versie",
-    "@version": {},
     "supportPage": "Supportpagina",
-    "@supportPage": {},
     "serverInformation": "Server-informatie:",
-    "@serverInformation": {},
     "name": "Naam",
-    "@name": {},
     "verifyOtherDeviceDescription": "Een geverifieerd ander apparaat zorgt ervoor dat de apparaten sleutels uitwisselen, wat je beveiliging versterkt. 💪 Als je de verificatie start verschijnt er een popup op beide apparaten. Hier staat een reeks emoji's of getallen die je met elkaar moet vergelijken. Het is handig om beide apparaten bij de hand te hebben voordat je de verificatie start. 🤳",
-    "@verifyOtherDeviceDescription": {},
     "commandHint_unignore": "Herstel de negeerde Matrix-ID",
-    "@commandHint_unignore": {},
-    "forwardMessageTo": "Bericht doorsturen naar {roomName}?",
-    "@forwardMessageTo": {
-        "type": "String",
-        "placeholders": {
-            "roomName": {
-                "type": "String"
-            }
-        }
-    },
     "restoreSessionBody": "De app probeert nu je sessie te herstellen van een back-up. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze link {url}. De foutmelding is: {error}",
     "@restoreSessionBody": {
         "type": "String",
@@ -3171,50 +2498,16 @@
         }
     },
     "sendReadReceipts": "Leesbevestigingen versturen",
-    "@sendReadReceipts": {},
     "formattedMessages": "Opgemaakte berichten",
-    "@formattedMessages": {},
     "chatPermissionsDescription": "Stel het gewenste rechten-niveau in voor bepaalde acties in deze chat. Het rechten-niveau 0, 50 en 100 zijn gebruikelijk voor deelnemer, moderator en beheerder, maar elke verdeling is mogelijk.",
-    "@chatPermissionsDescription": {},
-    "changeTheDescriptionOfTheGroup": "Chatomschrijving wijzigen",
-    "@changeTheDescriptionOfTheGroup": {},
-    "userRole": "Rol",
-    "@userRole": {},
-    "minimumPowerLevel": "{level} is het minimale rechten-niveau.",
-    "@minimumPowerLevel": {
-        "type": "String",
-        "placeholders": {
-            "level": {
-                "type": "String"
-            }
-        }
-    },
+    "changeTheDescriptionOfTheGroup": "Onderwerp wijzigen",
     "sendReadReceiptsDescription": "Andere deelnemers van de chat kunnen zien of je een bericht hebt gelezen.",
-    "@sendReadReceiptsDescription": {},
     "formattedMessagesDescription": "Geef rijke berichtinhoud weer zoals vetgedrukte tekst met markdown.",
-    "@formattedMessagesDescription": {},
     "verifyOtherUser": "🔐 Persoon verifiëren",
-    "@verifyOtherUser": {},
     "verifyOtherDevice": "🔐 Ander apparaat verifiëren",
-    "@verifyOtherDevice": {},
     "doesNotSeemToBeAValidHomeserver": "Dit lijkt geen ondersteunde server. Verkeerde URL?",
-    "@doesNotSeemToBeAValidHomeserver": {},
-    "sendingAttachmentCountOfCount": "Bijlage versturen {index} van {length}...",
-    "@sendingAttachmentCountOfCount": {
-        "type": "integer",
-        "placeholders": {
-            "index": {
-                "type": "int"
-            },
-            "length": {
-                "type": "int"
-            }
-        }
-    },
     "continueText": "Doorgaan",
-    "@continueText": {},
     "welcomeText": "Hallo hallo 👋 Dit is FluffyChat. Je kan inloggen op elke server die werkt met https://matrix.org. En dan chat je met iedereen. Het is een groot decentraal chat-netwerk!",
-    "@welcomeText": {},
     "appWantsToUseForLogin": "Inloggen met '{server}'",
     "@appWantsToUseForLogin": {
         "type": "String",
@@ -3225,11 +2518,7 @@
         }
     },
     "appWantsToUseForLoginDescription": "Hierbij sta je toe dat de app en website informatie over je delen.",
-    "@appWantsToUseForLoginDescription": {},
     "open": "Open",
-    "@open": {},
-    "appIntroduction": "FluffyChat laat je chatten met je vrienden tussen verschillende chat-netwerken. Lees meer op https://matrix.org of tik *Continue*.",
-    "@appIntroduction": {},
     "completedKeyVerification": "{sender} ronde de sleutelverificatie af",
     "@completedKeyVerification": {
         "type": "String",
@@ -3239,60 +2528,32 @@
             }
         }
     },
-    "homeserverDescription": "Al je data is opgeslagen op de server, net als bij een email-leverancier. Je kan kiezen welke server je gebruikt en toch communiceren met iedereen. Lees meer op https://matrix.org.",
-    "@homeserverDescription": {},
     "notificationRuleContainsDisplayName": "Bevat de naam",
-    "@notificationRuleContainsDisplayName": {},
     "notificationRuleIsUserMentionDescription": "Stuur een melding als je direct genoemd wordt in een bericht.",
-    "@notificationRuleIsUserMentionDescription": {},
     "notificationRuleContainsDisplayNameDescription": "Stuur een melding als je genoemd wordt in een bericht.",
-    "@notificationRuleContainsDisplayNameDescription": {},
     "notificationRuleIsRoomMention": "Kamervermelding",
-    "@notificationRuleIsRoomMention": {},
     "notificationRuleIsRoomMentionDescription": "Stuur een melding als er een kamervermelding is.",
-    "@notificationRuleIsRoomMentionDescription": {},
     "notificationRuleRoomnotif": "Kamermelding",
-    "@notificationRuleRoomnotif": {},
-    "notificationRuleRoomnotifDescription": "Stuur je een melding als een bericht '@room' bevat.",
-    "@notificationRuleRoomnotifDescription": {},
+    "notificationRuleRoomnotifDescription": "Stuur een melding als een bericht '@room' bevat.",
     "notificationRuleTombstone": "Sluitingsbericht",
-    "@notificationRuleTombstone": {},
     "notificationRuleReaction": "Reactie",
-    "@notificationRuleReaction": {},
     "notificationRuleRoomServerAcl": "Kamer Server ACL",
-    "@notificationRuleRoomServerAcl": {},
-    "notificationRuleTombstoneDescription": "Stuur een melding naar je over chat-sluitingsberichten.",
-    "@notificationRuleTombstoneDescription": {},
+    "notificationRuleTombstoneDescription": "Stuur een melding bij een chat-sluitingsbericht.",
     "notificationRuleReactionDescription": "Meldingen voor reacties uitschakelen.",
-    "@notificationRuleReactionDescription": {},
     "notificationRuleRoomServerAclDescription": "Meldingen voor kamer server toegangscontrolelijst (ACL) uitschakelen.",
-    "@notificationRuleRoomServerAclDescription": {},
     "notificationRuleSuppressEdits": "Bewerkingen uitschakelen",
-    "@notificationRuleSuppressEdits": {},
     "notificationRuleCall": "Oproep",
-    "@notificationRuleCall": {},
     "notificationRuleSuppressEditsDescription": "Meldingen voor bewerkte berichten uitschakelen.",
-    "@notificationRuleSuppressEditsDescription": {},
-    "notificationRuleEncryptedRoomOneToOneDescription": "Stuur een melding naar je over berichten in versleutelde een-op-een chats.",
-    "@notificationRuleEncryptedRoomOneToOneDescription": {},
+    "notificationRuleEncryptedRoomOneToOneDescription": "Stuur een melding bij berichten in versleutelde een-op-een chats.",
     "notificationRuleEncryptedRoomOneToOne": "Versleutelde een-op-een chat",
-    "@notificationRuleEncryptedRoomOneToOne": {},
     "notificationRuleRoomOneToOne": "Een-op-een chat",
-    "@notificationRuleRoomOneToOne": {},
     "notificationRuleMessage": "Bericht",
-    "@notificationRuleMessage": {},
     "notificationRuleEncrypted": "Versleuteld",
-    "@notificationRuleEncrypted": {},
-    "notificationRuleRoomOneToOneDescription": "Stuur een melding naar je over berichten in een-op-een chats.",
-    "@notificationRuleRoomOneToOneDescription": {},
-    "notificationRuleMessageDescription": "Stuur een melding naar je over algemene berichten.",
-    "@notificationRuleMessageDescription": {},
+    "notificationRuleRoomOneToOneDescription": "Stuur een melding bij berichten in een-op-een chats.",
+    "notificationRuleMessageDescription": "Stuur een melding bij algemene berichten.",
     "notificationRuleJitsi": "Jitsi",
-    "@notificationRuleJitsi": {},
-    "notificationRuleEncryptedDescription": "Stuur een melding naar je over berichten in versleutelde chats.",
-    "@notificationRuleEncryptedDescription": {},
-    "notificationRuleJitsiDescription": "Stuur een melding naar je over Jitsi widget-gebeurtenissen.",
-    "@notificationRuleJitsiDescription": {},
+    "notificationRuleEncryptedDescription": "Stuur een melding bij berichten in versleutelde chats.",
+    "notificationRuleJitsiDescription": "Stuur een melding bij Jitsi widget-gebeurtenissen.",
     "unknownPushRule": "Onbekende notificatieregel '{rule}'",
     "@unknownPushRule": {
         "type": "String",
@@ -3303,53 +2564,26 @@
         }
     },
     "notificationRuleServerAcl": "Server ACL-gebeurtenissen uitschakelen",
-    "@notificationRuleServerAcl": {},
     "notificationRuleServerAclDescription": "Meldingen over server ACL-gebeurtenissen uitschakelen.",
-    "@notificationRuleServerAclDescription": {},
     "more": "Meer",
-    "@more": {},
     "enterNewChat": "Nieuwe chat openen",
-    "@enterNewChat": {},
     "crossVerifiedDevices": "Kruislings geverifieerde apparaten",
-    "@crossVerifiedDevices": {},
     "allDevices": "Alle apparaten",
-    "@allDevices": {},
     "shareKeysWithDescription": "Welke apparaten moeten vertrouwd worden zodat ze je berichten kunnen lezen in versleutelde chats?",
-    "@shareKeysWithDescription": {},
     "verifiedDevicesOnly": "Alleen geverifieerde apparaten",
-    "@verifiedDevicesOnly": {},
     "crossVerifiedDevicesIfEnabled": "Kruislings geverifieerde apparaten als ingeschakeld",
-    "@crossVerifiedDevicesIfEnabled": {},
     "shareKeysWith": "Deel sleutels met...",
-    "@shareKeysWith": {},
-    "notificationRuleCallDescription": "Stuur een melding naar je over oproepen.",
-    "@notificationRuleCallDescription": {},
+    "notificationRuleCallDescription": "Stuur een melding bij oproepen.",
     "deletePushRuleCanNotBeUndone": "Als je deze melding-instelling verwijderd, kan dit niet ongedaan gemaakt worden.",
-    "@deletePushRuleCanNotBeUndone": {},
     "takeAPhoto": "Foto maken",
-    "@takeAPhoto": {},
     "recordAVideo": "Video opnemen",
-    "@recordAVideo": {},
     "optionalMessage": "(Optioneel) bericht...",
-    "@optionalMessage": {},
     "notSupportedOnThisDevice": "Niet ondersteund op dit apparaat",
-    "@notSupportedOnThisDevice": {},
     "commandHint_roomupgrade": "Upgradeer deze chat naar de aangegeven kamerversie",
-    "@commandHint_roomupgrade": {},
-    "setCustomPermissionLevel": "Aangepast rechten-niveau instellen",
-    "@setCustomPermissionLevel": {},
-    "setPermissionsLevelDescription": "Kies hieronder een standaard rol of voer een aangepast rechten-niveau in tussen 0 en 100.",
-    "@setPermissionsLevelDescription": {},
     "ignoreUser": "Persoon negeren",
-    "@ignoreUser": {},
-    "normalUser": "Normaal persoon",
-    "@normalUser": {},
     "pleaseWaitUntilInvited": "Wacht even alsjeblieft tot iemand van de chat je uitnodigt.",
-    "@pleaseWaitUntilInvited": {},
     "approve": "Goedkeuren",
-    "@approve": {},
     "youHaveKnocked": "Je hebt geklopt",
-    "@youHaveKnocked": {},
     "sentVoiceMessage": "🎙️ {duration} - Spraakbericht van {sender}",
     "@sentVoiceMessage": {
         "type": "String",
@@ -3372,39 +2606,17 @@
         }
     },
     "checkList": "Checklist",
-    "@checkList": {},
     "commandHint_logout": "Uw huidige apparaat uitloggen",
-    "@commandHint_logout": {},
     "commandHint_logoutall": "Alle actieve apparaten uitloggen",
-    "@commandHint_logoutall": {},
     "displayNavigationRail": "Navigatiebalk op mobiel tonen",
-    "@displayNavigationRail": {},
     "moreEvents": "Meer gebeurtenissen",
-    "@moreEvents": {},
     "customReaction": "Aangepaste reactie",
-    "@customReaction": {},
     "declineInvitation": "Uitnodiging afwijzen",
-    "@declineInvitation": {},
     "noMessagesYet": "Nog geen berichten",
-    "@noMessagesYet": {},
     "longPressToRecordVoiceMessage": "Lang drukken om een spraakbericht op te nemen.",
-    "@longPressToRecordVoiceMessage": {},
     "pause": "Pauzeer",
-    "@pause": {},
     "resume": "Hervat",
-    "@resume": {},
-    "donate": "Doneer",
-    "@donate": {},
-    "newSubSpace": "Nieuwe sub-space",
-    "@newSubSpace": {},
-    "moveToDifferentSpace": "Naar andere space verplaatsen",
-    "@moveToDifferentSpace": {},
-    "moveUp": "Omhoog verplaatsen",
-    "@moveUp": {},
-    "moveDown": "Omlaag verplaatsen",
-    "@moveDown": {},
     "removeFromSpaceDescription": "De chat zal worden verwijderd uit de space, maar blijft in je chats.",
-    "@removeFromSpaceDescription": {},
     "countChats": "{chats} chats",
     "@countChats": {
         "type": "String",
@@ -3442,25 +2654,14 @@
         }
     },
     "poll": "Peiling",
-    "@poll": {},
     "startPoll": "Peiling starten",
-    "@startPoll": {},
     "endPoll": "Peiling beëindigen",
-    "@endPoll": {},
     "answersVisible": "Zichtbaar invullen",
-    "@answersVisible": {},
-    "answersHidden": "Antwoorden verborgen",
-    "@answersHidden": {},
     "pollQuestion": "Peiling vraag",
-    "@pollQuestion": {},
     "answerOption": "Antwoord optie",
-    "@answerOption": {},
     "addAnswerOption": "Antwoord optie toevoegen",
-    "@addAnswerOption": {},
     "allowMultipleAnswers": "Meerdere antwoorden toestaan",
-    "@allowMultipleAnswers": {},
     "pollHasBeenEnded": "Peiling is geëindigd",
-    "@pollHasBeenEnded": {},
     "countVotes": "{count, plural, =1{Één stem} other{{count} stemmen}}",
     "@countVotes": {
         "type": "int",
@@ -3471,9 +2672,7 @@
         }
     },
     "answersWillBeVisibleWhenPollHasEnded": "Antwoorden zullen zichtbaar zijn wanneer de peiling is geëindigd",
-    "@answersWillBeVisibleWhenPollHasEnded": {},
-    "replyInThread": "Antwoord in draad",
-    "@replyInThread": {},
+    "replyInThread": "Antwoord in gesprek",
     "countReplies": "{count, plural, =1{Één antwoord} other{{count} antwoorden}}",
     "@countReplies": {
         "type": "int",
@@ -3483,36 +2682,86 @@
             }
         }
     },
-    "thread": "Draad",
-    "@thread": {},
+    "thread": "Gesprek",
     "backToMainChat": "Terug naar hoofdchat",
-    "@backToMainChat": {},
     "saveChanges": "Wijzigingen opslaan",
-    "@saveChanges": {},
     "createSticker": "Sticker of emoji maken",
-    "@createSticker": {},
     "useAsSticker": "Gebruik als sticker",
-    "@useAsSticker": {},
     "useAsEmoji": "Gebruik als emoji",
-    "@useAsEmoji": {},
     "stickerPackNameAlreadyExists": "Stickerpakketnaam bestaat al",
-    "@stickerPackNameAlreadyExists": {},
     "newStickerPack": "Nieuw stickerpakket",
-    "@newStickerPack": {},
     "stickerPackName": "Stickerpakketnaam",
-    "@stickerPackName": {},
     "attribution": "Toeschrijving",
-    "@attribution": {},
     "skipChatBackup": "Chatback-up overslaan",
-    "@skipChatBackup": {},
     "skipChatBackupWarning": "Weet je het zeker? Zonder chat back-up verlies je toegang tot je berichten als je van apparaat wisselt.",
-    "@skipChatBackupWarning": {},
     "loadingMessages": "Berichten laden",
-    "@loadingMessages": {},
     "setupChatBackup": "Chatback-up instellen",
-    "@setupChatBackup": {},
-    "changedTheChatDescription": "{username} heeft de chatomschrijving gewijzigd",
-    "@changedTheChatDescription": {},
+    "changedTheChatDescription": "{username} heeft het onderwerp gewijzigd",
     "changedTheChatName": "{username} heeft de chatnaam gewijzigd",
-    "@changedTheChatName": {}
+    "noMoreResultsFound": "Geen resultaten meer gevonden",
+    "chatSearchedUntil": "Chat doorzocht tot {time}",
+    "@chatSearchedUntil": {
+        "type": "String",
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "federationBaseUrl": "Federatie Basis URL",
+    "clientWellKnownInformation": "Client-Well-Known Informatie:",
+    "baseUrl": "Basis URL",
+    "identityServer": "Identiteit Server:",
+    "versionWithNumber": "Versie: {version}",
+    "@versionWithNumber": {
+        "type": "String",
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "logs": "Logs",
+    "advancedConfigs": "Geavanceerde configuratie",
+    "advancedConfigurations": "Geavanceerde configuraties",
+    "signIn": "Log in",
+    "createNewAccount": "Registreer nieuw account",
+    "signUpGreeting": "FluffyChat is decentraal! Kies een server waar je wil voor jouw account en laten we gaan!",
+    "signInGreeting": "Heb je al een Matrix account? Welkom terug! Kies jouw server en log in.",
+    "appIntro": "Met FluffyChat kan je chatten met je vrienden. Het is een veilige en decentrale [matrix] app! Lees meer op https://matrix.org als je wilt of kies registreren.",
+    "theProcessWasCanceled": "Het proces is geannuleerd.",
+    "join": "Deelnemen",
+    "searchOrEnterHomeserverAddress": "Zoek of voer serveradres in",
+    "matrixId": "Matrix-ID",
+    "setPowerLevel": "Rechtenniveau instellen",
+    "makeModerator": "Maak moderator",
+    "makeAdmin": "Maak beheerder",
+    "removeModeratorRights": "Verwijder moderator-rechten",
+    "removeAdminRights": "Verwijder beheerder-rechten",
+    "powerLevel": "Rechtenniveau",
+    "setPowerLevelDescription": "Rechtenniveau's definiëren wat een persoon mag doen in deze chat en variëren meestal tussen 0 en 100.",
+    "owner": "Eigenaar",
+    "mute": "Demp",
+    "@mute": {
+        "description": "This should be a very short string because there is not much space in the button!"
+    },
+    "createNewChat": "Creëer nieuw chat",
+    "reset": "Herstellen",
+    "supportFluffyChat": "FluffyChat steunen",
+    "support": "Steunen",
+    "setLowPriority": "Lage prioriteit instellen",
+    "unsetLowPriority": "Lage prioriteit uitschakelen",
+    "removeCallFromChat": "Verwijder oproep van chat",
+    "removeCallFromChatDescription": "Wil je de oproep voor iedereen in de chat verwijderen?",
+    "removeCallForEveryone": "Verwijder oproep voor iedereen",
+    "live": "Live",
+    "startVoiceCall": "Start audio-gesprek",
+    "startVideoCall": "Start video-gesprek",
+    "joinVoiceCall": "Audio-gesprek opnemen",
+    "joinVideoCall": "Deelnemen aan video-gesprek",
+    "playSoundOnNotification": "Meldingsgeluid afspelen",
+    "addTag": "Tag toevoegen",
+    "removeTag": "Tag verwijderen",
+    "tagName": "Tagnaam",
+    "createNewTag": "Nieuwe tag maken"
 }

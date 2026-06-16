@@ -1,13 +1,17 @@
-import 'package:flutter/material.dart';
-
-import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
+import 'package:fluffychat/pages/chat/events/file_send_status_indicator.dart';
 import 'package:fluffychat/utils/file_description.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:matrix/matrix.dart';
 
 class MessageDownloadContent extends StatelessWidget {
   final Event event;
@@ -27,12 +31,13 @@ class MessageDownloadContent extends StatelessWidget {
     final filetype = (filename.contains('.')
         ? filename.split('.').last.toUpperCase()
         : event.content
-                  .tryGetMap<String, dynamic>('info')
+                  .tryGetMap<String, Object?>('info')
                   ?.tryGet<String>('mimetype')
                   ?.toUpperCase() ??
               'UNKNOWN');
     final sizeString = event.sizeString ?? '?MB';
     final fileDescription = event.fileDescription;
+    final fileSendingStatus = event.fileSendingStatus;
     return Column(
       mainAxisSize: .min,
       crossAxisAlignment: .start,
@@ -50,10 +55,18 @@ class MessageDownloadContent extends StatelessWidget {
                 mainAxisSize: .min,
                 spacing: 16,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: textColor.withAlpha(32),
-                    child: Icon(Icons.file_download_outlined, color: textColor),
-                  ),
+                  if (fileSendingStatus != null)
+                    FileSendStatusIndicator(
+                      fileSendingStatus: fileSendingStatus,
+                    )
+                  else
+                    CircleAvatar(
+                      backgroundColor: textColor.withAlpha(32),
+                      child: Icon(
+                        Icons.file_download_outlined,
+                        color: textColor,
+                      ),
+                    ),
                   Flexible(
                     child: Column(
                       crossAxisAlignment: .start,

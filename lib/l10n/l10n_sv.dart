@@ -9,7 +9,7 @@ class L10nSv extends L10n {
   L10nSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'false';
+  String get alwaysUse24HourFormat => 'falskt';
 
   @override
   String get repeatPassword => 'Upprepa lösenord';
@@ -18,17 +18,7 @@ class L10nSv extends L10n {
   String get notAnImage => 'Inte en bildfil.';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
-
-  @override
-  String get ignoreUser => 'Ignore user';
-
-  @override
-  String get normalUser => 'Normal user';
+  String get ignoreUser => 'Ignorera användare';
 
   @override
   String get remove => 'Ta bort';
@@ -53,7 +43,7 @@ class L10nSv extends L10n {
 
   @override
   String aboutHomeserver(String homeserver) {
-    return 'About $homeserver';
+    return 'Om $homeserver';
   }
 
   @override
@@ -85,9 +75,6 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get addChatDescription => 'Lägg till en chattbeskrivning…';
-
-  @override
   String get addToSpace => 'Lägg till i utrymme';
 
   @override
@@ -104,7 +91,7 @@ class L10nSv extends L10n {
 
   @override
   String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+      'Uppgradera detta rum till den givna rumsversionen';
 
   @override
   String get commandHint_googly => 'Skicka några googly ögon';
@@ -143,16 +130,19 @@ class L10nSv extends L10n {
 
   @override
   String get appLockDescription =>
-      'Lock the app when not using with a pin code';
+      'Lås appen när den inte används med en pin-kod';
 
   @override
   String get archive => 'Arkiv';
 
   @override
-  String get areGuestsAllowedToJoin => 'Får gästanvändare gå med';
+  String get areGuestsAllowedToJoin => 'Får gästanvändare gå med?';
 
   @override
   String get areYouSure => 'Är du säker?';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -184,45 +174,27 @@ class L10nSv extends L10n {
   String get sendTypingNotifications => 'Skicka skrivnotifikationer';
 
   @override
-  String get swipeRightToLeftToReply => 'Swipe right to left to reply';
+  String get swipeRightToLeftToReply =>
+      'Svep från höger till vänster för att svara';
 
   @override
   String get sendOnEnter => 'Skicka med Enter';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'Hemservern stöjder Spec-versionen:\n$serverVersions\nMen denna app stödjer enbart $supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats chats and $participants participants';
-  }
-
-  @override
-  String get noMoreChatsFound => 'No more chats found...';
+  String get noMoreChatsFound => 'Inga fler chattar hittades...';
 
   @override
   String get noChatsFoundHere =>
-      'No chats found here yet. Start a new chat with someone by using the button below. ⤵️';
+      'Inga chattar kunde hittas här ännu. Starta en ny chatt med någon genom att använda knappen nedan. ⤵️';
 
   @override
-  String get joinedChats => 'Joined chats';
+  String get unread => 'Olästa';
 
   @override
-  String get unread => 'Unread';
+  String get space => 'Utrymme';
 
   @override
-  String get space => 'Space';
-
-  @override
-  String get spaces => 'Spaces';
+  String get spaces => 'Utrymmen';
 
   @override
   String get banFromChat => 'Bannlys från chatt';
@@ -242,9 +214,6 @@ class L10nSv extends L10n {
   String get blocked => 'Blockerad';
 
   @override
-  String get botMessages => 'Bot meddelanden';
-
-  @override
   String get cancel => 'Avbryt';
 
   @override
@@ -262,7 +231,7 @@ class L10nSv extends L10n {
 
   @override
   String changedTheChatDescription(Object username) {
-    return '$username changed the chat description';
+    return '$username ändrade chattens beskrivning';
   }
 
   @override
@@ -272,7 +241,7 @@ class L10nSv extends L10n {
 
   @override
   String changedTheChatName(Object username) {
-    return '$username changed the chat name';
+    return '$username ändrade chattens namn';
   }
 
   @override
@@ -365,14 +334,10 @@ class L10nSv extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'Din chatt backup är skyddad av en säkerhetsnyckel. Se till att du inte förlorar den.';
+      'Dina meddelanden är skyddad av en säkerhetsnyckel. Se till att du inte förlorar den.';
 
   @override
   String get chatDetails => 'Chatt-detaljer';
-
-  @override
-  String get chatHasBeenAddedToThisSpace =>
-      'Chatt har lagts till i detta utrymme';
 
   @override
   String get chats => 'Chatter';
@@ -468,20 +433,8 @@ class L10nSv extends L10n {
   String get configureChat => 'Konfigurera chatt';
 
   @override
-  String get confirm => 'Bekräfta';
-
-  @override
-  String get connect => 'Anslut';
-
-  @override
   String get contactHasBeenInvitedToTheGroup =>
       'Kontakten har blivit inbjuden till gruppen';
-
-  @override
-  String get containsDisplayName => 'Innehåller visningsnamn';
-
-  @override
-  String get containsUserName => 'Innehåller användarnamn';
 
   @override
   String get contentHasBeenReported =>
@@ -502,7 +455,7 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'Att-göra lista';
 
   @override
   String countParticipants(int count) {
@@ -511,7 +464,7 @@ class L10nSv extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count inbjudna';
   }
 
   @override
@@ -537,16 +490,6 @@ class L10nSv extends L10n {
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
     return '$date, $timeOfDay';
-  }
-
-  @override
-  String dateWithoutYear(String month, String day) {
-    return '$day-$month';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year-$month-$day';
   }
 
   @override
@@ -576,9 +519,6 @@ class L10nSv extends L10n {
 
   @override
   String get directChats => 'Direkt chatt';
-
-  @override
-  String get allRooms => 'Alla gruppchattar';
 
   @override
   String get displaynameHasBeenChanged => 'Visningsnamn har ändrats';
@@ -621,30 +561,27 @@ class L10nSv extends L10n {
   String get emoteSettings => 'Emote inställningar';
 
   @override
-  String get globalChatId => 'Global chat ID';
+  String get globalChatId => 'Globalt chat-ID';
 
   @override
-  String get accessAndVisibility => 'Access and visibility';
+  String get accessAndVisibility => 'Tillgänglighet och synlighet';
 
   @override
   String get accessAndVisibilityDescription =>
-      'Who is allowed to join this chat and how the chat can be discovered.';
+      'Vem som är tillåten att gå med i chatten och hur chatten kan upptäckas.';
 
   @override
-  String get calls => 'Calls';
+  String get calls => 'Samtal';
 
   @override
-  String get customEmojisAndStickers => 'Custom emojis and stickers';
+  String get customEmojisAndStickers => 'Egna emojis och klistermärken';
 
   @override
   String get customEmojisAndStickersBody =>
-      'Add or share custom emojis or stickers which can be used in any chat.';
+      'Lägg till eller dela egna emojis eller klistermärken som kan användas i alla chattar.';
 
   @override
   String get emoteShortcode => 'Dekal kod';
-
-  @override
-  String get emoteWarnNeedToPick => 'Du måste välja en dekal-kod och en bild!';
 
   @override
   String get emptyChat => 'Tom chatt';
@@ -680,18 +617,12 @@ class L10nSv extends L10n {
   String get homeserver => 'Hemserver';
 
   @override
-  String get enterYourHomeserver => 'Ange din hemserver';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Fel vid erhållande av plats: $error';
   }
 
   @override
   String get everythingReady => 'Allt är klart!';
-
-  @override
-  String get extremeOffensive => 'Extremt stötande';
 
   @override
   String get fileName => 'Filnamn';
@@ -710,9 +641,6 @@ class L10nSv extends L10n {
 
   @override
   String get fromTheInvitation => 'Från inbjudan';
-
-  @override
-  String get goToTheNewRoom => 'Gå till det nya rummet';
 
   @override
   String get group => 'Grupp';
@@ -752,24 +680,18 @@ class L10nSv extends L10n {
   String get hideRedactedEvents => 'Göm redigerade händelser';
 
   @override
-  String get hideRedactedMessages => 'Hide redacted messages';
+  String get hideRedactedMessages => 'Dölj tillbakatagna meddelanden';
 
   @override
   String get hideRedactedMessagesBody =>
-      'If someone redacts a message, this message won\'t be visible in the chat anymore.';
+      'Om någon tar tillbaka ett meddelande, kommer meddelandet inte längre vara synligt i chatten.';
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
-      'Hide invalid or unknown message formats';
-
-  @override
-  String get howOffensiveIsThisContent => 'Hur stötande är detta innehåll?';
+      'Dölj ogiltiga eller okända meddelande-format';
 
   @override
   String get id => 'ID';
-
-  @override
-  String get identity => 'Identitet';
 
   @override
   String get block => 'blockera';
@@ -792,15 +714,7 @@ class L10nSv extends L10n {
       'Felaktig lösenordsfras eller åsterställningsnyckel';
 
   @override
-  String get inoffensive => 'Oförargligt';
-
-  @override
   String get inviteContact => 'Bjud in kontakt';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Vill du bjuda in $contact till chatten ”$groupName”?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -834,9 +748,6 @@ class L10nSv extends L10n {
 
   @override
   String get invitedUsersOnly => 'Endast inbjudna användare';
-
-  @override
-  String get inviteForMe => 'Inbjudning till mig';
 
   @override
   String inviteText(String username, String link) {
@@ -879,9 +790,6 @@ class L10nSv extends L10n {
   String get leftTheChat => 'Lämnade chatten';
 
   @override
-  String get license => 'Licens';
-
-  @override
   String get lightTheme => 'Ljust';
 
   @override
@@ -895,21 +803,6 @@ class L10nSv extends L10n {
   @override
   String get dehydrateWarning =>
       'Denna åtgärd kan inte ångras. Försäkra dig om att backupen är i säkert förvar.';
-
-  @override
-  String get dehydrateTor => 'TOR-användare: Exportera session';
-
-  @override
-  String get dehydrateTorLong =>
-      'TOR-användare rekommenderas att exportera sessionen innan fönstret stängs.';
-
-  @override
-  String get hydrateTor =>
-      'TOR-användare: Importera session från tidigare export';
-
-  @override
-  String get hydrateTorLong =>
-      'Exporterade du sessionen när du senast använde TOR? Importera den enkelt och fortsätt chatta.';
 
   @override
   String get hydrate => 'Återställ från säkerhetskopia';
@@ -938,9 +831,6 @@ class L10nSv extends L10n {
 
   @override
   String get logout => 'Logga ut';
-
-  @override
-  String get memberChanges => 'Medlemsändringar';
 
   @override
   String get mention => 'Nämn';
@@ -1018,19 +908,12 @@ class L10nSv extends L10n {
   String get notifications => 'Aviseringar';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Aviseringar är påslaget för detta konto';
-
-  @override
   String numUsersTyping(int count) {
     return '$count användare skriver…';
   }
 
   @override
   String get obtainingLocation => 'Erhåller plats…';
-
-  @override
-  String get offensive => 'Stötande';
 
   @override
   String get offline => 'Offline';
@@ -1057,9 +940,6 @@ class L10nSv extends L10n {
   String get openCamera => 'Öppna kamera';
 
   @override
-  String get openVideoCamera => 'Aktivera kamera för video';
-
-  @override
   String get oneClientLoggedOut => 'En av dina klienter har loggats ut';
 
   @override
@@ -1076,10 +956,6 @@ class L10nSv extends L10n {
 
   @override
   String get bundleName => 'Paketnamn';
-
-  @override
-  String get enableMultiAccounts =>
-      '(BETA) Aktivera multi-konton på denna enhet';
 
   @override
   String get openInMaps => 'Öppna i karta';
@@ -1110,27 +986,14 @@ class L10nSv extends L10n {
   String get passwordHasBeenChanged => 'Lösenordet har ändrats';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Hide member changes in public chats';
+  String get overview => 'Översikt';
 
   @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Do not show in the chat timeline if someone joins or leaves a public chat to improve readability.';
-
-  @override
-  String get overview => 'Overview';
-
-  @override
-  String get notifyMeFor => 'Notify me for';
-
-  @override
-  String get passwordRecoverySettings => 'Password recovery settings';
+  String get passwordRecoverySettings =>
+      'Lösenordsåterställnings-inställningar';
 
   @override
   String get passwordRecovery => 'Återställ lösenord';
-
-  @override
-  String get people => 'Människor';
 
   @override
   String get pickImage => 'Välj en bild';
@@ -1144,9 +1007,6 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get pleaseChoose => 'Var god välj';
-
-  @override
   String get pleaseChooseAPasscode => 'Ange ett lösenord';
 
   @override
@@ -1156,9 +1016,6 @@ class L10nSv extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'Ange 4 siffror eller lämna tom för att inaktivera app-lås.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'Ange din återställningsnyckel:';
 
   @override
   String get pleaseEnterYourPassword => 'Ange ditt lösenord';
@@ -1221,18 +1078,12 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get rejoin => 'Återanslut';
-
-  @override
   String get removeAllOtherDevices => 'Ta bort alla andra enheter';
 
   @override
   String removedBy(String username) {
     return 'Bortagen av $username';
   }
-
-  @override
-  String get removeDevice => 'Ta bort enhet';
 
   @override
   String get unbanFromChat => 'Ta bort chatt-blockering';
@@ -1274,11 +1125,6 @@ class L10nSv extends L10n {
   String get recoveryKeyLost => 'Borttappad återställningsnyckel?';
 
   @override
-  String seenByUser(String username) {
-    return 'Sedd av $username';
-  }
-
-  @override
   String get send => 'Skicka';
 
   @override
@@ -1298,17 +1144,11 @@ class L10nSv extends L10n {
 
   @override
   String sendImages(int count) {
-    return 'Send $count image';
+    return 'Skicka $count bild';
   }
 
   @override
   String get sendMessages => 'Skickade meddelanden';
-
-  @override
-  String get sendOriginal => 'Skicka orginal';
-
-  @override
-  String get sendSticker => 'Skicka klistermärke';
 
   @override
   String get sendVideo => 'Skicka video';
@@ -1344,22 +1184,10 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Separata direktchattar och grupper';
-
-  @override
   String get setAsCanonicalAlias => 'Sätt som primärt alias';
 
   @override
-  String get setCustomEmotes => 'Ställ in anpassade dekaler';
-
-  @override
   String get setChatDescription => 'Ändra chattens beskrivning';
-
-  @override
-  String get setInvitationLink => 'Ställ in inbjudningslänk';
-
-  @override
-  String get setPermissionsLevel => 'Ställ in behörighetsnivå';
 
   @override
   String get setStatus => 'Ställ in status';
@@ -1382,13 +1210,7 @@ class L10nSv extends L10n {
   String get showPassword => 'Visa lösenord';
 
   @override
-  String get presenceStyle => 'Närvaro:';
-
-  @override
   String get presencesToggle => 'Visa statusmeddelanden från andra användare';
-
-  @override
-  String get singlesignon => 'Single Sign On';
 
   @override
   String get skip => 'Hoppa över';
@@ -1408,9 +1230,6 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get startFirstChat => 'Starta din första chatt';
-
-  @override
   String get status => 'Status';
 
   @override
@@ -1424,7 +1243,7 @@ class L10nSv extends L10n {
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
-    return ' Synchronizing… ($percentage%)';
+    return ' Synkroniserar… ($percentage%)';
   }
 
   @override
@@ -1438,15 +1257,6 @@ class L10nSv extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'Växla favorit';
-
-  @override
-  String get toggleMuted => 'Växla tystad';
-
-  @override
-  String get toggleUnread => 'Markera läst/oläst';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1485,17 +1295,6 @@ class L10nSv extends L10n {
 
   @override
   String get unpin => 'Avnåla';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount olästa chattar',
-      one: 'en oläst chatt',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1571,9 +1370,6 @@ class L10nSv extends L10n {
       'Väntar på att deltagaren accepterar nummer…';
 
   @override
-  String get wallpaper => 'Bakgrund:';
-
-  @override
   String get warning => 'Varning!';
 
   @override
@@ -1636,26 +1432,11 @@ class L10nSv extends L10n {
   String get removeFromSpace => 'Ta bort från utrymme';
 
   @override
-  String get addToSpaceDescription =>
-      'Välj ett utrymme som chatten skall läggas till i.';
-
-  @override
   String get start => 'Starta';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'Ange din återställningsnyckel från en tidigare session för att låsa upp äldre meddelanden. Din återställningsnyckel är INTE ditt lösenord.';
-
-  @override
-  String get publish => 'Publicera';
-
-  @override
-  String videoWithSize(String size) {
-    return 'Video ($size)';
-  }
-
-  @override
-  String get openChat => 'Öppna Chatt';
 
   @override
   String get markAsRead => 'Markera som läst';
@@ -1703,55 +1484,6 @@ class L10nSv extends L10n {
   String get experimentalVideoCalls => 'Experimentella videosamtal';
 
   @override
-  String get emailOrUsername => 'Användarnamn eller e-postadress';
-
-  @override
-  String get indexedDbErrorTitle => 'Problem med privat läge';
-
-  @override
-  String get indexedDbErrorLong =>
-      'Meddelandelagring är tyvärr inte aktiverat i privat läge som standard.\nGå till\n - about:config\n - sätt dom.indexedDB.privateBrowsing.enabled till true\nAnnars går det inte att använda FluffyChat.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'Byt till konto $number';
-  }
-
-  @override
-  String get nextAccount => 'Nästa konto';
-
-  @override
-  String get previousAccount => 'Föregående konto';
-
-  @override
-  String get addWidget => 'Lägg till widget';
-
-  @override
-  String get widgetVideo => 'Video';
-
-  @override
-  String get widgetEtherpad => 'Anteckning';
-
-  @override
-  String get widgetJitsi => 'Jitsi-möte';
-
-  @override
-  String get widgetCustom => 'Anpassad';
-
-  @override
-  String get widgetName => 'Namn';
-
-  @override
-  String get widgetUrlError => 'Detta är inte en giltig URL.';
-
-  @override
-  String get widgetNameError => 'Vänligen ange ett visningsnamn.';
-
-  @override
-  String get errorAddingWidget =>
-      'Ett fel uppstod när widgeten skulle läggas till.';
-
-  @override
   String get youRejectedTheInvitation => 'Du avvisade inbjudan';
 
   @override
@@ -1771,18 +1503,13 @@ class L10nSv extends L10n {
   }
 
   @override
-  String youInvitedToBy(String alias) {
-    return '📩 Du har blivit inbjuden via länk till:\n$alias';
-  }
-
-  @override
   String youInvitedBy(String user) {
     return '📩 Du har blivit inbjuden av $user';
   }
 
   @override
   String invitedBy(String user) {
-    return '📩 Invited by $user';
+    return '📩Inbjuden av $user';
   }
 
   @override
@@ -1811,22 +1538,13 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get usersMustKnock => 'Users must knock';
+  String get usersMustKnock => 'Användare måste knacka';
 
   @override
-  String get noOneCanJoin => 'No one can join';
+  String get noOneCanJoin => 'Ingen kan gå med';
 
   @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user would like to join the chat.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'No public link has been created yet';
-
-  @override
-  String get knock => 'Knock';
+  String get knock => 'Knacka';
 
   @override
   String get users => 'Användare';
@@ -1874,27 +1592,6 @@ class L10nSv extends L10n {
   String get screenSharingDetail => 'Du delar din skärm i FluffyChat';
 
   @override
-  String get callingPermissions => 'Samtalsbehörighet';
-
-  @override
-  String get callingAccount => 'Samtalskonto';
-
-  @override
-  String get callingAccountDetails =>
-      'Tillåt FluffyChat att använda Androids ring-app.';
-
-  @override
-  String get appearOnTop => 'Visa ovanpå';
-
-  @override
-  String get appearOnTopDetails =>
-      'Tillåt att appen visas ovanpå (behövs inte om du redan har FluffyChat konfigurerat som ett samtalskonto)';
-
-  @override
-  String get otherCallingPermissions =>
-      'Mikrofon, kamera och andra behörigheter för FluffyChat';
-
-  @override
   String get whyIsThisMessageEncrypted =>
       'Varför kan inte detta meddelande läsas?';
 
@@ -1909,21 +1606,7 @@ class L10nSv extends L10n {
   String get newSpace => 'Nytt utrymme';
 
   @override
-  String get enterSpace => 'Gå till utrymme';
-
-  @override
-  String get enterRoom => 'Gå till rummet';
-
-  @override
   String get allSpaces => 'Alla utrymmen';
-
-  @override
-  String numChats(String number) {
-    return '$number chattar';
-  }
-
-  @override
-  String get hideUnimportantStateEvents => 'Göm oviktiga tillståndshändelser';
 
   @override
   String get hidePresences => 'Dölj statuslista?';
@@ -1965,7 +1648,7 @@ class L10nSv extends L10n {
 
   @override
   String fileIsTooBigForServer(String max) {
-    return 'Servern informerar om att filen är för stor för att skickas.';
+    return 'Gick inte att skicka! Servern stödjer endast bilagor upp till $max.';
   }
 
   @override
@@ -1993,30 +1676,13 @@ class L10nSv extends L10n {
   String get report => 'rapportera';
 
   @override
-  String get signInWithPassword => 'Logga in med lösenord';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Vänligen försök igen eller välj en annan server.';
-
-  @override
-  String get profileNotFound =>
-      'Användaren kunde onte hittas på servern. Kanske är det ett anslutningsproblem eller så finns inte användaren.';
-
-  @override
-  String get setTheme => 'Välj tema:';
-
-  @override
   String get setColorTheme => 'Välj färgtema:';
 
   @override
   String get invite => 'Bjud in';
 
   @override
-  String get inviteGroupChat => '📨 Bjud in gruppchatt';
-
-  @override
-  String get invitePrivateChat => '📨 Bjud in privat chatt';
+  String get inviteGroupChat => '📨 Gruppchattsinbjudan';
 
   @override
   String get invalidInput => 'Ogiltig input!';
@@ -2073,11 +1739,11 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get knocking => 'Knocking';
+  String get knocking => 'Knackar';
 
   @override
   String chatCanBeDiscoveredViaSearchOnServer(String server) {
-    return 'Chat can be discovered via the search on $server';
+    return 'Chatten kan upptäckas via sökfunktionen på $server';
   }
 
   @override
@@ -2099,9 +1765,6 @@ class L10nSv extends L10n {
   @override
   String get wrongRecoveryKey =>
       'Tyvärr verkar detta inte vara den korrekta återställningsnyckeln.';
-
-  @override
-  String get startConversation => 'Starta konversation';
 
   @override
   String get commandHint_sendraw => 'Skicka rå json';
@@ -2139,13 +1802,10 @@ class L10nSv extends L10n {
   String get passwordIsWrong => 'Det angivna lösenordet är fel';
 
   @override
-  String get publicLink => 'Offentlig länk';
+  String get publicChatAddresses => 'Offentlig chatt-adress';
 
   @override
-  String get publicChatAddresses => 'Public chat addresses';
-
-  @override
-  String get createNewAddress => 'Create new address';
+  String get createNewAddress => 'Skapa ny adress';
 
   @override
   String get joinSpace => 'Gå med i utrymme';
@@ -2157,43 +1817,24 @@ class L10nSv extends L10n {
   String get addChatOrSubSpace => 'Lägg till chatt eller underutrymme';
 
   @override
-  String get subspace => 'Underutrymme';
-
-  @override
-  String get decline => 'Neka';
-
-  @override
   String get thisDevice => 'Denna enhet:';
 
   @override
   String get initAppError => 'Ett problem skedde när appen initierades';
 
   @override
-  String get userRole => 'User role';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level is the minimum power level.';
-  }
-
-  @override
   String searchIn(String chat) {
-    return 'Search in chat \"$chat\"...';
+    return 'Sök i chatten \"$chat\"...';
   }
 
   @override
-  String get searchMore => 'Search more...';
+  String get searchMore => 'Sök mer...';
 
   @override
-  String get gallery => 'Gallery';
+  String get gallery => 'Galleri';
 
   @override
-  String get files => 'Files';
-
-  @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'Kan inte bygga SQlite-databasen. Appen försöker använda den gamla databasen för nu. Vänligen rapportera problemet till utvecklarna här: $url. Felmeddelandet är: $error';
-  }
+  String get files => 'Filer';
 
   @override
   String sessionLostBody(String url, String error) {
@@ -2203,11 +1844,6 @@ class L10nSv extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'Appen försöker nu få tillbaks din session från backupen. Vänligen rapportera detta problem till utvecklarna här: $url. Felmeddelandet är: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Vidarebefordra meddelandet till $roomName?';
   }
 
   @override
@@ -2285,42 +1921,42 @@ class L10nSv extends L10n {
   String get discover => 'Upptäck';
 
   @override
-  String get commandHint_ignore => 'Ignore the given matrix ID';
+  String get commandHint_ignore => 'Ignorera det givna matrix-ID:et';
 
   @override
-  String get commandHint_unignore => 'Unignore the given matrix ID';
+  String get commandHint_unignore => 'Sluta ignorera det givna matrix-ID:et';
 
   @override
   String unreadChatsInApp(String appname, String unread) {
-    return '$appname: $unread unread chats';
+    return '$appname: $unread olästa chattar';
   }
 
   @override
   String get noDatabaseEncryption =>
-      'Database encryption is not supported on this platform';
+      'Databaskryptering stöds inte på denna platform';
 
   @override
   String thereAreCountUsersBlocked(Object count) {
-    return 'Right now there are $count users blocked.';
+    return 'Just nu är $count användare blockade.';
   }
 
   @override
-  String get restricted => 'Restricted';
+  String get restricted => 'Begränsad';
 
   @override
-  String get knockRestricted => 'Knock restricted';
+  String get knockRestricted => 'Knacka begränsade';
 
   @override
   String goToSpace(Object space) {
-    return 'Go to space: $space';
+    return 'Gå till utrymme:$space';
   }
 
   @override
-  String get markAsUnread => 'Mark as unread';
+  String get markAsUnread => 'Markera oläst';
 
   @override
   String userLevel(int level) {
-    return '$level - User';
+    return '$level - Användare';
   }
 
   @override
@@ -2334,221 +1970,190 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get changeGeneralChatSettings => 'Change general chat settings';
+  String get changeGeneralChatSettings => 'Ändra allmäna chatt-inställningar';
 
   @override
-  String get inviteOtherUsers => 'Invite other users to this chat';
+  String get inviteOtherUsers => 'Bjud in andra användare till chatten';
 
   @override
-  String get changeTheChatPermissions => 'Change the chat permissions';
+  String get changeTheChatPermissions => 'Ändra chattbehörigheterna';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
-      'Change the visibility of the chat history';
+      'Ändra synligheten på chatt-historiken';
 
   @override
   String get changeTheCanonicalRoomAlias =>
-      'Change the main public chat address';
+      'Ändra den huvudsakliga offenliga chatt-adressen';
 
   @override
-  String get sendRoomNotifications => 'Send a @room notifications';
+  String get sendRoomNotifications => 'Skicka en @rum notis';
 
   @override
-  String get changeTheDescriptionOfTheGroup =>
-      'Change the description of the chat';
+  String get changeTheDescriptionOfTheGroup => 'Ändra beskrivningen på chatten';
 
   @override
   String get chatPermissionsDescription =>
-      'Define which power level is necessary for certain actions in this chat. The power levels 0, 50 and 100 are usually representing users, moderators and admins, but any gradation is possible.';
+      'Definiera vilket tillståndsnivå som krävs för vissa handlingar i chatten. Tillståndsnivåerna 0, 50 och 100 representerar ofta användare, moderatorer och admins, men vilken gradering som helst fungerar.';
 
   @override
   String updateInstalled(String version) {
-    return '🎉 Update $version installed!';
+    return '🎉 Uppdatering $version installerad!';
   }
 
   @override
-  String get changelog => 'Changelog';
+  String get changelog => 'Ändringslogg';
 
   @override
-  String get sendCanceled => 'Sending canceled';
+  String get sendCanceled => 'Skickande avbröts';
 
   @override
-  String get loginWithMatrixId => 'Login with Matrix-ID';
-
-  @override
-  String get discoverHomeservers => 'Discover homeservers';
-
-  @override
-  String get whatIsAHomeserver => 'What is a homeserver?';
-
-  @override
-  String get homeserverDescription =>
-      'All your data is stored on the homeserver, just like an email provider. You can choose which homeserver you want to use, while you can still communicate with everyone. Learn more at at https://matrix.org.';
+  String get loginWithMatrixId => 'Logga in med Matrix-ID';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
-      'Doesn\'t seem to be a compatible homeserver. Wrong URL?';
+      'Verkar inte vara en kompatibel hemserver. Fel URL?';
 
   @override
-  String get calculatingFileSize => 'Calculating file size...';
+  String get calculatingFileSize => 'Beräknar filstorlek...';
 
   @override
-  String get prepareSendingAttachment => 'Prepare sending attachment...';
+  String get sendingAttachment => 'Skickar bilaga...';
 
   @override
-  String get sendingAttachment => 'Sending attachment...';
-
-  @override
-  String get generatingVideoThumbnail => 'Generating video thumbnail...';
-
-  @override
-  String get compressVideo => 'Compressing video...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Sending attachment $index of $length...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Server limit reached! Waiting $seconds seconds...';
-  }
+  String get compressVideo => 'Komprimerar video...';
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
-      'One of your devices is not verified';
+      'En av dina enheter är inte verifierade';
 
   @override
   String get noticeChatBackupDeviceVerification =>
-      'Note: When you connect all your devices to the chat backup, they are automatically verified.';
+      'Notis: När du ansluter alla dina enheter till chatt-backupen, är de automatiskt verifierade.';
 
   @override
-  String get continueText => 'Continue';
+  String get continueText => 'Fortsätt';
 
   @override
   String get welcomeText =>
-      'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
+      'Hej Hej 👋 Det här är FluffyChat. Du kan logga in på vilken hemserver du vill, som är kompatibel med https://matrix.org. Och sen chatta med vemsomhelst. Det är ett enormt decentraliserat chatt-nätverk!';
 
   @override
-  String get blur => 'Blur:';
+  String get blur => 'Blurra:';
 
   @override
-  String get opacity => 'Opacity:';
+  String get opacity => 'Opacitet:';
 
   @override
-  String get setWallpaper => 'Set wallpaper';
+  String get setWallpaper => 'Ställ in bakgrundsbild';
 
   @override
-  String get manageAccount => 'Manage account';
+  String get manageAccount => 'Hantera konto';
 
   @override
   String get noContactInformationProvided =>
-      'Server does not provide any valid contact information';
+      'Servern bistår inte med någon giltig kontaktinformation';
 
   @override
-  String get contactServerAdmin => 'Contact server admin';
+  String get contactServerAdmin => 'Kontakta server-admin';
 
   @override
-  String get contactServerSecurity => 'Contact server security';
+  String get contactServerSecurity => 'Kontakta server-säkerheten';
 
   @override
-  String get supportPage => 'Support page';
+  String get supportPage => 'Stödsida';
 
   @override
-  String get serverInformation => 'Server information:';
+  String get serverInformation => 'Serverinformation:';
 
   @override
-  String get name => 'Name';
+  String get name => 'Namn';
 
   @override
   String get version => 'Version';
 
   @override
-  String get website => 'Website';
+  String get website => 'Hemsida';
 
   @override
-  String get compress => 'Compress';
+  String get compress => 'Komprimera';
 
   @override
-  String get boldText => 'Bold text';
+  String get boldText => 'Fetstilt';
 
   @override
-  String get italicText => 'Italic text';
+  String get italicText => 'Kursiv';
 
   @override
-  String get strikeThrough => 'Strikethrough';
+  String get strikeThrough => 'Genomstryk';
 
   @override
-  String get pleaseFillOut => 'Please fill out';
+  String get pleaseFillOut => 'Fyll i';
 
   @override
-  String get invalidUrl => 'Invalid url';
+  String get invalidUrl => 'Ogiltig url';
 
   @override
-  String get addLink => 'Add link';
+  String get addLink => 'Lägg till länk';
 
   @override
   String get unableToJoinChat =>
-      'Unable to join chat. Maybe the other party has already closed the conversation.';
+      'Kunde inte gå med i chatten. Kanske har den andra parten redan stängt konversationen.';
 
   @override
-  String get previous => 'Previous';
+  String get previous => 'Föregående';
 
   @override
   String get otherPartyNotLoggedIn =>
-      'The other party is currently not logged in and therefore cannot receive messages!';
+      'Den andra parten är för närvarande inte inloggad, och kan därför inte ta emot meddelanden!';
 
   @override
   String appWantsToUseForLogin(String server) {
-    return 'Use \'$server\' to log in';
+    return 'Använd \'$server\' för att logga in';
   }
 
   @override
   String get appWantsToUseForLoginDescription =>
-      'You hereby allow the app and website to share information about you.';
+      'Du tillåter härmed appen och hemsidan att dela information om dig.';
 
   @override
-  String get open => 'Open';
+  String get open => 'Öppna';
 
   @override
-  String get waitingForServer => 'Waiting for server...';
+  String get waitingForServer => 'Väntar på server...';
 
   @override
-  String get appIntroduction =>
-      'FluffyChat lets you chat with your friends across different messengers. Learn more at https://matrix.org or just tap *Continue*.';
+  String get newChatRequest => '📩 Ny chatt förfrågan';
 
   @override
-  String get newChatRequest => '📩 New chat request';
+  String get contentNotificationSettings => 'Innehållsnotis-inställningar';
 
   @override
-  String get contentNotificationSettings => 'Content notification settings';
+  String get generalNotificationSettings => 'Allmänna notis-inställningar';
 
   @override
-  String get generalNotificationSettings => 'General notification settings';
-
-  @override
-  String get roomNotificationSettings => 'Room notification settings';
+  String get roomNotificationSettings => 'rumsnotis-inställningar';
 
   @override
   String get userSpecificNotificationSettings =>
-      'User specific notification settings';
+      'Användarspecifika notis-inställningar';
 
   @override
-  String get otherNotificationSettings => 'Other notification settings';
+  String get otherNotificationSettings => 'Andra notis-inställningar';
 
   @override
-  String get notificationRuleContainsUserName => 'Contains User Name';
+  String get notificationRuleContainsUserName => 'Innehåller Användarnamn';
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Notifies the user when a message contains their username.';
+      'Avisera användaren när ett meddelande innehåller deras användarnamn.';
 
   @override
-  String get notificationRuleMaster => 'Mute all notifications';
+  String get notificationRuleMaster => 'Tysta alla notiser';
 
   @override
   String get notificationRuleMasterDescription =>
-      'Overrides all other rules and disables all notifications.';
+      'Åsidosätter alla andra regler och tystar alla notiser.';
 
   @override
   String get notificationRuleSuppressNotices => 'Suppress Automated Messages';
@@ -2565,7 +2170,7 @@ class L10nSv extends L10n {
       'Notifies the user when they are invited to a room.';
 
   @override
-  String get notificationRuleMemberEvent => 'Member Event';
+  String get notificationRuleMemberEvent => 'Medlemshändelse';
 
   @override
   String get notificationRuleMemberEventDescription =>
@@ -2579,7 +2184,7 @@ class L10nSv extends L10n {
       'Notifies the user when they are directly mentioned in a message.';
 
   @override
-  String get notificationRuleContainsDisplayName => 'Contains Display Name';
+  String get notificationRuleContainsDisplayName => 'Innehåller visningsnamn';
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
@@ -2607,7 +2212,7 @@ class L10nSv extends L10n {
       'Notifies the user about room deactivation messages.';
 
   @override
-  String get notificationRuleReaction => 'Reaction';
+  String get notificationRuleReaction => 'Reaktion';
 
   @override
   String get notificationRuleReactionDescription =>
@@ -2628,7 +2233,7 @@ class L10nSv extends L10n {
       'Suppresses notifications for edited messages.';
 
   @override
-  String get notificationRuleCall => 'Call';
+  String get notificationRuleCall => 'Samtal';
 
   @override
   String get notificationRuleCallDescription =>
@@ -2692,7 +2297,7 @@ class L10nSv extends L10n {
       'If you delete this notification setting, this can not be undone.';
 
   @override
-  String get more => 'More';
+  String get more => 'Mer';
 
   @override
   String get shareKeysWith => 'Share keys with...';
@@ -2702,7 +2307,7 @@ class L10nSv extends L10n {
       'Which devices should be trusted so that they can read along your messages in encrypted chats?';
 
   @override
-  String get allDevices => 'All devices';
+  String get allDevices => 'Alla enheter';
 
   @override
   String get crossVerifiedDevicesIfEnabled =>
@@ -2715,22 +2320,22 @@ class L10nSv extends L10n {
   String get verifiedDevicesOnly => 'Verified devices only';
 
   @override
-  String get takeAPhoto => 'Take a photo';
+  String get takeAPhoto => 'Ta ett foto';
 
   @override
-  String get recordAVideo => 'Record a video';
+  String get recordAVideo => 'Spela in en video';
 
   @override
-  String get optionalMessage => '(Optional) message...';
+  String get optionalMessage => '(Valfritt) meddelande ...';
 
   @override
   String get notSupportedOnThisDevice => 'Not supported on this device';
 
   @override
-  String get enterNewChat => 'Enter new chat';
+  String get enterNewChat => 'Gå med i ny chatt';
 
   @override
-  String get approve => 'Approve';
+  String get approve => 'Godkänn';
 
   @override
   String get youHaveKnocked => 'You have knocked';
@@ -2749,38 +2354,26 @@ class L10nSv extends L10n {
   String get displayNavigationRail => 'Show navigation rail on mobile';
 
   @override
-  String get customReaction => 'Custom reaction';
+  String get customReaction => 'Anpassad reaktion';
 
   @override
-  String get moreEvents => 'More events';
+  String get moreEvents => 'Fler händelser';
 
   @override
   String get declineInvitation => 'Decline invitation';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'Inga meddelanden än';
 
   @override
   String get longPressToRecordVoiceMessage =>
       'Long press to record voice message.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Pausa';
 
   @override
-  String get resume => 'Resume';
-
-  @override
-  String get newSubSpace => 'New sub space';
-
-  @override
-  String get moveToDifferentSpace => 'Move to different space';
-
-  @override
-  String get moveUp => 'Move up';
-
-  @override
-  String get moveDown => 'Move down';
+  String get resume => 'Fortsätt';
 
   @override
   String get removeFromSpaceDescription =>
@@ -2788,7 +2381,7 @@ class L10nSv extends L10n {
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats chattar';
   }
 
   @override
@@ -2800,9 +2393,6 @@ class L10nSv extends L10n {
   String spaceMemberOfCanKnock(String spaces) {
     return 'Space member of $spaces can knock';
   }
-
-  @override
-  String get donate => 'Donate';
 
   @override
   String startedAPoll(String username) {
@@ -2822,19 +2412,16 @@ class L10nSv extends L10n {
   String get answersVisible => 'Answers visible';
 
   @override
-  String get answersHidden => 'Answers hidden';
-
-  @override
   String get pollQuestion => 'Poll question';
 
   @override
-  String get answerOption => 'Answer option';
+  String get answerOption => 'Svarsalternativ';
 
   @override
-  String get addAnswerOption => 'Add answer option';
+  String get addAnswerOption => 'Lägg till svarsalternativ';
 
   @override
-  String get allowMultipleAnswers => 'Allow multiple answers';
+  String get allowMultipleAnswers => 'Tillåt flera svar';
 
   @override
   String get pollHasBeenEnded => 'Poll has been ended';
@@ -2844,8 +2431,8 @@ class L10nSv extends L10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count votes',
-      one: 'One vote',
+      other: '$count röster',
+      one: 'En röst',
     );
     return '$_temp0';
   }
@@ -2855,27 +2442,27 @@ class L10nSv extends L10n {
       'Answers will be visible when poll has ended';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'Svara i tråd';
 
   @override
   String countReplies(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count replies',
-      one: 'One reply',
+      other: '$count svar',
+      one: 'Ett svar',
     );
     return '$_temp0';
   }
 
   @override
-  String get thread => 'Thread';
+  String get thread => 'Tråd';
 
   @override
   String get backToMainChat => 'Back to main chat';
 
   @override
-  String get saveChanges => 'Save changes';
+  String get saveChanges => 'Spara ändringar';
 
   @override
   String get createSticker => 'Create sticker or emoji';
@@ -2906,13 +2493,13 @@ class L10nSv extends L10n {
       'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
 
   @override
-  String get loadingMessages => 'Loading messages';
+  String get loadingMessages => 'Läser in meddelanden';
 
   @override
   String get setupChatBackup => 'Set up chat backup';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => 'Inga fler resultat hittades';
 
   @override
   String chatSearchedUntil(String time) {
@@ -2937,7 +2524,7 @@ class L10nSv extends L10n {
   }
 
   @override
-  String get logs => 'Logs';
+  String get logs => 'Loggar';
 
   @override
   String get advancedConfigs => 'Advanced Configs';
@@ -2946,5 +2533,129 @@ class L10nSv extends L10n {
   String get advancedConfigurations => 'Advanced configurations';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Logga in';
+
+  @override
+  String get createNewAccount => 'Skapa nytt konto';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat is decentralized! Select a server where you want to create your account and let\'s go!';
+
+  @override
+  String get signInGreeting =>
+      'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
+
+  @override
+  String get appIntro =>
+      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
+
+  @override
+  String get theProcessWasCanceled => 'The process was canceled.';
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Search or enter homeserver address';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Set power level';
+
+  @override
+  String get makeModerator => 'Make moderator';
+
+  @override
+  String get makeAdmin => 'Make admin';
+
+  @override
+  String get removeModeratorRights => 'Remove moderator rights';
+
+  @override
+  String get removeAdminRights => 'Remove admin rights';
+
+  @override
+  String get powerLevel => 'Power level';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get mute => 'Mute';
+
+  @override
+  String get createNewChat => 'Create new chat';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

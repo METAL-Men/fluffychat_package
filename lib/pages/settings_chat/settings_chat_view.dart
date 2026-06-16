@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:go_router/go_router.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
@@ -9,7 +10,9 @@ import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:fluffychat/widgets/layouts/max_width_body.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:fluffychat/widgets/settings_switch_list_tile.dart';
-import '../../config/app_config.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import 'settings_chat.dart';
 
 class SettingsChatView extends StatelessWidget {
@@ -42,6 +45,10 @@ class SettingsChatView extends StatelessWidget {
                 setting: AppSettings.hideRedactedEvents,
               ), */
               SettingsSwitchListTile.adaptive(
+                title: L10n.of(context).hideRoomsInSpaces,
+                setting: AppSettings.hideRoomsInSpaces,
+              ),
+              SettingsSwitchListTile.adaptive(
                 title: L10n.of(context).hideInvalidOrUnknownMessageFormats,
                 setting: AppSettings.hideUnknownEvents,
               ),
@@ -64,6 +71,10 @@ class SettingsChatView extends StatelessWidget {
                   subtitle: "(Experimental feature)",
                   setting: AppSettings.spellCheck,
                 ),
+              SettingsSwitchListTile.adaptive(
+                title: L10n.of(context).showThumbnailsInTimeline,
+                setting: AppSettings.showThumbnailsInTimeline,
+              ),
               Divider(color: theme.dividerColor),
               ListTile(
                 title: Text(

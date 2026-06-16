@@ -12,41 +12,31 @@ class L10nTa extends L10n {
   String get alwaysUse24HourFormat => 'தவறு';
 
   @override
-  String get repeatPassword => 'கடவுச்சொல்லை மீண்டும் செய்யவும்';
+  String get repeatPassword => 'மீண்டும் கடவுச்சொல்';
 
   @override
   String get notAnImage => 'படக் கோப்பு அல்ல.';
 
   @override
-  String get setCustomPermissionLevel => 'தனிப்பயன் இசைவு அளவை அமைக்கவும்';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'தயவுசெய்து கீழே ஒரு முன் வரையறுக்கப்பட்ட பாத்திரத்தைத் தேர்வுசெய்க அல்லது 0 மற்றும் 100 க்கு இடையில் தனிப்பயன் இசைவு நிலையை உள்ளிடவும்.';
-
-  @override
-  String get ignoreUser => 'பயனரை புறக்கணிக்கவும்';
-
-  @override
-  String get normalUser => 'சாதாரண பயனர்';
+  String get ignoreUser => 'பயனரைப் புறக்கணி';
 
   @override
   String get remove => 'அகற்று';
 
   @override
-  String get importNow => 'இப்போது இறக்குமதி செய்யுங்கள்';
+  String get importNow => 'இப்போது இறக்குமதி';
 
   @override
-  String get importEmojis => 'ஈமோசிகளை இறக்குமதி செய்யுங்கள்';
+  String get importEmojis => 'ஈமோசிகளை இறக்குமதி';
 
   @override
-  String get importFromZipFile => '.Zip கோப்பிலிருந்து இறக்குமதி செய்யுங்கள்';
+  String get importFromZipFile => '.சிப் கோப்பிலிருந்து இறக்குமதி';
 
   @override
-  String get exportEmotePack => 'எமோட் பேக் .zip என ஏற்றுமதி செய்யுங்கள்';
+  String get exportEmotePack => 'எமோட் பேக் .zip என ஏற்றுமதி';
 
   @override
-  String get replace => 'மாற்றவும்';
+  String get replace => 'மாற்று';
 
   @override
   String get about => 'பற்றி';
@@ -83,9 +73,6 @@ class L10nTa extends L10n {
   String supposedMxid(String mxid) {
     return 'இது $mxid be ஆக இருக்க வேண்டும்';
   }
-
-  @override
-  String get addChatDescription => 'அரட்டை விளக்கத்தைச் சேர்க்கவும் ...';
 
   @override
   String get addToSpace => 'விண்வெளியில் சேர்க்கவும்';
@@ -150,10 +137,13 @@ class L10nTa extends L10n {
 
   @override
   String get areGuestsAllowedToJoin =>
-      'விருந்தினர் பயனர்கள் சேர அனுமதிக்கப்படுகிறார்களா';
+      'விருந்தினர் பயனர்கள் சேர அனுமதிக்கப்படுகிறார்களா?';
 
   @override
   String get areYouSure => 'நீங்கள் உறுதியாக இருக்கிறீர்களா?';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -192,30 +182,11 @@ class L10nTa extends L10n {
   String get sendOnEnter => 'Enter ஐ அனுப்பவும்';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'ஓம்சர்வர் ச்பெக் பதிப்புகளை ஆதரிக்கிறது:\n $serverVersions\n ஆனால் இந்த பயன்பாடு $supportedVersions மட்டுமே ஆதரிக்கிறது';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats அரட்டைகள் மற்றும் $participants பங்கேற்பாளர்கள்';
-  }
-
-  @override
   String get noMoreChatsFound => 'இனி அரட்டைகள் கிடைக்கவில்லை ...';
 
   @override
   String get noChatsFoundHere =>
       'இங்கே அரட்டைகள் எதுவும் காணப்படவில்லை. கீழே உள்ள பொத்தானைப் பயன்படுத்தி ஒருவருடன் புதிய அரட்டையைத் தொடங்கவும். ⤵️';
-
-  @override
-  String get joinedChats => 'இணைந்த அரட்டைகள்';
 
   @override
   String get unread => 'படிக்காதது';
@@ -244,9 +215,6 @@ class L10nTa extends L10n {
   String get blocked => 'தடுக்கப்பட்டது';
 
   @override
-  String get botMessages => 'போட் செய்திகள்';
-
-  @override
   String get cancel => 'ரத்துசெய்';
 
   @override
@@ -264,7 +232,7 @@ class L10nTa extends L10n {
 
   @override
   String changedTheChatDescription(Object username) {
-    return '$username changed the chat description';
+    return '$username அரட்டை விளக்கத்தை மாற்றியுள்ளார்';
   }
 
   @override
@@ -274,7 +242,7 @@ class L10nTa extends L10n {
 
   @override
   String changedTheChatName(Object username) {
-    return '$username changed the chat name';
+    return '$username அரட்டை பெயரை மாற்றியுள்ளார்';
   }
 
   @override
@@ -367,14 +335,10 @@ class L10nTa extends L10n {
 
   @override
   String get chatBackupDescription =>
-      'உங்கள் பழைய செய்திகள் மீட்பு விசையுடன் பாதுகாக்கப்படுகின்றன. நீங்கள் அதை இழக்கவில்லை என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்.';
+      'உங்கள் செய்திகள் மீட்பு விசையுடன் பாதுகாக்கப்பட்டுள்ளன. தயவு செய்து அதை இழக்காமல் பார்த்துக் கொள்ளுங்கள்.';
 
   @override
   String get chatDetails => 'அரட்டை விவரங்கள்';
-
-  @override
-  String get chatHasBeenAddedToThisSpace =>
-      'இந்த இடத்தில் அரட்டை சேர்க்கப்பட்டுள்ளது';
 
   @override
   String get chats => 'அரட்டைகள்';
@@ -435,7 +399,7 @@ class L10nTa extends L10n {
 
   @override
   String get commandHint_myroomavatar =>
-      'இந்த அறைக்கு உங்கள் படத்தை அமைக்கவும் (MXC-URI எழுதியது)';
+      'இந்த அறைக்கு உங்கள் படத்தை அமைக்கவும் (mxc-uri எழுதியது)';
 
   @override
   String get commandHint_myroomnick =>
@@ -476,20 +440,8 @@ class L10nTa extends L10n {
   String get configureChat => 'அரட்டையை உள்ளமைக்கவும்';
 
   @override
-  String get confirm => 'உறுதிப்படுத்தவும்';
-
-  @override
-  String get connect => 'இணை';
-
-  @override
   String get contactHasBeenInvitedToTheGroup =>
       'குழுவிற்கு தொடர்பு அழைக்கப்பட்டுள்ளது';
-
-  @override
-  String get containsDisplayName => 'காட்சி பெயரைக் கொண்டுள்ளது';
-
-  @override
-  String get containsUserName => 'பயனர்பெயர் உள்ளது';
 
   @override
   String get contentHasBeenReported =>
@@ -548,16 +500,6 @@ class L10nTa extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$month-$day';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year-$month-$day';
-  }
-
-  @override
   String get deactivateAccountWarning =>
       'இது உங்கள் பயனர் கணக்கை செயலிழக்கச் செய்யும். இதை செயல்தவிர்க்க முடியாது! நீங்கள் உறுதியாக இருக்கிறீர்களா?';
 
@@ -585,9 +527,6 @@ class L10nTa extends L10n {
 
   @override
   String get directChats => 'நேரடி அரட்டைகள்';
-
-  @override
-  String get allRooms => 'அனைத்து குழு அரட்டைகளும்';
 
   @override
   String get displaynameHasBeenChanged => 'காட்சி பெயர் மாற்றப்பட்டுள்ளது';
@@ -654,10 +593,6 @@ class L10nTa extends L10n {
   String get emoteShortcode => 'சார்ட்கோட் எமோட்';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'நீங்கள் ஒரு எமோட் சார்ட்கோட் மற்றும் ஒரு படத்தை எடுக்க வேண்டும்!';
-
-  @override
   String get emptyChat => 'வெற்று அரட்டை';
 
   @override
@@ -691,18 +626,12 @@ class L10nTa extends L10n {
   String get homeserver => 'ஓம்சர்வர்';
 
   @override
-  String get enterYourHomeserver => 'உங்கள் ஓம்சர்வரை உள்ளிடவும்';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'இருப்பிடத்தைப் பெறுவதில் பிழை: $error';
   }
 
   @override
   String get everythingReady => 'எல்லாம் தயாராக!';
-
-  @override
-  String get extremeOffensive => 'மிகவும் தாக்குதல்';
 
   @override
   String get fileName => 'கோப்பு பெயர்';
@@ -721,9 +650,6 @@ class L10nTa extends L10n {
 
   @override
   String get fromTheInvitation => 'அழைப்பிலிருந்து';
-
-  @override
-  String get goToTheNewRoom => 'புதிய அறைக்குச் செல்லுங்கள்';
 
   @override
   String get group => 'குழு';
@@ -774,13 +700,7 @@ class L10nTa extends L10n {
       'தவறான அல்லது அறியப்படாத செய்தி வடிவங்களை மறைக்கவும்';
 
   @override
-  String get howOffensiveIsThisContent => 'இந்த உள்ளடக்கம் எவ்வளவு ஆபத்தானது?';
-
-  @override
   String get id => 'ஐடி';
-
-  @override
-  String get identity => 'முற்றொருமை';
 
   @override
   String get block => 'தொகுதி';
@@ -802,15 +722,7 @@ class L10nTa extends L10n {
   String get incorrectPassphraseOrKey => 'தவறான கடவுச்சொல் அல்லது மீட்பு விசை';
 
   @override
-  String get inoffensive => 'செயலற்றது';
-
-  @override
   String get inviteContact => 'தொடர்பை அழைக்கவும்';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return '\"$groupName\" அரட்டைக்கு $contact ஐ அழைக்க விரும்புகிறீர்களா?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -845,9 +757,6 @@ class L10nTa extends L10n {
 
   @override
   String get invitedUsersOnly => 'பயனர்களை மட்டுமே அழைத்தது';
-
-  @override
-  String get inviteForMe => 'எனக்கு அழைக்கவும்';
 
   @override
   String inviteText(String username, String link) {
@@ -890,9 +799,6 @@ class L10nTa extends L10n {
   String get leftTheChat => 'அரட்டையை விட்டு வெளியேறினார்';
 
   @override
-  String get license => 'உரிமம்';
-
-  @override
   String get lightTheme => 'ஒளி';
 
   @override
@@ -906,20 +812,6 @@ class L10nTa extends L10n {
   @override
   String get dehydrateWarning =>
       'இந்த செயலை செயல்தவிர்க்க முடியாது. காப்புப்பிரதி கோப்பை பாதுகாப்பாக சேமித்து வைக்கவும்.';
-
-  @override
-  String get dehydrateTor => 'டோர் பயனர்கள்: ஏற்றுமதி அமர்வு';
-
-  @override
-  String get dehydrateTorLong =>
-      'TOR பயனர்களுக்கு, சாளரத்தை மூடுவதற்கு முன் அமர்வை ஏற்றுமதி செய்ய பரிந்துரைக்கப்படுகிறது.';
-
-  @override
-  String get hydrateTor => 'டோர் பயனர்கள்: இறக்குமதி அமர்வு ஏற்றுமதி';
-
-  @override
-  String get hydrateTorLong =>
-      'உங்கள் அமர்வை கடைசியாக டோரில் ஏற்றுமதி செய்தீர்களா? விரைவாக அதை இறக்குமதி செய்து அரட்டையடிக்கவும்.';
 
   @override
   String get hydrate => 'காப்பு கோப்பிலிருந்து மீட்டமைக்கவும்';
@@ -948,9 +840,6 @@ class L10nTa extends L10n {
 
   @override
   String get logout => 'வெளியேற்றம்';
-
-  @override
-  String get memberChanges => 'உறுப்பினர் மாற்றங்கள்';
 
   @override
   String get mention => 'குறிப்பு';
@@ -998,7 +887,7 @@ class L10nTa extends L10n {
 
   @override
   String get noGoogleServicesWarning =>
-      'ஃபயர்பேச் முகில் செய்தி உங்கள் சாதனத்தில் கிடைக்கவில்லை. இன்னும் புச் அறிவிப்புகளைப் பெற, NTFY ஐ நிறுவ பரிந்துரைக்கிறோம். NTFY அல்லது மற்றொரு ஒருங்கிணைந்த புச் வழங்குநருடன் நீங்கள் தரவு பாதுகாப்பான வழியில் புச் அறிவிப்புகளைப் பெறலாம். நீங்கள் பிளேச்டோரிலிருந்து அல்லது எஃப்-டிராய்டிலிருந்து NTFY ஐ பதிவிறக்கம் செய்யலாம்.';
+      'ஃபயர்பேச் முகில் செய்தி உங்கள் சாதனத்தில் கிடைக்கவில்லை. இன்னும் புச் அறிவிப்புகளைப் பெற, ntfy ஐ நிறுவப் பரிந்துரைக்கிறோம். ntfy அல்லது மற்றொரு ஒருங்கிணைந்த புச் வழங்குநருடன் நீங்கள் தரவு பாதுகாப்பான வழியில் புச் அறிவிப்புகளைப் பெறலாம். நீங்கள் பிளேச்டோரிலிருந்து அல்லது எஃப்-டிராய்டிலிருந்து ntfy ஐ பதிவிறக்கம் செய்யலாம்.';
 
   @override
   String noMatrixServer(String server1, String server2) {
@@ -1028,19 +917,12 @@ class L10nTa extends L10n {
   String get notifications => 'அறிவிப்புகள்';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'இந்த கணக்கிற்கு அறிவிப்புகள் இயக்கப்பட்டன';
-
-  @override
   String numUsersTyping(int count) {
     return '$count பயனர்கள் தட்டச்சு செய்கிறார்கள்…';
   }
 
   @override
   String get obtainingLocation => 'இருப்பிடத்தைப் பெறுதல்…';
-
-  @override
-  String get offensive => 'தாக்குதல்';
 
   @override
   String get offline => 'இணையமில்லாமல்';
@@ -1070,9 +952,6 @@ class L10nTa extends L10n {
   String get openCamera => 'திறந்த கேமரா';
 
   @override
-  String get openVideoCamera => 'வீடியோவுக்கு கேமரா திறக்கவும்';
-
-  @override
   String get oneClientLoggedOut =>
       'உங்கள் வாடிக்கையாளர்களில் ஒருவர் உள்நுழைந்துள்ளார்';
 
@@ -1091,10 +970,6 @@ class L10nTa extends L10n {
 
   @override
   String get bundleName => 'மூட்டை பெயர்';
-
-  @override
-  String get enableMultiAccounts =>
-      '(பீட்டா) இந்த சாதனத்தில் பல கணக்குகளை இயக்கவும்';
 
   @override
   String get openInMaps => 'வரைபடங்களில் திறந்திருக்கும்';
@@ -1125,27 +1000,13 @@ class L10nTa extends L10n {
   String get passwordHasBeenChanged => 'கடவுச்சொல் மாற்றப்பட்டுள்ளது';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'பொது அரட்டைகளில் உறுப்பினர் மாற்றங்களை மறைக்கவும்';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'வாசிப்புத்திறனை மேம்படுத்த யாராவது ஒரு பொது அரட்டையில் சேர்ந்தால் அல்லது விட்டுவிட்டால் அரட்டை காலவரிசையில் காட்ட வேண்டாம்.';
-
-  @override
   String get overview => 'கண்ணோட்டம்';
-
-  @override
-  String get notifyMeFor => 'எனக்கு அறிவிக்கவும்';
 
   @override
   String get passwordRecoverySettings => 'கடவுச்சொல் மீட்பு அமைப்புகள்';
 
   @override
   String get passwordRecovery => 'கடவுச்சொல் மீட்பு';
-
-  @override
-  String get people => 'மக்கள்';
 
   @override
   String get pickImage => 'ஒரு படத்தைத் தேர்ந்தெடுக்கவும்';
@@ -1159,9 +1020,6 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get pleaseChoose => 'தயவுசெய்து தேர்வு செய்யவும்';
-
-  @override
   String get pleaseChooseAPasscode => 'பாச் குறியீட்டைத் தேர்வுசெய்க';
 
   @override
@@ -1171,9 +1029,6 @@ class L10nTa extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'பயன்பாட்டு பூட்டை முடக்க 4 இலக்கங்களை உள்ளிடவும் அல்லது காலியாக விடவும்.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'உங்கள் மீட்பு விசையை உள்ளிடவும்:';
 
   @override
   String get pleaseEnterYourPassword => 'உங்கள் கடவுச்சொல்லை உள்ளிடவும்';
@@ -1236,18 +1091,12 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get rejoin => 'மீண்டும் சேரவும்';
-
-  @override
   String get removeAllOtherDevices => 'மற்ற எல்லா சாதனங்களையும் அகற்றவும்';
 
   @override
   String removedBy(String username) {
     return '$username ஆல் அகற்றப்பட்டது';
   }
-
-  @override
-  String get removeDevice => 'சாதனத்தை அகற்று';
 
   @override
   String get unbanFromChat => 'அரட்டையிலிருந்து தடையின்றி';
@@ -1289,11 +1138,6 @@ class L10nTa extends L10n {
   String get recoveryKeyLost => 'மீட்பு விசை இழந்ததா?';
 
   @override
-  String seenByUser(String username) {
-    return '$username ஆல் பார்த்தது';
-  }
-
-  @override
   String get send => 'அனுப்பு';
 
   @override
@@ -1318,12 +1162,6 @@ class L10nTa extends L10n {
 
   @override
   String get sendMessages => 'செய்திகளை அனுப்பவும்';
-
-  @override
-  String get sendOriginal => 'அசல் அனுப்பு';
-
-  @override
-  String get sendSticker => 'ச்டிக்கரை அனுப்பவும்';
 
   @override
   String get sendVideo => 'வீடியோ அனுப்பவும்';
@@ -1359,23 +1197,10 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get separateChatTypes =>
-      'நேரடி அரட்டைகள் மற்றும் குழுக்களை பிரிக்கவும்';
-
-  @override
   String get setAsCanonicalAlias => 'முதன்மையான மாற்றுப்பெயராக அமைக்கவும்';
 
   @override
-  String get setCustomEmotes => 'தனிப்பயன் உணர்ச்சிகளை அமைக்கவும்';
-
-  @override
   String get setChatDescription => 'அரட்டை விளக்கத்தை அமைக்கவும்';
-
-  @override
-  String get setInvitationLink => 'அழைப்பிதழ் இணைப்பை அமைக்கவும்';
-
-  @override
-  String get setPermissionsLevel => 'இசைவு அளவை அமைக்கவும்';
 
   @override
   String get setStatus => 'நிலையை அமைக்கவும்';
@@ -1398,13 +1223,7 @@ class L10nTa extends L10n {
   String get showPassword => 'கடவுச்சொல்லைக் காட்டு';
 
   @override
-  String get presenceStyle => 'இருப்பு:';
-
-  @override
   String get presencesToggle => 'பிற பயனர்களிடமிருந்து நிலை செய்திகளைக் காட்டு';
-
-  @override
-  String get singlesignon => 'ஒற்றை அடையாளம்';
 
   @override
   String get skip => 'தவிர்';
@@ -1422,9 +1241,6 @@ class L10nTa extends L10n {
   String startedACall(String senderName) {
     return '$senderName அழைப்பைத் தொடங்கினார்';
   }
-
-  @override
-  String get startFirstChat => 'உங்கள் முதல் அரட்டையைத் தொடங்கவும்';
 
   @override
   String get status => 'நிலை';
@@ -1455,15 +1271,6 @@ class L10nTa extends L10n {
 
   @override
   String get title => 'பஞ்சுபோன்ற';
-
-  @override
-  String get toggleFavorite => 'பிடித்ததை மாற்றவும்';
-
-  @override
-  String get toggleMuted => 'முடக்கியது';
-
-  @override
-  String get toggleUnread => 'மார்க் படிக்க/படிக்கவில்லை';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1502,17 +1309,6 @@ class L10nTa extends L10n {
 
   @override
   String get unpin => 'மூள்நீக்கு';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount unread chats',
-      one: '1 unread chat',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1589,9 +1385,6 @@ class L10nTa extends L10n {
       'பங்குதாரர் எண்களை ஏற்றுக்கொள்வதற்காக காத்திருக்கிறார்…';
 
   @override
-  String get wallpaper => 'வால்பேப்பர்:';
-
-  @override
   String get warning => 'எச்சரிக்கை!';
 
   @override
@@ -1656,26 +1449,11 @@ class L10nTa extends L10n {
   String get removeFromSpace => 'இடத்திலிருந்து அகற்று';
 
   @override
-  String get addToSpaceDescription =>
-      'இந்த அரட்டையைச் சேர்க்க ஒரு இடத்தைத் தேர்ந்தெடுக்கவும்.';
-
-  @override
   String get start => 'தொடங்கு';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'உங்கள் பழைய செய்திகளைத் திறக்க, முந்தைய அமர்வில் உருவாக்கப்பட்ட உங்கள் மீட்பு விசையை உள்ளிடவும். உங்கள் மீட்பு விசை உங்கள் கடவுச்சொல் அல்ல.';
-
-  @override
-  String get publish => 'வெளியிடுங்கள்';
-
-  @override
-  String videoWithSize(String size) {
-    return 'வீடியோ ($size)';
-  }
-
-  @override
-  String get openChat => 'திறந்த அரட்டை';
 
   @override
   String get markAsRead => 'படித்தபடி குறி';
@@ -1721,54 +1499,6 @@ class L10nTa extends L10n {
   String get experimentalVideoCalls => 'சோதனை வீடியோ அழைப்புகள்';
 
   @override
-  String get emailOrUsername => 'மின்னஞ்சல் அல்லது பயனர்பெயர்';
-
-  @override
-  String get indexedDbErrorTitle => 'தனியார் பயன்முறை சிக்கல்கள்';
-
-  @override
-  String get indexedDbErrorLong =>
-      'செய்தி சேமிப்பு துரதிர்ச்டவசமாக இயல்புநிலையாக தனிப்பட்ட பயன்முறையில் இயக்கப்படவில்லை.\n தயவுசெய்து பார்வையிடவும்\n - பற்றி: கட்டமைப்பு\n - கணம் dom.indexedDB.privateBrowsing.enabled பெறுநர் true\n இல்லையெனில், பஞ்சுபோன்றவை இயக்க முடியாது.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'கணக்குக்கு மாறவும் $number';
-  }
-
-  @override
-  String get nextAccount => 'அடுத்த கணக்கு';
-
-  @override
-  String get previousAccount => 'முந்தைய கணக்கு';
-
-  @override
-  String get addWidget => 'விட்செட்டைச் சேர்க்கவும்';
-
-  @override
-  String get widgetVideo => 'ஒளிதோற்றம்';
-
-  @override
-  String get widgetEtherpad => 'உரை குறிப்பு';
-
-  @override
-  String get widgetJitsi => 'சிட்சி சந்திக்கிறார்';
-
-  @override
-  String get widgetCustom => 'தனிப்பயன்';
-
-  @override
-  String get widgetName => 'பெயர்';
-
-  @override
-  String get widgetUrlError => 'இது சரியான முகவரி அல்ல.';
-
-  @override
-  String get widgetNameError => 'காட்சி பெயரை வழங்கவும்.';
-
-  @override
-  String get errorAddingWidget => 'விட்செட்டைச் சேர்ப்பதில் பிழை.';
-
-  @override
   String get youRejectedTheInvitation => 'நீங்கள் அழைப்பை நிராகரித்தீர்கள்';
 
   @override
@@ -1786,11 +1516,6 @@ class L10nTa extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return '$userக்கான அழைப்பை திரும்பப் பெற்றுவிட்டீர்கள்';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return 'In இணைப்பு வழியாக நீங்கள் அழைக்கப்பட்டுள்ளீர்கள்:\n $alias';
   }
 
   @override
@@ -1833,15 +1558,6 @@ class L10nTa extends L10n {
 
   @override
   String get noOneCanJoin => 'யாரும் சேர முடியாது';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user அரட்டையில் சேர விரும்புகிறார்.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'பொது இணைப்பு இதுவரை உருவாக்கப்படவில்லை';
 
   @override
   String get knock => 'தட்டவும்';
@@ -1890,28 +1606,7 @@ class L10nTa extends L10n {
 
   @override
   String get screenSharingDetail =>
-      'உங்கள் திரையை FUFFYCHAT இல் பகிர்கிறீர்கள்';
-
-  @override
-  String get callingPermissions => 'அழைப்பு அனுமதிகள்';
-
-  @override
-  String get callingAccount => 'அழைப்பு கணக்கு';
-
-  @override
-  String get callingAccountDetails =>
-      'சொந்த ஆண்ட்ராய்டு டயலர் பயன்பாட்டைப் பயன்படுத்த பஞ்சுபோன்றது அனுமதிக்கிறது.';
-
-  @override
-  String get appearOnTop => 'மேலே தோன்றும்';
-
-  @override
-  String get appearOnTopDetails =>
-      'பயன்பாடு மேலே தோன்ற அனுமதிக்கிறது (நீங்கள் ஏற்கனவே ஒரு அழைப்பு கணக்காக பஞ்சுபோன்ற அமைப்பைக் கொண்டிருந்தால் தேவையில்லை)';
-
-  @override
-  String get otherCallingPermissions =>
-      'மைக்ரோஃபோன், கேமரா மற்றும் பிற பஞ்சுபோன்ற அனுமதிகள்';
+      'உங்கள் திரையை FuffyChat இல் பகிர்கிறீர்கள்';
 
   @override
   String get whyIsThisMessageEncrypted => 'இந்த செய்தி ஏன் படிக்க முடியாதது?';
@@ -1927,22 +1622,7 @@ class L10nTa extends L10n {
   String get newSpace => 'புதிய இடம்';
 
   @override
-  String get enterSpace => 'இடத்தை உள்ளிடவும்';
-
-  @override
-  String get enterRoom => 'அறையை உள்ளிடவும்';
-
-  @override
   String get allSpaces => 'அனைத்து இடங்களும்';
-
-  @override
-  String numChats(String number) {
-    return '$number அரட்டைகள்';
-  }
-
-  @override
-  String get hideUnimportantStateEvents =>
-      'முக்கியமற்ற மாநில நிகழ்வுகளை மறைக்கவும்';
 
   @override
   String get hidePresences => 'நிலை பட்டியலை மறைக்கவா?';
@@ -2012,20 +1692,6 @@ class L10nTa extends L10n {
   String get report => 'அறிக்கை';
 
   @override
-  String get signInWithPassword => 'கடவுச்சொல்லுடன் உள்நுழைக';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'தயவுசெய்து பின்னர் மீண்டும் முயற்சிக்கவும் அல்லது வேறு சேவையகத்தைத் தேர்வுசெய்க.';
-
-  @override
-  String get profileNotFound =>
-      'பயனரை சேவையகத்தில் காண முடியவில்லை. ஒரு இணைப்பு சிக்கல் இருக்கலாம் அல்லது பயனர் இல்லை.';
-
-  @override
-  String get setTheme => 'கருப்பொருள் அமைக்கவும்:';
-
-  @override
   String get setColorTheme => 'வண்ண கருப்பொருள் அமைக்கவும்:';
 
   @override
@@ -2033,9 +1699,6 @@ class L10nTa extends L10n {
 
   @override
   String get inviteGroupChat => '📨 குழு அரட்டை அழைப்பு';
-
-  @override
-  String get invitePrivateChat => 'Sative தனியார் அரட்டை அழைப்பு';
 
   @override
   String get invalidInput => 'தவறான உள்ளீடு!';
@@ -2120,9 +1783,6 @@ class L10nTa extends L10n {
       'மன்னிக்கவும் ... இது சரியான மீட்பு விசையாகத் தெரியவில்லை.';
 
   @override
-  String get startConversation => 'உரையாடலைத் தொடங்குங்கள்';
-
-  @override
   String get commandHint_sendraw => 'மூல சாதொபொகு ஐ அனுப்புங்கள்';
 
   @override
@@ -2158,9 +1818,6 @@ class L10nTa extends L10n {
   String get passwordIsWrong => 'நீங்கள் உள்ளிட்ட கடவுச்சொல் தவறு';
 
   @override
-  String get publicLink => 'பொது இணைப்பு';
-
-  @override
   String get publicChatAddresses => 'பொது அரட்டை முகவரிகள்';
 
   @override
@@ -2176,24 +1833,10 @@ class L10nTa extends L10n {
   String get addChatOrSubSpace => 'அரட்டை அல்லது துணை இடத்தைச் சேர்க்கவும்';
 
   @override
-  String get subspace => 'துணை';
-
-  @override
-  String get decline => 'வீழ்ச்சி';
-
-  @override
   String get thisDevice => 'இந்த சாதனம்:';
 
   @override
   String get initAppError => 'பயன்பாட்டைத் தொடங்கும்போது பிழை ஏற்பட்டது';
-
-  @override
-  String get userRole => 'பயனர் பங்கு';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level என்பது குறைந்தபட்ச ஆற்றல் நிலை.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2210,11 +1853,6 @@ class L10nTa extends L10n {
   String get files => 'கோப்புகள்';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'SQlite தரவுத்தளத்தை உருவாக்க முடியவில்லை. ஆப்ஸ் தற்போதைக்கு மரபு தரவுத்தளத்தைப் பயன்படுத்த முயற்சிக்கிறது. $url இல் டெவலப்பர்களிடம் இந்தப் பிழையைப் புகாரளிக்கவும். பிழை செய்தி: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'உங்கள் அமர்வு தொலைந்துவிட்டது. $url இல் டெவலப்பர்களிடம் இந்தப் பிழையைப் புகாரளிக்கவும். பிழை செய்தி: $error';
   }
@@ -2222,11 +1860,6 @@ class L10nTa extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'ஆப்ஸ் இப்போது உங்கள் அமர்வை காப்புப்பிரதியிலிருந்து மீட்டெடுக்க முயற்சிக்கிறது. $url இல் டெவலப்பர்களிடம் இந்தப் பிழையைப் புகாரளிக்கவும். பிழை செய்தி: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'செய்தியை $roomNameக்கு அனுப்பவா?';
   }
 
   @override
@@ -2372,7 +2005,7 @@ class L10nTa extends L10n {
       'முக்கிய பொது அரட்டை முகவரியை மாற்றவும்';
 
   @override
-  String get sendRoomNotifications => 'ஒரு @ROOM அறிவிப்புகளை அனுப்பவும்';
+  String get sendRoomNotifications => 'ஒரு @room அறிவிப்புகளை அனுப்பவும்';
 
   @override
   String get changeTheDescriptionOfTheGroup =>
@@ -2397,16 +2030,6 @@ class L10nTa extends L10n {
   String get loginWithMatrixId => 'மேட்ரிக்ச்-ஐடியுடன் உள்நுழைக';
 
   @override
-  String get discoverHomeservers => 'ஓம்சர்சர்களைக் கண்டறியவும்';
-
-  @override
-  String get whatIsAHomeserver => 'ஓம்சர்வர் என்றால் என்ன?';
-
-  @override
-  String get homeserverDescription =>
-      'உங்கள் எல்லா தரவுகளும் ஒரு மின்னஞ்சல் வழங்குநரைப் போலவே ஓம்சர்வரில் சேமிக்கப்படுகின்றன. நீங்கள் எந்த ஓம்சர்வரை பயன்படுத்த விரும்புகிறீர்கள் என்பதை நீங்கள் தேர்வு செய்யலாம், அதே நேரத்தில் நீங்கள் எல்லோரிடமும் தொடர்பு கொள்ளலாம். Https://matrix.org இல் மேலும் அறிக.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       'இணக்கமான ஓம்சர்வர் என்று தெரியவில்லை. தவறான URL?';
 
@@ -2414,27 +2037,10 @@ class L10nTa extends L10n {
   String get calculatingFileSize => 'கோப்பு அளவைக் கணக்கிடுகிறது ...';
 
   @override
-  String get prepareSendingAttachment => 'அனுப்பும் இணைப்பைத் தயாரிக்கவும் ...';
-
-  @override
   String get sendingAttachment => 'இணைப்பை அனுப்புகிறது ...';
 
   @override
-  String get generatingVideoThumbnail =>
-      'வீடியோ சிறு உருவத்தை உருவாக்குதல் ...';
-
-  @override
   String get compressVideo => 'அமைக்கும் வீடியோ ...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return '$length இன் இணைப்பு $indexஐ அனுப்புகிறது...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'சேவையக வரம்பு அடைந்தது! $seconds விநாடிகள் காத்திருக்கிறது ...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2536,10 +2142,6 @@ class L10nTa extends L10n {
   String get waitingForServer => 'சேவையகத்திற்காக காத்திருக்கிறது ...';
 
   @override
-  String get appIntroduction =>
-      'வெவ்வேறு தூதர்களில் உங்கள் நண்பர்களுடன் அரட்டையடிக்க உங்களை பஞ்சுபோன்றது உங்களை அனுமதிக்கிறது. Https://matrix.org இல் மேலும் அறிக அல்லது *தொடரவும் *தட்டவும்.';
-
-  @override
   String get newChatRequest => 'அரட்டை கோரிக்கை';
 
   @override
@@ -2620,7 +2222,7 @@ class L10nTa extends L10n {
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'ஒரு செய்தியில் \'@ROOM\' இருக்கும்போது பயனருக்கு அறிவிக்கிறது.';
+      'ஒரு செய்தியில் \'@room\' இருக்கும்போது பயனருக்கு அறிவிக்கிறது.';
 
   @override
   String get notificationRuleTombstone => 'கல்லறை';
@@ -2782,193 +2384,301 @@ class L10nTa extends L10n {
   String get declineInvitation => 'அழைப்பை நிராகரிக்கவும்';
 
   @override
-  String get noMessagesYet => 'No messages yet';
+  String get noMessagesYet => 'இதுவரை செய்திகள் இல்லை';
 
   @override
   String get longPressToRecordVoiceMessage =>
-      'Long press to record voice message.';
+      'குரல் செய்தியை பதிவு செய்ய நீண்ட நேரம் அழுத்தவும்.';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'இடைநிறுத்தம்';
 
   @override
-  String get resume => 'Resume';
-
-  @override
-  String get newSubSpace => 'New sub space';
-
-  @override
-  String get moveToDifferentSpace => 'Move to different space';
-
-  @override
-  String get moveUp => 'Move up';
-
-  @override
-  String get moveDown => 'Move down';
+  String get resume => 'ரெச்யூம்';
 
   @override
   String get removeFromSpaceDescription =>
-      'The chat will be removed from the space but still appear in your chat list.';
+      'அரட்டை ச்பேசிலிருந்து அகற்றப்படும், ஆனால் உங்கள் அரட்டைப் பட்டியலில் தொடர்ந்து தோன்றும்.';
 
   @override
   String countChats(int chats) {
-    return '$chats chats';
+    return '$chats பூனைகள்';
   }
 
   @override
   String spaceMemberOf(String spaces) {
-    return 'Space member of $spaces';
+    return '$spaces இன் விண்வெளி உறுப்பினர்';
   }
 
   @override
   String spaceMemberOfCanKnock(String spaces) {
-    return 'Space member of $spaces can knock';
+    return '$spaces இன் ச்பேச் உறுப்பினர் தட்டலாம்';
   }
-
-  @override
-  String get donate => 'Donate';
 
   @override
   String startedAPoll(String username) {
-    return '$username started a poll.';
+    return '$username ஒரு வாக்கெடுப்பைத் தொடங்கினார்.';
   }
 
   @override
-  String get poll => 'Poll';
+  String get poll => 'கருத்துக்கணிப்பு';
 
   @override
-  String get startPoll => 'Start poll';
+  String get startPoll => 'வாக்கெடுப்பைத் தொடங்கவும்';
 
   @override
-  String get endPoll => 'End poll';
+  String get endPoll => 'முடிவு வாக்கெடுப்பு';
 
   @override
-  String get answersVisible => 'Answers visible';
+  String get answersVisible => 'பதில்கள் தெரியும்';
 
   @override
-  String get answersHidden => 'Answers hidden';
+  String get pollQuestion => 'கருத்துக்கணிப்பு கேள்வி';
 
   @override
-  String get pollQuestion => 'Poll question';
+  String get answerOption => 'பதில் விருப்பம்';
 
   @override
-  String get answerOption => 'Answer option';
+  String get addAnswerOption => 'பதில் விருப்பத்தைச் சேர்க்கவும்';
 
   @override
-  String get addAnswerOption => 'Add answer option';
+  String get allowMultipleAnswers => 'பல பதில்களை அனுமதிக்கவும்';
 
   @override
-  String get allowMultipleAnswers => 'Allow multiple answers';
-
-  @override
-  String get pollHasBeenEnded => 'Poll has been ended';
+  String get pollHasBeenEnded => 'கருத்துக்கணிப்பு முடிந்தது';
 
   @override
   String countVotes(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count votes',
-      one: 'One vote',
+      other: '$count வாக்குகள்',
+      one: 'வாக்கு',
     );
     return '$_temp0';
   }
 
   @override
   String get answersWillBeVisibleWhenPollHasEnded =>
-      'Answers will be visible when poll has ended';
+      'வாக்கெடுப்பு முடிந்ததும் பதில்கள் தெரியும்';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'இழையில் பதிலளிக்கவும்';
 
   @override
   String countReplies(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count replies',
-      one: 'One reply',
+      other: '$count பதில்கள்',
+      one: 'பதில்',
     );
     return '$_temp0';
   }
 
   @override
-  String get thread => 'Thread';
+  String get thread => 'நூல்';
 
   @override
-  String get backToMainChat => 'Back to main chat';
+  String get backToMainChat => 'முதன்மை அரட்டைக்குத் திரும்பு';
 
   @override
-  String get saveChanges => 'Save changes';
+  String get saveChanges => 'மாற்றங்களைச் சேமிக்கவும்';
 
   @override
-  String get createSticker => 'Create sticker or emoji';
+  String get createSticker => 'ச்டிக்கர் அல்லது ஈமோசியை உருவாக்கவும்';
 
   @override
-  String get useAsSticker => 'Use as sticker';
+  String get useAsSticker => 'ச்டிக்கராக பயன்படுத்தவும்';
 
   @override
-  String get useAsEmoji => 'Use as emoji';
+  String get useAsEmoji => 'ஈமோசியாக பயன்படுத்தவும்';
 
   @override
-  String get stickerPackNameAlreadyExists => 'Sticker pack name already exists';
+  String get stickerPackNameAlreadyExists =>
+      'ச்டிக்கர் பேக் பெயர் ஏற்கனவே உள்ளது';
 
   @override
-  String get newStickerPack => 'New sticker pack';
+  String get newStickerPack => 'புதிய ச்டிக்கர் பேக்';
 
   @override
-  String get stickerPackName => 'Sticker pack name';
+  String get stickerPackName => 'ச்டிக்கர் பேக் பெயர்';
 
   @override
-  String get attribution => 'Attribution';
+  String get attribution => 'பண்புக்கூறு';
 
   @override
-  String get skipChatBackup => 'Skip chat backup';
+  String get skipChatBackup => 'அரட்டை காப்புப்பிரதியைத் தவிர்க்கவும்';
 
   @override
   String get skipChatBackupWarning =>
-      'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
+      'நீங்கள் உறுதியாக இருக்கிறீர்களா? அரட்டை காப்புப்பிரதியை இயக்காமல், உங்கள் சாதனத்தை மாற்றினால், உங்கள் செய்திகளுக்கான அணுகலை இழக்க நேரிடும்.';
 
   @override
-  String get loadingMessages => 'Loading messages';
+  String get loadingMessages => 'செய்திகளை ஏற்றுகிறது';
 
   @override
-  String get setupChatBackup => 'Set up chat backup';
+  String get setupChatBackup => 'அரட்டை காப்புப்பிரதியை அமைக்கவும்';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => 'மேலும் முடிவுகள் கிடைக்கவில்லை';
 
   @override
   String chatSearchedUntil(String time) {
-    return 'Chat searched until $time';
+    return 'அரட்டை $time வரை தேடப்பட்டது';
   }
 
   @override
-  String get federationBaseUrl => 'Federation Base URL';
+  String get federationBaseUrl => 'கூட்டமைப்பு அடிப்படை முகவரி';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation =>
+      'வாடிக்கையாளர் நன்கு அறியப்பட்ட தகவல்:';
 
   @override
-  String get baseUrl => 'Base URL';
+  String get baseUrl => 'அடிப்படை முகவரி';
 
   @override
-  String get identityServer => 'Identity Server:';
+  String get identityServer => 'அடையாள சேவையகம்:';
 
   @override
   String versionWithNumber(String version) {
-    return 'Version: $version';
+    return 'பதிப்பு: $version';
   }
 
   @override
-  String get logs => 'Logs';
+  String get logs => 'பதிவுகள்';
 
   @override
-  String get advancedConfigs => 'Advanced Configs';
+  String get advancedConfigs => 'மேம்பட்ட கட்டமைப்புகள்';
 
   @override
-  String get advancedConfigurations => 'Advanced configurations';
+  String get advancedConfigurations => 'மேம்பட்ட கட்டமைப்புகள்';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'விடுபதிகை';
+
+  @override
+  String get createNewAccount => 'புதிய கணக்கை உருவாக்கவும்';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat பரவலாக்கப்பட்டது! உங்கள் கணக்கை உருவாக்க விரும்பும் சேவையகத்தைத் தேர்ந்தெடுத்து, செல்லலாம்!';
+
+  @override
+  String get signInGreeting =>
+      'உங்களிடம் ஏற்கனவே அணி இல் கணக்கு உள்ளதா? மீண்டும் வருக! உங்கள் ஓம் சர்வரைத் தேர்ந்தெடுத்து உள்நுழையவும்.';
+
+  @override
+  String get appIntro =>
+      'FluffyChat மூலம் நீங்கள் உங்கள் நண்பர்களுடன் அரட்டையடிக்கலாம். இது ஒரு பாதுகாப்பான பரவலாக்கப்பட்ட [மேட்ரிக்ச்] தூதுவர்! நீங்கள் விரும்பினால் https://matrix.org இல் மேலும் அறியவும் அல்லது பதிவு செய்யவும்.';
+
+  @override
+  String get theProcessWasCanceled => 'செயல்முறை ரத்து செய்யப்பட்டது.';
+
+  @override
+  String get join => 'சேருங்கள்';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'ஓம்சர்வர் முகவரியைத் தேடவும் அல்லது உள்ளிடவும்';
+
+  @override
+  String get matrixId => 'மேட்ரிக்ச் அடையாளம்';
+
+  @override
+  String get setPowerLevel => 'ஆற்றல் அளவை அமைக்கவும்';
+
+  @override
+  String get makeModerator => 'மதிப்பீட்டாளராக ஆக்குங்கள்';
+
+  @override
+  String get makeAdmin => 'நிர்வாகியாக்கு';
+
+  @override
+  String get removeModeratorRights => 'மதிப்பீட்டாளர் உரிமைகளை அகற்று';
+
+  @override
+  String get removeAdminRights => 'நிர்வாகி உரிமைகளை அகற்று';
+
+  @override
+  String get powerLevel => 'ஆற்றல் நிலை';
+
+  @override
+  String get setPowerLevelDescription =>
+      'இந்த அறையில் ஒரு உறுப்பினர் என்ன செய்ய அனுமதிக்கப்படுகிறார் என்பதை அதிகார நிலைகள் வரையறுக்கின்றன மற்றும் பொதுவாக 0 முதல் 100 வரை இருக்கும்.';
+
+  @override
+  String get owner => 'உரிமையாளர்';
+
+  @override
+  String get mute => 'முடக்கு';
+
+  @override
+  String get createNewChat => 'புதிய அரட்டையை உருவாக்கு';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

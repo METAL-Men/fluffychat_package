@@ -1,12 +1,16 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:fluffychat/config/isrg_x1.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 import 'package:http/retry.dart' as retry;
-
-import 'package:fluffychat/config/isrg_x1.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
 
 /// Custom Client to add an additional certificate. This is for the isrg X1
 /// certificate which is needed for LetsEncrypt certificates. It is shipped

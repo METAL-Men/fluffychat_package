@@ -1,11 +1,26 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
+import 'package:fluffychat/l10n/l10n.dart';
+import 'package:fluffychat/utils/client_manager.dart';
+import 'package:fluffychat/utils/init_with_restore.dart';
+import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:fluffychat/utils/notification_background_handler.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:fluffychat/utils/uia_request_manager.dart';
+import 'package:fluffychat/utils/voip_plugin.dart';
+import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:fluffychat/widgets/fluffy_chat_app.dart';
+import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'package:collection/collection.dart';
-import 'package:desktop_notifications/desktop_notifications.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:just_audio/just_audio.dart';
@@ -16,24 +31,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/client_manager.dart';
-import 'package:fluffychat/utils/init_with_restore.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/utils/uia_request_manager.dart';
-import 'package:fluffychat/utils/voip_plugin.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:fluffychat/widgets/fluffy_chat_app.dart';
-import 'package:fluffychat/widgets/future_loading_dialog.dart';
-import '../config/app_config.dart';
 import '../config/setting_keys.dart';
 import '../pages/key_verification/key_verification_dialog.dart';
 import '../utils/account_bundles.dart';
 import '../utils/background_push.dart';
 import 'local_notifications_extension.dart';
-
-// import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class Matrix extends StatefulWidget {
   final Widget? child;
@@ -180,7 +182,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
   final onRoomKeyRequestSub = <String, StreamSubscription>{};
   final onKeyVerificationRequestSub = <String, StreamSubscription>{};
   final onNotification = <String, StreamSubscription>{};
-  final onLoginStateChanged = <String, StreamSubscription<LoginState>>{};
+  final onLogoutSub = <String, StreamSubscription<LoginState>>{};
   final onUiaRequest = <String, StreamSubscription<UiaRequest>>{};
 
   String? _cachedPassword;
@@ -203,11 +205,6 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
     if (!route.startsWith('/rooms/')) return null;
     return route.split('/')[2];
   }
-
-  final linuxNotifications = PlatformInfos.isLinux
-      ? NotificationsClient()
-      : null;
-  final Map<String, int> linuxNotificationIds = {};
 
   @override
   void initState() {
@@ -258,33 +255,49 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
                 context,
           );
         });
-    onLoginStateChanged[name] ??= c.onLoginStateChanged.stream.listen((state) {
-      final loggedInWithMultipleClients = widget.clients.length > 1;
-      if (state == LoginState.loggedOut) {
-        _cancelSubs(c.clientName);
-        widget.clients.remove(c);
-        ClientManager.removeClientNameFromStore(c.clientName, store);
-        InitWithRestoreExtension.deleteSessionBackup(name);
-      }
-      if (loggedInWithMultipleClients && state != LoginState.loggedIn) {
-        ScaffoldMessenger.of(
-          FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
-              context,
-        ).showSnackBar(
-          SnackBar(content: Text(L10n.of(context).oneClientLoggedOut)),
-        );
+    onLogoutSub[name] ??= c.onLoginStateChanged.stream
+        .where((state) => state == LoginState.loggedOut)
+        .listen((_) {
+          final loggedInWithMultipleClients = widget.clients.length > 1;
 
-        if (state != LoginState.loggedIn) {
-          FluffyChatApp.router.go(AppConfig.defaultRoutePath);
-        }
-      } else {
-        FluffyChatApp.router.go(
-          state == LoginState.loggedIn ? '/backup' : '/home',
-        );
-      }
-    });
+          _cancelSubs(c.clientName);
+          widget.clients.remove(c);
+          ClientManager.removeClientNameFromStore(c.clientName, store);
+          InitWithRestoreExtension.deleteSessionBackup(name);
+
+          if (loggedInWithMultipleClients) {
+            final snackbarContext =
+                FluffyChatApp
+                    .router
+                    .routerDelegate
+                    .navigatorKey
+                    .currentContext ??
+                context;
+
+            if (!snackbarContext.mounted) return;
+            final l10n = L10n.of(snackbarContext);
+            ScaffoldMessenger.of(
+              snackbarContext,
+            ).showSnackBar(SnackBar(content: Text(l10n.oneClientLoggedOut)));
+            return;
+          }
+          FluffyChatApp.router.go('/');
+        });
     onUiaRequest[name] ??= c.onUiaRequest.stream.listen(uiaRequestHandler);
     if (PlatformInfos.isWeb || PlatformInfos.isLinux) {
+      FlutterLocalNotificationsPlugin().initialize(
+        settings: InitializationSettings(
+          linux: LinuxInitializationSettings(
+            defaultActionName: FluffyChatNotificationActions.open.name,
+          ),
+        ),
+        onDidReceiveNotificationResponse: (response) => notificationTap(
+          response,
+          clients: widget.clients,
+          router: FluffyChatApp.router,
+          l10n: null,
+        ),
+      );
       c.onSync.stream.first.then((s) {
         html.Notification.requestPermission();
         onNotification[name] ??= c.onNotification.stream.listen(
@@ -299,8 +312,8 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
     onRoomKeyRequestSub.remove(name);
     onKeyVerificationRequestSub[name]?.cancel();
     onKeyVerificationRequestSub.remove(name);
-    onLoginStateChanged[name]?.cancel();
-    onLoginStateChanged.remove(name);
+    onLogoutSub[name]?.cancel();
+    onLogoutSub.remove(name);
     onNotification[name]?.cancel();
     onNotification.remove(name);
   }
@@ -314,14 +327,12 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
       backgroundPush = BackgroundPush(
         this,
         onFcmError: (errorMsg, {Uri? link}) async {
+          final context =
+              FluffyChatApp.router.routerDelegate.navigatorKey.currentContext ??
+              this.context;
+          if (!context.mounted) return;
           final result = await showOkCancelAlertDialog(
-            context:
-                FluffyChatApp
-                    .router
-                    .routerDelegate
-                    .navigatorKey
-                    .currentContext ??
-                context,
+            context: context,
             title: L10n.of(context).pushNotificationsNotAvailable,
             message: errorMsg,
             okLabel: link == null
@@ -345,8 +356,8 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
     createVoipPlugin();
   }
 
-  void createVoipPlugin() async {
-    if (AppSettings.experimentalVoip.value) {
+  Future<void> createVoipPlugin() async {
+    if (!AppSettings.experimentalVoip.value) {
       voipPlugin = null;
       return;
     }
@@ -376,11 +387,8 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
 
     onRoomKeyRequestSub.values.map((s) => s.cancel());
     onKeyVerificationRequestSub.values.map((s) => s.cancel());
-    onLoginStateChanged.values.map((s) => s.cancel());
+    onLogoutSub.values.map((s) => s.cancel());
     onNotification.values.map((s) => s.cancel());
-    client.httpClient.close();
-
-    linuxNotifications?.close();
 
     super.dispose();
   }
@@ -391,15 +399,17 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
   }
 
   Future<void> dehydrateAction(BuildContext context) async {
+    final l10n = L10n.of(context);
     final response = await showOkCancelAlertDialog(
       context: context,
       isDestructive: true,
-      title: L10n.of(context).dehydrate,
-      message: L10n.of(context).dehydrateWarning,
+      title: l10n.dehydrate,
+      message: l10n.dehydrateWarning,
     );
     if (response != OkCancelResult.ok) {
       return;
     }
+    if (!context.mounted) return;
     final result = await showFutureLoadingDialog(
       context: context,
       future: client.exportDump,
@@ -413,6 +423,7 @@ class MatrixState extends State<Matrix> with WidgetsBindingObserver {
         'fluffychat-export-${DateFormat(DateFormat.YEAR_MONTH_DAY).format(DateTime.now())}.fluffybackup';
 
     final file = MatrixFile(bytes: exportBytes, name: exportFileName);
+    if (!context.mounted) return;
     file.save(context);
   }
 }

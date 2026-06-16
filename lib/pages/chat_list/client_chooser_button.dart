@@ -1,17 +1,21 @@
-import 'package:fluffychat/config/app_config.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
-import 'package:go_router/go_router.dart';
-import 'package:matrix/matrix.dart';
-import 'package:url_launcher/url_launcher_string.dart';
-
+import 'package:async/async.dart';
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
+import 'package:matrix/matrix.dart' hide Result;
+import 'package:matrix/matrix.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
 import '../../utils/fluffy_share.dart';
 import 'chat_list.dart';
 
@@ -49,9 +53,9 @@ class ClientChooserButton extends StatelessWidget {
             const Icon(Icons.group_add_outlined),
             const SizedBox(width: 18),
             Text(L10n.of(context).createGroup),
-            ],
-          ),
+          ],
         ),
+      ),
       PopupMenuItem(
         value: SettingsAction.setStatus,
         child: Row(
@@ -93,6 +97,16 @@ class ClientChooserButton extends StatelessWidget {
           ],
         ),
       ),
+      PopupMenuItem(
+        value: SettingsAction.support,
+        child: Row(
+          children: [
+            Icon(Icons.favorite, color: Colors.red),
+            const SizedBox(width: 18),
+            Text(L10n.of(context).supportFluffyChat),
+          ],
+        ),
+      ),
       const PopupMenuDivider(),
       for (final bundle in bundles) ...[
         if (matrix.accountBundles[bundle]!.length != 1 ||
@@ -122,33 +136,35 @@ class ClientChooserButton extends StatelessWidget {
                 value: client,
                 child: FutureBuilder<Profile?>(
                   future: client.fetchOwnProfile(),
-                  builder: (context, snapshot) => Row(
-                    children: [
-                      Avatar(
-                        mxContent: snapshot.data?.avatarUrl,
-                        name:
-                            snapshot.data?.displayName ??
-                            client.userID!.localpart,
-                        size: 32,
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          snapshot.data?.displayName ??
-                              client.userID!.localpart!,
-                          overflow: TextOverflow.ellipsis,
+                  builder: (context, snapshot) {
+                    final displayname =
+                        snapshot.data?.displayName ?? client.userID!.localpart!;
+                    return Row(
+                      key: ValueKey('switch_account_$displayname'),
+                      children: [
+                        Avatar(
+                          mxContent: snapshot.data?.avatarUrl,
+                          name: displayname,
+                          size: 32,
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                      /* IconButton(
-                        icon: const Icon(Icons.edit_outlined),
-                        onPressed: () => controller.editBundlesForAccount(
-                          client.userID,
-                          bundle,
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            displayname,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
-                      ), */
-                    ],
-                  ),
+                        const SizedBox(width: 12),
+                        /* IconButton(
+                          icon: const Icon(Icons.edit_outlined),
+                          onPressed: () => controller.editBundlesForAccount(
+                            client.userID,
+                            bundle,
+                          ),
+                        ), */
+                      ],
+                    );
+                  },
                 ),
               ),
             ),
@@ -170,26 +186,25 @@ class ClientChooserButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final matrix = Matrix.of(context);
+    final client = Result(() => matrix.client).asValue?.value;
 
     var clientCount = 0;
     matrix.accountBundles.forEach((key, value) => clientCount += value.length);
     return FutureBuilder<Profile>(
-      future: matrix.client.isLogged() ? matrix.client.fetchOwnProfile() : null,
+      future: client?.isLogged() == true ? client?.fetchOwnProfile() : null,
       builder: (context, snapshot) => Material(
         clipBehavior: Clip.hardEdge,
         borderRadius: BorderRadius.circular(99),
         color: Colors.transparent,
         child: PopupMenuButton<Object>(
-          popUpAnimationStyle: FluffyThemes.isColumnMode(context)
-              ? AnimationStyle.noAnimation
-              : null, // https://github.com/flutter/flutter/issues/167180
+          key: Key('accounts_and_settings_buttons'),
+          tooltip: 'Accounts and settings',
           onSelected: (o) => _clientSelected(o, context),
           itemBuilder: _bundleMenuItems,
           child: Center(
             child: Avatar(
               mxContent: snapshot.data?.avatarUrl,
-              name:
-                  snapshot.data?.displayName ?? matrix.client.userID?.localpart,
+              name: snapshot.data?.displayName ?? client?.userID?.localpart,
               size: 32,
             ),
           ),
@@ -198,7 +213,7 @@ class ClientChooserButton extends StatelessWidget {
     );
   }
 
-  void _clientSelected(Object object, BuildContext context) async {
+  Future<void> _clientSelected(Object object, BuildContext context) async {
     if (object is Client) {
       controller.setActiveClient(object);
     } else if (object is String) {
@@ -209,14 +224,7 @@ class ClientChooserButton extends StatelessWidget {
           context.go(AppConfig.metalConnectRoutePath);
           break;
         case SettingsAction.addAccount:
-          final consent = await showOkCancelAlertDialog(
-            context: context,
-            title: L10n.of(context).addAccount,
-            message: L10n.of(context).enableMultiAccounts,
-            okLabel: L10n.of(context).next,
-            cancelLabel: L10n.of(context).cancel,
-          );
-          if (consent != OkCancelResult.ok) return;
+          if (!context.mounted) return;
           context.go('/rooms/settings/addaccount');
           break;
         case SettingsAction.newGroup:
@@ -226,7 +234,9 @@ class ClientChooserButton extends StatelessWidget {
           FluffyShare.shareInviteLink(context);
           break;
         // case SettingsAction.support:
-        //   launchUrlString(AppConfig.supportUrl);
+        //   launchUrlString(
+        //     'https://fluffychat.im/faq/#how_can_i_support_fluffychat',
+        //   );
         //   break;
         case SettingsAction.settings:
           context.go('/rooms/settings');

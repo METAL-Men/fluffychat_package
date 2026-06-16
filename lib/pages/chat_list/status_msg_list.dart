@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/themes.dart';
@@ -8,6 +9,9 @@ import 'package:fluffychat/utils/stream_extension.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/hover_builder.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
+
 import '../../widgets/adaptive_dialogs/user_dialog.dart';
 
 class StatusMessageList extends StatelessWidget {
@@ -60,11 +64,14 @@ class StatusMessageList extends StatelessWidget {
                 return const SizedBox.shrink();
               }
 
-              // Make sure own entry is at the first position. Sort by last
-              // active instead.
               presences.sort((a, b) {
+                // Make sure own entry is at the first position:
                 if (a.userid == client.userID) return -1;
                 if (b.userid == client.userID) return 1;
+                // Sort presences with statusMsg first:
+                if (a.statusMsg != null && b.statusMsg == null) return -1;
+                if (a.statusMsg == null && b.statusMsg != null) return 1;
+                // Sort by creation date:
                 return b.sortOrderDateTime.compareTo(a.sortOrderDateTime);
               });
 
@@ -123,8 +130,8 @@ class PresenceAvatar extends StatelessWidget {
         final statusMsg = presence.statusMsg;
 
         const statusMsgBubbleElevation = 6.0;
-        final statusMsgBubbleShadowColor = theme.colorScheme.surface;
-        final statusMsgBubbleColor = Colors.white.withAlpha(230);
+        final statusMsgBubbleShadowColor = theme.colorScheme.surfaceBright;
+        final statusMsgBubbleColor = Colors.white.withAlpha(212);
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: SizedBox(
@@ -197,7 +204,7 @@ class PresenceAvatar extends StatelessWidget {
                                 Positioned(
                                   left: 0,
                                   top: 0,
-                                  right: 8,
+                                  right: 0,
                                   child: Column(
                                     spacing: 2,
                                     crossAxisAlignment: .start,

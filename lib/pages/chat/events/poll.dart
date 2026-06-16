@@ -1,15 +1,18 @@
-import 'package:flutter/material.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:async/async.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:matrix/matrix.dart' hide Result;
-
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
 import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:matrix/matrix.dart' hide Result;
 
 class PollWidget extends StatelessWidget {
   final Event event;
@@ -25,13 +28,9 @@ class PollWidget extends StatelessWidget {
   });
 
   void _endPoll(BuildContext context) =>
-      showFutureLoadingDialog(context: context, future: () => event.endPoll());
+      showFutureLoadingDialog(context: context, future: event.endPoll);
 
-  void _toggleVote(
-    BuildContext context,
-    String answerId,
-    int maxSelection,
-  ) async {
+  void _toggleVote(BuildContext context, String answerId, int maxSelection) {
     final userId = event.room.client.userID!;
     final answerIds = event.getPollResponses(timeline)[userId] ?? {};
     if (!answerIds.remove(answerId)) {

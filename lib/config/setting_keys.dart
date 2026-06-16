@@ -1,16 +1,22 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
-
 import 'package:async/async.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:matrix/matrix_api_lite/utils/logs.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:fluffychat/utils/platform_infos.dart';
-
 enum AppSettings<T> {
   textMessageMaxLength<int>('textMessageMaxLength', 16384),
+
+  /// Max lines for unselected HTML/text bubbles; 0 = unlimited (no fade).
+  messagePreviewMaxLines<int>('chat.fluffy.message_preview_max_lines', 128),
   audioRecordingNumChannels<int>('audioRecordingNumChannels', 1),
   audioRecordingAutoGain<bool>('audioRecordingAutoGain', true),
   audioRecordingEchoCancel<bool>('audioRecordingEchoCancel', false),
@@ -32,7 +38,6 @@ enum AppSettings<T> {
   fontSizeFactor<double>('chat.fluffy.font_size_factor', 1.0),
   hideRedactedEvents<bool>('chat.fluffy.hideRedactedEvents', true),
   hideUnknownEvents<bool>('chat.fluffy.hideUnknownEvents', true),
-  separateChatTypes<bool>('chat.fluffy.separateChatTypes', false),
   autoplayImages<bool>('chat.fluffy.autoplay_images', true),
   sendTypingNotifications<bool>('chat.fluffy.send_typing_notifications', true),
   sendPublicReadReceipts<bool>('chat.fluffy.send_public_read_receipts', true),
@@ -41,6 +46,8 @@ enum AppSettings<T> {
   showPresences<bool>('chat.fluffy.show_presences', true),
   displayNavigationRail<bool>('chat.fluffy.display_navigation_rail', false),
   experimentalVoip<bool>('chat.fluffy.experimental_voip', false),
+  jitsiFeature<bool>('chat.fluffy.enable_jitsi', false),
+  jitsiDomain<String>('chat.fluffy.jitsi_domain', 'meet.jit.si'),
   shareKeysWith<String>('chat.fluffy.share_keys_with_2', 'all'),
   noEncryptionWarningShown<bool>(
     'chat.fluffy.no_encryption_warning_shown',
@@ -54,7 +61,26 @@ enum AppSettings<T> {
   colorSchemeSeedInt<int>('chat.fluffy.color_scheme_seed', 0xFF5625BA),
   emojiSuggestionLocale<String>('emoji_suggestion_locale', ''),
   enableSoftLogout<bool>('chat.fluffy.enable_soft_logout', false),
-  spellCheck<bool>('chat.metalconnect.spell_check', false);
+  spellCheck<bool>('chat.metalconnect.spell_check', false),
+  enableMatrixNativeOIDC<bool>('chat.fluffy.enable_matrix_native_oidc', false),
+  presetHomeserver<String>('chat.fluffy.preset_homeserver', ''),
+  welcomeText<String>('chat.fluffy.welcome_text', ''),
+  website<String>('chat.fluffy.website_url', 'https://connect.metal.men'),
+  logoUrl<String>(
+    'chat.fluffy.logo_url',
+    'https://fluffychat.im/assets/favicon.png',
+  ),
+  privacyPolicy<String>(
+    'chat.fluffy.privacy_policy_url',
+    'https://metal.men/privacy-policy',
+  ),
+  tos<String>('chat.fluffy.tos_url', 'https://fluffychat.im/en/tos'),
+  sendTimelineEventTimeout<int>('chat.fluffy.send_timeline_event_timeout', 15),
+  webNotificationSound<bool>('chat.fluffy.web_notification_sound', true),
+  chatFilter<String>('chat.fluffy.chat_filter', 'allChats'),
+  hideRoomsInSpaces<bool>('chat.fluffy.hideRoomsInSpaces', false),
+  showThumbnailsInTimeline<bool>('chat.fluffy.showThumbnailsInTimeline', true),
+  debugPush<bool>('chat.fluffy.debug_push', false);
 
   final String key;
   final T defaultValue;
@@ -63,6 +89,11 @@ enum AppSettings<T> {
 
   static SharedPreferences get store => _store!;
   static SharedPreferences? _store;
+
+  static Future<void> reset({bool loadWebConfigFile = true}) async {
+    await AppSettings._store!.clear();
+    await init(loadWebConfigFile: loadWebConfigFile);
+  }
 
   static Future<SharedPreferences> init({bool loadWebConfigFile = true}) async {
     if (AppSettings._store != null) return AppSettings.store;

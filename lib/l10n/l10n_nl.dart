@@ -18,17 +18,7 @@ class L10nNl extends L10n {
   String get notAnImage => 'Geen afbeeldingsbestand.';
 
   @override
-  String get setCustomPermissionLevel => 'Aangepast rechten-niveau instellen';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Kies hieronder een standaard rol of voer een aangepast rechten-niveau in tussen 0 en 100.';
-
-  @override
   String get ignoreUser => 'Persoon negeren';
-
-  @override
-  String get normalUser => 'Normaal persoon';
 
   @override
   String get remove => 'Verwijder';
@@ -83,9 +73,6 @@ class L10nNl extends L10n {
   String supposedMxid(String mxid) {
     return 'Dit moet $mxid zijn';
   }
-
-  @override
-  String get addChatDescription => 'Voeg een chatomschrijving toe...';
 
   @override
   String get addToSpace => 'Aan space toevoegen';
@@ -149,10 +136,13 @@ class L10nNl extends L10n {
   String get archive => 'Archief';
 
   @override
-  String get areGuestsAllowedToJoin => 'Mogen gasten deelnemen';
+  String get areGuestsAllowedToJoin => 'Mogen gasten deelnemen?';
 
   @override
   String get areYouSure => 'Weet je het zeker?';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -181,7 +171,7 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get sendTypingNotifications => 'Typemeldingen verzenden';
+  String get sendTypingNotifications => 'Toon \'aan het typen\'-meldingen';
 
   @override
   String get swipeRightToLeftToReply =>
@@ -191,30 +181,11 @@ class L10nNl extends L10n {
   String get sendOnEnter => 'Verstuur met enter';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'De homeserver ondersteunt de Spec-versies:\n$serverVersions\nMaar deze app ondersteunt alleen $supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats chats en $participants deelnemers';
-  }
-
-  @override
   String get noMoreChatsFound => 'Geen chats gevonden...';
 
   @override
   String get noChatsFoundHere =>
       'Hier zijn nog geen chats. Begin een nieuwe chat met iemand door op de onderstaande knop te klikken. ⤵️';
-
-  @override
-  String get joinedChats => 'Chats waaraan je deelneemt';
 
   @override
   String get unread => 'Ongelezen';
@@ -243,9 +214,6 @@ class L10nNl extends L10n {
   String get blocked => 'Geblokkeerd';
 
   @override
-  String get botMessages => 'Bot-berichten';
-
-  @override
   String get cancel => 'Annuleren';
 
   @override
@@ -263,7 +231,7 @@ class L10nNl extends L10n {
 
   @override
   String changedTheChatDescription(Object username) {
-    return '$username heeft de chatomschrijving gewijzigd';
+    return '$username heeft het onderwerp gewijzigd';
   }
 
   @override
@@ -371,9 +339,6 @@ class L10nNl extends L10n {
   String get chatDetails => 'Chatdetails';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'Chat is toegevoegd aan deze space';
-
-  @override
   String get chats => 'Chats';
 
   @override
@@ -435,7 +400,7 @@ class L10nNl extends L10n {
 
   @override
   String get commandHint_op =>
-      'Machtsniveau van de persoon instellen (standaard: 50)';
+      'Rechtenniveau van de persoon instellen (standaard: 50)';
 
   @override
   String get commandHint_plain => 'Niet-opgemaakte tekst versturen';
@@ -467,20 +432,8 @@ class L10nNl extends L10n {
   String get configureChat => 'Chat configureren';
 
   @override
-  String get confirm => 'Bevestigen';
-
-  @override
-  String get connect => 'Verbinden';
-
-  @override
   String get contactHasBeenInvitedToTheGroup =>
       'Contact is voor de groep uitgenodigd';
-
-  @override
-  String get containsDisplayName => 'Bevat naam';
-
-  @override
-  String get containsUserName => 'Bevat inlognaam';
 
   @override
   String get contentHasBeenReported =>
@@ -539,16 +492,6 @@ class L10nNl extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$day-$month';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$day-$month-$year';
-  }
-
-  @override
   String get deactivateAccountWarning =>
       'Hierdoor wordt je account gedeactiveerd. Dit kan niet ongedaan gemaakt worden! Weet je het zeker?';
 
@@ -578,9 +521,6 @@ class L10nNl extends L10n {
   String get directChats => 'Directe chats';
 
   @override
-  String get allRooms => 'Alle groepschats';
-
-  @override
   String get displaynameHasBeenChanged => 'De naam is gewijzigd';
 
   @override
@@ -593,7 +533,7 @@ class L10nNl extends L10n {
   String get editBlockedServers => 'Geblokkeerde servers wijzigen';
 
   @override
-  String get chatPermissions => 'Chat rechten';
+  String get chatPermissions => 'Chatrechten';
 
   @override
   String get editDisplayname => 'Naam wijzigen';
@@ -644,10 +584,6 @@ class L10nNl extends L10n {
   String get emoteShortcode => 'Emoticon korte code';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'Je moet een emoticon korte code en afbeelding kiezen!';
-
-  @override
   String get emptyChat => 'Lege chat';
 
   @override
@@ -681,18 +617,12 @@ class L10nNl extends L10n {
   String get homeserver => 'Server';
 
   @override
-  String get enterYourHomeserver => 'Vul je homeserver in';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Locatie ophalen fout: $error';
   }
 
   @override
   String get everythingReady => 'Alles klaar!';
-
-  @override
-  String get extremeOffensive => 'Extreem beledigend';
 
   @override
   String get fileName => 'Bestandsnaam';
@@ -713,19 +643,16 @@ class L10nNl extends L10n {
   String get fromTheInvitation => 'Vanaf uitnodiging';
 
   @override
-  String get goToTheNewRoom => 'Ga naar de nieuwe chat';
-
-  @override
   String get group => 'Groep';
 
   @override
-  String get chatDescription => 'Chatomschrijving';
+  String get chatDescription => 'Onderwerp';
 
   @override
-  String get chatDescriptionHasBeenChanged => 'Chatomschrijving gewijzigd';
+  String get chatDescriptionHasBeenChanged => 'Onderwerp gewijzigd';
 
   @override
-  String get groupIsPublic => 'Groep is openbaar';
+  String get groupIsPublic => 'Groep is publiek';
 
   @override
   String get groups => 'Groepen';
@@ -757,20 +684,14 @@ class L10nNl extends L10n {
 
   @override
   String get hideRedactedMessagesBody =>
-      'Als iemand een bericht verwijdert, is dit bericht niet meer zichtbaar in de chat.';
+      'Als iemand een bericht verwijdert is dit bericht niet meer zichtbaar in de chat.';
 
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Ongeldige of onbekende berichtformaten verbergen';
 
   @override
-  String get howOffensiveIsThisContent => 'Hoe beledigend is deze inhoud?';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => 'Identiteit';
 
   @override
   String get block => 'Blokkeren';
@@ -793,15 +714,7 @@ class L10nNl extends L10n {
       'Onjuiste wachtwoordzin of herstelsleutel';
 
   @override
-  String get inoffensive => 'Niet beledigend';
-
-  @override
   String get inviteContact => 'Contact uitnodigen';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Wil je $contact uitnodigingen voor de chat \"$groupName\"?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -809,7 +722,7 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get noChatDescriptionYet => 'Nog geen chatomschrijving gemaakt.';
+  String get noChatDescriptionYet => 'Nog geen onderwerp gemaakt.';
 
   @override
   String get tryAgain => 'Opnieuw proberen';
@@ -835,9 +748,6 @@ class L10nNl extends L10n {
 
   @override
   String get invitedUsersOnly => 'Alleen uitgenodigde personen';
-
-  @override
-  String get inviteForMe => 'Persoonlijke uitnodiging';
 
   @override
   String inviteText(String username, String link) {
@@ -880,9 +790,6 @@ class L10nNl extends L10n {
   String get leftTheChat => 'Verliet de chat';
 
   @override
-  String get license => 'Licentie';
-
-  @override
   String get lightTheme => 'Licht';
 
   @override
@@ -896,20 +803,6 @@ class L10nNl extends L10n {
   @override
   String get dehydrateWarning =>
       'Deze actie kan niet ongedaan worden gemaakt. Zorg ervoor dat je het back-upbestand veilig opslaat.';
-
-  @override
-  String get dehydrateTor => 'TOR-sessies: Exporteer sessie';
-
-  @override
-  String get dehydrateTorLong =>
-      'Voor TOR-sessies is het aanbevolen de sessie te exporteren alvorens het venster te sluiten.';
-
-  @override
-  String get hydrateTor => 'TOR-sessie: Importeren sessie export';
-
-  @override
-  String get hydrateTorLong =>
-      'Heb je de vorige keer jouw sessie geëxporteerd met TOR? Importeer het dan snel en ga verder met chatten.';
 
   @override
   String get hydrate => 'Herstellen vanuit back-upbestand';
@@ -938,9 +831,6 @@ class L10nNl extends L10n {
 
   @override
   String get logout => 'Uitloggen';
-
-  @override
-  String get memberChanges => 'Persoon wijzigingen';
 
   @override
   String get mention => 'Vermeld';
@@ -984,7 +874,7 @@ class L10nNl extends L10n {
 
   @override
   String get noEncryptionForPublicRooms =>
-      'Je kunt de versleuteling pas activeren zodra de chat niet meer openbaar toegankelijk is.';
+      'Je kunt de versleuteling pas activeren zodra de chat niet meer publiek toegankelijk is.';
 
   @override
   String get noGoogleServicesWarning =>
@@ -1018,10 +908,6 @@ class L10nNl extends L10n {
   String get notifications => 'Meldingen';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Meldingen ingeschakeld voor dit account';
-
-  @override
   String numUsersTyping(int count) {
     return '$count personen typen…';
   }
@@ -1030,13 +916,10 @@ class L10nNl extends L10n {
   String get obtainingLocation => 'Locatie ophalen…';
 
   @override
-  String get offensive => 'Beledigend';
-
-  @override
   String get offline => 'Offline';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ok';
 
   @override
   String get online => 'Online';
@@ -1058,9 +941,6 @@ class L10nNl extends L10n {
   String get openCamera => 'Camera openen';
 
   @override
-  String get openVideoCamera => 'Videocamera openen';
-
-  @override
   String get oneClientLoggedOut => 'Één van jouw apparaten is uitgelogd';
 
   @override
@@ -1077,10 +957,6 @@ class L10nNl extends L10n {
 
   @override
   String get bundleName => 'Bundelnaam';
-
-  @override
-  String get enableMultiAccounts =>
-      '(BETA) Meerdere accounts op dit apparaat inschakelen';
 
   @override
   String get openInMaps => 'In kaarten openen';
@@ -1111,27 +987,13 @@ class L10nNl extends L10n {
   String get passwordHasBeenChanged => 'Wachtwoord gewijzigd';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Verberg persoon veranderingen in openbare chats';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Verberg in de tijdlijn van de chat als iemand zich aanmeldt bij een openbare chat of deze verlaat om de leesbaarheid te verbeteren.';
-
-  @override
   String get overview => 'Overzicht';
-
-  @override
-  String get notifyMeFor => 'Waarschuw mij voor';
 
   @override
   String get passwordRecoverySettings => 'Wachtwoordherstel-instellingen';
 
   @override
   String get passwordRecovery => 'Wachtwoordherstel';
-
-  @override
-  String get people => 'Personen';
 
   @override
   String get pickImage => 'Kies een afbeelding';
@@ -1145,9 +1007,6 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get pleaseChoose => 'Maak een keuze';
-
-  @override
   String get pleaseChooseAPasscode => 'Kies een toegangscode';
 
   @override
@@ -1157,9 +1016,6 @@ class L10nNl extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'Voer 4 cijfers in of laat leeg om app-vergrendeling uit te schakelen.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'Voer jouw herstelsleutel in:';
 
   @override
   String get pleaseEnterYourPassword => 'Voer jouw wachtwoord in';
@@ -1178,7 +1034,7 @@ class L10nNl extends L10n {
   String get privacy => 'Privacy';
 
   @override
-  String get publicRooms => 'Openbare chats';
+  String get publicRooms => 'Publieke chats';
 
   @override
   String get pushRules => 'Meldingsinstellingen';
@@ -1222,18 +1078,12 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get rejoin => 'Opnieuw deelnemen';
-
-  @override
   String get removeAllOtherDevices => 'Verwijder alle andere apparaten';
 
   @override
   String removedBy(String username) {
     return 'Verwijderd door $username';
   }
-
-  @override
-  String get removeDevice => 'Verwijder apparaat';
 
   @override
   String get unbanFromChat => 'Verbanning opheffen';
@@ -1275,11 +1125,6 @@ class L10nNl extends L10n {
   String get recoveryKeyLost => 'Herstelsleutel verloren?';
 
   @override
-  String seenByUser(String username) {
-    return 'Gezien door $username';
-  }
-
-  @override
   String get send => 'Verstuur';
 
   @override
@@ -1304,12 +1149,6 @@ class L10nNl extends L10n {
 
   @override
   String get sendMessages => 'Berichten versturen';
-
-  @override
-  String get sendOriginal => 'Origineel versturen';
-
-  @override
-  String get sendSticker => 'Sticker versturen';
 
   @override
   String get sendVideo => 'Video versturen';
@@ -1345,22 +1184,10 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Directe chats en groepen los weergeven';
-
-  @override
   String get setAsCanonicalAlias => 'Als hoofdalias instellen';
 
   @override
-  String get setCustomEmotes => 'Aangepaste emoticons instellen';
-
-  @override
-  String get setChatDescription => 'Chatomschrijving instellen';
-
-  @override
-  String get setInvitationLink => 'Uitnodigingslink instellen';
-
-  @override
-  String get setPermissionsLevel => 'Rechten-niveau instellen';
+  String get setChatDescription => 'Onderwerp instellen';
 
   @override
   String get setStatus => 'Status instellen';
@@ -1383,13 +1210,7 @@ class L10nNl extends L10n {
   String get showPassword => 'Wachtwoord weergeven';
 
   @override
-  String get presenceStyle => 'Aanwezigheid:';
-
-  @override
   String get presencesToggle => 'Statusberichten van andere personen tonen';
-
-  @override
-  String get singlesignon => 'Eenmalig Inloggen';
 
   @override
   String get skip => 'Overslaan';
@@ -1398,7 +1219,7 @@ class L10nNl extends L10n {
   String get sourceCode => 'Broncode';
 
   @override
-  String get spaceIsPublic => 'Space is openbaar';
+  String get spaceIsPublic => 'Space is publiek';
 
   @override
   String get spaceName => 'Spacenaam';
@@ -1407,9 +1228,6 @@ class L10nNl extends L10n {
   String startedACall(String senderName) {
     return '$senderName heeft een gesprek gestart';
   }
-
-  @override
-  String get startFirstChat => 'Begin je eerste chat';
 
   @override
   String get status => 'Status';
@@ -1439,15 +1257,6 @@ class L10nNl extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'Favoriet in- of uitschakelen';
-
-  @override
-  String get toggleMuted => 'Dempen in- of uitschakelen';
-
-  @override
-  String get toggleUnread => 'Markeer gelezen/ongelezen';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1486,17 +1295,6 @@ class L10nNl extends L10n {
 
   @override
   String get unpin => 'Pin losmaken';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount ongelezen chats',
-      one: '1 ongelezen chat',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1572,9 +1370,6 @@ class L10nNl extends L10n {
       'Wachten tot partner de nummers accepteert …';
 
   @override
-  String get wallpaper => 'Achtergrond:';
-
-  @override
   String get warning => 'Waarschuwing!';
 
   @override
@@ -1635,26 +1430,11 @@ class L10nNl extends L10n {
   String get removeFromSpace => 'Uit de space verwijderen';
 
   @override
-  String get addToSpaceDescription =>
-      'Selecteer een space om deze chat aan toe te voegen.';
-
-  @override
   String get start => 'Start';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'Om je oude berichten te ontgrendelen voer je jouw herstelsleutel in die gemaakt is in je vorige sessie. Je sleutel is niet je wachtwoord.';
-
-  @override
-  String get publish => 'Publiceren';
-
-  @override
-  String videoWithSize(String size) {
-    return 'Video ($size)';
-  }
-
-  @override
-  String get openChat => 'Chat openen';
 
   @override
   String get markAsRead => 'Markeer als gelezen';
@@ -1684,7 +1464,7 @@ class L10nNl extends L10n {
   String get placeCall => 'Bellen';
 
   @override
-  String get voiceCall => 'Spraakoproep';
+  String get voiceCall => 'Spraakgesprek';
 
   @override
   String get unsupportedAndroidVersion => 'Niet-ondersteunde Android-versie';
@@ -1699,54 +1479,6 @@ class L10nNl extends L10n {
 
   @override
   String get experimentalVideoCalls => 'Videogesprekken (experimenteel)';
-
-  @override
-  String get emailOrUsername => 'Email of inlognaam';
-
-  @override
-  String get indexedDbErrorTitle => 'Problemen met privémodus';
-
-  @override
-  String get indexedDbErrorLong =>
-      'Het opslaan van berichten is helaas niet standaard ingeschakeld in de privémodus.\nBezoek alsjeblieft\n - about:config\n - stel dom.indexedDB.privateBrowsing.enabled in op true\nAnders is het niet mogelijk om FluffyChat op te starten.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'Naar account $number overschakelen';
-  }
-
-  @override
-  String get nextAccount => 'Volgende account';
-
-  @override
-  String get previousAccount => 'Vorige account';
-
-  @override
-  String get addWidget => 'Widget toevoegen';
-
-  @override
-  String get widgetVideo => 'Video';
-
-  @override
-  String get widgetEtherpad => 'Tekstnotitie';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => 'Aangepast';
-
-  @override
-  String get widgetName => 'Naam';
-
-  @override
-  String get widgetUrlError => 'Dit is geen geldige link.';
-
-  @override
-  String get widgetNameError => 'Geef een naam op.';
-
-  @override
-  String get errorAddingWidget => 'Fout bij het toevoegen van de widget.';
 
   @override
   String get youRejectedTheInvitation => 'Je hebt de uitnodiging afgewezen';
@@ -1766,11 +1498,6 @@ class L10nNl extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return 'Je hebt de uitnodiging voor $user ingetrokken';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 Je bent uitgenodigd via een link voor:\n$alias';
   }
 
   @override
@@ -1813,15 +1540,6 @@ class L10nNl extends L10n {
 
   @override
   String get noOneCanJoin => 'Niemand kan deelnemen';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user wil graag deelnemen aan de chat.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'Openbare link is nog niet gecreëerd';
 
   @override
   String get knock => 'Klop';
@@ -1871,27 +1589,6 @@ class L10nNl extends L10n {
   String get screenSharingDetail => 'Je deelt je scherm in FuffyChat';
 
   @override
-  String get callingPermissions => 'Telefoon-rechten';
-
-  @override
-  String get callingAccount => 'Telefoon-account';
-
-  @override
-  String get callingAccountDetails =>
-      'Hiermee kan FluffyChat de Android telefoon-app gebruiken.';
-
-  @override
-  String get appearOnTop => 'Bovenaan verschijnen';
-
-  @override
-  String get appearOnTopDetails =>
-      'Laat de app bovenaan verschijnen (niet nodig als je FluffyChat al hebt ingesteld als een bel-account)';
-
-  @override
-  String get otherCallingPermissions =>
-      'Microfoon, camera en andere FluffyChat-rechten';
-
-  @override
   String get whyIsThisMessageEncrypted => 'Waarom is dit bericht onleesbaar?';
 
   @override
@@ -1905,22 +1602,7 @@ class L10nNl extends L10n {
   String get newSpace => 'Space aanmaken';
 
   @override
-  String get enterSpace => 'Space betreden';
-
-  @override
-  String get enterRoom => 'Chat betreden';
-
-  @override
   String get allSpaces => 'Alle spaces';
-
-  @override
-  String numChats(String number) {
-    return '$number chats';
-  }
-
-  @override
-  String get hideUnimportantStateEvents =>
-      'Onbelangrijke statusgebeurtenissen verbergen';
 
   @override
   String get hidePresences => 'Verberg statuslijst?';
@@ -1935,7 +1617,7 @@ class L10nNl extends L10n {
 
   @override
   String get newSpaceDescription =>
-      'Met spaces kun je je chats samenvoegen en privé- of openbare community\'s bouwen.';
+      'Met spaces kun je je chats samenvoegen en privé- of publieke community\'s bouwen.';
 
   @override
   String get encryptThisChat => 'Versleutel deze chat';
@@ -1990,20 +1672,6 @@ class L10nNl extends L10n {
   String get report => 'Rapporteer';
 
   @override
-  String get signInWithPassword => 'Aanmelden met wachtwoord';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Probeer het later nog eens of kies een andere server.';
-
-  @override
-  String get profileNotFound =>
-      'De persoon kan niet gevonden worden op de server. Misschien is er een verbindingsprobleem of de persoon bestaat niet.';
-
-  @override
-  String get setTheme => 'Thema instellen:';
-
-  @override
   String get setColorTheme => 'Kleurthema instellen:';
 
   @override
@@ -2011,9 +1679,6 @@ class L10nNl extends L10n {
 
   @override
   String get inviteGroupChat => '📨 Groeps-chat uitnodiging';
-
-  @override
-  String get invitePrivateChat => '📨 Privé-chat uitnodiging';
 
   @override
   String get invalidInput => 'Ongeldige invoer!';
@@ -2048,7 +1713,7 @@ class L10nNl extends L10n {
 
   @override
   String get kickUserDescription =>
-      'De persoon is verwijderd uit de chat, maar is niet verbannen. In openbare chats kan de persoon op elk moment opnieuw deelnemen.';
+      'De persoon is verwijderd uit de chat, maar is niet verbannen. In publieke chats kan de persoon op elk moment opnieuw deelnemen.';
 
   @override
   String get makeAdminDescription =>
@@ -2097,9 +1762,6 @@ class L10nNl extends L10n {
       'Helaas... dit lijkt niet de correcte herstelsleutel.';
 
   @override
-  String get startConversation => 'Start gesprek';
-
-  @override
   String get commandHint_sendraw => 'Stuur kale json';
 
   @override
@@ -2109,7 +1771,8 @@ class L10nNl extends L10n {
   String get databaseMigrationBody => 'Een ogenblik. Dit kan even duren.';
 
   @override
-  String get leaveEmptyToClearStatus => 'Laat leeg om je status te resetten.';
+  String get leaveEmptyToClearStatus =>
+      'Laat leeg om jouw status te herstellen.';
 
   @override
   String get select => 'Selecteer';
@@ -2133,10 +1796,7 @@ class L10nNl extends L10n {
   String get passwordIsWrong => 'Je ingevoerde wachtwoord is fout';
 
   @override
-  String get publicLink => 'Openbare link';
-
-  @override
-  String get publicChatAddresses => 'Openbare chat adressen';
+  String get publicChatAddresses => 'Publieke chat adressen';
 
   @override
   String get createNewAddress => 'Creëer nieuw adres';
@@ -2145,16 +1805,10 @@ class L10nNl extends L10n {
   String get joinSpace => 'Toetreden tot de space';
 
   @override
-  String get publicSpaces => 'Openbare spaces';
+  String get publicSpaces => 'Publieke spaces';
 
   @override
   String get addChatOrSubSpace => 'Voeg chat of subspace toe';
-
-  @override
-  String get subspace => 'Subspace';
-
-  @override
-  String get decline => 'Weiger';
 
   @override
   String get thisDevice => 'Dit apparaat:';
@@ -2162,14 +1816,6 @@ class L10nNl extends L10n {
   @override
   String get initAppError =>
       'Er is een fout opgetreden bij het laden van de app';
-
-  @override
-  String get userRole => 'Rol';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level is het minimale rechten-niveau.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2186,11 +1832,6 @@ class L10nNl extends L10n {
   String get files => 'Bestanden';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'Het aanmaken van de SQlite database is mislukt. De app probeert nu een traditionele database te gebruiken. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze $url. De foutmelding is: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'Je sessie is verlopen. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze link $url. De foutmelding is: $error';
   }
@@ -2198,11 +1839,6 @@ class L10nNl extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'De app probeert nu je sessie te herstellen van een back-up. Meldt alsjeblieft deze fout aan de ontwikkelaars via deze link $url. De foutmelding is: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Bericht doorsturen naar $roomName?';
   }
 
   @override
@@ -2335,7 +1971,7 @@ class L10nNl extends L10n {
   String get inviteOtherUsers => 'Personen voor deze chat uitnodigen';
 
   @override
-  String get changeTheChatPermissions => 'Chat-rechten wijzigen';
+  String get changeTheChatPermissions => 'Chatrechten wijzigen';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
@@ -2343,13 +1979,13 @@ class L10nNl extends L10n {
 
   @override
   String get changeTheCanonicalRoomAlias =>
-      'Standaard openbaar chat-adres wijzigen';
+      'Standaard publiek chat-adres wijzigen';
 
   @override
   String get sendRoomNotifications => '@room-meldingen versturen';
 
   @override
-  String get changeTheDescriptionOfTheGroup => 'Chatomschrijving wijzigen';
+  String get changeTheDescriptionOfTheGroup => 'Onderwerp wijzigen';
 
   @override
   String get chatPermissionsDescription =>
@@ -2370,16 +2006,6 @@ class L10nNl extends L10n {
   String get loginWithMatrixId => 'Inloggen met Matrix-ID';
 
   @override
-  String get discoverHomeservers => 'Ontdek servers';
-
-  @override
-  String get whatIsAHomeserver => 'Wat is een server?';
-
-  @override
-  String get homeserverDescription =>
-      'Al je data is opgeslagen op de server, net als bij een email-leverancier. Je kan kiezen welke server je gebruikt en toch communiceren met iedereen. Lees meer op https://matrix.org.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Dit lijkt geen ondersteunde server. Verkeerde URL?';
 
@@ -2387,26 +2013,10 @@ class L10nNl extends L10n {
   String get calculatingFileSize => 'Bestandsgrootte berekenen...';
 
   @override
-  String get prepareSendingAttachment => 'Bijlage versturen voorbereiden...';
-
-  @override
   String get sendingAttachment => 'Bijlage versturen...';
 
   @override
-  String get generatingVideoThumbnail => 'Video-voorbeeld genereren...';
-
-  @override
   String get compressVideo => 'Video comprimeren...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Bijlage versturen $index van $length...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Server limiet bereikt! Wacht $seconds seconden...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2508,10 +2118,6 @@ class L10nNl extends L10n {
   String get waitingForServer => 'Wachten op server...';
 
   @override
-  String get appIntroduction =>
-      'FluffyChat laat je chatten met je vrienden tussen verschillende chat-netwerken. Lees meer op https://matrix.org of tik *Continue*.';
-
-  @override
   String get newChatRequest => '📩 Nieuw chat verzoek';
 
   @override
@@ -2535,10 +2141,10 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Stuur een melding als je inlognaam vermeld wordt in een bericht.';
+      'Stuur een melding als een bericht je inlognaam vermeld.';
 
   @override
-  String get notificationRuleMaster => 'Alle meldingen dempen';
+  String get notificationRuleMaster => 'Alle meldingen uitschakelen';
 
   @override
   String get notificationRuleMasterDescription =>
@@ -2553,14 +2159,14 @@ class L10nNl extends L10n {
       'Meldingen van automatische accounts zoals bots uitschakelen.';
 
   @override
-  String get notificationRuleInviteForMe => 'Uitnodiging voor mij';
+  String get notificationRuleInviteForMe => 'Persoonlijke uitnodiging';
 
   @override
   String get notificationRuleInviteForMeDescription =>
       'Stuur een melding wanneer je wordt uitgenodigd voor een chat.';
 
   @override
-  String get notificationRuleMemberEvent => 'Chat-gebeurtenis';
+  String get notificationRuleMemberEvent => 'Chat-gebeurtenis uitschakelen';
 
   @override
   String get notificationRuleMemberEventDescription =>
@@ -2592,14 +2198,14 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Stuur je een melding als een bericht \'@room\' bevat.';
+      'Stuur een melding als een bericht \'@room\' bevat.';
 
   @override
   String get notificationRuleTombstone => 'Sluitingsbericht';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Stuur een melding naar je over chat-sluitingsberichten.';
+      'Stuur een melding bij een chat-sluitingsbericht.';
 
   @override
   String get notificationRuleReaction => 'Reactie';
@@ -2627,7 +2233,7 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleCallDescription =>
-      'Stuur een melding naar je over oproepen.';
+      'Stuur een melding bij oproepen.';
 
   @override
   String get notificationRuleEncryptedRoomOneToOne =>
@@ -2635,35 +2241,35 @@ class L10nNl extends L10n {
 
   @override
   String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Stuur een melding naar je over berichten in versleutelde een-op-een chats.';
+      'Stuur een melding bij berichten in versleutelde een-op-een chats.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Een-op-een chat';
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Stuur een melding naar je over berichten in een-op-een chats.';
+      'Stuur een melding bij berichten in een-op-een chats.';
 
   @override
   String get notificationRuleMessage => 'Bericht';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Stuur een melding naar je over algemene berichten.';
+      'Stuur een melding bij algemene berichten.';
 
   @override
   String get notificationRuleEncrypted => 'Versleuteld';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Stuur een melding naar je over berichten in versleutelde chats.';
+      'Stuur een melding bij berichten in versleutelde chats.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
 
   @override
   String get notificationRuleJitsiDescription =>
-      'Stuur een melding naar je over Jitsi widget-gebeurtenissen.';
+      'Stuur een melding bij Jitsi widget-gebeurtenissen.';
 
   @override
   String get notificationRuleServerAcl =>
@@ -2767,18 +2373,6 @@ class L10nNl extends L10n {
   String get resume => 'Hervat';
 
   @override
-  String get newSubSpace => 'Nieuwe sub-space';
-
-  @override
-  String get moveToDifferentSpace => 'Naar andere space verplaatsen';
-
-  @override
-  String get moveUp => 'Omhoog verplaatsen';
-
-  @override
-  String get moveDown => 'Omlaag verplaatsen';
-
-  @override
   String get removeFromSpaceDescription =>
       'De chat zal worden verwijderd uit de space, maar blijft in je chats.';
 
@@ -2798,9 +2392,6 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get donate => 'Doneer';
-
-  @override
   String startedAPoll(String username) {
     return '$username is een peiling begonnen.';
   }
@@ -2816,9 +2407,6 @@ class L10nNl extends L10n {
 
   @override
   String get answersVisible => 'Zichtbaar invullen';
-
-  @override
-  String get answersHidden => 'Antwoorden verborgen';
 
   @override
   String get pollQuestion => 'Peiling vraag';
@@ -2851,7 +2439,7 @@ class L10nNl extends L10n {
       'Antwoorden zullen zichtbaar zijn wanneer de peiling is geëindigd';
 
   @override
-  String get replyInThread => 'Antwoord in draad';
+  String get replyInThread => 'Antwoord in gesprek';
 
   @override
   String countReplies(int count) {
@@ -2865,7 +2453,7 @@ class L10nNl extends L10n {
   }
 
   @override
-  String get thread => 'Draad';
+  String get thread => 'Gesprek';
 
   @override
   String get backToMainChat => 'Terug naar hoofdchat';
@@ -2908,39 +2496,162 @@ class L10nNl extends L10n {
   String get setupChatBackup => 'Chatback-up instellen';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => 'Geen resultaten meer gevonden';
 
   @override
   String chatSearchedUntil(String time) {
-    return 'Chat searched until $time';
+    return 'Chat doorzocht tot $time';
   }
 
   @override
-  String get federationBaseUrl => 'Federation Base URL';
+  String get federationBaseUrl => 'Federatie Basis URL';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation => 'Client-Well-Known Informatie:';
 
   @override
-  String get baseUrl => 'Base URL';
+  String get baseUrl => 'Basis URL';
 
   @override
-  String get identityServer => 'Identity Server:';
+  String get identityServer => 'Identiteit Server:';
 
   @override
   String versionWithNumber(String version) {
-    return 'Version: $version';
+    return 'Versie: $version';
   }
 
   @override
   String get logs => 'Logs';
 
   @override
-  String get advancedConfigs => 'Advanced Configs';
+  String get advancedConfigs => 'Geavanceerde configuratie';
 
   @override
-  String get advancedConfigurations => 'Advanced configurations';
+  String get advancedConfigurations => 'Geavanceerde configuraties';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Log in';
+
+  @override
+  String get createNewAccount => 'Registreer nieuw account';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat is decentraal! Kies een server waar je wil voor jouw account en laten we gaan!';
+
+  @override
+  String get signInGreeting =>
+      'Heb je al een Matrix account? Welkom terug! Kies jouw server en log in.';
+
+  @override
+  String get appIntro =>
+      'Met FluffyChat kan je chatten met je vrienden. Het is een veilige en decentrale [matrix] app! Lees meer op https://matrix.org als je wilt of kies registreren.';
+
+  @override
+  String get theProcessWasCanceled => 'Het proces is geannuleerd.';
+
+  @override
+  String get join => 'Deelnemen';
+
+  @override
+  String get searchOrEnterHomeserverAddress => 'Zoek of voer serveradres in';
+
+  @override
+  String get matrixId => 'Matrix-ID';
+
+  @override
+  String get setPowerLevel => 'Rechtenniveau instellen';
+
+  @override
+  String get makeModerator => 'Maak moderator';
+
+  @override
+  String get makeAdmin => 'Maak beheerder';
+
+  @override
+  String get removeModeratorRights => 'Verwijder moderator-rechten';
+
+  @override
+  String get removeAdminRights => 'Verwijder beheerder-rechten';
+
+  @override
+  String get powerLevel => 'Rechtenniveau';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Rechtenniveau\'s definiëren wat een persoon mag doen in deze chat en variëren meestal tussen 0 en 100.';
+
+  @override
+  String get owner => 'Eigenaar';
+
+  @override
+  String get mute => 'Demp';
+
+  @override
+  String get createNewChat => 'Creëer nieuw chat';
+
+  @override
+  String get reset => 'Herstellen';
+
+  @override
+  String get supportFluffyChat => 'FluffyChat steunen';
+
+  @override
+  String get support => 'Steunen';
+
+  @override
+  String get setLowPriority => 'Lage prioriteit instellen';
+
+  @override
+  String get unsetLowPriority => 'Lage prioriteit uitschakelen';
+
+  @override
+  String get removeCallFromChat => 'Verwijder oproep van chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Wil je de oproep voor iedereen in de chat verwijderen?';
+
+  @override
+  String get removeCallForEveryone => 'Verwijder oproep voor iedereen';
+
+  @override
+  String get startVoiceCall => 'Start audio-gesprek';
+
+  @override
+  String get startVideoCall => 'Start video-gesprek';
+
+  @override
+  String get joinVoiceCall => 'Audio-gesprek opnemen';
+
+  @override
+  String get joinVideoCall => 'Deelnemen aan video-gesprek';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Meldingsgeluid afspelen';
+
+  @override
+  String get addTag => 'Tag toevoegen';
+
+  @override
+  String get removeTag => 'Tag verwijderen';
+
+  @override
+  String get tagName => 'Tagnaam';
+
+  @override
+  String get createNewTag => 'Nieuwe tag maken';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

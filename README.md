@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 ![Screenshot](https://github.com/krille-chan/fluffychat/blob/main/assets/banner_transparent.png?raw=true)
 
 [FluffyChat](https://fluffy.chat) is an open source, nonprofit and cute [[matrix](https://matrix.org)] client written in [Flutter](https://flutter.dev). The goal of the app is to create an easy to use instant messenger which is open source and accessible for everyone.
@@ -7,7 +14,6 @@
 - 🌐 [[Weblate] Translate FluffyChat into your language](https://hosted.weblate.org/projects/fluffychat/)
 - 🌍 [[m] Join the community](https://matrix.to/#/#fluffy-space:matrix.org)
 - 📰 [[Mastodon] Get updates on social media](https://troet.cafe/@krille)
-- 🖥️ [[Famedly] Server hosting and professional support](https://famedly.com/kontakt)
 - 💝 [[Liberapay] Support FluffyChat development](https://de.liberapay.com/KrilleChritzelius)
 
 <a href='https://ko-fi.com/C1C86VN53' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
@@ -96,7 +102,7 @@ flutter build web --release
 #### Install custom dependencies (Linux)
 
 ```bash
-sudo apt install libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libwebkit2gtk-4.0-dev
+sudo apt install libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libwebkit2gtk-4.0-dev lld
 ```
 
 * Build with one of these:
@@ -104,6 +110,20 @@ sudo apt install libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libwebkit2g
 flutter build linux --release
 flutter build windows --release
 flutter build macos --release
+```
+
+## How to run integration tests
+
+You need to have docker installed locally! Run the preparation script before every test run:
+
+```sh
+./scripts/prepare_integration_test.sh
+```
+
+Then run all tests with:
+
+```sh
+flutter test integration_test/mobile_test.dart
 ```
 
 

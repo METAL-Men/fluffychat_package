@@ -9,7 +9,7 @@ class L10nLv extends L10n {
   L10nLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'nē';
+  String get alwaysUse24HourFormat => 'true';
 
   @override
   String get repeatPassword => 'Atkārtot paroli';
@@ -18,17 +18,7 @@ class L10nLv extends L10n {
   String get notAnImage => 'Nav attēla datne.';
 
   @override
-  String get setCustomPermissionLevel => 'Iestatīt pielāgotu atļauju līmeni';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Lūgums zemāk atlasīt iepriekšizveidotu lomu vai ievadīt pielāgotu atļauju līmeni starp 0 un 100.';
-
-  @override
   String get ignoreUser => 'Neņemt vērā lietotāju';
-
-  @override
-  String get normalUser => 'Parasts lietotājs';
 
   @override
   String get remove => 'Noņemt';
@@ -85,10 +75,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get addChatDescription => 'Pievienot tērzēšanas aprakstu…';
-
-  @override
-  String get addToSpace => 'Pievienot vietai';
+  String get addToSpace => 'Pievienot kopienai';
 
   @override
   String get admin => 'Pārvaldītājs';
@@ -149,11 +136,13 @@ class L10nLv extends L10n {
   String get archive => 'Arhīvs';
 
   @override
-  String get areGuestsAllowedToJoin =>
-      'Vai vieslietotājiem ir ļauts pievienoties';
+  String get areGuestsAllowedToJoin => 'Vai vieslietotāji drīkst pievienoties?';
 
   @override
   String get areYouSure => 'Vai tiešām?';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout => 'Vai tiešām atteikties?';
@@ -191,22 +180,6 @@ class L10nLv extends L10n {
   String get sendOnEnter => 'Nosūtīt ar Enter';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'Mājasserveris nodrošina specifikācijas versijas:\n$serverVersions\nSavukārt, lietotne atbalsta tikai $supportedVersions';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats tērzēšanas un $participants dalībnieki';
-  }
-
-  @override
   String get noMoreChatsFound => 'Vairs netika atrasta neviena tērzēšana...';
 
   @override
@@ -214,16 +187,13 @@ class L10nLv extends L10n {
       'Šeit vēl nav tērzēšanu. Jauna saruna ar kādu ir uzsākama ar zemāk esošo pogu. ⤵️';
 
   @override
-  String get joinedChats => 'Tērzēšanas, kurās piedalos';
-
-  @override
   String get unread => 'Nelasītas';
 
   @override
-  String get space => 'Vieta';
+  String get space => 'Kopiena';
 
   @override
-  String get spaces => 'Vietas';
+  String get spaces => 'Kopienas';
 
   @override
   String get banFromChat => 'Izslēgt no tērzēšanas';
@@ -241,9 +211,6 @@ class L10nLv extends L10n {
 
   @override
   String get blocked => 'Liegta';
-
-  @override
-  String get botMessages => 'Robotprogrammatūras ziņām';
 
   @override
   String get cancel => 'Atcelt';
@@ -372,10 +339,6 @@ class L10nLv extends L10n {
   String get chatDetails => 'Tērzēšanas izvērsums';
 
   @override
-  String get chatHasBeenAddedToThisSpace =>
-      'Šai vietai tika pievienota tērzēšana';
-
-  @override
   String get chats => 'Tērzēšanas';
 
   @override
@@ -472,20 +435,8 @@ class L10nLv extends L10n {
   String get configureChat => 'Konfigurēt tērzēšanu';
 
   @override
-  String get confirm => 'Apstiprināt';
-
-  @override
-  String get connect => 'Savienot';
-
-  @override
   String get contactHasBeenInvitedToTheGroup =>
       'Kontaktpersona tika uzaicināta kopā';
-
-  @override
-  String get containsDisplayName => 'Satur attēlojamo vārdu';
-
-  @override
-  String get containsUserName => 'Satur lietotājvārdu';
 
   @override
   String get contentHasBeenReported =>
@@ -530,7 +481,7 @@ class L10nLv extends L10n {
   String get createGroup => 'Izveidot kopu';
 
   @override
-  String get createNewSpace => 'Jauna vieta';
+  String get createNewSpace => 'Jauna kopiena';
 
   @override
   String get currentlyActive => 'Pašreiz darbīgi';
@@ -541,16 +492,6 @@ class L10nLv extends L10n {
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
     return '$date, $timeOfDay';
-  }
-
-  @override
-  String dateWithoutYear(String month, String day) {
-    return '$day.$month.';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year.$month.$day';
   }
 
   @override
@@ -583,9 +524,6 @@ class L10nLv extends L10n {
   String get directChats => 'Tiešās tērzēšanas';
 
   @override
-  String get allRooms => 'Visām kopu tērzēšanām';
-
-  @override
   String get displaynameHasBeenChanged => 'Attēlojamais vārds tika nomainīts';
 
   @override
@@ -610,7 +548,7 @@ class L10nLv extends L10n {
   String get editRoomAvatar => 'Labot istabas attēlu';
 
   @override
-  String get emoteExists => 'Emocija jau pastāv.';
+  String get emoteExists => 'Emocija jau pastāv!';
 
   @override
   String get emoteInvalid => 'Nederīgs emocijas īskods.';
@@ -649,10 +587,6 @@ class L10nLv extends L10n {
   String get emoteShortcode => 'Emocijas īskods';
 
   @override
-  String get emoteWarnNeedToPick =>
-      'Nepieciešams izvēlēties emocijas īskodu un attēlu.';
-
-  @override
   String get emptyChat => 'Tukša tērzēšana';
 
   @override
@@ -686,18 +620,12 @@ class L10nLv extends L10n {
   String get homeserver => 'Mājasserveris';
 
   @override
-  String get enterYourHomeserver => 'Jāievada mājasserveris';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Kļūda atrašanās vietas iegūšanā: $error';
   }
 
   @override
   String get everythingReady => 'Viss ir gatavs!';
-
-  @override
-  String get extremeOffensive => 'Īpaši aizskarošs';
 
   @override
   String get fileName => 'Datnes nosaukums';
@@ -716,9 +644,6 @@ class L10nLv extends L10n {
 
   @override
   String get fromTheInvitation => 'No uzaicinājuma';
-
-  @override
-  String get goToTheNewRoom => 'Doties uz jauno istabu';
 
   @override
   String get group => 'Kopa';
@@ -770,13 +695,7 @@ class L10nLv extends L10n {
       'Paslēpt nederīgus vai nezināmus ziņu formātus';
 
   @override
-  String get howOffensiveIsThisContent => 'Cik aizskarošs ir šis saturs?';
-
-  @override
   String get id => 'Id';
-
-  @override
-  String get identity => 'Identitāte';
 
   @override
   String get block => 'Izslēgt';
@@ -799,15 +718,7 @@ class L10nLv extends L10n {
       'Nepareiza paroles vārdkopa vai atkopes atslēga';
 
   @override
-  String get inoffensive => 'Nav aizskarošs';
-
-  @override
   String get inviteContact => 'Uzaicināt kontaktpersonu';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Vai vēlies uzaicināt $contact uz tērzēšanu \"$groupName\"?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -840,9 +751,6 @@ class L10nLv extends L10n {
 
   @override
   String get invitedUsersOnly => 'Tikai uzaicināti lietotāji';
-
-  @override
-  String get inviteForMe => 'Uzaicinājumu man';
 
   @override
   String inviteText(String username, String link) {
@@ -885,9 +793,6 @@ class L10nLv extends L10n {
   String get leftTheChat => 'Pameta tērzēšanu';
 
   @override
-  String get license => 'Licence';
-
-  @override
   String get lightTheme => 'Gaišs';
 
   @override
@@ -901,20 +806,6 @@ class L10nLv extends L10n {
   @override
   String get dehydrateWarning =>
       'Šī darbība nav atdarāma. Jānodrošina, ka rezerves kopijas datne tiek droši uzglabāta.';
-
-  @override
-  String get dehydrateTor => 'TOR lietotāji: izgūt sesiju';
-
-  @override
-  String get dehydrateTorLong =>
-      'TOR lietotājiem ir ieteicams izgūt sesiju pirms loga aizvēršanas.';
-
-  @override
-  String get hydrateTor => 'TOR lietotāji: ievietot sesijas izguvi';
-
-  @override
-  String get hydrateTorLong =>
-      'Vai sesija pēdējoreiz tika izgūta TOR? Ātri ievieto to un turpini tērzēšanu!';
 
   @override
   String get hydrate => 'Atjaunot no rezerves kopijas datnes';
@@ -938,14 +829,11 @@ class L10nLv extends L10n {
 
   @override
   String logInTo(String homeserver) {
-    return 'PIeteikties $homeserver';
+    return 'Pieteikties $homeserver';
   }
 
   @override
   String get logout => 'Atteikties';
-
-  @override
-  String get memberChanges => 'Dalībnieku izmaiņām';
 
   @override
   String get mention => 'Pieminēt';
@@ -1023,19 +911,12 @@ class L10nLv extends L10n {
   String get notifications => 'Paziņojumi';
 
   @override
-  String get notificationsEnabledForThisAccount =>
-      'Paziņojumi iespējoti šim kontam';
-
-  @override
   String numUsersTyping(int count) {
     return '$count lietotāji raksta…';
   }
 
   @override
   String get obtainingLocation => 'Iegūst atrašanās vietu…';
-
-  @override
-  String get offensive => 'Aizskarošs';
 
   @override
   String get offline => 'Bezsaistē';
@@ -1064,9 +945,6 @@ class L10nLv extends L10n {
   String get openCamera => 'Atvērt kameru';
 
   @override
-  String get openVideoCamera => 'Atvērt kameru video uzņemšanai';
-
-  @override
   String get oneClientLoggedOut => 'Viens no klientiem ir atteicies';
 
   @override
@@ -1083,10 +961,6 @@ class L10nLv extends L10n {
 
   @override
   String get bundleName => 'Komplekta nosaukums';
-
-  @override
-  String get enableMultiAccounts =>
-      '(BETA) Iespējot vairākus kontus šajā ierīcē';
 
   @override
   String get openInMaps => 'Atvērt kartēs';
@@ -1117,18 +991,7 @@ class L10nLv extends L10n {
   String get passwordHasBeenChanged => 'Parole tikai nomainīta';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Paslēpt dalībnieku izmaiņas publiskajās tērzēšanās';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Nerādīt tērzēšanas plūsmā, ja kāds pievienojas publiskai tērzēšanai vai pamet to, lai uzlabotu lasāmību.';
-
-  @override
   String get overview => 'Pārskats';
-
-  @override
-  String get notifyMeFor => 'Paziņot man par';
 
   @override
   String get passwordRecoverySettings => 'Paroles atkopes iestatījumi';
@@ -1137,21 +1000,15 @@ class L10nLv extends L10n {
   String get passwordRecovery => 'Paroles atkope';
 
   @override
-  String get people => 'Cilvēki';
-
-  @override
   String get pickImage => 'Izvēlēties attēlu';
 
   @override
-  String get pin => 'PIN';
+  String get pin => 'Piespraust';
 
   @override
   String play(String fileName) {
     return 'Atskaņot $fileName';
   }
-
-  @override
-  String get pleaseChoose => 'Lūgums izvēlēties';
 
   @override
   String get pleaseChooseAPasscode => 'Lūgums izvēlēties piekļuves kodu';
@@ -1163,9 +1020,6 @@ class L10nLv extends L10n {
   @override
   String get pleaseEnter4Digits =>
       'Lūgums ievadīt 4 ciparus vai atstāt tukšu, lai atspējotu lietotnes slēgu.';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'Lūgums ievadīt savu atkopes atslēgu:';
 
   @override
   String get pleaseEnterYourPassword => 'Lūgums ievadīt savu paroli';
@@ -1228,18 +1082,12 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get rejoin => 'Pievienoties atkārtoti';
-
-  @override
   String get removeAllOtherDevices => 'Noņemt visas pārējās ierīces';
 
   @override
   String removedBy(String username) {
     return 'Noņēma $username';
   }
-
-  @override
-  String get removeDevice => 'Noņemt ierīci';
 
   @override
   String get unbanFromChat => 'Atcelt liegumu tērzēšanā';
@@ -1282,11 +1130,6 @@ class L10nLv extends L10n {
   String get recoveryKeyLost => 'Pazaudēta atkopes atslēga?';
 
   @override
-  String seenByUser(String username) {
-    return '$username redzēja';
-  }
-
-  @override
   String get send => 'Nosūtīt';
 
   @override
@@ -1311,12 +1154,6 @@ class L10nLv extends L10n {
 
   @override
   String get sendMessages => 'Nosūtīt ziņas';
-
-  @override
-  String get sendOriginal => 'Nosūtīt sākotnējo';
-
-  @override
-  String get sendSticker => 'Nosūtīt uzlīmi';
 
   @override
   String get sendVideo => 'Nosūtīt video';
@@ -1352,22 +1189,10 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Atdalīt tiešās tērzēšanas un kopas';
-
-  @override
   String get setAsCanonicalAlias => 'Iestatīt kā galveno aizstājvārdu';
 
   @override
-  String get setCustomEmotes => 'Iestatīt pielāgotas emocijas';
-
-  @override
   String get setChatDescription => 'Iestatīt tērzēšanas aprakstu';
-
-  @override
-  String get setInvitationLink => 'Iestatīt uzaicinājumu saiti';
-
-  @override
-  String get setPermissionsLevel => 'Iestatīt atļauju līmeni';
 
   @override
   String get setStatus => 'Iestatīt stāvokli';
@@ -1390,13 +1215,7 @@ class L10nLv extends L10n {
   String get showPassword => 'Rādīt paroli';
 
   @override
-  String get presenceStyle => 'Klātesamība:';
-
-  @override
   String get presencesToggle => 'Rādīt citu lietotāju stāvokļa ziņas';
-
-  @override
-  String get singlesignon => 'Vienotā pieteikšanās';
 
   @override
   String get skip => 'Izlaist';
@@ -1405,18 +1224,15 @@ class L10nLv extends L10n {
   String get sourceCode => 'Pirmkods';
 
   @override
-  String get spaceIsPublic => 'Vieta ir publiska';
+  String get spaceIsPublic => 'Kopiena ir publiska';
 
   @override
-  String get spaceName => 'Vietas nosaukums';
+  String get spaceName => 'Kopienas nosaukums';
 
   @override
   String startedACall(String senderName) {
     return '$senderName uzsāka zvanu';
   }
-
-  @override
-  String get startFirstChat => 'Uzsāc savu pirmo tērzēšanu';
 
   @override
   String get status => 'Stāvoklis';
@@ -1446,15 +1262,6 @@ class L10nLv extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'Pārslēgt iecienīto';
-
-  @override
-  String get toggleMuted => 'Pārslēgt apklusināšanu';
-
-  @override
-  String get toggleUnread => 'Atzīmēt kā lasītu/nelasītu';
 
   @override
   String get tooManyRequestsWarning =>
@@ -1493,18 +1300,6 @@ class L10nLv extends L10n {
 
   @override
   String get unpin => 'Atspraust';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount nelasītas tērzēšanas',
-      one: '$unreadCount nelasīta tērzēšana',
-      zero: '$unreadCount nelasītu tērzēšanu',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1580,9 +1375,6 @@ class L10nLv extends L10n {
       'Gaida, līdz biedrs apstiprinās skaitļus…';
 
   @override
-  String get wallpaper => 'Ekrāntapete:';
-
-  @override
   String get warning => 'Uzmanību!';
 
   @override
@@ -1642,11 +1434,7 @@ class L10nLv extends L10n {
   String get openGallery => 'Atvērt galeriju';
 
   @override
-  String get removeFromSpace => 'Noņemt no vietas';
-
-  @override
-  String get addToSpaceDescription =>
-      'Atlasīt vietu, kurai pievienot šo tērzēšanu.';
+  String get removeFromSpace => 'Noņemt no kopienas';
 
   @override
   String get start => 'Uzsākt';
@@ -1654,17 +1442,6 @@ class L10nLv extends L10n {
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       'Lai atslēgtu savas vecās ziņas, lūgums ievadīt savu atkopes atslēgu, kas tika izveidota iepriekšējā sesijā. Atkopes atslēga NAV parole.';
-
-  @override
-  String get publish => 'Publicēt';
-
-  @override
-  String videoWithSize(String size) {
-    return 'Video ($size)';
-  }
-
-  @override
-  String get openChat => 'Atvērt tērzēšanu';
 
   @override
   String get markAsRead => 'Atzīmēt kā lasītu';
@@ -1711,54 +1488,6 @@ class L10nLv extends L10n {
   String get experimentalVideoCalls => 'Izmēģinājuma video zvani';
 
   @override
-  String get emailOrUsername => 'E-pasta adrese vai lietotājvārds';
-
-  @override
-  String get indexedDbErrorTitle => 'Privātā režīma nebūšanas';
-
-  @override
-  String get indexedDbErrorLong =>
-      'Diemžēl ziņu krātuve pēc noklusējuma nav iespējota privātajā režīmā.\nLūgums apmeklēt\n - about:config\n - iestatīt dom.indexedDB.privateBrowsing.enabled kā true\nPretējā gadījumā nav iespējams palaist FluffyChat.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'Pārslēgties uz kontu $number';
-  }
-
-  @override
-  String get nextAccount => 'Nākamais konts';
-
-  @override
-  String get previousAccount => 'Iepriekšējais konts';
-
-  @override
-  String get addWidget => 'Pievienot logrīku';
-
-  @override
-  String get widgetVideo => 'Video';
-
-  @override
-  String get widgetEtherpad => 'Teksta piezīme';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => 'Pielāgots';
-
-  @override
-  String get widgetName => 'Nosaukums';
-
-  @override
-  String get widgetUrlError => 'Tas nav derīgs URL.';
-
-  @override
-  String get widgetNameError => 'Lūgums norādīt attēlojamo nosaukumu.';
-
-  @override
-  String get errorAddingWidget => 'Kļūda logrīka pievienošanā.';
-
-  @override
   String get youRejectedTheInvitation => 'Tu noraidīji uzaicinājumu';
 
   @override
@@ -1775,11 +1504,6 @@ class L10nLv extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return 'Tu atsauci $user uzaicinājumu';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 Tu tiki uzaicināts ar saiti:\n$alias';
   }
 
   @override
@@ -1822,15 +1546,6 @@ class L10nLv extends L10n {
 
   @override
   String get noOneCanJoin => 'Neviens nevar pievienoties';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user vēlas pievienoties tērzēšanai.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'Vēl nav izveidota neviena publiska saite';
 
   @override
   String get knock => 'Pieklauvēt';
@@ -1880,27 +1595,6 @@ class L10nLv extends L10n {
   String get screenSharingDetail => 'Tu kopīgo savu ekrānu FluffyChat';
 
   @override
-  String get callingPermissions => 'Zvanīšanas atļaujas';
-
-  @override
-  String get callingAccount => 'Zvanīšanas konts';
-
-  @override
-  String get callingAccountDetails =>
-      'Ļauj FluffyChat izmantot iebūvēto Android zvanīšanas lietotni.';
-
-  @override
-  String get appearOnTop => 'Parādīt virspusē';
-
-  @override
-  String get appearOnTopDetails =>
-      'Ļauj lietotnei parādīties virspusē (nav nepieciešams, ja FluffyChat jau ir iestatīts kā zvanīšanas konts)';
-
-  @override
-  String get otherCallingPermissions =>
-      'Mikrofons, kamera un citas FluffyChat atļaujas';
-
-  @override
   String get whyIsThisMessageEncrypted => 'Kādēļ šī ziņa ir nelasāma?';
 
   @override
@@ -1911,25 +1605,10 @@ class L10nLv extends L10n {
   String get newGroup => 'Jauna kopa';
 
   @override
-  String get newSpace => 'Jauna vieta';
+  String get newSpace => 'Jauna kopiena';
 
   @override
-  String get enterSpace => 'Ieiet vietā';
-
-  @override
-  String get enterRoom => 'Ieiet istabā';
-
-  @override
-  String get allSpaces => 'Visas vietas';
-
-  @override
-  String numChats(String number) {
-    return '$number tērzēšanas';
-  }
-
-  @override
-  String get hideUnimportantStateEvents =>
-      'Paslēpt nebūtiskus stāvokļa notikumus';
+  String get allSpaces => 'Visas kopienas';
 
   @override
   String get hidePresences => 'Paslēpt stāvokļu sarakstu?';
@@ -1944,7 +1623,7 @@ class L10nLv extends L10n {
 
   @override
   String get newSpaceDescription =>
-      'Vietas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas kopienas.';
+      'Kopienas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas cilvēku grupas, kurus vieno kaut kas kopīgs, piemēram, zinātne, matemātika, valoda, reliģija, ķīmija, medicīna, kosmoss, datori, ceļošana, grāmatu lasīšana, kriptovalūta, kiberdrošība, aparātprogrammatūra.';
 
   @override
   String get encryptThisChat => 'Šifrēt šo tērzēšanu';
@@ -1999,20 +1678,6 @@ class L10nLv extends L10n {
   String get report => 'Ziņot';
 
   @override
-  String get signInWithPassword => 'Pieteikties ar paroli';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Lūgums vēlāk mēģināt vēlreiz vai izvēlēties citu serveri.';
-
-  @override
-  String get profileNotFound =>
-      'Lietotāju serverī nevarēja atrast. Varbūt ir nebūšanas ar savienojumu vai lietotājs nepastāv.';
-
-  @override
-  String get setTheme => 'Iestatīt izskatu:';
-
-  @override
   String get setColorTheme => 'Iestatīt krāsu izskatu:';
 
   @override
@@ -2020,9 +1685,6 @@ class L10nLv extends L10n {
 
   @override
   String get inviteGroupChat => '📨 Uzaicinājums uz kopas tērzēšanu';
-
-  @override
-  String get invitePrivateChat => '📨 Uzaicinājums uz privātu tērzēšanu';
 
   @override
   String get invalidInput => 'Nederīga ievade.';
@@ -2107,9 +1769,6 @@ class L10nLv extends L10n {
       'Atvaino... Nešķiet, ka šī būtu pareiza atkopes atslēga.';
 
   @override
-  String get startConversation => 'Uzsākt sarunu';
-
-  @override
   String get commandHint_sendraw => 'Nosūtīt neapstrādātu JSON';
 
   @override
@@ -2146,42 +1805,25 @@ class L10nLv extends L10n {
   String get passwordIsWrong => 'Ievadītā parole ir nepareiza';
 
   @override
-  String get publicLink => 'Publiska saite';
-
-  @override
   String get publicChatAddresses => 'Publiskas tērzēšanas adreses';
 
   @override
   String get createNewAddress => 'Izveidot jaunu adresi';
 
   @override
-  String get joinSpace => 'Pievienoties vietai';
+  String get joinSpace => 'Pievienoties kopienai';
 
   @override
-  String get publicSpaces => 'Publiskas vietas';
+  String get publicSpaces => 'Publiskas kopienas';
 
   @override
-  String get addChatOrSubSpace => 'Pievienot tērzēšanu vai apakšvietu';
-
-  @override
-  String get subspace => 'Apakšvieta';
-
-  @override
-  String get decline => 'Atteikt';
+  String get addChatOrSubSpace => 'Pievienot tērzēšanu vai apakškopienu';
 
   @override
   String get thisDevice => 'Šī ierīce:';
 
   @override
   String get initAppError => 'Atgadījās kļūda lietotnes sāknēšanas laikā';
-
-  @override
-  String get userRole => 'Lietotāja loma';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level ir zemākais spēka līmenis.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2198,11 +1840,6 @@ class L10nLv extends L10n {
   String get files => 'Datnes';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'Nebija iespējams izveidot SQlite datubāzi. Lietotne pagaidām mēģina izmantot iepriekšējo datubāzi. Lūgums ziņot par šo kļūdu izstrādātājiem $url. Kļūdas ziņojums ir: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'Sesija ir zaudēta. Lūgums ziņot par šo kļūdu izstrādātājiem $url. Kļūdas ziņojums ir: $error';
   }
@@ -2210,11 +1847,6 @@ class L10nLv extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'Lietotne tagad mēģina atjaunot sesiju no rezerves kopijas. Lūgums ziņot par šo kļūdu izstrādātājiem $url. Kļūdas ziņojums ir: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Pārsūtīt ziņu uz $roomName?';
   }
 
   @override
@@ -2319,7 +1951,7 @@ class L10nLv extends L10n {
 
   @override
   String goToSpace(Object space) {
-    return 'Doties uz vietu: $space';
+    return 'Doties uz kopienu: $space';
   }
 
   @override
@@ -2383,16 +2015,6 @@ class L10nLv extends L10n {
   String get loginWithMatrixId => 'Pieteikties ar Matrix-Id';
 
   @override
-  String get discoverHomeservers => 'Atklāt mājasserverus';
-
-  @override
-  String get whatIsAHomeserver => 'Kas ir mājasserveris?';
-
-  @override
-  String get homeserverDescription =>
-      'Visi lietotāja dati tiek glabāti mājasserverī, gluži kā ar e-pasta nodrošinātāju. Ir iespējams izvēlēties, kuru mājasserveri izmantot, saglabājot iespēju sazināties ar ikvienu. Vairāk var uzzināt https://matrix.org.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Neizskatās pēc saderīga mājasservera. Nepareizs URL?';
 
@@ -2400,26 +2022,10 @@ class L10nLv extends L10n {
   String get calculatingFileSize => 'Aprēķina datnes lielumu...';
 
   @override
-  String get prepareSendingAttachment => 'Sagatavo pielikuma nosūtīšanu...';
-
-  @override
   String get sendingAttachment => 'Nosūta pielikumu...';
 
   @override
-  String get generatingVideoThumbnail => 'Izveido video sīktēlu...';
-
-  @override
   String get compressVideo => 'Saspiež video...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Nosūta $index. pielikumu no $length...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Sasniegts servera ierobežojums. Gaida $seconds sekundes...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2520,10 +2126,6 @@ class L10nLv extends L10n {
 
   @override
   String get waitingForServer => 'Gaida serveri...';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChat ļauj tērzēt ar draugiem, kuri izmanto dažādas ziņojumapmaiņas lietotnes. Vairāk var uzzināt https://matrix.org vai vienkārši piesitot *Turpināt*.';
 
   @override
   String get newChatRequest => '📩 Jauns tērzēšanas pieprasījums';
@@ -2672,7 +2274,7 @@ class L10nLv extends L10n {
       'Paziņo lietotājam par ziņām šifrētās istabās.';
 
   @override
-  String get notificationRuleJitsi => 'Jitsi';
+  String get notificationRuleJitsi => 'Jitsi videozvani';
 
   @override
   String get notificationRuleJitsiDescription =>
@@ -2779,20 +2381,8 @@ class L10nLv extends L10n {
   String get resume => 'Atsākt';
 
   @override
-  String get newSubSpace => 'Jauna apakšvieta';
-
-  @override
-  String get moveToDifferentSpace => 'Pārvietot uz citu vietu';
-
-  @override
-  String get moveUp => 'Pārvietot augšup';
-
-  @override
-  String get moveDown => 'Pārvietot lejup';
-
-  @override
   String get removeFromSpaceDescription =>
-      'Tērzēšana tiks noņemta no vietas, bet tā joprojām būs redzama tērzēšanu sarakstā.';
+      'Tērzēšana tiks noņemta no kopienas, bet tā joprojām būs redzama tērzēšanu sarakstā.';
 
   @override
   String countChats(int chats) {
@@ -2810,9 +2400,6 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get donate => 'Ziedot';
-
-  @override
   String startedAPoll(String username) {
     return '$username uzsāka aptauju.';
   }
@@ -2828,9 +2415,6 @@ class L10nLv extends L10n {
 
   @override
   String get answersVisible => 'Atbildes ir redzamas';
-
-  @override
-  String get answersHidden => 'Atbildes ir paslēptas';
 
   @override
   String get pollQuestion => 'Aptaujas jautājums';
@@ -2923,39 +2507,163 @@ class L10nLv extends L10n {
   String get setupChatBackup => 'Iestatīt tērzēšanu rezerves kopēšanu';
 
   @override
-  String get noMoreResultsFound => 'No more results found';
+  String get noMoreResultsFound => 'Vairs nekas netika atrasts';
 
   @override
   String chatSearchedUntil(String time) {
-    return 'Chat searched until $time';
+    return 'Tērzēšanā meklēts līdz $time';
   }
 
   @override
-  String get federationBaseUrl => 'Federation Base URL';
+  String get federationBaseUrl => 'Federācijas pamata URL';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation => 'Client-Well-Known informācija:';
 
   @override
-  String get baseUrl => 'Base URL';
+  String get baseUrl => 'Pamata URL';
 
   @override
-  String get identityServer => 'Identity Server:';
+  String get identityServer => 'Identitāšu serveris:';
 
   @override
   String versionWithNumber(String version) {
-    return 'Version: $version';
+    return 'Versija: $version';
   }
 
   @override
-  String get logs => 'Logs';
+  String get logs => 'Žurnāli';
 
   @override
-  String get advancedConfigs => 'Advanced Configs';
+  String get advancedConfigs => 'Izvērsta konfigurācijas';
 
   @override
-  String get advancedConfigurations => 'Advanced configurations';
+  String get advancedConfigurations => 'Izvērstas konfigurācijas';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Pieteikties';
+
+  @override
+  String get createNewAccount => 'Izveidot jaunu kontu';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat ir decentralizēta. Jāatlasa serveris, kurā ir vēlēšanās izveidot savu kontu, un aiziet!';
+
+  @override
+  String get signInGreeting =>
+      'Jau ir Matrix konts? Laipni lūdzam atpakaļ! Jāatlasa savs mājasserveris un jāpiesakās.';
+
+  @override
+  String get appIntro =>
+      'Ar FluffyChat vari tērzēt ar saviem draugiem. Tā ir droša un decentralizēta [matrix] ziņapmaiņas lietotne. Vairāk var uzzināt https://matrix.org, ja ir vēlēšanās, vai vienkārši jāpiesakās.';
+
+  @override
+  String get theProcessWasCanceled => 'Darbība tika atcelta.';
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Search or enter homeserver address';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Set power level';
+
+  @override
+  String get makeModerator => 'Make moderator';
+
+  @override
+  String get makeAdmin => 'Make admin';
+
+  @override
+  String get removeModeratorRights => 'Remove moderator rights';
+
+  @override
+  String get removeAdminRights => 'Remove admin rights';
+
+  @override
+  String get powerLevel => 'Power level';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get mute => 'Mute';
+
+  @override
+  String get createNewChat => 'Create new chat';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

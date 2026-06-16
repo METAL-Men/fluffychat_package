@@ -1,10 +1,13 @@
-import 'package:flutter/material.dart';
-
-import 'package:flutter_linkify/flutter_linkify.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 
 enum OkCancelResult { ok, cancel }
 
@@ -41,11 +44,13 @@ Future<OkCancelResult?> showOkCancelAlertDialog({
     ),
     actions: [
       AdaptiveDialogAction(
+        key: Key('ok_cancel_alert_dialog_cancel_button'),
         onPressed: () =>
             Navigator.of(context).pop<OkCancelResult>(OkCancelResult.cancel),
         child: Text(cancelLabel ?? L10n.of(context).cancel),
       ),
       AdaptiveDialogAction(
+        key: Key('ok_cancel_alert_dialog_ok_button'),
         onPressed: () =>
             Navigator.of(context).pop<OkCancelResult>(OkCancelResult.ok),
         autofocus: true,

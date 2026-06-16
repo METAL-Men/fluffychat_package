@@ -1,23 +1,26 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/utils/string_color.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
 import 'package:fluffychat/widgets/presence_builder.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
 
 class Avatar extends StatelessWidget {
   final Uri? mxContent;
   final String? name;
   final double size;
   final void Function()? onTap;
-  static const double defaultSize = 44;
+  static const double defaultSize = 48;
   final Client? client;
   final String? presenceUserId;
   final Color? presenceBackgroundColor;
   final BorderRadius? borderRadius;
   final IconData? icon;
-  final BorderSide? border;
+  final ShapeBorder? shapeBorder;
   final Color? backgroundColor;
   final Color? textColor;
 
@@ -30,7 +33,7 @@ class Avatar extends StatelessWidget {
     this.presenceUserId,
     this.presenceBackgroundColor,
     this.borderRadius,
-    this.border,
+    this.shapeBorder,
     this.icon,
     this.backgroundColor,
     this.textColor,
@@ -61,10 +64,12 @@ class Avatar extends StatelessWidget {
             color: theme.brightness == Brightness.light
                 ? Colors.white
                 : Colors.black,
-            shape: RoundedRectangleBorder(
-              borderRadius: borderRadius,
-              side: border ?? BorderSide.none,
-            ),
+            shape:
+                shapeBorder ??
+                RoundedSuperellipseBorder(
+                  borderRadius: borderRadius,
+                  side: BorderSide.none,
+                ),
             clipBehavior: Clip.antiAlias,
             child: MxcImage(
               client: client,

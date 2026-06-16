@@ -1,14 +1,18 @@
-import 'package:flutter/material.dart';
-
-import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/pages/image_viewer/image_viewer.dart';
+import 'package:fluffychat/pages/chat/events/file_send_status_indicator.dart';
 import 'package:fluffychat/utils/file_description.dart';
 import 'package:fluffychat/utils/url_launcher.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:matrix/matrix.dart';
+
 import '../../../widgets/blur_hash.dart';
 
 class ImageBubble extends StatelessWidget {
@@ -43,36 +47,6 @@ class ImageBubble extends StatelessWidget {
     super.key,
   });
 
-  Widget _buildPlaceholder(BuildContext context) {
-    final String blurHashString =
-        event.infoMap['xyz.amorgan.blurhash'] is String
-        ? event.infoMap['xyz.amorgan.blurhash']
-        : 'LEHV6nWB2yk8pyo0adR*.7kCMdnj';
-    return SizedBox(
-      width: width,
-      height: height,
-      child: BlurHash(
-        blurhash: blurHashString,
-        width: width,
-        height: height,
-        fit: fit,
-      ),
-    );
-  }
-
-  void _onTap(BuildContext context) {
-    if (onTap != null) {
-      onTap!();
-      return;
-    }
-    if (!tapToView) return;
-    showDialog(
-      context: context,
-      builder: (_) =>
-          ImageViewer(event, timeline: timeline, outerContext: context),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -89,6 +63,7 @@ class ImageBubble extends StatelessWidget {
         bottomRight: Radius.zero,
       );
     }
+    final fileSendingStatus = event.fileSendingStatus;
 
     return Column(
       mainAxisSize: .min,
@@ -106,21 +81,40 @@ class ImageBubble extends StatelessWidget {
             ),
           ),
           child: InkWell(
-            onTap: () => _onTap(context),
+            onTap: onTap,
             borderRadius: borderRadius,
-            child: Hero(
-              tag: event.eventId,
-              child: MxcImage(
-                event: event,
-                width: width,
-                height: height,
-                fit: fit,
-                animated: animated,
-                isThumbnail: thumbnailOnly,
-                placeholder: event.messageType == MessageTypes.Sticker
-                    ? null
-                    : _buildPlaceholder,
-              ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Hero(
+                  tag: event.eventId,
+                  child: AppSettings.showThumbnailsInTimeline.value
+                      ? MxcImage(
+                          event: event,
+                          width: width,
+                          height: height,
+                          fit: fit,
+                          animated: animated,
+                          isThumbnail: thumbnailOnly,
+                          placeholder: event.messageType == MessageTypes.Sticker
+                              ? null
+                              : (_) => _ImageBubblePlaceholder(
+                                  event: event,
+                                  width: width,
+                                  height: height,
+                                  fit: fit,
+                                ),
+                        )
+                      : _ImageBubblePlaceholder(
+                          event: event,
+                          width: width,
+                          height: height,
+                          fit: fit,
+                        ),
+                ),
+                if (fileSendingStatus != null)
+                  FileSendStatusIndicator(fileSendingStatus: fileSendingStatus),
+              ],
             ),
           ),
         ),
@@ -152,6 +146,36 @@ class ImageBubble extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+}
+
+class _ImageBubblePlaceholder extends StatelessWidget {
+  final Event event;
+  final double width, height;
+  final BoxFit fit;
+
+  const _ImageBubblePlaceholder({
+    required this.event,
+    required this.width,
+    required this.height,
+    required this.fit,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final blurHashString =
+        event.infoMap.tryGet<String>('xyz.amorgan.blurhash') ??
+        'LEHV6nWB2yk8pyo0adR*.7kCMdnj';
+    return SizedBox(
+      width: width,
+      height: height,
+      child: BlurHash(
+        blurhash: blurHashString,
+        width: width,
+        height: height,
+        fit: fit,
+      ),
     );
   }
 }

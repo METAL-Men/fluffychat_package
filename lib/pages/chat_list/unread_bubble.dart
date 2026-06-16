@@ -1,8 +1,11 @@
-import 'package:flutter/material.dart';
-
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/themes.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
 
 class UnreadBubble extends StatelessWidget {
   final Room room;
@@ -34,9 +37,9 @@ class UnreadBubble extends StatelessWidget {
             : hasNotifications || room.markedUnread
             ? theme.colorScheme.primary
             : theme.colorScheme.primaryContainer,
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(unreadBubbleSize),
       ),
-      child: hasNotifications
+      child: hasNotifications || room.markedUnread
           ? Text(
               room.notificationCount.toString(),
               style: TextStyle(
@@ -48,7 +51,7 @@ class UnreadBubble extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
               ),
-              textAlign: TextAlign.center,
+              textAlign: .center,
             )
           : const SizedBox.shrink(),
     );

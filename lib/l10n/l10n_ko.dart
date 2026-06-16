@@ -18,17 +18,7 @@ class L10nKo extends L10n {
   String get notAnImage => '이미지 파일이 아닙니다.';
 
   @override
-  String get setCustomPermissionLevel => '사용자 지정 권한 수준 설정';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      '아래에서 미리 정의된 역할을 선택하거나 0부터 100 사이의 사용자 지정 권한 수준을 입력해 주세요.';
-
-  @override
   String get ignoreUser => '사용자 무시';
-
-  @override
-  String get normalUser => '일반 사용자';
 
   @override
   String get remove => '지우기';
@@ -82,9 +72,6 @@ class L10nKo extends L10n {
   String supposedMxid(String mxid) {
     return '$mxid 이어야 함';
   }
-
-  @override
-  String get addChatDescription => '채팅 설명 추가하기...';
 
   @override
   String get addToSpace => '스페이스에 추가';
@@ -152,6 +139,9 @@ class L10nKo extends L10n {
   String get areYouSure => '확실한가요?';
 
   @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+
+  @override
   String get areYouSureYouWantToLogout => '로그아웃하고 싶은 것이 확실한가요?';
 
   @override
@@ -184,30 +174,11 @@ class L10nKo extends L10n {
   String get sendOnEnter => '엔터로 보내기';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return '이 홈서버가 지원하는 Spec 버전:\n$serverVersions\n하지만 이 앱은 $supportedVersions만 지원합니다';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats 채팅과 $participants 참여자';
-  }
-
-  @override
   String get noMoreChatsFound => '채팅을 찾을 수 없습니다...';
 
   @override
   String get noChatsFoundHere =>
       '대화가 발견되지 않았습니다. 아래 버튼을 사용하여 새 대화를 시작해 보세요. ⤵️';
-
-  @override
-  String get joinedChats => '참가한 채팅';
 
   @override
   String get unread => '읽지 않은';
@@ -234,9 +205,6 @@ class L10nKo extends L10n {
 
   @override
   String get blocked => '차단됨';
-
-  @override
-  String get botMessages => '봇 메시지';
 
   @override
   String get cancel => '취소';
@@ -364,9 +332,6 @@ class L10nKo extends L10n {
   String get chatDetails => '채팅 정보';
 
   @override
-  String get chatHasBeenAddedToThisSpace => '이 스페이스에 채팅이 추가되었습니다';
-
-  @override
   String get chats => '채팅';
 
   @override
@@ -457,19 +422,7 @@ class L10nKo extends L10n {
   String get configureChat => '채팅 설정';
 
   @override
-  String get confirm => '확인';
-
-  @override
-  String get connect => '연결';
-
-  @override
   String get contactHasBeenInvitedToTheGroup => '연락처가 채팅에 초대되었습니다';
-
-  @override
-  String get containsDisplayName => '내 닉네임 포함';
-
-  @override
-  String get containsUserName => '내 아이디 포함';
 
   @override
   String get contentHasBeenReported => '콘텐츠가 서버 운영자에게 신고되었습니다';
@@ -527,16 +480,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String dateWithoutYear(String month, String day) {
-    return '$month-$day';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year-$month-$day';
-  }
-
-  @override
   String get deactivateAccountWarning =>
       '이것은 당신의 계정을 비활성화할 것입니다. 이것은 되돌릴 수 없습니다! 확실한가요?';
 
@@ -563,9 +506,6 @@ class L10nKo extends L10n {
 
   @override
   String get directChats => '다이렉트 채팅';
-
-  @override
-  String get allRooms => '모든 그룹 채팅';
 
   @override
   String get displaynameHasBeenChanged => '표시 이름이 변경되었습니다';
@@ -630,9 +570,6 @@ class L10nKo extends L10n {
   String get emoteShortcode => '이모트 단축키';
 
   @override
-  String get emoteWarnNeedToPick => '이모트 단축키와 이미지를 골라야 합니다!';
-
-  @override
   String get emptyChat => '빈 채팅';
 
   @override
@@ -665,18 +602,12 @@ class L10nKo extends L10n {
   String get homeserver => '홈서버';
 
   @override
-  String get enterYourHomeserver => '당신의 홈서버를 입력하세요';
-
-  @override
   String errorObtainingLocation(String error) {
     return '위치 얻는 중 오류: $error';
   }
 
   @override
   String get everythingReady => '모든 것이 준비됐어요!';
-
-  @override
-  String get extremeOffensive => '매우 공격적임';
 
   @override
   String get fileName => '파일 이름';
@@ -695,9 +626,6 @@ class L10nKo extends L10n {
 
   @override
   String get fromTheInvitation => '초대받은 후부터';
-
-  @override
-  String get goToTheNewRoom => '새로운 방 가기';
 
   @override
   String get group => '그룹 채팅';
@@ -746,13 +674,7 @@ class L10nKo extends L10n {
   String get hideInvalidOrUnknownMessageFormats => '잘못되거나 알 수 없는 메시지 형식 숨김';
 
   @override
-  String get howOffensiveIsThisContent => '이 콘텐츠가 얼마나 모욕적인가요?';
-
-  @override
   String get id => 'ID';
-
-  @override
-  String get identity => '신원';
 
   @override
   String get block => '차단';
@@ -774,15 +696,7 @@ class L10nKo extends L10n {
   String get incorrectPassphraseOrKey => '올바르지 않은 복구 키나 비밀번호';
 
   @override
-  String get inoffensive => '모욕적이지 않음';
-
-  @override
   String get inviteContact => '연락처 초대';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return '$contact 를 \"$groupName\"에 초대할까요?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -815,9 +729,6 @@ class L10nKo extends L10n {
 
   @override
   String get invitedUsersOnly => '초대된 유저만';
-
-  @override
-  String get inviteForMe => '초대됨';
 
   @override
   String inviteText(String username, String link) {
@@ -860,9 +771,6 @@ class L10nKo extends L10n {
   String get leftTheChat => '채팅을 나갔습니다';
 
   @override
-  String get license => '라이선스';
-
-  @override
   String get lightTheme => '라이트';
 
   @override
@@ -875,18 +783,6 @@ class L10nKo extends L10n {
 
   @override
   String get dehydrateWarning => '이 동작은 되돌릴 수 없습니다. 백업 파일을 꼭 안전하게 보관하세요.';
-
-  @override
-  String get dehydrateTor => 'TOR 사용자: 세션 내보내기';
-
-  @override
-  String get dehydrateTorLong => 'TOR 사용자들은 창을 닫기 전에 세션을 내보내는것이 권장됩니다.';
-
-  @override
-  String get hydrateTor => 'TOR 사용자: 내보낸 세션 불러오기';
-
-  @override
-  String get hydrateTorLong => '지난 TOR 이용에서 세션을 내보내셨나요? 빠르게 불러오고 채팅을 계속하세요.';
 
   @override
   String get hydrate => '백업 파일로부터 가져오기';
@@ -914,9 +810,6 @@ class L10nKo extends L10n {
 
   @override
   String get logout => '로그아웃';
-
-  @override
-  String get memberChanges => '참가자 변경';
 
   @override
   String get mention => '멘션';
@@ -993,18 +886,12 @@ class L10nKo extends L10n {
   String get notifications => '알림';
 
   @override
-  String get notificationsEnabledForThisAccount => '이 계정에서 알림이 활성화되었습니다';
-
-  @override
   String numUsersTyping(int count) {
     return '$count명이 입력 중…';
   }
 
   @override
   String get obtainingLocation => '위치 얻는 중…';
-
-  @override
-  String get offensive => '모욕적임';
 
   @override
   String get offline => '오프라인';
@@ -1031,9 +918,6 @@ class L10nKo extends L10n {
   String get openCamera => '카메라 열기';
 
   @override
-  String get openVideoCamera => '영상용 카메라 열기';
-
-  @override
   String get oneClientLoggedOut => '당신의 클라이언트 중 하나가 로그아웃 됨';
 
   @override
@@ -1050,9 +934,6 @@ class L10nKo extends L10n {
 
   @override
   String get bundleName => '번들 이름';
-
-  @override
-  String get enableMultiAccounts => '(베타) 이 기기에서 다중 계정 활성화';
 
   @override
   String get openInMaps => '지도에서 열기';
@@ -1082,26 +963,13 @@ class L10nKo extends L10n {
   String get passwordHasBeenChanged => '비밀번호가 변경됨';
 
   @override
-  String get hideMemberChangesInPublicChats => '공개 채팅에서의 참가자 변화 숨김';
-
-  @override
-  String get hideMemberChangesInPublicChatsBody =>
-      '공개 채팅에 누군가가 참가하거나 떠날때 타임라인에 표시하지 않습니다.';
-
-  @override
   String get overview => '개요';
-
-  @override
-  String get notifyMeFor => '나에게 알림';
 
   @override
   String get passwordRecoverySettings => '비밀번호 복구 설정';
 
   @override
   String get passwordRecovery => '비밀번호 복구';
-
-  @override
-  String get people => '사람들';
 
   @override
   String get pickImage => '이미지 고르기';
@@ -1115,9 +983,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get pleaseChoose => '선택해주세요';
-
-  @override
   String get pleaseChooseAPasscode => '비밀번호를 골라주세요';
 
   @override
@@ -1125,9 +990,6 @@ class L10nKo extends L10n {
 
   @override
   String get pleaseEnter4Digits => '4자리 숫자를 입력하거나 앱 잠금을 사용하지 않도록 하려면 비워두세요.';
-
-  @override
-  String get pleaseEnterRecoveryKey => '당신의 복구키를 입력하세요:';
 
   @override
   String get pleaseEnterYourPassword => '비밀번호를 입력해주세요';
@@ -1189,18 +1051,12 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get rejoin => '다시 참가';
-
-  @override
   String get removeAllOtherDevices => '모든 다른 기기에서 지우기';
 
   @override
   String removedBy(String username) {
     return '$username에 의해 지워짐';
   }
-
-  @override
-  String get removeDevice => '기기 삭제';
 
   @override
   String get unbanFromChat => '채팅에서 영구추방 해제됨';
@@ -1242,11 +1098,6 @@ class L10nKo extends L10n {
   String get recoveryKeyLost => '복구키를 분실하셨나요?';
 
   @override
-  String seenByUser(String username) {
-    return '$username님이 읽음';
-  }
-
-  @override
   String get send => '보내기';
 
   @override
@@ -1271,12 +1122,6 @@ class L10nKo extends L10n {
 
   @override
   String get sendMessages => '메시지 보내기';
-
-  @override
-  String get sendOriginal => '원본 보내기';
-
-  @override
-  String get sendSticker => '스티커 보내기';
 
   @override
   String get sendVideo => '영상 보내기';
@@ -1312,22 +1157,10 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get separateChatTypes => '다이렉트 채팅과 그룹 채팅 분리';
-
-  @override
   String get setAsCanonicalAlias => '주 별명으로 설정';
 
   @override
-  String get setCustomEmotes => '맞춤 이모트 설정';
-
-  @override
   String get setChatDescription => '채팅 설명 설정';
-
-  @override
-  String get setInvitationLink => '초대 링크 설정';
-
-  @override
-  String get setPermissionsLevel => '권한 레벨 설정';
 
   @override
   String get setStatus => '상태 설정';
@@ -1350,13 +1183,7 @@ class L10nKo extends L10n {
   String get showPassword => '비밀번호 보이기';
 
   @override
-  String get presenceStyle => '상태:';
-
-  @override
   String get presencesToggle => '다른 유저의 상태 메시지 표시';
-
-  @override
-  String get singlesignon => '단일 계정 로그인(SSO)';
 
   @override
   String get skip => '스킵';
@@ -1374,9 +1201,6 @@ class L10nKo extends L10n {
   String startedACall(String senderName) {
     return '$senderName 가 통화 시작함';
   }
-
-  @override
-  String get startFirstChat => '첫 번째 채팅을 시작하기';
 
   @override
   String get status => '상태';
@@ -1406,15 +1230,6 @@ class L10nKo extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => '즐겨찾기 토글';
-
-  @override
-  String get toggleMuted => '음소거 토글';
-
-  @override
-  String get toggleUnread => '메시지 안/읽음 으로 표시';
 
   @override
   String get tooManyRequestsWarning => '너무 많은 요청. 잠시 후에 다시 시도해주세요!';
@@ -1452,17 +1267,6 @@ class L10nKo extends L10n {
 
   @override
   String get unpin => '고정 해제';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount 개',
-      one: '읽지 않은 채팅 1',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1535,9 +1339,6 @@ class L10nKo extends L10n {
   String get waitingPartnerNumbers => '상대가 숫자를 수락하길 기다리는 중…';
 
   @override
-  String get wallpaper => '배경:';
-
-  @override
   String get warning => '경고!';
 
   @override
@@ -1597,25 +1398,11 @@ class L10nKo extends L10n {
   String get removeFromSpace => '스페이스에서 삭제';
 
   @override
-  String get addToSpaceDescription => '이 채팅을 추가할 스페이스를 선택하세요.';
-
-  @override
   String get start => '시작';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       '오래된 메시지를 잠금 해제하려면, 이전 세션에서 생성된 복호화 키를 입력하세요. 복호화 키는 비밀번호가 아닙니다.';
-
-  @override
-  String get publish => '공개';
-
-  @override
-  String videoWithSize(String size) {
-    return '영상 ($size)';
-  }
-
-  @override
-  String get openChat => '채팅 열기';
 
   @override
   String get markAsRead => '읽음으로 표시하기';
@@ -1661,54 +1448,6 @@ class L10nKo extends L10n {
   String get experimentalVideoCalls => '실험적인 영상 통화';
 
   @override
-  String get emailOrUsername => '이메일이나 유저 이름';
-
-  @override
-  String get indexedDbErrorTitle => '사생활 보호 모드의 문제';
-
-  @override
-  String get indexedDbErrorLong =>
-      '메시지 저장은 기본적으로 사생활 보호 모드에서 사용할 수 없습니다.\n- about:config 로 이동\n- dom.indexedDB.privateBrowsing.enabled 를 true로 설정\n그렇지 않으면 FluffyChat을 실행할 수 없습니다.';
-
-  @override
-  String switchToAccount(String number) {
-    return '계정 $number로 전환';
-  }
-
-  @override
-  String get nextAccount => '다음 계정';
-
-  @override
-  String get previousAccount => '이전 계정';
-
-  @override
-  String get addWidget => '위젯 추가';
-
-  @override
-  String get widgetVideo => '영상';
-
-  @override
-  String get widgetEtherpad => '텍스트 메모';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => '사용자 정의';
-
-  @override
-  String get widgetName => '이름';
-
-  @override
-  String get widgetUrlError => '유효한 URL이 아닙니다.';
-
-  @override
-  String get widgetNameError => '표시 이름을 입력하세요.';
-
-  @override
-  String get errorAddingWidget => '위젯 추가중 오류 발생.';
-
-  @override
   String get youRejectedTheInvitation => '초대를 거부했습니다';
 
   @override
@@ -1725,11 +1464,6 @@ class L10nKo extends L10n {
   @override
   String youHaveWithdrawnTheInvitationFor(String user) {
     return '$user님에 대한 초대를 철회함';
-  }
-
-  @override
-  String youInvitedToBy(String alias) {
-    return '📩 링크를 통해 초대되셨습니다:\n$alias';
   }
 
   @override
@@ -1772,14 +1506,6 @@ class L10nKo extends L10n {
 
   @override
   String get noOneCanJoin => '아무도 참가할 수 없음';
-
-  @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user님이 참가를 희망합니다.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet => '공개 링크가 아직 생성되지 않았음';
 
   @override
   String get knock => '참가 요청';
@@ -1826,25 +1552,6 @@ class L10nKo extends L10n {
   String get screenSharingDetail => 'FluffyChat에 당신의 화면을 공유하는중';
 
   @override
-  String get callingPermissions => '통화 권한';
-
-  @override
-  String get callingAccount => '통화 계정';
-
-  @override
-  String get callingAccountDetails => 'FluffyChat이 android 전화앱을 사용 할 수 있도록 허가.';
-
-  @override
-  String get appearOnTop => '상단에 표시';
-
-  @override
-  String get appearOnTopDetails =>
-      '앱이 상단에 표시되도록 허용 (이미 FluffyChat을 통화 계정으로 설정한 경우에는 필요하지 않음)';
-
-  @override
-  String get otherCallingPermissions => '마이크, 카메라 그리고 다름 FluffyChat 권한';
-
-  @override
   String get whyIsThisMessageEncrypted => '왜 이 메시지를 읽을 수 없나요?';
 
   @override
@@ -1858,21 +1565,7 @@ class L10nKo extends L10n {
   String get newSpace => '새 스페이스';
 
   @override
-  String get enterSpace => '스페이스에 입장';
-
-  @override
-  String get enterRoom => '방에 입장';
-
-  @override
   String get allSpaces => '모든 스페이스';
-
-  @override
-  String numChats(String number) {
-    return '$number개의 채팅';
-  }
-
-  @override
-  String get hideUnimportantStateEvents => '중요하지 않은 상태 이벤트 숨기기';
 
   @override
   String get hidePresences => '상태 목록을 숨길까요?';
@@ -1942,20 +1635,6 @@ class L10nKo extends L10n {
   String get report => '신고';
 
   @override
-  String get signInWithPassword => '비밀번호로 로그인';
-
-  @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      '나중에 다시 시도하거나 다른 서버를 선택하십시오.';
-
-  @override
-  String get profileNotFound =>
-      '유저를 서버에서 찾을 수 있습니다. 연결 문제가 있거나 유저가 존재하지 않을 수 있습니다.';
-
-  @override
-  String get setTheme => '테마 설정:';
-
-  @override
   String get setColorTheme => '색상 테마 설정:';
 
   @override
@@ -1963,9 +1642,6 @@ class L10nKo extends L10n {
 
   @override
   String get inviteGroupChat => '📨 그룹 채팅에 초대';
-
-  @override
-  String get invitePrivateChat => '📨 비공개 채팅에 초대';
 
   @override
   String get invalidInput => '잘못된 입력!';
@@ -2045,9 +1721,6 @@ class L10nKo extends L10n {
   String get wrongRecoveryKey => '죄송합니다... 올바른 복구키가 아닌것 같습니다.';
 
   @override
-  String get startConversation => '대화 시작';
-
-  @override
   String get commandHint_sendraw => 'raw json 전송';
 
   @override
@@ -2081,9 +1754,6 @@ class L10nKo extends L10n {
   String get passwordIsWrong => '비밀번호가 틀립니다';
 
   @override
-  String get publicLink => '공개 링크';
-
-  @override
   String get publicChatAddresses => '공개 채팅 주소';
 
   @override
@@ -2099,24 +1769,10 @@ class L10nKo extends L10n {
   String get addChatOrSubSpace => '채팅 또는 하위 스페이스 추가';
 
   @override
-  String get subspace => '하위 스페이스';
-
-  @override
-  String get decline => '거절';
-
-  @override
   String get thisDevice => '이 기기:';
 
   @override
   String get initAppError => '앱 초기화중 오류 발생';
-
-  @override
-  String get userRole => '유저 역할';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level은 최소 권한 레벨입니다.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2133,11 +1789,6 @@ class L10nKo extends L10n {
   String get files => '파일';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'SQlite 데이터베이스를 구축할 수 없습니다. 현재 레거시 데이터베이스 사용을 시도중입니다. $url 에서 개발자에게 오류를 신고하세요. 오류 메시지는 다음과 같습니다: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return '세션을 잃었습니다. $url 에서 개발자에게 오류를 신고하세요. 오류 메시지는 다음과 같습니다: $error';
   }
@@ -2145,11 +1796,6 @@ class L10nKo extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return '앱이 백업에서 세션을 복원하려 시도중입니다. $url 에서 개발자에게 오류를 신고하세요. 오류 메시지는 다음과 같습니다: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return '$roomName에 메시지를 전달할까요?';
   }
 
   @override
@@ -2313,16 +1959,6 @@ class L10nKo extends L10n {
   String get loginWithMatrixId => 'Matrix-ID로 로그인';
 
   @override
-  String get discoverHomeservers => '홈서버 찾아보기';
-
-  @override
-  String get whatIsAHomeserver => '홈서버가 무엇인가요?';
-
-  @override
-  String get homeserverDescription =>
-      '당신의 모든 데이터는 이메일과 흡사하게 당신의 홈서버에 저장됩니다. 당신이 소통하고 싶은 사람들과 다른 서버를 사용해도 무관하니 당신이 원하는 홈서버를 선택해도 됩니다. https://matrix.org에서 자세히 알아보세요.';
-
-  @override
   String get doesNotSeemToBeAValidHomeserver =>
       '호환되는 홈서버가 아닌 것 같습니다. URL을 올바르게 입력됐나요?';
 
@@ -2330,26 +1966,10 @@ class L10nKo extends L10n {
   String get calculatingFileSize => '파일 크기 계산 중...';
 
   @override
-  String get prepareSendingAttachment => '첨부된 파일 전송 준비 중...';
-
-  @override
   String get sendingAttachment => '첨부된 파일 전송 중...';
 
   @override
-  String get generatingVideoThumbnail => '영상 썸네일 만드는 중...';
-
-  @override
   String get compressVideo => '영상 압축 중...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return '첨부파일 $length개중 $index번째 전송 중...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return '서버 한도에 도달했습니다! $seconds초 기다리는 중...';
-  }
 
   @override
   String get oneOfYourDevicesIsNotVerified => '당신의 기기 중 하나가 인증되지 않았음';
@@ -2444,10 +2064,6 @@ class L10nKo extends L10n {
 
   @override
   String get waitingForServer => '서버를 기다리는중...';
-
-  @override
-  String get appIntroduction =>
-      'FluffyChat는 다른 메신저들을 사용하는 친구들과도 채팅할 수 있습니다. https://matrix.org에 방문하거나 *계속*을 눌러 자세한 정보를 확인하세요.';
 
   @override
   String get newChatRequest => '📩 새 채팅 요청';
@@ -2698,18 +2314,6 @@ class L10nKo extends L10n {
   String get resume => 'Resume';
 
   @override
-  String get newSubSpace => 'New sub space';
-
-  @override
-  String get moveToDifferentSpace => 'Move to different space';
-
-  @override
-  String get moveUp => 'Move up';
-
-  @override
-  String get moveDown => 'Move down';
-
-  @override
   String get removeFromSpaceDescription =>
       'The chat will be removed from the space but still appear in your chat list.';
 
@@ -2729,9 +2333,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get donate => 'Donate';
-
-  @override
   String startedAPoll(String username) {
     return '$username started a poll.';
   }
@@ -2747,9 +2348,6 @@ class L10nKo extends L10n {
 
   @override
   String get answersVisible => 'Answers visible';
-
-  @override
-  String get answersHidden => 'Answers hidden';
 
   @override
   String get pollQuestion => 'Poll question';
@@ -2873,5 +2471,129 @@ class L10nKo extends L10n {
   String get advancedConfigurations => 'Advanced configurations';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Sign in';
+
+  @override
+  String get createNewAccount => 'Create new account';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat is decentralized! Select a server where you want to create your account and let\'s go!';
+
+  @override
+  String get signInGreeting =>
+      'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
+
+  @override
+  String get appIntro =>
+      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
+
+  @override
+  String get theProcessWasCanceled => 'The process was canceled.';
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Search or enter homeserver address';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Set power level';
+
+  @override
+  String get makeModerator => 'Make moderator';
+
+  @override
+  String get makeAdmin => 'Make admin';
+
+  @override
+  String get removeModeratorRights => 'Remove moderator rights';
+
+  @override
+  String get removeAdminRights => 'Remove admin rights';
+
+  @override
+  String get powerLevel => 'Power level';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get mute => 'Mute';
+
+  @override
+  String get createNewChat => 'Create new chat';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

@@ -1,8 +1,12 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'package:cross_file/cross_file.dart';
+import 'package:fluffychat/utils/platform_infos.dart';
 import 'package:matrix/matrix.dart';
 import 'package:video_compress/video_compress.dart';
-
-import 'package:fluffychat/utils/platform_infos.dart';
 
 extension ResizeImage on XFile {
   static const int max = 1200;

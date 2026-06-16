@@ -15,45 +15,35 @@ class L10nJa extends L10n {
   String get repeatPassword => 'パスワードを繰り返そ';
 
   @override
-  String get notAnImage => 'Not an image file.';
+  String get notAnImage => '画像ファイルではありません。';
 
   @override
-  String get setCustomPermissionLevel => 'Set custom permission level';
-
-  @override
-  String get setPermissionsLevelDescription =>
-      'Please choose a predefined role below or enter a custom permission level between 0 and 100.';
-
-  @override
-  String get ignoreUser => 'Ignore user';
-
-  @override
-  String get normalUser => 'Normal user';
+  String get ignoreUser => 'ユーザーを無視する';
 
   @override
   String get remove => '消去';
 
   @override
-  String get importNow => 'Import now';
+  String get importNow => '今すぐインポート';
 
   @override
-  String get importEmojis => 'Import Emojis';
+  String get importEmojis => '絵文字をインポート';
 
   @override
-  String get importFromZipFile => 'Import from .zip file';
+  String get importFromZipFile => '.zipファイルからインポート';
 
   @override
-  String get exportEmotePack => 'Export Emote pack as .zip';
+  String get exportEmotePack => 'エモートパックを.zipでエクスポート';
 
   @override
-  String get replace => 'Replace';
+  String get replace => '置き換え';
 
   @override
   String get about => 'このアプリについて';
 
   @override
   String aboutHomeserver(String homeserver) {
-    return 'About $homeserver';
+    return '$homeserver について';
   }
 
   @override
@@ -84,9 +74,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get addChatDescription => 'Add a chat description...';
-
-  @override
   String get addToSpace => 'スペースに追加';
 
   @override
@@ -102,31 +89,30 @@ class L10nJa extends L10n {
   String get allChats => 'すべて会話';
 
   @override
-  String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+  String get commandHint_roomupgrade => 'このルームを特定のルームバージョンにアップグレード';
 
   @override
   String get commandHint_googly => 'ぎょろ目を送る';
 
   @override
-  String get commandHint_cuddle => 'Send a cuddle';
+  String get commandHint_cuddle => '笑顔を送る';
 
   @override
   String get commandHint_hug => 'ハグを送る';
 
   @override
   String googlyEyesContent(String senderName) {
-    return '$senderName sends you googly eyes';
+    return '$senderNameがギョロ目を送りました';
   }
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName cuddles you';
+    return '$senderNameが笑顔を送りました';
   }
 
   @override
   String hugContent(String senderName) {
-    return '$senderName hugs you';
+    return '$senderNameがハグしました';
   }
 
   @override
@@ -141,8 +127,7 @@ class L10nJa extends L10n {
   String get appLock => 'アプリのロック';
 
   @override
-  String get appLockDescription =>
-      'Lock the app when not using with a pin code';
+  String get appLockDescription => '未使用時にアプリをPINコードでロック';
 
   @override
   String get archive => 'アーカイブ';
@@ -152,6 +137,9 @@ class L10nJa extends L10n {
 
   @override
   String get areYouSure => 'これでよろしいですか？';
+
+  @override
+  String get discardEdits => 'You have unsaved changes. Discard your edits?';
 
   @override
   String get areYouSureYouWantToLogout => 'ログアウトしてよろしいですか？';
@@ -177,48 +165,29 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get sendTypingNotifications => 'Send typing notifications';
+  String get sendTypingNotifications => '入力通知を送信';
 
   @override
-  String get swipeRightToLeftToReply => 'Swipe right to left to reply';
+  String get swipeRightToLeftToReply => '左にスワイプして返信';
 
   @override
   String get sendOnEnter => 'Enterで送信';
 
   @override
-  String badServerVersionsException(
-    String serverVersions,
-    String supportedVersions,
-    Object serverVerions,
-    Object supoortedVersions,
-    Object suportedVersions,
-  ) {
-    return 'ホームサーバーでサポートされているバージョン：\n$serverVersions\nアプリでは$supportedVersionsしかサポートされていません';
-  }
-
-  @override
-  String countChatsAndCountParticipants(int chats, int participants) {
-    return '$chats chats and $participants participants';
-  }
-
-  @override
-  String get noMoreChatsFound => 'No more chats found...';
+  String get noMoreChatsFound => 'これ以上のチャットが見つかりません…';
 
   @override
   String get noChatsFoundHere =>
-      'No chats found here yet. Start a new chat with someone by using the button below. ⤵️';
+      'ここにはまだチャットがありません。下のボタンを使ってみんなと新しいチャットを始めましょう。⤵️';
 
   @override
-  String get joinedChats => 'Joined chats';
+  String get unread => '未読';
 
   @override
-  String get unread => 'Unread';
+  String get space => 'スペース';
 
   @override
-  String get space => 'Space';
-
-  @override
-  String get spaces => 'Spaces';
+  String get spaces => 'スペース';
 
   @override
   String get banFromChat => 'チャットからBANする';
@@ -238,9 +207,6 @@ class L10nJa extends L10n {
   String get blocked => 'ブロックしました';
 
   @override
-  String get botMessages => 'ボットメッセージ';
-
-  @override
   String get cancel => 'キャンセル';
 
   @override
@@ -258,22 +224,22 @@ class L10nJa extends L10n {
 
   @override
   String changedTheChatDescription(Object username) {
-    return '$username changed the chat description';
+    return '$usernameがチャットの説明を変更した';
   }
 
   @override
   String changedTheChatDescriptionTo(String username, String description) {
-    return '$usernameがチャットの説明を「$description」に変更しました';
+    return '$usernameがチャットの説明を「$description」に変更した';
   }
 
   @override
   String changedTheChatName(Object username) {
-    return '$username changed the chat name';
+    return '$usernameがチャットの名前を変更した';
   }
 
   @override
   String changedTheChatNameTo(String username, String chatname) {
-    return '$usernameがチャットの名前を「$chatname」に変更しました';
+    return '$usernameがチャットの名前を「$chatname」に変更した';
   }
 
   @override
@@ -283,7 +249,7 @@ class L10nJa extends L10n {
 
   @override
   String changedTheDisplaynameTo(String username, String displayname) {
-    return '$usernameが表示名を「$displayname」に変更しました';
+    return '$usernameが表示名を「$displayname」に変更した';
   }
 
   @override
@@ -365,9 +331,6 @@ class L10nJa extends L10n {
   String get chatDetails => 'チャットの詳細';
 
   @override
-  String get chatHasBeenAddedToThisSpace => 'このスペースにチャットが追加されました';
-
-  @override
   String get chats => 'チャット';
 
   @override
@@ -412,7 +375,7 @@ class L10nJa extends L10n {
   String get commandHint_join => '指定した部屋に参加';
 
   @override
-  String get commandHint_kick => 'Remove the given user from this room';
+  String get commandHint_kick => '入力のユーザーをこの部屋からキックする';
 
   @override
   String get commandHint_leave => 'この部屋を退出';
@@ -427,8 +390,7 @@ class L10nJa extends L10n {
   String get commandHint_myroomnick => 'この部屋の表示名を設定する';
 
   @override
-  String get commandHint_op =>
-      'Set the given user\'s power level (default: 50)';
+  String get commandHint_op => 'ユーザーの権限レベルを付与する（デフォルト：50）';
 
   @override
   String get commandHint_plain => '書式設定されていないテキストを送信する';
@@ -440,7 +402,7 @@ class L10nJa extends L10n {
   String get commandHint_send => 'テキストを送信';
 
   @override
-  String get commandHint_unban => 'Unban the given user from this room';
+  String get commandHint_unban => 'このルームから禁止されたユーザーを解禁する';
 
   @override
   String get commandInvalid => 'コマンドが無効';
@@ -460,19 +422,7 @@ class L10nJa extends L10n {
   String get configureChat => 'チャットの設定';
 
   @override
-  String get confirm => '確認';
-
-  @override
-  String get connect => '接続';
-
-  @override
   String get contactHasBeenInvitedToTheGroup => '連絡先に登録された人が招待されました';
-
-  @override
-  String get containsDisplayName => '表示名を含んでいます';
-
-  @override
-  String get containsUserName => 'ユーザー名を含んでいます';
 
   @override
   String get contentHasBeenReported => 'サーバー管理者に通報されました';
@@ -492,7 +442,7 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get checkList => 'Check list';
+  String get checkList => 'チェックリスト';
 
   @override
   String countParticipants(int count) {
@@ -501,7 +451,7 @@ class L10nJa extends L10n {
 
   @override
   String countInvited(int count) {
-    return '$count invited';
+    return '$count人を招待済み';
   }
 
   @override
@@ -513,7 +463,7 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get createGroup => 'Create group';
+  String get createGroup => 'グループを作成する';
 
   @override
   String get createNewSpace => '新しいスペース';
@@ -527,16 +477,6 @@ class L10nJa extends L10n {
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
     return '$date, $timeOfDay';
-  }
-
-  @override
-  String dateWithoutYear(String month, String day) {
-    return '$month-$day';
-  }
-
-  @override
-  String dateWithYear(String year, String month, String day) {
-    return '$year/$month/$day';
   }
 
   @override
@@ -568,9 +508,6 @@ class L10nJa extends L10n {
   String get directChats => 'ダイレクトチャット';
 
   @override
-  String get allRooms => 'All Group Chats';
-
-  @override
   String get displaynameHasBeenChanged => '表示名が変更されました';
 
   @override
@@ -583,7 +520,7 @@ class L10nJa extends L10n {
   String get editBlockedServers => 'ブロックしたサーバーを編集';
 
   @override
-  String get chatPermissions => 'Chat permissions';
+  String get chatPermissions => 'チャット権限';
 
   @override
   String get editDisplayname => '表示名を編集';
@@ -601,8 +538,7 @@ class L10nJa extends L10n {
   String get emoteInvalid => '不正なEmoteショートコード！';
 
   @override
-  String get emoteKeyboardNoRecents =>
-      'Recently-used emotes will appear here...';
+  String get emoteKeyboardNoRecents => '最近使われた絵文字がここに表示されます…';
 
   @override
   String get emotePacks => '部屋のEmoteパック';
@@ -611,30 +547,27 @@ class L10nJa extends L10n {
   String get emoteSettings => 'Emote設定';
 
   @override
-  String get globalChatId => 'Global chat ID';
+  String get globalChatId => 'グローバルチャットID';
 
   @override
-  String get accessAndVisibility => 'Access and visibility';
+  String get accessAndVisibility => 'アクセスと範囲';
 
   @override
   String get accessAndVisibilityDescription =>
-      'Who is allowed to join this chat and how the chat can be discovered.';
+      '誰がこのチャットに参加できて、どのように発見することができるか。';
 
   @override
-  String get calls => 'Calls';
+  String get calls => '通話';
 
   @override
-  String get customEmojisAndStickers => 'Custom emojis and stickers';
+  String get customEmojisAndStickers => 'カスタム絵文字とステッカー';
 
   @override
   String get customEmojisAndStickersBody =>
-      'Add or share custom emojis or stickers which can be used in any chat.';
+      'どのチャットでも利用可能なカスタム絵文字やステッカーを追加・共有します。';
 
   @override
   String get emoteShortcode => 'Emoteショートコード';
-
-  @override
-  String get emoteWarnNeedToPick => 'Emoteショートコードと画像を選択してください！';
 
   @override
   String get emptyChat => '空のチャット';
@@ -669,18 +602,12 @@ class L10nJa extends L10n {
   String get homeserver => 'ホームサーバー';
 
   @override
-  String get enterYourHomeserver => 'ホームサーバーを入力してください';
-
-  @override
   String errorObtainingLocation(String error) {
     return '位置情報の取得中にエラーが発生しました: $error';
   }
 
   @override
   String get everythingReady => 'すべての準備は完了しました！';
-
-  @override
-  String get extremeOffensive => 'とても攻撃的';
 
   @override
   String get fileName => 'ファイル名';
@@ -701,16 +628,13 @@ class L10nJa extends L10n {
   String get fromTheInvitation => '招待時点から閲覧可能';
 
   @override
-  String get goToTheNewRoom => '新規ルームへ';
-
-  @override
   String get group => 'グループ';
 
   @override
-  String get chatDescription => 'Chat description';
+  String get chatDescription => 'チャットの説明';
 
   @override
-  String get chatDescriptionHasBeenChanged => 'Chat description changed';
+  String get chatDescriptionHasBeenChanged => 'チャットの説明が変更された';
 
   @override
   String get groupIsPublic => 'グループは公開されています';
@@ -741,37 +665,30 @@ class L10nJa extends L10n {
   String get hideRedactedEvents => '編集済みイベントを非表示にする';
 
   @override
-  String get hideRedactedMessages => 'Hide redacted messages';
+  String get hideRedactedMessages => '削除されたメッセージを隠す';
 
   @override
   String get hideRedactedMessagesBody =>
-      'If someone redacts a message, this message won\'t be visible in the chat anymore.';
+      '誰かがメッセージを削除した場合、このメッセージはそれ以降チャット内では見えなくなります。';
 
   @override
-  String get hideInvalidOrUnknownMessageFormats =>
-      'Hide invalid or unknown message formats';
-
-  @override
-  String get howOffensiveIsThisContent => 'どのくらい攻撃的でしたか？';
+  String get hideInvalidOrUnknownMessageFormats => '無効であるか不明なメッセージ形式を隠す';
 
   @override
   String get id => 'ID';
 
   @override
-  String get identity => 'アイデンティティ';
+  String get block => 'ブロック';
 
   @override
-  String get block => 'Block';
-
-  @override
-  String get blockedUsers => 'Blocked users';
+  String get blockedUsers => 'ブロック済みのユーザー';
 
   @override
   String get blockListDescription =>
-      'You can block users who are disturbing you. You won\'t be able to receive any messages or room invites from the users on your personal block list.';
+      '迷惑なユーザーをブロックすることができます。あなたの個人的なブロックリストに記載されたユーザーは、あらゆるメッセージやルームへの招待を受け取ることができません。';
 
   @override
-  String get blockUsername => 'Ignore username';
+  String get blockUsername => 'ユーザー名を無視する';
 
   @override
   String get iHaveClickedOnLink => 'リンクをクリックしました';
@@ -780,15 +697,7 @@ class L10nJa extends L10n {
   String get incorrectPassphraseOrKey => 'パスフレーズかリカバリーキーが間違っています';
 
   @override
-  String get inoffensive => '非攻撃的';
-
-  @override
   String get inviteContact => '連絡先から招待する';
-
-  @override
-  String inviteContactToGroupQuestion(Object contact, Object groupName) {
-    return 'Do you want to invite $contact to the chat \"$groupName\"?';
-  }
 
   @override
   String inviteContactToGroup(String groupName) {
@@ -796,24 +705,23 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get noChatDescriptionYet => 'No chat description created yet.';
+  String get noChatDescriptionYet => 'チャットの説明はまだ作成されていません。';
 
   @override
-  String get tryAgain => 'Try again';
+  String get tryAgain => '再試行';
 
   @override
-  String get invalidServerName => 'Invalid server name';
+  String get invalidServerName => '無効なサーバー名';
 
   @override
   String get invited => '招待されました';
 
   @override
   String get redactMessageDescription =>
-      'The message will be redacted for all participants in this conversation. This cannot be undone.';
+      'メッセージはこの会話のすべての参加者から削除されます。これは取り消すことができません。';
 
   @override
-  String get optionalRedactReason =>
-      '(Optional) Reason for redacting this message...';
+  String get optionalRedactReason => '（オプション）メッセージを削除する理由…';
 
   @override
   String invitedUser(String username, String targetName) {
@@ -824,11 +732,8 @@ class L10nJa extends L10n {
   String get invitedUsersOnly => '招待されたユーザーのみ';
 
   @override
-  String get inviteForMe => '自分への招待';
-
-  @override
   String inviteText(String username, String link) {
-    return '$usernameがFluffyChatにあなたを招待しました. \n1. FluffyChatをインストールしてください: https://fluffychat.im \n2. 新しくアカウントを作成するかサインインしてください\n3. 招待リンクを開いてください: $link';
+    return '$usernameがあなたをFluffyChatに招待しました。\n1. FluffyChatをインストール:　fluffychat.im \n2. アカウントの作成、またはサインインを行う\n3. 招待リンクを開く\n $link';
   }
 
   @override
@@ -867,9 +772,6 @@ class L10nJa extends L10n {
   String get leftTheChat => '退室しました';
 
   @override
-  String get license => 'ライセンス';
-
-  @override
   String get lightTheme => 'ライト';
 
   @override
@@ -882,20 +784,6 @@ class L10nJa extends L10n {
 
   @override
   String get dehydrateWarning => 'この操作は元に戻せません。バックアップファイルを安全に保存してください。';
-
-  @override
-  String get dehydrateTor => 'TOR ユーザー: セッションをエクスポート';
-
-  @override
-  String get dehydrateTorLong =>
-      'TOR ユーザーの場合、ウィンドウを閉じる前にセッションをエクスポートすることをお勧めします。';
-
-  @override
-  String get hydrateTor => 'TOR ユーザー: セッションのエクスポートをインポート';
-
-  @override
-  String get hydrateTorLong =>
-      '前回、TOR でセッションをエクスポートしましたか？すぐにインポートしてチャットを続けましょう。';
 
   @override
   String get hydrate => 'バックアップファイルから復元';
@@ -926,16 +814,13 @@ class L10nJa extends L10n {
   String get logout => 'ログアウト';
 
   @override
-  String get memberChanges => 'メンバーの変更';
-
-  @override
   String get mention => 'メンション';
 
   @override
   String get messages => 'メッセージ';
 
   @override
-  String get messagesStyle => 'Messages:';
+  String get messagesStyle => 'メッセージ:';
 
   @override
   String get moderator => 'モデレータ';
@@ -981,7 +866,7 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get shareInviteLink => 'Share invite link';
+  String get shareInviteLink => '招待リンクを共有';
 
   @override
   String get scanQrCode => 'QRコードをスキャン';
@@ -1002,18 +887,12 @@ class L10nJa extends L10n {
   String get notifications => '通知';
 
   @override
-  String get notificationsEnabledForThisAccount => 'このアカウントでは通知が有効です';
-
-  @override
   String numUsersTyping(int count) {
     return '$count人が入力中…';
   }
 
   @override
   String get obtainingLocation => '位置情報を取得しています…';
-
-  @override
-  String get offensive => '攻撃的';
 
   @override
   String get offline => 'オフライン';
@@ -1040,9 +919,6 @@ class L10nJa extends L10n {
   String get openCamera => 'カメラを開く';
 
   @override
-  String get openVideoCamera => 'ビデオ用にカメラを開く';
-
-  @override
   String get oneClientLoggedOut => 'クライアントの 1つがログアウトしました';
 
   @override
@@ -1061,10 +937,7 @@ class L10nJa extends L10n {
   String get bundleName => 'バンドル名';
 
   @override
-  String get enableMultiAccounts => '(ベータ版) このデバイスで複数のアカウントを有効にする';
-
-  @override
-  String get openInMaps => 'Open in maps';
+  String get openInMaps => 'マップで開く';
 
   @override
   String get link => 'リンク';
@@ -1091,27 +964,13 @@ class L10nJa extends L10n {
   String get passwordHasBeenChanged => 'パスワードが変更されました';
 
   @override
-  String get hideMemberChangesInPublicChats =>
-      'Hide member changes in public chats';
+  String get overview => '概観';
 
   @override
-  String get hideMemberChangesInPublicChatsBody =>
-      'Do not show in the chat timeline if someone joins or leaves a public chat to improve readability.';
-
-  @override
-  String get overview => 'Overview';
-
-  @override
-  String get notifyMeFor => 'Notify me for';
-
-  @override
-  String get passwordRecoverySettings => 'Password recovery settings';
+  String get passwordRecoverySettings => 'パスワードの復元設定';
 
   @override
   String get passwordRecovery => 'パスワードリカバリー';
-
-  @override
-  String get people => '人々';
 
   @override
   String get pickImage => '画像を選択してください';
@@ -1125,9 +984,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get pleaseChoose => '選択してください';
-
-  @override
   String get pleaseChooseAPasscode => 'パスコードを選んでください';
 
   @override
@@ -1135,9 +991,6 @@ class L10nJa extends L10n {
 
   @override
   String get pleaseEnter4Digits => 'アプリのロック用に4桁の数字を入力してください。空欄の場合は無効になります。';
-
-  @override
-  String get pleaseEnterRecoveryKey => 'リカバリーキーを入力してください。';
 
   @override
   String get pleaseEnterYourPassword => 'パスワードを入力してください';
@@ -1168,15 +1021,15 @@ class L10nJa extends L10n {
 
   @override
   String redactedBy(String username) {
-    return 'Redacted by $username';
+    return '$usernameによって削除済み';
   }
 
   @override
-  String get directChat => 'Direct chat';
+  String get directChat => 'ダイレクトチャット';
 
   @override
   String redactedByBecause(String username, String reason) {
-    return 'Redacted by $username because: \"$reason\"';
+    return '$usernameによって削除済み。理由:「$reason」';
   }
 
   @override
@@ -1199,18 +1052,12 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get rejoin => '再参加';
-
-  @override
   String get removeAllOtherDevices => '他のデバイスをすべて削除';
 
   @override
   String removedBy(String username) {
     return '$usernameによって削除されました';
   }
-
-  @override
-  String get removeDevice => 'デバイスの削除';
 
   @override
   String get unbanFromChat => 'チャットからのブロックを解除する';
@@ -1252,11 +1099,6 @@ class L10nJa extends L10n {
   String get recoveryKeyLost => 'リカバリーキーを紛失した場合';
 
   @override
-  String seenByUser(String username) {
-    return '$usernameが既読';
-  }
-
-  @override
   String get send => '送信';
 
   @override
@@ -1276,17 +1118,11 @@ class L10nJa extends L10n {
 
   @override
   String sendImages(int count) {
-    return 'Send $count image';
+    return '$countつの画像を送信';
   }
 
   @override
   String get sendMessages => 'メッセージを送る';
-
-  @override
-  String get sendOriginal => 'オリジナルの送信';
-
-  @override
-  String get sendSticker => 'ステッカーを送る';
 
   @override
   String get sendVideo => '動画を送信';
@@ -1322,22 +1158,10 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get separateChatTypes => 'Separate Direct Chats and Groups';
-
-  @override
   String get setAsCanonicalAlias => 'メインエイリアスに設定';
 
   @override
-  String get setCustomEmotes => 'カスタムエモートの設定';
-
-  @override
-  String get setChatDescription => 'Set chat description';
-
-  @override
-  String get setInvitationLink => '招待リンクを設定する';
-
-  @override
-  String get setPermissionsLevel => '権限レベルをセット';
+  String get setChatDescription => 'チャットの説明を設定';
 
   @override
   String get setStatus => 'ステータスの設定';
@@ -1360,13 +1184,7 @@ class L10nJa extends L10n {
   String get showPassword => 'パスワードを表示';
 
   @override
-  String get presenceStyle => 'Presence:';
-
-  @override
-  String get presencesToggle => 'Show status messages from other users';
-
-  @override
-  String get singlesignon => 'シングルサインオン';
+  String get presencesToggle => '他のユーザーからのステータスメッセージを表示する';
 
   @override
   String get skip => 'スキップ';
@@ -1386,9 +1204,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get startFirstChat => '最初のチャットを開始する';
-
-  @override
   String get status => 'ステータス';
 
   @override
@@ -1402,7 +1217,7 @@ class L10nJa extends L10n {
 
   @override
   String synchronizingPleaseWaitCounter(String percentage) {
-    return ' Synchronizing… ($percentage%)';
+    return ' 同期中…（$percentage%）';
   }
 
   @override
@@ -1416,15 +1231,6 @@ class L10nJa extends L10n {
 
   @override
   String get title => 'FluffyChat';
-
-  @override
-  String get toggleFavorite => 'お気に入り切り替え';
-
-  @override
-  String get toggleMuted => 'ミュート切り替え';
-
-  @override
-  String get toggleUnread => '既読/未読にマーク';
 
   @override
   String get tooManyRequestsWarning => 'リクエストが多すぎます。また後で試してみてください！';
@@ -1462,17 +1268,6 @@ class L10nJa extends L10n {
 
   @override
   String get unpin => 'ピンを外す';
-
-  @override
-  String unreadChats(int unreadCount) {
-    String _temp0 = intl.Intl.pluralLogic(
-      unreadCount,
-      locale: localeName,
-      other: '$unreadCount件の未読メッセージ',
-      one: '1件の未読メッセージ',
-    );
-    return '$_temp0';
-  }
 
   @override
   String userAndOthersAreTyping(String username, int count) {
@@ -1545,9 +1340,6 @@ class L10nJa extends L10n {
   String get waitingPartnerNumbers => 'パートナーの数字承諾待ちです…';
 
   @override
-  String get wallpaper => '壁紙';
-
-  @override
   String get warning => '警告！';
 
   @override
@@ -1606,25 +1398,11 @@ class L10nJa extends L10n {
   String get removeFromSpace => 'スペースから削除';
 
   @override
-  String get addToSpaceDescription => 'このチャットを追加するスペースを選択してください。';
-
-  @override
   String get start => '開始';
 
   @override
   String get pleaseEnterRecoveryKeyDescription =>
       '古いメッセージを解除するには、以前のセッションで生成されたリカバリーキーを入力してください。リカバリーキーはパスワードではありません。';
-
-  @override
-  String get publish => '公開';
-
-  @override
-  String videoWithSize(String size) {
-    return 'ビデオ ($size)';
-  }
-
-  @override
-  String get openChat => 'チャットを開く';
 
   @override
   String get markAsRead => '既読にする';
@@ -1633,7 +1411,7 @@ class L10nJa extends L10n {
   String get reportUser => 'ユーザーを報告';
 
   @override
-  String get dismiss => 'Dismiss';
+  String get dismiss => '棄却';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1670,54 +1448,6 @@ class L10nJa extends L10n {
   String get experimentalVideoCalls => '実験的なビデオ通話';
 
   @override
-  String get emailOrUsername => 'メールアドレスまたはユーザー名';
-
-  @override
-  String get indexedDbErrorTitle => 'プライベートモードに関する問題';
-
-  @override
-  String get indexedDbErrorLong =>
-      'The message storage is unfortunately not enabled in private mode by default.\nPlease visit\n - about:config\n - set dom.indexedDB.privateBrowsing.enabled to true\nOtherwise, it is not possible to run FluffyChat.';
-
-  @override
-  String switchToAccount(String number) {
-    return 'アカウント $number に切り替える';
-  }
-
-  @override
-  String get nextAccount => '次のアカウント';
-
-  @override
-  String get previousAccount => '前のアカウント';
-
-  @override
-  String get addWidget => 'ウィジェットを追加';
-
-  @override
-  String get widgetVideo => '動画';
-
-  @override
-  String get widgetEtherpad => 'Text note';
-
-  @override
-  String get widgetJitsi => 'Jitsi Meet';
-
-  @override
-  String get widgetCustom => 'カスタム';
-
-  @override
-  String get widgetName => '名称';
-
-  @override
-  String get widgetUrlError => '有効なURLではありません。';
-
-  @override
-  String get widgetNameError => '表示名を入力してください。';
-
-  @override
-  String get errorAddingWidget => 'ウィジェットの追加中にエラーが発生しました。';
-
-  @override
   String get youRejectedTheInvitation => '招待を拒否しました';
 
   @override
@@ -1737,18 +1467,13 @@ class L10nJa extends L10n {
   }
 
   @override
-  String youInvitedToBy(String alias) {
-    return '📩 You have been invited via link to:\n$alias';
-  }
-
-  @override
   String youInvitedBy(String user) {
     return '📩 $user から招待されました';
   }
 
   @override
   String invitedBy(String user) {
-    return '📩 Invited by $user';
+    return '📩 $userに招待されました';
   }
 
   @override
@@ -1773,26 +1498,17 @@ class L10nJa extends L10n {
 
   @override
   String hasKnocked(String user) {
-    return '🚪 $user has knocked';
+    return '🚪 $userがノックしました';
   }
 
   @override
-  String get usersMustKnock => 'Users must knock';
+  String get usersMustKnock => 'ユーザーはノックする必要があります';
 
   @override
-  String get noOneCanJoin => 'No one can join';
+  String get noOneCanJoin => '誰も参加できません';
 
   @override
-  String userWouldLikeToChangeTheChat(String user) {
-    return '$user would like to join the chat.';
-  }
-
-  @override
-  String get noPublicLinkHasBeenCreatedYet =>
-      'No public link has been created yet';
-
-  @override
-  String get knock => 'Knock';
+  String get knock => 'ノック';
 
   @override
   String get users => 'ユーザー';
@@ -1805,7 +1521,7 @@ class L10nJa extends L10n {
 
   @override
   String get saveKeyManuallyDescription =>
-      'Save this key manually by triggering the system share dialog or clipboard.';
+      'この鍵をシステムの共有ダイアログかクリップボードから手動で保存してください。';
 
   @override
   String get storeInAndroidKeystore => 'Android KeyStoreに保存する';
@@ -1837,26 +1553,6 @@ class L10nJa extends L10n {
   String get screenSharingDetail => 'FuffyChatで画面を共有しています';
 
   @override
-  String get callingPermissions => '通話の権限';
-
-  @override
-  String get callingAccount => '通話アカウント';
-
-  @override
-  String get callingAccountDetails =>
-      'Allows FluffyChat to use the native android dialer app.';
-
-  @override
-  String get appearOnTop => 'Appear on top';
-
-  @override
-  String get appearOnTopDetails =>
-      'アプリをトップに表示できるようにする（すでに通話アカウントとしてFluffychatを設定している場合は必要ありません）';
-
-  @override
-  String get otherCallingPermissions => 'マイク、カメラ、その他FluffyChatの権限';
-
-  @override
   String get whyIsThisMessageEncrypted => 'このメッセージが読めない理由';
 
   @override
@@ -1870,21 +1566,7 @@ class L10nJa extends L10n {
   String get newSpace => '新しいスペース';
 
   @override
-  String get enterSpace => 'スペースに入る';
-
-  @override
-  String get enterRoom => '部屋に入る';
-
-  @override
   String get allSpaces => 'すべてのスペース';
-
-  @override
-  String numChats(String number) {
-    return '$number チャット';
-  }
-
-  @override
-  String get hideUnimportantStateEvents => '重要でない状態イベントを非表示にする';
 
   @override
   String get hidePresences => 'Hide Status List?';
@@ -1926,89 +1608,70 @@ class L10nJa extends L10n {
 
   @override
   String fileIsTooBigForServer(String max) {
-    return 'Unable to send! The server only supports attachments up to $max.';
+    return '送信できません！このサーバーは添付数は$max個までです。';
   }
 
   @override
   String fileHasBeenSavedAt(String path) {
-    return 'File has been saved at $path';
+    return 'ファイルは $path に保存されています';
   }
 
   @override
-  String get jumpToLastReadMessage => 'Jump to last read message';
+  String get jumpToLastReadMessage => '最後に閲覧したメッセージまで移動する';
 
   @override
-  String get readUpToHere => 'Read up to here';
+  String get readUpToHere => 'ここまで既読です';
 
   @override
-  String get jump => 'Jump';
+  String get jump => '移動';
 
   @override
-  String get openLinkInBrowser => 'Open link in browser';
+  String get openLinkInBrowser => 'リンクをブラウザで開く';
 
   @override
   String get reportErrorDescription =>
-      '😭 Oh no. Something went wrong. If you want, you can report this bug to the developers.';
+      '😭 おっと。問題が発生しました。必要があれば、このバグを開発者に報告することができます。';
 
   @override
   String get report => 'report';
 
   @override
-  String get signInWithPassword => 'パスワードでログイン';
+  String get setColorTheme => 'カラーテーマの設定：';
 
   @override
-  String get pleaseTryAgainLaterOrChooseDifferentServer =>
-      'Please try again later or choose a different server.';
+  String get invite => '招待';
 
   @override
-  String get profileNotFound =>
-      'The user could not be found on the server. Maybe there is a connection problem or the user doesn\'t exist.';
+  String get inviteGroupChat => '📨 グループチャットへ招待する';
 
   @override
-  String get setTheme => 'Set theme:';
-
-  @override
-  String get setColorTheme => 'Set color theme:';
-
-  @override
-  String get invite => 'Invite';
-
-  @override
-  String get inviteGroupChat => '📨 Group chat invite';
-
-  @override
-  String get invitePrivateChat => '📨 Private chat invite';
-
-  @override
-  String get invalidInput => 'Invalid input!';
+  String get invalidInput => '無効な入力です！';
 
   @override
   String wrongPinEntered(int seconds) {
-    return 'Wrong pin entered! Try again in $seconds seconds...';
+    return '誤ったPINが入力されました！$seconds秒後に再試行してください…';
   }
 
   @override
-  String get pleaseEnterANumber => 'Please enter a number greater than 0';
+  String get pleaseEnterANumber => '0以上の数値を入力してください';
 
   @override
   String get archiveRoomDescription =>
-      'The chat will be moved to the archive. Other users will be able to see that you have left the chat.';
+      'チャットはアーカイブに移動されます。他のユーザーはあなたが退出したチャットを見ることができます。';
 
   @override
   String get roomUpgradeDescription =>
-      'The chat will then be recreated with the new room version. All participants will be notified that they need to switch to the new chat. You can find out more about room versions at https://spec.matrix.org/latest/rooms/';
+      'チャットは新しい部屋バージョンで再作成されます。全参加者に新しいチャットへ切り替える必要があることが通知されます。部屋バージョンについては https://spec.matrix.org/latest/rooms/ をご覧ください';
 
   @override
-  String get removeDevicesDescription =>
-      'You will be logged out of this device and will no longer be able to receive messages.';
+  String get removeDevicesDescription => 'このデバイスからログアウトするとメッセージを受け取ることができません。';
 
   @override
   String get banUserDescription =>
-      'The user will be banned from the chat and will not be able to enter the chat again until they are unbanned.';
+      'ユーザーをチャットからBANすると、BANを解除されるまで再入室することはできません。';
 
   @override
-  String get unbanUserDescription =>
-      'The user will be able to enter the chat again if they try.';
+  String get unbanUserDescription => 'ユーザーが再試行時に再入室することができます。';
 
   @override
   String get kickUserDescription =>
@@ -2019,14 +1682,13 @@ class L10nJa extends L10n {
       'Once you make this user admin, you may not be able to undo this as they will then have the same permissions as you.';
 
   @override
-  String get pushNotificationsNotAvailable =>
-      'Push notifications not available';
+  String get pushNotificationsNotAvailable => 'プッシュ通知は利用できません';
 
   @override
-  String get learnMore => 'Learn more';
+  String get learnMore => '詳しく知る';
 
   @override
-  String get yourGlobalUserIdIs => 'Your global user-ID is: ';
+  String get yourGlobalUserIdIs => 'あなたのグローバルユーザーID： ';
 
   @override
   String noUsersFoundWithQuery(String query) {
@@ -2034,7 +1696,7 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get knocking => 'Knocking';
+  String get knocking => 'ノックしています';
 
   @override
   String chatCanBeDiscoveredViaSearchOnServer(String server) {
@@ -2042,35 +1704,32 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get searchChatsRooms => 'Search for #chats, @users...';
+  String get searchChatsRooms => '#チャット，@ユーザーで検索…';
 
   @override
-  String get nothingFound => 'Nothing found...';
+  String get nothingFound => '何も見つかりませんでした…';
 
   @override
-  String get groupName => 'Group name';
+  String get groupName => 'グループ名';
 
   @override
-  String get createGroupAndInviteUsers => 'Create a group and invite users';
+  String get createGroupAndInviteUsers => 'グループを作成してユーザーを招待する';
 
   @override
-  String get groupCanBeFoundViaSearch => 'Group can be found via search';
+  String get groupCanBeFoundViaSearch => 'グループは検索で見つけることができます';
 
   @override
   String get wrongRecoveryKey =>
       'Sorry... this does not seem to be the correct recovery key.';
 
   @override
-  String get startConversation => 'Start conversation';
+  String get commandHint_sendraw => '生のJSONを送信する';
 
   @override
-  String get commandHint_sendraw => 'Send raw json';
+  String get databaseMigrationTitle => 'データベースは最適化されています';
 
   @override
-  String get databaseMigrationTitle => 'Database is optimized';
-
-  @override
-  String get databaseMigrationBody => 'Please wait. This may take a moment.';
+  String get databaseMigrationBody => 'しばらくお待ちください。この操作は時間がかかります。';
 
   @override
   String get leaveEmptyToClearStatus => 'Leave empty to clear your status.';
@@ -2079,26 +1738,22 @@ class L10nJa extends L10n {
   String get select => 'Select';
 
   @override
-  String get searchForUsers => 'Search for @users...';
+  String get searchForUsers => '@ユーザー で検索…';
 
   @override
-  String get pleaseEnterYourCurrentPassword =>
-      'Please enter your current password';
+  String get pleaseEnterYourCurrentPassword => '現在のパスワードを入力してください';
 
   @override
-  String get newPassword => 'New password';
+  String get newPassword => '新しいパスワード';
 
   @override
-  String get pleaseChooseAStrongPassword => 'Please choose a strong password';
+  String get pleaseChooseAStrongPassword => '強力なパスワードを選択してください';
 
   @override
   String get passwordsDoNotMatch => 'Passwords do not match';
 
   @override
   String get passwordIsWrong => 'Your entered password is wrong';
-
-  @override
-  String get publicLink => 'Public link';
 
   @override
   String get publicChatAddresses => 'Public chat addresses';
@@ -2116,24 +1771,10 @@ class L10nJa extends L10n {
   String get addChatOrSubSpace => 'Add chat or sub space';
 
   @override
-  String get subspace => 'Subspace';
-
-  @override
-  String get decline => 'Decline';
-
-  @override
   String get thisDevice => 'This device:';
 
   @override
   String get initAppError => 'An error occured while init the app';
-
-  @override
-  String get userRole => 'User role';
-
-  @override
-  String minimumPowerLevel(String level) {
-    return '$level is the minimum power level.';
-  }
 
   @override
   String searchIn(String chat) {
@@ -2150,11 +1791,6 @@ class L10nJa extends L10n {
   String get files => 'Files';
 
   @override
-  String databaseBuildErrorBody(String url, String error) {
-    return 'Unable to build the SQlite database. The app tries to use the legacy database for now. Please report this error to the developers at $url. The error message is: $error';
-  }
-
-  @override
   String sessionLostBody(String url, String error) {
     return 'Your session is lost. Please report this error to the developers at $url. The error message is: $error';
   }
@@ -2162,11 +1798,6 @@ class L10nJa extends L10n {
   @override
   String restoreSessionBody(String url, String error) {
     return 'The app now tries to restore your session from the backup. Please report this error to the developers at $url. The error message is: $error';
-  }
-
-  @override
-  String forwardMessageTo(String roomName) {
-    return 'Forward message to $roomName?';
   }
 
   @override
@@ -2275,31 +1906,31 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get markAsUnread => 'Mark as unread';
+  String get markAsUnread => '未読としてマーク';
 
   @override
   String userLevel(int level) {
-    return '$level - User';
+    return '$level - ユーザー';
   }
 
   @override
   String moderatorLevel(int level) {
-    return '$level - Moderator';
+    return '$level - モデレーター';
   }
 
   @override
   String adminLevel(int level) {
-    return '$level - Admin';
+    return '$level - 管理者';
   }
 
   @override
-  String get changeGeneralChatSettings => 'Change general chat settings';
+  String get changeGeneralChatSettings => '全体のチャット設定を変更する';
 
   @override
-  String get inviteOtherUsers => 'Invite other users to this chat';
+  String get inviteOtherUsers => '他のユーザーをこのチャットに招待する';
 
   @override
-  String get changeTheChatPermissions => 'Change the chat permissions';
+  String get changeTheChatPermissions => 'チャット権限を変更する';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
@@ -2313,8 +1944,7 @@ class L10nJa extends L10n {
   String get sendRoomNotifications => 'Send a @room notifications';
 
   @override
-  String get changeTheDescriptionOfTheGroup =>
-      'Change the description of the chat';
+  String get changeTheDescriptionOfTheGroup => 'チャットの説明を変更する';
 
   @override
   String get chatPermissionsDescription =>
@@ -2322,87 +1952,59 @@ class L10nJa extends L10n {
 
   @override
   String updateInstalled(String version) {
-    return '🎉 Update $version installed!';
+    return '🎉 アップデート $version をインストールしました！';
   }
 
   @override
-  String get changelog => 'Changelog';
+  String get changelog => '変更履歴';
 
   @override
-  String get sendCanceled => 'Sending canceled';
+  String get sendCanceled => '送信を取り消しました';
 
   @override
-  String get loginWithMatrixId => 'Login with Matrix-ID';
-
-  @override
-  String get discoverHomeservers => 'Discover homeservers';
-
-  @override
-  String get whatIsAHomeserver => 'What is a homeserver?';
-
-  @override
-  String get homeserverDescription =>
-      'All your data is stored on the homeserver, just like an email provider. You can choose which homeserver you want to use, while you can still communicate with everyone. Learn more at at https://matrix.org.';
+  String get loginWithMatrixId => 'Matrix-IDでログイン';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
       'Doesn\'t seem to be a compatible homeserver. Wrong URL?';
 
   @override
-  String get calculatingFileSize => 'Calculating file size...';
+  String get calculatingFileSize => 'ファイルサイズを計算しています…';
 
   @override
-  String get prepareSendingAttachment => 'Prepare sending attachment...';
+  String get sendingAttachment => '添付ファイルを送信しています…';
 
   @override
-  String get sendingAttachment => 'Sending attachment...';
+  String get compressVideo => 'ビデオを圧縮しています…';
 
   @override
-  String get generatingVideoThumbnail => 'Generating video thumbnail...';
-
-  @override
-  String get compressVideo => 'Compressing video...';
-
-  @override
-  String sendingAttachmentCountOfCount(int index, int length) {
-    return 'Sending attachment $index of $length...';
-  }
-
-  @override
-  String serverLimitReached(int seconds) {
-    return 'Server limit reached! Waiting $seconds seconds...';
-  }
-
-  @override
-  String get oneOfYourDevicesIsNotVerified =>
-      'One of your devices is not verified';
+  String get oneOfYourDevicesIsNotVerified => 'いずれかのデバイスが認証されていません';
 
   @override
   String get noticeChatBackupDeviceVerification =>
-      'Note: When you connect all your devices to the chat backup, they are automatically verified.';
+      '注意：すべてのデバイスをチャットのバックアップに接続している場合、それらは自動的に認証されます。';
 
   @override
-  String get continueText => 'Continue';
+  String get continueText => '続ける';
 
   @override
   String get welcomeText =>
       'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
 
   @override
-  String get blur => 'Blur:';
+  String get blur => 'ぼかし：';
 
   @override
-  String get opacity => 'Opacity:';
+  String get opacity => '透過度：';
 
   @override
-  String get setWallpaper => 'Set wallpaper';
+  String get setWallpaper => '壁紙を設定する';
 
   @override
-  String get manageAccount => 'Manage account';
+  String get manageAccount => 'アカウント管理';
 
   @override
-  String get noContactInformationProvided =>
-      'Server does not provide any valid contact information';
+  String get noContactInformationProvided => 'サーバーから有効な連絡先情報が提供されていません';
 
   @override
   String get contactServerAdmin => 'Contact server admin';
@@ -2411,28 +2013,28 @@ class L10nJa extends L10n {
   String get contactServerSecurity => 'Contact server security';
 
   @override
-  String get supportPage => 'Support page';
+  String get supportPage => 'サポートページ';
 
   @override
-  String get serverInformation => 'Server information:';
+  String get serverInformation => 'サーバー情報：';
 
   @override
-  String get name => 'Name';
+  String get name => '名前';
 
   @override
-  String get version => 'Version';
+  String get version => 'バージョン';
 
   @override
-  String get website => 'Website';
+  String get website => 'ウェブサイト';
 
   @override
-  String get compress => 'Compress';
+  String get compress => '圧縮';
 
   @override
-  String get boldText => 'Bold text';
+  String get boldText => '太字';
 
   @override
-  String get italicText => 'Italic text';
+  String get italicText => '斜体';
 
   @override
   String get strikeThrough => 'Strikethrough';
@@ -2441,10 +2043,10 @@ class L10nJa extends L10n {
   String get pleaseFillOut => 'Please fill out';
 
   @override
-  String get invalidUrl => 'Invalid url';
+  String get invalidUrl => '無効なURL';
 
   @override
-  String get addLink => 'Add link';
+  String get addLink => 'リンクを追加';
 
   @override
   String get unableToJoinChat =>
@@ -2459,7 +2061,7 @@ class L10nJa extends L10n {
 
   @override
   String appWantsToUseForLogin(String server) {
-    return 'Use \'$server\' to log in';
+    return '\'$server\' を使用してログインする';
   }
 
   @override
@@ -2467,61 +2069,54 @@ class L10nJa extends L10n {
       'You hereby allow the app and website to share information about you.';
 
   @override
-  String get open => 'Open';
+  String get open => '開く';
 
   @override
-  String get waitingForServer => 'Waiting for server...';
+  String get waitingForServer => 'サーバーを待機中…';
 
   @override
-  String get appIntroduction =>
-      'FluffyChat lets you chat with your friends across different messengers. Learn more at https://matrix.org or just tap *Continue*.';
+  String get newChatRequest => '📩 新しいチャットを要求';
 
   @override
-  String get newChatRequest => '📩 New chat request';
+  String get contentNotificationSettings => 'コンテンツ通知設定';
 
   @override
-  String get contentNotificationSettings => 'Content notification settings';
+  String get generalNotificationSettings => '全体通知設定';
 
   @override
-  String get generalNotificationSettings => 'General notification settings';
+  String get roomNotificationSettings => '部屋通知設定';
 
   @override
-  String get roomNotificationSettings => 'Room notification settings';
+  String get userSpecificNotificationSettings => 'ユーザー毎の通知設定';
 
   @override
-  String get userSpecificNotificationSettings =>
-      'User specific notification settings';
+  String get otherNotificationSettings => 'その他の通知設定';
 
   @override
-  String get otherNotificationSettings => 'Other notification settings';
-
-  @override
-  String get notificationRuleContainsUserName => 'Contains User Name';
+  String get notificationRuleContainsUserName => 'ユーザー名を含む';
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Notifies the user when a message contains their username.';
+      'ユーザー名がメッセージに含まれる場合に通知します。';
 
   @override
-  String get notificationRuleMaster => 'Mute all notifications';
+  String get notificationRuleMaster => 'すべての通知をミュート';
 
   @override
-  String get notificationRuleMasterDescription =>
-      'Overrides all other rules and disables all notifications.';
+  String get notificationRuleMasterDescription => '全ルールを上書きして通知をすべて無効にします。';
 
   @override
-  String get notificationRuleSuppressNotices => 'Suppress Automated Messages';
+  String get notificationRuleSuppressNotices => '自動化されたメッセージを控える';
 
   @override
   String get notificationRuleSuppressNoticesDescription =>
-      'Suppresses notifications from automated clients like bots.';
+      'Botのような自動化されたクライアントからの通知を抑制します。';
 
   @override
   String get notificationRuleInviteForMe => 'Invite for Me';
 
   @override
-  String get notificationRuleInviteForMeDescription =>
-      'Notifies the user when they are invited to a room.';
+  String get notificationRuleInviteForMeDescription => 'ユーザーが部屋に招待されたときに通知します。';
 
   @override
   String get notificationRuleMemberEvent => 'Member Event';
@@ -2531,11 +2126,11 @@ class L10nJa extends L10n {
       'Suppresses notifications for membership events.';
 
   @override
-  String get notificationRuleIsUserMention => 'User Mention';
+  String get notificationRuleIsUserMention => 'ユーザーの言及';
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Notifies the user when they are directly mentioned in a message.';
+      'ユーザーがメッセージ内で直接言及されたときに通知します。';
 
   @override
   String get notificationRuleContainsDisplayName => 'Contains Display Name';
@@ -2730,18 +2325,6 @@ class L10nJa extends L10n {
   String get resume => 'Resume';
 
   @override
-  String get newSubSpace => 'New sub space';
-
-  @override
-  String get moveToDifferentSpace => 'Move to different space';
-
-  @override
-  String get moveUp => 'Move up';
-
-  @override
-  String get moveDown => 'Move down';
-
-  @override
   String get removeFromSpaceDescription =>
       'The chat will be removed from the space but still appear in your chat list.';
 
@@ -2761,9 +2344,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get donate => 'Donate';
-
-  @override
   String startedAPoll(String username) {
     return '$username started a poll.';
   }
@@ -2779,9 +2359,6 @@ class L10nJa extends L10n {
 
   @override
   String get answersVisible => 'Answers visible';
-
-  @override
-  String get answersHidden => 'Answers hidden';
 
   @override
   String get pollQuestion => 'Poll question';
@@ -2905,5 +2482,129 @@ class L10nJa extends L10n {
   String get advancedConfigurations => 'Advanced configurations';
 
   @override
-  String get signInWithLabel => 'Sign in with:';
+  String get signIn => 'Sign in';
+
+  @override
+  String get createNewAccount => 'Create new account';
+
+  @override
+  String get signUpGreeting =>
+      'FluffyChat is decentralized! Select a server where you want to create your account and let\'s go!';
+
+  @override
+  String get signInGreeting =>
+      'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
+
+  @override
+  String get appIntro =>
+      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
+
+  @override
+  String get theProcessWasCanceled => 'The process was canceled.';
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get searchOrEnterHomeserverAddress =>
+      'Search or enter homeserver address';
+
+  @override
+  String get matrixId => 'Matrix ID';
+
+  @override
+  String get setPowerLevel => 'Set power level';
+
+  @override
+  String get makeModerator => 'Make moderator';
+
+  @override
+  String get makeAdmin => 'Make admin';
+
+  @override
+  String get removeModeratorRights => 'Remove moderator rights';
+
+  @override
+  String get removeAdminRights => 'Remove admin rights';
+
+  @override
+  String get powerLevel => 'Power level';
+
+  @override
+  String get setPowerLevelDescription =>
+      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get mute => 'Mute';
+
+  @override
+  String get createNewChat => 'Create new chat';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get supportFluffyChat => 'Support FluffyChat';
+
+  @override
+  String get support => 'Support';
+
+  @override
+  String get setLowPriority => 'Set low priority';
+
+  @override
+  String get unsetLowPriority => 'Unset low priority';
+
+  @override
+  String get removeCallFromChat => 'Remove call from chat';
+
+  @override
+  String get removeCallFromChatDescription =>
+      'Do you want to remove the call from the chat for all members?';
+
+  @override
+  String get removeCallForEveryone => 'Remove call for everyone';
+
+  @override
+  String get startVoiceCall => 'Start voice call';
+
+  @override
+  String get startVideoCall => 'Start video call';
+
+  @override
+  String get joinVoiceCall => 'Join voice call';
+
+  @override
+  String get joinVideoCall => 'Join video call';
+
+  @override
+  String get live => 'Live';
+
+  @override
+  String get playSoundOnNotification => 'Play sound on notification';
+
+  @override
+  String get addTag => 'Add tag';
+
+  @override
+  String get removeTag => 'Remove tag';
+
+  @override
+  String get tagName => 'Tag name';
+
+  @override
+  String get createNewTag => 'Create new tag';
+
+  @override
+  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+
+  @override
+  String get possibleByYou =>
+      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+
+  @override
+  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
 }

@@ -1,10 +1,11 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
-
 import 'package:dynamic_color/dynamic_color.dart';
-import 'package:matrix/matrix.dart';
-
 import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -15,6 +16,9 @@ import 'package:fluffychat/widgets/avatar.dart';
 import 'package:fluffychat/widgets/layouts/max_width_body.dart';
 import 'package:fluffychat/widgets/matrix.dart';
 import 'package:fluffychat/widgets/mxc_image.dart';
+import 'package:flutter/material.dart';
+import 'package:matrix/matrix.dart';
+
 import '../../config/app_config.dart';
 import '../../widgets/settings_switch_list_tile.dart';
 import 'settings_style.dart';
@@ -82,14 +86,13 @@ class SettingsStyleView extends StatelessWidget {
                     Theme.of(context).brightness == Brightness.light
                     ? light?.primary
                     : dark?.primary;
-                final colors = List<Color?>.from(
-                  SettingsStyleController.customColors,
-                );
+                final colors = [null, AppConfig.chatColor, ...Colors.primaries];
                 if (systemColor == null) {
                   colors.remove(null);
                 }
                 return GridView.builder(
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 64,
                   ),
@@ -201,7 +204,7 @@ class SettingsStyleView extends StatelessWidget {
                                   type: EventTypes.RoomMember,
                                   senderId: client.userID!,
                                   originServerTs: DateTime.now(),
-                                  stateKey: client.userID!,
+                                  stateKey: client.userID,
                                 ),
                               ),
                               Padding(
@@ -348,10 +351,6 @@ class SettingsStyleView extends StatelessWidget {
             SettingsSwitchListTile.adaptive(
               title: L10n.of(context).presencesToggle,
               setting: AppSettings.showPresences,
-            ),
-            SettingsSwitchListTile.adaptive(
-              title: L10n.of(context).separateChatTypes,
-              setting: AppSettings.separateChatTypes,
             ),
             SettingsSwitchListTile.adaptive(
               title: L10n.of(context).displayNavigationRail,

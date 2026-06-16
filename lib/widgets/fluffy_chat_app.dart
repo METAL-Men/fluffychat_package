@@ -1,16 +1,19 @@
-import 'package:flutter/material.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
-import 'package:go_router/go_router.dart';
-import 'package:matrix/matrix.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:fluffychat/config/app_config.dart';
 import 'package:fluffychat/config/routes.dart';
-import 'package:fluffychat/config/setting_keys.dart';
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/widgets/app_lock.dart';
 import 'package:fluffychat/widgets/theme_builder.dart';
-import '../config/app_config.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:matrix/matrix.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../config/bootstrap_config.dart';
 import '../utils/custom_scroll_behaviour.dart';
 import 'matrix.dart';
@@ -42,7 +45,20 @@ class FluffyChatApp extends StatelessWidget {
 
   // Router must be outside of build method so that hot reload does not reset
   // the current path.
-  static final GoRouter router = GoRouter(routes: routes);
+  static final GoRouter router = GoRouter(
+    routes: AppRoutes.routes,
+    debugLogDiagnostics: true,
+    redirect: (context, state) {
+      // Workaround for content sharings passed to go router:
+      if (state.uri.scheme == 'content') return '/';
+
+      // Pass deep links to app:
+      if (state.uri.toString().startsWith(AppConfig.deepLinkPrefix)) {
+        return '/rooms/newprivatechat#${state.uri}';
+      }
+      return null;
+    },
+  );
 
   @override
   Widget build(BuildContext context) {

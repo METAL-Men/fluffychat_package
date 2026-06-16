@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:ui';
 
 import 'package:matrix/matrix_api_lite/model/event_types.dart';
@@ -11,12 +16,22 @@ abstract class AppConfig {
   static String? get applicationWelcomeMessage => _applicationWelcomeMessage;
   static String _defaultHomeserver = 'matrix.metal.men';
   static String get defaultHomeserver => _defaultHomeserver;
-  static double fontSizeFactor = 1;
   static const Color chatColor = primaryColor;
   static Color? colorSchemeSeed = primaryColor;
   static const double messageFontSize = 16.0;
   static const bool allowOtherHomeservers = true;
   static const bool enableRegistration = true;
+  static const bool hideTypingUsernames = false;
+
+  static const String inviteLinkPrefix = 'https://matrix.to/#/';
+  static const String deepLinkPrefix = 'im.fluffychat://chat/';
+  static const String schemePrefix = 'matrix:';
+  static const String pushNotificationsChannelId = 'fluffychat_push';
+  static const String pushNotificationsAppId = 'chat.fluffy.fluffychat';
+  static const double borderRadius = 16.0;
+  static const double spaceBorderRadius = 11.0;
+  static const double columnWidth = 360.0;
+
   static const Color primaryColor = Color(0xFFC61130);
   static const Color primaryColorLight = Color(0xFF1E1E1E);
   static const Color secondaryColor = Color(0xFF1E1E1E);
@@ -25,26 +40,30 @@ abstract class AppConfig {
   static const String metalMatrixApiToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQyODMxOTN9.RMgimP1rVYQIfTb031ikk74Z5jtGCgYvw4HZm-CaA10';
   static String _privacyUrl = 'https://metal.men/privacy-policy';
-  static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
 
   static String get privacyUrl => _privacyUrl;
   static const String website = 'https://fluffychat.im';
   static const String enablePushTutorial =
-      'https://fluffy.chat/faq/#push_without_google_services';
+      'https://fluffychat.im/faq/#push_without_google_services';
   static const String encryptionTutorial =
-      'https://fluffy.chat/faq/#how_to_use_end_to_end_encryption';
+      'https://fluffychat.im/faq/#how_to_use_end_to_end_encryption';
   static const String startChatTutorial =
-      'https://fluffy.chat/faq/#how_do_i_find_other_users';
+      'https://fluffychat.im/faq/#how_do_i_find_other_users';
   static const String howDoIGetStickersTutorial =
-      'https://fluffy.chat/faq/#how_do_i_get_stickers';
+      'https://fluffychat.im/faq/#how_do_i_get_stickers';
   static const String appId = 'men.metal.connect';
   static const String appOpenUrlScheme = 'men.metal';
   static String _webBaseUrl = 'https://connect.metal.men';
   static String get webBaseUrl => _webBaseUrl;
+  static const String appSsoUrlScheme = 'im.fluffychat.auth';
+
   static const String sourceCodeUrl =
       'https://github.com/krille-chan/fluffychat';
   static const String supportUrl = 'https://metal.men/connect-app-help';
   static const String changelogUrl = 'https://fluffy.chat/en/changelog/';
+
+  static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
+
   static final Uri newIssueUrl = Uri(
     scheme: 'https',
     host: 'github.com',
@@ -91,8 +110,8 @@ abstract class AppConfig {
   // TODO - remove these statics after confirming they are not used anymore -- end
   static final Uri homeserverList = Uri(
     scheme: 'https',
-    host: 'servers.joinmatrix.org',
-    path: 'servers.json',
+    host: 'raw.githubusercontent.com',
+    path: 'krille-chan/fluffychat/refs/heads/main/recommended_homeservers.json',
   );
 
   static void loadFromJson(Map<String, dynamic> json) {
@@ -172,4 +191,5 @@ abstract class AppConfig {
 
   static const String mainIsolatePortName = 'main_isolate';
   static const String pushIsolatePortName = 'push_isolate';
+  static const String pushHelperCrashReportKey = 'push_helper_crash_report';
 }

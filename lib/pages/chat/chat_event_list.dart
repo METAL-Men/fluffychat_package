@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:collection/collection.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
-
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat.dart';
@@ -13,6 +13,9 @@ import 'package:fluffychat/pages/chat/typing_indicators.dart';
 import 'package:fluffychat/utils/account_config.dart';
 import 'package:fluffychat/utils/matrix_sdk_extensions/filtered_timeline_extension.dart';
 import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class ChatEventList extends StatelessWidget {
   final ChatController controller;
@@ -35,7 +38,6 @@ class ChatEventList extends StatelessWidget {
     final events = timeline.events.filterByVisibleInGui(
       threadId: controller.activeThreadId,
     );
-    final animateInEventIndex = controller.animateInEventIndex;
 
     // create a map of eventId --> index to greatly improve performance of
     // ListView's findChildIndexCallback
@@ -79,7 +81,10 @@ class ChatEventList extends StatelessWidget {
               }
               return Column(
                 mainAxisSize: .min,
-                children: [SeenByRow(controller), TypingIndicators(controller)],
+                children: [
+                  if (events.isNotEmpty) SeenByRow(event: events.first),
+                  TypingIndicators(controller),
+                ],
               );
             }
 
@@ -117,10 +122,7 @@ class ChatEventList extends StatelessWidget {
 
             // The message at this index:
             final event = events[i];
-            final animateIn =
-                animateInEventIndex != null &&
-                timeline.events.length > animateInEventIndex &&
-                event == timeline.events[animateInEventIndex];
+            final animateIn = event.eventId == controller.animateInEventId;
 
             final nextEvent = i + 1 < events.length ? events[i + 1] : null;
             final previousEvent = i > 0 ? events[i - 1] : null;
@@ -136,15 +138,13 @@ class ChatEventList extends StatelessWidget {
                 !controller.expandedEventIds.contains(event.eventId);
 
             return AutoScrollTag(
-              key: ValueKey(event.eventId),
+              key: ValueKey(event.transactionId ?? event.eventId),
               index: i,
               controller: controller.scrollController,
               child: Message(
                 event,
+                bigEmojis: controller.bigEmojis,
                 animateIn: animateIn,
-                resetAnimateIn: () {
-                  controller.animateInEventIndex = null;
-                },
                 onSwipe: () => controller.replyAction(replyTo: event),
                 onInfoTab: controller.showEventInfo,
                 onMention: () => controller.sendController.text +=
@@ -152,8 +152,7 @@ class ChatEventList extends StatelessWidget {
                 highlightMarker:
                     controller.scrollToEventIdMarker == event.eventId,
                 onSelect: controller.onSelectMessage,
-                scrollToEventId: (String eventId) =>
-                    controller.scrollToEventId(eventId),
+                scrollToEventId: controller.scrollToEventId,
                 longPressSelect: controller.selectedEvents.isNotEmpty,
                 selected: controller.selectedEvents.any(
                   (e) => e.eventId == event.eventId,
@@ -161,7 +160,7 @@ class ChatEventList extends StatelessWidget {
                 singleSelected:
                     controller.selectedEvents.singleOrNull?.eventId ==
                     event.eventId,
-                onEdit: () => controller.editSelectedEventAction(),
+                onEdit: controller.editSelectedEventAction,
                 timeline: timeline,
                 displayReadMarker:
                     i > 0 && controller.readMarkerEventId == event.eventId,

@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:go_router/go_router.dart';
-import 'package:matrix/encryption.dart';
-import 'package:matrix/matrix.dart';
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/themes.dart';
 import 'package:fluffychat/l10n/l10n.dart';
@@ -16,6 +14,12 @@ import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:go_router/go_router.dart';
+import 'package:matrix/encryption.dart';
+import 'package:matrix/matrix.dart';
+
 import '../key_verification/key_verification_dialog.dart';
 
 class BootstrapDialog extends StatefulWidget {
@@ -71,7 +75,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
     _createBootstrap(widget.wipe);
   }
 
-  void _cancelAction() async {
+  Future<void> _cancelAction() async {
     final consent = await showOkCancelAlertDialog(
       context: context,
       title: L10n.of(context).skipChatBackup,
@@ -90,7 +94,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
     context.canPop() ? context.pop(success) : context.go('/rooms');
   }
 
-  void _decryptLastEvents() async {
+  void _decryptLastEvents() {
     for (final room in client.rooms) {
       final event = room.lastEvent;
       if (event != null &&
@@ -110,12 +114,12 @@ class BootstrapDialogState extends State<BootstrapDialog> {
     }
   }
 
-  void _createBootstrap(bool wipe) async {
+  Future<void> _createBootstrap(bool wipe) async {
     await client.roomsLoading;
     await client.accountDataLoading;
     await client.userDeviceKeysLoading;
     while (client.prevBatch == null) {
-      await client.onSync.stream.first;
+      await client.onSyncStatus.stream.first;
     }
     await client.updateUserDeviceKeys();
     _wipe = wipe;
@@ -224,7 +228,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
                   value: _recoveryKeyCopied,
                   activeColor: theme.colorScheme.primary,
                   onChanged: (b) {
-                    FluffyShare.share(key!, context);
+                    FluffyShare.share(key!, context, copyOnly: true);
                     setState(() => _recoveryKeyCopied = true);
                   },
                   title: Text(L10n.of(context).copyToClipboard),
@@ -383,6 +387,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
                                   ).wrongRecoveryKey,
                                 );
                               } catch (e, s) {
+                                if (!context.mounted) return;
                                 ErrorReporter(
                                   context,
                                   'Unable to open SSSS with recovery key',
@@ -426,6 +431,7 @@ class BootstrapDialogState extends State<BootstrapDialog> {
                                 cancelLabel: L10n.of(context).cancel,
                               );
                               if (consent != OkCancelResult.ok) return;
+                              if (!context.mounted) return;
                               final req = await showFutureLoadingDialog(
                                 context: context,
                                 delay: false,
@@ -436,11 +442,12 @@ class BootstrapDialogState extends State<BootstrapDialog> {
                                 },
                               );
                               if (req.error != null) return;
+                              if (!context.mounted) return;
                               final success = await KeyVerificationDialog(
                                 request: req.result!,
                               ).show(context);
                               if (success != true) return;
-                              if (!mounted) return;
+                              if (!context.mounted) return;
 
                               final result = await showFutureLoadingDialog(
                                 context: context,

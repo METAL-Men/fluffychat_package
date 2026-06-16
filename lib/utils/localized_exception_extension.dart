@@ -1,14 +1,19 @@
+// SPDX-FileCopyrightText: 2019-Present Christian Kußowski
+// SPDX-FileCopyrightText: 2019-Present Contributors to FluffyChat
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import 'dart:io';
 import 'dart:math';
 
+import 'package:fluffychat/l10n/l10n.dart';
+import 'package:fluffychat/utils/other_party_can_receive.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:matrix/encryption.dart';
 import 'package:matrix/matrix.dart';
 
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/other_party_can_receive.dart';
 import 'uia_request_manager.dart';
 
 extension LocalizedExceptionExtension on Object {
@@ -56,6 +61,15 @@ extension LocalizedExceptionExtension on Object {
     }
     if (this is InvalidPassphraseException) {
       return L10n.of(context).wrongRecoveryKey;
+    }
+    if (this is PlatformException) {
+      if ((this as PlatformException).code == 'CANCELED') {
+        return L10n.of(context).theProcessWasCanceled;
+      }
+      final message = (this as PlatformException).message;
+      if (message != null) {
+        return message;
+      }
     }
     if (this is BadServerLoginTypesException) {
       final serverVersions = (this as BadServerLoginTypesException)
