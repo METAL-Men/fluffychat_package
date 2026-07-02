@@ -13,7 +13,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart' hide Result;
-import 'package:matrix/matrix.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../utils/fluffy_share.dart';
@@ -97,7 +96,7 @@ class ClientChooserButton extends StatelessWidget {
           ],
         ),
       ),
-      PopupMenuItem(
+      /* PopupMenuItem(
         value: SettingsAction.support,
         child: Row(
           children: [
@@ -106,7 +105,7 @@ class ClientChooserButton extends StatelessWidget {
             Text(L10n.of(context).supportFluffyChat),
           ],
         ),
-      ),
+      ),*/
       const PopupMenuDivider(),
       for (final bundle in bundles) ...[
         if (matrix.accountBundles[bundle]!.length != 1 ||

@@ -21,16 +21,8 @@ abstract class AppConfig {
   static const double messageFontSize = 16.0;
   static const bool allowOtherHomeservers = true;
   static const bool enableRegistration = true;
-  static const bool hideTypingUsernames = false;
 
-  static const String inviteLinkPrefix = 'https://matrix.to/#/';
-  static const String deepLinkPrefix = 'im.fluffychat://chat/';
-  static const String schemePrefix = 'matrix:';
-  static const String pushNotificationsChannelId = 'fluffychat_push';
-  static const String pushNotificationsAppId = 'chat.fluffy.fluffychat';
-  static const double borderRadius = 16.0;
   static const double spaceBorderRadius = 11.0;
-  static const double columnWidth = 360.0;
 
   static const Color primaryColor = Color(0xFFC61130);
   static const Color primaryColorLight = Color(0xFF1E1E1E);

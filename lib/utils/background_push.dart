@@ -113,7 +113,10 @@ class BackgroundPush {
       firebase.setListeners(
         onMessage: (message) => pushHelper(
           PushNotification.fromJson(
-            message.tryGetMap<String, Object>('data') ?? message,
+            Map<String, Object?>.from(message).tryGetMap<String, Object>(
+                  'data',
+                ) ??
+                Map<String, Object?>.from(message),
           ),
           clients: clients,
           l10n: l10n,
@@ -421,17 +424,15 @@ class BackgroundPush {
       );
     }
     Logs().i('[Push] UnifiedPush using endpoint $endpoint');
-    final oldTokens = <String?>{};
-    try {
-      //<GOOGLE_SERVICES>final fcmToken = await firebase.getToken();
-      //<GOOGLE_SERVICES>oldTokens.add(fcmToken);
-    } catch (_) {}
-    await setupPusher(
-      gatewayUrl: endpoint,
-      token: newEndpoint,
-      oldTokens: oldTokens,
-      useDeviceSpecificAppId: true,
-    );
+
+    for (final client in clients) {
+      await setupPusher(
+        client: client,
+        gatewayUrl: endpoint,
+        token: newEndpoint,
+        useDeviceSpecificAppId: true,
+      );
+    }
     await AppSettings.unifiedPushEndpoint.setItem(newEndpoint);
     await AppSettings.unifiedPushRegistered.setItem(true);
   }
