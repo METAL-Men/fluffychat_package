@@ -373,7 +373,7 @@ class BackgroundPush {
       for (var i = 0; i < max; i++) {
         try {
           await Future.delayed(const Duration(seconds: 1));
-          //<GOOGLE_SERVICES>_fcmToken = await firebase.getToken();
+          _fcmToken = await firebase.getToken();
           if (_fcmToken != null) break;
         } catch (e, s) {
           Logs().w(
