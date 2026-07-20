@@ -34,9 +34,7 @@ class UnreadBubble extends StatelessWidget {
       decoration: BoxDecoration(
         color: room.highlightCount > 0
             ? theme.colorScheme.error
-            : hasNotifications || room.markedUnread
-            ? theme.colorScheme.onSurface
-            : theme.colorScheme.primaryContainer,
+            : theme.colorScheme.onSurface,
         borderRadius: BorderRadius.circular(unreadBubbleSize),
       ),
       child: hasNotifications || room.markedUnread
