@@ -59,6 +59,8 @@ abstract class FluffyThemes {
       tertiary: const Color(0xFFF8FAF9),
       surfaceTint: const Color(0xFF181818),
       // tertiary: const Color(0xFF818284),
+      error: AppConfig.primaryColor,
+      onError: const Color(0xFFF8FAF9),
       dynamicSchemeVariant: DynamicSchemeVariant.content,
     );
     final isColumnMode = FluffyThemes.isColumnMode(context);
