@@ -9,9 +9,6 @@ class L10nLv extends L10n {
   L10nLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'true';
-
-  @override
   String get repeatPassword => 'Atkārtot paroli';
 
   @override
@@ -75,7 +72,7 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get addToSpace => 'Pievienot kopienai';
+  String get addToSpace => 'Pievienot vietai';
 
   @override
   String get admin => 'Pārvaldītājs';
@@ -142,7 +139,7 @@ class L10nLv extends L10n {
   String get areYouSure => 'Vai tiešām?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits => 'Ir nesaglabātas izmaiņas. Atmest labojumus?';
 
   @override
   String get areYouSureYouWantToLogout => 'Vai tiešām atteikties?';
@@ -164,7 +161,6 @@ class L10nLv extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Mājasserveris nodrošina pieteikšanās veidus:\n$serverVersions\nSavukārt, šī lietotne atbalsta tikai:\n$supportedVersions';
   }
@@ -190,10 +186,10 @@ class L10nLv extends L10n {
   String get unread => 'Nelasītas';
 
   @override
-  String get space => 'Kopiena';
+  String get space => 'Vieta';
 
   @override
-  String get spaces => 'Kopienas';
+  String get spaces => 'Vietas';
 
   @override
   String get banFromChat => 'Izslēgt no tērzēšanas';
@@ -325,15 +321,7 @@ class L10nLv extends L10n {
   String get chat => 'Tērzēšana';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Tērzēšanu rezerves kopēšana iestatīta.';
-
-  @override
   String get chatBackup => 'Tērzēšanu rezerves kopēšana';
-
-  @override
-  String get chatBackupDescription =>
-      'Ziņas ir aizsargātas ar atkopes atslēgu. Lūgums nodrošināt, ka tā netiek pazaudēta.';
 
   @override
   String get chatDetails => 'Tērzēšanas izvērsums';
@@ -481,7 +469,7 @@ class L10nLv extends L10n {
   String get createGroup => 'Izveidot kopu';
 
   @override
-  String get createNewSpace => 'Jauna kopiena';
+  String get createNewSpace => 'Jauna vieta';
 
   @override
   String get currentlyActive => 'Pašreiz darbīgi';
@@ -623,9 +611,6 @@ class L10nLv extends L10n {
   String errorObtainingLocation(String error) {
     return 'Kļūda atrašanās vietas iegūšanā: $error';
   }
-
-  @override
-  String get everythingReady => 'Viss ir gatavs!';
 
   @override
   String get fileName => 'Datnes nosaukums';
@@ -933,10 +918,10 @@ class L10nLv extends L10n {
 
   @override
   String get oopsPushError =>
-      'Ups! Diemžēl atgadījās kļūda pašpiegādes paziņojumu iestatīšanas laikā.';
+      'Ak vai! Diemžēl atgadījās kļūda pašpiegādes paziņojumu iestatīšanas laikā.';
 
   @override
-  String get oopsSomethingWentWrong => 'Ups! Kaut kas nogāja greizi…';
+  String get oopsSomethingWentWrong => 'Ak vai! Kaut kas nogāja greizi…';
 
   @override
   String get openAppToReadMessages => 'Atvērt lietotni, lai lasītu ziņas';
@@ -989,9 +974,6 @@ class L10nLv extends L10n {
 
   @override
   String get passwordHasBeenChanged => 'Parole tikai nomainīta';
-
-  @override
-  String get overview => 'Pārskats';
 
   @override
   String get passwordRecoverySettings => 'Paroles atkopes iestatījumi';
@@ -1127,9 +1109,6 @@ class L10nLv extends L10n {
   String get recoveryKey => 'Atkopes atslēga';
 
   @override
-  String get recoveryKeyLost => 'Pazaudēta atkopes atslēga?';
-
-  @override
   String get send => 'Nosūtīt';
 
   @override
@@ -1215,19 +1194,16 @@ class L10nLv extends L10n {
   String get showPassword => 'Rādīt paroli';
 
   @override
-  String get presencesToggle => 'Rādīt citu lietotāju stāvokļa ziņas';
-
-  @override
   String get skip => 'Izlaist';
 
   @override
   String get sourceCode => 'Pirmkods';
 
   @override
-  String get spaceIsPublic => 'Kopiena ir publiska';
+  String get spaceIsPublic => 'Vieta ir publiska';
 
   @override
-  String get spaceName => 'Kopienas nosaukums';
+  String get spaceName => 'Vietas nosaukums';
 
   @override
   String startedACall(String senderName) {
@@ -1266,9 +1242,6 @@ class L10nLv extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Pārāk daudz pieprasījumu. Lūdzu, vēlāk mēģini vēlreiz!';
-
-  @override
-  String get transferFromAnotherDevice => 'Pārnest no citas ierīces';
 
   @override
   String get tryToSendAgain => 'Mēģināt nosūtīt vēlreiz';
@@ -1391,10 +1364,6 @@ class L10nLv extends L10n {
   String get whyDoYouWantToReportThis => 'Kādēļ vēlies ziņot par šo?';
 
   @override
-  String get wipeChatBackup =>
-      'Notīrīt tērzēšanu rezerves kopiju, lai izveidotu jaunu atkopes atslēgu?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Ar šīm adresēm var atjaunot savu paroli.';
 
@@ -1434,14 +1403,10 @@ class L10nLv extends L10n {
   String get openGallery => 'Atvērt galeriju';
 
   @override
-  String get removeFromSpace => 'Noņemt no kopienas';
+  String get removeFromSpace => 'Noņemt no vietas';
 
   @override
   String get start => 'Uzsākt';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Lai atslēgtu savas vecās ziņas, lūgums ievadīt savu atkopes atslēgu, kas tika izveidota iepriekšējā sesijā. Atkopes atslēga NAV parole.';
 
   @override
   String get markAsRead => 'Atzīmēt kā lasītu';
@@ -1554,17 +1519,6 @@ class L10nLv extends L10n {
   String get users => 'Lietotāji';
 
   @override
-  String get unlockOldMessages => 'Atslēgt vecās ziņas';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Glabāt atkopes atslēgu šīs ierīces drošajā krātuvē.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Šo atslēgu var pašrocīgi saglabāt ar sistēmas kopīgošanas dialogloga vai starpliktuves izsaukšanu.';
-
-  @override
   String get storeInAndroidKeystore => 'Glabāt Android KeyStore';
 
   @override
@@ -1605,13 +1559,10 @@ class L10nLv extends L10n {
   String get newGroup => 'Jauna kopa';
 
   @override
-  String get newSpace => 'Jauna kopiena';
+  String get newSpace => 'Jauna vieta';
 
   @override
-  String get allSpaces => 'Visas kopienas';
-
-  @override
-  String get hidePresences => 'Paslēpt stāvokļu sarakstu?';
+  String get allSpaces => 'Visas vietas';
 
   @override
   String get doNotShowAgain => 'Vairs nerādīt';
@@ -1623,7 +1574,7 @@ class L10nLv extends L10n {
 
   @override
   String get newSpaceDescription =>
-      'Kopienas ļauj apvienot tērzēšanas un būvēt privātas vai publiskas cilvēku grupas, kurus vieno kaut kas kopīgs, piemēram, zinātne, matemātika, valoda, reliģija, ķīmija, medicīna, kosmoss, datori, ceļošana, grāmatu lasīšana, kriptovalūta, kiberdrošība, aparātprogrammatūra.';
+      'Vietas ļauj apvienot tērzēšanas un veidot privātas vai publiskas kopienas.';
 
   @override
   String get encryptThisChat => 'Šifrēt šo tērzēšanu';
@@ -1691,7 +1642,7 @@ class L10nLv extends L10n {
 
   @override
   String wrongPinEntered(int seconds) {
-    return 'Ievadīts nepareizs PIN. Lūgums mēģināt vēlreiz pēc $seconds sekundēm...';
+    return 'Ievadīts nepareizs PIN. Jāmēģina vēlreiz pēc $seconds sekundēm...';
   }
 
   @override
@@ -1811,10 +1762,10 @@ class L10nLv extends L10n {
   String get createNewAddress => 'Izveidot jaunu adresi';
 
   @override
-  String get joinSpace => 'Pievienoties kopienai';
+  String get joinSpace => 'Pievienoties vietai';
 
   @override
-  String get publicSpaces => 'Publiskas kopienas';
+  String get publicSpaces => 'Publiskas vietas';
 
   @override
   String get addChatOrSubSpace => 'Pievienot tērzēšanu vai apakškopienu';
@@ -1951,7 +1902,7 @@ class L10nLv extends L10n {
 
   @override
   String goToSpace(Object space) {
-    return 'Doties uz kopienu: $space';
+    return 'Doties uz vietu: $space';
   }
 
   @override
@@ -2365,6 +2316,12 @@ class L10nLv extends L10n {
   String get moreEvents => 'Vairāk notikumu';
 
   @override
+  String get showMore => 'Show more';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
   String get declineInvitation => 'Noraidīt uzaicinājumu';
 
   @override
@@ -2382,7 +2339,7 @@ class L10nLv extends L10n {
 
   @override
   String get removeFromSpaceDescription =>
-      'Tērzēšana tiks noņemta no kopienas, bet tā joprojām būs redzama tērzēšanu sarakstā.';
+      'Tērzēšana tiks noņemta no vietas, bet tā joprojām būs redzama tērzēšanu sarakstā.';
 
   @override
   String countChats(int chats) {
@@ -2501,12 +2458,6 @@ class L10nLv extends L10n {
       'Vai tiešām? Bez tērzēšanu rezerves kopēšanas var tikt zaudēta piekļuve savām ziņām, kad tiks mainīta ierīce.';
 
   @override
-  String get loadingMessages => 'Ielādē ziņas';
-
-  @override
-  String get setupChatBackup => 'Iestatīt tērzēšanu rezerves kopēšanu';
-
-  @override
   String get noMoreResultsFound => 'Vairs nekas netika atrasts';
 
   @override
@@ -2555,115 +2506,251 @@ class L10nLv extends L10n {
       'Jau ir Matrix konts? Laipni lūdzam atpakaļ! Jāatlasa savs mājasserveris un jāpiesakās.';
 
   @override
-  String get appIntro =>
-      'Ar FluffyChat vari tērzēt ar saviem draugiem. Tā ir droša un decentralizēta [matrix] ziņapmaiņas lietotne. Vairāk var uzzināt https://matrix.org, ja ir vēlēšanās, vai vienkārši jāpiesakās.';
-
-  @override
   String get theProcessWasCanceled => 'Darbība tika atcelta.';
 
   @override
-  String get join => 'Join';
+  String get join => 'Pievienoties';
 
   @override
   String get searchOrEnterHomeserverAddress =>
-      'Search or enter homeserver address';
+      'Meklēt vai ievadīt mājasservera adresi';
 
   @override
-  String get matrixId => 'Matrix ID';
+  String get matrixId => 'Matrix Id';
 
   @override
-  String get setPowerLevel => 'Set power level';
+  String get setPowerLevel => 'Iestatīt tiesību līmeni';
 
   @override
-  String get makeModerator => 'Make moderator';
+  String get makeModerator => 'Padarīt par satura pārraudzītāju';
 
   @override
-  String get makeAdmin => 'Make admin';
+  String get makeAdmin => 'Padarīt par pārvaldītāju';
 
   @override
-  String get removeModeratorRights => 'Remove moderator rights';
+  String get removeModeratorRights => 'Noņemt satura pārraudzītāja tiesības';
 
   @override
-  String get removeAdminRights => 'Remove admin rights';
+  String get removeAdminRights => 'Noņemt pārvaldītāja tiesības';
 
   @override
-  String get powerLevel => 'Power level';
+  String get powerLevel => 'Tiesību līmenis';
 
   @override
   String get setPowerLevelDescription =>
-      'Power levels define what a member is allowed to do in this room and usually range between 0 and 100.';
+      'Tiesību līmeņi nosaka, ko dalībniekam ir ļauts darīt šajā istabā, un parasti ir starp 0 un 100.';
 
   @override
-  String get owner => 'Owner';
+  String get owner => 'Īpašnieks';
 
   @override
-  String get mute => 'Mute';
+  String get mute => 'Apklusināt';
 
   @override
-  String get createNewChat => 'Create new chat';
+  String get createNewChat => 'Izveidot jaunu tērzēšanu';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Atiestatīt';
 
   @override
-  String get supportFluffyChat => 'Support FluffyChat';
+  String get supportFluffyChat => 'Atbalstīt FluffyChat';
 
   @override
-  String get support => 'Support';
+  String get support => 'Atbalstīt';
 
   @override
-  String get setLowPriority => 'Set low priority';
+  String get setLowPriority => 'Iestatīt zemu svarīgumu';
 
   @override
-  String get unsetLowPriority => 'Unset low priority';
+  String get unsetLowPriority => 'Noņemt zemu svatīgumu';
 
   @override
-  String get removeCallFromChat => 'Remove call from chat';
+  String get playSoundOnNotification => 'Atskaņot paziņojuma skaņu';
 
   @override
-  String get removeCallFromChatDescription =>
-      'Do you want to remove the call from the chat for all members?';
+  String get addTag => 'Pievienot birku';
 
   @override
-  String get removeCallForEveryone => 'Remove call for everyone';
+  String get removeTag => 'Noņemt birku';
 
   @override
-  String get startVoiceCall => 'Start voice call';
+  String get tagName => 'Birkas nosaukums';
 
   @override
-  String get startVideoCall => 'Start video call';
+  String get createNewTag => 'Izveidot jaunu birku';
 
   @override
-  String get joinVoiceCall => 'Join voice call';
-
-  @override
-  String get joinVideoCall => 'Join video call';
-
-  @override
-  String get live => 'Live';
-
-  @override
-  String get playSoundOnNotification => 'Play sound on notification';
-
-  @override
-  String get addTag => 'Add tag';
-
-  @override
-  String get removeTag => 'Remove tag';
-
-  @override
-  String get tagName => 'Tag name';
-
-  @override
-  String get createNewTag => 'Create new tag';
-
-  @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Paslēpt istabas, kas ir vietā';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Šis laidiens bija iespējams pateicoties Tavam atbalstam. FluffyChat joprojām ir brīva, atvērta pirmkoda un pilnībā kopienas virzīta.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => 'Rādīt attēlu un video sīktēlus';
+
+  @override
+  String get appSubtitle => 'Droša [matrix] saziņa';
+
+  @override
+  String get appDescription =>
+      'Šifrēta saziņa decentralizētā [matrix] tīklā visiem vienkāršā un pieejamā veidā.';
+
+  @override
+  String get interactiveVerification => 'Mijiedarbība apliecināšana';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Ja esat viens otram blakus vai sazināties drošā veidā, tad varat apliecināt visas ierīces uzreiz ar drošības skaitļa vai emocijzīmju salīdzināšanu.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return 'Tērzēšanā ir $count neapliecinātas ierīces.';
+  }
+
+  @override
+  String get check => 'Pārbaudīt';
+
+  @override
+  String get encryptedMessage => 'Šifrēta ziņa';
+
+  @override
+  String get unencryptedMessage => 'Nešifrēta ziņa';
+
+  @override
+  String get allow => 'Ļaut';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Publiskā atslēga: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Ierīces identificēšanas atslēga';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'Unlock';
+
+  @override
+  String get openFile => 'Open file';
+
+  @override
+  String get resetAccountWarning =>
+      'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'New passphrase';
+
+  @override
+  String get repeatPassphrase => 'Repeat passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrases match';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Save as file';
+
+  @override
+  String get youAreReadyToStart => 'You are ready to start!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

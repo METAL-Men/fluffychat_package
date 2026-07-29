@@ -9,9 +9,6 @@ class L10nUz extends L10n {
   L10nUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'true';
-
-  @override
   String get repeatPassword => 'Parolni takrorlang';
 
   @override
@@ -167,7 +164,6 @@ class L10nUz extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Homeserver quyidagi kirish turlarini qo\'llab-quvvatlaydi:\n$serverVersions\nLekin bu ilova faqat quyidagi turlarni qo\'llab-quvvatlaydi:\n$supportedVersions';
   }
@@ -328,14 +324,7 @@ class L10nUz extends L10n {
   String get chat => 'Suhbat';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Suhbat zaxirangiz sozlandi.';
-
-  @override
   String get chatBackup => 'Suhbat zaxirasi';
-
-  @override
-  String get chatBackupDescription =>
-      'Eski xabarlaringiz tiklash kaliti bilan himoyalangan. Uni yo‘qotib qo‘ymasligingizga ishonch hosil qiling.';
 
   @override
   String get chatDetails => 'Suhbat tafsilotlari';
@@ -625,9 +614,6 @@ class L10nUz extends L10n {
   String errorObtainingLocation(String error) {
     return 'Joylashuv axboroti olinmadi: $error';
   }
-
-  @override
-  String get everythingReady => 'Hammasi tayyor!';
 
   @override
   String get fileName => 'Fayl nomi';
@@ -991,9 +977,6 @@ class L10nUz extends L10n {
   String get passwordHasBeenChanged => 'Parol oʻzgartirildi';
 
   @override
-  String get overview => 'Umumiy ma\'lumot';
-
-  @override
   String get passwordRecoverySettings => 'Parolni qayta tiklash sozlamalari';
 
   @override
@@ -1127,9 +1110,6 @@ class L10nUz extends L10n {
   String get recoveryKey => 'Tiklash kaliti';
 
   @override
-  String get recoveryKeyLost => 'Tiklash kaliti yo‘qolib qoldimi?';
-
-  @override
   String get send => 'Yuborish';
 
   @override
@@ -1215,10 +1195,6 @@ class L10nUz extends L10n {
   String get showPassword => 'Parolni ko‘rsatish';
 
   @override
-  String get presencesToggle =>
-      'Boshqa foydalanuvchilarning holat xabarlarini ko‘rsatish';
-
-  @override
   String get skip => 'Tashlab ketish';
 
   @override
@@ -1267,9 +1243,6 @@ class L10nUz extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Talablar soni oshib ketdi. Keyinroq qayta urining!';
-
-  @override
-  String get transferFromAnotherDevice => 'Boshqa qurilmadan uzatish';
 
   @override
   String get tryToSendAgain => 'Qayta yuborishga urining';
@@ -1391,10 +1364,6 @@ class L10nUz extends L10n {
       'Nima uchun bu haqda xabar bermoqchisiz?';
 
   @override
-  String get wipeChatBackup =>
-      'Yangi tiklash kalitini yaratish uchun suhbat zaxirasi tozalansinmi?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Ushbu manzillar yordamida parolingizni tiklashingiz mumkin.';
 
@@ -1437,10 +1406,6 @@ class L10nUz extends L10n {
 
   @override
   String get start => 'Boshlash';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Eski xabarlaringizni qulfdan chiqarish uchun, iltimos, avvalgi seansdan yaratilgan tiklash kalitingizni kiriting. Sizning tiklash kalitingiz parolingiz EMAS.';
 
   @override
   String get markAsRead => 'Oʻqilgan sifatida belgilash';
@@ -1554,17 +1519,6 @@ class L10nUz extends L10n {
   String get users => 'Foydalanuvchilar';
 
   @override
-  String get unlockOldMessages => 'Eski xabarlarni qulfdan chiqaring';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Qayta tiklash kalitini ushbu qurilmaning xavfsiz xotirasida saqlang.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Tizim ulashish dialog oynasi yoki buferni ishga tushirish orqali ushbu kalitni qoʻlda saqlang.';
-
-  @override
   String get storeInAndroidKeystore => 'Android KeyStoreʼda saqlang';
 
   @override
@@ -1611,9 +1565,6 @@ class L10nUz extends L10n {
 
   @override
   String get allSpaces => 'Barcha maydonlar';
-
-  @override
-  String get hidePresences => 'Holat roʻyxati yashirilsinmi?';
 
   @override
   String get doNotShowAgain => 'Qaytib koʻrsatilmasin';
@@ -2376,6 +2327,12 @@ class L10nUz extends L10n {
   String get moreEvents => 'Boshqa hodisalar';
 
   @override
+  String get showMore => 'Show more';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
   String get declineInvitation => 'Taklifni rad etish';
 
   @override
@@ -2510,12 +2467,6 @@ class L10nUz extends L10n {
       'Ishonchingiz komilmi? Chat zaxirasini yoqmasdan qurilmangizni almashtirsangiz, xabarlaringizga kira olmay qolishingiz mumkin.';
 
   @override
-  String get loadingMessages => 'Xabarlar yuklanmoqda';
-
-  @override
-  String get setupChatBackup => 'Chat zaxirasini sozlash';
-
-  @override
   String get noMoreResultsFound => 'Boshqa natijalar topilmadi';
 
   @override
@@ -2563,10 +2514,6 @@ class L10nUz extends L10n {
   @override
   String get signInGreeting =>
       'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
-
-  @override
-  String get appIntro =>
-      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
 
   @override
   String get theProcessWasCanceled => 'The process was canceled.';
@@ -2628,31 +2575,6 @@ class L10nUz extends L10n {
   String get unsetLowPriority => 'Unset low priority';
 
   @override
-  String get removeCallFromChat => 'Remove call from chat';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Do you want to remove the call from the chat for all members?';
-
-  @override
-  String get removeCallForEveryone => 'Remove call for everyone';
-
-  @override
-  String get startVoiceCall => 'Start voice call';
-
-  @override
-  String get startVideoCall => 'Start video call';
-
-  @override
-  String get joinVoiceCall => 'Join voice call';
-
-  @override
-  String get joinVideoCall => 'Join video call';
-
-  @override
-  String get live => 'Live';
-
-  @override
   String get playSoundOnNotification => 'Play sound on notification';
 
   @override
@@ -2676,4 +2598,169 @@ class L10nUz extends L10n {
 
   @override
   String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+
+  @override
+  String get appSubtitle => 'Secure [matrix] Communication';
+
+  @override
+  String get appDescription =>
+      'Communicate encrypted over the decentralized [matrix] network in an easy and accessible way for everyone.';
+
+  @override
+  String get interactiveVerification => 'Interactive verification';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count unverified devices in the chat.';
+  }
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get encryptedMessage => 'Encrypted message';
+
+  @override
+  String get unencryptedMessage => 'Unencrypted message';
+
+  @override
+  String get allow => 'Allow';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Public key: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Device identity key';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'Unlock';
+
+  @override
+  String get openFile => 'Open file';
+
+  @override
+  String get resetAccountWarning =>
+      'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'New passphrase';
+
+  @override
+  String get repeatPassphrase => 'Repeat passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrases match';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Save as file';
+
+  @override
+  String get youAreReadyToStart => 'You are ready to start!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

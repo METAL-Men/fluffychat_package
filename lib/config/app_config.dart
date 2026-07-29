@@ -53,6 +53,8 @@ abstract class AppConfig {
       'https://github.com/krille-chan/fluffychat';
   static const String supportUrl = 'https://metal.men/connect-app-help';
   static const String changelogUrl = 'https://fluffy.chat/en/changelog/';
+  static const String helpUrl =
+      'https://fluffychat.im/faq/#how_can_i_support_fluffychat';
 
   static const Set<String> defaultReactions = {'👍', '❤️', '😂', '😮', '😢'};
 

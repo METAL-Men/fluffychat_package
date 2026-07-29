@@ -9,9 +9,6 @@ class L10nEt extends L10n {
   L10nEt([String locale = 'et']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'väär';
-
-  @override
   String get repeatPassword => 'Korda salasõna';
 
   @override
@@ -142,7 +139,7 @@ class L10nEt extends L10n {
   String get areYouSure => 'Kas sa oled kindel?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits => 'Sul on salvestamata muudatusi. Kas loobud neist?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -165,7 +162,6 @@ class L10nEt extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'See koduserver toetab Matrixi võrku sisselogimiseks:\n$serverVersions\nAga see rakendus toetab vaid järgmisi võimalusi:\n$supportedVersions';
   }
@@ -325,15 +321,7 @@ class L10nEt extends L10n {
   String get chat => 'Vestlus';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Sinu vestluste varundus on seadistatud.';
-
-  @override
   String get chatBackup => 'Varunda vestlus';
-
-  @override
-  String get chatBackupDescription =>
-      'Sinu vestluste varukoopia on krüptitud taastamiseks mõeldud turvavõtmega. Palun vaata, et sa seda ei kaota.';
 
   @override
   String get chatDetails => 'Vestluse teave';
@@ -352,7 +340,7 @@ class L10nEt extends L10n {
 
   @override
   String get commandHint_markasdm =>
-      'Märgi otsevestusluseks antud Matrixi ID jaoks';
+      'Märgi otsevestluseks antud Matrixi ID jaoks';
 
   @override
   String get commandHint_markasgroup => 'Märgi jututoaks';
@@ -395,10 +383,11 @@ class L10nEt extends L10n {
 
   @override
   String get commandHint_myroomavatar =>
-      'Määra selles jututoas oma tunnuspilt (mxc-uri vahendusel)';
+      'Seadista selles jututoas oma tunnuspilt (mxc-uri vahendusel)';
 
   @override
-  String get commandHint_myroomnick => 'Määra selles jututoas oma kuvatav nimi';
+  String get commandHint_myroomnick =>
+      'Seadista selles jututoas oma kuvatav nimi';
 
   @override
   String get commandHint_op => 'Seadista selle kasutaja õigusi (vaikimisi: 50)';
@@ -410,7 +399,7 @@ class L10nEt extends L10n {
   String get commandHint_react => 'Saada vastus reaktsioonina';
 
   @override
-  String get commandHint_send => 'Saada sõnum';
+  String get commandHint_send => 'Saada tekst';
 
   @override
   String get commandHint_unban =>
@@ -421,11 +410,11 @@ class L10nEt extends L10n {
 
   @override
   String commandMissing(String command) {
-    return '$command ei ole käsk.';
+    return '„$command“ ei ole käsk.';
   }
 
   @override
-  String get compareEmojiMatch => 'Palun võrdle emotikone';
+  String get compareEmojiMatch => 'Palun võrdle emojisid';
 
   @override
   String get compareNumbersMatch => 'Palun võrdle numbreid';
@@ -486,7 +475,7 @@ class L10nEt extends L10n {
   String get currentlyActive => 'Hetkel aktiivne';
 
   @override
-  String get darkTheme => 'Tume';
+  String get darkTheme => 'Tume kujundus';
 
   @override
   String dateAndTimeOfDay(String date, String timeOfDay) {
@@ -540,7 +529,7 @@ class L10nEt extends L10n {
   String get editDisplayname => 'Muuda kuvatavat nime';
 
   @override
-  String get editRoomAliases => 'Muuda jututoa aliast';
+  String get editRoomAliases => 'Muuda jututoa aliasi';
 
   @override
   String get editRoomAvatar => 'Muuda jututoa tunnuspilti';
@@ -624,16 +613,13 @@ class L10nEt extends L10n {
   }
 
   @override
-  String get everythingReady => 'Kõik on valmis!';
-
-  @override
-  String get fileName => 'Faili nimi';
+  String get fileName => 'Failinimi';
 
   @override
   String get fluffychat => 'FluffyChat';
 
   @override
-  String get fontSize => 'Fondi suurus';
+  String get fontSize => 'Kirjatüübi suurus';
 
   @override
   String get forward => 'Edasta';
@@ -672,7 +658,7 @@ class L10nEt extends L10n {
 
   @override
   String hasWithdrawnTheInvitationFor(String username, String targetName) {
-    return '$username on võtnud tagasi $targetName kutse';
+    return '$username on võtnud tagasi kutse kasutajale $targetName';
   }
 
   @override
@@ -693,7 +679,7 @@ class L10nEt extends L10n {
       'Peida vigase või tundmatu vorminguga sõnumid';
 
   @override
-  String get id => 'ID';
+  String get id => 'Tunnus';
 
   @override
   String get block => 'Blokeeri';
@@ -791,7 +777,7 @@ class L10nEt extends L10n {
   String get leftTheChat => 'Lahkus vestlusest';
 
   @override
-  String get lightTheme => 'Hele';
+  String get lightTheme => 'Hele kujundus';
 
   @override
   String loadCountMoreParticipants(int count) {
@@ -807,7 +793,7 @@ class L10nEt extends L10n {
       'Seda tegevust ei saa tagasi pöörata. Palun kontrolli, et sa oled varukoopia turvaliselt salvestanud.';
 
   @override
-  String get hydrate => 'Taasta varundatud failist';
+  String get hydrate => 'Taasta varundusfailist';
 
   @override
   String get loadingPleaseWait => 'Laadin andmeid… Palun oota.';
@@ -835,7 +821,7 @@ class L10nEt extends L10n {
   String get logout => 'Logi välja';
 
   @override
-  String get mention => 'Märgi ära';
+  String get mention => 'Maini';
 
   @override
   String get messages => 'Sõnumid';
@@ -857,7 +843,7 @@ class L10nEt extends L10n {
   String get newChat => 'Uus vestlus';
 
   @override
-  String get newMessageInFluffyChat => '💬 Uus sõnum FluffyChat\'i vahendusel';
+  String get newMessageInFluffyChat => '💬 Uus sõnum FluffyChati vahendusel';
 
   @override
   String get newVerificationRequest => 'Uus verifitseerimispäring!';
@@ -904,7 +890,7 @@ class L10nEt extends L10n {
   String get noPermission => 'Õigused puuduvad';
 
   @override
-  String get noRoomsFound => 'Jututubasid ei leidunud…';
+  String get noRoomsFound => 'Jututube ei leidu…';
 
   @override
   String get notifications => 'Teavitused';
@@ -918,13 +904,13 @@ class L10nEt extends L10n {
   String get obtainingLocation => 'Tuvastan asukohta…';
 
   @override
-  String get offline => 'Väljas';
+  String get offline => 'Pole võrgus';
 
   @override
   String get ok => 'Sobib';
 
   @override
-  String get online => 'Saadaval';
+  String get online => 'Võrgus';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -932,10 +918,10 @@ class L10nEt extends L10n {
 
   @override
   String get oopsPushError =>
-      'Hopsti! Kahjuks tekkis tõuketeavituste seadistamisel viga.';
+      'Vaat kus lops! Kahjuks tekkis tõuketeavituste seadistamisel viga.';
 
   @override
-  String get oopsSomethingWentWrong => 'Hopsti! Midagi läks nüüd viltu…';
+  String get oopsSomethingWentWrong => 'Vaat kus lops! Midagi läks nüüd viltu…';
 
   @override
   String get openAppToReadMessages => 'Sõnumite lugemiseks ava rakendus';
@@ -945,7 +931,7 @@ class L10nEt extends L10n {
 
   @override
   String get oneClientLoggedOut =>
-      'Üks sinu klientrakendustest on Matrix\'i võrgust välja loginud';
+      'Üks sinu klientrakendustest on Matrixi võrgust välja loginud';
 
   @override
   String get addAccount => 'Lisa kasutajakonto';
@@ -989,9 +975,6 @@ class L10nEt extends L10n {
 
   @override
   String get passwordHasBeenChanged => 'Salasõna on muudetud';
-
-  @override
-  String get overview => 'Ülevaade';
 
   @override
   String get passwordRecoverySettings => 'Salasõna taastamise seadistused';
@@ -1041,7 +1024,7 @@ class L10nEt extends L10n {
   String get publicRooms => 'Avalikud jututoad';
 
   @override
-  String get pushRules => 'Tõukereeglid';
+  String get pushRules => 'Tõuketeenuse reeglid';
 
   @override
   String get reason => 'Põhjus';
@@ -1125,9 +1108,6 @@ class L10nEt extends L10n {
 
   @override
   String get recoveryKey => 'Taastevõti';
-
-  @override
-  String get recoveryKeyLost => 'Kas taasetvõti on kadunud?';
 
   @override
   String get send => 'Saada';
@@ -1215,9 +1195,6 @@ class L10nEt extends L10n {
   String get showPassword => 'Näita salasõna';
 
   @override
-  String get presencesToggle => 'Näita teiste kasutajate olekuteateid';
-
-  @override
   String get skip => 'Jäta vahele';
 
   @override
@@ -1268,9 +1245,6 @@ class L10nEt extends L10n {
       'Liiga palju päringuid. Palun proovi hiljem uuesti!';
 
   @override
-  String get transferFromAnotherDevice => 'Tõsta teisest seadmest';
-
-  @override
   String get tryToSendAgain => 'Proovi uuesti saata';
 
   @override
@@ -1296,7 +1270,7 @@ class L10nEt extends L10n {
   }
 
   @override
-  String get unmuteChat => 'Lõpeta vestluse vaigistamine';
+  String get unmuteChat => 'Lõpeta vestluse summutamine';
 
   @override
   String get unpin => 'Eemalda esiletõstmine';
@@ -1392,10 +1366,6 @@ class L10nEt extends L10n {
   String get whyDoYouWantToReportThis => 'Miks sa soovid sellest teatada?';
 
   @override
-  String get wipeChatBackup =>
-      'Kas kustutame sinu vestluste varukoopia ja loome uue taastamiseks mõeldud krüptovõtme?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Nende e-posti aadresside abil saad taastada oma salasõna.';
 
@@ -1439,10 +1409,6 @@ class L10nEt extends L10n {
 
   @override
   String get start => 'Alusta';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Vanade sõnumite lugemiseks palun siseta oma varasemas sessioonis loodud taastevõti. Taastamiseks mõeldud krüptovõti EI OLE sinu salasõna.';
 
   @override
   String get markAsRead => 'Märgi loetuks';
@@ -1556,17 +1522,6 @@ class L10nEt extends L10n {
   String get users => 'Kasutajad';
 
   @override
-  String get unlockOldMessages => 'Muuda vanad sõnumid loetavaks';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Salvesta taastevõti selle seadme turvahoidlas.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Salvesta see krüptovõti kasutades selle süsteemi jagamisvalikuid või lõikelauda.';
-
-  @override
   String get storeInAndroidKeystore => 'Vali salvestuskohaks Android KeyStore';
 
   @override
@@ -1612,9 +1567,6 @@ class L10nEt extends L10n {
 
   @override
   String get allSpaces => 'Kõik kogukonnad';
-
-  @override
-  String get hidePresences => 'Peida olekute loend?';
 
   @override
   String get doNotShowAgain => 'Ära näita uuesti';
@@ -2374,6 +2326,12 @@ class L10nEt extends L10n {
   String get moreEvents => 'Veel sündmusi';
 
   @override
+  String get showMore => 'Näita veel';
+
+  @override
+  String get showLess => 'Näita vähem';
+
+  @override
   String get declineInvitation => 'Keeldu kutsest';
 
   @override
@@ -2508,12 +2466,6 @@ class L10nEt extends L10n {
       'Kas oled kindel? Kui sa pole lülitanud sisse vestluste krüptovõtmete varundust, siis võid oma seadme vahetamisel kaotada ligipääsu oma senistele sõnumitele.';
 
   @override
-  String get loadingMessages => 'Laadin sõnumeid';
-
-  @override
-  String get setupChatBackup => 'Võta kasutusele vestluste varundus';
-
-  @override
   String get noMoreResultsFound => 'Rohkem tulemusi ei leidu';
 
   @override
@@ -2560,10 +2512,6 @@ class L10nEt extends L10n {
   @override
   String get signInGreeting =>
       'Sul juba on Matrixi kasutajakonto olemas? Tere tulemast tagasi! Vali oma koduserver ja logi sisse.';
-
-  @override
-  String get appIntro =>
-      'FluffyChati abil saad suhelda oma sõpradega. See on turvaline ja hajutatud sõnumiklient [matrix]-i võrgus! Lisateavet leiad https://matrix.org saidist või lihtsalt liitu.';
 
   @override
   String get theProcessWasCanceled => 'Protsess on katkestatud.';
@@ -2625,31 +2573,6 @@ class L10nEt extends L10n {
   String get unsetLowPriority => 'Eemalda märkimine vähetähtsaks';
 
   @override
-  String get removeCallFromChat => 'Eemalda kõne vestlusest';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Kas sa soovid antud kõne selle vestluse kõikidelt kasutajatelt eemaldada?';
-
-  @override
-  String get removeCallForEveryone => 'Eemalda kõne kõigilt';
-
-  @override
-  String get startVoiceCall => 'Algata häälkõne';
-
-  @override
-  String get startVideoCall => 'Algata videokõne';
-
-  @override
-  String get joinVoiceCall => 'Liitu häälkõnega';
-
-  @override
-  String get joinVideoCall => 'Liitu videokõnega';
-
-  @override
-  String get live => 'Reaalajas';
-
-  @override
   String get playSoundOnNotification => 'Lisa teavitusele helimärguanne';
 
   @override
@@ -2665,12 +2588,177 @@ class L10nEt extends L10n {
   String get createNewTag => 'Lisa uus silt';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Peida jututoad, mis on osa kogukonnast';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Selle versiooni väljaandmine oli võimalik vaid sinu toetusele. FluffyChat jääb vabaks, avatud lähtekoodi põhiseks ja kogukonnakeskseks.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => 'Näita piltide ja videote pisipilte';
+
+  @override
+  String get appSubtitle => 'Turvaline suhtlus [matrix]\'i võrgus';
+
+  @override
+  String get appDescription =>
+      'Suhtle krüptitult hajutatud [matrix] võrgustikus viisil, mis on lihtne ja kõigile kättesaadav.';
+
+  @override
+  String get interactiveVerification => 'Interaktiivne verifitseerimine';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Kui asute üksteise kõrval või kasutate turvalist suhtluskanalit, siis võite kohe verifitseerida üksteise seadmed võrreldes numbreid või emojisid.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return 'Selles vestluses on $count verifitseerimata seadet.';
+  }
+
+  @override
+  String get check => 'Kontrolli';
+
+  @override
+  String get encryptedMessage => 'Krüptitud sõnum';
+
+  @override
+  String get unencryptedMessage => 'Krüptimata sõnum';
+
+  @override
+  String get allow => 'Luba';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Sinu sõnum on läbivalt krüptitud ja seda saab lugeda vaid see kasutaja:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Sinu sõnum on läbivalt krüptitud ja seda saavad lugeda vaid need kasutajad:';
+
+  @override
+  String publicKey(String key) {
+    return 'Avalik võti: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Seadme identiteedi võti';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Selle seadme verifitseerimiseks ja krüptitud sõnumite varunduse kasutamiseks palun sisesta oma kasutajakonto salafraas või taastevõti.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Selle sessiooni verifitseerimiseks palun vali üks oma muudets seadmetest:';
+
+  @override
+  String get resetAccount => 'Lähtesta kasutajakonto';
+
+  @override
+  String get restoreCryptoIdentity => 'Taasta krüptoidentiteet';
+
+  @override
+  String get resetCryptoIdentity => 'Lähtesta krüptoidentiteet';
+
+  @override
+  String get setUpCryptoIdentity => 'Seadista krüptoidentiteet';
+
+  @override
+  String get waitingForKeys =>
+      'Ootan võtmete laadimist… Palun hoia teine seade aktiivsena.';
+
+  @override
+  String get noKeysTransmitted =>
+      'Mitte mingeid krüptovõtmeid ei edastatud. Palun proovi uuesti.';
+
+  @override
+  String get unlock => 'Ava lukustus';
+
+  @override
+  String get openFile => 'Ava fail';
+
+  @override
+  String get resetAccountWarning =>
+      'Kui sa lähtestad oma kasutajakonto, siis kaotad igaveseks ligipääsu oma vanadele sõnumitele. Lisaks vajavad kõik sinu praegused seadmed uuesti verifitseerimist. Palun võta selline toiming ette vaid siis, kui sul pole jäänud alles enam mitte ühtegi teist seadet oma sessiooni verifitseerimiseks ning sa oled kaotanud oma taastevõtme ja salafraasi!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat kasutab läbivat krüptimist. Et sa ei kaotaks oma sõnumeid, turvaks oma krüptidentitedi ja krüptiks sõnumite varunduse, siis palun sisesta korralik ja tugev salafraas.';
+
+  @override
+  String get newPassphrase => 'Uus salafraas';
+
+  @override
+  String get repeatPassphrase => 'Korda salafraasi';
+
+  @override
+  String get passphrasesMatch => 'Salafraasid klapivad';
+
+  @override
+  String get passphraseLengthRequirement => 'Vähemalt 12 tähemärki pikk.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Sisaldab suur- ja väiketähti.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement => 'Sisaldab erimärke.';
+
+  @override
+  String get passphraseNumberRequirement => 'Sisaldab vähemat ühte numbrit.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Selleks, et saaksid hiljem oma krüptitud sõnumeid ja krüptoidentiteeti taastada, palun tähenda taastevõti turvaliselt üles ja talleta kas moodsas digitaalses salasõnalaekas või vana kooli seifis.';
+
+  @override
+  String get saveAsFile => 'Salvesta failina';
+
+  @override
+  String get youAreReadyToStart => 'Sa oled valmis alustama!';
+
+  @override
+  String get noUserKeyFound => 'Kasutaja võtit ei leidu';
+
+  @override
+  String knownSince(String date) {
+    return 'Teada alates: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Allkirjastamata seade';
+
+  @override
+  String get signedDevice => 'Allkirjastatud seade';
+
+  @override
+  String get noCurve25519KeyFound => 'Ühtegi curve25519 võtit ei leidu';
+
+  @override
+  String get messageNotDecryptable => 'Sõnum pole dekrüptitav';
+
+  @override
+  String get today => 'Täna';
+
+  @override
+  String get sending => 'Saadan';
+
+  @override
+  String get generatingThumbnail => 'Koostan pisipilti';
+
+  @override
+  String get encrypting => 'Krüptin';
+
+  @override
+  String get uploading => 'Laadin üles';
+
+  @override
+  String get edited => '(muudetud)';
+
+  @override
+  String get couldNotBeSent => 'Saatmine ei õnnestunud';
+
+  @override
+  String get yesterday => 'Eile';
 }

@@ -10,7 +10,6 @@ import 'package:fluffychat/pages/chat_list/chat_list_item.dart';
 import 'package:fluffychat/pages/chat_list/dummy_chat_list_item.dart';
 import 'package:fluffychat/pages/chat_list/search_title.dart';
 import 'package:fluffychat/pages/chat_list/space_view.dart';
-import 'package:fluffychat/pages/chat_list/status_msg_list.dart';
 import 'package:fluffychat/utils/stream_extension.dart';
 import 'package:fluffychat/widgets/adaptive_dialogs/public_room_dialog.dart';
 import 'package:fluffychat/widgets/avatar.dart';
@@ -129,18 +128,12 @@ class ChatListViewBody extends StatelessWidget {
                           ),
                   ),
                 ],
-                if (!controller.isSearchMode && AppSettings.showPresences.value)
-                  GestureDetector(
-                    onLongPress: controller.dismissStatusList,
-                    child: StatusMessageList(
-                      onStatusEdit: controller.setStatus,
-                    ),
-                  ),
                 if (client.rooms.isNotEmpty && !controller.isSearchMode)
-                  SizedBox(
-                    height: 64,
+                  Container(
+                    height: 36 + 8 + 8,
+                    padding: EdgeInsets.symmetric(vertical: 8),
                     child: ListView(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
                       children: [
@@ -151,12 +144,14 @@ class ChatListViewBody extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 4.0,
                                 ),
-                                child: FilterChip(
-                                  selected: filter == controller.activeFilter,
-                                  onSelected: (_) =>
-                                      controller.setActiveFilter(filter, null),
-                                  label: Text(
-                                    filter.toLocalizedString(context),
+                                child: Center(
+                                  child: FilterChip(
+                                    selected: filter == controller.activeFilter,
+                                    onSelected: (_) => controller
+                                        .setActiveFilter(filter, null),
+                                    label: Text(
+                                      filter.toLocalizedString(context),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -166,13 +161,15 @@ class ChatListViewBody extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                               horizontal: 4.0,
                             ),
-                            child: FilterChip(
-                              selected: entry.key == controller.activeTag,
-                              onSelected: (_) => controller.setActiveFilter(
-                                ActiveFilter.tag,
-                                entry.key,
+                            child: Center(
+                              child: FilterChip(
+                                selected: entry.key == controller.activeTag,
+                                onSelected: (_) => controller.setActiveFilter(
+                                  ActiveFilter.tag,
+                                  entry.key,
+                                ),
+                                label: Text(entry.key.replaceFirst('u.', '')),
                               ),
-                              label: Text(entry.key.replaceFirst('u.', '')),
                             ),
                           ),
                         ),
@@ -236,22 +233,25 @@ class ChatListViewBody extends StatelessWidget {
                 ),
               ),
             if (client.prevBatch != null)
-              SliverList.builder(
-                itemCount: rooms.length,
-                itemBuilder: (BuildContext context, int i) {
-                  final room = rooms[i];
-                  final space = spaceDelegateCandidates[room.id];
-                  return ChatListItem(
-                    room,
-                    space: space,
-                    key: Key('chat_list_item_${room.id}'),
-                    filter: filter,
-                    onTap: () => controller.onChatTap(room),
-                    onLongPress: (context) =>
-                        controller.chatContextAction(room, context, space),
-                    activeChat: controller.activeChat == room.id,
-                  );
-                },
+              SliverSafeArea(
+                top: false,
+                sliver: SliverList.builder(
+                  itemCount: rooms.length,
+                  itemBuilder: (BuildContext context, int i) {
+                    final room = rooms[i];
+                    final space = spaceDelegateCandidates[room.id];
+                    return ChatListItem(
+                      room,
+                      space: space,
+                      key: Key('chat_list_item_${room.id}'),
+                      filter: filter,
+                      onTap: () => controller.onChatTap(room),
+                      onLongPress: (context) =>
+                          controller.chatContextAction(room, context, space),
+                      activeChat: controller.activeChat == room.id,
+                    );
+                  },
+                ),
               ),
           ],
         );

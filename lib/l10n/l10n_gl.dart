@@ -9,9 +9,6 @@ class L10nGl extends L10n {
   L10nGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'falso';
-
-  @override
   String get repeatPassword => 'Repite o contrasinal';
 
   @override
@@ -142,7 +139,7 @@ class L10nGl extends L10n {
   String get areYouSure => 'Tes a certeza?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits => 'Ten cambios sen gardar. Desbotar a edición?';
 
   @override
   String get areYouSureYouWantToLogout => 'Tes a certeza de querer saír?';
@@ -163,7 +160,6 @@ class L10nGl extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'O servidor soporta as seguintes formas de conexión:\n$serverVersions\nPero esta app só soporta:\n$supportedVersions';
   }
@@ -324,15 +320,7 @@ class L10nGl extends L10n {
   String get chat => 'Conversa';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Configurouse a copia de apoio da charla.';
-
-  @override
   String get chatBackup => 'Copia de apoio';
-
-  @override
-  String get chatBackupDescription =>
-      'As mensaxes están protexidas cunha clave de recuperación. Pon coidado e non a perdas.';
 
   @override
   String get chatDetails => 'Detalles da conversa';
@@ -621,9 +609,6 @@ class L10nGl extends L10n {
   String errorObtainingLocation(String error) {
     return 'Erro ao obter a localización: $error';
   }
-
-  @override
-  String get everythingReady => 'Todo preparado!';
 
   @override
   String get fileName => 'Nome do ficheiro';
@@ -991,9 +976,6 @@ class L10nGl extends L10n {
   String get passwordHasBeenChanged => 'Cambiouse o contrasinal';
 
   @override
-  String get overview => 'Vista xeral';
-
-  @override
   String get passwordRecoverySettings =>
       'Axustes de recuperación do contrasinal';
 
@@ -1127,9 +1109,6 @@ class L10nGl extends L10n {
   String get recoveryKey => 'Chave de recuperación';
 
   @override
-  String get recoveryKeyLost => 'Perdeches a chave de recuperación?';
-
-  @override
   String get send => 'Enviar';
 
   @override
@@ -1215,9 +1194,6 @@ class L10nGl extends L10n {
   String get showPassword => 'Amosar contrasinal';
 
   @override
-  String get presencesToggle => 'Mostra mensaxes de estado de outras usuarias';
-
-  @override
   String get skip => 'Saltar';
 
   @override
@@ -1266,9 +1242,6 @@ class L10nGl extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Demasiadas solicitudes. Inténtao máis tarde!';
-
-  @override
-  String get transferFromAnotherDevice => 'Transferir desde outro dispositivo';
 
   @override
   String get tryToSendAgain => 'Inténtao outra vez';
@@ -1392,10 +1365,6 @@ class L10nGl extends L10n {
   String get whyDoYouWantToReportThis => 'Por que queres denunciar esto?';
 
   @override
-  String get wipeChatBackup =>
-      'Queres eliminar a copia de apoio e crear unha nova chave de recuperación?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Con estos enderezos podes recuperar o contrasinal.';
 
@@ -1438,10 +1407,6 @@ class L10nGl extends L10n {
 
   @override
   String get start => 'Comezar';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Para desbloquear as mensaxes antigas, escribe a chave de recuperación creada nunha sesión existente. A chave de recuperación NON é o teu contrasinal.';
 
   @override
   String get markAsRead => 'Marcar como lido';
@@ -1553,17 +1518,6 @@ class L10nGl extends L10n {
   String get users => 'Usuarias';
 
   @override
-  String get unlockOldMessages => 'Desbloquear mensaxes antigas';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Gardar a chave de recuperación na almacenaxe segura deste dispositivo.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Garda esta chave manualmente usando o sistema para compartir do dispositivo ou portapapeis.';
-
-  @override
   String get storeInAndroidKeystore => 'Gardar en Android KeyStore';
 
   @override
@@ -1610,9 +1564,6 @@ class L10nGl extends L10n {
 
   @override
   String get allSpaces => 'Todos os espazos';
-
-  @override
-  String get hidePresences => 'Agochar Lista de estados?';
 
   @override
   String get doNotShowAgain => 'Non mostrar outra vez';
@@ -2365,6 +2316,12 @@ class L10nGl extends L10n {
   String get moreEvents => 'Máis eventos';
 
   @override
+  String get showMore => 'Mostrar máis';
+
+  @override
+  String get showLess => 'Mostrar menos';
+
+  @override
   String get declineInvitation => 'Rexeitar o convite';
 
   @override
@@ -2499,12 +2456,6 @@ class L10nGl extends L10n {
       'Tes certeza? A non activar a copia de apoio da conversa poderías perder o acceso ás mensaxes se cambias de dispositivo.';
 
   @override
-  String get loadingMessages => 'Cargando mensaxes';
-
-  @override
-  String get setupChatBackup => 'Configurar copia de apoio';
-
-  @override
   String get noMoreResultsFound => 'Non hai máis resultados';
 
   @override
@@ -2551,10 +2502,6 @@ class L10nGl extends L10n {
   @override
   String get signInGreeting =>
       'Xa tes unha conta en Matrix? Benvida! Selecciona o teu servidor de orixe e accede.';
-
-  @override
-  String get appIntro =>
-      'Con FluffyChat podes conversar coas amizades. É mensaxería segura e descentralizada en [matrix]! Coñece máis en https://matrix.org ou crea unha conta.';
 
   @override
   String get theProcessWasCanceled => 'Desbotouse o proceso.';
@@ -2616,31 +2563,6 @@ class L10nGl extends L10n {
   String get unsetLowPriority => 'Non establecer prioridade baixa';
 
   @override
-  String get removeCallFromChat => 'Eliminar a chamada da conversa';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Queres eliminar a chamada da conversa para todos os membros?';
-
-  @override
-  String get removeCallForEveryone => 'Eliminar para todos a chamada';
-
-  @override
-  String get startVoiceCall => 'Iniciar chamada de voz';
-
-  @override
-  String get startVideoCall => 'Iniciar chamada de vídeo';
-
-  @override
-  String get joinVoiceCall => 'Unirse á chamada de voz';
-
-  @override
-  String get joinVideoCall => 'Unirse á chamada de vídeo';
-
-  @override
-  String get live => 'En directo';
-
-  @override
   String get playSoundOnNotification => 'Reproducir son coas notificacións';
 
   @override
@@ -2656,12 +2578,179 @@ class L10nGl extends L10n {
   String get createNewTag => 'Crear nova etiqueta';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Ocultar salas que están nun espazo';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Esta versión foi posible grazas ao teu apoio. FluffyChat segue sendo libre, de código aberto e dirixida pola comunidade.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline =>
+      'Mostrar miniaturas das imaxes e vídeos';
+
+  @override
+  String get appSubtitle => 'Comunicación Segura en [matrix]';
+
+  @override
+  String get appDescription =>
+      'Comunícate de xeito cifrado na rede descentralizada [matrix], dunha forma doada e accesible para todas as persoas.';
+
+  @override
+  String get interactiveVerification => 'Verificación interactiva';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Se estades unha a carón da outra ou tedes outra canle segura de comunicación entón podedes verificar os vosos dispositivos comparando os números de seguridade ou emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count dispositivos na conversa non verificados.';
+  }
+
+  @override
+  String get check => 'Comprobar';
+
+  @override
+  String get encryptedMessage => 'Mensaxe cifrada';
+
+  @override
+  String get unencryptedMessage => 'Mensaxe sen cifrar';
+
+  @override
+  String get allow => 'Permitir';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'A túa mensaxe está cifrada de extremo a extremo e só a pode ler a usuaria:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'A túa mensaxe está cifrada de extremo a extremo e só a poden ler estas usuarias:';
+
+  @override
+  String publicKey(String key) {
+    return 'Clave pública: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Clave de identidade do dispositivo';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Por favor escribe a túa frase de paso ou a clave de recuperación para verificar este dispositivo e ter acceso á copia de apoio cifrada das mensaxes.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Por favor elixe un dos outros teus dispositivos, para verificar esta sesión:';
+
+  @override
+  String get resetAccount => 'Restablecer a conta';
+
+  @override
+  String get restoreCryptoIdentity => 'Restablecer identidade criptográfica';
+
+  @override
+  String get resetCryptoIdentity => 'Reiniciar identidade criptográfica';
+
+  @override
+  String get setUpCryptoIdentity => 'Establecer identidade criptográfica';
+
+  @override
+  String get waitingForKeys =>
+      'Agardando polas claves… mantén o outro dispositivo activo.';
+
+  @override
+  String get noKeysTransmitted =>
+      'Non se transmitiron as claves. Volve a intentalo.';
+
+  @override
+  String get unlock => 'Desbloquear';
+
+  @override
+  String get openFile => 'Abrir ficheiro';
+
+  @override
+  String get resetAccountWarning =>
+      'Cando reinicias a conta perdes o acceso ás mensaxes antigas para sempre. Todos os teus dispositivos actuais deberán verificarse novamente. Considera realizar esta acción só se non tes outros dispositivos desde onde poder verificar a sesión e se perdeches a clave de recuperación e a frase de paso!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat utiliza cifraxe de extremo a extremo. Para non perder as mensaxes elixe unha frase de paso forte para protexer a túa identidade criptográfica e a túa copia de apoio de mensaxes cifradas.';
+
+  @override
+  String get newPassphrase => 'Nova frase de paso';
+
+  @override
+  String get repeatPassphrase => 'Repetir a frase de paso';
+
+  @override
+  String get passphrasesMatch => 'As frases de paso concordan';
+
+  @override
+  String get passphraseLengthRequirement => '12 caracteres como mínimo.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contén maiúsculas e minúsculas.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contén caracteres especiais.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contén un número.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Garda nun lugar seguro a clave de recuperación para poder restablecer as túas mensaxes cifradas e a túa identidade criptográfica.';
+
+  @override
+  String get saveAsFile => 'Gardar como ficheiro';
+
+  @override
+  String get youAreReadyToStart => 'Todo preparado para comezar!';
+
+  @override
+  String get noUserKeyFound => 'Non se atopa a clave da usuaria';
+
+  @override
+  String knownSince(String date) {
+    return 'Coñecido desde: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Dispositivo non asinado';
+
+  @override
+  String get signedDevice => 'Dispositivo asinado';
+
+  @override
+  String get noCurve25519KeyFound => 'Non se atopa a clave curve25519';
+
+  @override
+  String get messageNotDecryptable => 'Mensaxe non descifrable';
+
+  @override
+  String get today => 'Hoxe';
+
+  @override
+  String get sending => 'Enviando';
+
+  @override
+  String get generatingThumbnail => 'Creando a miniatura';
+
+  @override
+  String get encrypting => 'Cifrando';
+
+  @override
+  String get uploading => 'Subindo';
+
+  @override
+  String get edited => '(editada)';
+
+  @override
+  String get couldNotBeSent => 'Non se puido enviar';
+
+  @override
+  String get yesterday => 'Onte';
 }

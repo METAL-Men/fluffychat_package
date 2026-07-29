@@ -330,11 +330,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "chatBackupDescription": "Tus mensajes están protegidos por una llave de seguridad. Procura no perderla.",
-    "@chatBackupDescription": {
-        "type": "String",
-        "placeholders": {}
-    },
     "chatDetails": "Detalles del chat",
     "@chatDetails": {
         "type": "String",
@@ -551,11 +546,6 @@
     },
     "enterAnEmailAddress": "Introducir una dirección de correo electrónico",
     "@enterAnEmailAddress": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "everythingReady": "¡Todo listo!",
-    "@everythingReady": {
         "type": "String",
         "placeholders": {}
     },
@@ -1222,11 +1212,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "transferFromAnotherDevice": "Transferir desde otro dispositivo",
-    "@transferFromAnotherDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
     "tryToSendAgain": "Intentar enviar nuevamente",
     "@tryToSendAgain": {
         "type": "String",
@@ -1876,12 +1861,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "¿Limpiar la copia de seguridad de tu chat para crear una nueva clave de recuperación?",
-    "@wipeChatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "yourChatBackupHasBeenSetUp": "Se ha configurado la copia de respaldo del chat.",
     "unverified": "No verificado",
     "commandHint_clearcache": "Limpiar cache",
     "@commandHint_clearcache": {
@@ -1994,7 +1973,6 @@
     "chatPermissions": "Permisos del chat",
     "sender": "Remitente",
     "storeInAndroidKeystore": "Almacenar en la KeyStore de Android",
-    "saveKeyManuallyDescription": "Compartir esta clave manualmente usando el diálogo de compartir del sistema o el portapapeles.",
     "whyIsThisMessageEncrypted": "¿Por qué no se puede leer este mensaje?",
     "setChatDescription": "Establecer descripción del chat",
     "dehydrateWarning": "Esta acción no se puede deshacer. Asegúrese de que ha almacenado de forma segura el fichero de copia de seguridad.",
@@ -2008,11 +1986,9 @@
         }
     },
     "videoCallsBetaWarning": "Tenga en cuenta que las videollamadas están actualmente en fase beta. Es posible que no funcionen como se espera o que no funcionen de ninguna manera en algunas plataformas.",
-    "unlockOldMessages": "Desbloquear mensajes viejos",
     "optionalRedactReason": "(Opcional) Motivo para censurar este mensaje...",
     "dehydrate": "Exportar sesión y limpiar dispositivo",
     "experimentalVideoCalls": "Videollamadas experimentales",
-    "pleaseEnterRecoveryKeyDescription": "Para desbloquear sus viejos mensajes, introduzca su clave de recuperación que se generó en una sesión anterior. Su clave de recuperación NO es su contraseña.",
     "redactedByBecause": "Censurado por {username} porque: \"{reason}\"",
     "@redactedByBecause": {
         "type": "String",
@@ -2077,7 +2053,6 @@
     },
     "shareInviteLink": "Compartir enlace de invitación",
     "commandHint_markasdm": "Marcar como sala de mensajes directos para el ID de Matrix",
-    "recoveryKeyLost": "¿Perdió su clave de recuperación?",
     "emoteKeyboardNoRecents": "Los emotes usados recientemente aparecerán aquí...",
     "@emoteKeyboardNoRecents": {
         "type": "String",
@@ -2100,7 +2075,6 @@
     "emojis": "Emojis",
     "createGroup": "Crear grupo",
     "custom": "Personalizado",
-    "storeInSecureStorageDescription": "Almacenar la clave de recuperación en el almacenamiento seguro de este dispositivo.",
     "pinMessage": "Anclar a la sala",
     "googlyEyesContent": "{senderName} te manda ojos saltones",
     "@googlyEyesContent": {
@@ -2141,10 +2115,6 @@
     "hideInvalidOrUnknownMessageFormats": "Esconde formatos de mensajes inválidos o desconocidos",
     "hideRedactedMessages": "Esconde mensajes eliminados",
     "appLockDescription": "Bloquear la aplicación cuando no se use con código pin",
-    "alwaysUse24HourFormat": "true",
-    "@alwaysUse24HourFormat": {
-        "description": "Set to true to always display time of day in 24 hour format."
-    },
     "accessAndVisibility": "Acceso y visibilidad",
     "globalChatId": "ID de chat Global",
     "accessAndVisibilityDescription": "A quién se le permite unirse a este chat y cómo se puede descubrir el chat.",
@@ -2154,11 +2124,6 @@
     "blockedUsers": "Usuarios bloqueados",
     "blockUsername": "Ignorar nombre de usuario",
     "noMoreChatsFound": "No se encontraron más chats...",
-    "presencesToggle": "Mostrar mensajes de estado de otros usuarios",
-    "@presencesToggle": {
-        "type": "String",
-        "placeholders": {}
-    },
     "placeCall": "Llamar",
     "disableEncryptionWarning": "Por motivos de seguridad no es posible deshabilitar el cifrado en un chat si ha sido habilitado previamente.",
     "setColorTheme": "Poner tema de color:",
@@ -2297,7 +2262,6 @@
     "usersMustKnock": "Los usuarios han de avisar",
     "noOneCanJoin": "Nadie puede unirse",
     "reopenChat": "Reabrir chat",
-    "hidePresences": "¿Esconder la lista de estado?",
     "fileIsTooBigForServer": "¡No se pudo mandar! El servidor solamente permite adjuntos de hasta {max}.",
     "@fileIsTooBigForServer": {
         "type": "String",
@@ -2430,7 +2394,6 @@
     "crossVerifiedDevices": "Dispositivos verificados",
     "verifiedDevicesOnly": "Solo dispositivos verificados",
     "deviceKeys": "Claves de dispositivo:",
-    "overview": "Vista general",
     "removeDevicesDescription": "Vas a salir en este dispositivo y ya no podrás recibir mensajes.",
     "databaseMigrationBody": "Por favor espera. Esto llevará un momento.",
     "pleaseEnterYourCurrentPassword": "Por favor, pon tu clave actual",
@@ -2705,8 +2668,6 @@
     "attribution": "Atribución",
     "skipChatBackup": "Omitir copia de seguridad del chat",
     "skipChatBackupWarning": "¿Estás seguro? Sin habilitar la copia de seguridad del chat puedes perder el acceso a tus mensajes si cambias de dispositivo.",
-    "loadingMessages": "Cargando mensajes",
-    "setupChatBackup": "Configurar la copia de seguridad del chat",
     "noMoreResultsFound": "No se han encontrado más resultados",
     "chatSearchedUntil": "Chat buscado hasta {time}",
     "@chatSearchedUntil": {
@@ -2737,7 +2698,6 @@
     "createNewAccount": "Crear nueva cuenta",
     "signUpGreeting": "¡FluffyChat está descentralizado! ¡Selecciona un servidor donde quieres crear tu cuenta y sigamos!",
     "signInGreeting": "¿Ya tienes una cuenta en Matrix? ¡Bienvenido de nuevo! Selecciona tu servidor e inicia sesión.",
-    "appIntro": "Con FluffyChat puedes hablar con tus amigos ¡Es un sistema de mensajería de [matrix] seguro y descentralizado! Aprende más en https://matrix.org si quieres o simplemente inicia sesión.",
     "theProcessWasCanceled": "El proceso se ha cancelado.",
     "join": "Unirse",
     "searchOrEnterHomeserverAddress": "Buscar o pon la dirección de tu servidor local",
@@ -2760,14 +2720,6 @@
     "support": "Apoyar",
     "setLowPriority": "Colocar baja prioridad",
     "unsetLowPriority": "Desactivar baja prioridad",
-    "removeCallFromChat": "Remover llamadas del chat",
-    "removeCallFromChatDescription": "Deseas remover la llamada del chat para todos los miembros?",
-    "removeCallForEveryone": "Remover llamadas para todos",
-    "startVoiceCall": "Iniciar llamada",
-    "startVideoCall": "Iniciar videollamada",
-    "joinVoiceCall": "Ingresar a llamada",
-    "joinVideoCall": "Ingresar a videollamada",
-    "live": "En Vivo",
     "playSoundOnNotification": "Sonido en notificación",
     "addTag": "Agregar etiqueta",
     "removeTag": "Remover etiqueta",

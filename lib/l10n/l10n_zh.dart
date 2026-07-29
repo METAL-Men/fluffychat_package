@@ -9,9 +9,6 @@ class L10nZh extends L10n {
   L10nZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => '否';
-
-  @override
   String get repeatPassword => '重复输入密码';
 
   @override
@@ -139,7 +136,7 @@ class L10nZh extends L10n {
   String get areYouSure => '你确定吗？';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits => '有未保存的更改。放弃编辑吗？';
 
   @override
   String get areYouSureYouWantToLogout => '你确定要退出登录吗？';
@@ -159,7 +156,6 @@ class L10nZh extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return '主服务器支持的登录方式：\n$serverVersions\n但此应用仅支持：\n$supportedVersions';
   }
@@ -318,13 +314,7 @@ class L10nZh extends L10n {
   String get chat => '聊天';
 
   @override
-  String get yourChatBackupHasBeenSetUp => '你的聊天记录备份已设置。';
-
-  @override
   String get chatBackup => '聊天记录备份';
-
-  @override
-  String get chatBackupDescription => '你的消息受恢复密钥保护。请确保你不会丢失它。';
 
   @override
   String get chatDetails => '聊天详情';
@@ -599,9 +589,6 @@ class L10nZh extends L10n {
   String errorObtainingLocation(String error) {
     return '取得地址错误: $error';
   }
-
-  @override
-  String get everythingReady => '一切就绪！';
 
   @override
   String get fileName => '文件名';
@@ -952,9 +939,6 @@ class L10nZh extends L10n {
   String get passwordHasBeenChanged => '密码已被更改';
 
   @override
-  String get overview => '概览';
-
-  @override
   String get passwordRecoverySettings => '密码发现设置';
 
   @override
@@ -1084,9 +1068,6 @@ class L10nZh extends L10n {
   String get recoveryKey => '恢复密钥';
 
   @override
-  String get recoveryKeyLost => '丢失了恢复密钥？';
-
-  @override
   String get send => '发送';
 
   @override
@@ -1172,9 +1153,6 @@ class L10nZh extends L10n {
   String get showPassword => '显示密码';
 
   @override
-  String get presencesToggle => '显示其他用户的状态消息';
-
-  @override
   String get skip => '跳过';
 
   @override
@@ -1222,9 +1200,6 @@ class L10nZh extends L10n {
 
   @override
   String get tooManyRequestsWarning => '请求过多。请稍后再试！';
-
-  @override
-  String get transferFromAnotherDevice => '从其它设备传输';
 
   @override
   String get tryToSendAgain => '尝试重新发送';
@@ -1343,9 +1318,6 @@ class L10nZh extends L10n {
   String get whyDoYouWantToReportThis => '你举报的理由是什么？';
 
   @override
-  String get wipeChatBackup => '确定要清除你的聊天记录备份以创建新的恢复密钥吗？';
-
-  @override
   String get withTheseAddressesRecoveryDescription => '通过这些地址，你可以恢复密码。';
 
   @override
@@ -1386,10 +1358,6 @@ class L10nZh extends L10n {
 
   @override
   String get start => '开始';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      '要解锁你的旧邮件，请输入你在之前会话中生成的恢复密钥。 你的恢复密钥不是你的密码。';
 
   @override
   String get markAsRead => '标为已读';
@@ -1501,15 +1469,6 @@ class L10nZh extends L10n {
   String get users => '用户';
 
   @override
-  String get unlockOldMessages => '解锁旧消息';
-
-  @override
-  String get storeInSecureStorageDescription => '将恢复密钥存储在此设备的安全存储中。';
-
-  @override
-  String get saveKeyManuallyDescription => '通过触发系统共享对话框或剪贴板手动保存此密钥。';
-
-  @override
   String get storeInAndroidKeystore => '存储在 Android KeyStore 中';
 
   @override
@@ -1553,9 +1512,6 @@ class L10nZh extends L10n {
 
   @override
   String get allSpaces => '所有空间';
-
-  @override
-  String get hidePresences => '隐藏状态列表？';
 
   @override
   String get doNotShowAgain => '不再显示';
@@ -2259,6 +2215,12 @@ class L10nZh extends L10n {
   String get moreEvents => '更多事件';
 
   @override
+  String get showMore => '显示更多';
+
+  @override
+  String get showLess => '显示较少';
+
+  @override
   String get declineInvitation => '拒绝邀请';
 
   @override
@@ -2388,12 +2350,6 @@ class L10nZh extends L10n {
   String get skipChatBackupWarning => '确定吗？不开启聊天备份，如果切换设备可能无法访问消息。';
 
   @override
-  String get loadingMessages => '加载消息中';
-
-  @override
-  String get setupChatBackup => '设置聊天备份';
-
-  @override
   String get noMoreResultsFound => '未找到更多结果';
 
   @override
@@ -2438,10 +2394,6 @@ class L10nZh extends L10n {
 
   @override
   String get signInGreeting => '已经有 Matrix 账户了？欢迎回来！选择 homeserver 登录。';
-
-  @override
-  String get appIntro =>
-      '借助 FluffyChat，您可以和好友聊天。它是安全的去中心化 [matrix] 消息收发应用！如果愿意，可以在 https://matrix.org 了解更多信息，也可直接注册账户。';
 
   @override
   String get theProcessWasCanceled => '过程被取消。';
@@ -2501,30 +2453,6 @@ class L10nZh extends L10n {
   String get unsetLowPriority => '取消设置低优先级';
 
   @override
-  String get removeCallFromChat => '从聊天中删除通话';
-
-  @override
-  String get removeCallFromChatDescription => '要为所有成员从聊天中删除通话吗？';
-
-  @override
-  String get removeCallForEveryone => '为所有人删除通话';
-
-  @override
-  String get startVoiceCall => '开始语音通话';
-
-  @override
-  String get startVideoCall => '开始视频通话';
-
-  @override
-  String get joinVoiceCall => '加入语音通话';
-
-  @override
-  String get joinVideoCall => '加入视频通话';
-
-  @override
-  String get live => '实时';
-
-  @override
   String get playSoundOnNotification => '播放通知声音';
 
   @override
@@ -2540,22 +2468,175 @@ class L10nZh extends L10n {
   String get createNewTag => '创建新标签';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => '隐藏位于空间中的聊天室';
 
   @override
-  String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+  String get possibleByYou => '没有您的支持不会有这个版本。FluffyChat 依旧免费、开源、完全由社区驱动。';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => '显示图片和视频的缩略图';
+
+  @override
+  String get appSubtitle => '安全的 [matrix] 通信';
+
+  @override
+  String get appDescription => '以对所有人简单易得的方式通过去中心化 [matrix] 网络加密通信。';
+
+  @override
+  String get interactiveVerification => '互动式验证';
+
+  @override
+  String get interactiveVerificationDescription =>
+      '如果你和联系人就在一起或通过安全渠道通信，你们可以通过比较安全号码或绘文字同时验证所有设备。';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '该聊天中有 $count 台未验证设备。';
+  }
+
+  @override
+  String get check => '检查';
+
+  @override
+  String get encryptedMessage => '加密的消息';
+
+  @override
+  String get unencryptedMessage => '未加密的消息';
+
+  @override
+  String get allow => '允许';
+
+  @override
+  String get messageCanOnlyBeReadByUser => '你的消息是端到端加密的，只能由该用户读取：';
+
+  @override
+  String get messageCanOnlyBeReadByUsers => '你的消息是端到端加密的，只能由这些用户读取：';
+
+  @override
+  String publicKey(String key) {
+    return '公钥：$key';
+  }
+
+  @override
+  String get deviceIdentityKey => '设备身份密钥';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      '请输入密码短语或恢复密钥来验证此设备并获得访问加密消息备份的权限。';
+
+  @override
+  String get restoreBootstrapDevicesDescription => '请选择其他设备中的一台来验证此会话：';
+
+  @override
+  String get resetAccount => '重置账户';
+
+  @override
+  String get restoreCryptoIdentity => '恢复加密身份';
+
+  @override
+  String get resetCryptoIdentity => '重置加密身份';
+
+  @override
+  String get setUpCryptoIdentity => '设置加密身份';
+
+  @override
+  String get waitingForKeys => '正在等待密钥… 请保持另一台设备活跃。';
+
+  @override
+  String get noKeysTransmitted => '未传输密钥。请重试。';
+
+  @override
+  String get unlock => '解锁';
+
+  @override
+  String get openFile => '打开文件';
+
+  @override
+  String get resetAccountWarning =>
+      '重置账户会造成永远无法访问旧消息。需要再次验证所有当前设备。请在没有其他设备来验证会话且丢失恢复密钥和密码短语时才执行此操作！';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat 使用端到端加密。为了不丢失消息，请选择强密码短语来保护加密身份和加密的消息备份。';
+
+  @override
+  String get newPassphrase => '新密码短语';
+
+  @override
+  String get repeatPassphrase => '重复密码短语';
+
+  @override
+  String get passphrasesMatch => '密码短语匹配';
+
+  @override
+  String get passphraseLengthRequirement => '长度至少 12 个字符。';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement => '包含大小写字符。';
+
+  @override
+  String get passphraseSpecialCharactersRequirement => '包含特殊字符。';
+
+  @override
+  String get passphraseNumberRequirement => '包含一个数字。';
+
+  @override
+  String get storeRecoveryKeyDescription => '请写下恢复密钥以便恢复加密消息和加密身份。';
+
+  @override
+  String get saveAsFile => '保存为文件';
+
+  @override
+  String get youAreReadyToStart => '可以开始了！';
+
+  @override
+  String get noUserKeyFound => '未找到用户密钥';
+
+  @override
+  String knownSince(String date) {
+    return '初始知晓日期：$date';
+  }
+
+  @override
+  String get unsignedDevice => '未签名设备';
+
+  @override
+  String get signedDevice => '已签名设备';
+
+  @override
+  String get noCurve25519KeyFound => '未找到 curve25519 key';
+
+  @override
+  String get messageNotDecryptable => '消息不可解密';
+
+  @override
+  String get today => '今日';
+
+  @override
+  String get sending => '发送中';
+
+  @override
+  String get generatingThumbnail => '正在生成缩略图';
+
+  @override
+  String get encrypting => '加密中';
+
+  @override
+  String get uploading => '上传中';
+
+  @override
+  String get edited => '(已编辑)';
+
+  @override
+  String get couldNotBeSent => '无法发送';
+
+  @override
+  String get yesterday => '昨天';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
 class L10nZhHant extends L10nZh {
   L10nZhHant() : super('zh_Hant');
-
-  @override
-  String get alwaysUse24HourFormat => 'false';
 
   @override
   String get repeatPassword => '再次輸入密碼';
@@ -2702,7 +2783,6 @@ class L10nZhHant extends L10nZh {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return '目前伺服器支援的登入類型：\n$serverVersions\n但本應用程式僅支援：\n$supportedVersions';
   }
@@ -2851,13 +2931,7 @@ class L10nZhHant extends L10nZh {
   String get chat => '聊天室';
 
   @override
-  String get yourChatBackupHasBeenSetUp => '您的聊天室記錄備份已設定。';
-
-  @override
   String get chatBackup => '備份聊天室';
-
-  @override
-  String get chatBackupDescription => '您的過往聊天室記錄已被恢復金鑰加密。請您確保不會弄丟它。';
 
   @override
   String get chatDetails => '對話詳細';
@@ -3129,9 +3203,6 @@ class L10nZhHant extends L10nZh {
   String errorObtainingLocation(String error) {
     return '取得位置錯誤：$error';
   }
-
-  @override
-  String get everythingReady => '一切就緒！';
 
   @override
   String get fileName => '檔案名稱';
@@ -3482,9 +3553,6 @@ class L10nZhHant extends L10nZh {
   String get passwordHasBeenChanged => '密碼已被變更';
 
   @override
-  String get overview => '概觀';
-
-  @override
   String get passwordRecoverySettings => '恢復密碼設定';
 
   @override
@@ -3614,9 +3682,6 @@ class L10nZhHant extends L10nZh {
   String get recoveryKey => '恢復金鑰';
 
   @override
-  String get recoveryKeyLost => '遺失恢復金鑰？';
-
-  @override
   String get send => '傳送';
 
   @override
@@ -3702,9 +3767,6 @@ class L10nZhHant extends L10nZh {
   String get showPassword => '顯示密碼';
 
   @override
-  String get presencesToggle => '顯示其他使用者的狀態訊息';
-
-  @override
   String get skip => '跳過';
 
   @override
@@ -3752,9 +3814,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get tooManyRequestsWarning => '太多請求了。請稍候再試！';
-
-  @override
-  String get transferFromAnotherDevice => '從其他裝置傳輸';
 
   @override
   String get tryToSendAgain => '再次嘗試傳送';
@@ -3873,9 +3932,6 @@ class L10nZhHant extends L10nZh {
   String get whyDoYouWantToReportThis => '您檢舉的原因是什麼？';
 
   @override
-  String get wipeChatBackup => '是否清除您的聊天室記錄備份以建立新的安全金鑰嗎？';
-
-  @override
   String get withTheseAddressesRecoveryDescription => '有了這些位址，您就可以恢復密碼。';
 
   @override
@@ -3916,10 +3972,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get start => '開始';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      '要解鎖您的舊訊息，請輸入在之前的會話中生成的恢復密鑰。您的恢復密鑰不是您的密碼。';
 
   @override
   String get markAsRead => '標示為已讀';
@@ -4031,15 +4083,6 @@ class L10nZhHant extends L10nZh {
   String get users => '使用者';
 
   @override
-  String get unlockOldMessages => '解鎖舊消息';
-
-  @override
-  String get storeInSecureStorageDescription => '將恢復密鑰存儲在此裝置的安全存儲中。';
-
-  @override
-  String get saveKeyManuallyDescription => '通過觸發系統分享對話框或剪貼板手動保存此密鑰。';
-
-  @override
   String get storeInAndroidKeystore => '存儲在 Android KeyStore';
 
   @override
@@ -4083,9 +4126,6 @@ class L10nZhHant extends L10nZh {
 
   @override
   String get allSpaces => '所有空間';
-
-  @override
-  String get hidePresences => '隱藏狀態列表？';
 
   @override
   String get doNotShowAgain => '不再顯示';

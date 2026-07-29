@@ -9,9 +9,6 @@ class L10nEu extends L10n {
   L10nEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'false';
-
-  @override
   String get repeatPassword => 'Idatzi berriro pasahitza';
 
   @override
@@ -137,13 +134,14 @@ class L10nEu extends L10n {
 
   @override
   String get areGuestsAllowedToJoin =>
-      'Batu al daitezke bisitan dauden erabiltzaileak';
+      'Batu al daitezke bisitan dauden erabiltzaileak?';
 
   @override
   String get areYouSure => 'Ziur zaude?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits =>
+      'Gorde gabeko aldaketak daude. Baztertu nahi dituzu?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -166,7 +164,6 @@ class L10nEu extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Zerbitzariak ondorengo aukerak onartzen ditu saioa hasteko:\n$serverVersions\nBaina aplikazioak hauek onartzen ditu bakarrik:\n$supportedVersions';
   }
@@ -326,14 +323,7 @@ class L10nEu extends L10n {
   String get chat => 'Txata';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Txaten babeskopiak ezarri dira.';
-
-  @override
   String get chatBackup => 'Txataren babeskopia';
-
-  @override
-  String get chatBackupDescription =>
-      'Txat zaharrak berreskuratze-gako batekin daude babestuta. Ez galdu gako hori.';
 
   @override
   String get chatDetails => 'Txataren xehetasunak';
@@ -622,9 +612,6 @@ class L10nEu extends L10n {
   String errorObtainingLocation(String error) {
     return 'Errorea kokapena lortzerakoan: $error';
   }
-
-  @override
-  String get everythingReady => 'Dena prest!';
 
   @override
   String get fileName => 'Fitxategiaren izena';
@@ -990,9 +977,6 @@ class L10nEu extends L10n {
   String get passwordHasBeenChanged => 'Pasahitza aldatu da';
 
   @override
-  String get overview => 'Ikuspegi orokorra';
-
-  @override
   String get passwordRecoverySettings => 'Pasahitza berreskuratzeko ezarpenak';
 
   @override
@@ -1126,9 +1110,6 @@ class L10nEu extends L10n {
   String get recoveryKey => 'Berreskuratze-gakoa';
 
   @override
-  String get recoveryKeyLost => 'Berreskuratze-gakoa galdu duzu?';
-
-  @override
   String get send => 'Bidali';
 
   @override
@@ -1214,9 +1195,6 @@ class L10nEu extends L10n {
   String get showPassword => 'Erakutsi pasahitza';
 
   @override
-  String get presencesToggle => 'Erakutsi beste erabiltzaileen egoera-mezuak';
-
-  @override
   String get skip => 'Saltatu';
 
   @override
@@ -1265,9 +1243,6 @@ class L10nEu extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Eskaera gehiegi. Saiatu berriro geroago!';
-
-  @override
-  String get transferFromAnotherDevice => 'Beste gailu batetik transferitu';
 
   @override
   String get tryToSendAgain => 'Saiatu berriro bidaltzen';
@@ -1386,10 +1361,6 @@ class L10nEu extends L10n {
   String get whyDoYouWantToReportThis => 'Zergatik salatu nahi duzu?';
 
   @override
-  String get wipeChatBackup =>
-      'Ezabatu txataren babeskopia berreskuratze-gako berria sortzeko?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Helbide hauekin pasahitza berreskuratu dezakezu.';
 
@@ -1433,10 +1404,6 @@ class L10nEu extends L10n {
 
   @override
   String get start => 'Hasi';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Mezu zaharrak ikusi ahal izateko, sartu aurreko saioan sortu zen berreskuratze-gakoa. Berreskuratze-gakoa EZ da zure pasahitza.';
 
   @override
   String get markAsRead => 'Markatu irakurritzat';
@@ -1549,17 +1516,6 @@ class L10nEu extends L10n {
   String get users => 'Erabiltzaileak';
 
   @override
-  String get unlockOldMessages => 'Desblokeatu mezu zaharrak';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Gorde berreskuratze-gakoa gailu honetako biltegiratze seguruan.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Gorde eskuz gako hau gailuko partekatze-menua edo arbela erabiliz.';
-
-  @override
   String get storeInAndroidKeystore => 'Gorde Android KeyStore-n';
 
   @override
@@ -1605,9 +1561,6 @@ class L10nEu extends L10n {
 
   @override
   String get allSpaces => 'Gune guztiak';
-
-  @override
-  String get hidePresences => 'Ezkutatu Egoeren Zerrenda?';
 
   @override
   String get doNotShowAgain => 'Ez erakutsi berriro';
@@ -2362,6 +2315,12 @@ class L10nEu extends L10n {
   String get moreEvents => 'Gertaera gehiago';
 
   @override
+  String get showMore => 'Erakutsi gehiago';
+
+  @override
+  String get showLess => 'Erakutsi gutxiago';
+
+  @override
   String get declineInvitation => 'Uko egin gonbidapenari';
 
   @override
@@ -2496,12 +2455,6 @@ class L10nEu extends L10n {
       'Ziur? Txataren babeskopia gaitzen ez baduzu, gailuz aldatuz gero mezuen sarbidea gal zenezake.';
 
   @override
-  String get loadingMessages => 'Mezuak kargatzen';
-
-  @override
-  String get setupChatBackup => 'Ezarri txataren babeskopia';
-
-  @override
   String get noMoreResultsFound => 'Ez da beste emaitzarik aurkitu';
 
   @override
@@ -2548,10 +2501,6 @@ class L10nEu extends L10n {
   @override
   String get signInGreeting =>
       'Baduzu dagoeneko Matrix kontu bat? Ongi etorri berriro ere! Hautatu zure zerbitzaria eta hasi saioa.';
-
-  @override
-  String get appIntro =>
-      'FluffyChat-i esker lagunekin txateatu dezakezu. [matrix]-erako mezularitza programa seguru eta deszentralizatua da! Nahi baduzu, irakurri gehiago https://matrix.org gunean, edo hasi saioa.';
 
   @override
   String get theProcessWasCanceled => 'Eragiketa bertan behera utzi da.';
@@ -2613,52 +2562,192 @@ class L10nEu extends L10n {
   String get unsetLowPriority => 'Kendu lehentasun baxua';
 
   @override
-  String get removeCallFromChat => 'Kendu deia txatetik';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Kide guztientzat kendu nahi al duzu deia txatetik?';
-
-  @override
-  String get removeCallForEveryone => 'Kendu deia guztientzat';
-
-  @override
-  String get startVoiceCall => 'Hasi ahots-deia';
-
-  @override
-  String get startVideoCall => 'Hasi bideo-deia';
-
-  @override
-  String get joinVoiceCall => 'Batu ahots-deira';
-
-  @override
-  String get joinVideoCall => 'Batu bideo-deira';
-
-  @override
-  String get live => 'Zuzenean';
-
-  @override
   String get playSoundOnNotification => 'Jo soinua jakinarazpenekin';
 
   @override
-  String get addTag => 'Add tag';
+  String get addTag => 'Gehitu etiketa';
 
   @override
-  String get removeTag => 'Remove tag';
+  String get removeTag => 'Kendu etiketa';
 
   @override
-  String get tagName => 'Tag name';
+  String get tagName => 'Etiketaren izena';
 
   @override
-  String get createNewTag => 'Create new tag';
+  String get createNewTag => 'Sortu etiketa berria';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Ezkutatu gune batean dauden gelak';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Bertsio hau zure laguntzari esker izan da posible. FluffyChat-ek doakoa, kode irekikoa eta guztiz komunitarioa izaten jarraitzen du.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => 'Erakutsi irudi eta bideoen iruditxoa';
+
+  @override
+  String get appSubtitle => '[matrix] komunikazio segurua';
+
+  @override
+  String get appDescription =>
+      'Komunikatu [matrix] sare deszentralizatuaren bidez, era zifratuan, mundu guztiarentzat modu erraz eta eskuragarrian.';
+
+  @override
+  String get interactiveVerification => 'Egiaztapen interaktiboa';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Elkarren ondoan bazaudete edo kanal seguru baten bidez komunikatzen bazarete, gailu guztiak batera egiazta ditzakezu, segurtasun-zenbaki bat edo emoji bat konparatuz.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return 'Egiaztatu gabeko $count gailu txatean.';
+  }
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get encryptedMessage => 'Zifratutako mezua';
+
+  @override
+  String get unencryptedMessage => 'Zifratu gabeko mezua';
+
+  @override
+  String get allow => 'Baimendu';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Gako publikoa: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Gailuaren identitate-gakoa';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'Unlock';
+
+  @override
+  String get openFile => 'Open file';
+
+  @override
+  String get resetAccountWarning =>
+      'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'New passphrase';
+
+  @override
+  String get repeatPassphrase => 'Repeat passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrases match';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Save as file';
+
+  @override
+  String get youAreReadyToStart => 'You are ready to start!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

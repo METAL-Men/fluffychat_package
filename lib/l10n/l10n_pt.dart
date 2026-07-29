@@ -9,9 +9,6 @@ class L10nPt extends L10n {
   L10nPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'true';
-
-  @override
   String get repeatPassword => 'Repita a senha';
 
   @override
@@ -164,7 +161,6 @@ class L10nPt extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'The homeserver supports the login types:\n$serverVersions\nBut this app supports only:\n$supportedVersions';
   }
@@ -325,14 +321,7 @@ class L10nPt extends L10n {
   String get chat => 'Chat';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Your chat backup has been set up.';
-
-  @override
   String get chatBackup => 'Chat backup';
-
-  @override
-  String get chatBackupDescription =>
-      'Your messages are secured with a recovery key. Please make sure you don\'t lose it.';
 
   @override
   String get chatDetails => 'Chat details';
@@ -619,9 +608,6 @@ class L10nPt extends L10n {
   String errorObtainingLocation(String error) {
     return 'Error obtaining location: $error';
   }
-
-  @override
-  String get everythingReady => 'Everything ready!';
 
   @override
   String get fileName => 'File name';
@@ -985,9 +971,6 @@ class L10nPt extends L10n {
   String get passwordHasBeenChanged => 'Password has been changed';
 
   @override
-  String get overview => 'Overview';
-
-  @override
   String get passwordRecoverySettings => 'Password recovery settings';
 
   @override
@@ -1120,9 +1103,6 @@ class L10nPt extends L10n {
   String get recoveryKey => 'Recovery key';
 
   @override
-  String get recoveryKeyLost => 'Recovery key lost?';
-
-  @override
   String get send => 'Send';
 
   @override
@@ -1208,9 +1188,6 @@ class L10nPt extends L10n {
   String get showPassword => 'Show password';
 
   @override
-  String get presencesToggle => 'Show status messages from other users';
-
-  @override
   String get skip => 'Skip';
 
   @override
@@ -1259,9 +1236,6 @@ class L10nPt extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Too many requests. Please try again later!';
-
-  @override
-  String get transferFromAnotherDevice => 'Transfer from another device';
 
   @override
   String get tryToSendAgain => 'Try to send again';
@@ -1382,10 +1356,6 @@ class L10nPt extends L10n {
   String get whyDoYouWantToReportThis => 'Why do you want to report this?';
 
   @override
-  String get wipeChatBackup =>
-      'Wipe your chat backup to create a new recovery key?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'With these addresses you can recover your password.';
 
@@ -1429,10 +1399,6 @@ class L10nPt extends L10n {
 
   @override
   String get start => 'Start';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'To unlock your old messages, please enter your recovery key that has been generated in a previous session. Your recovery key is NOT your password.';
 
   @override
   String get markAsRead => 'Mark as read';
@@ -1545,17 +1511,6 @@ class L10nPt extends L10n {
   String get users => 'Utilizadores';
 
   @override
-  String get unlockOldMessages => 'Unlock old messages';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Store the recovery key in the secure storage of this device.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Save this key manually by triggering the system share dialog or clipboard.';
-
-  @override
   String get storeInAndroidKeystore => 'Store in Android KeyStore';
 
   @override
@@ -1600,9 +1555,6 @@ class L10nPt extends L10n {
 
   @override
   String get allSpaces => 'All spaces';
-
-  @override
-  String get hidePresences => 'Hide Status List?';
 
   @override
   String get doNotShowAgain => 'Do not show again';
@@ -2352,6 +2304,12 @@ class L10nPt extends L10n {
   String get moreEvents => 'More events';
 
   @override
+  String get showMore => 'Show more';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
   String get declineInvitation => 'Decline invitation';
 
   @override
@@ -2485,12 +2443,6 @@ class L10nPt extends L10n {
       'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
 
   @override
-  String get loadingMessages => 'Loading messages';
-
-  @override
-  String get setupChatBackup => 'Set up chat backup';
-
-  @override
   String get noMoreResultsFound => 'No more results found';
 
   @override
@@ -2537,10 +2489,6 @@ class L10nPt extends L10n {
   @override
   String get signInGreeting =>
       'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
-
-  @override
-  String get appIntro =>
-      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
 
   @override
   String get theProcessWasCanceled => 'The process was canceled.';
@@ -2602,31 +2550,6 @@ class L10nPt extends L10n {
   String get unsetLowPriority => 'Unset low priority';
 
   @override
-  String get removeCallFromChat => 'Remove call from chat';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Do you want to remove the call from the chat for all members?';
-
-  @override
-  String get removeCallForEveryone => 'Remove call for everyone';
-
-  @override
-  String get startVoiceCall => 'Start voice call';
-
-  @override
-  String get startVideoCall => 'Start video call';
-
-  @override
-  String get joinVoiceCall => 'Join voice call';
-
-  @override
-  String get joinVideoCall => 'Join video call';
-
-  @override
-  String get live => 'Live';
-
-  @override
   String get playSoundOnNotification => 'Play sound on notification';
 
   @override
@@ -2650,14 +2573,176 @@ class L10nPt extends L10n {
 
   @override
   String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+
+  @override
+  String get appSubtitle => 'Secure [matrix] Communication';
+
+  @override
+  String get appDescription =>
+      'Communicate encrypted over the decentralized [matrix] network in an easy and accessible way for everyone.';
+
+  @override
+  String get interactiveVerification => 'Interactive verification';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count unverified devices in the chat.';
+  }
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get encryptedMessage => 'Encrypted message';
+
+  @override
+  String get unencryptedMessage => 'Unencrypted message';
+
+  @override
+  String get allow => 'Allow';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Public key: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Device identity key';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'Unlock';
+
+  @override
+  String get openFile => 'Open file';
+
+  @override
+  String get resetAccountWarning =>
+      'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'New passphrase';
+
+  @override
+  String get repeatPassphrase => 'Repeat passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrases match';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Save as file';
+
+  @override
+  String get youAreReadyToStart => 'You are ready to start!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
 class L10nPtBr extends L10nPt {
   L10nPtBr() : super('pt_BR');
-
-  @override
-  String get alwaysUse24HourFormat => 'true';
 
   @override
   String get repeatPassword => 'Repita a senha';
@@ -2809,7 +2894,6 @@ class L10nPtBr extends L10nPt {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'O servidor suporta os tipos de entrada/login:\n$serverVersions\nMas este app suporta apenas:\n$supportedVersions';
   }
@@ -2970,15 +3054,7 @@ class L10nPtBr extends L10nPt {
   String get chat => 'Conversar';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Seu backup de conversas foi configurado.';
-
-  @override
   String get chatBackup => 'Backup de conversas';
-
-  @override
-  String get chatBackupDescription =>
-      'Suas mensagens são protegidas com sua chave de recuperação. Evite perdê-la.';
 
   @override
   String get chatDetails => 'Detalhes da conversa';
@@ -3267,9 +3343,6 @@ class L10nPtBr extends L10nPt {
   String errorObtainingLocation(String error) {
     return 'Erro ao obter localização: $error';
   }
-
-  @override
-  String get everythingReady => 'Tudo pronto!';
 
   @override
   String get fileName => 'Nome do arquivo';
@@ -3636,9 +3709,6 @@ class L10nPtBr extends L10nPt {
   String get passwordHasBeenChanged => 'Senha foi alterada';
 
   @override
-  String get overview => 'Visão geral';
-
-  @override
   String get passwordRecoverySettings =>
       'Configurações de recuperação de senha';
 
@@ -3772,9 +3842,6 @@ class L10nPtBr extends L10nPt {
   String get recoveryKey => 'Chave de recuperação';
 
   @override
-  String get recoveryKeyLost => 'Perdeu a chave de recuperação?';
-
-  @override
   String get send => 'Enviar';
 
   @override
@@ -3860,10 +3927,6 @@ class L10nPtBr extends L10nPt {
   String get showPassword => 'Mostrar senha';
 
   @override
-  String get presencesToggle =>
-      'Mostrar as mensagens de estado de outros usuários';
-
-  @override
   String get skip => 'Pular';
 
   @override
@@ -3912,9 +3975,6 @@ class L10nPtBr extends L10nPt {
   @override
   String get tooManyRequestsWarning =>
       'Demasiadas requisições. Por favor, tente novamente mais tarde!';
-
-  @override
-  String get transferFromAnotherDevice => 'Transferir de outro dispositivo';
 
   @override
   String get tryToSendAgain => 'Tentar enviar novamente';
@@ -4038,10 +4098,6 @@ class L10nPtBr extends L10nPt {
   String get whyDoYouWantToReportThis => 'Por que quer denunciar isto?';
 
   @override
-  String get wipeChatBackup =>
-      'Apagar o backup de conversas para criar uma nova chave de recuperação?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Você pode recuperar a sua senha com estes endereços.';
 
@@ -4084,10 +4140,6 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get start => 'Iniciar';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Para desbloquear as suas mensagens antigas, digite a sua chave de recuperação gerada numa sessão prévia. Sua chave de recuperação NÃO é sua senha.';
 
   @override
   String get markAsRead => 'Marcar como lido';
@@ -4200,17 +4252,6 @@ class L10nPtBr extends L10nPt {
   String get users => 'Usuários';
 
   @override
-  String get unlockOldMessages => 'Desbloquear mensagens antigas';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Guardar a chave de recuperação no armazenamento seguro deste dispositivo.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Salvar esta chave manualmente via compartilhamento do sistema ou área de transferência.';
-
-  @override
   String get storeInAndroidKeystore => 'Guardar no cofre do Android (KeyStore)';
 
   @override
@@ -4258,9 +4299,6 @@ class L10nPtBr extends L10nPt {
 
   @override
   String get allSpaces => 'Todos os espaços';
-
-  @override
-  String get hidePresences => 'Ocultar lista de estado?';
 
   @override
   String get doNotShowAgain => 'Não mostrar novamente';
@@ -5153,21 +5191,9 @@ class L10nPtBr extends L10nPt {
       'Tem certeza? Se não ativar o backup de conversas, você pode perder o acesso às suas mensagens se trocar de dispositivo.';
 
   @override
-  String get loadingMessages => 'Carregando mensagens';
-
-  @override
-  String get setupChatBackup => 'Configurar backup de conversas';
-
-  @override
   String versionWithNumber(String version) {
     return 'Versão: $version';
   }
-
-  @override
-  String get advancedConfigs => '';
-
-  @override
-  String get theProcessWasCanceled => '';
 }
 
 /// The translations for Portuguese, as used in Portugal (`pt_PT`).
@@ -5178,10 +5204,36 @@ class L10nPtPt extends L10nPt {
   String get repeatPassword => 'Repete a palavra-passe';
 
   @override
+  String get notAnImage => 'Não é um ficheiro de imagem.';
+
+  @override
+  String get ignoreUser => 'Ignorar utilizador';
+
+  @override
   String get remove => 'Remover';
 
   @override
+  String get importNow => 'Importar agora';
+
+  @override
+  String get importEmojis => 'Importar Emojis';
+
+  @override
+  String get importFromZipFile => 'Importar a partir de um ficheiro .zip';
+
+  @override
+  String get exportEmotePack => 'Exportar pacote de Emotes como .zip';
+
+  @override
+  String get replace => 'Subsituir';
+
+  @override
   String get about => 'Acerca de';
+
+  @override
+  String aboutHomeserver(String homeserver) {
+    return 'Sobre o $homeserver';
+  }
 
   @override
   String get accept => 'Aceitar';
@@ -5203,6 +5255,15 @@ class L10nPtPt extends L10nPt {
   String get addEmail => 'Adicionar correio eletrónico';
 
   @override
+  String get confirmMatrixId =>
+      'Por favor confirme o seu Matrix ID para eliminar a sua conta.';
+
+  @override
+  String supposedMxid(String mxid) {
+    return 'Isto deve ser $mxid';
+  }
+
+  @override
   String get addToSpace => 'Adicionar ao espaço';
 
   @override
@@ -5218,6 +5279,34 @@ class L10nPtPt extends L10nPt {
   String get allChats => 'Todas as conversas';
 
   @override
+  String get commandHint_roomupgrade =>
+      'Atualizar esta sala para a versão dada da sala';
+
+  @override
+  String get commandHint_googly => 'Enviar alguns olhos esbugalhados';
+
+  @override
+  String get commandHint_cuddle => 'Mandar um carinho';
+
+  @override
+  String get commandHint_hug => 'Enviar um abraço';
+
+  @override
+  String googlyEyesContent(String senderName) {
+    return '$senderName enviou-lhe olhos esbugalhados';
+  }
+
+  @override
+  String cuddleContent(String senderName) {
+    return '$senderName fez-lhe carinho';
+  }
+
+  @override
+  String hugContent(String senderName) {
+    return '$senderName abraçou-o';
+  }
+
+  @override
   String answeredTheCall(String senderName) {
     return '$senderName atendeu a chamada';
   }
@@ -5229,13 +5318,22 @@ class L10nPtPt extends L10nPt {
   String get appLock => 'Bloqueio da aplicação';
 
   @override
+  String get appLockDescription =>
+      'Bloqueie a aplicação quando não a usa com um código pin';
+
+  @override
   String get archive => 'Arquivo';
 
   @override
-  String get areGuestsAllowedToJoin => 'Todos os visitantes podem entrar';
+  String get areGuestsAllowedToJoin =>
+      'Os utilizadores convidados têm permissão para se juntarem?';
 
   @override
   String get areYouSure => 'Tens a certeza?';
+
+  @override
+  String get discardEdits =>
+      'Tem mudanças não guardadas. Descartar as suas edições?';
 
   @override
   String get areYouSureYouWantToLogout => 'Tens a certeza que queres sair?';
@@ -5257,13 +5355,35 @@ class L10nPtPt extends L10nPt {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
-    return 'O servidor suporta os tipos de início de sessão:\n$serverVersions\nMas esta aplicação apenas suporta:\n$suportedVersions';
+    return 'O servidor suporta os tipos de início de sessão:\n$serverVersions\nMas esta aplicação apenas suporta:\n$supportedVersions';
   }
 
   @override
+  String get sendTypingNotifications => 'Enviar notificações de digitação';
+
+  @override
+  String get swipeRightToLeftToReply =>
+      'Deslize da direita para a esquerda para responder';
+
+  @override
   String get sendOnEnter => 'Enviar com Enter';
+
+  @override
+  String get noMoreChatsFound => 'Mais nenhum chat encontrado...';
+
+  @override
+  String get noChatsFoundHere =>
+      'Não foi encontrado nenhum chat aqui. Comece um chat novo com alguém ao usar o botão abaixo. ⤵️';
+
+  @override
+  String get unread => 'Não lido';
+
+  @override
+  String get space => 'Espaço';
+
+  @override
+  String get spaces => 'Espaços';
 
   @override
   String get banFromChat => 'Banir da conversa';
@@ -5299,8 +5419,18 @@ class L10nPtPt extends L10nPt {
   }
 
   @override
+  String changedTheChatDescription(Object username) {
+    return '$username mudou a descrição do chat';
+  }
+
+  @override
   String changedTheChatDescriptionTo(String username, String description) {
     return '$username alterou a descrição da conversa para: \'$description\'';
+  }
+
+  @override
+  String changedTheChatName(Object username) {
+    return '$username mudou o nome do chat';
   }
 
   @override
@@ -5385,15 +5515,7 @@ class L10nPtPt extends L10nPt {
   String get chat => 'Conversa';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'A cópia de segurança foi configurada.';
-
-  @override
   String get chatBackup => 'Cópia de segurança de conversas';
-
-  @override
-  String get chatBackupDescription =>
-      'A tuas mensagens antigas estão protegidas com uma chave de recuperação. Por favor, certifica-te que não a perdes.';
 
   @override
   String get chatDetails => 'Detalhes de conversa';
@@ -5409,6 +5531,13 @@ class L10nPtPt extends L10nPt {
 
   @override
   String get close => 'Fechar';
+
+  @override
+  String get commandHint_markasdm =>
+      'Marcar como sala de mensagem direta para o Matrix ID dado';
+
+  @override
+  String get commandHint_markasgroup => 'Marcar como grupo';
 
   @override
   String get commandHint_ban => 'Banir o utilizador dado desta sala';
@@ -5510,8 +5639,16 @@ class L10nPtPt extends L10nPt {
   }
 
   @override
+  String get checkList => 'Verificar lista';
+
+  @override
   String countParticipants(int count) {
     return '$count participantes';
+  }
+
+  @override
+  String countInvited(int count) {
+    return '$count convidados';
   }
 
   @override
@@ -5521,6 +5658,9 @@ class L10nPtPt extends L10nPt {
   String createdTheChat(String username) {
     return '$username criou a conversa';
   }
+
+  @override
+  String get createGroup => 'Criar grupo';
 
   @override
   String get createNewSpace => 'Novo espaço';
@@ -5577,6 +5717,9 @@ class L10nPtPt extends L10nPt {
   String get editBlockedServers => 'Editar servidores bloqueados';
 
   @override
+  String get chatPermissions => 'Permissões de chat';
+
+  @override
   String get editDisplayname => 'Editar nome de exibição';
 
   @override
@@ -5592,10 +5735,20 @@ class L10nPtPt extends L10nPt {
   String get emoteInvalid => 'Código de emote inválido!';
 
   @override
+  String get emoteKeyboardNoRecents =>
+      'Emotes recentemente utilizados aparecerão aqui...';
+
+  @override
   String get emotePacks => 'Pacotes de emotes da sala';
 
   @override
   String get emoteSettings => 'Configurações de emotes';
+
+  @override
+  String get globalChatId => 'ID global do chat';
+
+  @override
+  String get accessAndVisibility => 'Acesso e visibilidade';
 
   @override
   String get emoteShortcode => 'Código do emote';
@@ -5637,9 +5790,6 @@ class L10nPtPt extends L10nPt {
   String errorObtainingLocation(String error) {
     return 'Erro ao obter localização: $error';
   }
-
-  @override
-  String get everythingReady => 'Tudo a postos!';
 
   @override
   String get fileName => 'Nome do ficheiro';
@@ -6101,4 +6251,359 @@ class L10nPtPt extends L10nPt {
   String sentAVideo(String username) {
     return '$username enviou um vídeo';
   }
+
+  @override
+  String get setChatDescription => 'Definir descrição do chat';
+
+  @override
+  String get setStatus => 'Definir estado';
+
+  @override
+  String get settings => 'Definições';
+
+  @override
+  String get share => 'Partilhar';
+
+  @override
+  String sharedTheLocation(String username) {
+    return '$username partilhou a sua localização';
+  }
+
+  @override
+  String get shareLocation => 'Partilhar localização';
+
+  @override
+  String get showPassword => 'Mostrar palavra-passe';
+
+  @override
+  String get skip => 'Ignorar';
+
+  @override
+  String get sourceCode => 'Código fonte';
+
+  @override
+  String get spaceIsPublic => 'O espaço é público';
+
+  @override
+  String get spaceName => 'Nome do espaço';
+
+  @override
+  String startedACall(String senderName) {
+    return '$senderName começou uma chamada';
+  }
+
+  @override
+  String get status => 'Estado';
+
+  @override
+  String get statusExampleMessage => 'Como está hoje?';
+
+  @override
+  String get submit => 'Submeter';
+
+  @override
+  String get synchronizingPleaseWait => 'A sincronizar… Por favor aguarde.';
+
+  @override
+  String synchronizingPleaseWaitCounter(String percentage) {
+    return ' A sincronizar… ($percentage%)';
+  }
+
+  @override
+  String get systemTheme => 'Sistema';
+
+  @override
+  String get theyDontMatch => 'Não Correspondem';
+
+  @override
+  String get theyMatch => 'Correspondem';
+
+  @override
+  String get title => 'FluffyChat';
+
+  @override
+  String get tooManyRequestsWarning =>
+      'Demasiados pedidos. Por favor tente novamente mais tarde!';
+
+  @override
+  String get tryToSendAgain => 'Tenter enviar novamente';
+
+  @override
+  String get unavailable => 'Indisponível';
+
+  @override
+  String unbannedUser(String username, String targetName) {
+    return '$username levantou o ban a $targetName';
+  }
+
+  @override
+  String get unblockDevice => 'Desbloquear Dispositivo';
+
+  @override
+  String get unknownDevice => 'Dispositivo desconhecido';
+
+  @override
+  String get unknownEncryptionAlgorithm =>
+      'Algoritmo de encriptação desconhecido';
+
+  @override
+  String unknownEvent(String type) {
+    return 'Evento de \'$type\' desconhecido';
+  }
+
+  @override
+  String get unmuteChat => 'Ativar o som do chat';
+
+  @override
+  String get unpin => 'Desfixar';
+
+  @override
+  String userAndOthersAreTyping(String username, int count) {
+    return '$username e $count outros estão a escrever…';
+  }
+
+  @override
+  String userAndUserAreTyping(String username, String username2) {
+    return '$username e $username2 estão a escrever…';
+  }
+
+  @override
+  String userIsTyping(String username) {
+    return '$username está a escrever…';
+  }
+
+  @override
+  String userLeftTheChat(String username) {
+    return '🚪 $username saiu do chat';
+  }
+
+  @override
+  String get username => 'Nome de utilizador';
+
+  @override
+  String userSentUnknownEvent(String username, String type) {
+    return '$username enviou um evento do tipo $type';
+  }
+
+  @override
+  String get unverified => 'Não Verificado';
+
+  @override
+  String get verified => 'Verificado';
+
+  @override
+  String get verify => 'Verificar';
+
+  @override
+  String get unsupportedAndroidVersionLong =>
+      'Esta funcionalidade requer uma versão de Android mais nova. Por favor verifique se há atualização ou suporter do Lineage OS.';
+
+  @override
+  String get videoCallsBetaWarning =>
+      'Por favor tenha em atenção que vídeo chamadas estão atualmente em beta. Podem não funcionar como esperado ou funcionar em todas as plataformas.';
+
+  @override
+  String get experimentalVideoCalls => 'Chamadas de vídeo experimentais';
+
+  @override
+  String get youRejectedTheInvitation => 'Rejeitou o convite';
+
+  @override
+  String get youJoinedTheChat => 'Juntou-se ao chat';
+
+  @override
+  String get youAcceptedTheInvitation => '👍 Aceitou o convite';
+
+  @override
+  String youBannedUser(String user) {
+    return 'Baniu $user';
+  }
+
+  @override
+  String youHaveWithdrawnTheInvitationFor(String user) {
+    return 'Retirou o convite para o $user';
+  }
+
+  @override
+  String youInvitedBy(String user) {
+    return '📩 Foi convidado por $user';
+  }
+
+  @override
+  String invitedBy(String user) {
+    return '📩 Convidado por $user';
+  }
+
+  @override
+  String youInvitedUser(String user) {
+    return '📩 Convidou $user';
+  }
+
+  @override
+  String youKicked(String user) {
+    return '👞 Deu kick a $user';
+  }
+
+  @override
+  String youKickedAndBanned(String user) {
+    return '🙅 Deu kick e baniu $user';
+  }
+
+  @override
+  String youUnbannedUser(String user) {
+    return 'Levantou o ban a $user';
+  }
+
+  @override
+  String hasKnocked(String user) {
+    return '🚪 $user bateu à porta';
+  }
+
+  @override
+  String get usersMustKnock => 'Utilizadores têm que bater à porta';
+
+  @override
+  String get noOneCanJoin => 'Ninguém pode juntar-se';
+
+  @override
+  String get knock => 'Bater à porta';
+
+  @override
+  String get users => 'Utilizadores';
+
+  @override
+  String get storeInAndroidKeystore => 'Armazenado em Android KeyStore';
+
+  @override
+  String get storeInAppleKeyChain => 'Armazenado na Apple KeyChain';
+
+  @override
+  String get storeSecurlyOnThisDevice =>
+      'Armazenado de forma segura neste dispositivo';
+
+  @override
+  String countFiles(int count) {
+    return '$count ficheiros';
+  }
+
+  @override
+  String get user => 'Utilizador';
+
+  @override
+  String get custom => 'Personalizado';
+
+  @override
+  String get foregroundServiceRunning =>
+      'Esta notificação aparece quando o serviço em primeiro plano está em execução.';
+
+  @override
+  String get screenSharingTitle => 'partilha de ecrã';
+
+  @override
+  String get screenSharingDetail => 'Está a partilhar o seu ecrã no FluffyChat';
+
+  @override
+  String get whyIsThisMessageEncrypted =>
+      'Porque é que esta mensagem é ilegível?';
+
+  @override
+  String get noKeyForThisMessage =>
+      'Isto pode acontecer se a mensagem foi enviada antes de ter iniciado sessão na sua conta neste dispositivo.\n\nTambém é possível que quem enviou tenha o seu dispositivo bloqueado ou ocorreu algo de errado com a conexão de internet.\n\nConsegue ler a mensagem em outra sessão? Então pode transferir a mensagem a partir do mesmo! Vá a Definições > Dispositivos e certifique-se que os seus dispositivos verificaram-se um ao outro. Quando abrir a sala da próxima vez e ambas as sessões estão em primeiro plano, as chaves serão transmitidas automaticamente.\n\nNão quer perder as chaves ao terminar sessão ou ao mudar dispositivos? Certifique-se que tem a cópia de segurança de chat ativa nas definições.';
+
+  @override
+  String get newGroup => 'Novo grupo';
+
+  @override
+  String get newSpace => 'Novo espaço';
+
+  @override
+  String get allSpaces => 'Todos os espaços';
+
+  @override
+  String get doNotShowAgain => 'Não mostrar novamente';
+
+  @override
+  String wasDirectChatDisplayName(String oldDisplayName) {
+    return 'Esvaziar chat (era $oldDisplayName)';
+  }
+
+  @override
+  String get newSpaceDescription =>
+      'Espaços permitem-lhe consolidar os seus chats e construir comunidades privadas ou públicas.';
+
+  @override
+  String get encryptThisChat => 'Encriptar este chat';
+
+  @override
+  String get disableEncryptionWarning =>
+      'Por razões de segurança não pode desativar encriptação em um chat, onde já foi ativado previamente.';
+
+  @override
+  String get sorryThatsNotPossible => 'Desculpe... isso não é possível';
+
+  @override
+  String get deviceKeys => 'Chaves do dispositivo:';
+
+  @override
+  String get reopenChat => 'Reabrir chat';
+
+  @override
+  String get noBackupWarning =>
+      'Aviso! Sem ativar cópia de segurança de chat, perderá acesso às suas mensagens encriptadas. É altamente recomendado que ative a cópia de segurança de chat primeiro antes de terminar sessão.';
+
+  @override
+  String get noOtherDevicesFound => 'Nenhum outro dispositivo encontrado';
+
+  @override
+  String fileIsTooBigForServer(String max) {
+    return 'Não foi possível enviar! O sevidor apenas suporta anexos até $max.';
+  }
+
+  @override
+  String fileHasBeenSavedAt(String path) {
+    return 'O ficheiro foi guardado em $path';
+  }
+
+  @override
+  String get jumpToLastReadMessage => 'Saltar para a última mensagem lida';
+
+  @override
+  String get readUpToHere => 'Lido até aqui';
+
+  @override
+  String get jump => 'Saltar';
+
+  @override
+  String get openLinkInBrowser => 'Abrir o link no browser';
+
+  @override
+  String get reportErrorDescription =>
+      '😭 Oh não. Ocorreu um problema. Se quiser, pode comunicar este erro aos desenvolvedores.';
+
+  @override
+  String get report => 'reportar';
+
+  @override
+  String get setColorTheme => 'Definir tema de cor:';
+
+  @override
+  String get invite => 'Convidar';
+
+  @override
+  String get inviteGroupChat => '📨 Convite para chat em grupo';
+
+  @override
+  String get invalidInput => 'Input inválido!';
+
+  @override
+  String wrongPinEntered(int seconds) {
+    return 'Pin introduzido incorreto! Tente novamente daqui a $seconds segundos...';
+  }
+
+  @override
+  String get pleaseEnterANumber => 'Por favor introduza um número maior que 0';
+
+  @override
+  String get archiveRoomDescription =>
+      'O chat será movido para o arquivo. Outros utilizadores poderão ver deixou o chat.';
 }

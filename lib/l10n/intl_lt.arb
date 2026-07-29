@@ -24,7 +24,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "all": "Visi",
+    "all": "Viskas",
     "@all": {
         "type": "String",
         "placeholders": {}
@@ -70,14 +70,12 @@
         "placeholders": {}
     },
     "time": "Laikas",
-    "@time": {},
     "settings": "Nustatytmai",
     "@settings": {
         "type": "String",
         "placeholders": {}
     },
     "sender": "Siuntėjas",
-    "@sender": {},
     "yes": "Taip",
     "@yes": {
         "type": "String",
@@ -99,14 +97,12 @@
         "placeholders": {}
     },
     "scanQrCode": "Nuskanuokite QR kodą",
-    "@scanQrCode": {},
     "ok": "OK",
     "@ok": {
         "type": "String",
         "placeholders": {}
     },
     "addAccount": "Pridėti paskyrą",
-    "@addAccount": {},
     "or": "Arba",
     "@or": {
         "type": "String",
@@ -173,19 +169,12 @@
         "placeholders": {}
     },
     "homeserver": "Namų serveris",
-    "@homeserver": {},
-    "everythingReady": "Viskas paruošta!",
-    "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
-    },
     "fontSize": "Šrifto dydis",
     "@fontSize": {
         "type": "String",
         "placeholders": {}
     },
     "clearArchive": "Išvalyti archyvą",
-    "@clearArchive": {},
     "create": "Sukurti",
     "@create": {
         "type": "String",
@@ -257,7 +246,6 @@
         "placeholders": {}
     },
     "link": "Nuoroda",
-    "@link": {},
     "participant": "Dalyvis",
     "@participant": {
         "type": "String",
@@ -348,7 +336,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "remove": "Pašalinti",
+    "remove": "Šalinti",
     "@remove": {
         "type": "String",
         "placeholders": {}
@@ -388,14 +376,13 @@
         "type": "String",
         "placeholders": {}
     },
-    "accept": "Sutinku",
+    "accept": "Priimti",
     "@accept": {
         "type": "String",
         "placeholders": {}
     },
     "repeatPassword": "Pakartokite slaptažodį",
-    "@repeatPassword": {},
-    "addEmail": "Pridėti el. paštą",
+    "addEmail": "Įtraukti el. paštą",
     "@addEmail": {
         "type": "String",
         "placeholders": {}
@@ -405,7 +392,7 @@
         "type": "String",
         "placeholders": {}
     },
-    "alias": "slapyvardis",
+    "alias": "pseudonimas",
     "@alias": {
         "type": "String",
         "placeholders": {}
@@ -680,7 +667,6 @@
         "placeholders": {}
     },
     "sendOnEnter": "Išsiųsti paspaudus Enter",
-    "@sendOnEnter": {},
     "banFromChat": "Užblokuoti iš pokalbio",
     "@banFromChat": {
         "type": "String",
@@ -696,8 +682,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "yourChatBackupHasBeenSetUp": "Jūsų pokalbio atsarginė kopija buvo nustatyta.",
-    "@yourChatBackupHasBeenSetUp": {},
     "chatBackup": "Pokalbio atsargine kopija",
     "@chatBackup": {
         "type": "String",
@@ -853,11 +837,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "transferFromAnotherDevice": "Perkėlimas iš kito įrenginio",
-    "@transferFromAnotherDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
     "verify": "Patvirtinti",
     "@verify": {
         "type": "String",
@@ -909,9 +888,7 @@
         "placeholders": {}
     },
     "messageInfo": "Žinutės informacija",
-    "@messageInfo": {},
     "removeFromSpace": "Pašalinti iš erdvės",
-    "@removeFromSpace": {},
     "security": "Apsauga",
     "@security": {
         "type": "String",
@@ -997,7 +974,6 @@
         "placeholders": {}
     },
     "unverified": "Nepatvirtinta",
-    "@unverified": {},
     "verified": "Patvirtinta",
     "@verified": {
         "type": "String",
@@ -1014,14 +990,12 @@
         "placeholders": {}
     },
     "start": "Pradžia",
-    "@start": {},
     "account": "Paskyra",
     "@account": {
         "type": "String",
         "placeholders": {}
     },
-    "addToSpace": "Pridėti į erdvę",
-    "@addToSpace": {},
+    "addToSpace": "Pridėti prie erdvės",
     "appLock": "Programos užraktas",
     "@appLock": {
         "type": "String",
@@ -1127,20 +1101,13 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "Ištrinti atsarginę pokalbių kopiją, kad sukurti naują atkūrimo raktą?",
-    "@wipeChatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
     "withTheseAddressesRecoveryDescription": "Naudodami šiuos adresus galite atkurti savo slaptažodį.",
     "@withTheseAddressesRecoveryDescription": {
         "type": "String",
         "placeholders": {}
     },
     "messageType": "Žinutės tipas",
-    "@messageType": {},
     "openGallery": "Atverti galeriją",
-    "@openGallery": {},
     "unknownDevice": "Nežinomas įrenginys",
     "@unknownDevice": {
         "type": "String",
@@ -1198,7 +1165,6 @@
         "placeholders": {}
     },
     "oneClientLoggedOut": "Vienas iš jūsų klientų atsijungė",
-    "@oneClientLoggedOut": {},
     "onlineKeyBackupEnabled": "Internetinė atsarginė raktų kopija įjungta",
     "@onlineKeyBackupEnabled": {
         "type": "String",
@@ -1210,15 +1176,10 @@
         "placeholders": {}
     },
     "editBundlesForAccount": "Redaguoti šios paskyros paketus",
-    "@editBundlesForAccount": {},
     "serverRequiresEmail": "Šis serveris turi patvirtinti jūsų el. pašto adresą registracijai.",
-    "@serverRequiresEmail": {},
     "addToBundle": "Pridėti prie paketų",
-    "@addToBundle": {},
     "removeFromBundle": "Pašalinkite iš šio paketo",
-    "@removeFromBundle": {},
     "bundleName": "Paketo vardas",
-    "@bundleName": {},
     "play": "Groti {fileName}",
     "@play": {
         "type": "String",
@@ -1392,9 +1353,7 @@
         }
     },
     "reportUser": "Pranešti apie vartotoją",
-    "@reportUser": {},
     "dismiss": "Atsisakyti",
-    "@dismiss": {},
     "reactedWith": "{sender} sureagavo su {reaction}",
     "@reactedWith": {
         "type": "String",
@@ -1408,7 +1367,6 @@
         }
     },
     "unsupportedAndroidVersion": "Nepalaikoma Android versija",
-    "@unsupportedAndroidVersion": {},
     "acceptedTheInvitation": "👍 {username} priėmė kvietimą",
     "@acceptedTheInvitation": {
         "type": "String",
@@ -1489,11 +1447,6 @@
                 "type": "String"
             }
         }
-    },
-    "chatBackupDescription": "Jūsų senos žinutės yra apsaugotos atkūrimo raktu. Pasirūpinkite, kad jo neprarastumėte.",
-    "@chatBackupDescription": {
-        "type": "String",
-        "placeholders": {}
     },
     "commandHint_create": "Sukurti tuščią grupinį pokalbį\nNaudokite --no-encryption kad išjungti šifravimą",
     "@commandHint_create": {
@@ -1857,27 +1810,16 @@
         }
     },
     "pinMessage": "Prisegti prie kambario",
-    "@pinMessage": {},
     "confirmEventUnpin": "Ar tikrai norite visam laikui atsegti įvykį?",
-    "@confirmEventUnpin": {},
     "emojis": "Jaustukai",
-    "@emojis": {},
     "placeCall": "Skambinti",
-    "@placeCall": {},
     "voiceCall": "Balso skambutis",
-    "@voiceCall": {},
     "unsupportedAndroidVersionLong": "Šiai funkcijai reikalinga naujesnė Android versija. Patikrinkite, ar nėra naujinimų arba Lineage OS palaikymo.",
-    "@unsupportedAndroidVersionLong": {},
     "videoCallsBetaWarning": "Atminkite, kad vaizdo skambučiai šiuo metu yra beta versijos. Jie gali neveikti taip kaip tikėtasi, arba iš viso neveikti visose platformose.",
-    "@videoCallsBetaWarning": {},
     "experimentalVideoCalls": "Eksperimentiniai vaizdo skambučiai",
-    "@experimentalVideoCalls": {},
     "youRejectedTheInvitation": "Jūs atmetėte kvietimą",
-    "@youRejectedTheInvitation": {},
     "youJoinedTheChat": "Jūs prisijungėte prie pokalbio",
-    "@youJoinedTheChat": {},
     "youAcceptedTheInvitation": "👍 Jūs priėmėte kvietimą",
-    "@youAcceptedTheInvitation": {},
     "youBannedUser": "Jūs užblokavote {user}",
     "@youBannedUser": {
         "placeholders": {
@@ -2014,7 +1956,6 @@
         }
     },
     "markAsRead": "Žymėti kaip skaitytą",
-    "@markAsRead": {},
     "pushRules": "Tiesioginių pranešimų taisyklės",
     "@pushRules": {
         "type": "String",
@@ -2031,25 +1972,14 @@
         "placeholder": {}
     },
     "commandHint_markasdm": "Pažymėti kaip tiesioginio pokalbio kambarį",
-    "@commandHint_markasdm": {},
     "dehydrateWarning": "Šio veiksmo negalima atšaukti. Įsitikinkite, kad saugiai saugote atsarginę kopiją.",
-    "@dehydrateWarning": {},
     "commandHint_markasgroup": "Pažymėti kaip grupę",
-    "@commandHint_markasgroup": {},
-    "pleaseEnterRecoveryKeyDescription": "Norėdami atrakinti senas žinutes, įveskite atkūrimo raktą, kuris buvo sukurtas ankstesnės sesijos metu. Atkūrimo raktas NĖRA jūsų slaptažodis.",
-    "@pleaseEnterRecoveryKeyDescription": {},
     "storeInAppleKeyChain": "Saugoti Apple raktų grandinėje",
-    "@storeInAppleKeyChain": {},
     "newSpace": "Nauja erdvė",
-    "@newSpace": {},
     "allSpaces": "Visos erdvės",
-    "@allSpaces": {},
     "user": "Vartotojas",
-    "@user": {},
     "custom": "Pasirinktinis",
-    "@custom": {},
     "confirmMatrixId": "Norėdami ištrinti savo paskyrą, patvirtinkite savo Matrix ID.",
-    "@confirmMatrixId": {},
     "supposedMxid": "Tai turėtų būti {mxid}",
     "@supposedMxid": {
         "type": "String",
@@ -2060,13 +1990,8 @@
         }
     },
     "dehydrate": "Eksportuoti sesiją ir išvalyti įrenginį",
-    "@dehydrate": {},
     "hydrate": "Atkurti iš atsarginės kopijos failo",
-    "@hydrate": {},
     "recoveryKey": "Atkūrimo raktas",
-    "@recoveryKey": {},
-    "recoveryKeyLost": "Pamestas atkūrimo raktas?",
-    "@recoveryKeyLost": {},
     "countFiles": "{count} failai",
     "@countFiles": {
         "placeholders": {
@@ -2075,28 +2000,775 @@
             }
         }
     },
-    "storeInSecureStorageDescription": "Atkūrimo raktą laikyti saugioje šio prietaiso saugykloje.",
-    "@storeInSecureStorageDescription": {},
-    "saveKeyManuallyDescription": "Įrašykite šį raktą rankiniu būdu, įjungę sistemos bendrinimo dialogo langą arba iškarpinę.",
-    "@saveKeyManuallyDescription": {},
     "users": "Vartotojai",
-    "@users": {},
     "storeSecurlyOnThisDevice": "Saugiai laikyti šiame prietaise",
-    "@storeSecurlyOnThisDevice": {},
-    "unlockOldMessages": "Atrakinti senas žinutes",
-    "@unlockOldMessages": {},
     "storeInAndroidKeystore": "Saugoti Android raktų saugykloje",
-    "@storeInAndroidKeystore": {},
     "noKeyForThisMessage": "Taip gali atsitikti, jei žinutė buvo išsiųsta prieš prisijungiant prie paskyros šiame prietaise.\n\nTaip pat gali būti, kad siuntėjas užblokavo jūsų prietaisą arba kažkas sutriko su interneto ryšiu.\n\nAr galite perskaityti žinutę kitoje sesijoje? Tada galite perkelti žinutę iš jos! Eikite į Nustatymai > Prietaisai ir įsitikinkite, kad jūsų prietaisai patvirtino vienas kitą. Kai kitą kartą atidarysite kambarį ir abi sesijos bus pirmame plane, raktai bus perduoti automatiškai.\n\nNenorite prarasti raktų atsijungdami arba keisdami įrenginius? Įsitikinkite, kad nustatymuose įjungėte pokalbių atsarginę kopiją.",
-    "@noKeyForThisMessage": {},
     "foregroundServiceRunning": "Šis pranešimas rodomas, kai veikia pirmojo plano paslauga.",
-    "@foregroundServiceRunning": {},
     "screenSharingTitle": "ekrano bendrinimas",
-    "@screenSharingTitle": {},
     "whyIsThisMessageEncrypted": "Kodėl ši žinutė neperskaitoma?",
-    "@whyIsThisMessageEncrypted": {},
     "newGroup": "Nauja grupė",
-    "@newGroup": {},
     "screenSharingDetail": "Bendrinate savo ekraną per FuffyChat",
-    "@screenSharingDetail": {}
+    
+    "hugContent": "{senderName} jus apkabina",
+    "@hugContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "commandHint_cuddle": "Siųskite glebimą",
+    
+    
+    
+    
+    "@completedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@synchronizingPleaseWaitCounter": {
+        "type": "String",
+        "placeholders": {
+            "percentage": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@goToSpace": {
+        "type": "String",
+        "space": {}
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "appLockDescription": "Užrakinti programą, kai jos naudojama, nustatant PIN kodą",
+    
+    
+    
+    
+    
+    
+    
+    "@isReadyForKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@countReplies": {
+        "type": "int",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    
+    "@versionWithNumber": {
+        "type": "String",
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@countChats": {
+        "type": "String",
+        "placeholders": {
+            "chats": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    "@userLevel": {
+        "type": "String",
+        "placeholders": {
+            "level": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@updateInstalled": {
+        "type": "String",
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@noUsersFoundWithQuery": {
+        "type": "String",
+        "placeholders": {
+            "query": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "importFromZipFile": "Importuoti iš .zip failo",
+    
+    
+    
+    
+    "@sentVoiceMessage": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            },
+            "duration": {
+                "type": "String"
+            }
+        }
+    },
+    "ignoreUser": "Nepaisyti naudotojo",
+    
+    
+    
+    
+    
+    "@redactedBy": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@startedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "@fileIsTooBigForServer": {
+        "type": "String",
+        "placeholders": {
+            "max": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@adminLevel": {
+        "type": "String",
+        "placeholders": {
+            "level": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "aboutHomeserver": "Apie {homeserver}",
+    "@aboutHomeserver": {
+        "type": "String",
+        "placeholders": {
+            "homeserver": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "@mute": {
+        "description": "This should be a very short string because there is not much space in the button!"
+    },
+    
+    
+    
+    
+    "exportEmotePack": "Eksportuoti jaustukų paketą kaip .zip",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@redactedByBecause": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "reason": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@fileHasBeenSavedAt": {
+        "type": "String",
+        "placeholders": {
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "@spaceMemberOfCanKnock": {
+        "type": "String",
+        "placeholders": {
+            "spaces": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@invitedBy": {
+        "placeholders": {
+            "user": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "googlyEyesContent": "{senderName} siunčia jums išsipūtusias akutes",
+    "@googlyEyesContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@chatSearchedUntil": {
+        "type": "String",
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@sessionLostBody": {
+        "type": "String",
+        "placeholders": {
+            "url": {
+                "type": "String"
+            },
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@thereAreCountUsersBlocked": {
+        "type": "String",
+        "count": {}
+    },
+    
+    "@hasKnocked": {
+        "placeholders": {
+            "user": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@wrongPinEntered": {
+        "type": "String",
+        "placeholders": {
+            "seconds": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "importEmojis": "Importuoti jaustukus",
+    
+    "@wasDirectChatDisplayName": {
+        "type": "String",
+        "placeholders": {
+            "oldDisplayName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "notAnImage": "Nėra vaizdo failas.",
+    
+    
+    
+    
+    
+    
+    
+    "@unknownPushRule": {
+        "type": "String",
+        "placeholders": {
+            "rule": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    "cuddleContent": "{senderName} jus glėbia",
+    "@cuddleContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@emoteKeyboardNoRecents": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    "@acceptedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@chatCanBeDiscoveredViaSearchOnServer": {
+        "type": "String",
+        "placeholders": {
+            "server": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@canceledKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    "commandHint_roomupgrade": "Atnaujinkite šį kambarį iki nurodytos kambario versijos",
+    
+    
+    
+    
+    "commandHint_hug": "Siųskite apkabinimą",
+    "replace": "Pakeisti",
+    
+    "@restoreSessionBody": {
+        "type": "String",
+        "placeholders": {
+            "url": {
+                "type": "String"
+            },
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@appWantsToUseForLogin": {
+        "type": "String",
+        "placeholders": {
+            "server": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@unreadChatsInApp": {
+        "type": "String",
+        "placeholders": {
+            "appname": {
+                "type": "String"
+            },
+            "unread": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@countVotes": {
+        "type": "int",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "commandHint_googly": "Siųskite išsipūtusias akutes",
+    
+    
+    "@moderatorLevel": {
+        "type": "String",
+        "placeholders": {
+            "level": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    "@sendImages": {
+        "type": "String",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@startedAPoll": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "importNow": "Importuoti dabar",
+    
+    
+    
+    
+    
+    "@countInvited": {
+        "type": "String",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    
+    "@spaceMemberOf": {
+        "type": "String",
+        "placeholders": {
+            "spaces": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@requestedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@searchIn": {
+        "type": "String",
+        "placeholders": {
+            "chat": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "yesterday": "vakar",
+    "edited": "(redaguota)",
+    "uploading": "Įkeliamas",
+    "encrypting": "Šifruojamas",
+    "generatingThumbnail": "Generuojama miniatiūra",
+    "sending": "Siunčiama",
+    "today": "šiandien",
+    "youAreReadyToStart": "Esate pasirengę pradėti!",
+    "saveAsFile": "Išsaugoti kaip failą",
+    "@saveAsFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unlock": "Atrakinti",
+    "@unlock": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "openFile": "Atverti failą",
+    "@openFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "resetAccountWarning": "Atkūrus paskyrą, prarasite prieigą prie senų pranešimų visam laikui. Visus šiuo metu naudojamus įrenginius reikės patvirtinti iš naujo. Šį veiksmą atlikite tik tuo atveju, jei nebeliko jokių kitų įrenginių, kuriais būtų galima patvirtinti sesaną, ir praradote atkūrimo raktą bei slaptafrazę!",
+    "@resetAccountWarning": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "newPassphraseDescription": "„FluffyChat“ naudoja visapusišką šifravimą. Kad neprarastumėte savo žinučių, pasirinkite saugią slaptafrazę, kuri apsaugos jūsų kriptografinę tapatybę ir užšifruotą žinučių atsarginę kopiją.",
+    "@newPassphraseDescription": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "newPassphrase": "Nauja slaptafrazė",
+    "@newPassphrase": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "repeatPassphrase": "Pakartokite slaptafrazę",
+    "@repeatPassphrase": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphrasesMatch": "Slaptafrazės sutampa",
+    "@passphrasesMatch": {
+        "type": "String",
+        "placeholders": {}
+    }
 }

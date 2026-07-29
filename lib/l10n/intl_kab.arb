@@ -255,14 +255,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "yourChatBackupHasBeenSetUp": "Aḥraz n udiwenni-ik·im yettusbadu.",
     "chatBackup": "Aḥraz n udiwenni",
     "@chatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "chatBackupDescription": "Iznan-ik·im d iɣelsanen s tsarut n tririt. Ɣur-k·m ad k·em-truḥ.",
-    "@chatBackupDescription": {
         "type": "String",
         "placeholders": {}
     },
@@ -490,11 +484,6 @@
                 "type": "String"
             }
         }
-    },
-    "everythingReady": "Kullec ihegga!",
-    "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
     },
     "fileName": "Isem n ufaylu",
     "@fileName": {
@@ -955,7 +944,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "overview": "Taskant",
     "passwordRecoverySettings": "Iɣewwaṛen n tririt n wawal n uɛeddi",
     "passwordRecovery": "Tiririt n wawal n uɛeddi",
     "@passwordRecovery": {
@@ -1133,11 +1121,6 @@
     },
     "whyDoYouWantToReportThis": "Ayɣer tebɣiḍ ad temleḍ aya?",
     "@whyDoYouWantToReportThis": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "wipeChatBackup": "Sfeḍ aḥraz-ik·im n udiwenni akken ad d-tesnulfuḍ tasarut tamaynut n tririt?",
-    "@wipeChatBackup": {
         "type": "String",
         "placeholders": {}
     },
@@ -1553,9 +1536,6 @@
     "usersMustKnock": "Iseqdacen yessefk ad sṭebṭben",
     "noOneCanJoin": "Yiwen ur yezmir ad d-yernu",
     "users": "Iseqdacen",
-    "unlockOldMessages": "Kkes asekkeṛ i yiznan iqbuṛen",
-    "storeInSecureStorageDescription": "Ḥrez tasarut n tririt deg usekles aɣelsan n yibenk-a.",
-    "saveKeyManuallyDescription": "Sekles tasarut-agi s ufus deg udiwenni n beṭṭu n unagraw neɣ ɣef tecfawit.",
     "storeInAndroidKeystore": "Sekles deg Android KeyStore",
     "storeInAppleKeyChain": "Sekles deg uzrar n tsura n Apple",
     "storeSecurlyOnThisDevice": "Ḥrez s wudem aɣelsan ɣef yibenk-a",
@@ -1573,7 +1553,6 @@
     "screenSharingTitle": "beṭṭu n ugdil",
     "screenSharingDetail": "Tbeṭṭuḍ agdil-ik·im deg FluffyChat",
     "whyIsThisMessageEncrypted": "Acuɣer izen-agi ur yettwaɣri ara?",
-    "recoveryKeyLost": "Tasarut n tririt teɛreq?",
     "send": "Azen",
     "@send": {
         "type": "String",
@@ -1796,11 +1775,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "transferFromAnotherDevice": "Asiweḍ seg yibenk nniḍen",
-    "@transferFromAnotherDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
     "tryToSendAgain": "Ɛreḍ ad tazneḍ tikkelt nniḍen",
     "@tryToSendAgain": {
         "type": "String",
@@ -1862,7 +1836,6 @@
             }
         }
     },
-    "pleaseEnterRecoveryKeyDescription": "Akken ad tekkseḍ asekkeṛ i yiznan-ik·im iqburen, ttxil-k·m sekcem tasarut n tririt i d-yenulfan di tɣimit tuzwirt. Tasarut-ik·im n tririt UR TELLI ARA d awal-ik·im n uɛeddi.",
     "experimentalVideoCalls": "Isawalen uvidya s wudem armitan",
     "newGroup": "Agraw amaynut",
     "newSpace": "Tallunt tamaynut",
@@ -1886,8 +1859,6 @@
     "stickerPackName": "Isem ukemmus n tcṛeṭ n tesfift",
     "skipChatBackup": "Zgel aḥraz n udiwenni",
     "skipChatBackupWarning": "tetḥeqqeḍ? S war armad n weḥraz n udiwenni, tzemreḍ ad tesruḥeḍ anekcum ɣer yiznan-ik·im ma tbeddeleḍ ibenk-ik·im.",
-    "loadingMessages": "Asali n yiznan",
-    "setupChatBackup": "Sbadu aḥraz n udiwenni",
     "noMoreResultsFound": "Ulac ugar n igmaḍ yettwafen",
     "clientWellKnownInformation": "Talɣut yettwasnen ɣef umsaɣ:",
     "advancedConfigs": "Tawila leqqayen",
@@ -2154,5 +2125,594 @@
             }
         }
     },
-    "startVideoCall": "Bdu asiwel n uvidyu"
+    
+    "@hugContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "@emoteShortcode": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@completedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    "@changeTheNameOfTheGroup": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    
+    
+    
+    
+    "@goToSpace": {
+        "type": "String",
+        "space": {}
+    },
+    
+    
+    
+    
+    
+    
+    
+    "@changeTheme": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    
+    
+    
+    
+    
+    "@isReadyForKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@countReplies": {
+        "type": "int",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    "@changedTheGuestAccessRules": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "passwordIsWrong": "Ur iṣeḥḥa ara wawal-ik n uɛeddi i d-teskecmeḍ",
+    
+    
+    
+    
+    
+    
+    
+    "@hideRedactedEvents": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    "@changedTheGuestAccessRulesTo": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "rules": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@updateInstalled": {
+        "type": "String",
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "createNewChat": "Snulfu-d adiwenni amaynut",
+    
+    "@pushRules": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    "@noUsersFoundWithQuery": {
+        "type": "String",
+        "placeholders": {
+            "query": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    "@sentVoiceMessage": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            },
+            "duration": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@redactedBy": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@redactedAnEvent": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@autoplayImages": {
+        "type": "String",
+        "placeholder": {}
+    },
+    
+    "@compareEmojiMatch": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "tagName": "Isem n tebzimt",
+    
+    "@startedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@changedTheRoomAliases": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@changedTheHistoryVisibilityTo": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "rules": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@changedTheJoinRulesTo": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "joinRules": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@moderator": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@channelCorruptedDecryptError": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@guestsCanJoin": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    "@hasWithdrawnTheInvitationFor": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "targetName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@mute": {
+        "description": "This should be a very short string because there is not much space in the button!"
+    },
+    
+    
+    
+    "@commandInvalid": {
+        "type": "String"
+    },
+    
+    "@changedTheRoomInvitationLink": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@commandHint_plain": {
+        "type": "String",
+        "description": "Usage hint for the command /plain"
+    },
+    
+    
+    "@guestsAreForbidden": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@redactedByBecause": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            },
+            "reason": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "addTag": "Rnu tabzimt",
+    
+    "@changedTheProfileAvatar": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    "@spaceMemberOfCanKnock": {
+        "type": "String",
+        "placeholders": {
+            "spaces": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@commandMissing": {
+        "type": "String",
+        "placeholders": {
+            "command": {
+                "type": "String"
+            }
+        },
+        "description": "State that {command} is not a valid /command."
+    },
+    
+    
+    
+    
+    "@compareNumbersMatch": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    
+    
+    "@googlyEyesContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    "@chatSearchedUntil": {
+        "type": "String",
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@sessionLostBody": {
+        "type": "String",
+        "placeholders": {
+            "url": {
+                "type": "String"
+            },
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@thereAreCountUsersBlocked": {
+        "type": "String",
+        "count": {}
+    },
+    
+    "@commandHint_react": {
+        "type": "String",
+        "description": "Usage hint for the command /react"
+    },
+    
+    "@changedTheHistoryVisibility": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "pleaseChooseAStrongPassword": "Ttxil, fren awal n uɛeddi iǧehden, ma ulac aɣilif",
+    
+    
+    "@commandHint_unban": {
+        "type": "String",
+        "description": "Usage hint for the command /unban"
+    },
+    
+    "@wasDirectChatDisplayName": {
+        "type": "String",
+        "placeholders": {
+            "oldDisplayName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@unknownPushRule": {
+        "type": "String",
+        "placeholders": {
+            "rule": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@changedTheJoinRules": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@cuddleContent": {
+        "type": "String",
+        "placeholders": {
+            "senderName": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@noGoogleServicesWarning": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@acceptedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@changeTheHomeserver": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@chatCanBeDiscoveredViaSearchOnServer": {
+        "type": "String",
+        "placeholders": {
+            "server": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "@canceledKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@restoreSessionBody": {
+        "type": "String",
+        "placeholders": {
+            "url": {
+                "type": "String"
+            },
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    "@unreadChatsInApp": {
+        "type": "String",
+        "placeholders": {
+            "appname": {
+                "type": "String"
+            },
+            "unread": {
+                "type": "String"
+            }
+        }
+    },
+    "removeTag": "Kkes tabzimt",
+    
+    "@countVotes": {
+        "type": "int",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    
+    "@moderatorLevel": {
+        "type": "String",
+        "placeholders": {
+            "level": {
+                "type": "int"
+            }
+        }
+    },
+    
+    
+    "@changeYourAvatar": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "@pin": {
+        "type": "String",
+        "placeholders": {}
+    },
+    
+    "@requestedKeyVerification": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            }
+        }
+    },
+    "showMore": "Sken-d ugar",
+    "publicKey": "Tasarut tazayazt: {key}",
+    "@publicKey": {
+        "type": "String",
+        "placeholders": {
+            "key": {
+                "type": "String"
+            }
+        }
+    }
 }

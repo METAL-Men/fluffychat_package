@@ -9,9 +9,6 @@ class L10nNl extends L10n {
   L10nNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'true';
-
-  @override
   String get repeatPassword => 'Wachtwoord herhalen';
 
   @override
@@ -142,7 +139,8 @@ class L10nNl extends L10n {
   String get areYouSure => 'Weet je het zeker?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits =>
+      'Je hebt wijzigingen die nog niet zijn opgeslagen. Wil je de wijzigingen ongedaan maken?';
 
   @override
   String get areYouSureYouWantToLogout =>
@@ -165,7 +163,6 @@ class L10nNl extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'De homeserver ondersteunt de login types:\n$serverVersions\nMaar deze app ondersteunt alleen:\n$supportedVersions';
   }
@@ -326,14 +323,7 @@ class L10nNl extends L10n {
   String get chat => 'Chat';
 
   @override
-  String get yourChatBackupHasBeenSetUp => 'Jouw chatback-up is ingesteld.';
-
-  @override
   String get chatBackup => 'Chatback-up';
-
-  @override
-  String get chatBackupDescription =>
-      'Je berichten zijn beveiligd met een herstelsleutel. Zorg ervoor dat je deze niet verliest.';
 
   @override
   String get chatDetails => 'Chatdetails';
@@ -620,9 +610,6 @@ class L10nNl extends L10n {
   String errorObtainingLocation(String error) {
     return 'Locatie ophalen fout: $error';
   }
-
-  @override
-  String get everythingReady => 'Alles klaar!';
 
   @override
   String get fileName => 'Bestandsnaam';
@@ -987,9 +974,6 @@ class L10nNl extends L10n {
   String get passwordHasBeenChanged => 'Wachtwoord gewijzigd';
 
   @override
-  String get overview => 'Overzicht';
-
-  @override
   String get passwordRecoverySettings => 'Wachtwoordherstel-instellingen';
 
   @override
@@ -1122,9 +1106,6 @@ class L10nNl extends L10n {
   String get recoveryKey => 'Herstelsleutel';
 
   @override
-  String get recoveryKeyLost => 'Herstelsleutel verloren?';
-
-  @override
   String get send => 'Verstuur';
 
   @override
@@ -1210,9 +1191,6 @@ class L10nNl extends L10n {
   String get showPassword => 'Wachtwoord weergeven';
 
   @override
-  String get presencesToggle => 'Statusberichten van andere personen tonen';
-
-  @override
   String get skip => 'Overslaan';
 
   @override
@@ -1261,9 +1239,6 @@ class L10nNl extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Te veel verzoeken. Probeer het later nog eens!';
-
-  @override
-  String get transferFromAnotherDevice => 'Overzetten vanaf een ander apparaat';
 
   @override
   String get tryToSendAgain => 'Probeer nogmaals te verzenden';
@@ -1385,10 +1360,6 @@ class L10nNl extends L10n {
   String get whyDoYouWantToReportThis => 'Waarom wil je dit rapporteren?';
 
   @override
-  String get wipeChatBackup =>
-      'Wil je de chatback-up wissen om een nieuwe herstelsleutel te kunnen maken?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Met deze adressen kun je je wachtwoord herstellen.';
 
@@ -1431,10 +1402,6 @@ class L10nNl extends L10n {
 
   @override
   String get start => 'Start';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Om je oude berichten te ontgrendelen voer je jouw herstelsleutel in die gemaakt is in je vorige sessie. Je sleutel is niet je wachtwoord.';
 
   @override
   String get markAsRead => 'Markeer als gelezen';
@@ -1548,17 +1515,6 @@ class L10nNl extends L10n {
   String get users => 'Personen';
 
   @override
-  String get unlockOldMessages => 'Oude berichten ontgrendelen';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Sla de herstelsleutel op in de beveiligde opslag van dit apparaat.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Sla deze sleutel handmatig op via delen of het klembord.';
-
-  @override
   String get storeInAndroidKeystore => 'In Android KeyStore opslaan';
 
   @override
@@ -1603,9 +1559,6 @@ class L10nNl extends L10n {
 
   @override
   String get allSpaces => 'Alle spaces';
-
-  @override
-  String get hidePresences => 'Verberg statuslijst?';
 
   @override
   String get doNotShowAgain => 'Niet meer tonen';
@@ -2357,6 +2310,12 @@ class L10nNl extends L10n {
   String get moreEvents => 'Meer gebeurtenissen';
 
   @override
+  String get showMore => 'Toon meer';
+
+  @override
+  String get showLess => 'Toon minder';
+
+  @override
   String get declineInvitation => 'Uitnodiging afwijzen';
 
   @override
@@ -2490,12 +2449,6 @@ class L10nNl extends L10n {
       'Weet je het zeker? Zonder chat back-up verlies je toegang tot je berichten als je van apparaat wisselt.';
 
   @override
-  String get loadingMessages => 'Berichten laden';
-
-  @override
-  String get setupChatBackup => 'Chatback-up instellen';
-
-  @override
   String get noMoreResultsFound => 'Geen resultaten meer gevonden';
 
   @override
@@ -2542,10 +2495,6 @@ class L10nNl extends L10n {
   @override
   String get signInGreeting =>
       'Heb je al een Matrix account? Welkom terug! Kies jouw server en log in.';
-
-  @override
-  String get appIntro =>
-      'Met FluffyChat kan je chatten met je vrienden. Het is een veilige en decentrale [matrix] app! Lees meer op https://matrix.org als je wilt of kies registreren.';
 
   @override
   String get theProcessWasCanceled => 'Het proces is geannuleerd.';
@@ -2606,31 +2555,6 @@ class L10nNl extends L10n {
   String get unsetLowPriority => 'Lage prioriteit uitschakelen';
 
   @override
-  String get removeCallFromChat => 'Verwijder oproep van chat';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Wil je de oproep voor iedereen in de chat verwijderen?';
-
-  @override
-  String get removeCallForEveryone => 'Verwijder oproep voor iedereen';
-
-  @override
-  String get startVoiceCall => 'Start audio-gesprek';
-
-  @override
-  String get startVideoCall => 'Start video-gesprek';
-
-  @override
-  String get joinVoiceCall => 'Audio-gesprek opnemen';
-
-  @override
-  String get joinVideoCall => 'Deelnemen aan video-gesprek';
-
-  @override
-  String get live => 'Live';
-
-  @override
   String get playSoundOnNotification => 'Meldingsgeluid afspelen';
 
   @override
@@ -2646,12 +2570,178 @@ class L10nNl extends L10n {
   String get createNewTag => 'Nieuwe tag maken';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Kamers in een space verbergen';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Deze versie was alleen mogelijk dankzij jullie steun. FluffyChat blijft gratis, open source en volledig door de community gedreven.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline =>
+      'Miniatuurafbeeldingen van foto’s en video’s weergeven';
+
+  @override
+  String get appSubtitle => 'Veilige [matrix]-communicatie';
+
+  @override
+  String get appDescription =>
+      'Communiceer op een eenvoudige en voor iedereen toegankelijke manier via het gedecentraliseerde [matrix]-netwerk.';
+
+  @override
+  String get interactiveVerification => 'Interactieve verificatie';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Als jullie naast elkaar zitten of via een beveiligd kanaal communiceren, kun je alle apparaten in één keer verifiëren door een beveiligingscode of emoji’s te vergelijken.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count niet-geverifieerde apparaten in de chat.';
+  }
+
+  @override
+  String get check => 'Controleer';
+
+  @override
+  String get encryptedMessage => 'Versleuteld bericht';
+
+  @override
+  String get unencryptedMessage => 'Niet-versleuteld bericht';
+
+  @override
+  String get allow => 'Toestaan';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Je bericht is eind-tot-eind versleuteld en kan alleen gelezen worden door deze persoon:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Je bericht eind-tot-eind versleuteld en kan alleen gelezen worden door deze personen:';
+
+  @override
+  String publicKey(String key) {
+    return 'Publieke sleutel: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Apparaatidentificatiesleutel';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Voer je wachtwoordzin of herstelsleutel in om dit apparaat te verifiëren en krijg toegang tot je berichten back-up.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Kies een van je andere apparaten om deze sessie te verifiëren:';
+
+  @override
+  String get resetAccount => 'Account resetten';
+
+  @override
+  String get restoreCryptoIdentity => 'Crypto-identiteit herstellen';
+
+  @override
+  String get resetCryptoIdentity => 'Crypto-identiteit resetten';
+
+  @override
+  String get setUpCryptoIdentity => 'Crypto-identiteit instellen';
+
+  @override
+  String get waitingForKeys =>
+      'Wachten op sleutels... Houd het andere apparaat alsjeblieft actief.';
+
+  @override
+  String get noKeysTransmitted =>
+      'Er zijn geen sleutels verzonden. Probeer het opnieuw.';
+
+  @override
+  String get unlock => 'Ontgrendelen';
+
+  @override
+  String get openFile => 'Bestand openen';
+
+  @override
+  String get resetAccountWarning =>
+      'Als je je account reset, verlies je voor altijd de toegang tot je oude berichten. Alle huidige apparaten moeten ook opnieuw geverifieerd worden. Voer deze actie alleen uit als je geen andere apparaten meer hebt om je sessie mee te verifiëren én je je herstelsleutel en wachtwoordzin kwijt bent!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat gebruikt eind-tot-eind versleuteling. Om je berichten niet te verliezen, kies alsjeblieft een sterke wachtwoordzin. Hiermee beveilig je je crypto-identiteit en je versleutelde berichten back-up.';
+
+  @override
+  String get newPassphrase => 'Nieuwe wachtwoordzin';
+
+  @override
+  String get repeatPassphrase => 'Herhaal wachtwoordzin';
+
+  @override
+  String get passphrasesMatch => 'Wachtwoordzinnen komen overeen';
+
+  @override
+  String get passphraseLengthRequirement => 'Minstens 12 tekens lang.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Bevat hoofdletter en kleine letters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement => 'Bevat speciale tekens.';
+
+  @override
+  String get passphraseNumberRequirement => 'Bevat een nummer.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Let op, bewaar je herstelsleutel zorgvuldig zodat je je versleutelde berichten en crypto-identiteit kan herstellen.';
+
+  @override
+  String get saveAsFile => 'Bewaar als bestand';
+
+  @override
+  String get youAreReadyToStart => 'Je bent klaar om te beginnen!';
+
+  @override
+  String get noUserKeyFound => 'Geen persoonssleutel gevonden';
+
+  @override
+  String knownSince(String date) {
+    return 'Bekend sinds: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Apparaat zonder verificatie';
+
+  @override
+  String get signedDevice => 'Geverifieerd apparaat';
+
+  @override
+  String get noCurve25519KeyFound => 'Geen curve25519-sleutel gevonden';
+
+  @override
+  String get messageNotDecryptable => 'Bericht niet te ontsleutelen';
+
+  @override
+  String get today => 'Vandaag';
+
+  @override
+  String get sending => 'Verzenden';
+
+  @override
+  String get generatingThumbnail => 'Miniatuur-afbeelding genereren';
+
+  @override
+  String get encrypting => 'Versleutelen';
+
+  @override
+  String get uploading => 'Uploaden';
+
+  @override
+  String get edited => '(bewerkt)';
+
+  @override
+  String get couldNotBeSent => 'Kan niet worden gestuurd';
+
+  @override
+  String get yesterday => 'Gisteren';
 }

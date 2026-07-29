@@ -1,8 +1,4 @@
 {
-    "alwaysUse24HourFormat": "адключана",
-    "@alwaysUse24HourFormat": {
-        "description": "Set to true to always display time of day in 24 hour format."
-    },
     "repeatPassword": "Паўтарыце пароль",
     "notAnImage": "Не файл выявы.",
     "ignoreUser": "Ігнараваць карыстальніка",
@@ -431,14 +427,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "yourChatBackupHasBeenSetUp": "Рэзервовае капіраванне чатаў было наладжана.",
     "chatBackup": "Рэзервовае капіраванне чатаў",
     "@chatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "chatBackupDescription": "Вашы паведамленні абаронены ключом аднаўлення. Калі ласка, пераканайцеся ў тым, што вы яго не згубіце.",
-    "@chatBackupDescription": {
         "type": "String",
         "placeholders": {}
     },
@@ -854,11 +844,6 @@
                 "type": "String"
             }
         }
-    },
-    "everythingReady": "Усё гатова!",
-    "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
     },
     "fileName": "Назва файла",
     "@fileName": {
@@ -1291,11 +1276,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "presencesToggle": "Паказваць паведамленні статусаў іншых карыстальнікаў",
-    "@presencesToggle": {
-        "type": "String",
-        "placeholders": {}
-    },
     "skip": "Прапусціць",
     "@skip": {
         "type": "String",
@@ -1425,11 +1405,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "Ачысціць рэзервовую копію чата, каб стварыць новы ключ аднаўлення?",
-    "@wipeChatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
     "withTheseAddressesRecoveryDescription": "З гэтымі адрасамі, вы сожаце аднавіць свой пароль.",
     "@withTheseAddressesRecoveryDescription": {
         "type": "String",
@@ -1472,7 +1447,6 @@
     "openGallery": "Адкрыць галерэю",
     "removeFromSpace": "Выдаліць з прасторы",
     "start": "Пачаць",
-    "pleaseEnterRecoveryKeyDescription": "Каб разблакіраваць вашы мінулыя паведамленні, калі ласка, увядзіце ключ аднаўлення, што быў згенерыраваны ў мінулай сесіі. Ключ аднаўлення гэта НЕ ваш пароль.",
     "markAsRead": "Адзначыць як прачытанае",
     "reportUser": "Паскардзіцца на карыстальніка",
     "dismiss": "Адхіліць",
@@ -1576,9 +1550,6 @@
     "noOneCanJoin": "Ніхто не можа далучыцца",
     "knock": "Пагрукацца",
     "users": "Карыстальнікі",
-    "unlockOldMessages": "Адкрыць старыя паведамленні",
-    "storeInSecureStorageDescription": "Захаваць код аднаўлення ў бяспечным месцы на прыладзе.",
-    "saveKeyManuallyDescription": "Захаваць гэты ключ самастойна, выклікам сістэмнага акна Падзяліцца ці праз буфер.",
     "storeInAndroidKeystore": "Захаваць у Android KeyStore",
     "storeInAppleKeyChain": "Захаваць у Apple KeyChain",
     "storeSecurlyOnThisDevice": "Захаваць на гэтай прыладзе",
@@ -1600,7 +1571,6 @@
     "newGroup": "Новая група",
     "newSpace": "Новая прастора",
     "allSpaces": "Усе прасторы",
-    "hidePresences": "Хаваць спіс статусаў?",
     "doNotShowAgain": "Не паказваць зноў",
     "wasDirectChatDisplayName": "Пусты чат (быў {oldDisplayName})",
     "@wasDirectChatDisplayName": {
@@ -1803,7 +1773,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "overview": "Агляд",
     "passwordRecoverySettings": "Налады скіду пароля",
     "passwordRecovery": "Аднаўленне пароля",
     "@passwordRecovery": {
@@ -2014,7 +1983,6 @@
         "placeholders": {}
     },
     "recoveryKey": "Ключ аднаўлення",
-    "recoveryKeyLost": "Ключ абнаўлення страчаны?",
     "send": "Даслаць",
     "@send": {
         "type": "String",
@@ -2124,11 +2092,6 @@
     },
     "tooManyRequestsWarning": "Занадта шмат запытаў. Паспрабуйце пазней!",
     "@tooManyRequestsWarning": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "transferFromAnotherDevice": "Перанесці з іншай прылады",
-    "@transferFromAnotherDevice": {
         "type": "String",
         "placeholders": {}
     },
@@ -2682,8 +2645,6 @@
     "attribution": "Атрыбуцыя",
     "skipChatBackup": "Прапусціць рэзервовае капіраванне чатаў",
     "skipChatBackupWarning": "Вы ўпэўнены? Без наладжвання рэзервовага капіравання чатаў, вы можаце згубіць доступ да ўсіх вашых чатаў, калі вы зменіце прыладу.",
-    "loadingMessages": "Загрузка паведамленняў",
-    "setupChatBackup": "Наладзіць рэзервовае капіраванне чатаў",
     "changedTheChatDescription": "{username} змяніў апісанне чата",
     "changedTheChatName": "{username} змяніў назву чата",
     "noMoreResultsFound": "Нічога не знойдзена",
@@ -2716,7 +2677,6 @@
     "createNewAccount": "Стварыць новы ўліковы запіс",
     "signUpGreeting": "FluffyChat дэцэнтралізаваны! Выберыце свой сервер, дзе вы хаціце стварыць уліковы запіс і прайягвайце!",
     "signInGreeting": "Вы ўжо маеце ўліковы запіс у Matrix? З вяртаннем! Выберыце свой хатні сервер і аўтарызуйцеся.",
-    "appIntro": "З дапамогай FluffyChat вы можаце размаўляць з вашымі сябрамі. Гэта бяспечны дэцэнтралізаваны [matrix] мэнэджэр! Даведайцеся больш на https://matrix.org, калі хаціце ці проста ўвайдзіце.",
     "theProcessWasCanceled": "Працэс быў скасаваны.",
     "join": "Далучыцца",
     "searchOrEnterHomeserverAddress": "Пашукайце ці ўвядзіце адрас хатняга сервера",
@@ -2739,14 +2699,6 @@
     "support": "Падтрымаць",
     "setLowPriority": "Прызначыць нізкі прыярытэт",
     "unsetLowPriority": "Скасаваць нізкі прыярытэт",
-    "removeCallFromChat": "Прыбраць выклік з чату",
-    "removeCallFromChatDescription": "Вы хаціце прыбраць выклік з чату для ўсіх удзельнікаў?",
-    "removeCallForEveryone": "Прыбраць выклікі для ўсіх",
-    "startVoiceCall": "Пачаць галасавы выклік",
-    "startVideoCall": "Пачаць відэа-выклік",
-    "joinVoiceCall": "Далучыцца да галасавога выкліка",
-    "joinVideoCall": "Далучыцца да відэа-выкліка",
-    "live": "Трансляцыя",
     "playSoundOnNotification": "Прайграваць гук апавяшчэння",
     "addTag": "Дадаць тэг",
     "removeTag": "Выдаліць тэг",

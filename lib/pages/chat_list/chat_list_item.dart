@@ -66,7 +66,7 @@ class ChatListItem extends StatelessWidget {
     final space = this.space;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 1),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Material(
         borderRadius: BorderRadius.circular(AppConfig.borderRadius),
         clipBehavior: Clip.hardEdge,
@@ -75,7 +75,7 @@ class ChatListItem extends StatelessWidget {
           future: room.name.isEmpty ? room.loadHeroUsers() : null,
           builder: (context, _) => HoverBuilder(
             builder: (context, listTileHovered) => ListTile(
-              visualDensity: const VisualDensity(vertical: -0.5),
+              minVerticalPadding: 16,
               contentPadding: const EdgeInsets.symmetric(horizontal: 8),
               onLongPress: () => onLongPress?.call(context),
               leading: HoverBuilder(
@@ -229,7 +229,9 @@ class ChatListItem extends StatelessWidget {
                           fontWeight: room.hasNewMessages
                               ? FontWeight.bold
                               : null,
-                          color: hasNotifications
+                          color: room.highlightCount >= 1
+                              ? theme.colorScheme.error
+                              : room.hasNewMessages
                               ? theme.colorScheme.primary
                               : null,
                         ),

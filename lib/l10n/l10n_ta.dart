@@ -9,10 +9,7 @@ class L10nTa extends L10n {
   L10nTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'தவறு';
-
-  @override
-  String get repeatPassword => 'மீண்டும் கடவுச்சொல்';
+  String get repeatPassword => 'கடவுச்சொல்லை மீண்டும் இடு';
 
   @override
   String get notAnImage => 'படக் கோப்பு அல்ல.';
@@ -166,7 +163,6 @@ class L10nTa extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'உள்நாட்டு வகைகளை ஓம்சர்வர் ஆதரிக்கிறது:\n $serverVersions\n ஆனால் இந்த பயன்பாடு மட்டுமே ஆதரிக்கிறது:\n $supportedVersions';
   }
@@ -327,15 +323,7 @@ class L10nTa extends L10n {
   String get chat => 'அரட்டை';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'உங்கள் அரட்டை காப்புப்பிரதி அமைக்கப்பட்டுள்ளது.';
-
-  @override
   String get chatBackup => 'அரட்டை காப்புப்பிரதி';
-
-  @override
-  String get chatBackupDescription =>
-      'உங்கள் செய்திகள் மீட்பு விசையுடன் பாதுகாக்கப்பட்டுள்ளன. தயவு செய்து அதை இழக்காமல் பார்த்துக் கொள்ளுங்கள்.';
 
   @override
   String get chatDetails => 'அரட்டை விவரங்கள்';
@@ -629,9 +617,6 @@ class L10nTa extends L10n {
   String errorObtainingLocation(String error) {
     return 'இருப்பிடத்தைப் பெறுவதில் பிழை: $error';
   }
-
-  @override
-  String get everythingReady => 'எல்லாம் தயாராக!';
 
   @override
   String get fileName => 'கோப்பு பெயர்';
@@ -1000,9 +985,6 @@ class L10nTa extends L10n {
   String get passwordHasBeenChanged => 'கடவுச்சொல் மாற்றப்பட்டுள்ளது';
 
   @override
-  String get overview => 'கண்ணோட்டம்';
-
-  @override
   String get passwordRecoverySettings => 'கடவுச்சொல் மீட்பு அமைப்புகள்';
 
   @override
@@ -1135,9 +1117,6 @@ class L10nTa extends L10n {
   String get recoveryKey => 'மீட்பு விசை';
 
   @override
-  String get recoveryKeyLost => 'மீட்பு விசை இழந்ததா?';
-
-  @override
   String get send => 'அனுப்பு';
 
   @override
@@ -1223,9 +1202,6 @@ class L10nTa extends L10n {
   String get showPassword => 'கடவுச்சொல்லைக் காட்டு';
 
   @override
-  String get presencesToggle => 'பிற பயனர்களிடமிருந்து நிலை செய்திகளைக் காட்டு';
-
-  @override
   String get skip => 'தவிர்';
 
   @override
@@ -1275,9 +1251,6 @@ class L10nTa extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'பல கோரிக்கைகள். தயவுசெய்து பின்னர் மீண்டும் முயற்சிக்கவும்!';
-
-  @override
-  String get transferFromAnotherDevice => 'மற்றொரு சாதனத்திலிருந்து மாற்றவும்';
 
   @override
   String get tryToSendAgain => 'மீண்டும் அனுப்ப முயற்சிக்கவும்';
@@ -1403,10 +1376,6 @@ class L10nTa extends L10n {
       'இதை ஏன் புகாரளிக்க விரும்புகிறீர்கள்?';
 
   @override
-  String get wipeChatBackup =>
-      'புதிய மீட்பு விசையை உருவாக்க உங்கள் அரட்டை காப்புப்பிரதியைத் துடைக்கவா?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'இந்த முகவரிகள் மூலம் உங்கள் கடவுச்சொல்லை மீட்டெடுக்கலாம்.';
 
@@ -1450,10 +1419,6 @@ class L10nTa extends L10n {
 
   @override
   String get start => 'தொடங்கு';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'உங்கள் பழைய செய்திகளைத் திறக்க, முந்தைய அமர்வில் உருவாக்கப்பட்ட உங்கள் மீட்பு விசையை உள்ளிடவும். உங்கள் மீட்பு விசை உங்கள் கடவுச்சொல் அல்ல.';
 
   @override
   String get markAsRead => 'படித்தபடி குறி';
@@ -1566,17 +1531,6 @@ class L10nTa extends L10n {
   String get users => 'பயனர்கள்';
 
   @override
-  String get unlockOldMessages => 'பழைய செய்திகளைத் திறக்கவும்';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'மீட்பு விசையை இந்த சாதனத்தின் பாதுகாப்பான சேமிப்பகத்தில் சேமிக்கவும்.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'கணினி பகிர்வு உரையாடல் அல்லது கிளிப்போர்டைத் தூண்டுவதன் மூலம் இந்த விசையை கைமுறையாக சேமிக்கவும்.';
-
-  @override
   String get storeInAndroidKeystore => 'ஆண்ட்ராய்டு கீச்டோரில் சேமிக்கவும்';
 
   @override
@@ -1625,9 +1579,6 @@ class L10nTa extends L10n {
   String get allSpaces => 'அனைத்து இடங்களும்';
 
   @override
-  String get hidePresences => 'நிலை பட்டியலை மறைக்கவா?';
-
-  @override
   String get doNotShowAgain => 'மீண்டும் காட்ட வேண்டாம்';
 
   @override
@@ -1669,7 +1620,7 @@ class L10nTa extends L10n {
 
   @override
   String fileHasBeenSavedAt(String path) {
-    return 'கோப்பு $path';
+    return 'கோப்பு $path இல் சேமிக்கப்பட்டது';
   }
 
   @override
@@ -1840,11 +1791,11 @@ class L10nTa extends L10n {
 
   @override
   String searchIn(String chat) {
-    return 'அரட்டையில் தேடு \"$chat\" ...';
+    return 'அரட்டையில் தேடு \"$chat\"...';
   }
 
   @override
-  String get searchMore => 'மேலும் தேடுங்கள் ...';
+  String get searchMore => 'மேலும் தேடு...';
 
   @override
   String get gallery => 'கேலரி';
@@ -1881,14 +1832,14 @@ class L10nTa extends L10n {
       'மார்க் டவுனைப் பயன்படுத்தி தைரியமான உரை போன்ற பணக்கார செய்தி உள்ளடக்கத்தைக் காண்பி.';
 
   @override
-  String get verifyOtherUser => 'Poser மற்ற பயனரை சரிபார்க்கவும்';
+  String get verifyOtherUser => '🔐 மற்ற பயனரை சரிபார்';
 
   @override
   String get verifyOtherUserDescription =>
       'நீங்கள் மற்றொரு பயனரைச் சரிபார்த்தால், நீங்கள் உண்மையில் யாருக்கு எழுதுகிறீர்கள் என்பது உங்களுக்குத் தெரியும் என்பதை நீங்கள் உறுதியாக நம்பலாம். 💪\n\nநீங்கள் ஒரு சரிபார்ப்பைத் தொடங்கும்போது, நீங்களும் மற்ற பயனரும் பயன்பாட்டில் ஒரு பாப்அப்பைக் காண்பீர்கள். நீங்கள் ஒருவருக்கொருவர் ஒப்பிட வேண்டிய தொடர்ச்சியான ஈமோசிகள் அல்லது எண்களைக் காண்பீர்கள்.\n\nஇதைச் செய்வதற்கான சிறந்த வழி வீடியோ அழைப்பைச் சந்திப்பது அல்லது தொடங்குவது. 👭';
 
   @override
-  String get verifyOtherDevice => 'Sevice பிற சாதனத்தை சரிபார்க்கவும்';
+  String get verifyOtherDevice => '🔐 பிற சாதனத்தை சரிபார்';
 
   @override
   String get verifyOtherDeviceDescription =>
@@ -1966,7 +1917,7 @@ class L10nTa extends L10n {
 
   @override
   String goToSpace(Object space) {
-    return 'விண்வெளிக்குச் செல்லுங்கள்: $space';
+    return 'இடைவெளிக்குச் செல்லுங்கள்: $space';
   }
 
   @override
@@ -2024,14 +1975,14 @@ class L10nTa extends L10n {
   String get changelog => 'மாற்றபதிவு';
 
   @override
-  String get sendCanceled => 'அனுப்பப்பட்டது ரத்து செய்யப்பட்டது';
+  String get sendCanceled => 'அனுப்புதல் கைவிடப்பட்டது';
 
   @override
   String get loginWithMatrixId => 'மேட்ரிக்ச்-ஐடியுடன் உள்நுழைக';
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
-      'இணக்கமான ஓம்சர்வர் என்று தெரியவில்லை. தவறான URL?';
+      'இணக்கமான வீட்டுசேவையகம் என்று தெரியவில்லை. தவறான முகவரி?';
 
   @override
   String get calculatingFileSize => 'கோப்பு அளவைக் கணக்கிடுகிறது ...';
@@ -2142,7 +2093,7 @@ class L10nTa extends L10n {
   String get waitingForServer => 'சேவையகத்திற்காக காத்திருக்கிறது ...';
 
   @override
-  String get newChatRequest => 'அரட்டை கோரிக்கை';
+  String get newChatRequest => '📩 புதிய அரட்டை கோரிக்கை';
 
   @override
   String get contentNotificationSettings => 'உள்ளடக்க அறிவிப்பு அமைப்புகள்';
@@ -2381,7 +2332,13 @@ class L10nTa extends L10n {
   String get moreEvents => 'மேலும் நிகழ்வுகள்';
 
   @override
-  String get declineInvitation => 'அழைப்பை நிராகரிக்கவும்';
+  String get showMore => 'Show more';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
+  String get declineInvitation => 'அழைப்பை நிராகரி';
 
   @override
   String get noMessagesYet => 'இதுவரை செய்திகள் இல்லை';
@@ -2394,7 +2351,7 @@ class L10nTa extends L10n {
   String get pause => 'இடைநிறுத்தம்';
 
   @override
-  String get resume => 'ரெச்யூம்';
+  String get resume => 'தொடர்';
 
   @override
   String get removeFromSpaceDescription =>
@@ -2508,17 +2465,11 @@ class L10nTa extends L10n {
   String get attribution => 'பண்புக்கூறு';
 
   @override
-  String get skipChatBackup => 'அரட்டை காப்புப்பிரதியைத் தவிர்க்கவும்';
+  String get skipChatBackup => 'அரட்டை காப்புப்பிரதியைத் தவிர்';
 
   @override
   String get skipChatBackupWarning =>
       'நீங்கள் உறுதியாக இருக்கிறீர்களா? அரட்டை காப்புப்பிரதியை இயக்காமல், உங்கள் சாதனத்தை மாற்றினால், உங்கள் செய்திகளுக்கான அணுகலை இழக்க நேரிடும்.';
-
-  @override
-  String get loadingMessages => 'செய்திகளை ஏற்றுகிறது';
-
-  @override
-  String get setupChatBackup => 'அரட்டை காப்புப்பிரதியை அமைக்கவும்';
 
   @override
   String get noMoreResultsFound => 'மேலும் முடிவுகள் கிடைக்கவில்லை';
@@ -2563,31 +2514,27 @@ class L10nTa extends L10n {
 
   @override
   String get signUpGreeting =>
-      'FluffyChat பரவலாக்கப்பட்டது! உங்கள் கணக்கை உருவாக்க விரும்பும் சேவையகத்தைத் தேர்ந்தெடுத்து, செல்லலாம்!';
+      'மத்தைஅரட்டை பரவலாக்கப்பட்டது! உங்கள் கணக்கை உருவாக்க விரும்பும் சேவையகத்தைத் தேர்ந்தெடுத்து, செல்லலாம்!';
 
   @override
   String get signInGreeting =>
       'உங்களிடம் ஏற்கனவே அணி இல் கணக்கு உள்ளதா? மீண்டும் வருக! உங்கள் ஓம் சர்வரைத் தேர்ந்தெடுத்து உள்நுழையவும்.';
 
   @override
-  String get appIntro =>
-      'FluffyChat மூலம் நீங்கள் உங்கள் நண்பர்களுடன் அரட்டையடிக்கலாம். இது ஒரு பாதுகாப்பான பரவலாக்கப்பட்ட [மேட்ரிக்ச்] தூதுவர்! நீங்கள் விரும்பினால் https://matrix.org இல் மேலும் அறியவும் அல்லது பதிவு செய்யவும்.';
+  String get theProcessWasCanceled => 'செயல்முறை கைவிடப்பட்டது.';
 
   @override
-  String get theProcessWasCanceled => 'செயல்முறை ரத்து செய்யப்பட்டது.';
-
-  @override
-  String get join => 'சேருங்கள்';
+  String get join => 'சேர்';
 
   @override
   String get searchOrEnterHomeserverAddress =>
-      'ஓம்சர்வர் முகவரியைத் தேடவும் அல்லது உள்ளிடவும்';
+      'வீட்டுசேவையக முகவரியைத் தேடவும் அல்லது உள்ளிடவும்';
 
   @override
   String get matrixId => 'மேட்ரிக்ச் அடையாளம்';
 
   @override
-  String get setPowerLevel => 'ஆற்றல் அளவை அமைக்கவும்';
+  String get setPowerLevel => 'ஆற்றல் அளவை அமை';
 
   @override
   String get makeModerator => 'மதிப்பீட்டாளராக ஆக்குங்கள்';
@@ -2633,31 +2580,6 @@ class L10nTa extends L10n {
   String get unsetLowPriority => 'Unset low priority';
 
   @override
-  String get removeCallFromChat => 'Remove call from chat';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Do you want to remove the call from the chat for all members?';
-
-  @override
-  String get removeCallForEveryone => 'Remove call for everyone';
-
-  @override
-  String get startVoiceCall => 'Start voice call';
-
-  @override
-  String get startVideoCall => 'Start video call';
-
-  @override
-  String get joinVoiceCall => 'Join voice call';
-
-  @override
-  String get joinVideoCall => 'Join video call';
-
-  @override
-  String get live => 'Live';
-
-  @override
   String get playSoundOnNotification => 'Play sound on notification';
 
   @override
@@ -2681,4 +2603,169 @@ class L10nTa extends L10n {
 
   @override
   String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+
+  @override
+  String get appSubtitle => 'Secure [matrix] Communication';
+
+  @override
+  String get appDescription =>
+      'Communicate encrypted over the decentralized [matrix] network in an easy and accessible way for everyone.';
+
+  @override
+  String get interactiveVerification => 'Interactive verification';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count unverified devices in the chat.';
+  }
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get encryptedMessage => 'Encrypted message';
+
+  @override
+  String get unencryptedMessage => 'Unencrypted message';
+
+  @override
+  String get allow => 'Allow';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Public key: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Device identity key';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'திறக்கவும்';
+
+  @override
+  String get openFile => 'Open file';
+
+  @override
+  String get resetAccountWarning =>
+      'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'New passphrase';
+
+  @override
+  String get repeatPassphrase => 'Repeat passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrases match';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Save as file';
+
+  @override
+  String get youAreReadyToStart => 'You are ready to start!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

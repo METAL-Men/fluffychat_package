@@ -364,11 +364,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "chatBackupDescription": "Je berichten zijn beveiligd met een herstelsleutel. Zorg ervoor dat je deze niet verliest.",
-    "@chatBackupDescription": {
-        "type": "String",
-        "placeholders": {}
-    },
     "chatDetails": "Chatdetails",
     "@chatDetails": {
         "type": "String",
@@ -735,11 +730,6 @@
                 "type": "String"
             }
         }
-    },
-    "everythingReady": "Alles klaar!",
-    "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
     },
     "fileName": "Bestandsnaam",
     "@fileName": {
@@ -1619,11 +1609,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "transferFromAnotherDevice": "Overzetten vanaf een ander apparaat",
-    "@transferFromAnotherDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
     "tryToSendAgain": "Probeer nogmaals te verzenden",
     "@tryToSendAgain": {
         "type": "String",
@@ -1829,11 +1814,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "Wil je de chatback-up wissen om een nieuwe herstelsleutel te kunnen maken?",
-    "@wipeChatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
     "withTheseAddressesRecoveryDescription": "Met deze adressen kun je je wachtwoord herstellen.",
     "@withTheseAddressesRecoveryDescription": {
         "type": "String",
@@ -1880,7 +1860,6 @@
     "editBundlesForAccount": "Bundels voor dit account wijzigen",
     "addAccount": "Account toevoegen",
     "link": "Link",
-    "yourChatBackupHasBeenSetUp": "Jouw chatback-up is ingesteld.",
     "unverified": "Niet geverifieerd",
     "repeatPassword": "Wachtwoord herhalen",
     "messageInfo": "Berichtinfo",
@@ -1994,14 +1973,9 @@
         }
     },
     "recoveryKey": "Herstelsleutel",
-    "recoveryKeyLost": "Herstelsleutel verloren?",
     "users": "Personen",
-    "unlockOldMessages": "Oude berichten ontgrendelen",
     "storeInAndroidKeystore": "In Android KeyStore opslaan",
     "storeInAppleKeyChain": "In Apple KeyChain opslaan",
-    "saveKeyManuallyDescription": "Sla deze sleutel handmatig op via delen of het klembord.",
-    "pleaseEnterRecoveryKeyDescription": "Om je oude berichten te ontgrendelen voer je jouw herstelsleutel in die gemaakt is in je vorige sessie. Je sleutel is niet je wachtwoord.",
-    "storeInSecureStorageDescription": "Sla de herstelsleutel op in de beveiligde opslag van dit apparaat.",
     "storeSecurlyOnThisDevice": "Veilig opslaan op dit apparaat",
     "dehydrate": "Sessie exporteren en apparaat wissen",
     "dehydrateWarning": "Deze actie kan niet ongedaan worden gemaakt. Zorg ervoor dat je het back-upbestand veilig opslaat.",
@@ -2177,10 +2151,6 @@
     "roomUpgradeDescription": "De chat zal dan opnieuw gemaakt worden met de nieuwe kamerversie. Alle deelnemers worden geïnformeerd dat ze moeten overstappen naar de nieuwe chat. Je kan meer lezen over kamerversies op https://spec.matrix.org/latest/rooms/",
     "pleaseEnterANumber": "Vul een getal in groter dan 0",
     "kickUserDescription": "De persoon is verwijderd uit de chat, maar is niet verbannen. In publieke chats kan de persoon op elk moment opnieuw deelnemen.",
-    "alwaysUse24HourFormat": "true",
-    "@alwaysUse24HourFormat": {
-        "description": "Set to true to always display time of day in 24 hour format."
-    },
     "joinSpace": "Toetreden tot de space",
     "block": "Blokkeren",
     "blockedUsers": "Geblokkeerde personen",
@@ -2195,8 +2165,6 @@
     "hideInvalidOrUnknownMessageFormats": "Ongeldige of onbekende berichtformaten verbergen",
     "passwordRecoverySettings": "Wachtwoordherstel-instellingen",
     "knock": "Klop",
-    "overview": "Overzicht",
-    "hidePresences": "Verberg statuslijst?",
     "noOneCanJoin": "Niemand kan deelnemen",
     "yourGlobalUserIdIs": "Je Matrix-ID is: ",
     "appLockDescription": "Vergendel de app wanneer het niet gebruikt wordt met een pincode",
@@ -2317,11 +2285,6 @@
                 "type": "int"
             }
         }
-    },
-    "presencesToggle": "Statusberichten van andere personen tonen",
-    "@presencesToggle": {
-        "type": "String",
-        "placeholders": {}
     },
     "website": "Website",
     "usersMustKnock": "Personen moeten kloppen",
@@ -2694,8 +2657,6 @@
     "attribution": "Toeschrijving",
     "skipChatBackup": "Chatback-up overslaan",
     "skipChatBackupWarning": "Weet je het zeker? Zonder chat back-up verlies je toegang tot je berichten als je van apparaat wisselt.",
-    "loadingMessages": "Berichten laden",
-    "setupChatBackup": "Chatback-up instellen",
     "changedTheChatDescription": "{username} heeft het onderwerp gewijzigd",
     "changedTheChatName": "{username} heeft de chatnaam gewijzigd",
     "noMoreResultsFound": "Geen resultaten meer gevonden",
@@ -2728,7 +2689,6 @@
     "createNewAccount": "Registreer nieuw account",
     "signUpGreeting": "FluffyChat is decentraal! Kies een server waar je wil voor jouw account en laten we gaan!",
     "signInGreeting": "Heb je al een Matrix account? Welkom terug! Kies jouw server en log in.",
-    "appIntro": "Met FluffyChat kan je chatten met je vrienden. Het is een veilige en decentrale [matrix] app! Lees meer op https://matrix.org als je wilt of kies registreren.",
     "theProcessWasCanceled": "Het proces is geannuleerd.",
     "join": "Deelnemen",
     "searchOrEnterHomeserverAddress": "Zoek of voer serveradres in",
@@ -2751,17 +2711,192 @@
     "support": "Steunen",
     "setLowPriority": "Lage prioriteit instellen",
     "unsetLowPriority": "Lage prioriteit uitschakelen",
-    "removeCallFromChat": "Verwijder oproep van chat",
-    "removeCallFromChatDescription": "Wil je de oproep voor iedereen in de chat verwijderen?",
-    "removeCallForEveryone": "Verwijder oproep voor iedereen",
-    "live": "Live",
-    "startVoiceCall": "Start audio-gesprek",
-    "startVideoCall": "Start video-gesprek",
-    "joinVoiceCall": "Audio-gesprek opnemen",
-    "joinVideoCall": "Deelnemen aan video-gesprek",
     "playSoundOnNotification": "Meldingsgeluid afspelen",
     "addTag": "Tag toevoegen",
     "removeTag": "Tag verwijderen",
     "tagName": "Tagnaam",
-    "createNewTag": "Nieuwe tag maken"
+    "createNewTag": "Nieuwe tag maken",
+    "discardEdits": "Je hebt wijzigingen die nog niet zijn opgeslagen. Wil je de wijzigingen ongedaan maken?",
+    "@discardEdits": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "hideRoomsInSpaces": "Kamers in een space verbergen",
+    "possibleByYou": "Deze versie was alleen mogelijk dankzij jullie steun. FluffyChat blijft gratis, open source en volledig door de community gedreven.",
+    "showThumbnailsInTimeline": "Miniatuurafbeeldingen van foto’s en video’s weergeven",
+    "appSubtitle": "Veilige [matrix]-communicatie",
+    "appDescription": "Communiceer op een eenvoudige en voor iedereen toegankelijke manier via het gedecentraliseerde [matrix]-netwerk.",
+    "interactiveVerification": "Interactieve verificatie",
+    "interactiveVerificationDescription": "Als jullie naast elkaar zitten of via een beveiligd kanaal communiceren, kun je alle apparaten in één keer verifiëren door een beveiligingscode of emoji’s te vergelijken.",
+    "countUnverifiedDevices": "{count} niet-geverifieerde apparaten in de chat.",
+    "@countUnverifiedDevices": {
+        "type": "int",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "check": "Controleer",
+    "encryptedMessage": "Versleuteld bericht",
+    "unencryptedMessage": "Niet-versleuteld bericht",
+    "allow": "Toestaan",
+    "publicKey": "Publieke sleutel: {key}",
+    "@publicKey": {
+        "type": "String",
+        "placeholders": {
+            "key": {
+                "type": "String"
+            }
+        }
+    },
+    "deviceIdentityKey": "Apparaatidentificatiesleutel",
+    "showMore": "Toon meer",
+    "showLess": "Toon minder",
+    "messageCanOnlyBeReadByUser": "Je bericht is eind-tot-eind versleuteld en kan alleen gelezen worden door deze persoon:",
+    "messageCanOnlyBeReadByUsers": "Je bericht eind-tot-eind versleuteld en kan alleen gelezen worden door deze personen:",
+    "restoreBootstrapEmptyDevicesDescription": "Voer je wachtwoordzin of herstelsleutel in om dit apparaat te verifiëren en krijg toegang tot je berichten back-up.",
+    "@restoreBootstrapEmptyDevicesDescription": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "restoreBootstrapDevicesDescription": "Kies een van je andere apparaten om deze sessie te verifiëren:",
+    "@restoreBootstrapDevicesDescription": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "resetAccount": "Account resetten",
+    "@resetAccount": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "restoreCryptoIdentity": "Crypto-identiteit herstellen",
+    "@restoreCryptoIdentity": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "resetCryptoIdentity": "Crypto-identiteit resetten",
+    "@resetCryptoIdentity": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "setUpCryptoIdentity": "Crypto-identiteit instellen",
+    "@setUpCryptoIdentity": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "waitingForKeys": "Wachten op sleutels... Houd het andere apparaat alsjeblieft actief.",
+    "@waitingForKeys": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "noKeysTransmitted": "Er zijn geen sleutels verzonden. Probeer het opnieuw.",
+    "@noKeysTransmitted": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "unlock": "Ontgrendelen",
+    "@unlock": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "openFile": "Bestand openen",
+    "@openFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "resetAccountWarning": "Als je je account reset, verlies je voor altijd de toegang tot je oude berichten. Alle huidige apparaten moeten ook opnieuw geverifieerd worden. Voer deze actie alleen uit als je geen andere apparaten meer hebt om je sessie mee te verifiëren én je je herstelsleutel en wachtwoordzin kwijt bent!",
+    "@resetAccountWarning": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "newPassphraseDescription": "FluffyChat gebruikt eind-tot-eind versleuteling. Om je berichten niet te verliezen, kies alsjeblieft een sterke wachtwoordzin. Hiermee beveilig je je crypto-identiteit en je versleutelde berichten back-up.",
+    "@newPassphraseDescription": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "newPassphrase": "Nieuwe wachtwoordzin",
+    "@newPassphrase": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "repeatPassphrase": "Herhaal wachtwoordzin",
+    "@repeatPassphrase": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphrasesMatch": "Wachtwoordzinnen komen overeen",
+    "@passphrasesMatch": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphraseLengthRequirement": "Minstens 12 tekens lang.",
+    "@passphraseLengthRequirement": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphraseUpperAndLowerCaseRequirement": "Bevat hoofdletter en kleine letters.",
+    "@passphraseUpperAndLowerCaseRequirement": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphraseSpecialCharactersRequirement": "Bevat speciale tekens.",
+    "@passphraseSpecialCharactersRequirement": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "passphraseNumberRequirement": "Bevat een nummer.",
+    "@passphraseNumberRequirement": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "storeRecoveryKeyDescription": "Let op, bewaar je herstelsleutel zorgvuldig zodat je je versleutelde berichten en crypto-identiteit kan herstellen.",
+    "@storeRecoveryKeyDescription": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "saveAsFile": "Bewaar als bestand",
+    "@saveAsFile": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "youAreReadyToStart": "Je bent klaar om te beginnen!",
+    "noUserKeyFound": "Geen persoonssleutel gevonden",
+    "@noUserKeyFound": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "knownSince": "Bekend sinds: {date}",
+    "@knownSince": {
+        "type": "String",
+        "placeholders": {
+            "date": {
+                "type": "String"
+            }
+        }
+    },
+    "unsignedDevice": "Apparaat zonder verificatie",
+    "@unsignedDevice": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "signedDevice": "Geverifieerd apparaat",
+    "@signedDevice": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "noCurve25519KeyFound": "Geen curve25519-sleutel gevonden",
+    "@noCurve25519KeyFound": {
+        "type": "String",
+        "placeholders": {}
+    },
+    "messageNotDecryptable": "Bericht niet te ontsleutelen",
+    "today": "Vandaag",
+    "sending": "Verzenden",
+    "generatingThumbnail": "Miniatuur-afbeelding genereren",
+    "encrypting": "Versleutelen",
+    "uploading": "Uploaden",
+    "edited": "(bewerkt)",
+    "couldNotBeSent": "Kan niet worden gestuurd",
+    "yesterday": "Gisteren"
 }

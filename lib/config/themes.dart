@@ -4,7 +4,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -106,9 +105,6 @@ abstract class FluffyThemes {
       ),
       appBarTheme: AppBarTheme(
         toolbarHeight: isColumnMode ? 72 : 56,
-        shadowColor: isColumnMode
-            ? colorScheme.surfaceContainer.withAlpha(128)
-            : null,
         surfaceTintColor: isColumnMode ? colorScheme.surface : null,
         backgroundColor: isColumnMode ? colorScheme.surface : null,
         actionsPadding: isColumnMode

@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'l10n_ar.dart' deferred as l10n_ar;
+import 'l10n_az.dart' deferred as l10n_az;
 import 'l10n_be.dart' deferred as l10n_be;
 import 'l10n_bn.dart' deferred as l10n_bn;
 import 'l10n_bo.dart' deferred as l10n_bo;
@@ -146,6 +147,7 @@ abstract class L10n {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('ar'),
+    Locale('az'),
     Locale('be'),
     Locale('bn'),
     Locale('bo'),
@@ -202,12 +204,6 @@ abstract class L10n {
     Locale('zh'),
     Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
   ];
-
-  /// Set to true to always display time of day in 24 hour format.
-  ///
-  /// In en, this message translates to:
-  /// **'false'**
-  String get alwaysUse24HourFormat;
 
   /// No description provided for @repeatPassword.
   ///
@@ -468,7 +464,6 @@ abstract class L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   );
 
   /// No description provided for @sendTypingNotifications.
@@ -705,23 +700,11 @@ abstract class L10n {
   /// **'Chat'**
   String get chat;
 
-  /// No description provided for @yourChatBackupHasBeenSetUp.
-  ///
-  /// In en, this message translates to:
-  /// **'Your chat backup has been set up.'**
-  String get yourChatBackupHasBeenSetUp;
-
   /// No description provided for @chatBackup.
   ///
   /// In en, this message translates to:
   /// **'Chat backup'**
   String get chatBackup;
-
-  /// No description provided for @chatBackupDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Your messages are secured with a recovery key. Please make sure you don\'t lose it.'**
-  String get chatBackupDescription;
 
   /// No description provided for @chatDetails.
   ///
@@ -1238,12 +1221,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Error obtaining location: {error}'**
   String errorObtainingLocation(String error);
-
-  /// No description provided for @everythingReady.
-  ///
-  /// In en, this message translates to:
-  /// **'Everything ready!'**
-  String get everythingReady;
 
   /// No description provided for @fileName.
   ///
@@ -1887,12 +1864,6 @@ abstract class L10n {
   /// **'Password has been changed'**
   String get passwordHasBeenChanged;
 
-  /// No description provided for @overview.
-  ///
-  /// In en, this message translates to:
-  /// **'Overview'**
-  String get overview;
-
   /// No description provided for @passwordRecoverySettings.
   ///
   /// In en, this message translates to:
@@ -2127,12 +2098,6 @@ abstract class L10n {
   /// **'Recovery key'**
   String get recoveryKey;
 
-  /// No description provided for @recoveryKeyLost.
-  ///
-  /// In en, this message translates to:
-  /// **'Recovery key lost?'**
-  String get recoveryKeyLost;
-
   /// No description provided for @send.
   ///
   /// In en, this message translates to:
@@ -2271,12 +2236,6 @@ abstract class L10n {
   /// **'Show password'**
   String get showPassword;
 
-  /// No description provided for @presencesToggle.
-  ///
-  /// In en, this message translates to:
-  /// **'Show status messages from other users'**
-  String get presencesToggle;
-
   /// No description provided for @skip.
   ///
   /// In en, this message translates to:
@@ -2366,12 +2325,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Too many requests. Please try again later!'**
   String get tooManyRequestsWarning;
-
-  /// No description provided for @transferFromAnotherDevice.
-  ///
-  /// In en, this message translates to:
-  /// **'Transfer from another device'**
-  String get transferFromAnotherDevice;
 
   /// No description provided for @tryToSendAgain.
   ///
@@ -2577,12 +2530,6 @@ abstract class L10n {
   /// **'Why do you want to report this?'**
   String get whyDoYouWantToReportThis;
 
-  /// No description provided for @wipeChatBackup.
-  ///
-  /// In en, this message translates to:
-  /// **'Wipe your chat backup to create a new recovery key?'**
-  String get wipeChatBackup;
-
   /// No description provided for @withTheseAddressesRecoveryDescription.
   ///
   /// In en, this message translates to:
@@ -2666,12 +2613,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Start'**
   String get start;
-
-  /// No description provided for @pleaseEnterRecoveryKeyDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'To unlock your old messages, please enter your recovery key that has been generated in a previous session. Your recovery key is NOT your password.'**
-  String get pleaseEnterRecoveryKeyDescription;
 
   /// No description provided for @markAsRead.
   ///
@@ -2847,24 +2788,6 @@ abstract class L10n {
   /// **'Users'**
   String get users;
 
-  /// No description provided for @unlockOldMessages.
-  ///
-  /// In en, this message translates to:
-  /// **'Unlock old messages'**
-  String get unlockOldMessages;
-
-  /// No description provided for @storeInSecureStorageDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Store the recovery key in the secure storage of this device.'**
-  String get storeInSecureStorageDescription;
-
-  /// No description provided for @saveKeyManuallyDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Save this key manually by triggering the system share dialog or clipboard.'**
-  String get saveKeyManuallyDescription;
-
   /// No description provided for @storeInAndroidKeystore.
   ///
   /// In en, this message translates to:
@@ -2948,12 +2871,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'All spaces'**
   String get allSpaces;
-
-  /// No description provided for @hidePresences.
-  ///
-  /// In en, this message translates to:
-  /// **'Hide Status List?'**
-  String get hidePresences;
 
   /// No description provided for @doNotShowAgain.
   ///
@@ -4233,6 +4150,18 @@ abstract class L10n {
   /// **'More events'**
   String get moreEvents;
 
+  /// No description provided for @showMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Show more'**
+  String get showMore;
+
+  /// No description provided for @showLess.
+  ///
+  /// In en, this message translates to:
+  /// **'Show less'**
+  String get showLess;
+
   /// No description provided for @declineInvitation.
   ///
   /// In en, this message translates to:
@@ -4443,18 +4372,6 @@ abstract class L10n {
   /// **'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.'**
   String get skipChatBackupWarning;
 
-  /// No description provided for @loadingMessages.
-  ///
-  /// In en, this message translates to:
-  /// **'Loading messages'**
-  String get loadingMessages;
-
-  /// No description provided for @setupChatBackup.
-  ///
-  /// In en, this message translates to:
-  /// **'Set up chat backup'**
-  String get setupChatBackup;
-
   /// No description provided for @noMoreResultsFound.
   ///
   /// In en, this message translates to:
@@ -4538,12 +4455,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.'**
   String get signInGreeting;
-
-  /// No description provided for @appIntro.
-  ///
-  /// In en, this message translates to:
-  /// **'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.'**
-  String get appIntro;
 
   /// No description provided for @theProcessWasCanceled.
   ///
@@ -4659,54 +4570,6 @@ abstract class L10n {
   /// **'Unset low priority'**
   String get unsetLowPriority;
 
-  /// No description provided for @removeCallFromChat.
-  ///
-  /// In en, this message translates to:
-  /// **'Remove call from chat'**
-  String get removeCallFromChat;
-
-  /// No description provided for @removeCallFromChatDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Do you want to remove the call from the chat for all members?'**
-  String get removeCallFromChatDescription;
-
-  /// No description provided for @removeCallForEveryone.
-  ///
-  /// In en, this message translates to:
-  /// **'Remove call for everyone'**
-  String get removeCallForEveryone;
-
-  /// No description provided for @startVoiceCall.
-  ///
-  /// In en, this message translates to:
-  /// **'Start voice call'**
-  String get startVoiceCall;
-
-  /// No description provided for @startVideoCall.
-  ///
-  /// In en, this message translates to:
-  /// **'Start video call'**
-  String get startVideoCall;
-
-  /// No description provided for @joinVoiceCall.
-  ///
-  /// In en, this message translates to:
-  /// **'Join voice call'**
-  String get joinVoiceCall;
-
-  /// No description provided for @joinVideoCall.
-  ///
-  /// In en, this message translates to:
-  /// **'Join video call'**
-  String get joinVideoCall;
-
-  /// No description provided for @live.
-  ///
-  /// In en, this message translates to:
-  /// **'Live'**
-  String get live;
-
   /// No description provided for @playSoundOnNotification.
   ///
   /// In en, this message translates to:
@@ -4754,6 +4617,300 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Show thumbnails of images and videos'**
   String get showThumbnailsInTimeline;
+
+  /// No description provided for @appSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Secure [matrix] Communication'**
+  String get appSubtitle;
+
+  /// No description provided for @appDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Communicate encrypted over the decentralized [matrix] network in an easy and accessible way for everyone.'**
+  String get appDescription;
+
+  /// No description provided for @interactiveVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Interactive verification'**
+  String get interactiveVerification;
+
+  /// No description provided for @interactiveVerificationDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.'**
+  String get interactiveVerificationDescription;
+
+  /// No description provided for @countUnverifiedDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} unverified devices in the chat.'**
+  String countUnverifiedDevices(int count);
+
+  /// No description provided for @check.
+  ///
+  /// In en, this message translates to:
+  /// **'Check'**
+  String get check;
+
+  /// No description provided for @encryptedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Encrypted message'**
+  String get encryptedMessage;
+
+  /// No description provided for @unencryptedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Unencrypted message'**
+  String get unencryptedMessage;
+
+  /// No description provided for @allow.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow'**
+  String get allow;
+
+  /// No description provided for @messageCanOnlyBeReadByUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Your message is end to end encrypted and can only be read by this user:'**
+  String get messageCanOnlyBeReadByUser;
+
+  /// No description provided for @messageCanOnlyBeReadByUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Your message is end to end encrypted and can only be read by these users:'**
+  String get messageCanOnlyBeReadByUsers;
+
+  /// No description provided for @publicKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Public key: {key}'**
+  String publicKey(String key);
+
+  /// No description provided for @deviceIdentityKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Device identity key'**
+  String get deviceIdentityKey;
+
+  /// No description provided for @restoreBootstrapEmptyDevicesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.'**
+  String get restoreBootstrapEmptyDevicesDescription;
+
+  /// No description provided for @restoreBootstrapDevicesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Please pick one of your other devices, to verify this session:'**
+  String get restoreBootstrapDevicesDescription;
+
+  /// No description provided for @resetAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset account'**
+  String get resetAccount;
+
+  /// No description provided for @restoreCryptoIdentity.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore Crypto Identity'**
+  String get restoreCryptoIdentity;
+
+  /// No description provided for @resetCryptoIdentity.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Crypto Identity'**
+  String get resetCryptoIdentity;
+
+  /// No description provided for @setUpCryptoIdentity.
+  ///
+  /// In en, this message translates to:
+  /// **'Set Up Crypto Identity'**
+  String get setUpCryptoIdentity;
+
+  /// No description provided for @waitingForKeys.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for keys... Please keep the other device active.'**
+  String get waitingForKeys;
+
+  /// No description provided for @noKeysTransmitted.
+  ///
+  /// In en, this message translates to:
+  /// **'No keys transmitted. Please try again.'**
+  String get noKeysTransmitted;
+
+  /// No description provided for @unlock.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock'**
+  String get unlock;
+
+  /// No description provided for @openFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Open file'**
+  String get openFile;
+
+  /// No description provided for @resetAccountWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'When you reset your account you will lose the access to your old messages forever. All your current devices need to be verified again. Please only perform this action when you have no other devices left to verify your session and you have lost your recovery key and passphrase!'**
+  String get resetAccountWarning;
+
+  /// No description provided for @newPassphraseDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.'**
+  String get newPassphraseDescription;
+
+  /// No description provided for @newPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'New passphrase'**
+  String get newPassphrase;
+
+  /// No description provided for @repeatPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeat passphrase'**
+  String get repeatPassphrase;
+
+  /// No description provided for @passphrasesMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passphrases match'**
+  String get passphrasesMatch;
+
+  /// No description provided for @passphraseLengthRequirement.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 12 characters long.'**
+  String get passphraseLengthRequirement;
+
+  /// No description provided for @passphraseUpperAndLowerCaseRequirement.
+  ///
+  /// In en, this message translates to:
+  /// **'Contains uppercase and lowercase characters.'**
+  String get passphraseUpperAndLowerCaseRequirement;
+
+  /// No description provided for @passphraseSpecialCharactersRequirement.
+  ///
+  /// In en, this message translates to:
+  /// **'Contains special characters.'**
+  String get passphraseSpecialCharactersRequirement;
+
+  /// No description provided for @passphraseNumberRequirement.
+  ///
+  /// In en, this message translates to:
+  /// **'Contains one numbers.'**
+  String get passphraseNumberRequirement;
+
+  /// No description provided for @storeRecoveryKeyDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.'**
+  String get storeRecoveryKeyDescription;
+
+  /// No description provided for @saveAsFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Save as file'**
+  String get saveAsFile;
+
+  /// No description provided for @youAreReadyToStart.
+  ///
+  /// In en, this message translates to:
+  /// **'You are ready to start!'**
+  String get youAreReadyToStart;
+
+  /// No description provided for @noUserKeyFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No user key found'**
+  String get noUserKeyFound;
+
+  /// No description provided for @knownSince.
+  ///
+  /// In en, this message translates to:
+  /// **'Known since: {date}'**
+  String knownSince(String date);
+
+  /// No description provided for @unsignedDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'Unsigned device'**
+  String get unsignedDevice;
+
+  /// No description provided for @signedDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'Signed device'**
+  String get signedDevice;
+
+  /// No description provided for @noCurve25519KeyFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No curve25519 key found'**
+  String get noCurve25519KeyFound;
+
+  /// No description provided for @messageNotDecryptable.
+  ///
+  /// In en, this message translates to:
+  /// **'Message not decryptable'**
+  String get messageNotDecryptable;
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @sending.
+  ///
+  /// In en, this message translates to:
+  /// **'Sending'**
+  String get sending;
+
+  /// No description provided for @generatingThumbnail.
+  ///
+  /// In en, this message translates to:
+  /// **'Generating thumbnail'**
+  String get generatingThumbnail;
+
+  /// No description provided for @encrypting.
+  ///
+  /// In en, this message translates to:
+  /// **'Encrypting'**
+  String get encrypting;
+
+  /// No description provided for @uploading.
+  ///
+  /// In en, this message translates to:
+  /// **'Uploading'**
+  String get uploading;
+
+  /// No description provided for @edited.
+  ///
+  /// In en, this message translates to:
+  /// **'(edited)'**
+  String get edited;
+
+  /// No description provided for @couldNotBeSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not be sent'**
+  String get couldNotBeSent;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
@@ -4767,6 +4924,7 @@ class _L10nDelegate extends LocalizationsDelegate<L10n> {
   @override
   bool isSupported(Locale locale) => <String>[
     'ar',
+    'az',
     'be',
     'bn',
     'bo',
@@ -4863,6 +5021,8 @@ Future<L10n> lookupL10n(Locale locale) {
   switch (locale.languageCode) {
     case 'ar':
       return l10n_ar.loadLibrary().then((dynamic _) => l10n_ar.L10nAr());
+    case 'az':
+      return l10n_az.loadLibrary().then((dynamic _) => l10n_az.L10nAz());
     case 'be':
       return l10n_be.loadLibrary().then((dynamic _) => l10n_be.L10nBe());
     case 'bn':

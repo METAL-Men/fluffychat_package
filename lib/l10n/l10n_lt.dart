@@ -9,45 +9,42 @@ class L10nLt extends L10n {
   L10nLt([String locale = 'lt']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'false';
-
-  @override
   String get repeatPassword => 'Pakartokite slaptažodį';
 
   @override
-  String get notAnImage => 'Not an image file.';
+  String get notAnImage => 'Nėra vaizdo failas.';
 
   @override
-  String get ignoreUser => 'Ignore user';
+  String get ignoreUser => 'Nepaisyti naudotojo';
 
   @override
-  String get remove => 'Pašalinti';
+  String get remove => 'Šalinti';
 
   @override
-  String get importNow => 'Import now';
+  String get importNow => 'Importuoti dabar';
 
   @override
-  String get importEmojis => 'Import Emojis';
+  String get importEmojis => 'Importuoti jaustukus';
 
   @override
-  String get importFromZipFile => 'Import from .zip file';
+  String get importFromZipFile => 'Importuoti iš .zip failo';
 
   @override
-  String get exportEmotePack => 'Export Emote pack as .zip';
+  String get exportEmotePack => 'Eksportuoti jaustukų paketą kaip .zip';
 
   @override
-  String get replace => 'Replace';
+  String get replace => 'Pakeisti';
 
   @override
   String get about => 'Apie';
 
   @override
   String aboutHomeserver(String homeserver) {
-    return 'About $homeserver';
+    return 'Apie $homeserver';
   }
 
   @override
-  String get accept => 'Sutinku';
+  String get accept => 'Priimti';
 
   @override
   String acceptedTheInvitation(String username) {
@@ -63,7 +60,7 @@ class L10nLt extends L10n {
   }
 
   @override
-  String get addEmail => 'Pridėti el. paštą';
+  String get addEmail => 'Įtraukti el. paštą';
 
   @override
   String get confirmMatrixId =>
@@ -75,46 +72,46 @@ class L10nLt extends L10n {
   }
 
   @override
-  String get addToSpace => 'Pridėti į erdvę';
+  String get addToSpace => 'Pridėti prie erdvės';
 
   @override
   String get admin => 'Administratorius';
 
   @override
-  String get alias => 'slapyvardis';
+  String get alias => 'pseudonimas';
 
   @override
-  String get all => 'Visi';
+  String get all => 'Viskas';
 
   @override
   String get allChats => 'Visi pokalbiai';
 
   @override
   String get commandHint_roomupgrade =>
-      'Upgrade this room to the given room version';
+      'Atnaujinkite šį kambarį iki nurodytos kambario versijos';
 
   @override
-  String get commandHint_googly => 'Send some googly eyes';
+  String get commandHint_googly => 'Siųskite išsipūtusias akutes';
 
   @override
-  String get commandHint_cuddle => 'Send a cuddle';
+  String get commandHint_cuddle => 'Siųskite glebimą';
 
   @override
-  String get commandHint_hug => 'Send a hug';
+  String get commandHint_hug => 'Siųskite apkabinimą';
 
   @override
   String googlyEyesContent(String senderName) {
-    return '$senderName sends you googly eyes';
+    return '$senderName siunčia jums išsipūtusias akutes';
   }
 
   @override
   String cuddleContent(String senderName) {
-    return '$senderName cuddles you';
+    return '$senderName jus glėbia';
   }
 
   @override
   String hugContent(String senderName) {
-    return '$senderName hugs you';
+    return '$senderName jus apkabina';
   }
 
   @override
@@ -130,7 +127,7 @@ class L10nLt extends L10n {
 
   @override
   String get appLockDescription =>
-      'Lock the app when not using with a pin code';
+      'Užrakinti programą, kai jos naudojama, nustatant PIN kodą';
 
   @override
   String get archive => 'Archyvas';
@@ -164,7 +161,6 @@ class L10nLt extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Namų serveris palaiko šiuos prisijungimo tipus:\n$serverVersions\nTačiau ši programa palaiko tik:\n$supportedVersions';
   }
@@ -324,15 +320,7 @@ class L10nLt extends L10n {
   String get chat => 'Pokalbis';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Jūsų pokalbio atsarginė kopija buvo nustatyta.';
-
-  @override
   String get chatBackup => 'Pokalbio atsargine kopija';
-
-  @override
-  String get chatBackupDescription =>
-      'Jūsų senos žinutės yra apsaugotos atkūrimo raktu. Pasirūpinkite, kad jo neprarastumėte.';
 
   @override
   String get chatDetails => 'Pokalbio detalės';
@@ -620,9 +608,6 @@ class L10nLt extends L10n {
   String errorObtainingLocation(String error) {
     return 'Klaida nustatant vietą: $error';
   }
-
-  @override
-  String get everythingReady => 'Viskas paruošta!';
 
   @override
   String get fileName => 'Failo vardas';
@@ -989,9 +974,6 @@ class L10nLt extends L10n {
   String get passwordHasBeenChanged => 'Slaptažodis pakeistas';
 
   @override
-  String get overview => 'Overview';
-
-  @override
   String get passwordRecoverySettings => 'Password recovery settings';
 
   @override
@@ -1124,9 +1106,6 @@ class L10nLt extends L10n {
   String get recoveryKey => 'Atkūrimo raktas';
 
   @override
-  String get recoveryKeyLost => 'Pamestas atkūrimo raktas?';
-
-  @override
   String get send => 'Siųsti';
 
   @override
@@ -1212,9 +1191,6 @@ class L10nLt extends L10n {
   String get showPassword => 'Rodyti slaptažodį';
 
   @override
-  String get presencesToggle => 'Show status messages from other users';
-
-  @override
   String get skip => 'Praleisti';
 
   @override
@@ -1263,9 +1239,6 @@ class L10nLt extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Per daug užklausų. Pabandykite dar kartą vėliau!';
-
-  @override
-  String get transferFromAnotherDevice => 'Perkėlimas iš kito įrenginio';
 
   @override
   String get tryToSendAgain => 'Pabandykite išsiųsti dar kartą';
@@ -1386,10 +1359,6 @@ class L10nLt extends L10n {
   String get whyDoYouWantToReportThis => 'Kodėl norite apie tai pranešti?';
 
   @override
-  String get wipeChatBackup =>
-      'Ištrinti atsarginę pokalbių kopiją, kad sukurti naują atkūrimo raktą?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Naudodami šiuos adresus galite atkurti savo slaptažodį.';
 
@@ -1433,10 +1402,6 @@ class L10nLt extends L10n {
 
   @override
   String get start => 'Pradžia';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Norėdami atrakinti senas žinutes, įveskite atkūrimo raktą, kuris buvo sukurtas ankstesnės sesijos metu. Atkūrimo raktas NĖRA jūsų slaptažodis.';
 
   @override
   String get markAsRead => 'Žymėti kaip skaitytą';
@@ -1549,17 +1514,6 @@ class L10nLt extends L10n {
   String get users => 'Vartotojai';
 
   @override
-  String get unlockOldMessages => 'Atrakinti senas žinutes';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Atkūrimo raktą laikyti saugioje šio prietaiso saugykloje.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Įrašykite šį raktą rankiniu būdu, įjungę sistemos bendrinimo dialogo langą arba iškarpinę.';
-
-  @override
   String get storeInAndroidKeystore => 'Saugoti Android raktų saugykloje';
 
   @override
@@ -1604,9 +1558,6 @@ class L10nLt extends L10n {
 
   @override
   String get allSpaces => 'Visos erdvės';
-
-  @override
-  String get hidePresences => 'Hide Status List?';
 
   @override
   String get doNotShowAgain => 'Do not show again';
@@ -2356,6 +2307,12 @@ class L10nLt extends L10n {
   String get moreEvents => 'More events';
 
   @override
+  String get showMore => 'Show more';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
   String get declineInvitation => 'Decline invitation';
 
   @override
@@ -2489,12 +2446,6 @@ class L10nLt extends L10n {
       'Are you sure? Without enabling the chat backup you may lose access to your messages if you switch your device.';
 
   @override
-  String get loadingMessages => 'Loading messages';
-
-  @override
-  String get setupChatBackup => 'Set up chat backup';
-
-  @override
   String get noMoreResultsFound => 'No more results found';
 
   @override
@@ -2541,10 +2492,6 @@ class L10nLt extends L10n {
   @override
   String get signInGreeting =>
       'You already have an account in Matrix? Welcome back! Select your homeserver and sign in.';
-
-  @override
-  String get appIntro =>
-      'With FluffyChat you can chat with your friends. It\'s a secure decentralized [matrix] messenger! Learn more on https://matrix.org if you like or just sign up.';
 
   @override
   String get theProcessWasCanceled => 'The process was canceled.';
@@ -2606,31 +2553,6 @@ class L10nLt extends L10n {
   String get unsetLowPriority => 'Unset low priority';
 
   @override
-  String get removeCallFromChat => 'Remove call from chat';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Do you want to remove the call from the chat for all members?';
-
-  @override
-  String get removeCallForEveryone => 'Remove call for everyone';
-
-  @override
-  String get startVoiceCall => 'Start voice call';
-
-  @override
-  String get startVideoCall => 'Start video call';
-
-  @override
-  String get joinVoiceCall => 'Join voice call';
-
-  @override
-  String get joinVideoCall => 'Join video call';
-
-  @override
-  String get live => 'Live';
-
-  @override
   String get playSoundOnNotification => 'Play sound on notification';
 
   @override
@@ -2654,4 +2576,169 @@ class L10nLt extends L10n {
 
   @override
   String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+
+  @override
+  String get appSubtitle => 'Secure [matrix] Communication';
+
+  @override
+  String get appDescription =>
+      'Communicate encrypted over the decentralized [matrix] network in an easy and accessible way for everyone.';
+
+  @override
+  String get interactiveVerification => 'Interactive verification';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count unverified devices in the chat.';
+  }
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get encryptedMessage => 'Encrypted message';
+
+  @override
+  String get unencryptedMessage => 'Unencrypted message';
+
+  @override
+  String get allow => 'Allow';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Your message is end to end encrypted and can only be read by this user:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Public key: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Device identity key';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Please pick one of your other devices, to verify this session:';
+
+  @override
+  String get resetAccount => 'Reset account';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Waiting for keys... Please keep the other device active.';
+
+  @override
+  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+
+  @override
+  String get unlock => 'Atrakinti';
+
+  @override
+  String get openFile => 'Atverti failą';
+
+  @override
+  String get resetAccountWarning =>
+      'Atkūrus paskyrą, prarasite prieigą prie senų pranešimų visam laikui. Visus šiuo metu naudojamus įrenginius reikės patvirtinti iš naujo. Šį veiksmą atlikite tik tuo atveju, jei nebeliko jokių kitų įrenginių, kuriais būtų galima patvirtinti sesaną, ir praradote atkūrimo raktą bei slaptafrazę!';
+
+  @override
+  String get newPassphraseDescription =>
+      '„FluffyChat“ naudoja visapusišką šifravimą. Kad neprarastumėte savo žinučių, pasirinkite saugią slaptafrazę, kuri apsaugos jūsų kriptografinę tapatybę ir užšifruotą žinučių atsarginę kopiją.';
+
+  @override
+  String get newPassphrase => 'Nauja slaptafrazė';
+
+  @override
+  String get repeatPassphrase => 'Pakartokite slaptafrazę';
+
+  @override
+  String get passphrasesMatch => 'Slaptafrazės sutampa';
+
+  @override
+  String get passphraseLengthRequirement => 'At least 12 characters long.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Contains uppercase and lowercase characters.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Contains special characters.';
+
+  @override
+  String get passphraseNumberRequirement => 'Contains one numbers.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Išsaugoti kaip failą';
+
+  @override
+  String get youAreReadyToStart => 'Esate pasirengę pradėti!';
+
+  @override
+  String get noUserKeyFound => 'No user key found';
+
+  @override
+  String knownSince(String date) {
+    return 'Known since: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'šiandien';
+
+  @override
+  String get sending => 'Siunčiama';
+
+  @override
+  String get generatingThumbnail => 'Generuojama miniatiūra';
+
+  @override
+  String get encrypting => 'Šifruojamas';
+
+  @override
+  String get uploading => 'Įkeliamas';
+
+  @override
+  String get edited => '(redaguota)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'vakar';
 }

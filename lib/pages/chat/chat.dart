@@ -17,6 +17,7 @@ import 'package:fluffychat/l10n/l10n.dart';
 import 'package:fluffychat/pages/chat/chat_view.dart';
 import 'package:fluffychat/pages/chat/event_info_dialog.dart';
 import 'package:fluffychat/pages/chat/start_poll_bottom_sheet.dart';
+import 'package:fluffychat/pages/chat/trust_user_key_dialog.dart';
 import 'package:fluffychat/pages/chat/utils/web_file_to_x_file.dart';
 import 'package:fluffychat/pages/chat_details/chat_details.dart';
 import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
@@ -33,6 +34,7 @@ import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.
 import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
 import 'package:fluffychat/widgets/future_loading_dialog.dart';
 import 'package:fluffychat/widgets/matrix.dart';
+import 'package:fluffychat/widgets/mxc_image.dart';
 import 'package:fluffychat/widgets/share_scaffold_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -126,6 +128,8 @@ class ChatController extends State<ChatPageWithRoom>
   Timer? typingTimeout;
   bool currentlyTyping = false;
   bool dragging = false;
+
+  final GlobalKey inputBarKey = GlobalKey();
 
   void onDragEntered(_) => setState(() => dragging = true);
 
@@ -276,7 +280,7 @@ class ChatController extends State<ChatPageWithRoom>
     }
   }
 
-  void _shareItems([_]) {
+  Future<void> _shareItems([_]) async {
     final shareItems = widget.shareItems;
     if (shareItems == null || shareItems.isEmpty) return;
     if (!room.otherPartyCanReceiveMessages) {
@@ -294,6 +298,8 @@ class ChatController extends State<ChatPageWithRoom>
       );
       return;
     }
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     for (final item in shareItems) {
       if (item is FileShareItem) continue;
       if (item is TextShareItem) room.sendTextEvent(item.value);
@@ -491,9 +497,13 @@ class ChatController extends State<ChatPageWithRoom>
 
   String? animateInEventId;
 
-  void _insert(int index) {
+  Future<void> _insert(int index) async {
     if (index > 0) return;
-    animateInEventId = timeline?.events.firstOrNull?.eventId;
+    final firstEvent = timeline?.events.firstOrNull;
+    final eventId = firstEvent?.transactionId ?? firstEvent?.eventId;
+    animateInEventId = eventId;
+    await Future.delayed(FluffyThemes.animationDuration);
+    if (animateInEventId == eventId) animateInEventId = null;
   }
 
   void updateView() {
@@ -575,20 +585,22 @@ class ChatController extends State<ChatPageWithRoom>
         .then((_) {
           _setReadMarkerFuture = null;
         });
-    if (eventId == null || eventId == timeline.room.lastEvent?.eventId) {
-      Matrix.of(
-        context,
-      ).backgroundPush?.cancelNotification(room.client, roomId);
-    }
   }
 
   @override
   void dispose() {
     timeline?.cancelSubscriptions();
     timeline = null;
+    _storeInputTimeoutTimer?.cancel();
+    typingCoolDown?.cancel();
+    typingTimeout?.cancel();
+    sendController.dispose();
+    scrollController.dispose();
     inputFocus.removeListener(_inputFocusListener);
+    inputFocus.dispose();
     web.window.removeEventListener('paste', _handleClipboardFilePasteWeb);
     if (currentlyTyping) room.setTyping(false);
+    MxcImage.clearCache(widget.room.id);
     super.dispose();
   }
 
@@ -621,6 +633,8 @@ class ChatController extends State<ChatPageWithRoom>
   });
 
   Future<void> send() async {
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     if (sendController.text.trim().isEmpty) return;
     _storeInputTimeoutTimer?.cancel();
     final prefs = Matrix.of(context).store;
@@ -825,6 +839,8 @@ class ChatController extends State<ChatPageWithRoom>
     List<int> waveform,
     String fileName,
   ) async {
+    final proceed = await showTrustUserInRoomDialog(context, room);
+    if (!mounted || !proceed) return;
     final scaffoldMessenger = ScaffoldMessenger.of(context);
     final audioFile = XFile(path);
 
@@ -1086,7 +1102,7 @@ class ChatController extends State<ChatPageWithRoom>
       context: context,
       builder: (context) => ShareScaffoldDialog(
         items: forwardEvents
-            .map((event) => ContentShareItem(event.content))
+            .map((event) => ContentShareItem(event.content.copy()))
             .toList(),
       ),
     );
@@ -1409,6 +1425,22 @@ class ChatController extends State<ChatPageWithRoom>
 
   Timer? _storeInputTimeoutTimer;
   static const Duration _storeInputTimeout = Duration(milliseconds: 500);
+
+  double? inputBarHeight;
+
+  void updateInputBarHeight() {
+    RenderBox? renderBox;
+    if (inputBarKey.currentContext?.findRenderObject() != null) {
+      renderBox = inputBarKey.currentContext!.findRenderObject() as RenderBox;
+    }
+
+    final height = renderBox?.size.height ?? 72.0;
+    if (height != inputBarHeight) {
+      setState(() {
+        inputBarHeight = height;
+      });
+    }
+  }
 
   void onInputBarChanged(String text) {
     if (_inputTextIsEmpty != text.isEmpty) {

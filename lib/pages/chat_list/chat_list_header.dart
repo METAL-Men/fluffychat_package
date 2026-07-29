@@ -58,7 +58,6 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(99),
               ),
-              contentPadding: EdgeInsets.zero,
               hintText: hide
                   ? L10n.of(context).searchChatsRooms
                   : status.calcLocalizedString(context),
@@ -66,6 +65,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                 color: theme.colorScheme.onPrimaryContainer,
                 fontWeight: FontWeight.normal,
               ),
+
               prefixIcon: hide
                   ? controller.isSearchMode
                         ? IconButton(
@@ -74,15 +74,25 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                             onPressed: controller.cancelSearch,
                             color: theme.colorScheme.onPrimaryContainer,
                           )
-                        : IconButton(
+                        : FluffyThemes.isColumnMode(context) ||
+                              controller.spaces.isEmpty
+                        ? IconButton(
+                            tooltip: L10n.of(context).search,
                             onPressed: controller.startSearch,
                             icon: Icon(
                               Icons.search_outlined,
                               color: theme.colorScheme.onPrimaryContainer,
                             ),
                           )
-                  : Container(
-                      margin: const EdgeInsets.all(12),
+                        : IconButton(
+                            tooltip: L10n.of(context).displayNavigationRail,
+                            onPressed: controller.openNavrail,
+                            icon: Icon(
+                              Icons.menu,
+                              color: theme.colorScheme.onPrimaryContainer,
+                            ),
+                          )
+                  : SizedBox(
                       width: 8,
                       height: 8,
                       child: Center(

@@ -20,6 +20,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_html/html.dart' as html;
 
 import 'matrix_sdk_extensions/flutter_matrix_dart_sdk_database/builder.dart';
+import 'matrix_sdk_extensions/on_soft_logout.dart';
 
 abstract class ClientManager {
   static const String clientNamespace =
@@ -143,9 +144,7 @@ abstract class ClientManager {
             (share) => share.name == shareKeysWith,
           ) ??
           ShareKeysWith.all,
-      onSoftLogout: enableSoftLogout
-          ? (client) => client.refreshAccessToken()
-          : null,
+      onSoftLogout: enableSoftLogout ? onSoftLogout : null,
       sendTimelineEventTimeout: Duration(
         seconds: AppSettings.sendTimelineEventTimeout.value,
       ),

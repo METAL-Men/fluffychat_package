@@ -9,9 +9,6 @@ class L10nRu extends L10n {
   L10nRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'true';
-
-  @override
   String get repeatPassword => 'Повторите пароль';
 
   @override
@@ -141,7 +138,8 @@ class L10nRu extends L10n {
   String get areYouSure => 'Вы уверены?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits =>
+      'У вас есть не внесённые изменения. Отменить внесённые изменения?';
 
   @override
   String get areYouSureYouWantToLogout => 'Вы действительно хотите выйти?';
@@ -163,7 +161,6 @@ class L10nRu extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Домашний сервер поддерживает следующие типы входа в систему:\n$serverVersions\nНо это приложение поддерживает только:\n$supportedVersions';
   }
@@ -324,15 +321,7 @@ class L10nRu extends L10n {
   String get chat => 'Чат';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Резервное копирование чата настроено.';
-
-  @override
   String get chatBackup => 'Резервное копирование чата';
-
-  @override
-  String get chatBackupDescription =>
-      'Ваши сообщения защищены ключом восстановления. Пожалуйста, не потеряйте его.';
 
   @override
   String get chatDetails => 'Детали чата';
@@ -623,9 +612,6 @@ class L10nRu extends L10n {
   String errorObtainingLocation(String error) {
     return 'Ошибка получения местоположения: $error';
   }
-
-  @override
-  String get everythingReady => 'Всё готово!';
 
   @override
   String get fileName => 'Имя файла';
@@ -992,9 +978,6 @@ class L10nRu extends L10n {
   String get passwordHasBeenChanged => 'Пароль был изменён';
 
   @override
-  String get overview => 'Обзор';
-
-  @override
   String get passwordRecoverySettings => 'Настройки восстановления пароля';
 
   @override
@@ -1128,9 +1111,6 @@ class L10nRu extends L10n {
   String get recoveryKey => 'Ключ восстановления';
 
   @override
-  String get recoveryKeyLost => 'Ключ восстановления утерян?';
-
-  @override
   String get send => 'Прислать';
 
   @override
@@ -1216,10 +1196,6 @@ class L10nRu extends L10n {
   String get showPassword => 'Показать пароль';
 
   @override
-  String get presencesToggle =>
-      'Показывать сообщения в статусах других пользователей';
-
-  @override
   String get skip => 'Пропустить';
 
   @override
@@ -1268,9 +1244,6 @@ class L10nRu extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Слишком много запросов. Пожалуйста, повторите попытку позже!';
-
-  @override
-  String get transferFromAnotherDevice => 'Перенос с другого устройства';
 
   @override
   String get tryToSendAgain => 'Попробуйте отправить ещё раз';
@@ -1391,10 +1364,6 @@ class L10nRu extends L10n {
   String get whyDoYouWantToReportThis => 'Почему вы хотите сообщить об этом?';
 
   @override
-  String get wipeChatBackup =>
-      'Удалить резервную копию чата, чтобы создать новый ключ восстановления?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'По этим адресам вы можете восстановить свой пароль.';
 
@@ -1438,10 +1407,6 @@ class L10nRu extends L10n {
 
   @override
   String get start => 'Начать';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Чтобы разблокировать старые сообщения, введите ключ восстановления, сгенерированный в предыдущем сеансе. Ваш ключ восстановления НЕ является вашим паролем.';
 
   @override
   String get markAsRead => 'Отметить как прочитанное';
@@ -1554,17 +1519,6 @@ class L10nRu extends L10n {
   String get users => 'Пользователи';
 
   @override
-  String get unlockOldMessages => 'Разблокировать старые сообщения';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Сохраните ключ восстановления в безопасном хранилище этого устройства.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Сохраните этот ключ вручную, вызвав диалог общего доступа системы или буфера обмена.';
-
-  @override
   String get storeInAndroidKeystore => 'Сохранить в Android KeyStore';
 
   @override
@@ -1609,9 +1563,6 @@ class L10nRu extends L10n {
 
   @override
   String get allSpaces => 'Все пространства';
-
-  @override
-  String get hidePresences => 'Скрыть список статусов?';
 
   @override
   String get doNotShowAgain => 'Не показывать снова';
@@ -2364,6 +2315,12 @@ class L10nRu extends L10n {
   String get moreEvents => 'Больше событий';
 
   @override
+  String get showMore => 'Показать больше';
+
+  @override
+  String get showLess => 'Показать меньше';
+
+  @override
   String get declineInvitation => 'Отказаться от приглашения';
 
   @override
@@ -2498,12 +2455,6 @@ class L10nRu extends L10n {
       'Вы уверены? Без включения резервного копирования чата вы можете потерять доступ к своим сообщениям, если переключите устройство.';
 
   @override
-  String get loadingMessages => 'Загрузка сообщений';
-
-  @override
-  String get setupChatBackup => 'Настроить резервную копию чата';
-
-  @override
   String get noMoreResultsFound => 'Ничего не найдено';
 
   @override
@@ -2518,7 +2469,7 @@ class L10nRu extends L10n {
   String get clientWellKnownInformation => 'Client-Well-Known Информация:';
 
   @override
-  String get baseUrl => 'Базовый URL';
+  String get baseUrl => 'URL ссылка базы';
 
   @override
   String get identityServer => 'Сервер профилей:';
@@ -2552,10 +2503,6 @@ class L10nRu extends L10n {
       'У вас есть уже аккаунт в Matrix? Добро пожаловать! Выберите свой сервер и войдите.';
 
   @override
-  String get appIntro =>
-      'С FluffyChat\'ом вы можете говорить со своими друзьями. Это защищённый децентрализорованный [matrix] мессенджер! Узнайте больше на https://matrix.org, если вам нравится или просто зарегистрироваться.';
-
-  @override
   String get theProcessWasCanceled => 'Процесс был отменен.';
 
   @override
@@ -2563,85 +2510,59 @@ class L10nRu extends L10n {
 
   @override
   String get searchOrEnterHomeserverAddress =>
-      'Поищите или введите адрес домашнего сервера';
+      'Искать или ввести адрес сервера';
 
   @override
-  String get matrixId => 'Matrix ID';
+  String get matrixId => 'Идентификатор Matrix';
 
   @override
-  String get setPowerLevel => 'Установить уровень возможностей';
+  String get setPowerLevel => 'Поставить уровень мощности';
 
   @override
-  String get makeModerator => 'Назначить модератором';
+  String get makeModerator => 'Сделать модератором';
 
   @override
-  String get makeAdmin => 'Назначить администратором';
+  String get makeAdmin => 'Сделать админом';
 
   @override
-  String get removeModeratorRights => 'Удалить права модератора';
+  String get removeModeratorRights => 'Убрать права у модератора';
 
   @override
-  String get removeAdminRights => 'Удалить права администратора';
+  String get removeAdminRights => 'Убрать права админа';
 
   @override
-  String get powerLevel => 'Уровень энергии';
+  String get powerLevel => 'Уровень мощности';
 
   @override
   String get setPowerLevelDescription =>
-      'Уровни прав определяют, что участнику разрешено делать в этой комнате, и обычно варьируются от 0 до 100.';
+      'Уровни мощности определяют, что участник может делать в этой комнате и иногда варьируются в диапозоне 0 и 100.';
 
   @override
   String get owner => 'Владелец';
 
   @override
-  String get mute => 'Мут';
+  String get mute => 'Заглушить';
 
   @override
-  String get createNewChat => 'Создать новый чат';
+  String get createNewChat => 'Сделать новый чат';
 
   @override
   String get reset => 'Сброс';
 
   @override
-  String get supportFluffyChat => 'Поддержите FluffyChat';
+  String get supportFluffyChat => 'Поддержать FluffyChat';
 
   @override
-  String get support => 'Поддержка';
+  String get support => 'Поддержать';
 
   @override
-  String get setLowPriority => 'Установить низкий приоритет';
+  String get setLowPriority => 'Установить маленький приоритет';
 
   @override
-  String get unsetLowPriority => 'Неопределенный приоритет';
+  String get unsetLowPriority => 'Отменить низкий приоритет';
 
   @override
-  String get removeCallFromChat => 'Удалить сообщение из чата';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Вы хотите удалить это сообщение из чата для всех участников?';
-
-  @override
-  String get removeCallForEveryone => 'Отменить вызов для всех';
-
-  @override
-  String get startVoiceCall => 'Начать голосовой вызов';
-
-  @override
-  String get startVideoCall => 'Начать видеозвонок';
-
-  @override
-  String get joinVoiceCall => 'Присоединиться к голосовому звонку';
-
-  @override
-  String get joinVideoCall => 'Присоединиться к видеозвонку';
-
-  @override
-  String get live => 'Прямой эфир';
-
-  @override
-  String get playSoundOnNotification =>
-      'Воспроизвести звук при получении уведомления';
+  String get playSoundOnNotification => 'Проиграть звук, когда уведомления';
 
   @override
   String get addTag => 'Добавить тег';
@@ -2656,12 +2577,178 @@ class L10nRu extends L10n {
   String get createNewTag => 'Создать новый тег';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces => 'Спрятать комнаты которые в пространстве';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Этот релиз был только возможен из-за вашей поддержки. FluffyChat остаётся бесплатным, с открытым исходным кодом, и полностью управляется сообществом.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => 'Показать миниатюры картинок и видео';
+
+  @override
+  String get appSubtitle => 'Защитить коммуникацию [matrix]';
+
+  @override
+  String get appDescription =>
+      'Общайтесь зашифрованным образом по децентрализованной сети [matrix] простым и доступным для всех способом.';
+
+  @override
+  String get interactiveVerification => 'Интерактивная верификация';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count unverified devices in the chat.';
+  }
+
+  @override
+  String get check => 'Проверить';
+
+  @override
+  String get encryptedMessage => 'Зашифрованное сообщение';
+
+  @override
+  String get unencryptedMessage => 'Не зашифрованное сообщение';
+
+  @override
+  String get allow => 'Разрешить';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Ваше сообщение зашифровано сквозным шифрованием и только этот пользователь может его прочитать:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Your message is end to end encrypted and can only be read by these users:';
+
+  @override
+  String publicKey(String key) {
+    return 'Публичный ключ: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Ключ идентификации устройства';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Пожалуйста выберите одно своё другое устройтво, чтобы верифицировать эту сессию:';
+
+  @override
+  String get resetAccount => 'Сбросить аккаунт';
+
+  @override
+  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Crypto Identity';
+
+  @override
+  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+
+  @override
+  String get waitingForKeys =>
+      'Ожидание ключей... Пожалуйста оставьте другое устройство активным.';
+
+  @override
+  String get noKeysTransmitted =>
+      'Ключи не переданы. Пожалуйста, попробуйте еще раз.';
+
+  @override
+  String get unlock => 'Разблокировать';
+
+  @override
+  String get openFile => 'Открыть файл';
+
+  @override
+  String get resetAccountWarning =>
+      'Когда вы сбрасываете ваш аккаунт, то вы потеряете доступ к вашим старым сообщениям навсегда. Все ваши устройства нужны будут верифицированы опять. Пожалуйста, только делайте это действие, когда у вас нет устройств, чтобы верифицировать вашу сессию и вы потеряли свой ключ восстановления и кодовую фразу!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+
+  @override
+  String get newPassphrase => 'Новая кодовая фраза';
+
+  @override
+  String get repeatPassphrase => 'Повторите кодовую фразу';
+
+  @override
+  String get passphrasesMatch => 'Кодовые фразы соовпадают';
+
+  @override
+  String get passphraseLengthRequirement => 'Хотя-бы 12 символов.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Имеет прописные и строчные буквы.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Имеет специальные символы.';
+
+  @override
+  String get passphraseNumberRequirement => 'Имеет одну цифру.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+
+  @override
+  String get saveAsFile => 'Сохранить как файл';
+
+  @override
+  String get youAreReadyToStart => 'Вы готовы начать!';
+
+  @override
+  String get noUserKeyFound => 'Не нашлось ключа пользователя';
+
+  @override
+  String knownSince(String date) {
+    return 'Известен с:$date';
+  }
+
+  @override
+  String get unsignedDevice => 'Unsigned device';
+
+  @override
+  String get signedDevice => 'Signed device';
+
+  @override
+  String get noCurve25519KeyFound => 'No curve25519 key found';
+
+  @override
+  String get messageNotDecryptable => 'Message not decryptable';
+
+  @override
+  String get today => 'Сегодня';
+
+  @override
+  String get sending => 'Отправляется';
+
+  @override
+  String get generatingThumbnail => 'Генерируется миниатюра';
+
+  @override
+  String get encrypting => 'Шифруем';
+
+  @override
+  String get uploading => 'Загружаем';
+
+  @override
+  String get edited => '(изменено)';
+
+  @override
+  String get couldNotBeSent => 'Не возможно отправить';
+
+  @override
+  String get yesterday => 'Вчера';
 }

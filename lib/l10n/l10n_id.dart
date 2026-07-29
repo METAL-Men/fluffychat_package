@@ -9,9 +9,6 @@ class L10nId extends L10n {
   L10nId([String locale = 'id']) : super(locale);
 
   @override
-  String get alwaysUse24HourFormat => 'tidak';
-
-  @override
   String get repeatPassword => 'Ulangi kata sandi';
 
   @override
@@ -143,7 +140,8 @@ class L10nId extends L10n {
   String get areYouSure => 'Apakah kamu yakin?';
 
   @override
-  String get discardEdits => 'You have unsaved changes. Discard your edits?';
+  String get discardEdits =>
+      'Anda memiliki perubahan yang belum disimpan. Buang suntingan Anda?';
 
   @override
   String get areYouSureYouWantToLogout => 'Apakah kamu yakin ingin keluar?';
@@ -165,7 +163,6 @@ class L10nId extends L10n {
   String badServerLoginTypesException(
     String serverVersions,
     String supportedVersions,
-    Object suportedVersions,
   ) {
     return 'Homeserver ini mendukung tipe masuk ini:\n$serverVersions\nTetapi aplikasi ini mendukung:\n$supportedVersions';
   }
@@ -326,15 +323,7 @@ class L10nId extends L10n {
   String get chat => 'Obrolan';
 
   @override
-  String get yourChatBackupHasBeenSetUp =>
-      'Cadangan obrolanmu telah disiapkan.';
-
-  @override
   String get chatBackup => 'Cadangan obrolan';
-
-  @override
-  String get chatBackupDescription =>
-      'Pesan Anda diamankan dengan kunci pemulihan. Pastikan Anda tidak kehilangannya.';
 
   @override
   String get chatDetails => 'Detail obrolan';
@@ -625,9 +614,6 @@ class L10nId extends L10n {
   String errorObtainingLocation(String error) {
     return 'Gagal mendapat lokasi: $error';
   }
-
-  @override
-  String get everythingReady => 'Semua siap!';
 
   @override
   String get fileName => 'Nama file';
@@ -992,9 +978,6 @@ class L10nId extends L10n {
   String get passwordHasBeenChanged => 'Kata sandi telah diubah';
 
   @override
-  String get overview => 'Ikhtisar';
-
-  @override
   String get passwordRecoverySettings => 'Pengaturan pemulihan kata sandi';
 
   @override
@@ -1127,9 +1110,6 @@ class L10nId extends L10n {
   String get recoveryKey => 'Kunci pemulihan';
 
   @override
-  String get recoveryKeyLost => 'Kunci pemulihan hilang?';
-
-  @override
   String get send => 'Kirim';
 
   @override
@@ -1215,9 +1195,6 @@ class L10nId extends L10n {
   String get showPassword => 'Tampilkan kata sandi';
 
   @override
-  String get presencesToggle => 'Tampilkan pesan status dari pengguna lain';
-
-  @override
   String get skip => 'Lewat';
 
   @override
@@ -1266,9 +1243,6 @@ class L10nId extends L10n {
   @override
   String get tooManyRequestsWarning =>
       'Terlalu banyak permintaan. Coba lagi nanti!';
-
-  @override
-  String get transferFromAnotherDevice => 'Transfer dari perangkat lain';
 
   @override
   String get tryToSendAgain => 'Coba kirim lagi';
@@ -1390,10 +1364,6 @@ class L10nId extends L10n {
   String get whyDoYouWantToReportThis => 'Kenapa kamu ingin melaporkannya?';
 
   @override
-  String get wipeChatBackup =>
-      'Hapus cadangan obrolan untuk membuat kunci pemulihan baru?';
-
-  @override
   String get withTheseAddressesRecoveryDescription =>
       'Dengan alamat ini kamu bisa memulihkan kata sandimu.';
 
@@ -1437,10 +1407,6 @@ class L10nId extends L10n {
 
   @override
   String get start => 'Mulai';
-
-  @override
-  String get pleaseEnterRecoveryKeyDescription =>
-      'Untuk mengakses pesan lamamu, mohon masukkan kunci pemulihanmu yang telah dibuat di sesi sebelumnya. Kunci pemulihanmu BUKAN kata sandimu.';
 
   @override
   String get markAsRead => 'Tandai sebagai dibaca';
@@ -1553,17 +1519,6 @@ class L10nId extends L10n {
   String get users => 'Pengguna';
 
   @override
-  String get unlockOldMessages => 'Akses pesan lama';
-
-  @override
-  String get storeInSecureStorageDescription =>
-      'Simpan kunci pemulihan di penyimpanan aman perangkat ini.';
-
-  @override
-  String get saveKeyManuallyDescription =>
-      'Simpan kunci ini secara manual dengan memicu dialog pembagian atau papan klip sistem.';
-
-  @override
   String get storeInAndroidKeystore => 'Simpan di Android KeyStore';
 
   @override
@@ -1609,9 +1564,6 @@ class L10nId extends L10n {
 
   @override
   String get allSpaces => 'Semua space';
-
-  @override
-  String get hidePresences => 'Sembunyikan Daftar Status?';
 
   @override
   String get doNotShowAgain => 'Jangan tampilkan lagi';
@@ -2364,6 +2316,12 @@ class L10nId extends L10n {
   String get moreEvents => 'Peristiwa tambahan';
 
   @override
+  String get showMore => 'Tampilkan lebih banyak';
+
+  @override
+  String get showLess => 'Tampilkan lebih sedikit';
+
+  @override
   String get declineInvitation => 'Tolak undangan';
 
   @override
@@ -2497,12 +2455,6 @@ class L10nId extends L10n {
       'Anda yakin? Tanpa mengaktifkan cadangan obrolan, Anda mungkin kehilangan akses ke pesan Anda jika Anda mengganti perangkat.';
 
   @override
-  String get loadingMessages => 'Memuat pesan';
-
-  @override
-  String get setupChatBackup => 'Siapkan cadangan obrolan';
-
-  @override
   String get noMoreResultsFound => 'Tidak ada hasil lagi yang ditemukan';
 
   @override
@@ -2549,10 +2501,6 @@ class L10nId extends L10n {
   @override
   String get signInGreeting =>
       'Anda sudah memiliki akun di Matrix? Selamat datang kembali! Pilih homeserver Anda dan masuk.';
-
-  @override
-  String get appIntro =>
-      'Dengan FluffyChat Anda dapat mengobrol dengan teman-teman Anda. Ini adalah messenger [matrix] terdesentralisasi yang aman! Pelajari lebih lanjut di https://matrix.org jika Anda suka atau cukup daftar.';
 
   @override
   String get theProcessWasCanceled => 'Proses dibatalkan.';
@@ -2614,31 +2562,6 @@ class L10nId extends L10n {
   String get unsetLowPriority => 'Batalkan prioritas rendah';
 
   @override
-  String get removeCallFromChat => 'Hapus panggilan dari obrolan';
-
-  @override
-  String get removeCallFromChatDescription =>
-      'Apakah Anda ingin menghapus panggilan dari obrolan untuk semua anggota?';
-
-  @override
-  String get removeCallForEveryone => 'Hapus panggilan untuk semua orang';
-
-  @override
-  String get startVoiceCall => 'Mulai panggilan suara';
-
-  @override
-  String get startVideoCall => 'Mulai panggilan video';
-
-  @override
-  String get joinVoiceCall => 'Bergabung ke panggilan suara';
-
-  @override
-  String get joinVideoCall => 'Bergabung ke panggilan video';
-
-  @override
-  String get live => 'Langsung';
-
-  @override
   String get playSoundOnNotification => 'Putar suara saat notifikasi';
 
   @override
@@ -2654,12 +2577,179 @@ class L10nId extends L10n {
   String get createNewTag => 'Buat tag baru';
 
   @override
-  String get hideRoomsInSpaces => 'Hide rooms that are in a space';
+  String get hideRoomsInSpaces =>
+      'Sembunyikan room yang berada dalam sebuah space';
 
   @override
   String get possibleByYou =>
-      'This release was only possible thanks to your support. FluffyChat remains free, open-source, and entirely community-driven.';
+      'Rilis ini hanya dapat terwujud berkat dukungan Anda. FluffyChat tetap gratis, open-source, dan sepenuhnya digerakkan oleh komunitas.';
 
   @override
-  String get showThumbnailsInTimeline => 'Show thumbnails of images and videos';
+  String get showThumbnailsInTimeline => 'Tampilkan thumbnail gambar dan video';
+
+  @override
+  String get appSubtitle => 'Komunikasi [matrix] yang aman';
+
+  @override
+  String get appDescription =>
+      'Berkomunikasi secara terenkripsi melalui jaringan [matrix] terdesentralisasi dengan cara yang mudah dan dapat diakses oleh semua orang.';
+
+  @override
+  String get interactiveVerification => 'Verifikasi interaktif';
+
+  @override
+  String get interactiveVerificationDescription =>
+      'Jika Anda berada bersebelahan atau berkomunikasi melalui saluran yang aman, Anda dapat memverifikasi semua perangkat sekaligus dengan membandingkan nomor keamanan atau emoji.';
+
+  @override
+  String countUnverifiedDevices(int count) {
+    return '$count perangkat yang belum diverifikasi di dalam chat.';
+  }
+
+  @override
+  String get check => 'Periksa';
+
+  @override
+  String get encryptedMessage => 'Pesan terenkripsi';
+
+  @override
+  String get unencryptedMessage => 'Pesan tidak terenkripsi';
+
+  @override
+  String get allow => 'Izinkan';
+
+  @override
+  String get messageCanOnlyBeReadByUser =>
+      'Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh pengguna ini:';
+
+  @override
+  String get messageCanOnlyBeReadByUsers =>
+      'Pesan Anda terenkripsi end-to-end dan hanya dapat dibaca oleh para pengguna ini:';
+
+  @override
+  String publicKey(String key) {
+    return 'Kunci publik: $key';
+  }
+
+  @override
+  String get deviceIdentityKey => 'Kunci identitas perangkat';
+
+  @override
+  String get restoreBootstrapEmptyDevicesDescription =>
+      'Silakan masukkan passphrase atau recovery key Anda untuk memverifikasi perangkat ini dan mendapatkan akses ke cadangan pesan terenkripsi Anda.';
+
+  @override
+  String get restoreBootstrapDevicesDescription =>
+      'Silakan pilih salah satu perangkat Anda yang lain untuk memverifikasi sesi ini:';
+
+  @override
+  String get resetAccount => 'Reset akun';
+
+  @override
+  String get restoreCryptoIdentity => 'Pulihkan Identitas Kripto';
+
+  @override
+  String get resetCryptoIdentity => 'Reset Identitas Kripto';
+
+  @override
+  String get setUpCryptoIdentity => 'Siapkan Identitas Kripto';
+
+  @override
+  String get waitingForKeys =>
+      'Menunggu kunci... Harap tetap aktifkan perangkat lainnya.';
+
+  @override
+  String get noKeysTransmitted =>
+      'Tidak ada kunci yang dikirim. Silakan coba lagi.';
+
+  @override
+  String get unlock => 'Buka kunci';
+
+  @override
+  String get openFile => 'Buka file';
+
+  @override
+  String get resetAccountWarning =>
+      'Saat Anda mereset akun, Anda akan kehilangan akses ke pesan lama Anda selamanya. Semua perangkat Anda saat ini perlu diverifikasi kembali. Lakukan tindakan ini hanya jika Anda tidak memiliki perangkat lain lagi untuk memverifikasi sesi Anda dan Anda telah kehilangan recovery key serta passphrase Anda!';
+
+  @override
+  String get newPassphraseDescription =>
+      'FluffyChat menggunakan enkripsi end-to-end. Agar tidak kehilangan pesan Anda, silakan pilih passphrase yang kuat untuk mengamankan identitas kripto Anda dan cadangan pesan terenkripsi Anda.';
+
+  @override
+  String get newPassphrase => 'Passphrase baru';
+
+  @override
+  String get repeatPassphrase => 'Ulangi passphrase';
+
+  @override
+  String get passphrasesMatch => 'Passphrase cocok';
+
+  @override
+  String get passphraseLengthRequirement => 'Panjang minimal 12 karakter.';
+
+  @override
+  String get passphraseUpperAndLowerCaseRequirement =>
+      'Mengandung huruf besar dan huruf kecil.';
+
+  @override
+  String get passphraseSpecialCharactersRequirement =>
+      'Mengandung karakter khusus.';
+
+  @override
+  String get passphraseNumberRequirement => 'Mengandung satu angka.';
+
+  @override
+  String get storeRecoveryKeyDescription =>
+      'Harap catat recovery key Anda agar dapat memulihkan pesan terenkripsi dan identitas kripto Anda.';
+
+  @override
+  String get saveAsFile => 'Simpan sebagai file';
+
+  @override
+  String get youAreReadyToStart => 'Anda siap untuk memulai!';
+
+  @override
+  String get noUserKeyFound => 'Tidak ditemukan kunci pengguna';
+
+  @override
+  String knownSince(String date) {
+    return 'Diketahui sejak: $date';
+  }
+
+  @override
+  String get unsignedDevice => 'Perangkat tanpa tanda tangan';
+
+  @override
+  String get signedDevice => 'Perangkat bertanda tangan';
+
+  @override
+  String get noCurve25519KeyFound => 'Tidak ditemukan kunci curve25519';
+
+  @override
+  String get messageNotDecryptable => 'Pesan tidak dapat didekripsi';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get sending => 'Sending';
+
+  @override
+  String get generatingThumbnail => 'Generating thumbnail';
+
+  @override
+  String get encrypting => 'Encrypting';
+
+  @override
+  String get uploading => 'Uploading';
+
+  @override
+  String get edited => '(edited)';
+
+  @override
+  String get couldNotBeSent => 'Could not be sent';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

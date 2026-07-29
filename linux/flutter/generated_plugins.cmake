@@ -11,6 +11,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   flutter_secure_storage_linux
   flutter_webrtc
   handy_window
+  open_file_linux
   pasteboard
   record_linux
   screen_retriever_linux
@@ -23,6 +24,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
   flutter_vodozemac
+  jni
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)

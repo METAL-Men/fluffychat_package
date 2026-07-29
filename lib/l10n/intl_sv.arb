@@ -1680,11 +1680,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "everythingReady": "Allt är klart!",
-    "@everythingReady": {
-        "type": "String",
-        "placeholders": {}
-    },
     "errorObtainingLocation": "Fel vid erhållande av plats: {error}",
     "@errorObtainingLocation": {
         "type": "String",
@@ -1849,23 +1844,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "wipeChatBackup": "Radera din chatt-backup för att skapa en ny återställningsnyckel?",
-    "@wipeChatBackup": {
-        "type": "String",
-        "placeholders": {}
-    },
     "verified": "Verifierad",
     "@verified": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "transferFromAnotherDevice": "Överför till annan enhet",
-    "@transferFromAnotherDevice": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "chatBackupDescription": "Dina meddelanden är skyddad av en säkerhetsnyckel. Se till att du inte förlorar den.",
-    "@chatBackupDescription": {
         "type": "String",
         "placeholders": {}
     },
@@ -1910,7 +1890,6 @@
     "reportUser": "Rapportera användare",
     "sendOnEnter": "Skicka med Enter",
     "scanQrCode": "Skanna QR-kod",
-    "yourChatBackupHasBeenSetUp": "Din chatt-backup har konfigurerats.",
     "removeFromBundle": "Ta bort från paket",
     "emojis": "Uttryckssymboler",
     "placeCall": "Ring",
@@ -1955,7 +1934,6 @@
         }
     },
     "commandHint_markasgroup": "Märk som grupp",
-    "recoveryKeyLost": "Borttappad återställningsnyckel?",
     "youHaveWithdrawnTheInvitationFor": "Du har återkallat inbjudan till {user}",
     "@youHaveWithdrawnTheInvitationFor": {
         "placeholders": {
@@ -1972,7 +1950,6 @@
             }
         }
     },
-    "unlockOldMessages": "Lås upp äldre meddelanden",
     "newSpace": "Nytt utrymme",
     "googlyEyesContent": "{senderName} skickar dig googly ögon",
     "@googlyEyesContent": {
@@ -1986,7 +1963,6 @@
     "dehydrate": "Exportera sessionen och rensa enheten",
     "dehydrateWarning": "Denna åtgärd kan inte ångras. Försäkra dig om att backupen är i säkert förvar.",
     "recoveryKey": "Återställningsnyckel",
-    "pleaseEnterRecoveryKeyDescription": "Ange din återställningsnyckel från en tidigare session för att låsa upp äldre meddelanden. Din återställningsnyckel är INTE ditt lösenord.",
     "encryptThisChat": "Kryptera denna chatt",
     "noBackupWarning": "Varning! Om du inte aktiverar säkerhetskopiering av chattar så tappar du åtkomst till krypterade meddelanden. Det är rekommenderat att du aktiverar säkerhetskopiering innan du loggar ut.",
     "noOtherDevicesFound": "Inga andra enheter hittades",
@@ -2004,7 +1980,6 @@
     },
     "commandHint_markasdm": "Märk som rum för direktmeddelanden för det givante Matrix ID",
     "user": "Användare",
-    "storeInSecureStorageDescription": "Lagra återställningsnyckeln på säker plats på denna enhet.",
     "storeInAppleKeyChain": "Lagra i Apples nyckelkedja (KeyChain)",
     "foregroundServiceRunning": "Denna avisering visas när förgrundstjänsten körs.",
     "custom": "Anpassad",
@@ -2068,7 +2043,6 @@
             }
         }
     },
-    "saveKeyManuallyDescription": "Spara nyckeln manuellt genom att aktivera dela-funktionen eller urklippshanteraren på enheten.",
     "storeInAndroidKeystore": "Lagra i Androids nyckellagring (KeyStore)",
     "whyIsThisMessageEncrypted": "Varför kan inte detta meddelande läsas?",
     "newGroup": "Ny grupp",
@@ -2278,12 +2252,6 @@
             }
         }
     },
-    "presencesToggle": "Visa statusmeddelanden från andra användare",
-    "@presencesToggle": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "hidePresences": "Dölj statuslista?",
     "sendReadReceipts": "Skicka läskvitton",
     "verifyOtherDevice": "🔐 Verifiera enhet",
     "acceptedKeyVerification": "{sender} accepterade nyckelverifieringen",
@@ -2346,14 +2314,9 @@
     "calls": "Samtal",
     "customEmojisAndStickers": "Egna emojis och klistermärken",
     "customEmojisAndStickersBody": "Lägg till eller dela egna emojis eller klistermärken som kan användas i alla chattar.",
-    "alwaysUse24HourFormat": "falskt",
-    "@alwaysUse24HourFormat": {
-        "description": "Set to true to always display time of day in 24 hour format."
-    },
     "hideRedactedMessages": "Dölj tillbakatagna meddelanden",
     "hideRedactedMessagesBody": "Om någon tar tillbaka ett meddelande, kommer meddelandet inte längre vara synligt i chatten.",
     "hideInvalidOrUnknownMessageFormats": "Dölj ogiltiga eller okända meddelande-format",
-    "overview": "Översikt",
     "passwordRecoverySettings": "Lösenordsåterställnings-inställningar",
     "sendImages": "Skicka {count} bild",
     "@sendImages": {
@@ -2585,7 +2548,6 @@
         }
     },
     "saveChanges": "Spara ändringar",
-    "loadingMessages": "Läser in meddelanden",
     "noMoreResultsFound": "Inga fler resultat hittades",
     "versionWithNumber": "Version: {version}",
     "@versionWithNumber": {
@@ -2598,5 +2560,160 @@
     },
     "logs": "Loggar",
     "signIn": "Logga in",
-    "createNewAccount": "Skapa nytt konto"
+    "createNewAccount": "Skapa nytt konto",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@sentVoiceMessage": {
+        "type": "String",
+        "placeholders": {
+            "sender": {
+                "type": "String"
+            },
+            "duration": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@mute": {
+        "description": "This should be a very short string because there is not much space in the button!"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@spaceMemberOfCanKnock": {
+        "type": "String",
+        "placeholders": {
+            "spaces": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@chatSearchedUntil": {
+        "type": "String",
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    "@unknownPushRule": {
+        "type": "String",
+        "placeholders": {
+            "rule": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "@startedAPoll": {
+        "type": "String",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    
+    
+    "@spaceMemberOf": {
+        "type": "String",
+        "placeholders": {
+            "spaces": {
+                "type": "String"
+            }
+        }
+    }
 }
