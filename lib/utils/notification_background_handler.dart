@@ -204,6 +204,13 @@ Future<void> notificationTap(
                 : '/rooms/$roomId?client=${client.clientName}',
           );
       }
+    // flutter_local_notifications_platform_interface 12.1 added
+    // NotificationResponseType.notificationDismissed. Naming it explicitly
+    // would not compile against 12.0, so keep a default: nothing needs doing
+    // for a dismissal — the summary notification was refreshed above.
+    // ignore: unreachable_switch_default
+    default:
+      Logs().v('Ignore notification response', payload.roomId);
   }
 }
 
