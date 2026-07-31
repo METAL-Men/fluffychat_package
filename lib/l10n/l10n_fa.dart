@@ -15,9 +15,6 @@ class L10nFa extends L10n {
   String get notAnImage => 'یک فایل تصویری نیست.';
 
   @override
-  String get ignoreUser => 'چشم‌پوشی از کاربر';
-
-  @override
   String get remove => 'برداشتن';
 
   @override
@@ -82,9 +79,6 @@ class L10nFa extends L10n {
 
   @override
   String get all => 'همه';
-
-  @override
-  String get allChats => 'همه چت ها';
 
   @override
   String get commandHint_roomupgrade => 'ارتقای این اتاق به نگارش مشخص‌شده';
@@ -186,9 +180,6 @@ class L10nFa extends L10n {
   String get space => 'فضا';
 
   @override
-  String get spaces => 'فضاها';
-
-  @override
   String get banFromChat => 'بن کردن از چت';
 
   @override
@@ -227,18 +218,8 @@ class L10nFa extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username توضیح چت را به \'$description\' تغییر داد';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username نام چت را تغییر داد';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username نام چت را به \'$chatname\' تغییر داد';
   }
 
   @override
@@ -491,12 +472,6 @@ class L10nFa extends L10n {
   String get deleteMessage => 'پاک کردن پیام';
 
   @override
-  String get device => 'دستگاه';
-
-  @override
-  String get deviceId => 'شناسه دستگاه';
-
-  @override
   String get devices => 'دستگاه‌ها';
 
   @override
@@ -535,9 +510,6 @@ class L10nFa extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'شکلک‌هایی که به تازگی استفاده‌شده اینجا نمایش داده میشوند...';
-
-  @override
-  String get emotePacks => 'بسته‌های شکلک برای اتاق';
 
   @override
   String get emoteSettings => 'تنظیمات شکلک';
@@ -596,18 +568,9 @@ class L10nFa extends L10n {
   String get enterAnEmailAddress => 'یک نشانی رایانامه وارد کنید';
 
   @override
-  String get homeserver => 'سرور خانگی';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'خطا در به‌دست آوردن مکان: $error';
   }
-
-  @override
-  String get fileName => 'نام پرونده';
-
-  @override
-  String get fluffychat => 'فلافی‌چت';
 
   @override
   String get fontSize => 'اندازه قلم';
@@ -656,9 +619,6 @@ class L10nFa extends L10n {
   String get help => 'کمک';
 
   @override
-  String get hideRedactedEvents => 'پنهان کردن رویدادهای ویرایش‌شده';
-
-  @override
   String get hideRedactedMessages => 'پنهان کردن پیام‌های ویرایش‌شده';
 
   @override
@@ -668,9 +628,6 @@ class L10nFa extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'پنهان کردن قالب‌های پیام نامعتبر یا ناشناخته';
-
-  @override
-  String get id => 'شناسه';
 
   @override
   String get block => 'مسدود کردن';
@@ -826,10 +783,6 @@ class L10nFa extends L10n {
   String get muteChat => 'بی‌صدا کردن چت';
 
   @override
-  String get needPantalaimonWarning =>
-      'لطفاً توجه کنید که برای رمزنگاری سرتاسر به Pantalaimon نیاز دارید.';
-
-  @override
   String get newChat => 'چت جدید';
 
   @override
@@ -870,9 +823,6 @@ class L10nFa extends L10n {
   String get scanQrCode => 'پویش کد QR';
 
   @override
-  String get none => 'هیچ';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'هنوز روشی برای بازیابی گذرواژه خود اضافه نکرده‌اید.';
 
@@ -894,13 +844,7 @@ class L10nFa extends L10n {
   String get obtainingLocation => 'در حال به‌دست آوردن مکان…';
 
   @override
-  String get offline => 'آفلاین';
-
-  @override
   String get ok => 'خوب';
-
-  @override
-  String get online => 'آنلاین';
 
   @override
   String get onlineKeyBackupEnabled => 'پشتیبان‌گیری آنلاین کلید فعال است';
@@ -942,10 +886,6 @@ class L10nFa extends L10n {
   String get link => 'پیوند';
 
   @override
-  String get serverRequiresEmail =>
-      'برای ثبت‌نام، این سرور باید نشانی رایانامه شما را تأیید کند.';
-
-  @override
   String get or => 'یا';
 
   @override
@@ -970,15 +910,7 @@ class L10nFa extends L10n {
   String get passwordRecovery => 'بازیابی گذرواژه';
 
   @override
-  String get pickImage => 'انتخاب تصویر';
-
-  @override
   String get pin => 'سنجاق کردن';
-
-  @override
-  String play(String fileName) {
-    return 'پخش $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'لطفاً یک رمز کوتاه انتخاب کنید';
@@ -986,10 +918,6 @@ class L10nFa extends L10n {
   @override
   String get pleaseClickOnLink =>
       'لطفاً روی پیوند در رایانامه کلیک کنید و ادامه دهید.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'لطفاً ۴ رقم وارد کنید یا خالی بگذارید تا قفل برنامه غیرفعال شود.';
 
   @override
   String get pleaseEnterYourPassword => 'لطفاً گذرواژه خود را وارد کنید';
@@ -1011,13 +939,7 @@ class L10nFa extends L10n {
   String get publicRooms => 'اتاق‌های عمومی';
 
   @override
-  String get pushRules => 'قوانین آگاه‌ساز';
-
-  @override
   String get reason => 'دلیل';
-
-  @override
-  String get recording => 'در حال ضبط';
 
   @override
   String redactedBy(String username) {
@@ -1041,9 +963,6 @@ class L10nFa extends L10n {
   String get redactMessage => 'ویرایش پیام';
 
   @override
-  String get register => 'ثبت‌نام';
-
-  @override
   String get reject => 'رد کردن';
 
   @override
@@ -1053,11 +972,6 @@ class L10nFa extends L10n {
 
   @override
   String get removeAllOtherDevices => 'پاک کردن همه دستگاه‌های دیگر';
-
-  @override
-  String removedBy(String username) {
-    return 'پاک‌شده توسط $username';
-  }
 
   @override
   String get unbanFromChat => 'لغو محرومیت از چت';
@@ -1075,9 +989,6 @@ class L10nFa extends L10n {
   String get reportMessage => 'گزارش پیام';
 
   @override
-  String get requestPermission => 'درخواست دسترسی';
-
-  @override
   String get roomHasBeenUpgraded => 'اتاق ارتقا یافت';
 
   @override
@@ -1091,9 +1002,6 @@ class L10nFa extends L10n {
 
   @override
   String get security => 'امنیت';
-
-  @override
-  String get recoveryKey => 'کلید بازیابی';
 
   @override
   String get send => 'فرستادن';
@@ -1178,9 +1086,6 @@ class L10nFa extends L10n {
   String get shareLocation => 'هم‌رسانی مکان';
 
   @override
-  String get showPassword => 'نمایش گذرواژه';
-
-  @override
   String get skip => 'رد کردن';
 
   @override
@@ -1224,17 +1129,11 @@ class L10nFa extends L10n {
   String get theyMatch => 'هم‌خوانی دارند';
 
   @override
-  String get title => 'فلافی‌چت';
-
-  @override
   String get tooManyRequestsWarning =>
       'درخواست‌های بیش از حد. لطفاً بعداً دوباره تلاش کنید!';
 
   @override
   String get tryToSendAgain => 'تلاش دوباره برای فرستادن';
-
-  @override
-  String get unavailable => 'در دسترس نیست';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1282,9 +1181,6 @@ class L10nFa extends L10n {
   }
 
   @override
-  String get username => 'نام کاربری';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username یک رویداد $type فرستاد';
   }
@@ -1294,9 +1190,6 @@ class L10nFa extends L10n {
 
   @override
   String get verified => 'تاییدشده';
-
-  @override
-  String get verify => 'بازبینی';
 
   @override
   String get verifyStart => 'آغاز بازبینی';
@@ -1378,9 +1271,6 @@ class L10nFa extends L10n {
   String get time => 'زمان';
 
   @override
-  String get messageType => 'نوع پیام';
-
-  @override
   String get sender => 'فرستنده';
 
   @override
@@ -1390,16 +1280,10 @@ class L10nFa extends L10n {
   String get removeFromSpace => 'حذف از فضا';
 
   @override
-  String get start => 'آغاز';
-
-  @override
   String get markAsRead => 'علامت‌گذاشتن به عنوان خوانده شده';
 
   @override
   String get reportUser => 'گزارش دادن کاربر';
-
-  @override
-  String get dismiss => 'رد کردن';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1458,11 +1342,6 @@ class L10nFa extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 شما توسط $user دعوت شده‌اید';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 دعوت‌شده توسط $user';
   }
 
   @override
@@ -1541,13 +1420,7 @@ class L10nFa extends L10n {
       'اگر پیام پیش از ورود به حساب در این دستگاه فرستاده شده باشد، این مشکل ممکن است رخ دهد.\n\nهمچنین ممکن است فرستنده دستگاه شما را مسدود کرده باشد یا مشکلی در اتصال اینترنت وجود داشته باشد.\n\nآیا می‌توانید پیام را در نشست دیگری بخوانید؟ در این صورت، می‌توانید آن را منتقل کنید! به تنظیمات > دستگاه‌ها بروید و مطمئن شوید دستگاه‌هایتان یکدیگر را بازبینی کرده‌اند. هنگام باز کردن دوباره اتاق و فعال بودن هر دو نشست، کلیدها به‌صورت خودکار منتقل می‌شوند.\n\nآیا نمی‌خواهید هنگام خروج یا تغییر دستگاه کلیدها را گم کنید؟ مطمئن شوید پشتیبان چت را در تنظیمات فعال کرده‌اید.';
 
   @override
-  String get newGroup => 'گروه جدید';
-
-  @override
   String get newSpace => 'فضای جدید';
-
-  @override
-  String get allSpaces => 'همه فضاها';
 
   @override
   String get doNotShowAgain => 'دوباره نمایش نده';
@@ -1570,9 +1443,6 @@ class L10nFa extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'متأسفیم... این ممکن نیست';
-
-  @override
-  String get deviceKeys => 'کلیدهای دستگاه:';
 
   @override
   String get reopenChat => 'باز کردن دوباره چت';
@@ -1846,9 +1716,6 @@ class L10nFa extends L10n {
   }
 
   @override
-  String get transparent => 'شفاف';
-
-  @override
   String get incomingMessages => 'پیام‌های دریافتی';
 
   @override
@@ -1876,12 +1743,6 @@ class L10nFa extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'اکنون $count کاربر مسدود شده‌اند.';
   }
-
-  @override
-  String get restricted => 'محدودشده';
-
-  @override
-  String get knockRestricted => 'در زدن محدود';
 
   @override
   String goToSpace(Object space) {
@@ -1956,9 +1817,6 @@ class L10nFa extends L10n {
   String get sendingAttachment => 'در حال فرستادن پیوست...';
 
   @override
-  String get compressVideo => 'در حال فشرده‌سازی ویدئو...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'یکی از دستگاه‌های شما بازبینی نشده است';
 
@@ -1968,10 +1826,6 @@ class L10nFa extends L10n {
 
   @override
   String get continueText => 'ادامه';
-
-  @override
-  String get welcomeText =>
-      'درود درود 👋 این فلافی‌چت است. میتوانید به هر سرور خانگی سازگار با https://matrix.org وارد شوید و با هر کسی چت کنید. این یک شبکه پیام‌رسانی غیرمتمرکز بزرگ است!';
 
   @override
   String get blur => 'محو کردن:';
@@ -2335,14 +2189,6 @@ class L10nFa extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username یک نظرسنجی را آغاز کرد.';
-  }
-
-  @override
-  String get poll => 'نظرسنجی';
-
-  @override
   String get startPoll => 'آغاز نظرسنجی';
 
   @override
@@ -2572,16 +2418,10 @@ class L10nFa extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2716,4 +2556,48 @@ class L10nFa extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

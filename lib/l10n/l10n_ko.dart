@@ -15,9 +15,6 @@ class L10nKo extends L10n {
   String get notAnImage => '이미지 파일이 아닙니다.';
 
   @override
-  String get ignoreUser => '사용자 무시';
-
-  @override
   String get remove => '지우기';
 
   @override
@@ -81,9 +78,6 @@ class L10nKo extends L10n {
 
   @override
   String get all => '모두';
-
-  @override
-  String get allChats => '모든 채팅';
 
   @override
   String get commandHint_roomupgrade => '이 방을 주어진 방 버전으로 업그레이드합니다';
@@ -183,9 +177,6 @@ class L10nKo extends L10n {
   String get space => '스페이스';
 
   @override
-  String get spaces => '스페이스';
-
-  @override
   String get banFromChat => '채팅에서 영구 추방';
 
   @override
@@ -224,18 +215,8 @@ class L10nKo extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username님이 채팅 설명을 \'$description\' 으로 변경함';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username changed the chat name';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username님이 채팅 이름을 \'$chatname\' 으로 바꿈';
   }
 
   @override
@@ -485,12 +466,6 @@ class L10nKo extends L10n {
   String get deleteMessage => '메시지 삭제';
 
   @override
-  String get device => '기기';
-
-  @override
-  String get deviceId => '기기 ID';
-
-  @override
   String get devices => '기기';
 
   @override
@@ -528,9 +503,6 @@ class L10nKo extends L10n {
 
   @override
   String get emoteKeyboardNoRecents => '최근 사용한 이모트가 여기 나타납니다...';
-
-  @override
-  String get emotePacks => '방을 위한 이모트 팩';
 
   @override
   String get emoteSettings => '이모트 설정';
@@ -588,18 +560,9 @@ class L10nKo extends L10n {
   String get enterAnEmailAddress => '이메일 주소 입력';
 
   @override
-  String get homeserver => '홈서버';
-
-  @override
   String errorObtainingLocation(String error) {
     return '위치 얻는 중 오류: $error';
   }
-
-  @override
-  String get fileName => '파일 이름';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => '폰트 크기';
@@ -648,9 +611,6 @@ class L10nKo extends L10n {
   String get help => '도움';
 
   @override
-  String get hideRedactedEvents => '지워진 이벤트 숨기기';
-
-  @override
   String get hideRedactedMessages => '삭제된 메시지 숨기기';
 
   @override
@@ -658,9 +618,6 @@ class L10nKo extends L10n {
 
   @override
   String get hideInvalidOrUnknownMessageFormats => '잘못되거나 알 수 없는 메시지 형식 숨김';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => '차단';
@@ -813,10 +770,6 @@ class L10nKo extends L10n {
   String get muteChat => '채팅 음소거';
 
   @override
-  String get needPantalaimonWarning =>
-      '지금 종단간 암호화를 사용하기 위해서는 Pantalaimon이 필요하다는 것을 알아주세요.';
-
-  @override
   String get newChat => '새 채팅';
 
   @override
@@ -857,9 +810,6 @@ class L10nKo extends L10n {
   String get scanQrCode => 'QR 코드 스캔';
 
   @override
-  String get none => '없음';
-
-  @override
   String get noPasswordRecoveryDescription => '당신은 비밀번호를 복구할 방법을 추가하지 않았습니다.';
 
   @override
@@ -880,13 +830,7 @@ class L10nKo extends L10n {
   String get obtainingLocation => '위치 얻는 중…';
 
   @override
-  String get offline => '오프라인';
-
-  @override
   String get ok => '확인';
-
-  @override
-  String get online => '온라인';
 
   @override
   String get onlineKeyBackupEnabled => '온라인 키 백업이 활성화됨';
@@ -928,9 +872,6 @@ class L10nKo extends L10n {
   String get link => '링크';
 
   @override
-  String get serverRequiresEmail => '이 서버는 가입을 위해 당신의 이메일을 확인해야 합니다.';
-
-  @override
   String get or => '이나';
 
   @override
@@ -955,24 +896,13 @@ class L10nKo extends L10n {
   String get passwordRecovery => '비밀번호 복구';
 
   @override
-  String get pickImage => '이미지 고르기';
-
-  @override
   String get pin => '고정';
-
-  @override
-  String play(String fileName) {
-    return '$fileName 재생';
-  }
 
   @override
   String get pleaseChooseAPasscode => '비밀번호를 골라주세요';
 
   @override
   String get pleaseClickOnLink => '이메일의 링크를 클릭하고 진행해주세요.';
-
-  @override
-  String get pleaseEnter4Digits => '4자리 숫자를 입력하거나 앱 잠금을 사용하지 않도록 하려면 비워두세요.';
 
   @override
   String get pleaseEnterYourPassword => '비밀번호를 입력해주세요';
@@ -993,13 +923,7 @@ class L10nKo extends L10n {
   String get publicRooms => '공개 방';
 
   @override
-  String get pushRules => '푸시 규칙';
-
-  @override
   String get reason => '이유';
-
-  @override
-  String get recording => '녹음';
 
   @override
   String redactedBy(String username) {
@@ -1023,9 +947,6 @@ class L10nKo extends L10n {
   String get redactMessage => '메시지 지우기';
 
   @override
-  String get register => '가입';
-
-  @override
   String get reject => '거절';
 
   @override
@@ -1035,11 +956,6 @@ class L10nKo extends L10n {
 
   @override
   String get removeAllOtherDevices => '모든 다른 기기에서 지우기';
-
-  @override
-  String removedBy(String username) {
-    return '$username에 의해 지워짐';
-  }
 
   @override
   String get unbanFromChat => '채팅에서 영구추방 해제됨';
@@ -1057,9 +973,6 @@ class L10nKo extends L10n {
   String get reportMessage => '메시지 신고';
 
   @override
-  String get requestPermission => '권한 요청';
-
-  @override
   String get roomHasBeenUpgraded => '방이 업그레이드되었습니다';
 
   @override
@@ -1073,9 +986,6 @@ class L10nKo extends L10n {
 
   @override
   String get security => '보안';
-
-  @override
-  String get recoveryKey => '복구키';
 
   @override
   String get send => '보내기';
@@ -1160,9 +1070,6 @@ class L10nKo extends L10n {
   String get shareLocation => '위치 보내기';
 
   @override
-  String get showPassword => '비밀번호 보이기';
-
-  @override
   String get skip => '스킵';
 
   @override
@@ -1206,16 +1113,10 @@ class L10nKo extends L10n {
   String get theyMatch => '일치합니다';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning => '너무 많은 요청. 잠시 후에 다시 시도해주세요!';
 
   @override
   String get tryToSendAgain => '다시 보내도록 시도';
-
-  @override
-  String get unavailable => '사용할 수 없음';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1263,9 +1164,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get username => '유저 이름';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username님이 $type 이벤트 보냄';
   }
@@ -1275,9 +1173,6 @@ class L10nKo extends L10n {
 
   @override
   String get verified => '확인됨';
-
-  @override
-  String get verify => '확인';
 
   @override
   String get verifyStart => '확인 시작';
@@ -1357,9 +1252,6 @@ class L10nKo extends L10n {
   String get time => '시간';
 
   @override
-  String get messageType => '메시지 유형';
-
-  @override
   String get sender => '발신자';
 
   @override
@@ -1369,16 +1261,10 @@ class L10nKo extends L10n {
   String get removeFromSpace => '스페이스에서 삭제';
 
   @override
-  String get start => '시작';
-
-  @override
   String get markAsRead => '읽음으로 표시하기';
 
   @override
   String get reportUser => '유저 신고';
-
-  @override
-  String get dismiss => '닫기';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1436,11 +1322,6 @@ class L10nKo extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user님에 의해 초대되었습니다';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $user님이 나를 초대함';
   }
 
   @override
@@ -1517,13 +1398,7 @@ class L10nKo extends L10n {
       '이것은 이 메시지가 당신이 이 기기를 서명하기 전에 발송되었기 때문에 일어났을 수 있습니다.\n\n이것은 또한 발송자가 당신의 기기를 차단하였거나 혹은 인터넷 연결이 잘못되었을 수 있습니다.\n\n다른 세션에서 이 메시지를 읽을 수 있나요? 그렇다면 그 메시지를 옮길 수 있습니다! 설정 > 기기로 가서 기기를 서로 증명하세요. 다음번에 방을 열었을 때 두 세션이 모두 작동중이라면, 키가 자동으로 옮겨질것입니다.\n\n로그아웃하거나 기기를 바꿀 때 키를 잃고싶지 않으신가요? 설정에서 채팅 백업을 사용중인지 확인하세요.';
 
   @override
-  String get newGroup => '새 그룹 채팅';
-
-  @override
   String get newSpace => '새 스페이스';
-
-  @override
-  String get allSpaces => '모든 스페이스';
 
   @override
   String get doNotShowAgain => '다시 보지 않기';
@@ -1546,9 +1421,6 @@ class L10nKo extends L10n {
 
   @override
   String get sorryThatsNotPossible => '죄송합니다...그것은 불가능합니다';
-
-  @override
-  String get deviceKeys => '기기 키:';
 
   @override
   String get reopenChat => '채팅 다시 열기';
@@ -1815,9 +1687,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get transparent => '투명';
-
-  @override
   String get incomingMessages => '메시지 수신함';
 
   @override
@@ -1844,12 +1713,6 @@ class L10nKo extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return '$count명의 차단된 유저가 있습니다.';
   }
-
-  @override
-  String get restricted => '스페이스 멤버로 제한';
-
-  @override
-  String get knockRestricted => '스페이스 멤버만 참가 요청 가능';
 
   @override
   String goToSpace(Object space) {
@@ -1924,9 +1787,6 @@ class L10nKo extends L10n {
   String get sendingAttachment => '첨부된 파일 전송 중...';
 
   @override
-  String get compressVideo => '영상 압축 중...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified => '당신의 기기 중 하나가 인증되지 않았음';
 
   @override
@@ -1935,10 +1795,6 @@ class L10nKo extends L10n {
 
   @override
   String get continueText => '계속하기';
-
-  @override
-  String get welcomeText =>
-      '안녕하세요 👋 FluffyChat이에요. 당신은 htpps://matrix.org와 호환되는 모든 홈서버를 사용할 수 있어요. 그리고 모두와 대화해보세요. 거대한 분산 대화망이니까요!';
 
   @override
   String get blur => '블러:';
@@ -2294,14 +2150,6 @@ class L10nKo extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username started a poll.';
-  }
-
-  @override
-  String get poll => 'Poll';
-
-  @override
   String get startPoll => 'Start poll';
 
   @override
@@ -2543,16 +2391,10 @@ class L10nKo extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2687,4 +2529,48 @@ class L10nKo extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

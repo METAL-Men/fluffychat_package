@@ -15,9 +15,6 @@ class L10nLt extends L10n {
   String get notAnImage => 'Nėra vaizdo failas.';
 
   @override
-  String get ignoreUser => 'Nepaisyti naudotojo';
-
-  @override
   String get remove => 'Šalinti';
 
   @override
@@ -82,9 +79,6 @@ class L10nLt extends L10n {
 
   @override
   String get all => 'Viskas';
-
-  @override
-  String get allChats => 'Visi pokalbiai';
 
   @override
   String get commandHint_roomupgrade =>
@@ -188,9 +182,6 @@ class L10nLt extends L10n {
   String get space => 'Space';
 
   @override
-  String get spaces => 'Spaces';
-
-  @override
   String get banFromChat => 'Užblokuoti iš pokalbio';
 
   @override
@@ -229,18 +220,8 @@ class L10nLt extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username pakeitė pokalbio aprašymą į: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username changed the chat name';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username pakeitė pokalbio pavadinimą į: \'$chatname\'';
   }
 
   @override
@@ -497,12 +478,6 @@ class L10nLt extends L10n {
   String get deleteMessage => 'Ištrinti žinutę';
 
   @override
-  String get device => 'Įrenginys';
-
-  @override
-  String get deviceId => 'Įrenginio ID';
-
-  @override
   String get devices => 'Įrenginiai';
 
   @override
@@ -541,9 +516,6 @@ class L10nLt extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Recently-used emotes will appear here...';
-
-  @override
-  String get emotePacks => 'Jaustukų paketai kambariui';
 
   @override
   String get emoteSettings => 'Jaustukų nustatymai';
@@ -602,18 +574,9 @@ class L10nLt extends L10n {
   String get enterAnEmailAddress => 'Įveskite el. pašto adresą';
 
   @override
-  String get homeserver => 'Namų serveris';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Klaida nustatant vietą: $error';
   }
-
-  @override
-  String get fileName => 'Failo vardas';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Šrifto dydis';
@@ -662,9 +625,6 @@ class L10nLt extends L10n {
   String get help => 'Pagalba';
 
   @override
-  String get hideRedactedEvents => 'Slėpti pašalintus įvykius';
-
-  @override
   String get hideRedactedMessages => 'Hide redacted messages';
 
   @override
@@ -674,9 +634,6 @@ class L10nLt extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Hide invalid or unknown message formats';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Block';
@@ -833,10 +790,6 @@ class L10nLt extends L10n {
   String get muteChat => 'Nutildyti pokalbį';
 
   @override
-  String get needPantalaimonWarning =>
-      'Atminkite, kad norint naudoti end-to-end šifravimą, reikalingas Pantalaimon.';
-
-  @override
   String get newChat => 'Naujas pokalbis';
 
   @override
@@ -877,9 +830,6 @@ class L10nLt extends L10n {
   String get scanQrCode => 'Nuskanuokite QR kodą';
 
   @override
-  String get none => 'Nė vienas';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Dar nepridėjote slaptažodžio atkūrimo būdo.';
 
@@ -901,13 +851,7 @@ class L10nLt extends L10n {
   String get obtainingLocation => 'Gaunama vieta…';
 
   @override
-  String get offline => 'Neprisijungta';
-
-  @override
   String get ok => 'OK';
-
-  @override
-  String get online => 'Prisijungta';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -952,10 +896,6 @@ class L10nLt extends L10n {
   String get link => 'Nuoroda';
 
   @override
-  String get serverRequiresEmail =>
-      'Šis serveris turi patvirtinti jūsų el. pašto adresą registracijai.';
-
-  @override
   String get or => 'Arba';
 
   @override
@@ -980,15 +920,7 @@ class L10nLt extends L10n {
   String get passwordRecovery => 'Slaptažodžio atkūrimas';
 
   @override
-  String get pickImage => 'Pasirinkite paveiksliuką';
-
-  @override
   String get pin => 'Prisegti';
-
-  @override
-  String play(String fileName) {
-    return 'Groti $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Pasirinkite slaptą kodą';
@@ -996,10 +928,6 @@ class L10nLt extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Paspauskite nuorodą el. pašte ir tęskite toliau.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Įveskite 4 skaitmenis arba palikite tuščią, jei norite išjungti programėlės užraktą.';
 
   @override
   String get pleaseEnterYourPassword => 'Įveskite savo slaptažodį';
@@ -1021,13 +949,7 @@ class L10nLt extends L10n {
   String get publicRooms => 'Vieši kambariai';
 
   @override
-  String get pushRules => 'Tiesioginių pranešimų taisyklės';
-
-  @override
   String get reason => 'Priežastis';
-
-  @override
-  String get recording => 'Įrašymas';
 
   @override
   String redactedBy(String username) {
@@ -1051,9 +973,6 @@ class L10nLt extends L10n {
   String get redactMessage => 'Pašalinti žinutę';
 
   @override
-  String get register => 'Registruotis';
-
-  @override
   String get reject => 'Atmesti';
 
   @override
@@ -1063,11 +982,6 @@ class L10nLt extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Pašalinti visus kitus įrenginius';
-
-  @override
-  String removedBy(String username) {
-    return 'Pašalino vartotojas $username';
-  }
 
   @override
   String get unbanFromChat => 'Atblokuoti pokalbyje';
@@ -1085,9 +999,6 @@ class L10nLt extends L10n {
   String get reportMessage => 'Pranešti apie žinutę';
 
   @override
-  String get requestPermission => 'Prašyti leidimo';
-
-  @override
   String get roomHasBeenUpgraded => 'Kambarys buvo atnaujintas';
 
   @override
@@ -1101,9 +1012,6 @@ class L10nLt extends L10n {
 
   @override
   String get security => 'Apsauga';
-
-  @override
-  String get recoveryKey => 'Atkūrimo raktas';
 
   @override
   String get send => 'Siųsti';
@@ -1188,9 +1096,6 @@ class L10nLt extends L10n {
   String get shareLocation => 'Bendrinti vietą';
 
   @override
-  String get showPassword => 'Rodyti slaptažodį';
-
-  @override
   String get skip => 'Praleisti';
 
   @override
@@ -1234,17 +1139,11 @@ class L10nLt extends L10n {
   String get theyMatch => 'Jie sutampa';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Per daug užklausų. Pabandykite dar kartą vėliau!';
 
   @override
   String get tryToSendAgain => 'Pabandykite išsiųsti dar kartą';
-
-  @override
-  String get unavailable => 'Nepasiekiamas';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1292,9 +1191,6 @@ class L10nLt extends L10n {
   }
 
   @override
-  String get username => 'Vartotojo vardas';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username išsiuntė $type įvykį';
   }
@@ -1304,9 +1200,6 @@ class L10nLt extends L10n {
 
   @override
   String get verified => 'Patvirtinta';
-
-  @override
-  String get verify => 'Patvirtinti';
 
   @override
   String get verifyStart => 'Pradėti patvirtinimą';
@@ -1389,9 +1282,6 @@ class L10nLt extends L10n {
   String get time => 'Laikas';
 
   @override
-  String get messageType => 'Žinutės tipas';
-
-  @override
   String get sender => 'Siuntėjas';
 
   @override
@@ -1401,16 +1291,10 @@ class L10nLt extends L10n {
   String get removeFromSpace => 'Pašalinti iš erdvės';
 
   @override
-  String get start => 'Pradžia';
-
-  @override
   String get markAsRead => 'Žymėti kaip skaitytą';
 
   @override
   String get reportUser => 'Pranešti apie vartotoją';
-
-  @override
-  String get dismiss => 'Atsisakyti';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1469,11 +1353,6 @@ class L10nLt extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Jus pakvietė $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Invited by $user';
   }
 
   @override
@@ -1551,13 +1430,7 @@ class L10nLt extends L10n {
       'Taip gali atsitikti, jei žinutė buvo išsiųsta prieš prisijungiant prie paskyros šiame prietaise.\n\nTaip pat gali būti, kad siuntėjas užblokavo jūsų prietaisą arba kažkas sutriko su interneto ryšiu.\n\nAr galite perskaityti žinutę kitoje sesijoje? Tada galite perkelti žinutę iš jos! Eikite į Nustatymai > Prietaisai ir įsitikinkite, kad jūsų prietaisai patvirtino vienas kitą. Kai kitą kartą atidarysite kambarį ir abi sesijos bus pirmame plane, raktai bus perduoti automatiškai.\n\nNenorite prarasti raktų atsijungdami arba keisdami įrenginius? Įsitikinkite, kad nustatymuose įjungėte pokalbių atsarginę kopiją.';
 
   @override
-  String get newGroup => 'Nauja grupė';
-
-  @override
   String get newSpace => 'Nauja erdvė';
-
-  @override
-  String get allSpaces => 'Visos erdvės';
 
   @override
   String get doNotShowAgain => 'Do not show again';
@@ -1580,9 +1453,6 @@ class L10nLt extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Sorry... that is not possible';
-
-  @override
-  String get deviceKeys => 'Device keys:';
 
   @override
   String get reopenChat => 'Reopen chat';
@@ -1855,9 +1725,6 @@ class L10nLt extends L10n {
   }
 
   @override
-  String get transparent => 'Transparent';
-
-  @override
   String get incomingMessages => 'Incoming messages';
 
   @override
@@ -1885,12 +1752,6 @@ class L10nLt extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
-
-  @override
-  String get restricted => 'Restricted';
-
-  @override
-  String get knockRestricted => 'Knock restricted';
 
   @override
   String goToSpace(Object space) {
@@ -1968,9 +1829,6 @@ class L10nLt extends L10n {
   String get sendingAttachment => 'Sending attachment...';
 
   @override
-  String get compressVideo => 'Compressing video...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'One of your devices is not verified';
 
@@ -1980,10 +1838,6 @@ class L10nLt extends L10n {
 
   @override
   String get continueText => 'Continue';
-
-  @override
-  String get welcomeText =>
-      'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
 
   @override
   String get blur => 'Blur:';
@@ -2348,14 +2202,6 @@ class L10nLt extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username started a poll.';
-  }
-
-  @override
-  String get poll => 'Poll';
-
-  @override
   String get startPoll => 'Start poll';
 
   @override
@@ -2597,16 +2443,10 @@ class L10nLt extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2741,4 +2581,48 @@ class L10nLt extends L10n {
 
   @override
   String get yesterday => 'vakar';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

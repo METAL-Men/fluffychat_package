@@ -15,9 +15,6 @@ class L10nKab extends L10n {
   String get notAnImage => 'Mačči d afaylu n tugna.';
 
   @override
-  String get ignoreUser => 'Zgel aseqdac';
-
-  @override
   String get remove => 'Kkes';
 
   @override
@@ -82,9 +79,6 @@ class L10nKab extends L10n {
 
   @override
   String get all => 'Meṛṛa';
-
-  @override
-  String get allChats => 'Meṛṛa idiwenniyen';
 
   @override
   String get commandHint_roomupgrade =>
@@ -190,9 +184,6 @@ class L10nKab extends L10n {
   String get space => 'Tallunt';
 
   @override
-  String get spaces => 'Tallunin';
-
-  @override
   String get banFromChat => 'Gdel seg adiwenni';
 
   @override
@@ -231,18 +222,8 @@ class L10nKab extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username yesnifel aglam n udiwenni ɣer: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username yesnifel isem n udiwenni';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username yesnifel isem n udiwenni ɣer: \'$chatname\'';
   }
 
   @override
@@ -499,12 +480,6 @@ class L10nKab extends L10n {
   String get deleteMessage => 'kkes izen';
 
   @override
-  String get device => 'Ibenk';
-
-  @override
-  String get deviceId => 'Asulay n yibenk';
-
-  @override
   String get devices => 'Ibenkan';
 
   @override
@@ -543,9 +518,6 @@ class L10nKab extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Izamulen uḥulfu yettwasqedcen melmi kan ad banen dagi…';
-
-  @override
-  String get emotePacks => 'Ikemmusen n uzamul uḥulfu i texxamt';
 
   @override
   String get emoteSettings => 'Iɣewwaṛen n uzamul uḥulfu';
@@ -605,18 +577,9 @@ class L10nKab extends L10n {
   String get enterAnEmailAddress => 'Sekcem tansa n yimayl';
 
   @override
-  String get homeserver => 'Aqeddac agejdan';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Tuccḍa deg wawway n yideg: $error';
   }
-
-  @override
-  String get fileName => 'Isem n ufaylu';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Tiddi n tsefsit';
@@ -665,9 +628,6 @@ class L10nKab extends L10n {
   String get help => 'Tallelt';
 
   @override
-  String get hideRedactedEvents => 'Hide redacted events';
-
-  @override
   String get hideRedactedMessages => 'Hide redacted messages';
 
   @override
@@ -677,9 +637,6 @@ class L10nKab extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Hide invalid or unknown message formats';
-
-  @override
-  String get id => 'Asulay';
 
   @override
   String get block => 'Iḥder';
@@ -836,10 +793,6 @@ class L10nKab extends L10n {
   String get muteChat => 'Sgugem adiwenni';
 
   @override
-  String get needPantalaimonWarning =>
-      'Ttxil-k·m ẓeṛ belli tesriḍ Palaimon akken ad tesqedceḍ awgelhen seg yixef ɣer yixef.';
-
-  @override
   String get newChat => 'Adiwenni Amaynut';
 
   @override
@@ -880,9 +833,6 @@ class L10nKab extends L10n {
   String get scanQrCode => 'Semḍen tangalt QR';
 
   @override
-  String get none => 'Ulac';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Mazal ur terniḍ ara tarrayt akken ad terreḍ awal-ik·im n uɛeddi.';
 
@@ -904,13 +854,7 @@ class L10nKab extends L10n {
   String get obtainingLocation => 'Aguccel n wadig…';
 
   @override
-  String get offline => 'Aruqqin';
-
-  @override
   String get ok => 'iH';
-
-  @override
-  String get online => 'Deg uẓeṭṭa';
 
   @override
   String get onlineKeyBackupEnabled => 'Aḥraz n tsarut deg uẓeṭṭa yermed';
@@ -953,10 +897,6 @@ class L10nKab extends L10n {
   String get link => 'Aseɣwen';
 
   @override
-  String get serverRequiresEmail =>
-      'Aqeddac-agi ilaq ad isentem tansa imayl i ujerred.';
-
-  @override
   String get or => 'Neɣ';
 
   @override
@@ -981,15 +921,7 @@ class L10nKab extends L10n {
   String get passwordRecovery => 'Tiririt n wawal n uɛeddi';
 
   @override
-  String get pickImage => 'Fren tugna';
-
-  @override
   String get pin => 'Pin';
-
-  @override
-  String play(String fileName) {
-    return 'Ɣeṛ $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Ttxil-k·m fren tangalt n uɛeddi';
@@ -997,10 +929,6 @@ class L10nKab extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Ma ulac aɣilif, sit ɣef useɣwen yellan deg imayl sakin kemmel.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Ttxil-k·m sekcem 4 n wuṭṭunen neɣ eǧǧ-it d ilem akken ad tsenseḍ asekkeṛ n usnas.';
 
   @override
   String get pleaseEnterYourPassword =>
@@ -1023,13 +951,7 @@ class L10nKab extends L10n {
   String get publicRooms => 'Tixxamin tizuyaz';
 
   @override
-  String get pushRules => 'Push rules';
-
-  @override
   String get reason => 'Taɣẓint';
-
-  @override
-  String get recording => 'Asekles';
 
   @override
   String redactedBy(String username) {
@@ -1053,9 +975,6 @@ class L10nKab extends L10n {
   String get redactMessage => 'Kkes izen';
 
   @override
-  String get register => 'Jerred';
-
-  @override
   String get reject => 'Aggi';
 
   @override
@@ -1065,11 +984,6 @@ class L10nKab extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Kkes akk ibenkan-nniḍen';
-
-  @override
-  String removedBy(String username) {
-    return 'Yettwakkes sɣur $username';
-  }
 
   @override
   String get unbanFromChat => 'Kkes agdal seg udiwenni';
@@ -1087,9 +1001,6 @@ class L10nKab extends L10n {
   String get reportMessage => 'Mmel-d izen';
 
   @override
-  String get requestPermission => 'Suter tasiregt';
-
-  @override
   String get roomHasBeenUpgraded => 'Taxxamt tettwaleqqem';
 
   @override
@@ -1103,9 +1014,6 @@ class L10nKab extends L10n {
 
   @override
   String get security => 'Taɣellist';
-
-  @override
-  String get recoveryKey => 'Tasarut n tririt';
 
   @override
   String get send => 'Azen';
@@ -1190,9 +1098,6 @@ class L10nKab extends L10n {
   String get shareLocation => 'Bḍu adig';
 
   @override
-  String get showPassword => 'Sken-d awal n uɛeddi';
-
-  @override
   String get skip => 'Zgel';
 
   @override
@@ -1236,17 +1141,11 @@ class L10nKab extends L10n {
   String get theyMatch => 'mṣadan';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Deqs n tuttriwin. Ttxil-k·m, ɛreḍ tikelt nniḍen ticki!';
 
   @override
   String get tryToSendAgain => 'Ɛreḍ ad tazneḍ tikkelt nniḍen';
-
-  @override
-  String get unavailable => 'Ur yewjid ara';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1294,9 +1193,6 @@ class L10nKab extends L10n {
   }
 
   @override
-  String get username => 'Isem n useqdac';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username yuzen-d tadyant $type';
   }
@@ -1306,9 +1202,6 @@ class L10nKab extends L10n {
 
   @override
   String get verified => 'Yettwaselken';
-
-  @override
-  String get verify => 'Selken';
 
   @override
   String get verifyStart => 'Bdu Aselken';
@@ -1389,9 +1282,6 @@ class L10nKab extends L10n {
   String get time => 'Akud';
 
   @override
-  String get messageType => 'Anaw n yizen';
-
-  @override
   String get sender => 'Amazan';
 
   @override
@@ -1401,16 +1291,10 @@ class L10nKab extends L10n {
   String get removeFromSpace => 'Kkes seg tallunt';
 
   @override
-  String get start => 'Senker';
-
-  @override
   String get markAsRead => 'Creḍ amzun yettwaɣṛa';
 
   @override
   String get reportUser => 'Cetki aseqdac';
-
-  @override
-  String get dismiss => 'Agi';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1469,11 +1353,6 @@ class L10nKab extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Tettwaɛerḍeḍ sɣur $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Tettwaɛerḍeɣ sɣur $user';
   }
 
   @override
@@ -1551,13 +1430,7 @@ class L10nKab extends L10n {
       'This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.';
 
   @override
-  String get newGroup => 'Agraw amaynut';
-
-  @override
   String get newSpace => 'Tallunt tamaynut';
-
-  @override
-  String get allSpaces => 'Akk tallunin';
 
   @override
   String get doNotShowAgain => 'Ur t-id-sskan ara tikkelt nniḍen';
@@ -1580,9 +1453,6 @@ class L10nKab extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Sorry... that is not possible';
-
-  @override
-  String get deviceKeys => 'Tisura n yibenk:';
 
   @override
   String get reopenChat => 'Reopen chat';
@@ -1856,9 +1726,6 @@ class L10nKab extends L10n {
   }
 
   @override
-  String get transparent => 'Afrawan';
-
-  @override
   String get incomingMessages => 'Incoming messages';
 
   @override
@@ -1886,12 +1753,6 @@ class L10nKab extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
-
-  @override
-  String get restricted => 'Restricted';
-
-  @override
-  String get knockRestricted => 'Knock restricted';
 
   @override
   String goToSpace(Object space) {
@@ -1969,9 +1830,6 @@ class L10nKab extends L10n {
   String get sendingAttachment => 'Sending attachment...';
 
   @override
-  String get compressVideo => 'Asekkussem n tvidyut...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'iwen seg ibenkan-ik·im ur yettusenqed ara';
 
@@ -1981,10 +1839,6 @@ class L10nKab extends L10n {
 
   @override
   String get continueText => 'Ddu';
-
-  @override
-  String get welcomeText =>
-      'Azul Azul 👋 Wa d FluffyChat. Tzemreḍ ad tkecmeḍ ɣer uqeddac agejdan, yellan yemsaḍa akked https://matrix.org. Dɣa meslay d win tebɣiḍ, d aẓeṭṭa n udiwenni araslemmas amuqṛan!';
 
   @override
   String get blur => 'Asluɣu:';
@@ -2348,14 +2202,6 @@ class L10nKab extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '${username}yessenker tafrent.';
-  }
-
-  @override
-  String get poll => 'Tafrent';
-
-  @override
   String get startPoll => 'Senker tafrent';
 
   @override
@@ -2598,16 +2444,10 @@ class L10nKab extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2742,4 +2582,48 @@ class L10nKab extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

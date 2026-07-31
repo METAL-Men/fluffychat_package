@@ -15,9 +15,6 @@ class L10nLv extends L10n {
   String get notAnImage => 'Nav attēla datne.';
 
   @override
-  String get ignoreUser => 'Neņemt vērā lietotāju';
-
-  @override
   String get remove => 'Noņemt';
 
   @override
@@ -82,9 +79,6 @@ class L10nLv extends L10n {
 
   @override
   String get all => 'Viss';
-
-  @override
-  String get allChats => 'Visas tērzēšanas';
 
   @override
   String get commandHint_roomupgrade =>
@@ -189,9 +183,6 @@ class L10nLv extends L10n {
   String get space => 'Vieta';
 
   @override
-  String get spaces => 'Vietas';
-
-  @override
   String get banFromChat => 'Izslēgt no tērzēšanas';
 
   @override
@@ -230,18 +221,8 @@ class L10nLv extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username nomainīja tērzēšanas aprakstu uz \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username nomainīja tērzēšanas nosaukumu';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username nomainīja tērzēšanas nosaukumu uz \'$chatname\'';
   }
 
   @override
@@ -449,7 +430,14 @@ class L10nLv extends L10n {
 
   @override
   String countParticipants(int count) {
-    return '$count dalībnieki';
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count dalībnieki',
+      one: '$count dalībnieks',
+      zero: '$count dalībnieku',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -500,12 +488,6 @@ class L10nLv extends L10n {
   String get deleteMessage => 'Izdzēst ziņu';
 
   @override
-  String get device => 'Ierīce';
-
-  @override
-  String get deviceId => 'Ierīces Id';
-
-  @override
   String get devices => 'Ierīces';
 
   @override
@@ -544,9 +526,6 @@ class L10nLv extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Nesen izmantotās emocijas parādīsies šeit...';
-
-  @override
-  String get emotePacks => 'Emociju pakas istabai';
 
   @override
   String get emoteSettings => 'Emociju iestatījumi';
@@ -605,18 +584,9 @@ class L10nLv extends L10n {
   String get enterAnEmailAddress => 'Jāievada e-pasta adrese';
 
   @override
-  String get homeserver => 'Mājasserveris';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Kļūda atrašanās vietas iegūšanā: $error';
   }
-
-  @override
-  String get fileName => 'Datnes nosaukums';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Fonta izmērs';
@@ -666,9 +636,6 @@ class L10nLv extends L10n {
   String get help => 'Palīdzība';
 
   @override
-  String get hideRedactedEvents => 'Paslēpt labošanas notikumus';
-
-  @override
   String get hideRedactedMessages => 'Paslēpt labošanas ziņas';
 
   @override
@@ -678,9 +645,6 @@ class L10nLv extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Paslēpt nederīgus vai nezināmus ziņu formātus';
-
-  @override
-  String get id => 'Id';
 
   @override
   String get block => 'Izslēgt';
@@ -836,10 +800,6 @@ class L10nLv extends L10n {
   String get muteChat => 'Apklusināt tērzēšanu';
 
   @override
-  String get needPantalaimonWarning =>
-      'Lūgums ņemt vērā, ka pagaidām ir nepieciešams Pantalaimon, lai izmantotu pilnīgu šifrēšanu.';
-
-  @override
   String get newChat => 'Jauna tērzēšana';
 
   @override
@@ -880,9 +840,6 @@ class L10nLv extends L10n {
   String get scanQrCode => 'Nolasīt kvadrātkodu';
 
   @override
-  String get none => 'Neviens';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Vēl nav pievienots paroles atjaunošanas veids.';
 
@@ -904,13 +861,7 @@ class L10nLv extends L10n {
   String get obtainingLocation => 'Iegūst atrašanās vietu…';
 
   @override
-  String get offline => 'Bezsaistē';
-
-  @override
   String get ok => 'Labi';
-
-  @override
-  String get online => 'Tiešsaistē';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -954,10 +905,6 @@ class L10nLv extends L10n {
   String get link => 'Saite';
 
   @override
-  String get serverRequiresEmail =>
-      'Šim serverim ir nepieciešams pārbaudīt Tavu e-pasta adresi reģistrācijai.';
-
-  @override
   String get or => 'Vai';
 
   @override
@@ -982,15 +929,7 @@ class L10nLv extends L10n {
   String get passwordRecovery => 'Paroles atkope';
 
   @override
-  String get pickImage => 'Izvēlēties attēlu';
-
-  @override
   String get pin => 'Piespraust';
-
-  @override
-  String play(String fileName) {
-    return 'Atskaņot $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Lūgums izvēlēties piekļuves kodu';
@@ -998,10 +937,6 @@ class L10nLv extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Lūgums klikšķināt uz saites e-pastā un tad turpināt.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Lūgums ievadīt 4 ciparus vai atstāt tukšu, lai atspējotu lietotnes slēgu.';
 
   @override
   String get pleaseEnterYourPassword => 'Lūgums ievadīt savu paroli';
@@ -1023,13 +958,7 @@ class L10nLv extends L10n {
   String get publicRooms => 'Publiskas istabas';
 
   @override
-  String get pushRules => 'Pašpiegādes nosacījumi';
-
-  @override
   String get reason => 'Iemesls';
-
-  @override
-  String get recording => 'Ieraksta';
 
   @override
   String redactedBy(String username) {
@@ -1053,9 +982,6 @@ class L10nLv extends L10n {
   String get redactMessage => 'Labot ziņu';
 
   @override
-  String get register => 'Reģistrēties';
-
-  @override
   String get reject => 'Noraidīt';
 
   @override
@@ -1065,11 +991,6 @@ class L10nLv extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Noņemt visas pārējās ierīces';
-
-  @override
-  String removedBy(String username) {
-    return 'Noņēma $username';
-  }
 
   @override
   String get unbanFromChat => 'Atcelt liegumu tērzēšanā';
@@ -1088,9 +1009,6 @@ class L10nLv extends L10n {
   String get reportMessage => 'Ziņot par ziņu';
 
   @override
-  String get requestPermission => 'Pieprasīt atļauju';
-
-  @override
   String get roomHasBeenUpgraded => 'Istaba tika atjaunināta';
 
   @override
@@ -1104,9 +1022,6 @@ class L10nLv extends L10n {
 
   @override
   String get security => 'Drošība';
-
-  @override
-  String get recoveryKey => 'Atkopes atslēga';
 
   @override
   String get send => 'Nosūtīt';
@@ -1191,9 +1106,6 @@ class L10nLv extends L10n {
   String get shareLocation => 'Kopīgot atrašanās vietu';
 
   @override
-  String get showPassword => 'Rādīt paroli';
-
-  @override
   String get skip => 'Izlaist';
 
   @override
@@ -1237,17 +1149,11 @@ class L10nLv extends L10n {
   String get theyMatch => 'Tās sakrīt';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Pārāk daudz pieprasījumu. Lūdzu, vēlāk mēģini vēlreiz!';
 
   @override
   String get tryToSendAgain => 'Mēģināt nosūtīt vēlreiz';
-
-  @override
-  String get unavailable => 'Nav pieejams';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1295,9 +1201,6 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get username => 'Lietotājvārds';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username nosūtīja notikumu $type';
   }
@@ -1307,9 +1210,6 @@ class L10nLv extends L10n {
 
   @override
   String get verified => 'Apliecināta';
-
-  @override
-  String get verify => 'Apliecināt';
 
   @override
   String get verifyStart => 'Uzsākt apliecināšanu';
@@ -1394,9 +1294,6 @@ class L10nLv extends L10n {
   String get time => 'Laiks';
 
   @override
-  String get messageType => 'Ziņas veids';
-
-  @override
   String get sender => 'Sūtītājs';
 
   @override
@@ -1406,16 +1303,10 @@ class L10nLv extends L10n {
   String get removeFromSpace => 'Noņemt no vietas';
 
   @override
-  String get start => 'Uzsākt';
-
-  @override
   String get markAsRead => 'Atzīmēt kā lasītu';
 
   @override
   String get reportUser => 'Ziņot par lietotāju';
-
-  @override
-  String get dismiss => 'Atmest';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1474,11 +1365,6 @@ class L10nLv extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user Tevi uzaicināja';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $user uzaicināja';
   }
 
   @override
@@ -1556,13 +1442,7 @@ class L10nLv extends L10n {
       'Tā var notikt, ja ziņa tika nosūtīta, pirms pieteicies savā kontā šajā ierīcē.\n\nIr arī iespējams, ka sūtītājs noliedza Tavu ierīci vai kaut kas nogāja greizi ar interneta savienojumu.\n\nVai ziņas ir lasāmas citā sesijā? Tad Tu vari pārsūtīt ziņu no tās. Jādodas uz Iestatījumi > Ierīces un jāpārliecinās, ka ierīces viena otru ir apliecinājušas. Kad nākamreiz atvērsi istabu un abas sesijas būs priekšplānā, atslēgas tiks automātiski pārsūtītas.\n\nVai nevēlies zaudēt atslēgas, kad atsakies vai maini ierīces? Jāpārliecinās, ka iestatījumos ir iespējota tērzēšanu rezerves kopija.';
 
   @override
-  String get newGroup => 'Jauna kopa';
-
-  @override
   String get newSpace => 'Jauna vieta';
-
-  @override
-  String get allSpaces => 'Visas vietas';
 
   @override
   String get doNotShowAgain => 'Vairs nerādīt';
@@ -1585,9 +1465,6 @@ class L10nLv extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Atvaino! Tas nav iespējams';
-
-  @override
-  String get deviceKeys => 'Ierīces atslēgas:';
 
   @override
   String get reopenChat => 'Atkārtoti atvērt tērzēšanu';
@@ -1863,9 +1740,6 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get transparent => 'Caurspīdīgs';
-
-  @override
   String get incomingMessages => 'Ienākošās ziņas';
 
   @override
@@ -1893,12 +1767,6 @@ class L10nLv extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Šobrīd ir izslēgti $count lietotāji.';
   }
-
-  @override
-  String get restricted => 'Ierobežots';
-
-  @override
-  String get knockRestricted => 'Pieklauvēt ierobežotajiem';
 
   @override
   String goToSpace(Object space) {
@@ -1953,7 +1821,7 @@ class L10nLv extends L10n {
 
   @override
   String updateInstalled(String version) {
-    return '🎉 Atjauninājums $version uzstādīts.';
+    return '🎉 Atjauninājums $version uzstādīts!';
   }
 
   @override
@@ -1976,9 +1844,6 @@ class L10nLv extends L10n {
   String get sendingAttachment => 'Nosūta pielikumu...';
 
   @override
-  String get compressVideo => 'Saspiež video...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Viena no ierīcēm nav apliecināta';
 
@@ -1988,10 +1853,6 @@ class L10nLv extends L10n {
 
   @override
   String get continueText => 'Turpināt';
-
-  @override
-  String get welcomeText =>
-      'Sveicieni! 👋 Šis ir FluffyChat. Tu vari pieteikties jebkurā mājasserverī, kas ir saderīgs ar https://matrix.org. Tad vari tērzēt ar ikvienu. Tas ir milzīgs decentralizētās saziņas tīkls.';
 
   @override
   String get blur => 'Aizmiglojums:';
@@ -2316,10 +2177,10 @@ class L10nLv extends L10n {
   String get moreEvents => 'Vairāk notikumu';
 
   @override
-  String get showMore => 'Show more';
+  String get showMore => 'Parādīt vairāk';
 
   @override
-  String get showLess => 'Show less';
+  String get showLess => 'Rādīt mazāk';
 
   @override
   String get declineInvitation => 'Noraidīt uzaicinājumu';
@@ -2355,14 +2216,6 @@ class L10nLv extends L10n {
   String spaceMemberOfCanKnock(String spaces) {
     return '$spaces dalībnieks var pieklauvēt';
   }
-
-  @override
-  String startedAPoll(String username) {
-    return '$username uzsāka aptauju.';
-  }
-
-  @override
-  String get poll => 'Aptauja';
 
   @override
   String get startPoll => 'Sākt aptauju';
@@ -2609,24 +2462,18 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get check => 'Pārbaudīt';
-
-  @override
   String get encryptedMessage => 'Šifrēta ziņa';
 
   @override
   String get unencryptedMessage => 'Nešifrēta ziņa';
 
   @override
-  String get allow => 'Ļaut';
-
-  @override
   String get messageCanOnlyBeReadByUser =>
-      'Your message is end to end encrypted and can only be read by this user:';
+      'Ziņojums ir pilnībā šifrēts, un to var izlasīt tikai šis lietotājs:';
 
   @override
   String get messageCanOnlyBeReadByUsers =>
-      'Your message is end to end encrypted and can only be read by these users:';
+      'Ziņojums ir pilnībā šifrēts, un to var izlasīt tikai šie lietotāji:';
 
   @override
   String publicKey(String key) {
@@ -2645,7 +2492,7 @@ class L10nLv extends L10n {
       'Please pick one of your other devices, to verify this session:';
 
   @override
-  String get resetAccount => 'Reset account';
+  String get resetAccount => 'Atiestatīt kontu';
 
   @override
   String get restoreCryptoIdentity => 'Restore Crypto Identity';
@@ -2664,10 +2511,10 @@ class L10nLv extends L10n {
   String get noKeysTransmitted => 'No keys transmitted. Please try again.';
 
   @override
-  String get unlock => 'Unlock';
+  String get unlock => 'Atslēgt';
 
   @override
-  String get openFile => 'Open file';
+  String get openFile => 'Atvērt datni';
 
   @override
   String get resetAccountWarning =>
@@ -2681,31 +2528,31 @@ class L10nLv extends L10n {
   String get newPassphrase => 'New passphrase';
 
   @override
-  String get repeatPassphrase => 'Repeat passphrase';
+  String get repeatPassphrase => 'Atkārtot paroles vārdkopu';
 
   @override
-  String get passphrasesMatch => 'Passphrases match';
+  String get passphrasesMatch => 'Paroles vārdkopas sakrīt';
 
   @override
-  String get passphraseLengthRequirement => 'At least 12 characters long.';
+  String get passphraseLengthRequirement => 'Vismaz 12 rakstzīmes gara.';
 
   @override
   String get passphraseUpperAndLowerCaseRequirement =>
-      'Contains uppercase and lowercase characters.';
+      'Satur lielos un mazos burtus.';
 
   @override
   String get passphraseSpecialCharactersRequirement =>
-      'Contains special characters.';
+      'Satur īpašas rakstzīmes.';
 
   @override
-  String get passphraseNumberRequirement => 'Contains one numbers.';
+  String get passphraseNumberRequirement => 'Satur vismaz vienu ciparu.';
 
   @override
   String get storeRecoveryKeyDescription =>
       'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
 
   @override
-  String get saveAsFile => 'Save as file';
+  String get saveAsFile => 'Saglabāt kā datni';
 
   @override
   String get youAreReadyToStart => 'You are ready to start!';
@@ -2719,38 +2566,82 @@ class L10nLv extends L10n {
   }
 
   @override
-  String get unsignedDevice => 'Unsigned device';
+  String get unsignedDevice => 'Neapstiprināta ierīce';
 
   @override
-  String get signedDevice => 'Signed device';
+  String get signedDevice => 'Apstiprināta ierīce';
 
   @override
-  String get noCurve25519KeyFound => 'No curve25519 key found';
+  String get noCurve25519KeyFound => 'Curve25519 atslēga nav atrasta';
 
   @override
-  String get messageNotDecryptable => 'Message not decryptable';
+  String get messageNotDecryptable => 'Ziņojums nav atšifrējams';
 
   @override
-  String get today => 'Today';
+  String get today => 'Šodien';
 
   @override
-  String get sending => 'Sending';
+  String get sending => 'Sūta';
 
   @override
-  String get generatingThumbnail => 'Generating thumbnail';
+  String get generatingThumbnail => 'Veido sīktēlu';
 
   @override
-  String get encrypting => 'Encrypting';
+  String get encrypting => 'Šifrē';
 
   @override
-  String get uploading => 'Uploading';
+  String get uploading => 'Augšupielādē';
 
   @override
-  String get edited => '(edited)';
+  String get edited => '(labots)';
 
   @override
-  String get couldNotBeSent => 'Could not be sent';
+  String get couldNotBeSent => 'Nevarēja nosūtīt';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Vakar';
+
+  @override
+  String get resetRecoveryKey => 'Atiestatīt atkopes atslēgu';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Lūdzu, ievadiet 6 ciparus, lai iespējotu lietotnes aizslēgšanu.';
+
+  @override
+  String get disableAppLock => 'Atspējot lietotnes aizslēgšanu';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Vai tiešām vēlaties atspējot lietotnes aizslēgšanu?';
+
+  @override
+  String get enableBiometrics => 'Iespējot biometrisko autentifikāciju';
+
+  @override
+  String get disableBiometrics => 'Atspējot biometrisko autentifikāciju';
+
+  @override
+  String get biometricsDescription =>
+      'Ar biometrisko autentifikāciju jūs variet atslēgt lietotni ar savu seju vai pirksta nospiedumu. Iespējas ir atkarīgas no jūsu konkrētās ierīces.';
+
+  @override
+  String get useAppLock => 'Izmantot lietotnes aizslēgšanu';
+
+  @override
+  String get unlockWithBiometrics => 'Atslēgt ar biometrisko autentificēšanos';
+
+  @override
+  String get resetPin => 'Atiestatīt PIN';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

@@ -15,9 +15,6 @@ class L10nTa extends L10n {
   String get notAnImage => 'படக் கோப்பு அல்ல.';
 
   @override
-  String get ignoreUser => 'பயனரைப் புறக்கணி';
-
-  @override
   String get remove => 'அகற்று';
 
   @override
@@ -82,9 +79,6 @@ class L10nTa extends L10n {
 
   @override
   String get all => 'அனைத்தும்';
-
-  @override
-  String get allChats => 'அனைத்து அரட்டைகளும்';
 
   @override
   String get commandHint_roomupgrade =>
@@ -191,9 +185,6 @@ class L10nTa extends L10n {
   String get space => 'இடைவெளி';
 
   @override
-  String get spaces => 'இடங்கள்';
-
-  @override
   String get banFromChat => 'அரட்டையிலிருந்து தடை';
 
   @override
@@ -232,18 +223,8 @@ class L10nTa extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username பயனர்பெயர் the அரட்டை விளக்கத்தை மாற்றியது: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username அரட்டை பெயரை மாற்றியுள்ளார்';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username அரட்டை பெயரை மாற்றியது: \'$chatname\'';
   }
 
   @override
@@ -505,12 +486,6 @@ class L10nTa extends L10n {
   String get deleteMessage => 'செய்தியை நீக்கு';
 
   @override
-  String get device => 'சாதனம்';
-
-  @override
-  String get deviceId => 'சாதன ஐடி';
-
-  @override
   String get devices => 'சாதனங்கள்';
 
   @override
@@ -549,9 +524,6 @@ class L10nTa extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'அண்மைக் காலத்தில் பயன்படுத்தப்பட்ட உணர்ச்சிகள் இங்கே தோன்றும் ...';
-
-  @override
-  String get emotePacks => 'அறைக்கு எமோட் பொதிகள்';
 
   @override
   String get emoteSettings => 'எமோட் அமைப்புகள்';
@@ -611,18 +583,9 @@ class L10nTa extends L10n {
   String get enterAnEmailAddress => 'மின்னஞ்சல் முகவரியை உள்ளிடவும்';
 
   @override
-  String get homeserver => 'ஓம்சர்வர்';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'இருப்பிடத்தைப் பெறுவதில் பிழை: $error';
   }
-
-  @override
-  String get fileName => 'கோப்பு பெயர்';
-
-  @override
-  String get fluffychat => 'பஞ்சுபோன்ற';
 
   @override
   String get fontSize => 'எழுத்துரு அளவு';
@@ -671,9 +634,6 @@ class L10nTa extends L10n {
   String get help => 'உதவி';
 
   @override
-  String get hideRedactedEvents => 'திருத்தப்பட்ட நிகழ்வுகளை மறைக்கவும்';
-
-  @override
   String get hideRedactedMessages => 'சரிசெய்யப்பட்ட செய்திகளை மறைக்கவும்';
 
   @override
@@ -683,9 +643,6 @@ class L10nTa extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'தவறான அல்லது அறியப்படாத செய்தி வடிவங்களை மறைக்கவும்';
-
-  @override
-  String get id => 'ஐடி';
 
   @override
   String get block => 'தொகுதி';
@@ -842,10 +799,6 @@ class L10nTa extends L10n {
   String get muteChat => 'முடக்கு அரட்டை';
 
   @override
-  String get needPantalaimonWarning =>
-      'இப்போதைக்கு இறுதி முதல் இறுதி குறியாக்கத்தைப் பயன்படுத்த உங்களுக்கு பாண்டலாயமன் தேவை என்பதை நினைவில் கொள்க.';
-
-  @override
   String get newChat => 'புதிய அரட்டை';
 
   @override
@@ -886,9 +839,6 @@ class L10nTa extends L10n {
   String get scanQrCode => 'QR குறியீட்டை ச்கேன் செய்யுங்கள்';
 
   @override
-  String get none => 'எதுவுமில்லை';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'உங்கள் கடவுச்சொல்லை மீட்டெடுப்பதற்கான வழியை நீங்கள் இன்னும் சேர்க்கவில்லை.';
 
@@ -910,13 +860,7 @@ class L10nTa extends L10n {
   String get obtainingLocation => 'இருப்பிடத்தைப் பெறுதல்…';
 
   @override
-  String get offline => 'இணையமில்லாமல்';
-
-  @override
   String get ok => 'சரி';
-
-  @override
-  String get online => 'ஆன்லைனில்';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -963,10 +907,6 @@ class L10nTa extends L10n {
   String get link => 'இணைப்பு';
 
   @override
-  String get serverRequiresEmail =>
-      'இந்த சேவையகம் பதிவுக்கு உங்கள் மின்னஞ்சல் முகவரியை சரிபார்க்க வேண்டும்.';
-
-  @override
   String get or => 'அல்லது';
 
   @override
@@ -991,15 +931,7 @@ class L10nTa extends L10n {
   String get passwordRecovery => 'கடவுச்சொல் மீட்பு';
 
   @override
-  String get pickImage => 'ஒரு படத்தைத் தேர்ந்தெடுக்கவும்';
-
-  @override
   String get pin => 'முள்';
-
-  @override
-  String play(String fileName) {
-    return '$fileName இயக்கு';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'பாச் குறியீட்டைத் தேர்வுசெய்க';
@@ -1007,10 +939,6 @@ class L10nTa extends L10n {
   @override
   String get pleaseClickOnLink =>
       'மின்னஞ்சலில் உள்ள இணைப்பைக் சொடுக்கு செய்து தொடரவும்.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'பயன்பாட்டு பூட்டை முடக்க 4 இலக்கங்களை உள்ளிடவும் அல்லது காலியாக விடவும்.';
 
   @override
   String get pleaseEnterYourPassword => 'உங்கள் கடவுச்சொல்லை உள்ளிடவும்';
@@ -1032,13 +960,7 @@ class L10nTa extends L10n {
   String get publicRooms => 'பொது அறைகள்';
 
   @override
-  String get pushRules => 'தள்ளி விதிகள்';
-
-  @override
   String get reason => 'காரணம்';
-
-  @override
-  String get recording => 'பதிவு';
 
   @override
   String redactedBy(String username) {
@@ -1062,9 +984,6 @@ class L10nTa extends L10n {
   String get redactMessage => 'திருத்தும் செய்தி';
 
   @override
-  String get register => 'பதிவு செய்யுங்கள்';
-
-  @override
   String get reject => 'நிராகரிக்கவும்';
 
   @override
@@ -1074,11 +993,6 @@ class L10nTa extends L10n {
 
   @override
   String get removeAllOtherDevices => 'மற்ற எல்லா சாதனங்களையும் அகற்றவும்';
-
-  @override
-  String removedBy(String username) {
-    return '$username ஆல் அகற்றப்பட்டது';
-  }
 
   @override
   String get unbanFromChat => 'அரட்டையிலிருந்து தடையின்றி';
@@ -1096,9 +1010,6 @@ class L10nTa extends L10n {
   String get reportMessage => 'செய்தி அறிக்கை';
 
   @override
-  String get requestPermission => 'இசைவு கோருங்கள்';
-
-  @override
   String get roomHasBeenUpgraded => 'அறை மேம்படுத்தப்பட்டுள்ளது';
 
   @override
@@ -1112,9 +1023,6 @@ class L10nTa extends L10n {
 
   @override
   String get security => 'பாதுகாப்பு';
-
-  @override
-  String get recoveryKey => 'மீட்பு விசை';
 
   @override
   String get send => 'அனுப்பு';
@@ -1199,9 +1107,6 @@ class L10nTa extends L10n {
   String get shareLocation => 'இருப்பிடத்தைப் பகிரவும்';
 
   @override
-  String get showPassword => 'கடவுச்சொல்லைக் காட்டு';
-
-  @override
   String get skip => 'தவிர்';
 
   @override
@@ -1246,17 +1151,11 @@ class L10nTa extends L10n {
   String get theyMatch => 'அவர்கள் பொருந்துகிறார்கள்';
 
   @override
-  String get title => 'பஞ்சுபோன்ற';
-
-  @override
   String get tooManyRequestsWarning =>
       'பல கோரிக்கைகள். தயவுசெய்து பின்னர் மீண்டும் முயற்சிக்கவும்!';
 
   @override
   String get tryToSendAgain => 'மீண்டும் அனுப்ப முயற்சிக்கவும்';
-
-  @override
-  String get unavailable => 'கிடைக்கவில்லை';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1304,9 +1203,6 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get username => 'பயனர்பெயர்';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username ஒரு $type நிகழ்வை அனுப்பியது';
   }
@@ -1316,9 +1212,6 @@ class L10nTa extends L10n {
 
   @override
   String get verified => 'சரிபார்க்கப்பட்டது';
-
-  @override
-  String get verify => 'சரிபார்க்கவும்';
 
   @override
   String get verifyStart => 'சரிபார்ப்பைத் தொடங்கவும்';
@@ -1406,9 +1299,6 @@ class L10nTa extends L10n {
   String get time => 'நேரம்';
 
   @override
-  String get messageType => 'செய்தி வகை';
-
-  @override
   String get sender => 'அனுப்புநர்';
 
   @override
@@ -1418,16 +1308,10 @@ class L10nTa extends L10n {
   String get removeFromSpace => 'இடத்திலிருந்து அகற்று';
 
   @override
-  String get start => 'தொடங்கு';
-
-  @override
   String get markAsRead => 'படித்தபடி குறி';
 
   @override
   String get reportUser => 'பயனர் புகாரளிக்கவும்';
-
-  @override
-  String get dismiss => 'தள்ளுபடி';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1486,11 +1370,6 @@ class L10nTa extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 நீங்கள் $user ஆல் அழைக்கப்பட்டுள்ளீர்கள்';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '$user அழைத்தார்';
   }
 
   @override
@@ -1570,13 +1449,7 @@ class L10nTa extends L10n {
       'இந்த சாதனத்தில் உங்கள் கணக்கில் கையொப்பமிடுவதற்கு முன்பு செய்தி அனுப்பப்பட்டால் இது நிகழலாம்.\n\n அனுப்புநர் உங்கள் சாதனத்தைத் தடுத்துள்ளார் அல்லது இணைய இணைப்பில் ஏதேனும் தவறு ஏற்பட்டுள்ளது.\n\n மற்றொரு அமர்வில் செய்தியைப் படிக்க முடியுமா? அதிலிருந்து செய்தியை மாற்றலாம்! அமைப்புகள்> சாதனங்களுக்குச் சென்று, உங்கள் சாதனங்கள் ஒருவருக்கொருவர் சரிபார்த்துள்ளன என்பதை உறுதிப்படுத்தவும். அடுத்த முறை நீங்கள் அறையைத் திறக்கும்போது, இரண்டு அமர்வுகளும் முன்னணியில் இருக்கும்போது, விசைகள் தானாகவே அனுப்பப்படும்.\n\n வெளியேறும்போது அல்லது சாதனங்களை மாற்றும்போது விசைகளை இழக்க நீங்கள் விரும்பவில்லையா? அமைப்புகளில் அரட்டை காப்புப்பிரதியை நீங்கள் இயக்கியுள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்.';
 
   @override
-  String get newGroup => 'புதிய குழு';
-
-  @override
   String get newSpace => 'புதிய இடம்';
-
-  @override
-  String get allSpaces => 'அனைத்து இடங்களும்';
 
   @override
   String get doNotShowAgain => 'மீண்டும் காட்ட வேண்டாம்';
@@ -1599,9 +1472,6 @@ class L10nTa extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'மன்னிக்கவும் ... அது சாத்தியமில்லை';
-
-  @override
-  String get deviceKeys => 'சாதன விசைகள்:';
 
   @override
   String get reopenChat => 'அரட்டையை மீண்டும் திறக்கவும்';
@@ -1876,9 +1746,6 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get transparent => 'வெளிப்படையானது';
-
-  @override
   String get incomingMessages => 'உள்வரும் செய்திகள்';
 
   @override
@@ -1908,12 +1775,6 @@ class L10nTa extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'இப்போது $count பயனர்கள் தடுக்கப்பட்டுள்ளனர்.';
   }
-
-  @override
-  String get restricted => 'தடைசெய்யப்பட்டது';
-
-  @override
-  String get knockRestricted => 'நாக் தடை';
 
   @override
   String goToSpace(Object space) {
@@ -1991,9 +1852,6 @@ class L10nTa extends L10n {
   String get sendingAttachment => 'இணைப்பை அனுப்புகிறது ...';
 
   @override
-  String get compressVideo => 'அமைக்கும் வீடியோ ...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'உங்கள் சாதனங்களில் ஒன்று சரிபார்க்கப்படவில்லை';
 
@@ -2003,10 +1861,6 @@ class L10nTa extends L10n {
 
   @override
   String get continueText => 'தொடரவும்';
-
-  @override
-  String get welcomeText =>
-      'ஏய் ஏய் 👋 இது பஞ்சுபோன்றது. Https://matrix.org உடன் இணக்கமான எந்த ஓம்சர்வரில் நீங்கள் உள்நுழையலாம். பின்னர் யாருடனும் அரட்டையடிக்கவும். இது ஒரு பெரிய பரவலாக்கப்பட்ட செய்தியிடல் நெட்வொர்க்!';
 
   @override
   String get blur => 'மங்கலானது:';
@@ -2373,14 +2227,6 @@ class L10nTa extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username ஒரு வாக்கெடுப்பைத் தொடங்கினார்.';
-  }
-
-  @override
-  String get poll => 'கருத்துக்கணிப்பு';
-
-  @override
   String get startPoll => 'வாக்கெடுப்பைத் தொடங்கவும்';
 
   @override
@@ -2624,16 +2470,10 @@ class L10nTa extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2768,4 +2608,48 @@ class L10nTa extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

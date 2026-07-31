@@ -15,9 +15,6 @@ class L10nRu extends L10n {
   String get notAnImage => 'Это не изображение.';
 
   @override
-  String get ignoreUser => 'Заглушить пользователя';
-
-  @override
   String get remove => 'Удалить';
 
   @override
@@ -82,9 +79,6 @@ class L10nRu extends L10n {
 
   @override
   String get all => 'Все';
-
-  @override
-  String get allChats => 'Все чаты';
 
   @override
   String get commandHint_roomupgrade => 'Обновить комнату до указанной версии';
@@ -189,9 +183,6 @@ class L10nRu extends L10n {
   String get space => 'Пространство';
 
   @override
-  String get spaces => 'Пространства';
-
-  @override
   String get banFromChat => 'Заблокировать в чате';
 
   @override
@@ -230,18 +221,8 @@ class L10nRu extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username изменил(а) описание чата на: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username изменил(а) имя чата';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username изменил(а) имя чата на \'$chatname\'';
   }
 
   @override
@@ -501,12 +482,6 @@ class L10nRu extends L10n {
   String get deleteMessage => 'Удалить сообщение';
 
   @override
-  String get device => 'Устройство';
-
-  @override
-  String get deviceId => 'Идентификатор устройства';
-
-  @override
   String get devices => 'Устройства';
 
   @override
@@ -545,9 +520,6 @@ class L10nRu extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Недавно использованные эмодзи появятся здесь...';
-
-  @override
-  String get emotePacks => 'Наборы эмодзи для комнаты';
 
   @override
   String get emoteSettings => 'Настройки эмодзи';
@@ -606,18 +578,9 @@ class L10nRu extends L10n {
   String get enterAnEmailAddress => 'Введите адрес электронной почты';
 
   @override
-  String get homeserver => 'Домашний сервер';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Ошибка получения местоположения: $error';
   }
-
-  @override
-  String get fileName => 'Имя файла';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Размер шрифта';
@@ -666,9 +629,6 @@ class L10nRu extends L10n {
   String get help => 'Помощь';
 
   @override
-  String get hideRedactedEvents => 'Скрыть отредактированные события';
-
-  @override
   String get hideRedactedMessages => 'Скрыть редактированные сообщения';
 
   @override
@@ -678,9 +638,6 @@ class L10nRu extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Скрыть неправильные или неизвестные форматы сообщения';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Заглушить';
@@ -837,10 +794,6 @@ class L10nRu extends L10n {
   String get muteChat => 'Отключить уведомления';
 
   @override
-  String get needPantalaimonWarning =>
-      'Помните, что вам нужен Pantalaimon для использования сквозного шифрования.';
-
-  @override
   String get newChat => 'Новый чат';
 
   @override
@@ -881,9 +834,6 @@ class L10nRu extends L10n {
   String get scanQrCode => 'Сканировать QR-код';
 
   @override
-  String get none => 'Ничего';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Вы ещё не добавили способ восстановления пароля.';
 
@@ -905,13 +855,7 @@ class L10nRu extends L10n {
   String get obtainingLocation => 'Получение местоположения…';
 
   @override
-  String get offline => 'Не в сети';
-
-  @override
   String get ok => 'Ок';
-
-  @override
-  String get online => 'В сети';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -956,10 +900,6 @@ class L10nRu extends L10n {
   String get link => 'Ссылка';
 
   @override
-  String get serverRequiresEmail =>
-      'Этот сервер должен подтвердить ваш адрес электронной почты для регистрации.';
-
-  @override
   String get or => 'Или';
 
   @override
@@ -984,15 +924,7 @@ class L10nRu extends L10n {
   String get passwordRecovery => 'Восстановление пароля';
 
   @override
-  String get pickImage => 'Выбрать изображение';
-
-  @override
   String get pin => 'Закрепить';
-
-  @override
-  String play(String fileName) {
-    return 'Проиграть $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Пожалуйста, выберите код доступа';
@@ -1000,10 +932,6 @@ class L10nRu extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Пожалуйста, нажмите на ссылку в электронной почте, для того чтобы продолжить.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Введите 4 цифры или оставьте поле пустым, чтобы отключить блокировку приложения.';
 
   @override
   String get pleaseEnterYourPassword => 'Пожалуйста, введите ваш пароль';
@@ -1025,13 +953,7 @@ class L10nRu extends L10n {
   String get publicRooms => 'Публичные комнаты';
 
   @override
-  String get pushRules => 'Правила push';
-
-  @override
   String get reason => 'Причина';
-
-  @override
-  String get recording => 'Запись';
 
   @override
   String redactedBy(String username) {
@@ -1055,9 +977,6 @@ class L10nRu extends L10n {
   String get redactMessage => 'Отредактировать сообщение';
 
   @override
-  String get register => 'Зарегистрироваться';
-
-  @override
   String get reject => 'Отказать';
 
   @override
@@ -1067,11 +986,6 @@ class L10nRu extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Удалить все другие устройства';
-
-  @override
-  String removedBy(String username) {
-    return 'Удалено пользователем $username';
-  }
 
   @override
   String get unbanFromChat => 'Разблокировать в чате';
@@ -1090,9 +1004,6 @@ class L10nRu extends L10n {
   String get reportMessage => 'Сообщить о сообщении';
 
   @override
-  String get requestPermission => 'Запросить разрешение';
-
-  @override
   String get roomHasBeenUpgraded => 'Комната обновлена';
 
   @override
@@ -1106,9 +1017,6 @@ class L10nRu extends L10n {
 
   @override
   String get security => 'Безопасность';
-
-  @override
-  String get recoveryKey => 'Ключ восстановления';
 
   @override
   String get send => 'Прислать';
@@ -1193,9 +1101,6 @@ class L10nRu extends L10n {
   String get shareLocation => 'Поделиться местоположением';
 
   @override
-  String get showPassword => 'Показать пароль';
-
-  @override
   String get skip => 'Пропустить';
 
   @override
@@ -1239,17 +1144,11 @@ class L10nRu extends L10n {
   String get theyMatch => 'Они совпадают';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Слишком много запросов. Пожалуйста, повторите попытку позже!';
 
   @override
   String get tryToSendAgain => 'Попробуйте отправить ещё раз';
-
-  @override
-  String get unavailable => 'Недоступен';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1297,9 +1196,6 @@ class L10nRu extends L10n {
   }
 
   @override
-  String get username => 'Имя пользователя';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username отправил(а) событие типа \"$type\"';
   }
@@ -1309,9 +1205,6 @@ class L10nRu extends L10n {
 
   @override
   String get verified => 'Проверено';
-
-  @override
-  String get verify => 'Проверить';
 
   @override
   String get verifyStart => 'Начать проверку';
@@ -1394,9 +1287,6 @@ class L10nRu extends L10n {
   String get time => 'Время';
 
   @override
-  String get messageType => 'Тип сообщения';
-
-  @override
   String get sender => 'Отправитель';
 
   @override
@@ -1406,16 +1296,10 @@ class L10nRu extends L10n {
   String get removeFromSpace => 'Удалить из пространства';
 
   @override
-  String get start => 'Начать';
-
-  @override
   String get markAsRead => 'Отметить как прочитанное';
 
   @override
   String get reportUser => 'Сообщить о пользователе';
-
-  @override
-  String get dismiss => 'Отклонить';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1474,11 +1358,6 @@ class L10nRu extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Вы были приглашены $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Приглашен(а) $user';
   }
 
   @override
@@ -1556,13 +1435,7 @@ class L10nRu extends L10n {
       'Это может произойти, если сообщение было отправлено до того, как вы вошли в свою учетную запись на данном устройстве.\n\nТакже возможно, что отправитель заблокировал ваше устройство или что-то пошло не так с интернет-соединением.\n\nВы можете прочитать сообщение на другой сессии? Тогда вы можете перенести сообщение с неё! Перейдите в Настройки > Устройства и убедитесь, что ваши устройства проверили друг друга. Когда вы откроете комнату в следующий раз и обе сессии будут открыты, ключи будут переданы автоматически.\n\nВы не хотите потерять ключи при выходе из системы или переключении устройств? Убедитесь, что вы включили резервное копирование чата в настройках.';
 
   @override
-  String get newGroup => 'Новая группа';
-
-  @override
   String get newSpace => 'Новое пространство';
-
-  @override
-  String get allSpaces => 'Все пространства';
 
   @override
   String get doNotShowAgain => 'Не показывать снова';
@@ -1585,9 +1458,6 @@ class L10nRu extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Извините... это невозможно';
-
-  @override
-  String get deviceKeys => 'Ключи устройств:';
 
   @override
   String get reopenChat => 'Открыть чат заново';
@@ -1862,9 +1732,6 @@ class L10nRu extends L10n {
   }
 
   @override
-  String get transparent => 'Прозрачный';
-
-  @override
   String get incomingMessages => 'Входящие сообщения';
 
   @override
@@ -1892,12 +1759,6 @@ class L10nRu extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Сейчас $count пользователей заблокировано.';
   }
-
-  @override
-  String get restricted => 'Запрещено';
-
-  @override
-  String get knockRestricted => 'Стук запрещен';
 
   @override
   String goToSpace(Object space) {
@@ -1974,9 +1835,6 @@ class L10nRu extends L10n {
   String get sendingAttachment => 'Отправка вложения...';
 
   @override
-  String get compressVideo => 'Сжатие видео...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Одно из ваших устройств не подтверждено';
 
@@ -1986,10 +1844,6 @@ class L10nRu extends L10n {
 
   @override
   String get continueText => 'Продолжить';
-
-  @override
-  String get welcomeText =>
-      'Привет. Это FluffyChat. Вы можете подписаться на любой сервер, который совместим с https://matrix.org. А потом поболтать с кем нибудь. Это огромная децентрализованная сеть обмена сообщениями!';
 
   @override
   String get blur => 'Размытие:';
@@ -2356,14 +2210,6 @@ class L10nRu extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username начал опрос.';
-  }
-
-  @override
-  String get poll => 'Опрос';
-
-  @override
   String get startPoll => 'Начать опрос';
 
   @override
@@ -2598,15 +2444,12 @@ class L10nRu extends L10n {
 
   @override
   String get interactiveVerificationDescription =>
-      'If you are next to each other or communicate via a secure channel then you can verify all devices at once by comparing a security number or emojis.';
+      'Если вы находитесь рядом с собеседником, либо общаетесь с помощью другого надёжного канала связи, вы можете подтвердить ваши устройства, сравнив ключи шифрования или эмодзи.';
 
   @override
   String countUnverifiedDevices(int count) {
-    return '$count unverified devices in the chat.';
+    return 'В этом чате $count устройств не подтверждены.';
   }
-
-  @override
-  String get check => 'Проверить';
 
   @override
   String get encryptedMessage => 'Зашифрованное сообщение';
@@ -2615,15 +2458,12 @@ class L10nRu extends L10n {
   String get unencryptedMessage => 'Не зашифрованное сообщение';
 
   @override
-  String get allow => 'Разрешить';
-
-  @override
   String get messageCanOnlyBeReadByUser =>
       'Ваше сообщение зашифровано сквозным шифрованием и только этот пользователь может его прочитать:';
 
   @override
   String get messageCanOnlyBeReadByUsers =>
-      'Your message is end to end encrypted and can only be read by these users:';
+      'Ваши сообщения защищены сквозным шифрованием, и их могут прочесть только:';
 
   @override
   String publicKey(String key) {
@@ -2635,7 +2475,7 @@ class L10nRu extends L10n {
 
   @override
   String get restoreBootstrapEmptyDevicesDescription =>
-      'Please enter your passphrase or recovery key to verify this device and get access to your encrypted message backup.';
+      'Пожалуйста, введите код доступа или ключ восстановления, чтобы подтвердить устройство и получить доступ к зашифрованным сообщениям.';
 
   @override
   String get restoreBootstrapDevicesDescription =>
@@ -2645,13 +2485,13 @@ class L10nRu extends L10n {
   String get resetAccount => 'Сбросить аккаунт';
 
   @override
-  String get restoreCryptoIdentity => 'Restore Crypto Identity';
+  String get restoreCryptoIdentity => 'Восстановить крипто-идентичность';
 
   @override
-  String get resetCryptoIdentity => 'Reset Crypto Identity';
+  String get resetCryptoIdentity => 'Сбросить крипто-идентичность';
 
   @override
-  String get setUpCryptoIdentity => 'Set Up Crypto Identity';
+  String get setUpCryptoIdentity => 'Настроить крипто-идентичность';
 
   @override
   String get waitingForKeys =>
@@ -2673,7 +2513,7 @@ class L10nRu extends L10n {
 
   @override
   String get newPassphraseDescription =>
-      'FluffyChat uses end to end encryption. To not lose your messages, please choose a strong passphrase to secure your crypto identity and your encrypted message backup.';
+      'FluffyChat защищает ваши сообщения сквозным шифрованием. Чтобы не потерять ваши сообщения, пожалуйста, придумайте сильную кодовую фразу, чтобы защитить вашу крипто-идентичность и легко восстанавливать зашифрованные сообщения.';
 
   @override
   String get newPassphrase => 'Новая кодовая фраза';
@@ -2700,7 +2540,7 @@ class L10nRu extends L10n {
 
   @override
   String get storeRecoveryKeyDescription =>
-      'Please note down your recovery key to be able to restore your encrypted messages and your crypto identity on.';
+      'Имейте в виду, что ваш ключ восстановления позволяет полностью восстановить ваши зашифрованные сообщения и крипто-идентичность.';
 
   @override
   String get saveAsFile => 'Сохранить как файл';
@@ -2717,16 +2557,16 @@ class L10nRu extends L10n {
   }
 
   @override
-  String get unsignedDevice => 'Unsigned device';
+  String get unsignedDevice => 'Неподтверждённое устройство';
 
   @override
-  String get signedDevice => 'Signed device';
+  String get signedDevice => 'Подтверждённое устройство';
 
   @override
-  String get noCurve25519KeyFound => 'No curve25519 key found';
+  String get noCurve25519KeyFound => 'Ключ Curve25519 не найден';
 
   @override
-  String get messageNotDecryptable => 'Message not decryptable';
+  String get messageNotDecryptable => 'Не удалось расшифровать сообщение';
 
   @override
   String get today => 'Сегодня';
@@ -2751,4 +2591,48 @@ class L10nRu extends L10n {
 
   @override
   String get yesterday => 'Вчера';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

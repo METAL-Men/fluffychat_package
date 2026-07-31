@@ -15,9 +15,6 @@ class L10nUz extends L10n {
   String get notAnImage => 'Rasm fayli emas.';
 
   @override
-  String get ignoreUser => 'Foydalanuvchini e’tiborsiz qoldirish';
-
-  @override
   String get remove => 'O‘chirish';
 
   @override
@@ -83,9 +80,6 @@ class L10nUz extends L10n {
 
   @override
   String get all => 'Hammasi';
-
-  @override
-  String get allChats => 'Hamma suhbatlar';
 
   @override
   String get commandHint_roomupgrade =>
@@ -192,9 +186,6 @@ class L10nUz extends L10n {
   String get space => 'Boʻshliq';
 
   @override
-  String get spaces => 'Boʻshliqlar';
-
-  @override
   String get banFromChat => 'Suhbatdan taqiqlash';
 
   @override
@@ -233,18 +224,8 @@ class L10nUz extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username suhbat tavsifini \'$description\'ga oʻzgartirdi';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username chat nomini o‘zgartirdi';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username suhbat nomini: \'$chatname\'ga oʻzgartirdi';
   }
 
   @override
@@ -503,12 +484,6 @@ class L10nUz extends L10n {
   String get deleteMessage => 'Xabarni oʻchirish';
 
   @override
-  String get device => 'Qurilma';
-
-  @override
-  String get deviceId => 'Qurilma ID';
-
-  @override
   String get devices => 'Qurilmalar';
 
   @override
@@ -547,9 +522,6 @@ class L10nUz extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Yaqinda ishlatilgan emotsiyalar shu yerda chiqadi...';
-
-  @override
-  String get emotePacks => 'Guruh uchun Emote toʻplamlar';
 
   @override
   String get emoteSettings => 'Emote Sozlamalari';
@@ -608,18 +580,9 @@ class L10nUz extends L10n {
   String get enterAnEmailAddress => 'Email manzilini kiriting';
 
   @override
-  String get homeserver => 'Uy serveri';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Joylashuv axboroti olinmadi: $error';
   }
-
-  @override
-  String get fileName => 'Fayl nomi';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Shrift oʻlchami';
@@ -668,9 +631,6 @@ class L10nUz extends L10n {
   String get help => 'Yordam';
 
   @override
-  String get hideRedactedEvents => 'Tahrirlangan tadbirlarni yashirish';
-
-  @override
   String get hideRedactedMessages => 'Oʻchirilgan xabarlarni yashirish';
 
   @override
@@ -680,9 +640,6 @@ class L10nUz extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Notoʻgʻri yoki nomaʼlum xabar formatlarini yashirish';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Bloklash';
@@ -838,10 +795,6 @@ class L10nUz extends L10n {
   String get muteChat => 'Suhbatni ovozsizlantirish';
 
   @override
-  String get needPantalaimonWarning =>
-      'Iltimos, hozircha Pantalaimon boshdan-oyoq shifrlashdan foydalanishi kerakligini yodda tuting.';
-
-  @override
   String get newChat => 'Yangi suhbat';
 
   @override
@@ -882,9 +835,6 @@ class L10nUz extends L10n {
   String get scanQrCode => 'QR kodini skanerlang';
 
   @override
-  String get none => 'Hech biri';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Siz hali parolingizni tiklash usulini qoʻshmadingiz.';
 
@@ -906,13 +856,7 @@ class L10nUz extends L10n {
   String get obtainingLocation => 'Joylashuv aniqlanmoqda…';
 
   @override
-  String get offline => 'Oflayn';
-
-  @override
   String get ok => 'Hop';
-
-  @override
-  String get online => 'Onlayn';
 
   @override
   String get onlineKeyBackupEnabled => 'Onlayn kalit zaxira nusxasi yoqilgan';
@@ -955,10 +899,6 @@ class L10nUz extends L10n {
   String get link => 'Havola';
 
   @override
-  String get serverRequiresEmail =>
-      'Ushbu server roʻyxatdan oʻtish uchun elektron pochta manzilingizni tasdiqlashi kerak.';
-
-  @override
   String get or => 'Yoki';
 
   @override
@@ -983,15 +923,7 @@ class L10nUz extends L10n {
   String get passwordRecovery => 'Parolni qayta tiklash';
 
   @override
-  String get pickImage => 'Rasm tanlash';
-
-  @override
   String get pin => 'Toʻgʻnash';
-
-  @override
-  String play(String fileName) {
-    return '${fileName}ni oʻynash';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Iltimos, kirish kodini tanlang';
@@ -999,10 +931,6 @@ class L10nUz extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Iltimos, elektron pochtadagi havolani bosing va keyin davom eting.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Ilova qulfini oʻchirish uchun 4 ta raqamni kiriting yoki boʻsh qoldiring.';
 
   @override
   String get pleaseEnterYourPassword => 'Iltimos parolingizni kiriting';
@@ -1024,13 +952,7 @@ class L10nUz extends L10n {
   String get publicRooms => 'Ommaviy guruhlar';
 
   @override
-  String get pushRules => 'Push qoidalari';
-
-  @override
   String get reason => 'Sabab';
-
-  @override
-  String get recording => 'Yozilmoqda';
 
   @override
   String redactedBy(String username) {
@@ -1054,9 +976,6 @@ class L10nUz extends L10n {
   String get redactMessage => 'Xabarni tahrirlash';
 
   @override
-  String get register => 'Roʻyxatdan oʻtish';
-
-  @override
   String get reject => 'Rad qilish';
 
   @override
@@ -1066,11 +985,6 @@ class L10nUz extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Qolgan barcha qurilmalarni oʻchirish';
-
-  @override
-  String removedBy(String username) {
-    return '$username tomonidan oʻchirildi';
-  }
 
   @override
   String get unbanFromChat => 'Suhbat blokidan chiqazish';
@@ -1089,9 +1003,6 @@ class L10nUz extends L10n {
   String get reportMessage => 'Xabar berish';
 
   @override
-  String get requestPermission => 'Ruxsat soʻrash';
-
-  @override
   String get roomHasBeenUpgraded => 'Xona takomillashtirildi';
 
   @override
@@ -1105,9 +1016,6 @@ class L10nUz extends L10n {
 
   @override
   String get security => 'Xavfsizlik';
-
-  @override
-  String get recoveryKey => 'Tiklash kaliti';
 
   @override
   String get send => 'Yuborish';
@@ -1192,9 +1100,6 @@ class L10nUz extends L10n {
   String get shareLocation => 'Joylashuvni ulashish';
 
   @override
-  String get showPassword => 'Parolni ko‘rsatish';
-
-  @override
   String get skip => 'Tashlab ketish';
 
   @override
@@ -1238,17 +1143,11 @@ class L10nUz extends L10n {
   String get theyMatch => 'Mos keladi';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Talablar soni oshib ketdi. Keyinroq qayta urining!';
 
   @override
   String get tryToSendAgain => 'Qayta yuborishga urining';
-
-  @override
-  String get unavailable => 'Mavjud emas';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1296,9 +1195,6 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get username => 'Foydalanuvchi nomi';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username $type tadbirini yubordi';
   }
@@ -1308,9 +1204,6 @@ class L10nUz extends L10n {
 
   @override
   String get verified => 'Tasdiqlangan';
-
-  @override
-  String get verify => 'Tasdiqlash';
 
   @override
   String get verifyStart => 'Tasdiqlashni boshlash';
@@ -1393,9 +1286,6 @@ class L10nUz extends L10n {
   String get time => 'Vaqt';
 
   @override
-  String get messageType => 'Xabar turi';
-
-  @override
   String get sender => 'Yuboruvchi';
 
   @override
@@ -1405,16 +1295,10 @@ class L10nUz extends L10n {
   String get removeFromSpace => 'Guruhdan olib tashlash';
 
   @override
-  String get start => 'Boshlash';
-
-  @override
   String get markAsRead => 'Oʻqilgan sifatida belgilash';
 
   @override
   String get reportUser => 'Foydalanuvchi haqida xabar berish';
-
-  @override
-  String get dismiss => 'Rad qilmoq';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1474,11 +1358,6 @@ class L10nUz extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Sizni $user taklif qildi';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $user taklif qilgan';
   }
 
   @override
@@ -1558,13 +1437,7 @@ class L10nUz extends L10n {
       'Bu xabar siz ushbu qurilmada hisobingizga kirishdan oldin yuborilgan boʻlsa sodir boʻlishi mumkin.\n\nShuningdek, joʻnatuvchi qurilmangizni bloklagan yoki internet ulanishida biron bir muammo yuzaga kelgan boʻlishi mumkin.\n\nXabarni boshqa sessiyada oʻqiy olasizmi? Keyin xabarni undan uzatishingiz mumkin! Sozlamalar > Qurilmalar boʻlimiga oʻting va qurilmalaringiz bir-birini tasdiqlaganligiga ishonch hosil qiling. Keyingi safar xonani ochganingizda va ikkala sessiya ham oldinda boʻlganda, kalitlar avtomatik ravishda uzatiladi.\n\nTizimdan chiqishda yoki qurilmalarni almashtirishda kalitlarni yoʻqotishni xohlamaysizmi? Sozlamalarda suhbatning zaxira nusxasini yoqganingizga ishonch hosil qiling.';
 
   @override
-  String get newGroup => 'Yangi guruh';
-
-  @override
   String get newSpace => 'Yangi maydon';
-
-  @override
-  String get allSpaces => 'Barcha maydonlar';
 
   @override
   String get doNotShowAgain => 'Qaytib koʻrsatilmasin';
@@ -1587,9 +1460,6 @@ class L10nUz extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Kechirasiz... bu mumkin emas';
-
-  @override
-  String get deviceKeys => 'Qurilma kalitlari:';
 
   @override
   String get reopenChat => 'Suhbatni qayta ochish';
@@ -1867,9 +1737,6 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get transparent => 'Shaffof';
-
-  @override
   String get incomingMessages => 'Kiruvchi xabarlar';
 
   @override
@@ -1898,12 +1765,6 @@ class L10nUz extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Hozirda $count ta foydalanuvchi bloklangan.';
   }
-
-  @override
-  String get restricted => 'Cheklangan';
-
-  @override
-  String get knockRestricted => 'Taqillatish cheklangan';
 
   @override
   String goToSpace(Object space) {
@@ -1982,9 +1843,6 @@ class L10nUz extends L10n {
   String get sendingAttachment => 'Biriktirish yuborilmoqda...';
 
   @override
-  String get compressVideo => 'Video siqilmoqda...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Qurilmalaringizdan biri tasdiqlanmagan';
 
@@ -1994,10 +1852,6 @@ class L10nUz extends L10n {
 
   @override
   String get continueText => 'Davom etish';
-
-  @override
-  String get welcomeText =>
-      'Hey Hey 👋 Bu FluffyChat. Siz https://matrix.org bilan mos keladigan istalgan uy serveriga kirishingiz mumkin. Va keyin istalgan kishi bilan suhbatlashishingiz mumkin. Bu ulkan markazlashtirilmagan xabar almashish tarmog\'i!';
 
   @override
   String get blur => 'Xiralashtirish:';
@@ -2368,14 +2222,6 @@ class L10nUz extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username so‘rovnoma boshladi.';
-  }
-
-  @override
-  String get poll => 'So‘rov';
-
-  @override
   String get startPoll => 'So‘rovni boshlash';
 
   @override
@@ -2619,16 +2465,10 @@ class L10nUz extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2763,4 +2603,48 @@ class L10nUz extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

@@ -15,9 +15,6 @@ class L10nUk extends L10n {
   String get notAnImage => 'Не файл зображення.';
 
   @override
-  String get ignoreUser => 'Ігнорувати користувача';
-
-  @override
   String get remove => 'Вилучити';
 
   @override
@@ -82,9 +79,6 @@ class L10nUk extends L10n {
 
   @override
   String get all => 'Усі';
-
-  @override
-  String get allChats => 'Усі бесіди';
 
   @override
   String get commandHint_roomupgrade =>
@@ -189,9 +183,6 @@ class L10nUk extends L10n {
   String get space => 'Простір';
 
   @override
-  String get spaces => 'Простори';
-
-  @override
   String get banFromChat => 'Заблокувати в бесіді';
 
   @override
@@ -230,18 +221,8 @@ class L10nUk extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username змінює опис бесіди на: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username змінює назву бесіди';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username змінює назву бесіди на: \'$chatname\'';
   }
 
   @override
@@ -501,12 +482,6 @@ class L10nUk extends L10n {
   String get deleteMessage => 'Видалити повідомлення';
 
   @override
-  String get device => 'Пристрій';
-
-  @override
-  String get deviceId => 'ID пристрою';
-
-  @override
   String get devices => 'Пристрої';
 
   @override
@@ -545,9 +520,6 @@ class L10nUk extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Тут з\'являться нещодавно використані смайлики...';
-
-  @override
-  String get emotePacks => 'Набори емодзі для кімнати';
 
   @override
   String get emoteSettings => 'Налаштування емодзі';
@@ -606,18 +578,9 @@ class L10nUk extends L10n {
   String get enterAnEmailAddress => 'Введіть адресу е-пошти';
 
   @override
-  String get homeserver => 'Домашній сервер';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Помилка під час отримання розташування: $error';
   }
-
-  @override
-  String get fileName => 'Назва файлу';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Розмір шрифту';
@@ -666,9 +629,6 @@ class L10nUk extends L10n {
   String get help => 'Довідка';
 
   @override
-  String get hideRedactedEvents => 'Сховати змінені події';
-
-  @override
   String get hideRedactedMessages => 'Сховати змінені повідомлення';
 
   @override
@@ -678,9 +638,6 @@ class L10nUk extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Сховати недійсні або невідомі формати повідомлень';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Заблокувати';
@@ -837,10 +794,6 @@ class L10nUk extends L10n {
   String get muteChat => 'Вимкнути сповіщення';
 
   @override
-  String get needPantalaimonWarning =>
-      'Майте на увазі, що на цей час вам потрібен Pantalaimon, щоб використовувати наскрізне шифрування.';
-
-  @override
   String get newChat => 'Нова бесіда';
 
   @override
@@ -881,9 +834,6 @@ class L10nUk extends L10n {
   String get scanQrCode => 'Сканувати QR-код';
 
   @override
-  String get none => 'Нічого';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Ви ще не додали спосіб відновлення пароля.';
 
@@ -905,13 +855,7 @@ class L10nUk extends L10n {
   String get obtainingLocation => 'Отримання розташування…';
 
   @override
-  String get offline => 'Офлайн';
-
-  @override
   String get ok => 'Гаразд';
-
-  @override
-  String get online => 'Онлайн';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -958,10 +902,6 @@ class L10nUk extends L10n {
   String get link => 'Посилання';
 
   @override
-  String get serverRequiresEmail =>
-      'Цей сервер потребує перевірки вашої адресу е-пошти для реєстрації.';
-
-  @override
   String get or => 'Або';
 
   @override
@@ -986,15 +926,7 @@ class L10nUk extends L10n {
   String get passwordRecovery => 'Відновлення пароля';
 
   @override
-  String get pickImage => 'Вибрати зображення';
-
-  @override
   String get pin => 'Закріпити';
-
-  @override
-  String play(String fileName) {
-    return 'Відтворити $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Виберіть код доступу';
@@ -1002,10 +934,6 @@ class L10nUk extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Натисніть на посилання в електронному листі, а потім продовжуйте.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Введіть 4 цифри або залиште порожнім, щоб вимкнути блокування застосунку.';
 
   @override
   String get pleaseEnterYourPassword => 'Введіть свій пароль';
@@ -1027,13 +955,7 @@ class L10nUk extends L10n {
   String get publicRooms => 'Загальнодоступні кімнати';
 
   @override
-  String get pushRules => 'Правила сповіщень';
-
-  @override
   String get reason => 'Причина';
-
-  @override
-  String get recording => 'Запис';
 
   @override
   String redactedBy(String username) {
@@ -1057,9 +979,6 @@ class L10nUk extends L10n {
   String get redactMessage => 'Редагувати повідомлення';
 
   @override
-  String get register => 'Зареєструватися';
-
-  @override
   String get reject => 'Відхилити';
 
   @override
@@ -1069,11 +988,6 @@ class L10nUk extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Вилучити всі інші пристрої';
-
-  @override
-  String removedBy(String username) {
-    return 'Вилучено користувачем $username';
-  }
 
   @override
   String get unbanFromChat => 'Розблокувати у бесіді';
@@ -1091,9 +1005,6 @@ class L10nUk extends L10n {
   String get reportMessage => 'Поскаржитися на повідомлення';
 
   @override
-  String get requestPermission => 'Запит дозволу';
-
-  @override
   String get roomHasBeenUpgraded => 'Кімнату було оновлено';
 
   @override
@@ -1107,9 +1018,6 @@ class L10nUk extends L10n {
 
   @override
   String get security => 'Безпека';
-
-  @override
-  String get recoveryKey => 'Ключ відновлення';
 
   @override
   String get send => 'Надіслати';
@@ -1194,9 +1102,6 @@ class L10nUk extends L10n {
   String get shareLocation => 'Поділитися місцеперебуванням';
 
   @override
-  String get showPassword => 'Показати пароль';
-
-  @override
   String get skip => 'Пропустити';
 
   @override
@@ -1240,16 +1145,10 @@ class L10nUk extends L10n {
   String get theyMatch => 'Вони збігаються';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning => 'Забагато запитів. Спробуйте пізніше!';
 
   @override
   String get tryToSendAgain => 'Спробуйте надіслати ще раз';
-
-  @override
-  String get unavailable => 'Недоступний';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1297,9 +1196,6 @@ class L10nUk extends L10n {
   }
 
   @override
-  String get username => 'Ім\'я користувача';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username надсилає подію $type';
   }
@@ -1309,9 +1205,6 @@ class L10nUk extends L10n {
 
   @override
   String get verified => 'Перевірений';
-
-  @override
-  String get verify => 'Перевірити';
 
   @override
   String get verifyStart => 'Почати перевірку';
@@ -1394,9 +1287,6 @@ class L10nUk extends L10n {
   String get time => 'Час';
 
   @override
-  String get messageType => 'Тип повідомлення';
-
-  @override
   String get sender => 'Відправник';
 
   @override
@@ -1406,16 +1296,10 @@ class L10nUk extends L10n {
   String get removeFromSpace => 'Вилучити з простору';
 
   @override
-  String get start => 'Почати';
-
-  @override
   String get markAsRead => 'Позначити прочитаним';
 
   @override
   String get reportUser => 'Поскаржився на користувача';
-
-  @override
-  String get dismiss => 'Відхилити';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1474,11 +1358,6 @@ class L10nUk extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Ви були запрошені $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Запрошений $user';
   }
 
   @override
@@ -1556,13 +1435,7 @@ class L10nUk extends L10n {
       'Це може статися, якщо повідомлення було надіслано до того, як ви ввійшли у свій обліковий запис на цьому пристрої.\n\nТакож можливо, що відправник заблокував ваш пристрій або щось пішло не так з під\'єднанням до інтернету.\n\nЧи можете ви прочитати повідомлення на іншому сеансі? Тоді ви зможете перенести повідомлення з нього! Перейдіть до Налаштування > Пристрої та переконайтеся, що ваші пристрої перевірили один одного. Коли ви відкриєте кімнату наступного разу й обидва сеанси будуть на активні, ключі будуть передані автоматично.\n\nВи ж не хочете втрачати ключі після виходу або зміни пристроїв? Переконайтеся, що ви ввімкнули резервне копіювання бесід у налаштуваннях.';
 
   @override
-  String get newGroup => 'Нова група';
-
-  @override
   String get newSpace => 'Новий простір';
-
-  @override
-  String get allSpaces => 'Усі простори';
 
   @override
   String get doNotShowAgain => 'Не показувати знову';
@@ -1585,9 +1458,6 @@ class L10nUk extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Вибачте... це неможливо';
-
-  @override
-  String get deviceKeys => 'Ключі пристрою:';
 
   @override
   String get reopenChat => 'Відновити бесіду';
@@ -1861,9 +1731,6 @@ class L10nUk extends L10n {
   }
 
   @override
-  String get transparent => 'Прозорий';
-
-  @override
   String get incomingMessages => 'Вхідні повідомлення';
 
   @override
@@ -1891,12 +1758,6 @@ class L10nUk extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Наразі заблоковано $count користувачів.';
   }
-
-  @override
-  String get restricted => 'Обмежено';
-
-  @override
-  String get knockRestricted => 'Стук обмежено';
 
   @override
   String goToSpace(Object space) {
@@ -1973,9 +1834,6 @@ class L10nUk extends L10n {
   String get sendingAttachment => 'Надсилання вкладення...';
 
   @override
-  String get compressVideo => 'Стиснення відео...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Один із ваших пристроїв не верифікований';
 
@@ -1985,10 +1843,6 @@ class L10nUk extends L10n {
 
   @override
   String get continueText => 'Продовжити';
-
-  @override
-  String get welcomeText =>
-      'Привіт-привіт 👋 Це FluffyChat. Ви можете увійти на будь-який сервер, сумісний із https://matrix.org. А потім спілкуватися з будь-ким. Це величезна децентралізована мережа для обміну повідомленнями!';
 
   @override
   String get blur => 'Розмиття:';
@@ -2355,14 +2209,6 @@ class L10nUk extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return 'Нове опитування від $username.';
-  }
-
-  @override
-  String get poll => 'Опитування';
-
-  @override
   String get startPoll => 'Розпочати опитування';
 
   @override
@@ -2606,16 +2452,10 @@ class L10nUk extends L10n {
   }
 
   @override
-  String get check => 'Перевірити';
-
-  @override
   String get encryptedMessage => 'Зашифроване повідомлення';
 
   @override
   String get unencryptedMessage => 'Незашифроване повідомлення';
-
-  @override
-  String get allow => 'Дозволити';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2750,4 +2590,48 @@ class L10nUk extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

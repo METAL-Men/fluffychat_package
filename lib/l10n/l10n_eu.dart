@@ -15,9 +15,6 @@ class L10nEu extends L10n {
   String get notAnImage => 'Ez da irudi-fitxategia.';
 
   @override
-  String get ignoreUser => 'Egin muzin erabiltzaileari';
-
-  @override
   String get remove => 'Kendu';
 
   @override
@@ -82,9 +79,6 @@ class L10nEu extends L10n {
 
   @override
   String get all => 'Guztia';
-
-  @override
-  String get allChats => 'Txat guztiak';
 
   @override
   String get commandHint_roomupgrade =>
@@ -191,9 +185,6 @@ class L10nEu extends L10n {
   String get space => 'Gunea';
 
   @override
-  String get spaces => 'Guneak';
-
-  @override
   String get banFromChat => 'Txatera batzeko debekua ezarri';
 
   @override
@@ -232,18 +223,8 @@ class L10nEu extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username(e)k txataren deskribapena aldatu du: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username(e)k txataren izena aldatu du';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username(e)k txataren izena \'$chatname\'(e)ra aldatu du';
   }
 
   @override
@@ -501,12 +482,6 @@ class L10nEu extends L10n {
   String get deleteMessage => 'Mezuak ezabatu';
 
   @override
-  String get device => 'Gailua';
-
-  @override
-  String get deviceId => 'Gailuaren IDa';
-
-  @override
   String get devices => 'Gailuak';
 
   @override
@@ -545,9 +520,6 @@ class L10nEu extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Oraintsu erabilitako emoteak hemen ageriko dira…';
-
-  @override
-  String get emotePacks => 'Gelarako emote-sortak';
 
   @override
   String get emoteSettings => 'Emote-ezarpenak';
@@ -606,18 +578,9 @@ class L10nEu extends L10n {
   String get enterAnEmailAddress => 'Sartu helbide elektroniko bat';
 
   @override
-  String get homeserver => 'Zerbitzaria';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Errorea kokapena lortzerakoan: $error';
   }
-
-  @override
-  String get fileName => 'Fitxategiaren izena';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Letraren tamaina';
@@ -666,9 +629,6 @@ class L10nEu extends L10n {
   String get help => 'Laguntza';
 
   @override
-  String get hideRedactedEvents => 'Ezkutatu atzera botatako gertaerak';
-
-  @override
   String get hideRedactedMessages => 'Ezkutatu atzera botatako mezuak';
 
   @override
@@ -678,9 +638,6 @@ class L10nEu extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Ezkutatu mezuen formatu ezezagun edo baliogabea';
-
-  @override
-  String get id => 'IDa';
 
   @override
   String get block => 'Blokeatu';
@@ -838,10 +795,6 @@ class L10nEu extends L10n {
   String get muteChat => 'Mututu txata';
 
   @override
-  String get needPantalaimonWarning =>
-      'Kontuan izan oraingoz Pantalaimon behar duzula ertzetik ertzerako zifratzerako.';
-
-  @override
   String get newChat => 'Txat berria';
 
   @override
@@ -882,9 +835,6 @@ class L10nEu extends L10n {
   String get scanQrCode => 'Eskaneatu QR kodea';
 
   @override
-  String get none => 'Bat ere ez';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Oraindik ez duzu pasahitza berreskuratzeko modurik gehitu.';
 
@@ -906,13 +856,7 @@ class L10nEu extends L10n {
   String get obtainingLocation => 'Kokapena atzitzen…';
 
   @override
-  String get offline => 'Lineaz kanpo';
-
-  @override
   String get ok => 'Ados';
-
-  @override
-  String get online => 'Linean';
 
   @override
   String get onlineKeyBackupEnabled => 'Gakoen online babeskopia gaituta dago';
@@ -955,10 +899,6 @@ class L10nEu extends L10n {
   String get link => 'Esteka';
 
   @override
-  String get serverRequiresEmail =>
-      'Zerbitzari honek zure posta elektronikoa egiaztatu behar du izena eman dezazun.';
-
-  @override
   String get or => 'Edo';
 
   @override
@@ -983,15 +923,7 @@ class L10nEu extends L10n {
   String get passwordRecovery => 'Pasahitzaren berreskurapena';
 
   @override
-  String get pickImage => 'Aukeratu irudi bat';
-
-  @override
   String get pin => 'Finkatu';
-
-  @override
-  String play(String fileName) {
-    return 'Abiarazi $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Aukeratu sartzeko kode bat';
@@ -999,10 +931,6 @@ class L10nEu extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Sakatu ePostako estekan eta ondoren jarraitu.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Sartu lau zenbaki edo utzi hutsik aplikazioa babestu nahi ez baduzu.';
 
   @override
   String get pleaseEnterYourPassword => 'Sartu zure pasahitza';
@@ -1024,13 +952,7 @@ class L10nEu extends L10n {
   String get publicRooms => 'Gela publikoak';
 
   @override
-  String get pushRules => 'Push arauak';
-
-  @override
   String get reason => 'Arrazoia';
-
-  @override
-  String get recording => 'Grabatzen';
 
   @override
   String redactedBy(String username) {
@@ -1054,9 +976,6 @@ class L10nEu extends L10n {
   String get redactMessage => 'Bota mezua atzera';
 
   @override
-  String get register => 'Eman izena';
-
-  @override
   String get reject => 'Baztertu';
 
   @override
@@ -1066,11 +985,6 @@ class L10nEu extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Kendu gainerako gailu guztiak';
-
-  @override
-  String removedBy(String username) {
-    return '$username(e)k kendu du';
-  }
 
   @override
   String get unbanFromChat => 'Kendu txatean duen debekua';
@@ -1089,9 +1003,6 @@ class L10nEu extends L10n {
   String get reportMessage => 'Salatu mezua';
 
   @override
-  String get requestPermission => 'Eskatu baimena';
-
-  @override
   String get roomHasBeenUpgraded => 'Gela bertsio-berritu da';
 
   @override
@@ -1105,9 +1016,6 @@ class L10nEu extends L10n {
 
   @override
   String get security => 'Segurtasuna';
-
-  @override
-  String get recoveryKey => 'Berreskuratze-gakoa';
 
   @override
   String get send => 'Bidali';
@@ -1192,9 +1100,6 @@ class L10nEu extends L10n {
   String get shareLocation => 'Partekatu kokapena';
 
   @override
-  String get showPassword => 'Erakutsi pasahitza';
-
-  @override
   String get skip => 'Saltatu';
 
   @override
@@ -1238,17 +1143,11 @@ class L10nEu extends L10n {
   String get theyMatch => 'Bat datoz';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Eskaera gehiegi. Saiatu berriro geroago!';
 
   @override
   String get tryToSendAgain => 'Saiatu berriro bidaltzen';
-
-  @override
-  String get unavailable => 'Ez dago eskuragai';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1296,9 +1195,6 @@ class L10nEu extends L10n {
   }
 
   @override
-  String get username => 'Erabiltzaile-izena';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username(e)k $type gertaera bat bidali du';
   }
@@ -1308,9 +1204,6 @@ class L10nEu extends L10n {
 
   @override
   String get verified => 'Egiaztatuta';
-
-  @override
-  String get verify => 'Egiaztatu';
 
   @override
   String get verifyStart => 'Abiarazi egiaztaketa';
@@ -1391,9 +1284,6 @@ class L10nEu extends L10n {
   String get time => 'Ordua';
 
   @override
-  String get messageType => 'Mezu mota';
-
-  @override
   String get sender => 'Igorlea';
 
   @override
@@ -1403,16 +1293,10 @@ class L10nEu extends L10n {
   String get removeFromSpace => 'Kendu gunetik';
 
   @override
-  String get start => 'Hasi';
-
-  @override
   String get markAsRead => 'Markatu irakurritzat';
 
   @override
   String get reportUser => 'Salatu erabiltzailea';
-
-  @override
-  String get dismiss => 'Baztertu';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1471,11 +1355,6 @@ class L10nEu extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user(e)k gonbidatu zaitu';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $user(e)k gonbidatua';
   }
 
   @override
@@ -1554,13 +1433,7 @@ class L10nEu extends L10n {
       'Mezua gailu honetan saioa hasi baino lehen bidali bazen gertatu daiteke.\n\nBeste aukera bat igorleak zure gailua blokeatu izana da, edo zerbaitek huts egin izana interneteko konexioan.\n\nMezua beste saio batean irakur dezakezu? Hala bada, mezua transferitu dezakezu! Zoaz Ezrpenetara > Gailuak eta baieztatu zure gailuek bata bestea egiaztatu dutela. Gela irekiko duzun hurrengo aldian eta bi saioak aurreko planoan irekita daudenean, gakoak automatikoki partekatuko dira.\n\nEz duzu gakorik galdu nahi saioa amaitu edo gailuak aldatzen dituzunean? Baieztatu ezarpenetan txaten babeskopiak gaituta dituzula.';
 
   @override
-  String get newGroup => 'Talde berria';
-
-  @override
   String get newSpace => 'Gune berria';
-
-  @override
-  String get allSpaces => 'Gune guztiak';
 
   @override
   String get doNotShowAgain => 'Ez erakutsi berriro';
@@ -1583,9 +1456,6 @@ class L10nEu extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Barka… hori ez da posible';
-
-  @override
-  String get deviceKeys => 'Gailuaren gakoak:';
 
   @override
   String get reopenChat => 'Ireki txata berriro';
@@ -1860,9 +1730,6 @@ class L10nEu extends L10n {
   }
 
   @override
-  String get transparent => 'Gardena';
-
-  @override
   String get incomingMessages => 'Jasotako mezuak';
 
   @override
@@ -1890,12 +1757,6 @@ class L10nEu extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Une honetan $count erabiltzaile daude blokeatuta.';
   }
-
-  @override
-  String get restricted => 'Mugatuta';
-
-  @override
-  String get knockRestricted => 'Eskatu baimena sarrera mugatua duen txatean';
 
   @override
   String goToSpace(Object space) {
@@ -1972,9 +1833,6 @@ class L10nEu extends L10n {
   String get sendingAttachment => 'Eranskina bidaltzen…';
 
   @override
-  String get compressVideo => 'Bideoa konprimatzen…';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Zure gailuetako bat ez dago egiaztatuta';
 
@@ -1984,10 +1842,6 @@ class L10nEu extends L10n {
 
   @override
   String get continueText => 'Jarraitu';
-
-  @override
-  String get welcomeText =>
-      'Ieup 👋 Ongi etorri FluffyChat-era. https://matrix.org-rekin bateragarria den edozein zerbitzaritan hasi dezakezu saioa eta edonorekin txateatu. Mezularitza-sare deszentralizatu eraraldoia da!';
 
   @override
   String get blur => 'Lausotu:';
@@ -2356,14 +2210,6 @@ class L10nEu extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username(e)k bozketa hasi du.';
-  }
-
-  @override
-  String get poll => 'Bozketa';
-
-  @override
   String get startPoll => 'Hasi bozketa';
 
   @override
@@ -2606,16 +2452,10 @@ class L10nEu extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Zifratutako mezua';
 
   @override
   String get unencryptedMessage => 'Zifratu gabeko mezua';
-
-  @override
-  String get allow => 'Baimendu';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2654,17 +2494,16 @@ class L10nEu extends L10n {
   String get setUpCryptoIdentity => 'Set Up Crypto Identity';
 
   @override
-  String get waitingForKeys =>
-      'Waiting for keys... Please keep the other device active.';
+  String get waitingForKeys => 'Gakoen zain… Mantendu aktibo beste gailua.';
 
   @override
-  String get noKeysTransmitted => 'No keys transmitted. Please try again.';
+  String get noKeysTransmitted => 'Ez da gakorik igorri. Saiatu berriro.';
 
   @override
   String get unlock => 'Unlock';
 
   @override
-  String get openFile => 'Open file';
+  String get openFile => 'Ireki fitxategia';
 
   @override
   String get resetAccountWarning =>
@@ -2684,18 +2523,19 @@ class L10nEu extends L10n {
   String get passphrasesMatch => 'Passphrases match';
 
   @override
-  String get passphraseLengthRequirement => 'At least 12 characters long.';
+  String get passphraseLengthRequirement =>
+      'Gutxienez 12 karaktere behar ditu.';
 
   @override
   String get passphraseUpperAndLowerCaseRequirement =>
-      'Contains uppercase and lowercase characters.';
+      'Karaktere larriak eta xeheak ditu.';
 
   @override
   String get passphraseSpecialCharactersRequirement =>
-      'Contains special characters.';
+      'Karaktere bereziak dauzka.';
 
   @override
-  String get passphraseNumberRequirement => 'Contains one numbers.';
+  String get passphraseNumberRequirement => 'Zenbaki bat dauka.';
 
   @override
   String get storeRecoveryKeyDescription =>
@@ -2750,4 +2590,48 @@ class L10nEu extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

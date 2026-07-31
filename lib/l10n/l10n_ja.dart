@@ -15,9 +15,6 @@ class L10nJa extends L10n {
   String get notAnImage => '画像ファイルではありません。';
 
   @override
-  String get ignoreUser => 'ユーザーを無視する';
-
-  @override
   String get remove => '消去';
 
   @override
@@ -81,9 +78,6 @@ class L10nJa extends L10n {
 
   @override
   String get all => 'すべて';
-
-  @override
-  String get allChats => 'すべて会話';
 
   @override
   String get commandHint_roomupgrade => 'このルームを特定のルームバージョンにアップグレード';
@@ -183,9 +177,6 @@ class L10nJa extends L10n {
   String get space => 'スペース';
 
   @override
-  String get spaces => 'スペース';
-
-  @override
   String get banFromChat => 'チャットからBANする';
 
   @override
@@ -224,18 +215,8 @@ class L10nJa extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$usernameがチャットの説明を「$description」に変更した';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$usernameがチャットの名前を変更した';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$usernameがチャットの名前を「$chatname」に変更した';
   }
 
   @override
@@ -486,12 +467,6 @@ class L10nJa extends L10n {
   String get deleteMessage => 'メッセージの削除';
 
   @override
-  String get device => 'デバイス';
-
-  @override
-  String get deviceId => 'デバイスID';
-
-  @override
   String get devices => 'デバイス';
 
   @override
@@ -529,9 +504,6 @@ class L10nJa extends L10n {
 
   @override
   String get emoteKeyboardNoRecents => '最近使われた絵文字がここに表示されます…';
-
-  @override
-  String get emotePacks => '部屋のEmoteパック';
 
   @override
   String get emoteSettings => 'Emote設定';
@@ -589,24 +561,15 @@ class L10nJa extends L10n {
   String get enterAnEmailAddress => 'メールアドレスを入力してください';
 
   @override
-  String get homeserver => 'ホームサーバー';
-
-  @override
   String errorObtainingLocation(String error) {
     return '位置情報の取得中にエラーが発生しました: $error';
   }
 
   @override
-  String get fileName => 'ファイル名';
-
-  @override
-  String get fluffychat => 'FluffyChat';
-
-  @override
   String get fontSize => 'フォントサイズ';
 
   @override
-  String get forward => '進む';
+  String get forward => '転送';
 
   @override
   String get fromJoining => '参加時点から閲覧可能';
@@ -649,9 +612,6 @@ class L10nJa extends L10n {
   String get help => 'ヘルプ';
 
   @override
-  String get hideRedactedEvents => '編集済みイベントを非表示にする';
-
-  @override
   String get hideRedactedMessages => '削除されたメッセージを隠す';
 
   @override
@@ -660,9 +620,6 @@ class L10nJa extends L10n {
 
   @override
   String get hideInvalidOrUnknownMessageFormats => '無効であるか不明なメッセージ形式を隠す';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'ブロック';
@@ -816,10 +773,6 @@ class L10nJa extends L10n {
   String get muteChat => 'チャットのミュート';
 
   @override
-  String get needPantalaimonWarning =>
-      '現時点では、エンドツーエンドの暗号化を使用するにはPantalaimonが必要であることに注意してください。';
-
-  @override
   String get newChat => '新規チャット';
 
   @override
@@ -859,9 +812,6 @@ class L10nJa extends L10n {
   String get scanQrCode => 'QRコードをスキャン';
 
   @override
-  String get none => 'なし';
-
-  @override
   String get noPasswordRecoveryDescription => 'パスワードを回復する方法をまだ追加していません。';
 
   @override
@@ -882,13 +832,7 @@ class L10nJa extends L10n {
   String get obtainingLocation => '位置情報を取得しています…';
 
   @override
-  String get offline => 'オフライン';
-
-  @override
   String get ok => 'OK';
-
-  @override
-  String get online => 'オンライン';
 
   @override
   String get onlineKeyBackupEnabled => 'オンライン鍵バックアップは使用されています';
@@ -930,9 +874,6 @@ class L10nJa extends L10n {
   String get link => 'リンク';
 
   @override
-  String get serverRequiresEmail => 'このサーバーは、登録のためにメールアドレスを検証する必要があります。';
-
-  @override
   String get or => 'または';
 
   @override
@@ -957,24 +898,13 @@ class L10nJa extends L10n {
   String get passwordRecovery => 'パスワードリカバリー';
 
   @override
-  String get pickImage => '画像を選択してください';
-
-  @override
   String get pin => 'ピン';
-
-  @override
-  String play(String fileName) {
-    return '$fileNameを再生する';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'パスコードを選んでください';
 
   @override
   String get pleaseClickOnLink => 'メールのリンクから進めてください。';
-
-  @override
-  String get pleaseEnter4Digits => 'アプリのロック用に4桁の数字を入力してください。空欄の場合は無効になります。';
 
   @override
   String get pleaseEnterYourPassword => 'パスワードを入力してください';
@@ -995,13 +925,7 @@ class L10nJa extends L10n {
   String get publicRooms => '公開された部屋';
 
   @override
-  String get pushRules => 'ルールを追加する';
-
-  @override
   String get reason => '理由';
-
-  @override
-  String get recording => '録音中';
 
   @override
   String redactedBy(String username) {
@@ -1022,10 +946,7 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get redactMessage => 'メッセージを書く';
-
-  @override
-  String get register => '登録';
+  String get redactMessage => 'メッセージを削除';
 
   @override
   String get reject => '拒否';
@@ -1037,11 +958,6 @@ class L10nJa extends L10n {
 
   @override
   String get removeAllOtherDevices => '他のデバイスをすべて削除';
-
-  @override
-  String removedBy(String username) {
-    return '$usernameによって削除されました';
-  }
 
   @override
   String get unbanFromChat => 'チャットからのブロックを解除する';
@@ -1059,9 +975,6 @@ class L10nJa extends L10n {
   String get reportMessage => 'メッセージを通報';
 
   @override
-  String get requestPermission => '権限を要求する';
-
-  @override
   String get roomHasBeenUpgraded => '部屋はアップグレードされました';
 
   @override
@@ -1075,9 +988,6 @@ class L10nJa extends L10n {
 
   @override
   String get security => 'セキュリティ';
-
-  @override
-  String get recoveryKey => 'リカバリーキー';
 
   @override
   String get send => '送信';
@@ -1162,9 +1072,6 @@ class L10nJa extends L10n {
   String get shareLocation => '位置情報の共有';
 
   @override
-  String get showPassword => 'パスワードを表示';
-
-  @override
   String get skip => 'スキップ';
 
   @override
@@ -1208,16 +1115,10 @@ class L10nJa extends L10n {
   String get theyMatch => '一致しています';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning => 'リクエストが多すぎます。また後で試してみてください！';
 
   @override
   String get tryToSendAgain => '送信し直してみる';
-
-  @override
-  String get unavailable => '不在';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1265,9 +1166,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get username => 'ユーザー名';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$usernameは$typeイベントを送信しました';
   }
@@ -1277,9 +1175,6 @@ class L10nJa extends L10n {
 
   @override
   String get verified => '検証済み';
-
-  @override
-  String get verify => '確認';
 
   @override
   String get verifyStart => '確認を始める';
@@ -1358,9 +1253,6 @@ class L10nJa extends L10n {
   String get time => '時間';
 
   @override
-  String get messageType => 'メッセージの種類';
-
-  @override
   String get sender => '送信者';
 
   @override
@@ -1370,16 +1262,10 @@ class L10nJa extends L10n {
   String get removeFromSpace => 'スペースから削除';
 
   @override
-  String get start => '開始';
-
-  @override
   String get markAsRead => '既読にする';
 
   @override
   String get reportUser => 'ユーザーを報告';
-
-  @override
-  String get dismiss => '棄却';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1437,11 +1323,6 @@ class L10nJa extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user から招待されました';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $userに招待されました';
   }
 
   @override
@@ -1518,13 +1399,7 @@ class L10nJa extends L10n {
       'This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.';
 
   @override
-  String get newGroup => '新しいグループ';
-
-  @override
   String get newSpace => '新しいスペース';
-
-  @override
-  String get allSpaces => 'すべてのスペース';
 
   @override
   String get doNotShowAgain => '今後表示しない';
@@ -1547,9 +1422,6 @@ class L10nJa extends L10n {
 
   @override
   String get sorryThatsNotPossible => '申し訳ありません...それは不可能です';
-
-  @override
-  String get deviceKeys => 'デバイスキー:';
 
   @override
   String get reopenChat => 'チャットを再開する';
@@ -1690,7 +1562,7 @@ class L10nJa extends L10n {
   String get leaveEmptyToClearStatus => 'Leave empty to clear your status.';
 
   @override
-  String get select => 'Select';
+  String get select => '選択';
 
   @override
   String get searchForUsers => '@ユーザー で検索…';
@@ -1818,9 +1690,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get transparent => 'Transparent';
-
-  @override
   String get incomingMessages => 'Incoming messages';
 
   @override
@@ -1848,12 +1717,6 @@ class L10nJa extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
-
-  @override
-  String get restricted => 'Restricted';
-
-  @override
-  String get knockRestricted => 'Knock restricted';
 
   @override
   String goToSpace(Object space) {
@@ -1930,9 +1793,6 @@ class L10nJa extends L10n {
   String get sendingAttachment => '添付ファイルを送信しています…';
 
   @override
-  String get compressVideo => 'ビデオを圧縮しています…';
-
-  @override
   String get oneOfYourDevicesIsNotVerified => 'いずれかのデバイスが認証されていません';
 
   @override
@@ -1941,10 +1801,6 @@ class L10nJa extends L10n {
 
   @override
   String get continueText => '続ける';
-
-  @override
-  String get welcomeText =>
-      'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!';
 
   @override
   String get blur => 'ぼかし：';
@@ -2305,14 +2161,6 @@ class L10nJa extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username started a poll.';
-  }
-
-  @override
-  String get poll => 'Poll';
-
-  @override
   String get startPoll => 'Start poll';
 
   @override
@@ -2352,7 +2200,7 @@ class L10nJa extends L10n {
       'Answers will be visible when poll has ended';
 
   @override
-  String get replyInThread => 'Reply in thread';
+  String get replyInThread => 'スレッドで返信';
 
   @override
   String countReplies(int count) {
@@ -2454,7 +2302,7 @@ class L10nJa extends L10n {
   String get theProcessWasCanceled => 'The process was canceled.';
 
   @override
-  String get join => 'Join';
+  String get join => '参加';
 
   @override
   String get searchOrEnterHomeserverAddress =>
@@ -2554,16 +2402,10 @@ class L10nJa extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2676,7 +2518,7 @@ class L10nJa extends L10n {
   String get messageNotDecryptable => 'Message not decryptable';
 
   @override
-  String get today => 'Today';
+  String get today => '今日';
 
   @override
   String get sending => 'Sending';
@@ -2697,5 +2539,49 @@ class L10nJa extends L10n {
   String get couldNotBeSent => 'Could not be sent';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => '昨日';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

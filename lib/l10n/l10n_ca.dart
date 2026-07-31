@@ -15,9 +15,6 @@ class L10nCa extends L10n {
   String get notAnImage => 'No és un arxiu d\'image.';
 
   @override
-  String get ignoreUser => 'Ignora l\'usuàriï';
-
-  @override
   String get remove => 'Elimina';
 
   @override
@@ -82,9 +79,6 @@ class L10nCa extends L10n {
 
   @override
   String get all => 'Tot';
-
-  @override
-  String get allChats => 'Tots els xats';
 
   @override
   String get commandHint_roomupgrade =>
@@ -190,9 +184,6 @@ class L10nCa extends L10n {
   String get space => 'Espai';
 
   @override
-  String get spaces => 'Espais';
-
-  @override
   String get banFromChat => 'Veta del xat';
 
   @override
@@ -231,18 +222,8 @@ class L10nCa extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username ha canviat la descripció del xat a: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username ha canviat el nom del xat';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username ha canviat el nom del xat a: \'$chatname\'';
   }
 
   @override
@@ -501,12 +482,6 @@ class L10nCa extends L10n {
   String get deleteMessage => 'Suprimeix el missatge';
 
   @override
-  String get device => 'Dispositiu';
-
-  @override
-  String get deviceId => 'Id. de dispositiu';
-
-  @override
   String get devices => 'Dispositius';
 
   @override
@@ -545,9 +520,6 @@ class L10nCa extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Els últims emotes usats apareixeran aquí...';
-
-  @override
-  String get emotePacks => 'Paquet d\'emoticones de la sala';
 
   @override
   String get emoteSettings => 'Paràmetres de les emoticones';
@@ -606,18 +578,9 @@ class L10nCa extends L10n {
   String get enterAnEmailAddress => 'Introduïu una adreça electrònica';
 
   @override
-  String get homeserver => 'Servidor';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'S’ha produït un error en obtenir la ubicació: $error';
   }
-
-  @override
-  String get fileName => 'Nom del fitxer';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Mida de la lletra';
@@ -667,9 +630,6 @@ class L10nCa extends L10n {
   String get help => 'Ajuda';
 
   @override
-  String get hideRedactedEvents => 'Amaga els esdeveniments estripats';
-
-  @override
   String get hideRedactedMessages => 'Amaga els missatges estripats';
 
   @override
@@ -679,9 +639,6 @@ class L10nCa extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Amaga els missatges que tinguin un format desconegut';
-
-  @override
-  String get id => 'Id.';
 
   @override
   String get block => 'Bloca';
@@ -838,10 +795,6 @@ class L10nCa extends L10n {
   String get muteChat => 'Silencia el xat';
 
   @override
-  String get needPantalaimonWarning =>
-      'Tingueu en compte que, ara per ara, us cal el Pantalaimon per a poder utilitzar el xifratge d’extrem a extrem.';
-
-  @override
   String get newChat => 'Xat nou';
 
   @override
@@ -882,9 +835,6 @@ class L10nCa extends L10n {
   String get scanQrCode => 'Escaneja un codi QR';
 
   @override
-  String get none => 'Cap';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Encara no heu afegit cap mètode per a poder recuperar la contrasenya.';
 
@@ -906,13 +856,7 @@ class L10nCa extends L10n {
   String get obtainingLocation => 'S’està obtenint la ubicació…';
 
   @override
-  String get offline => 'Fora de línia';
-
-  @override
   String get ok => 'D\'acord';
-
-  @override
-  String get online => 'En línia';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -958,10 +902,6 @@ class L10nCa extends L10n {
   String get link => 'Enllaç';
 
   @override
-  String get serverRequiresEmail =>
-      'Aquest servidor necessita validar la teva adreça per registrar-t\'hi.';
-
-  @override
   String get or => 'O';
 
   @override
@@ -986,15 +926,7 @@ class L10nCa extends L10n {
   String get passwordRecovery => 'Recuperació de contrassenya';
 
   @override
-  String get pickImage => 'Selecciona una imatge';
-
-  @override
   String get pin => 'Fixa';
-
-  @override
-  String play(String fileName) {
-    return 'Reproduir $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Tria un codi d\'accés';
@@ -1002,10 +934,6 @@ class L10nCa extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Fes clic a l\'enllaç del correu i, després, segueix.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Introdueix 4 dígits o deixa-ho buit per desactivar el bloqueig.';
 
   @override
   String get pleaseEnterYourPassword => 'Introdueix la teva contrasenya';
@@ -1027,13 +955,7 @@ class L10nCa extends L10n {
   String get publicRooms => 'Sales públiques';
 
   @override
-  String get pushRules => 'Regles push';
-
-  @override
   String get reason => 'Raó';
-
-  @override
-  String get recording => 'Enregistrant';
 
   @override
   String redactedBy(String username) {
@@ -1057,9 +979,6 @@ class L10nCa extends L10n {
   String get redactMessage => 'Estripa el missatge';
 
   @override
-  String get register => 'Registra\'t';
-
-  @override
   String get reject => 'Rebutja';
 
   @override
@@ -1069,11 +988,6 @@ class L10nCa extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Elimina tots els altres dispositius';
-
-  @override
-  String removedBy(String username) {
-    return 'Eliminat per $username';
-  }
 
   @override
   String get unbanFromChat => 'Aixeca el veto';
@@ -1092,9 +1006,6 @@ class L10nCa extends L10n {
   String get reportMessage => 'Denuncia el missatge';
 
   @override
-  String get requestPermission => 'Sol·licita permís';
-
-  @override
   String get roomHasBeenUpgraded => 'La sala s\'ha actualitzat';
 
   @override
@@ -1108,9 +1019,6 @@ class L10nCa extends L10n {
 
   @override
   String get security => 'Seguretat';
-
-  @override
-  String get recoveryKey => 'Clau de recuperació';
 
   @override
   String get send => 'Envia';
@@ -1195,9 +1103,6 @@ class L10nCa extends L10n {
   String get shareLocation => 'Comparteix la ubicació';
 
   @override
-  String get showPassword => 'Mostra la contrasenya';
-
-  @override
   String get skip => 'Omet';
 
   @override
@@ -1241,17 +1146,11 @@ class L10nCa extends L10n {
   String get theyMatch => 'Coincideixen';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Massa sol·licituds. Torna-ho a provar més tard!';
 
   @override
   String get tryToSendAgain => 'Intenta tornar a enviar';
-
-  @override
-  String get unavailable => 'No disponible';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1300,9 +1199,6 @@ class L10nCa extends L10n {
   }
 
   @override
-  String get username => 'Nom d’usuàriï';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username ha enviat un esdeveniment $type';
   }
@@ -1312,9 +1208,6 @@ class L10nCa extends L10n {
 
   @override
   String get verified => 'Verificat';
-
-  @override
-  String get verify => 'Verifica';
 
   @override
   String get verifyStart => 'Inicia la verificació';
@@ -1398,9 +1291,6 @@ class L10nCa extends L10n {
   String get time => 'Temps';
 
   @override
-  String get messageType => 'Tipus de missatge';
-
-  @override
   String get sender => 'Remitent';
 
   @override
@@ -1410,16 +1300,10 @@ class L10nCa extends L10n {
   String get removeFromSpace => 'Esborra de l\'espai';
 
   @override
-  String get start => 'Comença';
-
-  @override
   String get markAsRead => 'Marca com a llegit';
 
   @override
   String get reportUser => 'Denuncia l\'usuàrïi';
-
-  @override
-  String get dismiss => 'Ignora-ho';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1479,11 +1363,6 @@ class L10nCa extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user t\'ha convidat';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Convidadi per $user';
   }
 
   @override
@@ -1564,13 +1443,7 @@ class L10nCa extends L10n {
       'Això pot passar si el missatge es va enviar abans que haguessis iniciat sessió al teu compte des d\'aquest dispositiu.\n\nTambé pot ser que l\'emissor hagi bloquejat el teu dispositiu o que la connexió a internet anés malament.\n\nQue pots llegir el missatge des d\'una altra sessió? Si és així, llavors pots transferir-lo! Ves a Paràmetres → Dispositius i assegura\'t que els teus dispositius s\'ha verificat mútuament. Quan obris la sala la propera vegada i totes dues sessions estiguin executant-se, en primer pla, llavors les claus es trasnsmetran automàticament.\n\nVols evitar perdre les claus en tancar la sessió o en canviar de dispositiu? Llavors assegura\'t que has activat la còpia de seguretat del xat als paràmetres.';
 
   @override
-  String get newGroup => 'Grup nou';
-
-  @override
   String get newSpace => 'Espai nou';
-
-  @override
-  String get allSpaces => 'Tots els espais';
 
   @override
   String get doNotShowAgain => 'No ho tornis a mostrar';
@@ -1593,9 +1466,6 @@ class L10nCa extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Aquesta acció no és possible';
-
-  @override
-  String get deviceKeys => 'Claus del dispositiu:';
 
   @override
   String get reopenChat => 'Reobre el xat';
@@ -1871,9 +1741,6 @@ class L10nCa extends L10n {
   }
 
   @override
-  String get transparent => 'Transparent';
-
-  @override
   String get incomingMessages => 'Missatge d\'entrada';
 
   @override
@@ -1902,12 +1769,6 @@ class L10nCa extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Ara mateix hi ha $count usuàriïs bloquejadis.';
   }
-
-  @override
-  String get restricted => 'Restringit';
-
-  @override
-  String get knockRestricted => 'No es pot picar a la porta';
 
   @override
   String goToSpace(Object space) {
@@ -1984,9 +1845,6 @@ class L10nCa extends L10n {
   String get sendingAttachment => 'S\'està enviant l\'adjunt...';
 
   @override
-  String get compressVideo => 'S\'està comprimint el vídeo...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Un dels teus dispositius no està verificat';
 
@@ -1996,10 +1854,6 @@ class L10nCa extends L10n {
 
   @override
   String get continueText => 'Continua';
-
-  @override
-  String get welcomeText =>
-      'Hola hola! 👋 Això és FluffyChat. Pots iniciar sessió en qualsevol servidor compatible amb https://matrix.org. I llavors xatejar amb qualsevol. És una xarxa enorme de missatgeria descentralitzada !';
 
   @override
   String get blur => 'Difumina:';
@@ -2367,14 +2221,6 @@ class L10nCa extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username ha creat una enquesta.';
-  }
-
-  @override
-  String get poll => 'Enquesta';
-
-  @override
   String get startPoll => 'Comença una enquesta';
 
   @override
@@ -2617,16 +2463,10 @@ class L10nCa extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2761,4 +2601,48 @@ class L10nCa extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

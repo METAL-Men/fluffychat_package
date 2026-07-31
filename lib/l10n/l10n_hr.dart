@@ -15,9 +15,6 @@ class L10nHr extends L10n {
   String get notAnImage => 'Nije slikovna datoteka.';
 
   @override
-  String get ignoreUser => 'Zanemari korisnika';
-
-  @override
   String get remove => 'Ukloni';
 
   @override
@@ -82,9 +79,6 @@ class L10nHr extends L10n {
 
   @override
   String get all => 'Svi';
-
-  @override
-  String get allChats => 'Svi chatovi';
 
   @override
   String get commandHint_roomupgrade =>
@@ -189,9 +183,6 @@ class L10nHr extends L10n {
   String get space => 'Prostor';
 
   @override
-  String get spaces => 'Prostori';
-
-  @override
   String get banFromChat => 'Isključi iz chata';
 
   @override
@@ -230,18 +221,8 @@ class L10nHr extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username je promijenio/la opis chata u: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username je promijenio/la ime chata';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username je promijenio/la ime chata u: \'$chatname\'';
   }
 
   @override
@@ -498,12 +479,6 @@ class L10nHr extends L10n {
   String get deleteMessage => 'Izbriši poruku';
 
   @override
-  String get device => 'Uređaj';
-
-  @override
-  String get deviceId => 'ID oznaka uređaja';
-
-  @override
   String get devices => 'Uređaji';
 
   @override
@@ -542,9 +517,6 @@ class L10nHr extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Ovdje će se pojaviti nedavno korišteni emotikoni …';
-
-  @override
-  String get emotePacks => 'Paketi emotikona za sobu';
 
   @override
   String get emoteSettings => 'Postavke emotikona';
@@ -603,18 +575,9 @@ class L10nHr extends L10n {
   String get enterAnEmailAddress => 'Upiši e-mail adresu';
 
   @override
-  String get homeserver => 'Homeserver';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Greška u dohvaćanju lokacije: $error';
   }
-
-  @override
-  String get fileName => 'Ime datoteke';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Veličina fonta';
@@ -663,9 +626,6 @@ class L10nHr extends L10n {
   String get help => 'Pomoć';
 
   @override
-  String get hideRedactedEvents => 'Sakrij promijenjene događaje';
-
-  @override
   String get hideRedactedMessages => 'Sakrij redigirane poruke';
 
   @override
@@ -675,9 +635,6 @@ class L10nHr extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Sakrij nevažeće ili nepoznate formate poruka';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Blokiraj';
@@ -834,10 +791,6 @@ class L10nHr extends L10n {
   String get muteChat => 'Isključi zvuk chata';
 
   @override
-  String get needPantalaimonWarning =>
-      'Za trenutačno korištenje obostranog šifriranja trebaš Pantalaimon.';
-
-  @override
   String get newChat => 'Novi chat';
 
   @override
@@ -878,9 +831,6 @@ class L10nHr extends L10n {
   String get scanQrCode => 'Snimi QR kod';
 
   @override
-  String get none => 'Ništa';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Još nisi dodao/la način za obnavljanje lozinke.';
 
@@ -902,13 +852,7 @@ class L10nHr extends L10n {
   String get obtainingLocation => 'Dohvaćanje lokacije …';
 
   @override
-  String get offline => 'Nepovezano s internetom';
-
-  @override
   String get ok => 'U redu';
-
-  @override
-  String get online => 'Povezano s internetom';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -952,10 +896,6 @@ class L10nHr extends L10n {
   String get link => 'Poveznica';
 
   @override
-  String get serverRequiresEmail =>
-      'Za registraciju ovaj server mora potvrditi tvoju e-mail adresu.';
-
-  @override
   String get or => 'Ili';
 
   @override
@@ -980,15 +920,7 @@ class L10nHr extends L10n {
   String get passwordRecovery => 'Obnavljanje lozinke';
 
   @override
-  String get pickImage => 'Odaberi sliku';
-
-  @override
   String get pin => 'Prikvači';
-
-  @override
-  String play(String fileName) {
-    return 'Sviraj $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Odaberi lozinku';
@@ -996,10 +928,6 @@ class L10nHr extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Pritisni poveznicu u e-mailu i zatim nastavi.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Upiši 4 znamenke ili ostavi prazno, za deaktiviranje zaključavanja programa.';
 
   @override
   String get pleaseEnterYourPassword => 'Upiši svoju lozinku';
@@ -1021,13 +949,7 @@ class L10nHr extends L10n {
   String get publicRooms => 'Javne sobe';
 
   @override
-  String get pushRules => 'Pravila slanja';
-
-  @override
   String get reason => 'Razlog';
-
-  @override
-  String get recording => 'Snimanje';
 
   @override
   String redactedBy(String username) {
@@ -1051,9 +973,6 @@ class L10nHr extends L10n {
   String get redactMessage => 'Ispravi poruku';
 
   @override
-  String get register => 'Registracija';
-
-  @override
   String get reject => 'Odbij';
 
   @override
@@ -1063,11 +982,6 @@ class L10nHr extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Ukloni sve druge uređaje';
-
-  @override
-  String removedBy(String username) {
-    return 'Uklonjeno od $username';
-  }
 
   @override
   String get unbanFromChat => 'Ponovo uključi u chat';
@@ -1085,9 +999,6 @@ class L10nHr extends L10n {
   String get reportMessage => 'Prijavi poruku';
 
   @override
-  String get requestPermission => 'Zatraži dozvolu';
-
-  @override
   String get roomHasBeenUpgraded => 'Soba je nadograđena';
 
   @override
@@ -1101,9 +1012,6 @@ class L10nHr extends L10n {
 
   @override
   String get security => 'Sigurnost';
-
-  @override
-  String get recoveryKey => 'Ključ za obnavljanje';
 
   @override
   String get send => 'Pošalji';
@@ -1188,9 +1096,6 @@ class L10nHr extends L10n {
   String get shareLocation => 'Dijeli lokaciju';
 
   @override
-  String get showPassword => 'Pokaži lozinku';
-
-  @override
   String get skip => 'Preskoči';
 
   @override
@@ -1234,17 +1139,11 @@ class L10nHr extends L10n {
   String get theyMatch => 'Poklapaju se';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Previše zahtjeva. Pokušaj ponovo kasnije!';
 
   @override
   String get tryToSendAgain => 'Pokušaj ponovo poslati';
-
-  @override
-  String get unavailable => 'Nedostupno';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1292,9 +1191,6 @@ class L10nHr extends L10n {
   }
 
   @override
-  String get username => 'Korisničko ime';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username ja poslao/la $type događaj';
   }
@@ -1304,9 +1200,6 @@ class L10nHr extends L10n {
 
   @override
   String get verified => 'Potvrđeno';
-
-  @override
-  String get verify => 'Potvrdi';
 
   @override
   String get verifyStart => 'Pokreni potvrđivanje';
@@ -1389,9 +1282,6 @@ class L10nHr extends L10n {
   String get time => 'Vrijeme';
 
   @override
-  String get messageType => 'Vrsta poruke';
-
-  @override
   String get sender => 'Pošiljatelj';
 
   @override
@@ -1401,16 +1291,10 @@ class L10nHr extends L10n {
   String get removeFromSpace => 'Ukloni iz prostora';
 
   @override
-  String get start => 'Početak';
-
-  @override
   String get markAsRead => 'Označi kao pročitano';
 
   @override
   String get reportUser => 'Prijavi korisnika';
-
-  @override
-  String get dismiss => 'Odbaci';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1468,11 +1352,6 @@ class L10nHr extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user te je pozvao/la';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Pozvan/a si od korisnika $user';
   }
 
   @override
@@ -1551,13 +1430,7 @@ class L10nHr extends L10n {
       'To se može dogoditi ako je poruka poslana prije prijave na tvoj račun na ovom uređaju.\n\nTakođer je moguće da je pošiljatelj blokirao tvoj uređaj ili je došlo do greške s internetskom vezom.\n\nMožeš li pročitati poruku na jednoj drugoj sesiji? U tom slučaju možeš prenijeti poruku iz nje! Idi na Postavke > Uređaji i uvjeri se da su se tvoji uređaji međusobno potvrdili. Kada sljedeći put otvoriš sobu i obje sesije su u prednjem planu, ključevi će se automatski prenijeti.\n\nNe želiš izgubiti ključeve kada se odjaviš ili zamijeniš uređaje? Aktiviraj spremanje sigurnosne kopije chata u postavkama.';
 
   @override
-  String get newGroup => 'Nova grupa';
-
-  @override
   String get newSpace => 'Novi prostor';
-
-  @override
-  String get allSpaces => 'Svi prostori';
 
   @override
   String get doNotShowAgain => 'Nemoj više prikazivati';
@@ -1580,9 +1453,6 @@ class L10nHr extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Žao nam je … to nije moguće';
-
-  @override
-  String get deviceKeys => 'Ključevi uređaja:';
 
   @override
   String get reopenChat => 'Ponovo otvori chat';
@@ -1856,9 +1726,6 @@ class L10nHr extends L10n {
   }
 
   @override
-  String get transparent => 'Prozirno';
-
-  @override
   String get incomingMessages => 'Dolazne poruke';
 
   @override
@@ -1887,12 +1754,6 @@ class L10nHr extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Broj trenutačno blokiranih korisnika: $count.';
   }
-
-  @override
-  String get restricted => 'Ograničeni';
-
-  @override
-  String get knockRestricted => 'Pokucaj na ograničene sobe';
 
   @override
   String goToSpace(Object space) {
@@ -1969,9 +1830,6 @@ class L10nHr extends L10n {
   String get sendingAttachment => 'Slanje priloga …';
 
   @override
-  String get compressVideo => 'Komprimiranje videa …';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Jedan od tvojih uređaja nije potvrđen';
 
@@ -1981,10 +1839,6 @@ class L10nHr extends L10n {
 
   @override
   String get continueText => 'Nastavi';
-
-  @override
-  String get welcomeText =>
-      'Hej, hej 👋, ovdje FluffyChat. Možeš se prijaviti na bilo koji homeserver koji je kompatibilan s https://matrix.org. I onda razgovaraj s bilo kim. To je ogromna decentralizirana mreža za razmjenu poruka!';
 
   @override
   String get blur => 'Zamućenost:';
@@ -2354,14 +2208,6 @@ class L10nHr extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username je pokrenuo/la anketu.';
-  }
-
-  @override
-  String get poll => 'Anketa';
-
-  @override
   String get startPoll => 'Početak ankete';
 
   @override
@@ -2607,16 +2453,10 @@ class L10nHr extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2751,4 +2591,48 @@ class L10nHr extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

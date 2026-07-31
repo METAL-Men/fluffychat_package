@@ -15,16 +15,13 @@ class L10nFr extends L10n {
   String get notAnImage => 'Pas un fichier image.';
 
   @override
-  String get ignoreUser => 'Ignorer l\'utilisateur';
-
-  @override
   String get remove => 'Supprimer';
 
   @override
   String get importNow => 'Importer maintenant';
 
   @override
-  String get importEmojis => 'Importer des Emojis';
+  String get importEmojis => 'Importer des Émoticônes';
 
   @override
   String get importFromZipFile => 'Importer depuis un fichier .zip';
@@ -82,9 +79,6 @@ class L10nFr extends L10n {
 
   @override
   String get all => 'Tout';
-
-  @override
-  String get allChats => 'Toutes les discussions';
 
   @override
   String get commandHint_roomupgrade =>
@@ -191,9 +185,6 @@ class L10nFr extends L10n {
   String get space => 'Espace';
 
   @override
-  String get spaces => 'Espaces';
-
-  @override
   String get banFromChat => 'Bannir de la discussion';
 
   @override
@@ -232,18 +223,8 @@ class L10nFr extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username a changé la description de la discussion en : \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username a changé le nom de la discussion';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username a renommé la discussion en : \'$chatname\'';
   }
 
   @override
@@ -505,12 +486,6 @@ class L10nFr extends L10n {
   String get deleteMessage => 'Supprimer le message';
 
   @override
-  String get device => 'Appareil';
-
-  @override
-  String get deviceId => 'Identifiant de l\'appareil';
-
-  @override
   String get devices => 'Appareils';
 
   @override
@@ -549,9 +524,6 @@ class L10nFr extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Les émoticônes récemment utilisées apparaîtront ici...';
-
-  @override
-  String get emotePacks => 'Packs d\'émoticônes pour le salon';
 
   @override
   String get emoteSettings => 'Paramètre des émoticônes';
@@ -612,18 +584,9 @@ class L10nFr extends L10n {
   String get enterAnEmailAddress => 'Saisissez une adresse de courriel';
 
   @override
-  String get homeserver => 'Serveur d\'accueil';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Erreur lors de l\'obtention de la localisation : $error';
   }
-
-  @override
-  String get fileName => 'Nom du ficher';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Taille de la police';
@@ -673,9 +636,6 @@ class L10nFr extends L10n {
   String get help => 'Aide';
 
   @override
-  String get hideRedactedEvents => 'Cacher les évènements supprimés';
-
-  @override
   String get hideRedactedMessages => 'Cacher les messages supprimés';
 
   @override
@@ -685,9 +645,6 @@ class L10nFr extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Masquer les formats de message invalides ou inconnus';
-
-  @override
-  String get id => 'Identifiant';
 
   @override
   String get block => 'Bloquer';
@@ -845,10 +802,6 @@ class L10nFr extends L10n {
   String get muteChat => 'Mettre la discussion en sourdine';
 
   @override
-  String get needPantalaimonWarning =>
-      'Pour l\'instant, vous avez besoin de Pantalaimon pour utiliser le chiffrement de bout en bout.';
-
-  @override
   String get newChat => 'Nouvelle discussion';
 
   @override
@@ -889,9 +842,6 @@ class L10nFr extends L10n {
   String get scanQrCode => 'Scanner un code QR';
 
   @override
-  String get none => 'Aucun';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Vous n\'avez pas encore ajouté de moyen pour récupérer votre mot de passe.';
 
@@ -913,13 +863,7 @@ class L10nFr extends L10n {
   String get obtainingLocation => 'Obtention de la localisation…';
 
   @override
-  String get offline => 'Hors ligne';
-
-  @override
   String get ok => 'Valider';
-
-  @override
-  String get online => 'En ligne';
 
   @override
   String get onlineKeyBackupEnabled =>
@@ -964,10 +908,6 @@ class L10nFr extends L10n {
   String get link => 'Lien';
 
   @override
-  String get serverRequiresEmail =>
-      'Ce serveur doit valider votre adresse électronique pour l\'inscription.';
-
-  @override
   String get or => 'Ou';
 
   @override
@@ -993,15 +933,7 @@ class L10nFr extends L10n {
   String get passwordRecovery => 'Récupération du mot de passe';
 
   @override
-  String get pickImage => 'Choisir une image';
-
-  @override
   String get pin => 'Épingler';
-
-  @override
-  String play(String fileName) {
-    return 'Lire $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Veuillez choisir un code d’accès';
@@ -1009,10 +941,6 @@ class L10nFr extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Veuillez cliquer sur le lien contenu dans le courriel puis continuez.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Veuillez saisir 4 chiffres ou laisser vide pour désactiver le verrouillage de l’application.';
 
   @override
   String get pleaseEnterYourPassword => 'Renseignez votre mot de passe';
@@ -1035,13 +963,7 @@ class L10nFr extends L10n {
   String get publicRooms => 'Salons publics';
 
   @override
-  String get pushRules => 'Règles de notifications';
-
-  @override
   String get reason => 'Motif';
-
-  @override
-  String get recording => 'Enregistrement';
 
   @override
   String redactedBy(String username) {
@@ -1065,9 +987,6 @@ class L10nFr extends L10n {
   String get redactMessage => 'Supprimer un message';
 
   @override
-  String get register => 'S\'inscrire';
-
-  @override
   String get reject => 'Refuser';
 
   @override
@@ -1077,11 +996,6 @@ class L10nFr extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Supprimer tous les autres appareils';
-
-  @override
-  String removedBy(String username) {
-    return 'Supprimé par $username';
-  }
 
   @override
   String get unbanFromChat => 'Débannissement de la discussion';
@@ -1100,9 +1014,6 @@ class L10nFr extends L10n {
   String get reportMessage => 'Signaler un message';
 
   @override
-  String get requestPermission => 'Demander la permission';
-
-  @override
   String get roomHasBeenUpgraded => 'Le salon a été mis à niveau';
 
   @override
@@ -1116,9 +1027,6 @@ class L10nFr extends L10n {
 
   @override
   String get security => 'Sécurité';
-
-  @override
-  String get recoveryKey => 'Clé de récupération';
 
   @override
   String get send => 'Envoyer';
@@ -1203,9 +1111,6 @@ class L10nFr extends L10n {
   String get shareLocation => 'Partager la localisation';
 
   @override
-  String get showPassword => 'Afficher le mot de passe';
-
-  @override
   String get skip => 'Ignorer';
 
   @override
@@ -1250,17 +1155,11 @@ class L10nFr extends L10n {
   String get theyMatch => 'Elles correspondent';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Trop de requêtes. Veuillez réessayer plus tard !';
 
   @override
   String get tryToSendAgain => 'Retenter l\'envoi';
-
-  @override
-  String get unavailable => 'Indisponible';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1308,9 +1207,6 @@ class L10nFr extends L10n {
   }
 
   @override
-  String get username => 'Nom d\'utilisateur·ice';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username a envoyé un évènement de type $type';
   }
@@ -1320,9 +1216,6 @@ class L10nFr extends L10n {
 
   @override
   String get verified => 'Vérifié';
-
-  @override
-  String get verify => 'Vérifier';
 
   @override
   String get verifyStart => 'Commencer la vérification';
@@ -1409,9 +1302,6 @@ class L10nFr extends L10n {
   String get time => 'Heure';
 
   @override
-  String get messageType => 'Type de message';
-
-  @override
   String get sender => 'Expéditeur/trice';
 
   @override
@@ -1421,16 +1311,10 @@ class L10nFr extends L10n {
   String get removeFromSpace => 'Supprimer de l’espace';
 
   @override
-  String get start => 'Commencer';
-
-  @override
   String get markAsRead => 'Marquer comme lu';
 
   @override
   String get reportUser => 'Signaler l\'utilisateur/trice';
-
-  @override
-  String get dismiss => 'Rejeter';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1490,11 +1374,6 @@ class L10nFr extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Vous avez été invité par $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Invitation par $user';
   }
 
   @override
@@ -1574,13 +1453,7 @@ class L10nFr extends L10n {
       'Cela peut se produire si le message a été envoyé avant que vous ne vous soyez connecté à votre compte sur cet appareil.\n\nIl est également possible que l\'expéditeur ait bloqué votre appareil ou qu\'un problème de connexion Internet se soit produit.\n\nÊtes-vous capable de lire le message sur une autre session ? Vous pouvez alors transférer le message à partir de celle-ci ! Allez dans Paramètres > Appareils et assurez-vous que vos appareils se sont vérifiés mutuellement. Lorsque vous ouvrirez le salon la fois suivante et que les deux sessions seront au premier plan, les clés seront transmises automatiquement.\n\nVous ne voulez pas perdre les clés en vous déconnectant ou en changeant d\'appareil ? Assurez-vous que vous avez activé la sauvegarde de la discussion dans les paramètres.';
 
   @override
-  String get newGroup => 'Nouveau groupe';
-
-  @override
   String get newSpace => 'Nouvel espace';
-
-  @override
-  String get allSpaces => 'Tous les espaces';
 
   @override
   String get doNotShowAgain => 'Ne plus afficher';
@@ -1603,9 +1476,6 @@ class L10nFr extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Désolé, ce n\'est pas possible';
-
-  @override
-  String get deviceKeys => 'Clés de l’appareil :';
 
   @override
   String get reopenChat => 'Rouvrir la discussion';
@@ -1695,15 +1565,14 @@ class L10nFr extends L10n {
       'Une fois que vous aurez nommé cet utilisateur/trice administrateur, vous ne pourrez peut-être plus annuler cette opération, car il disposera alors des mêmes autorisations que vous.';
 
   @override
-  String get pushNotificationsNotAvailable =>
-      'Notifications poussées indisponibles';
+  String get pushNotificationsNotAvailable => 'Notifications indisponibles';
 
   @override
   String get learnMore => 'En savoir plus';
 
   @override
   String get yourGlobalUserIdIs =>
-      'Votre identifiant utilisateur global est : ';
+      'Votre identifiant utilisateur/trice global est : ';
 
   @override
   String noUsersFoundWithQuery(String query) {
@@ -1886,9 +1755,6 @@ class L10nFr extends L10n {
   }
 
   @override
-  String get transparent => 'Transparent';
-
-  @override
   String get incomingMessages => 'Messages entrants';
 
   @override
@@ -1919,12 +1785,6 @@ class L10nFr extends L10n {
   }
 
   @override
-  String get restricted => 'Limité';
-
-  @override
-  String get knockRestricted => 'Frapper à la porte limité';
-
-  @override
   String goToSpace(Object space) {
     return 'Aller dans l\'espace : $space';
   }
@@ -1939,12 +1799,12 @@ class L10nFr extends L10n {
 
   @override
   String moderatorLevel(int level) {
-    return '$level — Modération';
+    return '$level — Modérateur/trice';
   }
 
   @override
   String adminLevel(int level) {
-    return '$level — Administration';
+    return '$level — Administrateur/trice';
   }
 
   @override
@@ -1957,7 +1817,7 @@ class L10nFr extends L10n {
 
   @override
   String get changeTheChatPermissions =>
-      'Modifier les autorisations de cette discussion';
+      'Modifier les permissions de cette discussion';
 
   @override
   String get changeTheVisibilityOfChatHistory =>
@@ -1976,7 +1836,7 @@ class L10nFr extends L10n {
 
   @override
   String get chatPermissionsDescription =>
-      'Définir quel niveau de pouvoir est nécessaires pour certaines actions dans cette discussion. Les niveaux de pouvoir 0, 50 et 100 représentent généralement les membres, la modération et l\'administration, mais toute gradation est possible.';
+      'Définir quel niveau de droit est nécessaires pour certaines actions dans cette discussion. Les niveaux de droits 0, 50 et 100 représentent généralement les membres, les modérateurs/trices et les administrateurs/trices, mais toute gradation est possible.';
 
   @override
   String updateInstalled(String version) {
@@ -1994,16 +1854,13 @@ class L10nFr extends L10n {
 
   @override
   String get doesNotSeemToBeAValidHomeserver =>
-      'Aucun hôte compatible ne semble exister. URL incorrecte ?';
+      'Aucun serveur d\'acceuil compatible ne semble exister. URL incorrecte ?';
 
   @override
   String get calculatingFileSize => 'Calcul en cours...';
 
   @override
   String get sendingAttachment => 'Envoi en cours...';
-
-  @override
-  String get compressVideo => 'Compression de la vidéo...';
 
   @override
   String get oneOfYourDevicesIsNotVerified =>
@@ -2017,14 +1874,10 @@ class L10nFr extends L10n {
   String get continueText => 'Continuer';
 
   @override
-  String get welcomeText =>
-      'Salut Salut 👋 Bienvenue sur FluffyChat. Vous pouvez vous connecter sur n\'importe quel hôte compatible avec https://matrix.org. Ensuite engagez la discussion avec quelqu\'un. C\'est un immense réseau décentralisé !';
+  String get blur => 'Flou :';
 
   @override
-  String get blur => 'Blur:';
-
-  @override
-  String get opacity => 'Opacity:';
+  String get opacity => 'Opacité :';
 
   @override
   String get setWallpaper => 'Changer le fond d\'écran';
@@ -2037,7 +1890,8 @@ class L10nFr extends L10n {
       'Le serveur ne possède pas d\'informations de contact valides';
 
   @override
-  String get contactServerAdmin => 'Contacter l\'administrateur du serveur';
+  String get contactServerAdmin =>
+      'Contacter l\'administrateur/trice du serveur';
 
   @override
   String get contactServerSecurity =>
@@ -2081,14 +1935,14 @@ class L10nFr extends L10n {
 
   @override
   String get unableToJoinChat =>
-      'Discussion impossible à rejoindre. L\'autre participant à peut-être déjà fermé la discussion.';
+      'Discussion impossible à rejoindre. L\'autre participant.e à peut-être déjà fermé la discussion.';
 
   @override
   String get previous => 'Précédent';
 
   @override
   String get otherPartyNotLoggedIn =>
-      'L\'autre participant n\'est pas connecté actuellement et ne peux donc pas recevoir de messages !';
+      'L\'autre participant.e n\'est pas connecté actuellement et ne peux donc pas recevoir de messages !';
 
   @override
   String appWantsToUseForLogin(String server) {
@@ -2121,18 +1975,18 @@ class L10nFr extends L10n {
 
   @override
   String get userSpecificNotificationSettings =>
-      'Notifications relatives à l\'utilisateur';
+      'Notifications relatives à l\'utilisateur/trice';
 
   @override
   String get otherNotificationSettings => 'Notifications diverses';
 
   @override
   String get notificationRuleContainsUserName =>
-      'Contient le nom d\'utilisateur';
+      'Contient le nom d\'utilisateur/trice';
 
   @override
   String get notificationRuleContainsUserNameDescription =>
-      'Notifie l\'utilisateur quand un message contient son nom d\'utilisateur.';
+      'Notifie l\'utilisateur quand un message contient son nom d\'utilisateur/trice.';
 
   @override
   String get notificationRuleMaster => 'Désactiver toutes les notifications';
@@ -2154,7 +2008,7 @@ class L10nFr extends L10n {
 
   @override
   String get notificationRuleInviteForMeDescription =>
-      'Notifie l\'utilisateur lorsqu\'il est invité dans un salon.';
+      'Notifie l\'utilisateur/trice lorsqu\'il est invité dans un salon.';
 
   @override
   String get notificationRuleMemberEvent => 'Évenement pour les Membres';
@@ -2164,11 +2018,11 @@ class L10nFr extends L10n {
       'Retire les notifications des évènements des membres.';
 
   @override
-  String get notificationRuleIsUserMention => 'Mention Utilisateur';
+  String get notificationRuleIsUserMention => 'Mention Utilisateur/trice';
 
   @override
   String get notificationRuleIsUserMentionDescription =>
-      'Notifie l\'utilisateur lorsqu\'il est mentionné directement dans un message.';
+      'Notifie l\'utilisateur/trice lorsqu\'il est mentionné directement dans un message.';
 
   @override
   String get notificationRuleContainsDisplayName =>
@@ -2176,28 +2030,28 @@ class L10nFr extends L10n {
 
   @override
   String get notificationRuleContainsDisplayNameDescription =>
-      'Notifie l\'utilisateur lorsqu\'un message contient son nom d\'affichage.';
+      'Notifie l\'utilisateur/trice lorsqu\'un message contient son nom d\'affichage.';
 
   @override
   String get notificationRuleIsRoomMention => 'Mention de Salon';
 
   @override
   String get notificationRuleIsRoomMentionDescription =>
-      'Notifie l\'utilisateur lorsqu\'il y a une mention de salon.';
+      'Notifie l\'utilisateur/trice lorsqu\'il y a une mention de salon.';
 
   @override
   String get notificationRuleRoomnotif => 'Notification de Salon';
 
   @override
   String get notificationRuleRoomnotifDescription =>
-      'Notifie l\'utilisateur lorsqu\'un message contient \'@room\'.';
+      'Notifie l\'utilisateur/trice lorsqu\'un message contient \'@room\'.';
 
   @override
   String get notificationRuleTombstone => 'Pierre tombale';
 
   @override
   String get notificationRuleTombstoneDescription =>
-      'Notifie l\'utilisateur a propos de la désactivation des message dans un salon.';
+      'Notifie l\'utilisateur/trice a propos de la désactivation des message dans un salon.';
 
   @override
   String get notificationRuleReaction => 'Réaction';
@@ -2225,35 +2079,35 @@ class L10nFr extends L10n {
 
   @override
   String get notificationRuleCallDescription =>
-      'Notifie l\'utilisateur lorsqu\'on l\'appelle.';
+      'Notifie l\'utilisateur/trice lorsqu\'on l\'appelle.';
 
   @override
   String get notificationRuleEncryptedRoomOneToOne => 'Salon Chiffré en Duo';
 
   @override
   String get notificationRuleEncryptedRoomOneToOneDescription =>
-      'Notifie l\'utilisateur à propos des messages dans les salons chiffrés en duo.';
+      'Notifie l\'utilisateur/trice à propos des messages dans les salons chiffrés en duo.';
 
   @override
   String get notificationRuleRoomOneToOne => 'Salon en Duo';
 
   @override
   String get notificationRuleRoomOneToOneDescription =>
-      'Notifie l\'utilisateur à propos des messages dans les salons en duo.';
+      'Notifie l\'utilisateur/trice à propos des messages dans les salons en duo.';
 
   @override
   String get notificationRuleMessage => 'Message';
 
   @override
   String get notificationRuleMessageDescription =>
-      'Notifie l\'utilisateur à propos des messages en général.';
+      'Notifie l\'utilisateur/trice à propos des messages en général.';
 
   @override
   String get notificationRuleEncrypted => 'Chiffré';
 
   @override
   String get notificationRuleEncryptedDescription =>
-      'Notifies l\'utilisateur à propos des messages dans les salons chiffrés.';
+      'Notifies l\'utilisateur/trice à propos des messages dans les salons chiffrés.';
 
   @override
   String get notificationRuleJitsi => 'Jitsi';
@@ -2340,7 +2194,8 @@ class L10nFr extends L10n {
       'Se déconnecter de tous les appareils actifs';
 
   @override
-  String get displayNavigationRail => 'Show navigation rail on mobile';
+  String get displayNavigationRail =>
+      'Afficher la barre de navigation sur mobile';
 
   @override
   String get customReaction => 'Réaction personalisée';
@@ -2388,14 +2243,6 @@ class L10nFr extends L10n {
   String spaceMemberOfCanKnock(String spaces) {
     return 'Seule les membres de l\'espace de $spaces peuvent toquer';
   }
-
-  @override
-  String startedAPoll(String username) {
-    return '$username a démarré un sondage.';
-  }
-
-  @override
-  String get poll => 'Sondage';
 
   @override
   String get startPoll => 'Démarrer un sondage';
@@ -2460,13 +2307,13 @@ class L10nFr extends L10n {
   String get saveChanges => 'Enregistrer les modifications';
 
   @override
-  String get createSticker => 'Créer un autocollant ou un émoji';
+  String get createSticker => 'Créer un autocollant ou un émoticône';
 
   @override
   String get useAsSticker => 'Utiliser comme un autocollant';
 
   @override
-  String get useAsEmoji => 'Utiliser comme émoji';
+  String get useAsEmoji => 'Utiliser comme émoticône';
 
   @override
   String get stickerPackNameAlreadyExists =>
@@ -2500,7 +2347,8 @@ class L10nFr extends L10n {
   String get federationBaseUrl => 'Racine de l\'URL de Fédération';
 
   @override
-  String get clientWellKnownInformation => 'Client-Well-Known Information:';
+  String get clientWellKnownInformation =>
+      'Informations Well-Known du client :';
 
   @override
   String get baseUrl => 'URL racine';
@@ -2550,22 +2398,22 @@ class L10nFr extends L10n {
   String get matrixId => 'ID Matrix';
 
   @override
-  String get setPowerLevel => 'Configurer le niveau de droit';
+  String get setPowerLevel => 'Configurer le niveau de puissance';
 
   @override
-  String get makeModerator => 'Promouvoir modérateur';
+  String get makeModerator => 'Promouvoir modérateur/trice';
 
   @override
-  String get makeAdmin => 'Promouvoir administrateur';
+  String get makeAdmin => 'Promouvoir administrateur/trice';
 
   @override
-  String get removeModeratorRights => 'Révoquer les droits modérateurs';
+  String get removeModeratorRights => 'Révoquer les droits modérateurs/trices';
 
   @override
-  String get removeAdminRights => 'Révoquer les droits administrateur';
+  String get removeAdminRights => 'Révoquer les droits administrateurs/trices';
 
   @override
-  String get powerLevel => 'Niveau de droit';
+  String get powerLevel => 'Niveau de droits';
 
   @override
   String get setPowerLevelDescription =>
@@ -2587,7 +2435,7 @@ class L10nFr extends L10n {
   String get supportFluffyChat => 'Soutenir FluffyChat';
 
   @override
-  String get support => 'Support';
+  String get support => 'Soutenir';
 
   @override
   String get setLowPriority => 'Définir comme faible priorité';
@@ -2633,7 +2481,7 @@ class L10nFr extends L10n {
 
   @override
   String get interactiveVerificationDescription =>
-      'Si vous êtes l\'un à coté de l\'autre ou que vous communiquez par un canal sécurisé, vous pouvez vérifier tous vos appareils en une seule fois en comparant un numéro de sécurité ou des émojis.';
+      'Si vous êtes l\'un à coté de l\'autre ou que vous communiquez par un canal sécurisé, vous pouvez vérifier tous vos appareils en une seule fois en comparant un numéro de sécurité ou des émoticônes.';
 
   @override
   String countUnverifiedDevices(int count) {
@@ -2641,16 +2489,10 @@ class L10nFr extends L10n {
   }
 
   @override
-  String get check => 'Vérifier';
-
-  @override
   String get encryptedMessage => 'Message chiffré';
 
   @override
-  String get unencryptedMessage => 'Message déchiffré';
-
-  @override
-  String get allow => 'Autoriser';
+  String get unencryptedMessage => 'Message non-chiffré';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2743,7 +2585,7 @@ class L10nFr extends L10n {
   String get youAreReadyToStart => 'Vous êtes prêt à commencer !';
 
   @override
-  String get noUserKeyFound => 'Pas de clé utilisateur trouvée';
+  String get noUserKeyFound => 'Pas de clé utilisateur/trice trouvée';
 
   @override
   String knownSince(String date) {
@@ -2785,4 +2627,49 @@ class L10nFr extends L10n {
 
   @override
   String get yesterday => 'Hier';
+
+  @override
+  String get resetRecoveryKey => 'Réinitialiser la clé de récupération';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Veuillez entrer le code à 6 chiffres pour activer le verouillage de l\'application.';
+
+  @override
+  String get disableAppLock => 'Désactiver le verrouillage de l\'application';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Êtes vous sûr de vouloir désactiver le verrouillage de l\'application ?';
+
+  @override
+  String get enableBiometrics => 'Activer l\'authentification biométrique';
+
+  @override
+  String get disableBiometrics => 'Désactiver l\'authentification biométrique';
+
+  @override
+  String get biometricsDescription =>
+      'Avec l\'authentification biométrique, vous pouvez déverrouillee l\'application avec votre visage ou votre empreinte digitale. Les possibilités dépendent de votre appareil.';
+
+  @override
+  String get useAppLock => 'Utiliser le verrouillage de l\'application';
+
+  @override
+  String get unlockWithBiometrics =>
+      'Déverrouiller avec l\'authentification biométrique';
+
+  @override
+  String get resetPin => 'Réinitialiser le code pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'un message',
+    );
+    return 'Avancer de $_temp0 ?';
+  }
 }

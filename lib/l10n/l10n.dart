@@ -217,12 +217,6 @@ abstract class L10n {
   /// **'Not an image file.'**
   String get notAnImage;
 
-  /// No description provided for @ignoreUser.
-  ///
-  /// In en, this message translates to:
-  /// **'Ignore user'**
-  String get ignoreUser;
-
   /// No description provided for @remove.
   ///
   /// In en, this message translates to:
@@ -336,12 +330,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'All'**
   String get all;
-
-  /// No description provided for @allChats.
-  ///
-  /// In en, this message translates to:
-  /// **'All chats'**
-  String get allChats;
 
   /// No description provided for @commandHint_roomupgrade.
   ///
@@ -508,12 +496,6 @@ abstract class L10n {
   /// **'Space'**
   String get space;
 
-  /// No description provided for @spaces.
-  ///
-  /// In en, this message translates to:
-  /// **'Spaces'**
-  String get spaces;
-
   /// No description provided for @banFromChat.
   ///
   /// In en, this message translates to:
@@ -574,23 +556,11 @@ abstract class L10n {
   /// **'{username} changed the chat description'**
   String changedTheChatDescription(Object username);
 
-  /// No description provided for @changedTheChatDescriptionTo.
-  ///
-  /// In en, this message translates to:
-  /// **'{username} changed the chat description to: \'{description}\''**
-  String changedTheChatDescriptionTo(String username, String description);
-
   /// No description provided for @changedTheChatName.
   ///
   /// In en, this message translates to:
   /// **'{username} changed the chat name'**
   String changedTheChatName(Object username);
-
-  /// No description provided for @changedTheChatNameTo.
-  ///
-  /// In en, this message translates to:
-  /// **'{username} changed the chat name to: \'{chatname}\''**
-  String changedTheChatNameTo(String username, String chatname);
 
   /// No description provided for @changedTheChatPermissions.
   ///
@@ -931,7 +901,7 @@ abstract class L10n {
   /// No description provided for @countParticipants.
   ///
   /// In en, this message translates to:
-  /// **'{count} participants'**
+  /// **'{count, plural, =1{1 participant} other{{count} participants}}'**
   String countParticipants(int count);
 
   /// No description provided for @countInvited.
@@ -1012,18 +982,6 @@ abstract class L10n {
   /// **'Delete message'**
   String get deleteMessage;
 
-  /// No description provided for @device.
-  ///
-  /// In en, this message translates to:
-  /// **'Device'**
-  String get device;
-
-  /// No description provided for @deviceId.
-  ///
-  /// In en, this message translates to:
-  /// **'Device ID'**
-  String get deviceId;
-
   /// No description provided for @devices.
   ///
   /// In en, this message translates to:
@@ -1101,12 +1059,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Recently-used emotes will appear here...'**
   String get emoteKeyboardNoRecents;
-
-  /// No description provided for @emotePacks.
-  ///
-  /// In en, this message translates to:
-  /// **'Emote packs for room'**
-  String get emotePacks;
 
   /// No description provided for @emoteSettings.
   ///
@@ -1210,29 +1162,11 @@ abstract class L10n {
   /// **'Enter an email address'**
   String get enterAnEmailAddress;
 
-  /// No description provided for @homeserver.
-  ///
-  /// In en, this message translates to:
-  /// **'Homeserver'**
-  String get homeserver;
-
   /// No description provided for @errorObtainingLocation.
   ///
   /// In en, this message translates to:
   /// **'Error obtaining location: {error}'**
   String errorObtainingLocation(String error);
-
-  /// No description provided for @fileName.
-  ///
-  /// In en, this message translates to:
-  /// **'File name'**
-  String get fileName;
-
-  /// No description provided for @fluffychat.
-  ///
-  /// In en, this message translates to:
-  /// **'FluffyChat'**
-  String get fluffychat;
 
   /// No description provided for @fontSize.
   ///
@@ -1318,12 +1252,6 @@ abstract class L10n {
   /// **'Help'**
   String get help;
 
-  /// No description provided for @hideRedactedEvents.
-  ///
-  /// In en, this message translates to:
-  /// **'Hide redacted events'**
-  String get hideRedactedEvents;
-
   /// No description provided for @hideRedactedMessages.
   ///
   /// In en, this message translates to:
@@ -1341,12 +1269,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Hide invalid or unknown message formats'**
   String get hideInvalidOrUnknownMessageFormats;
-
-  /// No description provided for @id.
-  ///
-  /// In en, this message translates to:
-  /// **'ID'**
-  String get id;
 
   /// No description provided for @block.
   ///
@@ -1606,12 +1528,6 @@ abstract class L10n {
   /// **'Mute chat'**
   String get muteChat;
 
-  /// No description provided for @needPantalaimonWarning.
-  ///
-  /// In en, this message translates to:
-  /// **'Please be aware that you need Pantalaimon to use end-to-end encryption for now.'**
-  String get needPantalaimonWarning;
-
   /// No description provided for @newChat.
   ///
   /// In en, this message translates to:
@@ -1684,12 +1600,6 @@ abstract class L10n {
   /// **'Scan QR code'**
   String get scanQrCode;
 
-  /// No description provided for @none.
-  ///
-  /// In en, this message translates to:
-  /// **'None'**
-  String get none;
-
   /// No description provided for @noPasswordRecoveryDescription.
   ///
   /// In en, this message translates to:
@@ -1726,23 +1636,11 @@ abstract class L10n {
   /// **'Obtaining location…'**
   String get obtainingLocation;
 
-  /// No description provided for @offline.
-  ///
-  /// In en, this message translates to:
-  /// **'Offline'**
-  String get offline;
-
   /// No description provided for @ok.
   ///
   /// In en, this message translates to:
   /// **'Ok'**
   String get ok;
-
-  /// No description provided for @online.
-  ///
-  /// In en, this message translates to:
-  /// **'Online'**
-  String get online;
 
   /// No description provided for @onlineKeyBackupEnabled.
   ///
@@ -1822,12 +1720,6 @@ abstract class L10n {
   /// **'Link'**
   String get link;
 
-  /// No description provided for @serverRequiresEmail.
-  ///
-  /// In en, this message translates to:
-  /// **'This server needs to validate your email address for registration.'**
-  String get serverRequiresEmail;
-
   /// No description provided for @or.
   ///
   /// In en, this message translates to:
@@ -1876,23 +1768,11 @@ abstract class L10n {
   /// **'Password recovery'**
   String get passwordRecovery;
 
-  /// No description provided for @pickImage.
-  ///
-  /// In en, this message translates to:
-  /// **'Pick an image'**
-  String get pickImage;
-
   /// No description provided for @pin.
   ///
   /// In en, this message translates to:
   /// **'Pin'**
   String get pin;
-
-  /// No description provided for @play.
-  ///
-  /// In en, this message translates to:
-  /// **'Play {fileName}'**
-  String play(String fileName);
 
   /// No description provided for @pleaseChooseAPasscode.
   ///
@@ -1905,12 +1785,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Please click on the link in the email and then proceed.'**
   String get pleaseClickOnLink;
-
-  /// No description provided for @pleaseEnter4Digits.
-  ///
-  /// In en, this message translates to:
-  /// **'Please enter 4 digits or leave empty to disable app lock.'**
-  String get pleaseEnter4Digits;
 
   /// No description provided for @pleaseEnterYourPassword.
   ///
@@ -1948,23 +1822,11 @@ abstract class L10n {
   /// **'Public Rooms'**
   String get publicRooms;
 
-  /// No description provided for @pushRules.
-  ///
-  /// In en, this message translates to:
-  /// **'Push rules'**
-  String get pushRules;
-
   /// No description provided for @reason.
   ///
   /// In en, this message translates to:
   /// **'Reason'**
   String get reason;
-
-  /// No description provided for @recording.
-  ///
-  /// In en, this message translates to:
-  /// **'Recording'**
-  String get recording;
 
   /// No description provided for @redactedBy.
   ///
@@ -1996,12 +1858,6 @@ abstract class L10n {
   /// **'Redact message'**
   String get redactMessage;
 
-  /// No description provided for @register.
-  ///
-  /// In en, this message translates to:
-  /// **'Register'**
-  String get register;
-
   /// No description provided for @reject.
   ///
   /// In en, this message translates to:
@@ -2019,12 +1875,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Remove all other devices'**
   String get removeAllOtherDevices;
-
-  /// No description provided for @removedBy.
-  ///
-  /// In en, this message translates to:
-  /// **'Removed by {username}'**
-  String removedBy(String username);
 
   /// No description provided for @unbanFromChat.
   ///
@@ -2056,12 +1906,6 @@ abstract class L10n {
   /// **'Report message'**
   String get reportMessage;
 
-  /// No description provided for @requestPermission.
-  ///
-  /// In en, this message translates to:
-  /// **'Request permission'**
-  String get requestPermission;
-
   /// No description provided for @roomHasBeenUpgraded.
   ///
   /// In en, this message translates to:
@@ -2091,12 +1935,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Security'**
   String get security;
-
-  /// No description provided for @recoveryKey.
-  ///
-  /// In en, this message translates to:
-  /// **'Recovery key'**
-  String get recoveryKey;
 
   /// No description provided for @send.
   ///
@@ -2230,12 +2068,6 @@ abstract class L10n {
   /// **'Share location'**
   String get shareLocation;
 
-  /// No description provided for @showPassword.
-  ///
-  /// In en, this message translates to:
-  /// **'Show password'**
-  String get showPassword;
-
   /// No description provided for @skip.
   ///
   /// In en, this message translates to:
@@ -2314,12 +2146,6 @@ abstract class L10n {
   /// **'They Match'**
   String get theyMatch;
 
-  /// Title for the application
-  ///
-  /// In en, this message translates to:
-  /// **'FluffyChat'**
-  String get title;
-
   /// No description provided for @tooManyRequestsWarning.
   ///
   /// In en, this message translates to:
@@ -2331,12 +2157,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Try to send again'**
   String get tryToSendAgain;
-
-  /// No description provided for @unavailable.
-  ///
-  /// In en, this message translates to:
-  /// **'Unavailable'**
-  String get unavailable;
 
   /// No description provided for @unbannedUser.
   ///
@@ -2404,12 +2224,6 @@ abstract class L10n {
   /// **'🚪 {username} left the chat'**
   String userLeftTheChat(String username);
 
-  /// No description provided for @username.
-  ///
-  /// In en, this message translates to:
-  /// **'Username'**
-  String get username;
-
   /// No description provided for @userSentUnknownEvent.
   ///
   /// In en, this message translates to:
@@ -2427,12 +2241,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Verified'**
   String get verified;
-
-  /// No description provided for @verify.
-  ///
-  /// In en, this message translates to:
-  /// **'Verify'**
-  String get verify;
 
   /// No description provided for @verifyStart.
   ///
@@ -2584,12 +2392,6 @@ abstract class L10n {
   /// **'Time'**
   String get time;
 
-  /// No description provided for @messageType.
-  ///
-  /// In en, this message translates to:
-  /// **'Message Type'**
-  String get messageType;
-
   /// No description provided for @sender.
   ///
   /// In en, this message translates to:
@@ -2608,12 +2410,6 @@ abstract class L10n {
   /// **'Remove from space'**
   String get removeFromSpace;
 
-  /// No description provided for @start.
-  ///
-  /// In en, this message translates to:
-  /// **'Start'**
-  String get start;
-
   /// No description provided for @markAsRead.
   ///
   /// In en, this message translates to:
@@ -2625,12 +2421,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Report user'**
   String get reportUser;
-
-  /// No description provided for @dismiss.
-  ///
-  /// In en, this message translates to:
-  /// **'Dismiss'**
-  String get dismiss;
 
   /// No description provided for @reactedWith.
   ///
@@ -2727,12 +2517,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'📩 You have been invited by {user}'**
   String youInvitedBy(String user);
-
-  /// No description provided for @invitedBy.
-  ///
-  /// In en, this message translates to:
-  /// **'📩 Invited by {user}'**
-  String invitedBy(String user);
 
   /// No description provided for @youInvitedUser.
   ///
@@ -2854,23 +2638,11 @@ abstract class L10n {
   /// **'This can happen if the message was sent before you have signed in to your account at this device.\n\nIt is also possible that the sender has blocked your device or something went wrong with the internet connection.\n\nAre you able to read the message on another session? Then you can transfer the message from it! Go to Settings > Devices and make sure that your devices have verified each other. When you open the room the next time and both sessions are in the foreground, the keys will be transmitted automatically.\n\nDo you not want to lose the keys when logging out or switching devices? Make sure that you have enabled the chat backup in the settings.'**
   String get noKeyForThisMessage;
 
-  /// No description provided for @newGroup.
-  ///
-  /// In en, this message translates to:
-  /// **'New group'**
-  String get newGroup;
-
   /// No description provided for @newSpace.
   ///
   /// In en, this message translates to:
   /// **'New space'**
   String get newSpace;
-
-  /// No description provided for @allSpaces.
-  ///
-  /// In en, this message translates to:
-  /// **'All spaces'**
-  String get allSpaces;
 
   /// No description provided for @doNotShowAgain.
   ///
@@ -2907,12 +2679,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Sorry... that is not possible'**
   String get sorryThatsNotPossible;
-
-  /// No description provided for @deviceKeys.
-  ///
-  /// In en, this message translates to:
-  /// **'Device keys:'**
-  String get deviceKeys;
 
   /// No description provided for @reopenChat.
   ///
@@ -3364,12 +3130,6 @@ abstract class L10n {
   /// **'{sender} started key verification'**
   String startedKeyVerification(String sender);
 
-  /// No description provided for @transparent.
-  ///
-  /// In en, this message translates to:
-  /// **'Transparent'**
-  String get transparent;
-
   /// No description provided for @incomingMessages.
   ///
   /// In en, this message translates to:
@@ -3417,18 +3177,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Right now there are {count} users blocked.'**
   String thereAreCountUsersBlocked(Object count);
-
-  /// No description provided for @restricted.
-  ///
-  /// In en, this message translates to:
-  /// **'Restricted'**
-  String get restricted;
-
-  /// No description provided for @knockRestricted.
-  ///
-  /// In en, this message translates to:
-  /// **'Knock restricted'**
-  String get knockRestricted;
 
   /// No description provided for @goToSpace.
   ///
@@ -3550,12 +3298,6 @@ abstract class L10n {
   /// **'Sending attachment...'**
   String get sendingAttachment;
 
-  /// No description provided for @compressVideo.
-  ///
-  /// In en, this message translates to:
-  /// **'Compressing video...'**
-  String get compressVideo;
-
   /// No description provided for @oneOfYourDevicesIsNotVerified.
   ///
   /// In en, this message translates to:
@@ -3573,12 +3315,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Continue'**
   String get continueText;
-
-  /// No description provided for @welcomeText.
-  ///
-  /// In en, this message translates to:
-  /// **'Hey Hey 👋 This is FluffyChat. You can sign in to any homeserver, which is compatible with https://matrix.org. And then chat with anyone. It\'s a huge decentralized messaging network!'**
-  String get welcomeText;
 
   /// No description provided for @blur.
   ///
@@ -4216,18 +3952,6 @@ abstract class L10n {
   /// **'Space member of {spaces} can knock'**
   String spaceMemberOfCanKnock(String spaces);
 
-  /// No description provided for @startedAPoll.
-  ///
-  /// In en, this message translates to:
-  /// **'{username} started a poll.'**
-  String startedAPoll(String username);
-
-  /// No description provided for @poll.
-  ///
-  /// In en, this message translates to:
-  /// **'Poll'**
-  String get poll;
-
   /// No description provided for @startPoll.
   ///
   /// In en, this message translates to:
@@ -4648,12 +4372,6 @@ abstract class L10n {
   /// **'{count} unverified devices in the chat.'**
   String countUnverifiedDevices(int count);
 
-  /// No description provided for @check.
-  ///
-  /// In en, this message translates to:
-  /// **'Check'**
-  String get check;
-
   /// No description provided for @encryptedMessage.
   ///
   /// In en, this message translates to:
@@ -4665,12 +4383,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Unencrypted message'**
   String get unencryptedMessage;
-
-  /// No description provided for @allow.
-  ///
-  /// In en, this message translates to:
-  /// **'Allow'**
-  String get allow;
 
   /// No description provided for @messageCanOnlyBeReadByUser.
   ///
@@ -4911,6 +4623,72 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Yesterday'**
   String get yesterday;
+
+  /// No description provided for @resetRecoveryKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset recovery key'**
+  String get resetRecoveryKey;
+
+  /// No description provided for @pleaseEnter6Digits.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter 6 digits to enable the app lock.'**
+  String get pleaseEnter6Digits;
+
+  /// No description provided for @disableAppLock.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable app lock'**
+  String get disableAppLock;
+
+  /// No description provided for @disableAppLockAreYouSure.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to disable the app lock?'**
+  String get disableAppLockAreYouSure;
+
+  /// No description provided for @enableBiometrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable biometric authentication'**
+  String get enableBiometrics;
+
+  /// No description provided for @disableBiometrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable biometric authentication'**
+  String get disableBiometrics;
+
+  /// No description provided for @biometricsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.'**
+  String get biometricsDescription;
+
+  /// No description provided for @useAppLock.
+  ///
+  /// In en, this message translates to:
+  /// **'Use app lock'**
+  String get useAppLock;
+
+  /// No description provided for @unlockWithBiometrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock with biometric authentication'**
+  String get unlockWithBiometrics;
+
+  /// No description provided for @resetPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset pin'**
+  String get resetPin;
+
+  /// No description provided for @forwardCountMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Forward {count, plural, =1{one message} other{{count} messages}}?'**
+  String forwardCountMessages(int count);
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

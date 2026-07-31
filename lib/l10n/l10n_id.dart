@@ -15,9 +15,6 @@ class L10nId extends L10n {
   String get notAnImage => 'Bukan berkas gambar.';
 
   @override
-  String get ignoreUser => 'Abaikan pengguna';
-
-  @override
   String get remove => 'Hapus';
 
   @override
@@ -82,9 +79,6 @@ class L10nId extends L10n {
 
   @override
   String get all => 'Semua';
-
-  @override
-  String get allChats => 'Semua obrolan';
 
   @override
   String get commandHint_roomupgrade =>
@@ -191,9 +185,6 @@ class L10nId extends L10n {
   String get space => 'Space';
 
   @override
-  String get spaces => 'Space';
-
-  @override
   String get banFromChat => 'Cekal dari obrolan';
 
   @override
@@ -232,18 +223,8 @@ class L10nId extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username mengubah deskripsi obrolan ke: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username mengubah nama obrolan';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username mengubah nama obrolan ke: \'$chatname\'';
   }
 
   @override
@@ -503,12 +484,6 @@ class L10nId extends L10n {
   String get deleteMessage => 'Hapus pesan';
 
   @override
-  String get device => 'Perangkat';
-
-  @override
-  String get deviceId => 'ID Perangkat';
-
-  @override
   String get devices => 'Perangkat';
 
   @override
@@ -547,9 +522,6 @@ class L10nId extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Emote yang telah digunakan akan muncul di sini...';
-
-  @override
-  String get emotePacks => 'Paket emote untuk ruangan';
 
   @override
   String get emoteSettings => 'Pengaturan Emote';
@@ -608,18 +580,9 @@ class L10nId extends L10n {
   String get enterAnEmailAddress => 'Masukkan alamat email';
 
   @override
-  String get homeserver => 'Homeserver';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Gagal mendapat lokasi: $error';
   }
-
-  @override
-  String get fileName => 'Nama file';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Ukuran font';
@@ -668,9 +631,6 @@ class L10nId extends L10n {
   String get help => 'Bantuan';
 
   @override
-  String get hideRedactedEvents => 'Sembunyikan peristiwa yang dihapus';
-
-  @override
   String get hideRedactedMessages => 'Sembunyikan pesan yang dihapus';
 
   @override
@@ -680,9 +640,6 @@ class L10nId extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Sembunyikan format pesan yang tidak valid atau tidak diketahui';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Blokir';
@@ -839,10 +796,6 @@ class L10nId extends L10n {
   String get muteChat => 'Bisukan obrolan';
 
   @override
-  String get needPantalaimonWarning =>
-      'Perlu diketahui bahwa kamu memerlukan Pantalaimon untuk menggunakan enkripsi ujung-ke-ujung untuk saat ini.';
-
-  @override
   String get newChat => 'Chat baru';
 
   @override
@@ -883,9 +836,6 @@ class L10nId extends L10n {
   String get scanQrCode => 'Pindai kode QR';
 
   @override
-  String get none => 'Tidak Ada';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Kamu belum menambahkan cara untuk memulihkan kata sandimu.';
 
@@ -907,13 +857,7 @@ class L10nId extends L10n {
   String get obtainingLocation => 'Mendapatkan lokasi…';
 
   @override
-  String get offline => 'Offline';
-
-  @override
   String get ok => 'Ok';
-
-  @override
-  String get online => 'Online';
 
   @override
   String get onlineKeyBackupEnabled => 'Cadangan Kunci Online dinyalakan';
@@ -956,10 +900,6 @@ class L10nId extends L10n {
   String get link => 'Tautan';
 
   @override
-  String get serverRequiresEmail =>
-      'Server ini harus memvalidasi alamat email kamu untuk registrasi.';
-
-  @override
   String get or => 'Atau';
 
   @override
@@ -984,25 +924,13 @@ class L10nId extends L10n {
   String get passwordRecovery => 'Pemulihan kata sandi';
 
   @override
-  String get pickImage => 'Pilih gambar';
-
-  @override
   String get pin => 'Pin';
-
-  @override
-  String play(String fileName) {
-    return 'Mainkan $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Mohon pilih kode sandi';
 
   @override
   String get pleaseClickOnLink => 'Mohon klik tautan di email dan lanjut.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Mohon masukkan 4 digit atau tinggalkan kosong untuk menonaktifkan kunci aplikasi.';
 
   @override
   String get pleaseEnterYourPassword => 'Mohon masukkan kata sandimu';
@@ -1024,13 +952,7 @@ class L10nId extends L10n {
   String get publicRooms => 'Ruangan Publik';
 
   @override
-  String get pushRules => 'Aturan push';
-
-  @override
   String get reason => 'Alasan';
-
-  @override
-  String get recording => 'Merekam';
 
   @override
   String redactedBy(String username) {
@@ -1054,9 +976,6 @@ class L10nId extends L10n {
   String get redactMessage => 'Hapus pesan';
 
   @override
-  String get register => 'Daftar';
-
-  @override
   String get reject => 'Tolak';
 
   @override
@@ -1066,11 +985,6 @@ class L10nId extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Hapus semua perangkat lain';
-
-  @override
-  String removedBy(String username) {
-    return 'Dihapus oleh $username';
-  }
 
   @override
   String get unbanFromChat => 'Hilangkan cekalan dari obrolan';
@@ -1089,9 +1003,6 @@ class L10nId extends L10n {
   String get reportMessage => 'Laporkan pesan';
 
   @override
-  String get requestPermission => 'Minta izin';
-
-  @override
   String get roomHasBeenUpgraded => 'Ruangan telah ditingkatkan';
 
   @override
@@ -1105,9 +1016,6 @@ class L10nId extends L10n {
 
   @override
   String get security => 'Keamanan';
-
-  @override
-  String get recoveryKey => 'Kunci pemulihan';
 
   @override
   String get send => 'Kirim';
@@ -1192,9 +1100,6 @@ class L10nId extends L10n {
   String get shareLocation => 'Bagikan lokasi';
 
   @override
-  String get showPassword => 'Tampilkan kata sandi';
-
-  @override
   String get skip => 'Lewat';
 
   @override
@@ -1238,17 +1143,11 @@ class L10nId extends L10n {
   String get theyMatch => 'Cocok';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Terlalu banyak permintaan. Coba lagi nanti!';
 
   @override
   String get tryToSendAgain => 'Coba kirim lagi';
-
-  @override
-  String get unavailable => 'Tidak tersedia';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1296,9 +1195,6 @@ class L10nId extends L10n {
   }
 
   @override
-  String get username => 'Nama Pengguna';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username mengirim peristiwa $type';
   }
@@ -1308,9 +1204,6 @@ class L10nId extends L10n {
 
   @override
   String get verified => 'Terverifikasi';
-
-  @override
-  String get verify => 'Verifikasi';
 
   @override
   String get verifyStart => 'Mulai Verifikasi';
@@ -1394,9 +1287,6 @@ class L10nId extends L10n {
   String get time => 'Waktu';
 
   @override
-  String get messageType => 'Tipe Pesan';
-
-  @override
   String get sender => 'Pengirim';
 
   @override
@@ -1406,16 +1296,10 @@ class L10nId extends L10n {
   String get removeFromSpace => 'Hilangkan dari space';
 
   @override
-  String get start => 'Mulai';
-
-  @override
   String get markAsRead => 'Tandai sebagai dibaca';
 
   @override
   String get reportUser => 'Laporkan pengguna';
-
-  @override
-  String get dismiss => 'Abaikan';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1474,11 +1358,6 @@ class L10nId extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 Kamu telah diundang oleh $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Diundang oleh $user';
   }
 
   @override
@@ -1557,13 +1436,7 @@ class L10nId extends L10n {
       'Hal ini bisa terjadi jika pesan dikirim sebelum kamu masuk ke akunmu di perangkat ini.\n\nMungkin juga pengirim telah memblokir perangkatmu atau ada yang tidak beres dengan koneksi internet.\n\nApakah kamu bisa membaca pesan pada sesi lain? Maka kamu bisa mentransfer pesan dari sesi tersebut! Buka Pengaturan > Perangkat dan pastikan bahwa perangkat Anda telah ditandatangani secara silang. Ketika kamu membuka ruangan di lain waktu dan kedua sesi berada di latar depan, kunci akan ditransmisikan secara otomatis.\n\nApakah kamu tidak mau kehilangan kunci saat keluar atau berpindah perangkat? Pastikan bahwa kamu telah mengaktifkan cadangan obrolan dalam pengaturan.';
 
   @override
-  String get newGroup => 'Grup baru';
-
-  @override
   String get newSpace => 'Space baru';
-
-  @override
-  String get allSpaces => 'Semua space';
 
   @override
   String get doNotShowAgain => 'Jangan tampilkan lagi';
@@ -1586,9 +1459,6 @@ class L10nId extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Maaf... itu tidak mungkin';
-
-  @override
-  String get deviceKeys => 'Kunci perangkat:';
 
   @override
   String get reopenChat => 'Buka obrolan lagi';
@@ -1865,9 +1735,6 @@ class L10nId extends L10n {
   }
 
   @override
-  String get transparent => 'Transparan';
-
-  @override
   String get incomingMessages => 'Pesan masuk';
 
   @override
@@ -1896,12 +1763,6 @@ class L10nId extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Saat ini ada $count pengguna yang diblokir.';
   }
-
-  @override
-  String get restricted => 'Dibatasi';
-
-  @override
-  String get knockRestricted => 'Ketukan dibatasi';
 
   @override
   String goToSpace(Object space) {
@@ -1977,9 +1838,6 @@ class L10nId extends L10n {
   String get sendingAttachment => 'Mengirim lampiran...';
 
   @override
-  String get compressVideo => 'Mengompres video...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Salah satu perangkat Anda tidak terverifikasi';
 
@@ -1989,10 +1847,6 @@ class L10nId extends L10n {
 
   @override
   String get continueText => 'Lanjutkan';
-
-  @override
-  String get welcomeText =>
-      'Halo 👋 Ini FluffyChat. Kamu bisa masuk ke homeserver mana pun, yang kompatibel dengan https://matrix.org. Lalu, chat dengan siapa pun. Ini merupakan jaringan perpesanan besar yang terdesentralisasi!';
 
   @override
   String get blur => 'Buram:';
@@ -2357,14 +2211,6 @@ class L10nId extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username memulai polling.';
-  }
-
-  @override
-  String get poll => 'Polling';
-
-  @override
   String get startPoll => 'Mulai polling';
 
   @override
@@ -2607,16 +2453,10 @@ class L10nId extends L10n {
   }
 
   @override
-  String get check => 'Periksa';
-
-  @override
   String get encryptedMessage => 'Pesan terenkripsi';
 
   @override
   String get unencryptedMessage => 'Pesan tidak terenkripsi';
-
-  @override
-  String get allow => 'Izinkan';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2752,4 +2592,48 @@ class L10nId extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

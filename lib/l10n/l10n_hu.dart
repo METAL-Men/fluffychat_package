@@ -15,9 +15,6 @@ class L10nHu extends L10n {
   String get notAnImage => 'Nem kép fájl.';
 
   @override
-  String get ignoreUser => 'Felhasználó ignorálása';
-
-  @override
   String get remove => 'Eltávolítás';
 
   @override
@@ -82,9 +79,6 @@ class L10nHu extends L10n {
 
   @override
   String get all => 'Összes';
-
-  @override
-  String get allChats => 'Összes csevegés';
 
   @override
   String get commandHint_roomupgrade =>
@@ -188,9 +182,6 @@ class L10nHu extends L10n {
   String get space => 'Tér';
 
   @override
-  String get spaces => 'Terek';
-
-  @override
   String get banFromChat => 'Kitiltás a csevegésből';
 
   @override
@@ -229,18 +220,8 @@ class L10nHu extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username megváltoztatta a csevegés leírást a következőre: \'$description\'';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username changed the chat name';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username módosította a csevegés nevét a következőre: \'$chatname\'';
   }
 
   @override
@@ -499,12 +480,6 @@ class L10nHu extends L10n {
   String get deleteMessage => 'Üzenet törlése';
 
   @override
-  String get device => 'Eszköz';
-
-  @override
-  String get deviceId => 'Eszköz ID';
-
-  @override
   String get devices => 'Eszközök';
 
   @override
@@ -543,9 +518,6 @@ class L10nHu extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'A nemrég használt hangulatjelek fognak itt megjelenni...';
-
-  @override
-  String get emotePacks => 'Hangulatjel csomagok a szobához';
 
   @override
   String get emoteSettings => 'Hangulatjel Beállítások';
@@ -605,18 +577,9 @@ class L10nHu extends L10n {
   String get enterAnEmailAddress => 'Adjon meg egy email címet';
 
   @override
-  String get homeserver => 'Matrix-kiszolgáló';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Hiba a helymeghatározáskor: $error';
   }
-
-  @override
-  String get fileName => 'Fájlnév';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Betűméret';
@@ -665,9 +628,6 @@ class L10nHu extends L10n {
   String get help => 'Súgó';
 
   @override
-  String get hideRedactedEvents => 'Szerkesztett események elrejtése';
-
-  @override
   String get hideRedactedMessages => 'Szerkesztett üzenetek elrejtése';
 
   @override
@@ -677,9 +637,6 @@ class L10nHu extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Érvénytelen vagy ismeretlen üzenetformátum elrejtése';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Blokkolás';
@@ -835,10 +792,6 @@ class L10nHu extends L10n {
   String get muteChat => 'Csevegés némítása';
 
   @override
-  String get needPantalaimonWarning =>
-      'Jelenleg a Pantalaimon szükséges a végpontok közötti titkosítás használatához.';
-
-  @override
   String get newChat => 'Új csevegés';
 
   @override
@@ -879,9 +832,6 @@ class L10nHu extends L10n {
   String get scanQrCode => 'QR kód beolvasása';
 
   @override
-  String get none => 'Nincs';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Még nem adott meg semmilyen módszert a jelszava visszaállítására.';
 
@@ -903,13 +853,7 @@ class L10nHu extends L10n {
   String get obtainingLocation => 'Tartózkodási hely lekérése…';
 
   @override
-  String get offline => 'Offline';
-
-  @override
   String get ok => 'Ok';
-
-  @override
-  String get online => 'Online';
 
   @override
   String get onlineKeyBackupEnabled => 'Online kulcsmentés engedélyezve';
@@ -954,10 +898,6 @@ class L10nHu extends L10n {
   String get link => 'Hivatkozás';
 
   @override
-  String get serverRequiresEmail =>
-      'Ehhez a szerverhez szükséges az email címének visszaigazolása.';
-
-  @override
   String get or => 'Vagy';
 
   @override
@@ -982,15 +922,7 @@ class L10nHu extends L10n {
   String get passwordRecovery => 'Jelszó visszaállítás';
 
   @override
-  String get pickImage => 'Kép választása';
-
-  @override
   String get pin => 'Rögzítés';
-
-  @override
-  String play(String fileName) {
-    return '$fileName lejátszása';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Kérem, válasszon egy kódot';
@@ -998,10 +930,6 @@ class L10nHu extends L10n {
   @override
   String get pleaseClickOnLink =>
       'Kérem, kattintson a linkre az emailben, és folytassa a műveletet.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Írjon be 4 számjegyet, vagy hagyja üresen a zár kikapcsolásához.';
 
   @override
   String get pleaseEnterYourPassword => 'Kérem, adja meg jelszavát';
@@ -1023,13 +951,7 @@ class L10nHu extends L10n {
   String get publicRooms => 'Nyilvános szobák';
 
   @override
-  String get pushRules => 'Push szabályok';
-
-  @override
   String get reason => 'Indok';
-
-  @override
-  String get recording => 'Felvétel';
 
   @override
   String redactedBy(String username) {
@@ -1053,9 +975,6 @@ class L10nHu extends L10n {
   String get redactMessage => 'Üzenet szerkesztése';
 
   @override
-  String get register => 'Regisztráció';
-
-  @override
   String get reject => 'Elutasít';
 
   @override
@@ -1065,11 +984,6 @@ class L10nHu extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Minden más eszköz eltávolítása';
-
-  @override
-  String removedBy(String username) {
-    return '$username által eltávolítva';
-  }
 
   @override
   String get unbanFromChat => 'Csevegés kitiltás feloldása';
@@ -1088,9 +1002,6 @@ class L10nHu extends L10n {
   String get reportMessage => 'Üzenet jelentése';
 
   @override
-  String get requestPermission => 'Jogosultsági kérelem';
-
-  @override
   String get roomHasBeenUpgraded => 'A szoba frissítésre került';
 
   @override
@@ -1104,9 +1015,6 @@ class L10nHu extends L10n {
 
   @override
   String get security => 'Biztonság';
-
-  @override
-  String get recoveryKey => 'Visszaállító kulcs';
 
   @override
   String get send => 'Küldés';
@@ -1191,9 +1099,6 @@ class L10nHu extends L10n {
   String get shareLocation => 'Pozíció megosztása';
 
   @override
-  String get showPassword => 'Jelszó megjelenítése';
-
-  @override
   String get skip => 'Kihagy';
 
   @override
@@ -1237,17 +1142,11 @@ class L10nHu extends L10n {
   String get theyMatch => 'Egyezőek';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Túl sok egyidejű kérelem. Kérem próbálja meg később!';
 
   @override
   String get tryToSendAgain => 'Újraküldés megpróbálása';
-
-  @override
-  String get unavailable => 'Nem elérhető';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1295,9 +1194,6 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get username => 'Felhasználónév';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username felhasználó $type eseményt küldött';
   }
@@ -1307,9 +1203,6 @@ class L10nHu extends L10n {
 
   @override
   String get verified => 'Hitelesített';
-
-  @override
-  String get verify => 'Hitelesít';
 
   @override
   String get verifyStart => 'Hitelesítés megkezdése';
@@ -1392,9 +1285,6 @@ class L10nHu extends L10n {
   String get time => 'Idő';
 
   @override
-  String get messageType => 'Üzenet típus';
-
-  @override
   String get sender => 'Küldő';
 
   @override
@@ -1404,16 +1294,10 @@ class L10nHu extends L10n {
   String get removeFromSpace => 'Eltávolítás a térről';
 
   @override
-  String get start => 'Kezdés';
-
-  @override
   String get markAsRead => 'Olvasottként megjelölés';
 
   @override
   String get reportUser => 'Felhasználó jelentése';
-
-  @override
-  String get dismiss => 'Elvetés';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1472,11 +1356,6 @@ class L10nHu extends L10n {
   @override
   String youInvitedBy(String user) {
     return '📩 $user jóvoltából kapott meghívást';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 $user jóvoltából meghívva';
   }
 
   @override
@@ -1554,13 +1433,7 @@ class L10nHu extends L10n {
       'Akkor fordulhat elő, ha az üzenet az eszközre való bejelentkezés előtt került küldésre.\n\nAz is elképzelhető, hogy a küldő blokkolta az eszközét, vagy valami probléma lépett fel az internet kapcsolatban.\n\nMás helyen látja az üzenetet? Akkor át tudja másolni ide is! Menjen a Beállítások > Eszközök részbe, és győződjön meg róla, hogy az eszközei megerősítették egymást. Legközelebb amikor ezt a szobát megnyitja, és mind a két kliens az előtérben van, akkor szikronizálódni fognak.\n\nNem akarja elveszíteni a kulcsokat amikor kijelentkezik, vagy eszközt cserél? Győződjön meg róla, hogy bekapcsolta a chat mentést a beállításokban.';
 
   @override
-  String get newGroup => 'Új csoport';
-
-  @override
   String get newSpace => 'Új tér';
-
-  @override
-  String get allSpaces => 'Minden tér';
 
   @override
   String get doNotShowAgain => 'Ne mutassa újra';
@@ -1583,9 +1456,6 @@ class L10nHu extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Ez sajnos nem lehetséges';
-
-  @override
-  String get deviceKeys => 'Eszköz kulcsok:';
 
   @override
   String get reopenChat => 'Csevegés újranyitása';
@@ -1860,9 +1730,6 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get transparent => 'Átlátszó';
-
-  @override
   String get incomingMessages => 'Bejövő üzenetek';
 
   @override
@@ -1890,12 +1757,6 @@ class L10nHu extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Jelenleg $count felhasználó van letiltva.';
   }
-
-  @override
-  String get restricted => 'Korlátozott';
-
-  @override
-  String get knockRestricted => 'Kopogás korlátozva';
 
   @override
   String goToSpace(Object space) {
@@ -1974,9 +1835,6 @@ class L10nHu extends L10n {
   String get sendingAttachment => 'Csatolmány küldése...';
 
   @override
-  String get compressVideo => 'Videó tömörítése...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Egyik készüléke nem hitelesített';
 
@@ -1986,10 +1844,6 @@ class L10nHu extends L10n {
 
   @override
   String get continueText => 'Folytatás';
-
-  @override
-  String get welcomeText =>
-      'Üdv 👋 Ez a FluffyChat. Bejelentkezhet bármely matrix-kiszolgálóhoz amely kompatibilis a https://matrix.org címmel. Ezután cseveghet bárkivel. Így képez egy óriási decentralizált üzenetküldő hálózatot!';
 
   @override
   String get blur => 'Homályosít:';
@@ -2357,14 +2211,6 @@ class L10nHu extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username started a poll.';
-  }
-
-  @override
-  String get poll => 'Poll';
-
-  @override
   String get startPoll => 'Start poll';
 
   @override
@@ -2606,16 +2452,10 @@ class L10nHu extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2750,4 +2590,48 @@ class L10nHu extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }

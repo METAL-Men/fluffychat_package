@@ -15,9 +15,6 @@ class L10nCs extends L10n {
   String get notAnImage => 'Není obrázek.';
 
   @override
-  String get ignoreUser => 'Ignorovat uživatele';
-
-  @override
   String get remove => 'Odstranit';
 
   @override
@@ -82,9 +79,6 @@ class L10nCs extends L10n {
 
   @override
   String get all => 'Vše';
-
-  @override
-  String get allChats => 'Všechny chaty';
 
   @override
   String get commandHint_roomupgrade => 'Aktualizovat místnost na danou verzi';
@@ -188,9 +182,6 @@ class L10nCs extends L10n {
   String get space => 'Prostor';
 
   @override
-  String get spaces => 'Prostory';
-
-  @override
   String get banFromChat => 'Zakázat chat';
 
   @override
@@ -229,18 +220,8 @@ class L10nCs extends L10n {
   }
 
   @override
-  String changedTheChatDescriptionTo(String username, String description) {
-    return '$username změnil/a popis konverzace na: „$description“';
-  }
-
-  @override
   String changedTheChatName(Object username) {
     return '$username změnil/a název konverzace';
-  }
-
-  @override
-  String changedTheChatNameTo(String username, String chatname) {
-    return '$username změnil/a název konverzace na: „$chatname“';
   }
 
   @override
@@ -500,12 +481,6 @@ class L10nCs extends L10n {
   String get deleteMessage => 'Smazat zprávu';
 
   @override
-  String get device => 'Zařízení';
-
-  @override
-  String get deviceId => 'ID zařízení';
-
-  @override
   String get devices => 'Zařízení';
 
   @override
@@ -544,9 +519,6 @@ class L10nCs extends L10n {
   @override
   String get emoteKeyboardNoRecents =>
       'Naposledy použité emodži se zobrazí zde...';
-
-  @override
-  String get emotePacks => 'Balíček emotikonů pro místnost';
 
   @override
   String get emoteSettings => 'Nastavení emotikonů';
@@ -605,18 +577,9 @@ class L10nCs extends L10n {
   String get enterAnEmailAddress => 'Zadejte e-mailovou adresu';
 
   @override
-  String get homeserver => 'Domácí server';
-
-  @override
   String errorObtainingLocation(String error) {
     return 'Chyba při získávání polohy: $error';
   }
-
-  @override
-  String get fileName => 'Název souboru';
-
-  @override
-  String get fluffychat => 'FluffyChat';
 
   @override
   String get fontSize => 'Velikost písma';
@@ -665,9 +628,6 @@ class L10nCs extends L10n {
   String get help => 'Pomoc';
 
   @override
-  String get hideRedactedEvents => 'Skrýt redigované události';
-
-  @override
   String get hideRedactedMessages => 'Skrýt upravené zprávy';
 
   @override
@@ -677,9 +637,6 @@ class L10nCs extends L10n {
   @override
   String get hideInvalidOrUnknownMessageFormats =>
       'Skrýt nesprávné nebo neznámé formáty zpráv';
-
-  @override
-  String get id => 'ID';
 
   @override
   String get block => 'Zablokovat';
@@ -836,10 +793,6 @@ class L10nCs extends L10n {
   String get muteChat => 'Ztlumit chat';
 
   @override
-  String get needPantalaimonWarning =>
-      'Prosím vezměte na vědomí, že pro použití koncového šifrování je prozatím potřeba použít Pantalaimon.';
-
-  @override
   String get newChat => 'Nový chat';
 
   @override
@@ -880,9 +833,6 @@ class L10nCs extends L10n {
   String get scanQrCode => 'Naskenujte QR kód';
 
   @override
-  String get none => 'Žádný';
-
-  @override
   String get noPasswordRecoveryDescription =>
       'Dosud jste nepřidali způsob, jak obnovit své heslo.';
 
@@ -904,13 +854,7 @@ class L10nCs extends L10n {
   String get obtainingLocation => 'Získávání polohy…';
 
   @override
-  String get offline => 'Odpojeni';
-
-  @override
   String get ok => 'Ok';
-
-  @override
-  String get online => 'Připojeni';
 
   @override
   String get onlineKeyBackupEnabled => 'Online záloha kíčů je zapnuta';
@@ -953,10 +897,6 @@ class L10nCs extends L10n {
   String get link => 'Odkaz';
 
   @override
-  String get serverRequiresEmail =>
-      'Tento server potřebuje k registraci ověřit vaši e -mailovou adresu.';
-
-  @override
   String get or => 'Nebo';
 
   @override
@@ -981,25 +921,13 @@ class L10nCs extends L10n {
   String get passwordRecovery => 'Obnova hesla';
 
   @override
-  String get pickImage => 'Zvolit obrázek';
-
-  @override
   String get pin => 'Připnout zprávu';
-
-  @override
-  String play(String fileName) {
-    return 'Přehrát $fileName';
-  }
 
   @override
   String get pleaseChooseAPasscode => 'Vyberte přístupový kód';
 
   @override
   String get pleaseClickOnLink => 'Klikněte na odkaz v e-mailu a pokračujte.';
-
-  @override
-  String get pleaseEnter4Digits =>
-      'Chcete-li deaktivovat zámek aplikace, zadejte 4 číslice nebo nechte prázdné.';
 
   @override
   String get pleaseEnterYourPassword => 'Zadejte prosím své heslo';
@@ -1021,13 +949,7 @@ class L10nCs extends L10n {
   String get publicRooms => 'Veřejné místnosti';
 
   @override
-  String get pushRules => 'Pravidla push';
-
-  @override
   String get reason => 'Důvod';
-
-  @override
-  String get recording => 'Nahrávání';
 
   @override
   String redactedBy(String username) {
@@ -1051,9 +973,6 @@ class L10nCs extends L10n {
   String get redactMessage => 'Redigovat zprávu';
 
   @override
-  String get register => 'Registrovat';
-
-  @override
   String get reject => 'Zamítnout';
 
   @override
@@ -1063,11 +982,6 @@ class L10nCs extends L10n {
 
   @override
   String get removeAllOtherDevices => 'Odstranit všechna další zařízení';
-
-  @override
-  String removedBy(String username) {
-    return 'Odstraněno $username';
-  }
 
   @override
   String get unbanFromChat => 'Zrušit zákaz chatu';
@@ -1085,9 +999,6 @@ class L10nCs extends L10n {
   String get reportMessage => 'Nahlásit zprávu';
 
   @override
-  String get requestPermission => 'Vyžádat oprávnění';
-
-  @override
   String get roomHasBeenUpgraded => 'Místnost byla upgradována';
 
   @override
@@ -1101,9 +1012,6 @@ class L10nCs extends L10n {
 
   @override
   String get security => 'Bezpečnostní';
-
-  @override
-  String get recoveryKey => 'Klíč k obnovení';
 
   @override
   String get send => 'Odeslat';
@@ -1188,9 +1096,6 @@ class L10nCs extends L10n {
   String get shareLocation => 'Sdílet polohu';
 
   @override
-  String get showPassword => 'Zobrazit heslo';
-
-  @override
   String get skip => 'Přeskočit';
 
   @override
@@ -1234,17 +1139,11 @@ class L10nCs extends L10n {
   String get theyMatch => 'Shodují se';
 
   @override
-  String get title => 'FluffyChat';
-
-  @override
   String get tooManyRequestsWarning =>
       'Příliš mnoho požadavků. Prosím zkuste to znovu později!';
 
   @override
   String get tryToSendAgain => 'Zkuste odeslat znovu';
-
-  @override
-  String get unavailable => 'Nedostupní';
 
   @override
   String unbannedUser(String username, String targetName) {
@@ -1292,9 +1191,6 @@ class L10nCs extends L10n {
   }
 
   @override
-  String get username => 'Uživatelské jméno';
-
-  @override
   String userSentUnknownEvent(String username, String type) {
     return '$username poslali událost $type';
   }
@@ -1304,9 +1200,6 @@ class L10nCs extends L10n {
 
   @override
   String get verified => 'Ověřeno';
-
-  @override
-  String get verify => 'Ověřit';
 
   @override
   String get verifyStart => 'Zahájit ověření';
@@ -1389,9 +1282,6 @@ class L10nCs extends L10n {
   String get time => 'Čas';
 
   @override
-  String get messageType => 'Typ zprávy';
-
-  @override
   String get sender => 'Odesílatel';
 
   @override
@@ -1401,16 +1291,10 @@ class L10nCs extends L10n {
   String get removeFromSpace => 'Odstranit z tohoto místa';
 
   @override
-  String get start => 'Start';
-
-  @override
   String get markAsRead => 'Označit jako přečtené';
 
   @override
   String get reportUser => 'Nahlásit uživatele';
-
-  @override
-  String get dismiss => 'Zavrhnout';
 
   @override
   String reactedWith(String sender, String reaction) {
@@ -1468,11 +1352,6 @@ class L10nCs extends L10n {
   @override
   String youInvitedBy(String user) {
     return 'Byli jste pozváni uživatelem $user';
-  }
-
-  @override
-  String invitedBy(String user) {
-    return '📩 Pozván $user';
   }
 
   @override
@@ -1550,13 +1429,7 @@ class L10nCs extends L10n {
       'K tomuto může dojít, pokud byla zpráva odeslána před přihlášením k účtu v tomto zařízení.\n\nJe také možné, že odesílatel zablokoval vaše zařízení nebo se něco pokazilo s internetovým připojením.\n\nJste schopni si zprávu přečíst v jiné relaci? Pak můžete zprávu přenést z něj! Přejděte do Nastavení > Zařízení a zkontrolujte, zda se Vaše zařízení vzájemně ověřila. Při příštím otevření místnosti, kdy budou obě relace v popředí, se klíče přenesou automaticky.\n\nNechcete klíče ztratit při odhlašování nebo přepínání zařízení? Ujistěte se, že jste v nastaveních povolili zálohování konverzací.';
 
   @override
-  String get newGroup => 'Nová skupina';
-
-  @override
   String get newSpace => 'Nový prostor';
-
-  @override
-  String get allSpaces => 'Všechny prostory';
 
   @override
   String get doNotShowAgain => 'Nezobrazovat znovu';
@@ -1579,9 +1452,6 @@ class L10nCs extends L10n {
 
   @override
   String get sorryThatsNotPossible => 'Omlouváme se… to není možné';
-
-  @override
-  String get deviceKeys => 'Klíče zařízení:';
 
   @override
   String get reopenChat => 'Znovu otevřít konverzaci';
@@ -1854,9 +1724,6 @@ class L10nCs extends L10n {
   }
 
   @override
-  String get transparent => 'Transparent';
-
-  @override
   String get incomingMessages => 'Incoming messages';
 
   @override
@@ -1884,12 +1751,6 @@ class L10nCs extends L10n {
   String thereAreCountUsersBlocked(Object count) {
     return 'Right now there are $count users blocked.';
   }
-
-  @override
-  String get restricted => 'Restricted';
-
-  @override
-  String get knockRestricted => 'Knock restricted';
 
   @override
   String goToSpace(Object space) {
@@ -1967,9 +1828,6 @@ class L10nCs extends L10n {
   String get sendingAttachment => 'Posílám přílohu...';
 
   @override
-  String get compressVideo => 'Komprimuji video...';
-
-  @override
   String get oneOfYourDevicesIsNotVerified =>
       'Jedno z vašich zařízení není ověřeno';
 
@@ -1979,10 +1837,6 @@ class L10nCs extends L10n {
 
   @override
   String get continueText => 'Pokračovat';
-
-  @override
-  String get welcomeText =>
-      'Ahoj, ahoj 👋 Tohle je FluffyChat. Můžete se přihlásit k jakémukoliv domácímu serveru, který je kompatibilní s https://matrix.org, a začít s kýmkoliv chatovat. Je to obří decentralizovaná chatovací síť!';
 
   @override
   String get blur => 'Blur:';
@@ -2347,14 +2201,6 @@ class L10nCs extends L10n {
   }
 
   @override
-  String startedAPoll(String username) {
-    return '$username spustil/a hlasování.';
-  }
-
-  @override
-  String get poll => 'Hlasování';
-
-  @override
   String get startPoll => 'Spustit hlasování';
 
   @override
@@ -2597,16 +2443,10 @@ class L10nCs extends L10n {
   }
 
   @override
-  String get check => 'Check';
-
-  @override
   String get encryptedMessage => 'Encrypted message';
 
   @override
   String get unencryptedMessage => 'Unencrypted message';
-
-  @override
-  String get allow => 'Allow';
 
   @override
   String get messageCanOnlyBeReadByUser =>
@@ -2741,4 +2581,48 @@ class L10nCs extends L10n {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get resetRecoveryKey => 'Reset recovery key';
+
+  @override
+  String get pleaseEnter6Digits =>
+      'Please enter 6 digits to enable the app lock.';
+
+  @override
+  String get disableAppLock => 'Disable app lock';
+
+  @override
+  String get disableAppLockAreYouSure =>
+      'Are you sure you want to disable the app lock?';
+
+  @override
+  String get enableBiometrics => 'Enable biometric authentication';
+
+  @override
+  String get disableBiometrics => 'Disable biometric authentication';
+
+  @override
+  String get biometricsDescription =>
+      'With biometric authentication you can unlock the app with your face or your fingerprint. The capabilities depend on your device.';
+
+  @override
+  String get useAppLock => 'Use app lock';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometric authentication';
+
+  @override
+  String get resetPin => 'Reset pin';
+
+  @override
+  String forwardCountMessages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count messages',
+      one: 'one message',
+    );
+    return 'Forward $_temp0?';
+  }
 }
