@@ -55,11 +55,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "allChats": "Toutes les discussions",
-    "@allChats": {
-        "type": "String",
-        "placeholders": {}
-    },
     "answeredTheCall": "{senderName} a répondu à l'appel",
     "@answeredTheCall": {
         "type": "String",
@@ -186,30 +181,6 @@
         "type": "String",
         "placeholders": {
             "username": {
-                "type": "String"
-            }
-        }
-    },
-    "changedTheChatDescriptionTo": "{username} a changé la description de la discussion en : '{description}'",
-    "@changedTheChatDescriptionTo": {
-        "type": "String",
-        "placeholders": {
-            "username": {
-                "type": "String"
-            },
-            "description": {
-                "type": "String"
-            }
-        }
-    },
-    "changedTheChatNameTo": "{username} a renommé la discussion en : '{chatname}'",
-    "@changedTheChatNameTo": {
-        "type": "String",
-        "placeholders": {
-            "username": {
-                "type": "String"
-            },
-            "chatname": {
                 "type": "String"
             }
         }
@@ -594,16 +565,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "device": "Appareil",
-    "@device": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "deviceId": "Identifiant de l'appareil",
-    "@deviceId": {
-        "type": "String",
-        "placeholders": {}
-    },
     "devices": "Appareils",
     "@devices": {
         "type": "String",
@@ -656,11 +617,6 @@
     },
     "emoteInvalid": "Raccourci d'émoticône invalide !",
     "@emoteInvalid": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "emotePacks": "Packs d'émoticônes pour le salon",
-    "@emotePacks": {
         "type": "String",
         "placeholders": {}
     },
@@ -731,16 +687,6 @@
                 "type": "String"
             }
         }
-    },
-    "fileName": "Nom du ficher",
-    "@fileName": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "fluffychat": "FluffyChat",
-    "@fluffychat": {
-        "type": "String",
-        "placeholders": {}
     },
     "fontSize": "Taille de la police",
     "@fontSize": {
@@ -813,18 +759,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "hideRedactedEvents": "Cacher les évènements supprimés",
-    "@hideRedactedEvents": {
-        "type": "String",
-        "placeholders": {}
-    },
     "hideUnknownEvents": "Cacher les évènements inconnus",
     "@hideUnknownEvents": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "id": "Identifiant",
-    "@id": {
         "type": "String",
         "placeholders": {}
     },
@@ -1036,11 +972,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "needPantalaimonWarning": "Pour l'instant, vous avez besoin de Pantalaimon pour utiliser le chiffrement de bout en bout.",
-    "@needPantalaimonWarning": {
-        "type": "String",
-        "placeholders": {}
-    },
     "newChat": "Nouvelle discussion",
     "@newChat": {
         "type": "String",
@@ -1098,11 +1029,6 @@
             }
         }
     },
-    "none": "Aucun",
-    "@none": {
-        "type": "String",
-        "placeholders": {}
-    },
     "noPasswordRecoveryDescription": "Vous n'avez pas encore ajouté de moyen pour récupérer votre mot de passe.",
     "@noPasswordRecoveryDescription": {
         "type": "String",
@@ -1137,18 +1063,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "offline": "Hors ligne",
-    "@offline": {
-        "type": "String",
-        "placeholders": {}
-    },
     "ok": "Valider",
     "@ok": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "online": "En ligne",
-    "@online": {
         "type": "String",
         "placeholders": {}
     },
@@ -1217,24 +1133,10 @@
         "type": "String",
         "placeholders": {}
     },
-    "pickImage": "Choisir une image",
-    "@pickImage": {
-        "type": "String",
-        "placeholders": {}
-    },
     "pin": "Épingler",
     "@pin": {
         "type": "String",
         "placeholders": {}
-    },
-    "play": "Lire {fileName}",
-    "@play": {
-        "type": "String",
-        "placeholders": {
-            "fileName": {
-                "type": "String"
-            }
-        }
     },
     "pleaseChooseAPasscode": "Veuillez choisir un code d’accès",
     "@pleaseChooseAPasscode": {
@@ -1243,11 +1145,6 @@
     },
     "pleaseClickOnLink": "Veuillez cliquer sur le lien contenu dans le courriel puis continuez.",
     "@pleaseClickOnLink": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "pleaseEnter4Digits": "Veuillez saisir 4 chiffres ou laisser vide pour désactiver le verrouillage de l’application.",
-    "@pleaseEnter4Digits": {
         "type": "String",
         "placeholders": {}
     },
@@ -1281,18 +1178,8 @@
         "type": "String",
         "placeholders": {}
     },
-    "pushRules": "Règles de notifications",
-    "@pushRules": {
-        "type": "String",
-        "placeholders": {}
-    },
     "reason": "Motif",
     "@reason": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "recording": "Enregistrement",
-    "@recording": {
         "type": "String",
         "placeholders": {}
     },
@@ -1307,11 +1194,6 @@
     },
     "redactMessage": "Supprimer un message",
     "@redactMessage": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "register": "S'inscrire",
-    "@register": {
         "type": "String",
         "placeholders": {}
     },
@@ -1339,15 +1221,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "removedBy": "Supprimé par {username}",
-    "@removedBy": {
-        "type": "String",
-        "placeholders": {
-            "username": {
-                "type": "String"
-            }
-        }
-    },
     "unbanFromChat": "Débannissement de la discussion",
     "@unbanFromChat": {
         "type": "String",
@@ -1370,11 +1243,6 @@
     },
     "reportMessage": "Signaler un message",
     "@reportMessage": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "requestPermission": "Demander la permission",
-    "@requestPermission": {
         "type": "String",
         "placeholders": {}
     },
@@ -1530,11 +1398,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "showPassword": "Afficher le mot de passe",
-    "@showPassword": {
-        "type": "String",
-        "placeholders": {}
-    },
     "skip": "Ignorer",
     "@skip": {
         "type": "String",
@@ -1599,12 +1462,6 @@
         "type": "String",
         "placeholders": {}
     },
-    "title": "FluffyChat",
-    "@title": {
-        "description": "Title for the application",
-        "type": "String",
-        "placeholders": {}
-    },
     "tooManyRequestsWarning": "Trop de requêtes. Veuillez réessayer plus tard !",
     "@tooManyRequestsWarning": {
         "type": "String",
@@ -1612,11 +1469,6 @@
     },
     "tryToSendAgain": "Retenter l'envoi",
     "@tryToSendAgain": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "unavailable": "Indisponible",
-    "@unavailable": {
         "type": "String",
         "placeholders": {}
     },
@@ -1708,11 +1560,6 @@
             }
         }
     },
-    "username": "Nom d'utilisateur·ice",
-    "@username": {
-        "type": "String",
-        "placeholders": {}
-    },
     "userSentUnknownEvent": "{username} a envoyé un évènement de type {type}",
     "@userSentUnknownEvent": {
         "type": "String",
@@ -1727,11 +1574,6 @@
     },
     "verified": "Vérifié",
     "@verified": {
-        "type": "String",
-        "placeholders": {}
-    },
-    "verify": "Vérifier",
-    "@verify": {
         "type": "String",
         "placeholders": {}
     },
@@ -1852,8 +1694,6 @@
     },
     "scanQrCode": "Scanner un code QR",
     "sendOnEnter": "Envoyer avec Entrée",
-    "homeserver": "Serveur d'accueil",
-    "serverRequiresEmail": "Ce serveur doit valider votre adresse électronique pour l'inscription.",
     "bundleName": "Nom du groupe",
     "removeFromBundle": "Retirer de ce groupe",
     "addToBundle": "Ajouter au groupe",
@@ -1863,13 +1703,11 @@
     "link": "Lien",
     "unverified": "Non vérifié",
     "repeatPassword": "Répétez le mot de passe",
-    "messageType": "Type de message",
     "openGallery": "Ouvrir dans la Galerie",
     "time": "Heure",
     "sender": "Expéditeur/trice",
     "messageInfo": "Informations sur le message",
     "removeFromSpace": "Supprimer de l’espace",
-    "start": "Commencer",
     "commandHint_create": "Créer un groupe de discussion vide\nUtilisez --no-encryption pour désactiver le chiffrement",
     "@commandHint_create": {
         "type": "String",
@@ -1890,7 +1728,6 @@
         "type": "String",
         "description": "Usage hint for the command /dm"
     },
-    "dismiss": "Rejeter",
     "markAsRead": "Marquer comme lu",
     "reportUser": "Signaler l'utilisateur/trice",
     "reactedWith": "{sender} a réagi avec {reaction}",
@@ -1980,7 +1817,6 @@
     "custom": "Personnalisé",
     "hydrate": "Restaurer à partir du fichier de sauvegarde",
     "dehydrateWarning": "Cette action ne peut pas être annulée. Assurez-vous d'enregistrer convenablement le fichier de sauvegarde.",
-    "recoveryKey": "Clé de récupération",
     "dehydrate": "Exporter la session et effacer l'appareil",
     "storeSecurlyOnThisDevice": "Stocker de manière sécurisé sur cet appareil",
     "countFiles": "{count} fichiers",
@@ -1992,7 +1828,6 @@
         }
     },
     "noKeyForThisMessage": "Cela peut se produire si le message a été envoyé avant que vous ne vous soyez connecté à votre compte sur cet appareil.\n\nIl est également possible que l'expéditeur ait bloqué votre appareil ou qu'un problème de connexion Internet se soit produit.\n\nÊtes-vous capable de lire le message sur une autre session ? Vous pouvez alors transférer le message à partir de celle-ci ! Allez dans Paramètres > Appareils et assurez-vous que vos appareils se sont vérifiés mutuellement. Lorsque vous ouvrirez le salon la fois suivante et que les deux sessions seront au premier plan, les clés seront transmises automatiquement.\n\nVous ne voulez pas perdre les clés en vous déconnectant ou en changeant d'appareil ? Assurez-vous que vous avez activé la sauvegarde de la discussion dans les paramètres.",
-    "allSpaces": "Tous les espaces",
     "commandHint_markasdm": "Marquer comme salon de messages directs pour l'identifiant Matrix indiqué",
     "commandHint_markasgroup": "Marquer comme groupe",
     "confirmMatrixId": "Veuillez confirmer votre identifiant Matrix afin de supprimer votre compte.",
@@ -2009,7 +1844,6 @@
     "foregroundServiceRunning": "Cette notification s’affiche lorsque le service au premier plan est en cours d’exécution.",
     "screenSharingTitle": "Partage d'écran",
     "screenSharingDetail": "Vous partagez votre écran dans FuffyChat",
-    "newGroup": "Nouveau groupe",
     "newSpace": "Nouvel espace",
     "doNotShowAgain": "Ne plus afficher",
     "commandHint_googly": "Envoyer des yeux écarquillés",
@@ -2053,7 +1887,6 @@
     },
     "encryptThisChat": "Chiffrer cette discussion",
     "sorryThatsNotPossible": "Désolé, ce n'est pas possible",
-    "deviceKeys": "Clés de l’appareil :",
     "newSpaceDescription": "Les espaces vous permettent de consolider vos conversations et de construire des communautés privées ou publiques.",
     "disableEncryptionWarning": "Pour des raisons de sécurité, vous ne pouvez pas désactiver le chiffrement dans une discussion s'il a été activé avant.",
     "reopenChat": "Rouvrir la discussion",
@@ -2073,7 +1906,7 @@
     "readUpToHere": "Lisez jusqu’ici",
     "chatPermissions": "Permissions du salon",
     "importFromZipFile": "Importer depuis un fichier .zip",
-    "importEmojis": "Importer des Emojis",
+    "importEmojis": "Importer des Émoticônes",
     "notAnImage": "Pas un fichier image.",
     "chatDescriptionHasBeenChanged": "La description du salon a changé",
     "createGroup": "Créer un groupe",
@@ -2256,7 +2089,6 @@
             }
         }
     },
-    "transparent": "Transparent",
     "stickers": "Autocollants",
     "noDatabaseEncryption": "Le chiffrement de la base de données n'est pas supporté sur cette plateforme",
     "commandHint_ignore": "Ignorer l'identifiant Matrix indiqué",
@@ -2266,8 +2098,6 @@
         "type": "String",
         "count": {}
     },
-    "restricted": "Limité",
-    "knockRestricted": "Frapper à la porte limité",
     "groupCanBeFoundViaSearch": "Le groupe peut être trouvé via la recherche",
     "groupName": "Nom du groupe",
     "invalidInput": "Entrée invalide !",
@@ -2276,7 +2106,6 @@
     "createNewAddress": "Créer une nouvelle adresse",
     "publicChatAddresses": "Addresses de discussion publiques",
     "space": "Espace",
-    "spaces": "Espaces",
     "noMoreChatsFound": "Aucune autre discussion trouvée...",
     "unread": "Non lu",
     "commandHint_sendraw": "Envoyer du JSON brut",
@@ -2294,8 +2123,8 @@
             }
         }
     },
-    "pushNotificationsNotAvailable": "Notifications poussées indisponibles",
-    "yourGlobalUserIdIs": "Votre identifiant utilisateur global est : ",
+    "pushNotificationsNotAvailable": "Notifications indisponibles",
+    "yourGlobalUserIdIs": "Votre identifiant utilisateur/trice global est : ",
     "chatCanBeDiscoveredViaSearchOnServer": "La discussion peut être découverte via la recherche sur {server}",
     "@chatCanBeDiscoveredViaSearchOnServer": {
         "type": "String",
@@ -2370,17 +2199,9 @@
             }
         }
     },
-    "chatPermissionsDescription": "Définir quel niveau de pouvoir est nécessaires pour certaines actions dans cette discussion. Les niveaux de pouvoir 0, 50 et 100 représentent généralement les membres, la modération et l'administration, mais toute gradation est possible.",
+    "chatPermissionsDescription": "Définir quel niveau de droit est nécessaires pour certaines actions dans cette discussion. Les niveaux de droits 0, 50 et 100 représentent généralement les membres, les modérateurs/trices et les administrateurs/trices, mais toute gradation est possible.",
     "changeGeneralChatSettings": "Modifier les paramètres généraux de la discussion",
-    "invitedBy": "📩 Invitation par {user}",
-    "@invitedBy": {
-        "placeholders": {
-            "user": {
-                "type": "String"
-            }
-        }
-    },
-    "moderatorLevel": "{level} — Modération",
+    "moderatorLevel": "{level} — Modérateur/trice",
     "@moderatorLevel": {
         "type": "String",
         "placeholders": {
@@ -2390,7 +2211,7 @@
         }
     },
     "sendCanceled": "Envoi annulé",
-    "adminLevel": "{level} — Administration",
+    "adminLevel": "{level} — Administrateur/trice",
     "@adminLevel": {
         "type": "String",
         "placeholders": {
@@ -2400,7 +2221,7 @@
         }
     },
     "inviteOtherUsers": "Inviter d'autres membres dans cette discussion",
-    "changeTheChatPermissions": "Modifier les autorisations de cette discussion",
+    "changeTheChatPermissions": "Modifier les permissions de cette discussion",
     "changeTheVisibilityOfChatHistory": "Modifier la visibilité de l'historique de la discussion",
     "changeTheCanonicalRoomAlias": "Modifier l'adresse publique principale de la discussion",
     "changelog": "Journal des modifications",
@@ -2423,7 +2244,6 @@
         }
     },
     "loginWithMatrixId": "Connexion avec l'identifiant Matrix",
-    "ignoreUser": "Ignorer l'utilisateur",
     "checkList": "Check-list",
     "countInvited": "{count} invité(e/s)",
     "@countInvited": {
@@ -2445,7 +2265,6 @@
     },
     "calculatingFileSize": "Calcul en cours...",
     "sendingAttachment": "Envoi en cours...",
-    "compressVideo": "Compression de la vidéo...",
     "oneOfYourDevicesIsNotVerified": "Un de vos appareils n'est pas vérifié",
     "customReaction": "Réaction personalisée",
     "declineInvitation": "Refuser l'invitation",
@@ -2455,25 +2274,23 @@
     "allowMultipleAnswers": "Autoriser plusieurs réponses",
     "serverInformation": "Information du serveur :",
     "answersVisible": "Réponses visibles",
-    "notificationRuleInviteForMeDescription": "Notifie l'utilisateur lorsqu'il est invité dans un salon.",
+    "notificationRuleInviteForMeDescription": "Notifie l'utilisateur/trice lorsqu'il est invité dans un salon.",
     "notificationRuleMemberEventDescription": "Retire les notifications des évènements des membres.",
-    "doesNotSeemToBeAValidHomeserver": "Aucun hôte compatible ne semble exister. URL incorrecte ?",
+    "doesNotSeemToBeAValidHomeserver": "Aucun serveur d'acceuil compatible ne semble exister. URL incorrecte ?",
     "notificationRuleMaster": "Désactiver toutes les notifications",
     "shareKeysWithDescription": "Quels sont les appareils auxquels vous faites confiance afin qu'ils puissent lire les message dans les conversations chiffrées ?",
     "logs": "Journaux",
     "compress": "Compresser",
     "signIn": "Se connecter",
-    "notificationRuleEncryptedRoomOneToOneDescription": "Notifie l'utilisateur à propos des messages dans les salons chiffrés en duo.",
+    "notificationRuleEncryptedRoomOneToOneDescription": "Notifie l'utilisateur/trice à propos des messages dans les salons chiffrés en duo.",
     "pollQuestion": "Question du sondage",
     "enterNewChat": "Entrer un nouveau message",
     "reset": "Réinitialiser",
     "otherNotificationSettings": "Notifications diverses",
     "thread": "Fil de discussion",
-    "notificationRuleRoomOneToOneDescription": "Notifie l'utilisateur à propos des messages dans les salons en duo.",
-    
-    "poll": "Sondage",
+    "notificationRuleRoomOneToOneDescription": "Notifie l'utilisateur/trice à propos des messages dans les salons en duo.",
     "stickerPackName": "Nom du groupe d'autocollant",
-    "notificationRuleIsRoomMentionDescription": "Notifie l'utilisateur lorsqu'il y a une mention de salon.",
+    "notificationRuleIsRoomMentionDescription": "Notifie l'utilisateur/trice lorsqu'il y a une mention de salon.",
     "deletePushRuleCanNotBeUndone": "Si vous supprimez ce paramètre de notification, il n'y a pas d'annulation possible.",
     "youHaveKnocked": "Vous avez toqué",
     "verifiedDevicesOnly": "Appareils vérifiés uniquement",
@@ -2483,7 +2300,7 @@
     "optionalMessage": "(Facultatif) message...",
     "allDevices": "Tous les appareils",
     "notificationRuleRoomServerAcl": "ACL des salons du serveur",
-    "notificationRuleIsUserMention": "Mention Utilisateur",
+    "notificationRuleIsUserMention": "Mention Utilisateur/trice",
     "countReplies": "{count, plural, =1{Une réponse} other{{count} réponses}}",
     "@countReplies": {
         "type": "int",
@@ -2502,7 +2319,7 @@
             }
         }
     },
-    "useAsEmoji": "Utiliser comme émoji",
+    "useAsEmoji": "Utiliser comme émoticône",
     "website": "Site web",
     "join": "Rejoindre",
     "shareKeysWith": "Partager les clés avec...",
@@ -2516,24 +2333,23 @@
             }
         }
     },
-    "notificationRuleIsUserMentionDescription": "Notifie l'utilisateur lorsqu'il est mentionné directement dans un message.",
+    "notificationRuleIsUserMentionDescription": "Notifie l'utilisateur/trice lorsqu'il est mentionné directement dans un message.",
     "notificationRuleServerAcl": "Retire les Évènements ACL du Serveur",
     "advancedConfigurations": "Configurations avancées",
     "signUpGreeting": "FluffyChat est décentralisé ! Selectionnez un hôte sur lequel vous voulez créer un compte et c'est parti !",
-    
     "notificationRuleCall": "Appeler",
     "baseUrl": "URL racine",
     "pause": "Pause",
     "answersWillBeVisibleWhenPollHasEnded": "Les réponses seront affichées quand le sondage aura pris fin",
     "manageAccount": "Paramètrer le compte",
     "setWallpaper": "Changer le fond d'écran",
-    "notificationRuleContainsDisplayNameDescription": "Notifie l'utilisateur lorsqu'un message contient son nom d'affichage.",
+    "notificationRuleContainsDisplayNameDescription": "Notifie l'utilisateur/trice lorsqu'un message contient son nom d'affichage.",
     "createNewChat": "Créer une nouvelle discussion",
     "backToMainChat": "Retourner à la discussion principale",
-    "makeModerator": "Promouvoir modérateur",
+    "makeModerator": "Promouvoir modérateur/trice",
     "italicText": "Italique",
     "skipChatBackup": "Passer la sauvegarde de la discussion",
-    "notificationRuleEncryptedDescription": "Notifies l'utilisateur à propos des messages dans les salons chiffrés.",
+    "notificationRuleEncryptedDescription": "Notifies l'utilisateur/trice à propos des messages dans les salons chiffrés.",
     "answerOption": "Réponse possible",
     "notificationRuleRoomOneToOne": "Salon en Duo",
     "sentVoiceMessage": "🎙️ {duration} - Message vocal de {sender}",
@@ -2551,15 +2367,13 @@
     "appWantsToUseForLoginDescription": "Vous autorisez l'application et le site web à partager vos informations.",
     "notificationRuleEncryptedRoomOneToOne": "Salon Chiffré en Duo",
     "name": "Nom",
-    
     "tagName": "Nom de l'étiquette",
     "moreEvents": "Plus d'évènements",
     "resume": "Reprendre",
     "commandHint_logoutall": "Se déconnecter de tous les appareils actifs",
-    
     "notificationRuleIsRoomMention": "Mention de Salon",
     "federationBaseUrl": "Racine de l'URL de Fédération",
-    "userSpecificNotificationSettings": "Notifications relatives à l'utilisateur",
+    "userSpecificNotificationSettings": "Notifications relatives à l'utilisateur/trice",
     "notSupportedOnThisDevice": "Non-supporté sur cet appareil",
     "setPowerLevelDescription": "Le niveau de droit défini ce qu'un utilisateur est capable de faire dans ce salon et se place généralement entre 0 et 100.",
     "notificationRuleRoomnotif": "Notification de Salon",
@@ -2567,11 +2381,10 @@
     "stickerPackNameAlreadyExists": "Ce nom est déjà utilisé par un groupe d'autocollant",
     "matrixId": "ID Matrix",
     "identityServer": "Serveur d'identité :",
-    
     "version": "Version",
-    "notificationRuleMessageDescription": "Notifie l'utilisateur à propos des messages en général.",
+    "notificationRuleMessageDescription": "Notifie l'utilisateur/trice à propos des messages en général.",
     "createNewAccount": "Créer un nouveau compte",
-    "setPowerLevel": "Configurer le niveau de droit",
+    "setPowerLevel": "Configurer le niveau de puissance",
     "notificationRuleServerAclDescription": "Retire les notifications lors des changement des ACL du serveur.",
     "pollHasBeenEnded": "Le sondage à pris fin",
     "replyInThread": "Répondre dans un fil de discussion",
@@ -2585,12 +2398,11 @@
     "useAsSticker": "Utiliser comme un autocollant",
     "noMoreResultsFound": "Pas de résultats supplémentaires trouvés",
     "longPressToRecordVoiceMessage": "Appuyer longtemps pour envoyer un message vocal.",
-    "createSticker": "Créer un autocollant ou un émoji",
+    "createSticker": "Créer un autocollant ou un émoticône",
     "notificationRuleMessage": "Message",
     "notificationRuleTombstone": "Pierre tombale",
-    "removeModeratorRights": "Révoquer les droits modérateurs",
+    "removeModeratorRights": "Révoquer les droits modérateurs/trices",
     "supportPage": "Page de support",
-    "welcomeText": "Salut Salut 👋 Bienvenue sur FluffyChat. Vous pouvez vous connecter sur n'importe quel hôte compatible avec https://matrix.org. Ensuite engagez la discussion avec quelqu'un. C'est un immense réseau décentralisé !",
     "noContactInformationProvided": "Le serveur ne possède pas d'informations de contact valides",
     "contentNotificationSettings": "Gestion des notifications de contenu",
     "addTag": "Ajouter une étiquette",
@@ -2607,24 +2419,24 @@
             }
         }
     },
-    "removeAdminRights": "Révoquer les droits administrateur",
+    "removeAdminRights": "Révoquer les droits administrateurs/trices",
     "removeFromSpaceDescription": "La discussion sera retirée de l'espace mais apparaitra toujours dans votre liste de discussion.",
     "newChatRequest": "📩 Nouvelle demande de discussion",
     "boldText": "Gras",
     "owner": "Propriétaire",
-    "powerLevel": "Niveau de droit",
+    "powerLevel": "Niveau de droits",
     "strikeThrough": "Barré",
     "playSoundOnNotification": "Jouer un son quand notifié",
     "changedTheChatDescription": "{username} a modifié la description de la discussion",
     "skipChatBackupWarning": "Êtes vous certain ? Sans la sauvegarde des discussions vous pourriez perdre l'accès à vos messages si vous changez d'appareil.",
-    "makeAdmin": "Promouvoir administrateur",
+    "makeAdmin": "Promouvoir administrateur/trice",
     "more": "Plus",
     "searchOrEnterHomeserverAddress": "Recherchez ou entrez l'adresse de votre serveur d'acceuil",
     "notificationRuleSuppressEditsDescription": "Retirer les notifications pour les éditions de messages.",
     "notificationRuleJitsi": "Jitsi",
     "unsetLowPriority": "Ne plus définir comme faible priorité",
     "setLowPriority": "Définir comme faible priorité",
-    "notificationRuleContainsUserName": "Contient le nom d'utilisateur",
+    "notificationRuleContainsUserName": "Contient le nom d'utilisateur/trice",
     "notificationRuleSuppressNotices": "Supprime les Messages Automatiques",
     "chatSearchedUntil": "Recherché dans la discussion jusqu'au {time}",
     "@chatSearchedUntil": {
@@ -2637,13 +2449,13 @@
     },
     "notificationRuleMasterDescription": "Force la désactivation de toutes les notifications.",
     "open": "Ouvrir",
-    "notificationRuleTombstoneDescription": "Notifie l'utilisateur a propos de la désactivation des message dans un salon.",
-    "notificationRuleContainsUserNameDescription": "Notifie l'utilisateur quand un message contient son nom d'utilisateur.",
+    "notificationRuleTombstoneDescription": "Notifie l'utilisateur/trice a propos de la désactivation des message dans un salon.",
+    "notificationRuleContainsUserNameDescription": "Notifie l'utilisateur quand un message contient son nom d'utilisateur/trice.",
     "notificationRuleContainsDisplayName": "Contient le nom d'affichage",
     "notificationRuleReaction": "Réaction",
     "endPoll": "Mettre fin au sondage",
     "theProcessWasCanceled": "Le processus a été annulé.",
-    "unableToJoinChat": "Discussion impossible à rejoindre. L'autre participant à peut-être déjà fermé la discussion.",
+    "unableToJoinChat": "Discussion impossible à rejoindre. L'autre participant.e à peut-être déjà fermé la discussion.",
     "unknownPushRule": "Règles de notification push inconnue '{rule}'",
     "@unknownPushRule": {
         "type": "String",
@@ -2666,10 +2478,10 @@
     "waitingForServer": "En attente du serveur...",
     "commandHint_roomupgrade": "Mettez à jour ce salon vers la version donnée",
     "roomNotificationSettings": "Paramètre de notification des salons",
-    "otherPartyNotLoggedIn": "L'autre participant n'est pas connecté actuellement et ne peux donc pas recevoir de messages !",
+    "otherPartyNotLoggedIn": "L'autre participant.e n'est pas connecté actuellement et ne peux donc pas recevoir de messages !",
     "notificationRuleReactionDescription": "Retire les notifications des réactions.",
-    "notificationRuleCallDescription": "Notifie l'utilisateur lorsqu'on l'appelle.",
-    "contactServerAdmin": "Contacter l'administrateur du serveur",
+    "notificationRuleCallDescription": "Notifie l'utilisateur/trice lorsqu'on l'appelle.",
+    "contactServerAdmin": "Contacter l'administrateur/trice du serveur",
     "appWantsToUseForLogin": "Utiliser '{server}' pour se connecter",
     "@appWantsToUseForLogin": {
         "type": "String",
@@ -2691,20 +2503,10 @@
         }
     },
     "notificationRuleJitsiDescription": "Notifie l'utilisateur à propos des évènements de l'intégration Jitsi.",
-    
     "approve": "Approuver",
-    "notificationRuleRoomnotifDescription": "Notifie l'utilisateur lorsqu'un message contient '@room'.",
+    "notificationRuleRoomnotifDescription": "Notifie l'utilisateur/trice lorsqu'un message contient '@room'.",
     "generalNotificationSettings": "Réglages généraux des notifications",
     "supportFluffyChat": "Soutenir FluffyChat",
-    "startedAPoll": "{username} a démarré un sondage.",
-    "@startedAPoll": {
-        "type": "String",
-        "placeholders": {
-            "username": {
-                "type": "String"
-            }
-        }
-    },
     "notificationRuleEncrypted": "Chiffré",
     "pleaseFillOut": "Veuillez remplir",
     "changedTheChatName": "{username} a changé le nom de la discussion",
@@ -2730,7 +2532,7 @@
     "appSubtitle": "Communication [matrix] Sécurisée",
     "appDescription": "Communiquez de façon chiffrée sur le réseau décentralisé [matrix] de façon aisée et accessible pour tous.",
     "interactiveVerification": "Vérification intéractive",
-    "interactiveVerificationDescription": "Si vous êtes l'un à coté de l'autre ou que vous communiquez par un canal sécurisé, vous pouvez vérifier tous vos appareils en une seule fois en comparant un numéro de sécurité ou des émojis.",
+    "interactiveVerificationDescription": "Si vous êtes l'un à coté de l'autre ou que vous communiquez par un canal sécurisé, vous pouvez vérifier tous vos appareils en une seule fois en comparant un numéro de sécurité ou des émoticônes.",
     "countUnverifiedDevices": "{count} appareils non-vérifiés dans la discussion.",
     "@countUnverifiedDevices": {
         "type": "int",
@@ -2740,10 +2542,8 @@
             }
         }
     },
-    "check": "Vérifier",
     "encryptedMessage": "Message chiffré",
-    "unencryptedMessage": "Message déchiffré",
-    "allow": "Autoriser",
+    "unencryptedMessage": "Message non-chiffré",
     "publicKey": "Clé publique : {key}",
     "@publicKey": {
         "type": "String",
@@ -2860,7 +2660,7 @@
         "placeholders": {}
     },
     "youAreReadyToStart": "Vous êtes prêt à commencer !",
-    "noUserKeyFound": "Pas de clé utilisateur trouvée",
+    "noUserKeyFound": "Pas de clé utilisateur/trice trouvée",
     "@noUserKeyFound": {
         "type": "String",
         "placeholders": {}
@@ -2899,5 +2699,29 @@
     "uploading": "Téléversement",
     "edited": "(édité)",
     "couldNotBeSent": "N'a pas pu être envoyé",
-    "yesterday": "Hier"
+    "yesterday": "Hier",
+    "displayNavigationRail": "Afficher la barre de navigation sur mobile",
+    "resetRecoveryKey": "Réinitialiser la clé de récupération",
+    "pleaseEnter6Digits": "Veuillez entrer le code à 6 chiffres pour activer le verouillage de l'application.",
+    "disableAppLock": "Désactiver le verrouillage de l'application",
+    "disableAppLockAreYouSure": "Êtes vous sûr de vouloir désactiver le verrouillage de l'application ?",
+    "enableBiometrics": "Activer l'authentification biométrique",
+    "disableBiometrics": "Désactiver l'authentification biométrique",
+    "biometricsDescription": "Avec l'authentification biométrique, vous pouvez déverrouillee l'application avec votre visage ou votre empreinte digitale. Les possibilités dépendent de votre appareil.",
+    "useAppLock": "Utiliser le verrouillage de l'application",
+    "unlockWithBiometrics": "Déverrouiller avec l'authentification biométrique",
+    "resetPin": "Réinitialiser le code pin",
+    "forwardCountMessages": "Avancer de {count, plural, =1{un message} other{{count} messages}} ?",
+    "@forwardCountMessages": {
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "clientWellKnownInformation": "Informations Well-Known du client :",
+    "attribution": "Attribution",
+    "support": "Soutenir",
+    "blur": "Flou :",
+    "opacity": "Opacité :"
 }

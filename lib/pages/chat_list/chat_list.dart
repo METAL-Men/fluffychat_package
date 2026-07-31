@@ -212,7 +212,7 @@ class ChatListController extends State<ChatList>
         limit: 20,
       );
 
-      if (searchQuery.isValidMatrixId &&
+      if (searchQuery.isValidMatrixIdStrict() &&
           searchQuery.sigil == '#' &&
           roomSearchResult.chunk.any(
                 (room) => room.canonicalAlias == searchQuery,
@@ -423,7 +423,7 @@ class ChatListController extends State<ChatList>
           ActiveFilter.allChats;
     }
 
-    if (AppSettings.debugPush.value) _processPushHelperCrashReport();
+    _processPushHelperCrashReport();
 
     super.initState();
   }
@@ -434,6 +434,11 @@ class ChatListController extends State<ChatList>
     _intentFileStreamSubscription?.cancel();
     _onRoomTagUpdate?.cancel();
     scrollController.removeListener(_onScroll);
+    searchController.dispose();
+    searchFocusNode.dispose();
+    scrollController.dispose();
+    scrolledToTop.dispose();
+    _clientStream.close();
     super.dispose();
   }
 

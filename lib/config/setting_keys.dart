@@ -71,13 +71,12 @@ enum AppSettings<T> {
     'chat.fluffy.privacy_policy_url',
     'https://metal.men/privacy-policy',
   ),
-  tos<String>('chat.fluffy.tos_url', 'https://fluffychat.im/en/tos'),
+  tos<String>('chat.fluffy.tos_url', 'https://fluffychat.im/tos'),
   sendTimelineEventTimeout<int>('chat.fluffy.send_timeline_event_timeout', 15),
   webNotificationSound<bool>('chat.fluffy.web_notification_sound', true),
   chatFilter<String>('chat.fluffy.chat_filter', 'allChats'),
   hideRoomsInSpaces<bool>('chat.fluffy.hideRoomsInSpaces', false),
-  showThumbnailsInTimeline<bool>('chat.fluffy.showThumbnailsInTimeline', true),
-  debugPush<bool>('chat.fluffy.debug_push', false);
+  showThumbnailsInTimeline<bool>('chat.fluffy.showThumbnailsInTimeline', true);
 
   final String key;
   final T defaultValue;

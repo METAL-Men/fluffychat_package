@@ -99,11 +99,17 @@ void main(List<String> args) async {
 Future<void> startGui(List<Client> clients, SharedPreferences store) async {
   // Fetch the pin for the applock if existing for mobile applications.
   String? pin;
-  if (PlatformInfos.isMobile) {
+  var useBiometrics = false;
+  if (PlatformInfos.supportsAppLock) {
     try {
       pin = await const FlutterSecureStorage().read(
         key: 'chat.fluffy.app_lock',
       );
+      useBiometrics =
+          (await const FlutterSecureStorage().read(
+            key: 'chat.fluffy.use_biometrics',
+          )) ==
+          'true';
     } catch (e, s) {
       Logs().d('Unable to read PIN from Secure storage', e, s);
     }
@@ -117,7 +123,7 @@ Future<void> startGui(List<Client> clients, SharedPreferences store) async {
   runApp(
     FluffyChatApp(
       clients: clients,
-      pincode: pin,
+      appLockSettings: (pincode: pin, useBiometrics: useBiometrics),
       store: store,
       config: GlobalConfig.bootstrapConfig,
     ),

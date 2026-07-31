@@ -21,7 +21,7 @@ import 'matrix.dart';
 class FluffyChatApp extends StatelessWidget {
   final Widget? testWidget;
   final List<Client> clients;
-  final String? pincode;
+  final ({String? pincode, bool useBiometrics}) appLockSettings;
   final SharedPreferences store;
   final FluffyChatBootstrapConfig? config;
   final TransitionBuilder? builder;
@@ -31,7 +31,7 @@ class FluffyChatApp extends StatelessWidget {
     this.testWidget,
     required this.clients,
     required this.store,
-    this.pincode,
+    required this.appLockSettings,
     this.config,
     this.builder,
   });
@@ -83,8 +83,9 @@ class FluffyChatApp extends StatelessWidget {
         supportedLocales: L10n.supportedLocales,
         routerConfig: router,
         builder: (context, child) => AppLockWidget(
-          pincode: pincode,
-          clients: clients,
+          pincode: appLockSettings.pincode,
+          useBiometrics: appLockSettings.useBiometrics,
+          isLoggedIn: clients.any((client) => client.isLogged()),
           // Need a navigator above the Matrix widget for
           // displaying dialogs
           child: Navigator(
